@@ -1,0 +1,42 @@
+{
+  "title": "Namida",
+  "description": "",
+  "pages": [
+    {
+      "title": "FAQ",
+      "url": "https://docs.myproject.com/faq/",
+      "description": "Frequently Asked Questions",
+      "priority": "medium"
+    },
+    {
+      "title": "Quick Start",
+      "url": "https://docs.myproject.com/",
+      "description": "Welcome to your new documentation site.",
+      "priority": "high"
+    },
+    {
+      "title": "Theme Settings",
+      "url": "https://docs.myproject.com/settings/1-theme-settings/",
+      "description": "The overall vibe of your player",
+      "priority": "medium"
+    },
+    {
+      "title": "Indexer Settings",
+      "url": "https://docs.myproject.com/settings/2-indexer-settings/",
+      "description": "Manage your music library",
+      "priority": "medium"
+    },
+    {
+      "title": "Settings",
+      "url": "https://docs.myproject.com/settings/",
+      "description": "Explaination for in-app settings",
+      "priority": "medium"
+    },
+    {
+      "title": "Agent Skills",
+      "url": "https://docs.myproject.com/skills/",
+      "description": "Teach AI coding agents to work with docmd projects",
+      "priority": "medium"
+    }
+  ]
+}

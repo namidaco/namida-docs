@@ -1,0 +1,82 @@
+{
+  "okf_version": "0.9.3",
+  "bundle": {
+    "name": "namida",
+    "title": "Namida",
+    "description": "",
+    "url": "https://docs.myproject.com",
+    "generated_by": "@docmd/plugin-okf",
+    "generated_at": "2026-08-23T02:03:51.258Z",
+    "default_type": "concept"
+  },
+  "stats": {
+    "concepts": 6,
+    "by_type": {
+      "concept": 6
+    },
+    "locales": [],
+    "versions": []
+  },
+  "concepts": [
+    {
+      "id": "faq",
+      "type": "concept",
+      "title": "FAQ",
+      "path": "/faq/",
+      "file": "concepts/faq.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "root",
+      "type": "concept",
+      "title": "Quick Start",
+      "path": "/",
+      "file": "concepts/root.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "settings-1-theme-settings",
+      "type": "concept",
+      "title": "Theme Settings",
+      "path": "/settings/1-theme-settings/",
+      "file": "concepts/settings-1-theme-settings.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "settings-2-indexer-settings",
+      "type": "concept",
+      "title": "Indexer Settings",
+      "path": "/settings/2-indexer-settings/",
+      "file": "concepts/settings-2-indexer-settings.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "settings",
+      "type": "concept",
+      "title": "Settings",
+      "path": "/settings/",
+      "file": "concepts/settings.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "skills",
+      "type": "concept",
+      "title": "Agent Skills",
+      "path": "/skills/",
+      "file": "concepts/skills.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    }
+  ]
+}
