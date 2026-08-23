@@ -7,7 +7,7 @@ path: /faq/
 updated: 2026-08-23
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-23T02:03:51.253Z"
+  generated_at: "2026-08-23T16:45:36.113Z"
 ---
 ---
 title: "FAQ"

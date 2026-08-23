@@ -1,15 +1,4 @@
 ---
-type: concept
-title: "Quick Start"
-description: "Welcome to your new documentation site."
-source: "https://docs.myproject.com/"
-path: /
-updated: 2026-08-23
-okf:
-  generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-23T16:45:36.116Z"
----
----
 title: "Quick Start"
 description: "Welcome to your new documentation site."
 ---
