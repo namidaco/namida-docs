@@ -2,12 +2,12 @@
 type: concept
 title: FAQ
 description: "Frequently Asked Questions"
-source: "https://docs.myproject.com/faq/"
+source: "https://namidaco.github.io/namida_docs/faq/"
 path: /faq/
-updated: 2026-08-23
+updated: 2026-08-27
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-23T16:45:36.113Z"
+  generated_at: "2026-08-27T01:50:02.652Z"
 ---
 ---
 title: "FAQ"
@@ -18,17 +18,17 @@ description: "Frequently Asked Questions"
 
 ### Do I need to pay to use youtube?
 
-- Not really, searching, playing videos, liking or downloading, seeing your playlists (and many others) is totally free.
-- getting a membership means u access newly added yt features (beside supporting), these features only make sense when you are logged in your yt account.
-- you can get a membership throught patreon on https://patreon.com/namidaco
-- if you have donated throught [kofi](https://ko-fi.com/namidaco) or [buymeacoffee](https://buymeacoffee.com/namidaco), you should get a coupon on ur email, altho not instant as patreon and may take more than few days
-- you can log in from Settings -> Youtube -> Manage your accounts -> Add account to access your playlists and like videos/etc.
-- for more info about these features https://www.patreon.com/posts/namida-yt-112913142
+- Not really, searching, playing videos, liking or downloading, seeing your playlists (and many others) are totally free.
+- Getting a membership means you get access to newly added YT features (besides supporting), these features only make sense when you are logged in to your YT account.
+- You can get a membership through Patreon on https://patreon.com/namidaco
+- If you have donated through [kofi](https://ko-fi.com/namidaco) or [buymeacoffee](https://buymeacoffee.com/namidaco), you should get a coupon in your email, although it's not instant like Patreon and may take more than a few days.
+- You can log in from Settings -> Youtube -> Manage your accounts -> Add account to access your playlists, like videos, etc.
+- For more info about these features: https://www.patreon.com/posts/namida-yt-112913142
 
 ### Slow/Broken yt loading/downloads
 
 This can happen frequently when youtube pushes updates that break clients.
-Most yt issues are fixed asap in beta, try latest beta from here https://github.com/namidaco/namida-snapshots/releases
+Most YT issues are fixed asap in beta, try the latest beta from here: https://github.com/namidaco/namida-snapshots/releases
 
 ### Lyrics Source
 
@@ -36,46 +36,47 @@ https://lrclib.net/
 
 ### Change Lyrics Source
 
-- not possible directly
-- you can select the LRC file (by long pressing lyrics icon in miniplayer -> add) or just edit tags and paste the lyrics in the lyrics section
-- you can also copy the LRC file and put it in the same directory as the song, it will appear as long as the filename is the same as the song
-- make sure "Prioritize embedded lyrics" is enabled/disabled depending on where u put the lyrics generally
+- Not possible directly.
+- You can select the LRC file (by long pressing the lyrics icon in the miniplayer -> add), or just edit tags and paste the lyrics in the lyrics section.
+- You can also copy the LRC file and put it in the same directory as the song, it will appear as long as the filename is the same as the song's.
+- Make sure "Prioritize embedded lyrics" is enabled/disabled depending on where you generally put the lyrics.
 
 ### Is there a lastfm scrobble feature?
 
-No, and not planned use PanoScrobbler https://github.com/kawaiiDango/pano-scrobbler. works with any player and has lots of features
+No, and not planned. Use PanoScrobbler https://github.com/kawaiiDango/pano-scrobbler, it works with any player and has lots of features.
 
 ### Is there a discord rich presence feature (RPC)?
 
-No, and not planned use:
+No, and not planned. Use:
 
-- Kizzy on android https://github.com/dead8309/Kizzy
-- music presence on desktop https://github.com/ungive/discord-music-presence
-  they work with any player
+- Kizzy on android: https://github.com/dead8309/Kizzy
+- Music Presence on desktop: https://github.com/ungive/discord-music-presence
+
+They work with any player.
 
 ### Equalizer issues or missing feature
 
-namida equalizer is simple and uses native android effects, always recommend using system wide eq apps for better experience and more features.
-most extra features require writing custom audio engine or make sure every android version supports this effect, none of these are planned.
-if you have root you can use jamesdsp or viper4android.
-otherwise use [Equalizer314](https://f-droid.org/en/packages/com.bearinmind.equalizer314) or [RootlessJamesDSP](https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp).
+Namida's equalizer is simple and uses native android effects, we always recommend using system wide EQ apps for a better experience and more features.
+Most extra features require writing a custom audio engine, or making sure every android version supports the effect, none of these are planned.
+If you have root, you can use JamesDSP or Viper4Android.
+Otherwise use [Equalizer314](https://f-droid.org/en/packages/com.bearinmind.equalizer314) or [RootlessJamesDSP](https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp).
 
 ### Spotify Support
 
 Not planned.
-Importing spotify history was added recently [in beta](https://github.com/namidaco/namida-snapshots/releases)
+Importing spotify history was added recently [in beta](https://github.com/namidaco/namida-snapshots/releases),
 but that's all.
 
-Reason is simply spotify is notorious for blocking any attempts at any unofficial clients. even if namida implements that, it will simply be hit by a dmca and no longer have support.
+The reason is simply that spotify is notorious for blocking any attempt at unofficial clients. Even if Namida implements that, it will simply be hit by a DMCA and no longer have support.
 
-What u can do as an alternative is convert ur spotify playlists to ytm, then login in namida to view ur yt playlists.
-we barely keeping yt support alive as is.
+What you can do as an alternative is convert your spotify playlists to YTM, then log in inside Namida to view your YT playlists.
+We are barely keeping YT support alive as is.
 
 Alternatives: [spotiflac](https://github.com/spotbye/SpotiFLAC) or [other tools like it](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/audio/#wiki_.25B7_audio_ripping_tools)
 
 ### Some FLAC files have no sound at some point
 
-check the source u got it from, try using ffmpeg with a compression level of 5 on the file
+Check the source you got it from, and try using ffmpeg with a compression level of 5 on the file:
 
 ```bash
 ffmpeg -y -i "path/to/file.flac" -map 0 -c:a flac -compression_level 5 -c:v copy "path/to/output.flac"

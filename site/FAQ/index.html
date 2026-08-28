@@ -1,33 +1,61 @@
 <!--
-  ---------------------------------------------------------------
-  docmd : the zero-config documentation engine.
-  @website https://docmd.io
-  [docmd-source] - Please do not remove this header.
-  ---------------------------------------------------------------
+  ============================================================================
+  @docmd/template-summer  —  layout.ejs
+
+  A complete, modern documentation layout. Built to feel like its
+  own product — not a recolor of the default template. The page is structured
+  as five vertically-stacked, sticky-aware bands:
+
+    1.  Top bar          — logo, centered search, AI "Ask" button, action menu
+    2.  Sub navigation   — section tabs (Documentation, Guides, …) + extras
+    3.  Page header      — sticky breadcrumb + title + copy widgets
+    4.  Layout grid      — sidebar | main content | right-rail TOC
+    5.  Footer           — branding + links
+
+  All CSS lives in assets/css/summer.css and is fully self-contained —
+  docmd-main.css is intentionally NOT loaded.
+
+  Note: menubar, footer and TOC partials are INLINED here (not `include`d)
+  because the docmd core resolves `include()` paths relative to the
+  default layout's directory, not the resolved template's. Inlining
+  guarantees the summer-styled partials always render.
+  ============================================================================
 -->
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="generator" content="docmd v0.9.3">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script>
-      var root = "../";
-      if (root && !root.endsWith('/')) root += '/';
-      if (root === '') root = './';
-      window.DOCMD_ROOT = root;
+<html lang="en"
+  >
+<head>
+  <meta charset="UTF-8">
+  <meta name="generator" content="docmd template-summer v0.8.7">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fbfaf6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#13110d" media="(prefers-color-scheme: dark)">
+  <title>FAQ · Namida</title>
 
-      window.DOCMD_SITE_ROOT = "/";
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-      window.DOCMD_APPEARANCE = "system";
-      window.DOCMD_VERSION_ROOT = "/";
-      window.DOCMD_BASE = "/";
-      window.DOCMD_LOCALE = "";
-      window.DOCMD_DEFAULT_LOCALE = "";
-    </script>
-    <script>/**
+  
+
+  
+
+  <script>
+    window.DOCMD_TEMPLATE = 'summer';
+    window.DOCMD_ROOT = "../" || './';
+    window.DOCMD_SITE_ROOT = "/";
+    window.DOCMD_APPEARANCE = "system";
+    window.DOCMD_VERSION_ROOT = "/";
+    window.DOCMD_BASE = "/";
+    window.DOCMD_LOCALE = "";
+    window.DOCMD_DEFAULT_LOCALE = "";
+    const _localePagesEl = document.getElementById('docmd-locale-pages');
+    if (_localePagesEl) {
+      window.DOCMD_LOCALE_PAGES = JSON.parse(_localePagesEl.textContent);
+    }
+  </script>
+
+  <script>/**
  * --------------------------------------------------------------------
  * docmd : the zero-config documentation engine.
  *
@@ -93,29 +121,23 @@
     console.error('Theme init failed', e);
   }
 })();</script>
-    <style>
-      html {
-        visibility: hidden;
-      }
-    </style>
-    <title>
-      FAQ : Namida
-    </title>
-    
-    
 
-    <link id="site-favicon" rel="icon" href="../assets/favicon.ico?v=mt61gay0">
-    <link rel="stylesheet" href="../assets/css/docmd-main.css?v=mt61gay0">
-    
-    <link rel="stylesheet" href="../assets/css/docmd-highlight-light.css?v=mt61gay0" id="hljs-light" >
-    <link rel="stylesheet" href="../assets/css/docmd-highlight-dark.css?v=mt61gay0" id="hljs-dark" disabled>
-    
-    
+  
+
+  <link id="site-favicon" rel="icon" href="../assets/favicon.ico?v=mtav7zwa">
+
+  
+  
+  <link rel="stylesheet" href="../assets/css/docmd-highlight-light.css?v=mtav7zwa" id="hljs-light" >
+  <link rel="stylesheet" href="../assets/css/docmd-highlight-dark.css?v=mtav7zwa" id="hljs-dark" disabled">
+  
+
+  
 <meta name="description" content="Frequently Asked Questions">
-<link rel="canonical" href="https://docs.myproject.com/faq/">
+<link rel="canonical" href="https://namidaco.github.io/namida_docs/faq/">
 <meta property="og:title" content="FAQ - Namida">
 <meta property="og:description" content="Frequently Asked Questions">
-<meta property="og:url" content="https://docs.myproject.com/faq/">
+<meta property="og:url" content="https://namidaco.github.io/namida_docs/faq/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FAQ - Namida">
@@ -124,146 +146,100 @@
 
 
 
-<link rel="stylesheet" href="../assets/css/docmd-git.css?v=mt61gay0" >
-<link rel="stylesheet" href="../assets/css/docmd-openapi.css?v=mt61gay0" >
-<link rel="stylesheet" href="../assets/css/docmd-ai.css?v=mt61gay0" >
+<link rel="stylesheet" href="../assets/css/docmd-theme-summer.css?v=mtav7zwa" >
+<link rel="stylesheet" href="../assets/css/docmd-git.css?v=mtav7zwa" >
+<link rel="stylesheet" href="../assets/css/docmd-openapi.css?v=mtav7zwa" >
+<link rel="stylesheet" href="../assets/css/docmd-ai.css?v=mtav7zwa" >
+<link rel="stylesheet" href="../assets/template/summer.css?v=mtav7zwa" >
 
-    
-    
-  </head>
-  <body
-    class="sidebar-collapsible"
-    data-default-collapsed="false"
-    data-copy-code-enabled="true" data-spa-enabled="true" data-source-file="docs/faq.md">
+  
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+</head>
+<body class="summer-template"
+  
+  data-spa-enabled="true"
+  data-copy-code-enabled="true"
+  data-default-collapsed="false">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    
-    
+  
+  
 
-    
-    
-      <aside class="sidebar">
-        <div class="sidebar-header">
-          
-<a href="../" class="logo-link">
-              <img
-                src="../assets/images/namida_icon.png"
-                alt="Namida Logo" class="logo-light" style="height: 32px;">
-              <img
-                src="../assets/images/namida_icon.png"
-                alt="Namida Logo" class="logo-dark" style="height: 32px;">
-            </a>
-          
-          <span class="mobile-view sidebar-menu-button float-right">
-            
-<svg class="lucide-icon icon-menu " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-menu"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M4 5h16" />
-  <path d="M4 12h16" />
-  <path d="M4 19h16" />
-</svg>
-
-          </span>
-        </div>
-        <div class="sidebar-top-group">
-          
-          
-            <div class="sidebar-options-wrapper">
-              
-
-
-<div class="docmd-options-menu">
-    
-    <button class="docmd-search-trigger" aria-label="Search">
+  
+  <header class="summer-topbar" role="banner">
+    <div class="summer-topbar__inner">
+      
+      <div class="summer-topbar__left">
+        <button class="summer-iconbtn summer-topbar__mobile sidebar-menu-button" type="button" data-summer-sidebar-toggle aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
         
-<svg class="lucide-icon icon-search " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-search"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m21 21-4.34-4.34" />
-  <circle cx="11" cy="11" r="8" />
-</svg>
-
-        <span class="search-label">Search</span>
-        <span class="search-keys"><kbd class="docmd-kbd">⌘</kbd><kbd class="docmd-kbd">K</kbd></span>
-    </button>
-    
-
-    
-
-    
-
-    
-    <button class="theme-toggle-button" aria-label="Toggle theme">
+          <a href="../" class="summer-logo" aria-label="Namida Logo — home">
+            <img src="../assets/images/namida_icon.png" alt="Namida Logo" class="summer-logo__light" style="height: 32px;">
+            <img src="../assets/images/namida_icon.png" alt="Namida Logo" class="summer-logo__dark" style="height: 32px;">
+          </a>
         
-<svg class="lucide-icon icon-sun icon-sun" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-sun"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <circle cx="12" cy="12" r="4" />
-  <path d="M12 2v2" />
-  <path d="M12 20v2" />
-  <path d="m4.93 4.93 1.41 1.41" />
-  <path d="m17.66 17.66 1.41 1.41" />
-  <path d="M2 12h2" />
-  <path d="M20 12h2" />
-  <path d="m6.34 17.66-1.41 1.41" />
-  <path d="m19.07 4.93-1.41 1.41" />
-</svg>
- 
-<svg class="lucide-icon icon-moon icon-moon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-moon"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
-</svg>
+      </div>
 
-    </button>
-    
-
-    
-</div>
-
+      <div class="summer-topbar__center">
+        <div class="summer-search-container">
+          <svg class="summer-search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" class="summer-search-input" placeholder="Search (⌘K)" aria-label="Search documentation" autocomplete="off" spellcheck="false">
+          <div class="summer-search-dropdown" style="display: none;">
+            <div class="summer-search-results-wrapper"></div>
+            <div class="summer-search-dropdown-footer">
+              <span><kbd>↑</kbd> <kbd>↓</kbd> to navigate</span>
+              <span><kbd>ESC</kbd> to close</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="summer-topbar__right">
+        
+        
+          <button class="summer-iconbtn theme-toggle-button" type="button" data-summer-theme-toggle aria-label="Toggle theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+          </button>
+        
+
+        
+
+        
+        
+        
+        
+
+        
+
+        
+
+        
+      </div>
+    </div>
+  </header>
+
+  
+  
+
+  
+  <div class="summer-layout">
+
+    
+    
+      <aside class="summer-sidebar" aria-label="Documentation navigation">
+        <button class="summer-sidebar-close summer-iconbtn" type="button" data-summer-sidebar-close aria-label="Close navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div class="summer-sidebar__top">
           
           
           
         </div>
+
         
 
 <nav class="sidebar-nav" aria-label="Main Navigation">
@@ -274,8 +250,8 @@
         <a href="../" class=" "
           >
            
-<svg class="lucide-icon icon-zap " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-zap"
+<svg class="lucide-icon icon-house " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-house"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -286,12 +262,83 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
 </svg>
 
           
           <span class="nav-item-title">
-            Quick Start
+            Welcome
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="expanded nav-group" >
+      
+        <a href="../features/" class=" nav-group"
+          >
+           
+<svg class="lucide-icon icon-sparkles " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sparkles"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+  <path d="M20 2v4" />
+  <path d="M22 4h-4" />
+  <circle cx="4" cy="20" r="2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Features
+            </span>
+          
+          
+        </a>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../features/library-indexing/" class=" "
+          >
+           
+<svg class="lucide-icon icon-library " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-library"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 6 4 14" />
+  <path d="M12 6v14" />
+  <path d="M8 8v12" />
+  <path d="M4 4v16" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Library &amp; Indexing
             </span>
           
           
@@ -303,11 +350,11 @@
     
       <li class="" >
       
-        <a href="../skills/" class=" "
+        <a href="../features/playback/" class=" "
           >
            
-<svg class="lucide-icon icon-brain-circuit " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-brain-circuit"
+<svg class="lucide-icon icon-play-circle " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-circle-play"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -318,24 +365,13 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
-  <path d="M9 13a4.5 4.5 0 0 0 3-4" />
-  <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
-  <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
-  <path d="M6 18a4 4 0 0 1-1.967-.516" />
-  <path d="M12 13h4" />
-  <path d="M12 18h6a2 2 0 0 1 2 2v1" />
-  <path d="M12 8h8" />
-  <path d="M16 8V5a2 2 0 0 1 2-2" />
-  <circle cx="16" cy="13" r=".5" />
-  <circle cx="18" cy="3" r=".5" />
-  <circle cx="20" cy="21" r=".5" />
-  <circle cx="20" cy="8" r=".5" />
+  <path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z" />
+  <circle cx="12" cy="12" r="10" />
 </svg>
 
           
           <span class="nav-item-title">
-            Agent Skills
+            Playback
             </span>
           
           
@@ -345,7 +381,363 @@
         
       </li>
     
-      <li class="collapsible nav-group"  aria-expanded="false" >
+      <li class="" >
+      
+        <a href="../features/playlists-history/" class=" "
+          >
+           
+<svg class="lucide-icon icon-list-music " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-list-music"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 5H3" />
+  <path d="M11 12H3" />
+  <path d="M11 19H3" />
+  <path d="M21 16V5" />
+  <circle cx="18" cy="16" r="3" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Playlists &amp; History
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../features/tag-editor/" class=" "
+          >
+           
+<svg class="lucide-icon icon-tag " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-tag"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
+  <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Tag Editor
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../features/youtube/" class=" "
+          >
+           
+<svg class="lucide-icon icon-youtube " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-youtube"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+  <path d="m10 15 5-3-5-3z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            YouTube
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../features/media-servers/" class=" "
+          >
+           
+<svg class="lucide-icon icon-server " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-server"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+  <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+  <line x1="6" x2="6.01" y1="6" y2="6" />
+  <line x1="6" x2="6.01" y1="18" y2="18" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Media Servers
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../features/sync/" class=" "
+          >
+           
+<svg class="lucide-icon icon-arrow-left-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-arrow-left-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 3 4 7l4 4" />
+  <path d="M4 7h16" />
+  <path d="m16 21 4-4-4-4" />
+  <path d="M20 17H4" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Sync
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../features/shortcuts/" class=" "
+          >
+           
+<svg class="lucide-icon icon-keyboard " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-keyboard"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 8h.01" />
+  <path d="M12 12h.01" />
+  <path d="M14 8h.01" />
+  <path d="M16 12h.01" />
+  <path d="M18 8h.01" />
+  <path d="M6 8h.01" />
+  <path d="M7 16h10" />
+  <path d="M8 12h.01" />
+  <rect width="20" height="16" x="2" y="4" rx="2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Shortcuts
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="expanded nav-group" >
+      
+        <a href="../pages/" class=" nav-group"
+          >
+           
+<svg class="lucide-icon icon-layout-grid " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layout-grid"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="7" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Pages
+            </span>
+          
+          
+        </a>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../pages/library/" class=" "
+          >
+           
+<svg class="lucide-icon icon-library-big " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-library-big"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="18" x="3" y="3" rx="1" />
+  <path d="M7 3v18" />
+  <path d="M20.4 18.9c.2.5-.1 1.1-.6 1.3l-1.9.7c-.5.2-1.1-.1-1.3-.6L11.1 5.1c-.2-.5.1-1.1.6-1.3l1.9-.7c.5-.2 1.1.1 1.3.6Z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Library
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../pages/youtube/" class=" "
+          >
+           
+<svg class="lucide-icon icon-youtube " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-youtube"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+  <path d="m10 15 5-3-5-3z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            YouTube
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../pages/other/" class=" "
+          >
+           
+<svg class="lucide-icon icon-layers " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layers"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Other
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="expanded nav-group" >
       
         <a href="../settings/" class=" nav-group"
           >
@@ -371,23 +763,6 @@
             Settings
             </span>
           
-            <span class="collapse-icon-wrapper">
-<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-chevron-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m9 18 6-6-6-6" />
-</svg>
-</span>
-          
           
         </a>
         
@@ -400,8 +775,8 @@
         <a href="../settings/1-theme-settings/" class=" "
           >
            
-<svg class="lucide-icon icon-download " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-download"
+<svg class="lucide-icon icon-palette " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-palette"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -412,9 +787,11 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M12 15V3" />
-  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-  <path d="m7 10 5 5 5-5" />
+  <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
 </svg>
 
           
@@ -434,8 +811,8 @@
         <a href="../settings/2-indexer-settings/" class=" "
           >
            
-<svg class="lucide-icon icon-settings " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-settings"
+<svg class="lucide-icon icon-database " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-database"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -446,8 +823,9 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
-  <circle cx="12" cy="12" r="3" />
+  <ellipse cx="12" cy="5" rx="9" ry="3" />
+  <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+  <path d="M3 12A9 3 0 0 0 21 12" />
 </svg>
 
           
@@ -462,7 +840,240 @@
         
       </li>
     
+      <li class="" >
+      
+        <a href="../settings/3-playback-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-play " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-play"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Playback
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../settings/4-customization-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-brush " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-brush"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m11 10 3 3" />
+  <path d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z" />
+  <path d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Customizations
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../settings/5-youtube-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-youtube " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-youtube"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+  <path d="m10 15 5-3-5-3z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Youtube
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../settings/6-extras-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-puzzle " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-puzzle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Extras
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../settings/7-backup-restore-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-archive-restore " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-archive-restore"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="5" x="2" y="3" rx="1" />
+  <path d="M4 8v11a2 2 0 0 0 2 2h2" />
+  <path d="M20 8v11a2 2 0 0 1-2 2h-2" />
+  <path d="m9 15 3-3 3 3" />
+  <path d="M12 12v9" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Backup &amp; Restore
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../settings/8-advanced-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-wrench " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Advanced
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
           </ul>
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../tips/" class=" "
+          >
+           
+<svg class="lucide-icon icon-lightbulb " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-lightbulb"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+  <path d="M9 18h6" />
+  <path d="M10 22h4" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Tips &amp; Tricks
+            </span>
+          
+          
+        </a>
+        
+
         
       </li>
     
@@ -500,253 +1111,9 @@
         
       </li>
     
-      <li class="expanded nav-group" >
-      
-        <span class="nav-label nav-group">
-           
-<svg class="lucide-icon icon-book-open " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-book-open"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M12 7v14" />
-  <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Quick Guide
-          </span>
-          
-        </span>
-        
-
-        
-          <ul class="submenu">
-            
       <li class="" >
       
-        <a href="https://docs.docmd.io/getting-started/installation/" class=" "
-          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
-           
-<svg class="lucide-icon icon-download " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-download"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M12 15V3" />
-  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-  <path d="m7 10 5 5 5-5" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Install
-            </span>
-          
-           
-<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-external-link"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15 3h6v6" />
-  <path d="M10 14 21 3" />
-  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-</svg>
-
-          
-        </a>
-        
-
-        
-      </li>
-    
-      <li class="" >
-      
-        <a href="https://docs.docmd.io/configuration/overview/" class=" "
-          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
-           
-<svg class="lucide-icon icon-settings " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-settings"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
-  <circle cx="12" cy="12" r="3" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Configure
-            </span>
-          
-           
-<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-external-link"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15 3h6v6" />
-  <path d="M10 14 21 3" />
-  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-</svg>
-
-          
-        </a>
-        
-
-        
-      </li>
-    
-      <li class="" >
-      
-        <a href="https://docs.docmd.io/migration/overview/" class=" "
-          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
-           
-<svg class="lucide-icon icon-arrow-left-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-arrow-left-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M8 3 4 7l4 4" />
-  <path d="M4 7h16" />
-  <path d="m16 21 4-4-4-4" />
-  <path d="M20 17H4" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Migrate
-            </span>
-          
-           
-<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-external-link"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15 3h6v6" />
-  <path d="M10 14 21 3" />
-  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-</svg>
-
-          
-        </a>
-        
-
-        
-      </li>
-    
-      <li class="" >
-      
-        <a href="https://docs.docmd.io/deployment/" class=" "
-          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
-           
-<svg class="lucide-icon icon-rocket " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-rocket"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
-  <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
-  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Deploy
-            </span>
-          
-           
-<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-external-link"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15 3h6v6" />
-  <path d="M10 14 21 3" />
-  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-</svg>
-
-          
-        </a>
-        
-
-        
-      </li>
-    
-          </ul>
-        
-      </li>
-    
-      <li class="" >
-      
-        <a href="https://github.com/docmd-io/docmd" class=" "
+        <a href="https://github.com/namidaco/namida" class=" "
           target=&quot;_blank&quot; rel=&quot;noopener&quot;>
            
 <svg class="lucide-icon icon-github " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -797,334 +1164,253 @@
     
   </ul>
 </nav>
-        <div class="sidebar-bottom-group mt-auto">
+
+        <div class="summer-sidebar__bottom">
           
           
           
           
         </div>
       </aside>
-      
-      <div class="main-content-wrapper">
-        
-        
-        
-          <header class="page-header">
-            <div class="header-left">
-              
-                <button id="sidebar-toggle-button" class="sidebar-toggle-button"
-                  aria-label="Toggle Sidebar">
-                  
-<svg class="lucide-icon icon-chevron-left " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-chevron-left"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m15 18-6-6 6-6" />
-</svg>
+    
 
+    
+    <main class="summer-main" id="main-content">
+      
+        <div class="summer-pageheader">
+          <div class="summer-pageheader__inner">
+            
+            <div class="summer-pageheader__meta">
+              
+                <nav aria-label="breadcrumb" class="summer-breadcrumbs">
+                  <ol class="summer-breadcrumbs__list">
+                    
+                    
+                      <li class="summer-breadcrumbs__item is-current" aria-current=&quot;page&quot;>
+                        
+                          <span class="summer-breadcrumbs__current">FAQ</span>
+                        
+                      </li>
+                    
+                  </ol>
+                </nav>
+              
+            </div>
+
+            <div class="summer-copy-widgets">
+              
+                <button class="summer-copy-btn docmd-copy-raw-btn" type="button" data-copied="Copied!" title="Copy Markdown" aria-label="Copy Markdown">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy Markdown</span>
                 </button>
               
-              <div class="header-titles-wrapper">
-                <span class="header-title">
-                  FAQ
-                </span>
-              </div>
-            </div>
-            <div class="header-right">
+              
+                <button class="summer-copy-btn docmd-copy-context-btn" type="button" data-copied="Copied!" title="Copy Context" aria-label="Copy Context">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  <span>Copy Context</span>
+                </button>
               
             </div>
-          </header>
-        
-        <div class="content-theme-cover">
-          <main class="content-area" id="main-content">
-            <div class="content-layout">
-              <div class="main-content">
-                <div class="docmd-breadcrumbs-row">
-                  <div id="docmd-raw-markdown" data-content="---%0D%0Atitle%3A%20%22FAQ%22%0D%0Adescription%3A%20%22Frequently%20Asked%20Questions%22%0D%0A---%0D%0A%0D%0A%23%20Frequently%20Asked%20Questions%0D%0A%0D%0A%23%23%23%20Do%20I%20need%20to%20pay%20to%20use%20youtube%3F%0D%0A%0D%0A-%20Not%20really%2C%20searching%2C%20playing%20videos%2C%20liking%20or%20downloading%2C%20seeing%20your%20playlists%20(and%20many%20others)%20is%20totally%20free.%0D%0A-%20getting%20a%20membership%20means%20u%20access%20newly%20added%20yt%20features%20(beside%20supporting)%2C%20these%20features%20only%20make%20sense%20when%20you%20are%20logged%20in%20your%20yt%20account.%0D%0A-%20you%20can%20get%20a%20membership%20throught%20patreon%20on%20https%3A%2F%2Fpatreon.com%2Fnamidaco%0D%0A-%20if%20you%20have%20donated%20throught%20%5Bkofi%5D(https%3A%2F%2Fko-fi.com%2Fnamidaco)%20or%20%5Bbuymeacoffee%5D(https%3A%2F%2Fbuymeacoffee.com%2Fnamidaco)%2C%20you%20should%20get%20a%20coupon%20on%20ur%20email%2C%20altho%20not%20instant%20as%20patreon%20and%20may%20take%20more%20than%20few%20days%0D%0A-%20you%20can%20log%20in%20from%20Settings%20-%3E%20Youtube%20-%3E%20Manage%20your%20accounts%20-%3E%20Add%20account%20to%20access%20your%20playlists%20and%20like%20videos%2Fetc.%0D%0A-%20for%20more%20info%20about%20these%20features%20https%3A%2F%2Fwww.patreon.com%2Fposts%2Fnamida-yt-112913142%0D%0A%0D%0A%23%23%23%20Slow%2FBroken%20yt%20loading%2Fdownloads%0D%0A%0D%0AThis%20can%20happen%20frequently%20when%20youtube%20pushes%20updates%20that%20break%20clients.%0D%0AMost%20yt%20issues%20are%20fixed%20asap%20in%20beta%2C%20try%20latest%20beta%20from%20here%20https%3A%2F%2Fgithub.com%2Fnamidaco%2Fnamida-snapshots%2Freleases%0D%0A%0D%0A%23%23%23%20Lyrics%20Source%0D%0A%0D%0Ahttps%3A%2F%2Flrclib.net%2F%0D%0A%0D%0A%23%23%23%20Change%20Lyrics%20Source%0D%0A%0D%0A-%20not%20possible%20directly%0D%0A-%20you%20can%20select%20the%20LRC%20file%20(by%20long%20pressing%20lyrics%20icon%20in%20miniplayer%20-%3E%20add)%20or%20just%20edit%20tags%20and%20paste%20the%20lyrics%20in%20the%20lyrics%20section%0D%0A-%20you%20can%20also%20copy%20the%20LRC%20file%20and%20put%20it%20in%20the%20same%20directory%20as%20the%20song%2C%20it%20will%20appear%20as%20long%20as%20the%20filename%20is%20the%20same%20as%20the%20song%0D%0A-%20make%20sure%20%22Prioritize%20embedded%20lyrics%22%20is%20enabled%2Fdisabled%20depending%20on%20where%20u%20put%20the%20lyrics%20generally%0D%0A%0D%0A%23%23%23%20Is%20there%20a%20lastfm%20scrobble%20feature%3F%0D%0A%0D%0ANo%2C%20and%20not%20planned%20use%20PanoScrobbler%20https%3A%2F%2Fgithub.com%2FkawaiiDango%2Fpano-scrobbler.%20works%20with%20any%20player%20and%20has%20lots%20of%20features%0D%0A%0D%0A%23%23%23%20Is%20there%20a%20discord%20rich%20presence%20feature%20(RPC)%3F%0D%0A%0D%0ANo%2C%20and%20not%20planned%20use%3A%0D%0A%0D%0A-%20Kizzy%20on%20android%20https%3A%2F%2Fgithub.com%2Fdead8309%2FKizzy%0D%0A-%20music%20presence%20on%20desktop%20https%3A%2F%2Fgithub.com%2Fungive%2Fdiscord-music-presence%0D%0A%20%20they%20work%20with%20any%20player%0D%0A%0D%0A%23%23%23%20Equalizer%20issues%20or%20missing%20feature%0D%0A%0D%0Anamida%20equalizer%20is%20simple%20and%20uses%20native%20android%20effects%2C%20always%20recommend%20using%20system%20wide%20eq%20apps%20for%20better%20experience%20and%20more%20features.%0D%0Amost%20extra%20features%20require%20writing%20custom%20audio%20engine%20or%20make%20sure%20every%20android%20version%20supports%20this%20effect%2C%20none%20of%20these%20are%20planned.%0D%0Aif%20you%20have%20root%20you%20can%20use%20jamesdsp%20or%20viper4android.%0D%0Aotherwise%20use%20%5BEqualizer314%5D(https%3A%2F%2Ff-droid.org%2Fen%2Fpackages%2Fcom.bearinmind.equalizer314)%20or%20%5BRootlessJamesDSP%5D(https%3A%2F%2Ff-droid.org%2Fen%2Fpackages%2Fme.timschneeberger.rootlessjamesdsp).%0D%0A%0D%0A%23%23%23%20Spotify%20Support%0D%0A%0D%0ANot%20planned.%0D%0AImporting%20spotify%20history%20was%20added%20recently%20%5Bin%20beta%5D(https%3A%2F%2Fgithub.com%2Fnamidaco%2Fnamida-snapshots%2Freleases)%0D%0Abut%20that&#039;s%20all.%0D%0A%0D%0AReason%20is%20simply%20spotify%20is%20notorious%20for%20blocking%20any%20attempts%20at%20any%20unofficial%20clients.%20even%20if%20namida%20implements%20that%2C%20it%20will%20simply%20be%20hit%20by%20a%20dmca%20and%20no%20longer%20have%20support.%0D%0A%0D%0AWhat%20u%20can%20do%20as%20an%20alternative%20is%20convert%20ur%20spotify%20playlists%20to%20ytm%2C%20then%20login%20in%20namida%20to%20view%20ur%20yt%20playlists.%0D%0Awe%20barely%20keeping%20yt%20support%20alive%20as%20is.%0D%0A%0D%0AAlternatives%3A%20%5Bspotiflac%5D(https%3A%2F%2Fgithub.com%2Fspotbye%2FSpotiFLAC)%20or%20%5Bother%20tools%20like%20it%5D(https%3A%2F%2Fwww.reddit.com%2Fr%2FFREEMEDIAHECKYEAH%2Fwiki%2Faudio%2F%23wiki_.25B7_audio_ripping_tools)%0D%0A%0D%0A%23%23%23%20Some%20FLAC%20files%20have%20no%20sound%20at%20some%20point%0D%0A%0D%0Acheck%20the%20source%20u%20got%20it%20from%2C%20try%20using%20ffmpeg%20with%20a%20compression%20level%20of%205%20on%20the%20file%0D%0A%0D%0A%60%60%60bash%0D%0Affmpeg%20-y%20-i%20%22path%2Fto%2Ffile.flac%22%20-map%200%20-c%3Aa%20flac%20-compression_level%205%20-c%3Av%20copy%20%22path%2Fto%2Foutput.flac%22%0D%0A%60%60%60%0D%0A" style="display: none;"></div>
-                  
-                    <nav aria-label="breadcrumb" class="docmd-breadcrumbs">
-                      <ol>
-                        
-                        
-                          <li class="breadcrumb-item active" aria-current=&quot;page&quot;>
-                            
-                              <span>FAQ</span>
-                            
-                            
-                          </li>
-                        
-                      </ol>
-                    </nav>
-                  
+          </div>
+        </div>
+      
 
-                  
-                    <div class="docmd-copy-widgets">
-                      
-                        <button class="docmd-copy-btn docmd-copy-raw-btn" data-copied="Copied!" title="Copy Markdown" aria-label="Copy Markdown">
-                          <span class="docmd-btn-icon">
-<svg class="lucide-icon icon-copy " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-copy"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
-</svg>
-</span>
-                        </button>
-                      
-                      
-                        <button class="docmd-copy-btn docmd-copy-context-btn" data-copied="Copied!" title="Copy Context">
-                          <span class="docmd-btn-icon">
-<svg class="lucide-icon icon-message-square " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-message-square"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
-</svg>
-</span>
-                          <span class="docmd-btn-text">Copy Context</span>
-                        </button>
-                      
-                    </div>
-                  
-                </div>
-                
-                <h1 id="frequently-asked-questions" class="docmd-heading"><a href="#frequently-asked-questions" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Frequently Asked Questions</h1>
+      
+
+      <div id="docmd-raw-markdown" data-content="---%0Atitle%3A%20%22FAQ%22%0Adescription%3A%20%22Frequently%20Asked%20Questions%22%0A---%0A%0A%23%20Frequently%20Asked%20Questions%0A%0A%23%23%23%20Do%20I%20need%20to%20pay%20to%20use%20youtube%3F%0A%0A-%20Not%20really%2C%20searching%2C%20playing%20videos%2C%20liking%20or%20downloading%2C%20seeing%20your%20playlists%20(and%20many%20others)%20are%20totally%20free.%0A-%20Getting%20a%20membership%20means%20you%20get%20access%20to%20newly%20added%20YT%20features%20(besides%20supporting)%2C%20these%20features%20only%20make%20sense%20when%20you%20are%20logged%20in%20to%20your%20YT%20account.%0A-%20You%20can%20get%20a%20membership%20through%20Patreon%20on%20https%3A%2F%2Fpatreon.com%2Fnamidaco%0A-%20If%20you%20have%20donated%20through%20%5Bkofi%5D(https%3A%2F%2Fko-fi.com%2Fnamidaco)%20or%20%5Bbuymeacoffee%5D(https%3A%2F%2Fbuymeacoffee.com%2Fnamidaco)%2C%20you%20should%20get%20a%20coupon%20in%20your%20email%2C%20although%20it&#039;s%20not%20instant%20like%20Patreon%20and%20may%20take%20more%20than%20a%20few%20days.%0A-%20You%20can%20log%20in%20from%20Settings%20-%3E%20Youtube%20-%3E%20Manage%20your%20accounts%20-%3E%20Add%20account%20to%20access%20your%20playlists%2C%20like%20videos%2C%20etc.%0A-%20For%20more%20info%20about%20these%20features%3A%20https%3A%2F%2Fwww.patreon.com%2Fposts%2Fnamida-yt-112913142%0A%0A%23%23%23%20Slow%2FBroken%20yt%20loading%2Fdownloads%0A%0AThis%20can%20happen%20frequently%20when%20youtube%20pushes%20updates%20that%20break%20clients.%0AMost%20YT%20issues%20are%20fixed%20asap%20in%20beta%2C%20try%20the%20latest%20beta%20from%20here%3A%20https%3A%2F%2Fgithub.com%2Fnamidaco%2Fnamida-snapshots%2Freleases%0A%0A%23%23%23%20Lyrics%20Source%0A%0Ahttps%3A%2F%2Flrclib.net%2F%0A%0A%23%23%23%20Change%20Lyrics%20Source%0A%0A-%20Not%20possible%20directly.%0A-%20You%20can%20select%20the%20LRC%20file%20(by%20long%20pressing%20the%20lyrics%20icon%20in%20the%20miniplayer%20-%3E%20add)%2C%20or%20just%20edit%20tags%20and%20paste%20the%20lyrics%20in%20the%20lyrics%20section.%0A-%20You%20can%20also%20copy%20the%20LRC%20file%20and%20put%20it%20in%20the%20same%20directory%20as%20the%20song%2C%20it%20will%20appear%20as%20long%20as%20the%20filename%20is%20the%20same%20as%20the%20song&#039;s.%0A-%20Make%20sure%20%22Prioritize%20embedded%20lyrics%22%20is%20enabled%2Fdisabled%20depending%20on%20where%20you%20generally%20put%20the%20lyrics.%0A%0A%23%23%23%20Is%20there%20a%20lastfm%20scrobble%20feature%3F%0A%0ANo%2C%20and%20not%20planned.%20Use%20PanoScrobbler%20https%3A%2F%2Fgithub.com%2FkawaiiDango%2Fpano-scrobbler%2C%20it%20works%20with%20any%20player%20and%20has%20lots%20of%20features.%0A%0A%23%23%23%20Is%20there%20a%20discord%20rich%20presence%20feature%20(RPC)%3F%0A%0ANo%2C%20and%20not%20planned.%20Use%3A%0A%0A-%20Kizzy%20on%20android%3A%20https%3A%2F%2Fgithub.com%2Fdead8309%2FKizzy%0A-%20Music%20Presence%20on%20desktop%3A%20https%3A%2F%2Fgithub.com%2Fungive%2Fdiscord-music-presence%0A%0AThey%20work%20with%20any%20player.%0A%0A%23%23%23%20Equalizer%20issues%20or%20missing%20feature%0A%0ANamida&#039;s%20equalizer%20is%20simple%20and%20uses%20native%20android%20effects%2C%20we%20always%20recommend%20using%20system%20wide%20EQ%20apps%20for%20a%20better%20experience%20and%20more%20features.%0AMost%20extra%20features%20require%20writing%20a%20custom%20audio%20engine%2C%20or%20making%20sure%20every%20android%20version%20supports%20the%20effect%2C%20none%20of%20these%20are%20planned.%0AIf%20you%20have%20root%2C%20you%20can%20use%20JamesDSP%20or%20Viper4Android.%0AOtherwise%20use%20%5BEqualizer314%5D(https%3A%2F%2Ff-droid.org%2Fen%2Fpackages%2Fcom.bearinmind.equalizer314)%20or%20%5BRootlessJamesDSP%5D(https%3A%2F%2Ff-droid.org%2Fen%2Fpackages%2Fme.timschneeberger.rootlessjamesdsp).%0A%0A%23%23%23%20Spotify%20Support%0A%0ANot%20planned.%0AImporting%20spotify%20history%20was%20added%20recently%20%5Bin%20beta%5D(https%3A%2F%2Fgithub.com%2Fnamidaco%2Fnamida-snapshots%2Freleases)%2C%0Abut%20that&#039;s%20all.%0A%0AThe%20reason%20is%20simply%20that%20spotify%20is%20notorious%20for%20blocking%20any%20attempt%20at%20unofficial%20clients.%20Even%20if%20Namida%20implements%20that%2C%20it%20will%20simply%20be%20hit%20by%20a%20DMCA%20and%20no%20longer%20have%20support.%0A%0AWhat%20you%20can%20do%20as%20an%20alternative%20is%20convert%20your%20spotify%20playlists%20to%20YTM%2C%20then%20log%20in%20inside%20Namida%20to%20view%20your%20YT%20playlists.%0AWe%20are%20barely%20keeping%20YT%20support%20alive%20as%20is.%0A%0AAlternatives%3A%20%5Bspotiflac%5D(https%3A%2F%2Fgithub.com%2Fspotbye%2FSpotiFLAC)%20or%20%5Bother%20tools%20like%20it%5D(https%3A%2F%2Fwww.reddit.com%2Fr%2FFREEMEDIAHECKYEAH%2Fwiki%2Faudio%2F%23wiki_.25B7_audio_ripping_tools)%0A%0A%23%23%23%20Some%20FLAC%20files%20have%20no%20sound%20at%20some%20point%0A%0ACheck%20the%20source%20you%20got%20it%20from%2C%20and%20try%20using%20ffmpeg%20with%20a%20compression%20level%20of%205%20on%20the%20file%3A%0A%0A%60%60%60bash%0Affmpeg%20-y%20-i%20%22path%2Fto%2Ffile.flac%22%20-map%200%20-c%3Aa%20flac%20-compression_level%205%20-c%3Av%20copy%20%22path%2Fto%2Foutput.flac%22%0A%60%60%60%0A" style="display: none;"></div>
+
+      <article class="summer-content">
+        <h1 id="frequently-asked-questions" class="docmd-heading"><a href="#frequently-asked-questions" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Frequently Asked Questions</h1>
 <h3 id="frequently-asked-questions-do-i-need-to-pay-to-use-youtube" class="docmd-heading"><a href="#frequently-asked-questions-do-i-need-to-pay-to-use-youtube" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Do I need to pay to use youtube?</h3>
 <ul>
-<li>Not really, searching, playing videos, liking or downloading, seeing your playlists (and many others) is totally free.</li>
-<li>getting a membership means u access newly added yt features (beside supporting), these features only make sense when you are logged in your yt account.</li>
-<li>you can get a membership throught patreon on <a href="https://patreon.com/namidaco">https://patreon.com/namidaco</a></li>
-<li>if you have donated throught <a href="https://ko-fi.com/namidaco">kofi</a> or <a href="https://buymeacoffee.com/namidaco">buymeacoffee</a>, you should get a coupon on ur email, altho not instant as patreon and may take more than few days</li>
-<li>you can log in from Settings -&gt; Youtube -&gt; Manage your accounts -&gt; Add account to access your playlists and like videos/etc.</li>
-<li>for more info about these features <a href="https://www.patreon.com/posts/namida-yt-112913142">https://www.patreon.com/posts/namida-yt-112913142</a></li>
+<li>Not really, searching, playing videos, liking or downloading, seeing your playlists (and many others) are totally free.</li>
+<li>Getting a membership means you get access to newly added YT features (besides supporting), these features only make sense when you are logged in to your YT account.</li>
+<li>You can get a membership through Patreon on <a href="https://patreon.com/namidaco">https://patreon.com/namidaco</a></li>
+<li>If you have donated through <a href="https://ko-fi.com/namidaco">kofi</a> or <a href="https://buymeacoffee.com/namidaco">buymeacoffee</a>, you should get a coupon in your email, although it’s not instant like Patreon and may take more than a few days.</li>
+<li>You can log in from Settings -&gt; Youtube -&gt; Manage your accounts -&gt; Add account to access your playlists, like videos, etc.</li>
+<li>For more info about these features: <a href="https://www.patreon.com/posts/namida-yt-112913142">https://www.patreon.com/posts/namida-yt-112913142</a></li>
 </ul>
 <h3 id="frequently-asked-questions-slowbroken-yt-loadingdownloads" class="docmd-heading"><a href="#frequently-asked-questions-slowbroken-yt-loadingdownloads" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Slow/Broken yt loading/downloads</h3>
 <p>This can happen frequently when youtube pushes updates that break clients.<br>
-Most yt issues are fixed asap in beta, try latest beta from here <a href="https://github.com/namidaco/namida-snapshots/releases">https://github.com/namidaco/namida-snapshots/releases</a></p>
+Most YT issues are fixed asap in beta, try the latest beta from here: <a href="https://github.com/namidaco/namida-snapshots/releases">https://github.com/namidaco/namida-snapshots/releases</a></p>
 <h3 id="frequently-asked-questions-lyrics-source" class="docmd-heading"><a href="#frequently-asked-questions-lyrics-source" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Lyrics Source</h3>
 <p><a href="https://lrclib.net/">https://lrclib.net/</a></p>
 <h3 id="frequently-asked-questions-change-lyrics-source" class="docmd-heading"><a href="#frequently-asked-questions-change-lyrics-source" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Change Lyrics Source</h3>
 <ul>
-<li>not possible directly</li>
-<li>you can select the LRC file (by long pressing lyrics icon in miniplayer -&gt; add) or just edit tags and paste the lyrics in the lyrics section</li>
-<li>you can also copy the LRC file and put it in the same directory as the song, it will appear as long as the filename is the same as the song</li>
-<li>make sure “Prioritize embedded lyrics” is enabled/disabled depending on where u put the lyrics generally</li>
+<li>Not possible directly.</li>
+<li>You can select the LRC file (by long pressing the lyrics icon in the miniplayer -&gt; add), or just edit tags and paste the lyrics in the lyrics section.</li>
+<li>You can also copy the LRC file and put it in the same directory as the song, it will appear as long as the filename is the same as the song’s.</li>
+<li>Make sure “Prioritize embedded lyrics” is enabled/disabled depending on where you generally put the lyrics.</li>
 </ul>
 <h3 id="frequently-asked-questions-is-there-a-lastfm-scrobble-feature" class="docmd-heading"><a href="#frequently-asked-questions-is-there-a-lastfm-scrobble-feature" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Is there a lastfm scrobble feature?</h3>
-<p>No, and not planned use PanoScrobbler <a href="https://github.com/kawaiiDango/pano-scrobbler">https://github.com/kawaiiDango/pano-scrobbler</a>. works with any player and has lots of features</p>
+<p>No, and not planned. Use PanoScrobbler <a href="https://github.com/kawaiiDango/pano-scrobbler">https://github.com/kawaiiDango/pano-scrobbler</a>, it works with any player and has lots of features.</p>
 <h3 id="frequently-asked-questions-is-there-a-discord-rich-presence-feature-rpc" class="docmd-heading"><a href="#frequently-asked-questions-is-there-a-discord-rich-presence-feature-rpc" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Is there a discord rich presence feature (RPC)?</h3>
-<p>No, and not planned use:</p>
+<p>No, and not planned. Use:</p>
 <ul>
-<li>Kizzy on android <a href="https://github.com/dead8309/Kizzy">https://github.com/dead8309/Kizzy</a></li>
-<li>music presence on desktop <a href="https://github.com/ungive/discord-music-presence">https://github.com/ungive/discord-music-presence</a><br>
-they work with any player</li>
+<li>Kizzy on android: <a href="https://github.com/dead8309/Kizzy">https://github.com/dead8309/Kizzy</a></li>
+<li>Music Presence on desktop: <a href="https://github.com/ungive/discord-music-presence">https://github.com/ungive/discord-music-presence</a></li>
 </ul>
+<p>They work with any player.</p>
 <h3 id="frequently-asked-questions-equalizer-issues-or-missing-feature" class="docmd-heading"><a href="#frequently-asked-questions-equalizer-issues-or-missing-feature" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Equalizer issues or missing feature</h3>
-<p>namida equalizer is simple and uses native android effects, always recommend using system wide eq apps for better experience and more features.<br>
-most extra features require writing custom audio engine or make sure every android version supports this effect, none of these are planned.<br>
-if you have root you can use jamesdsp or viper4android.<br>
-otherwise use <a href="https://f-droid.org/en/packages/com.bearinmind.equalizer314">Equalizer314</a> or <a href="https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp">RootlessJamesDSP</a>.</p>
+<p>Namida’s equalizer is simple and uses native android effects, we always recommend using system wide EQ apps for a better experience and more features.<br>
+Most extra features require writing a custom audio engine, or making sure every android version supports the effect, none of these are planned.<br>
+If you have root, you can use JamesDSP or Viper4Android.<br>
+Otherwise use <a href="https://f-droid.org/en/packages/com.bearinmind.equalizer314">Equalizer314</a> or <a href="https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp">RootlessJamesDSP</a>.</p>
 <h3 id="frequently-asked-questions-spotify-support" class="docmd-heading"><a href="#frequently-asked-questions-spotify-support" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Spotify Support</h3>
 <p>Not planned.<br>
-Importing spotify history was added recently <a href="https://github.com/namidaco/namida-snapshots/releases">in beta</a><br>
+Importing spotify history was added recently <a href="https://github.com/namidaco/namida-snapshots/releases">in beta</a>,<br>
 but that’s all.</p>
-<p>Reason is simply spotify is notorious for blocking any attempts at any unofficial clients. even if namida implements that, it will simply be hit by a dmca and no longer have support.</p>
-<p>What u can do as an alternative is convert ur spotify playlists to ytm, then login in namida to view ur yt playlists.<br>
-we barely keeping yt support alive as is.</p>
+<p>The reason is simply that spotify is notorious for blocking any attempt at unofficial clients. Even if Namida implements that, it will simply be hit by a DMCA and no longer have support.</p>
+<p>What you can do as an alternative is convert your spotify playlists to YTM, then log in inside Namida to view your YT playlists.<br>
+We are barely keeping YT support alive as is.</p>
 <p>Alternatives: <a href="https://github.com/spotbye/SpotiFLAC">spotiflac</a> or <a href="https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/audio/#wiki_.25B7_audio_ripping_tools">other tools like it</a></p>
 <h3 id="frequently-asked-questions-some-flac-files-have-no-sound-at-some-point" class="docmd-heading"><a href="#frequently-asked-questions-some-flac-files-have-no-sound-at-some-point" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Some FLAC files have no sound at some point</h3>
-<p>check the source u got it from, try using ffmpeg with a compression level of 5 on the file</p>
+<p>Check the source you got it from, and try using ffmpeg with a compression level of 5 on the file:</p>
 <pre class="hljs"><code class="language-bash">ffmpeg <span class="hljs-operator">-</span>y <span class="hljs-operator">-</span>i <span class="hljs-string">&quot;path/to/file.flac&quot;</span> <span class="hljs-operator">-</span>map <span class="hljs-number">0</span> <span class="hljs-operator">-</span>c<span class="hljs-operator">:</span>a flac <span class="hljs-operator">-</span>compression_level <span class="hljs-number">5</span> <span class="hljs-operator">-</span>c<span class="hljs-operator">:</span>v copy <span class="hljs-string">&quot;path/to/output.flac&quot;</span>
 </code></pre>
 
-                
-                  <div class="page-navigation">
-                    
-                      <a href="../settings/2-indexer-settings/" class="prev-page">
-                        
-<svg class="lucide-icon icon-arrow-left page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-arrow-left"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m12 19-7-7 7-7" />
-  <path d="M19 12H5" />
-</svg>
+      </article>
 
-                        <span><small>Previous</small><strong>
-                            Indexer
-                          </strong></span>
-                      </a>
-                    
-                    
-                      <div class="next-page-placeholder">
-                      </div>
-                    
-                  </div>
-                
-              </div>
-              
-              <div class="toc-sidebar">
-                
-
-
-  <div class="toc-container">
-    <h2 class="toc-title">On This Page<span class="mobile-view toc-menu-button float-right">
-<svg class="lucide-icon icon-chevron-down " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-chevron-down"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m6 9 6 6 6-6" />
-</svg>
-</span></h2>
-    <ul class="toc-list">
       
-        <li class="toc-item toc-level-1">
-          <a href="#frequently-asked-questions" class="toc-link">Frequently Asked Questions</a>
-        </li>
-      
-        <li class="toc-item toc-level-3">
-          <a href="#frequently-asked-questions-do-i-need-to-pay-to-use-youtube" class="toc-link">Do I need to pay to use youtube?</a>
-        </li>
-      
-        <li class="toc-item toc-level-3">
-          <a href="#frequently-asked-questions-slowbroken-yt-loadingdownloads" class="toc-link">Slow/Broken yt loading/downloads</a>
-        </li>
-      
-        <li class="toc-item toc-level-3">
-          <a href="#frequently-asked-questions-lyrics-source" class="toc-link">Lyrics Source</a>
-        </li>
-      
-        <li class="toc-item toc-level-3">
-          <a href="#frequently-asked-questions-change-lyrics-source" class="toc-link">Change Lyrics Source</a>
-        </li>
-      
-        <li class="toc-item toc-level-3">
-          <a href="#frequently-asked-questions-is-there-a-lastfm-scrobble-feature" class="toc-link">Is there a lastfm scrobble feature?</a>
-        </li>
-      
-        <li class="toc-item toc-level-3">
-          <a href="#frequently-asked-questions-is-there-a-discord-rich-presence-feature-rpc" class="toc-link">Is there a discord rich presence feature (RPC)?</a>
-        </li>
-      
-        <li class="toc-item toc-level-3">
-          <a href="#frequently-asked-questions-equalizer-issues-or-missing-feature" class="toc-link">Equalizer issues or missing feature</a>
-        </li>
-      
-        <li class="toc-item toc-level-3">
-          <a href="#frequently-asked-questions-spotify-support" class="toc-link">Spotify Support</a>
-        </li>
-      
-        <li class="toc-item toc-level-3">
-          <a href="#frequently-asked-questions-some-flac-files-have-no-sound-at-some-point" class="toc-link">Some FLAC files have no sound at some point</a>
-        </li>
-      
-    </ul>
-  </div>
-
-              </div>
-              
-            </div>
-            <div class="page-footer-actions">
-              
-              
-                <span class="git-last-updated" data-timestamp="1787450877000">
-                  <svg class="git-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  <span class="git-label">Last updated:</span>
-                  <span class="git-time" data-timestamp="1787450877000"></span>
-                  
-                  <div class="git-commit-tooltip" role="tooltip">
-                    <div class="git-tooltip-title">Recent commits</div>
-                    <ul class="git-commit-list">
-                      
-                        <li class="git-commit-item">
-                          <div class="git-commit-avatar" title="MSOB7YY">
-                            
-                              <img src="https://www.gravatar.com/avatar/92ea4fe968e00ff0144dc5dfc84fa9d7?d=mp&amp;s=64" alt="MSOB7YY">
-                            
-                          </div>
-                          <div class="git-commit-details">
-                            <div class="git-commit-message" title="initial">initial</div>
-                            <div class="git-commit-meta">
-                              <span class="git-commit-author">MSOB7YY</span>
-                              <span class="git-commit-date" data-timestamp="1787450877000"></span>
-                            </div>
-                          </div>
-                        </li>
-                      
-                    </ul>
-                  </div>
-                  
-                </span>
-              
-              <span class="git-spacer"></span>
-              
-            </div>
-          </main>
+        <nav class="summer-pagenav no-next" aria-label="Page navigation">
           
+            <a href="../tips/" class="summer-pagenav__link summer-pagenav__link--prev">
+              <svg class="summer-pagenav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              <span class="summer-pagenav__label">
+                <span class="summer-pagenav__small">Previous</span>
+                <span class="summer-pagenav__title">Tips &amp; Tricks</span>
+              </span>
+            </a>
+          
+          
+        </nav>
+      
 
+      
+        <div class="summer-pagefooter">
+          
+            <span></span>
+          
+          
+            <span class="summer-pagefooter__time has-commits" data-timestamp="1787450877000" tabindex="0" aria-haspopup="true" aria-expanded="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Last updated: <time datetime="2026-08-23T02:07:57.000Z">8/23/2026</time></span>
+              
+                <div class="summer-git-popover" role="tooltip">
+                  <div class="summer-git-popover__title">Recent commits</div>
+                  <ul class="summer-git-popover__list">
+                    
+                      <li class="summer-git-popover__item">
+                        <div class="summer-git-popover__avatar" title="MSOB7YY">
+                          
+                            <img src="https://www.gravatar.com/avatar/92ea4fe968e00ff0144dc5dfc84fa9d7?d=mp&amp;s=64" alt="MSOB7YY" loading="lazy">
+                          
+                        </div>
+                        <div class="summer-git-popover__details">
+                          <div class="summer-git-popover__msg" title="initial">initial</div>
+                          <div class="summer-git-popover__meta">
+                            <span class="summer-git-popover__author">MSOB7YY</span>
+                            <span class="summer-git-popover__date" data-timestamp="1787450877000"></span>
+                          </div>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </div>
+              
+            </span>
+          
+        </div>
+      
+    </main>
 
-<footer class="page-footer">
-  <div class="footer-content">
-    <div class="user-footer">©namidaco</div>
+    
+    
+      
+      <div class="summer-toc" aria-label="On this page">
+        
+          <aside class="summer-toc__inner">
+            <h2 class="summer-toc__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                <line x1="21" y1="5" x2="3" y2="5"></line>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+                <line x1="17" y1="19" x2="3" y2="19"></line>
+              </svg>
+              <span>On This Page</span>
+            </h2>
+            <ul class="summer-toc__list">
+              
+                <li class="summer-toc__item summer-toc__item--level-1" data-prev-level="1" data-level="1">
+                  <a href="#frequently-asked-questions" class="summer-toc__link" data-toc-level="1">Frequently Asked Questions</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="1" data-level="3">
+                  <a href="#frequently-asked-questions-do-i-need-to-pay-to-use-youtube" class="summer-toc__link" data-toc-level="3">Do I need to pay to use youtube?</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#frequently-asked-questions-slowbroken-yt-loadingdownloads" class="summer-toc__link" data-toc-level="3">Slow/Broken yt loading/downloads</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#frequently-asked-questions-lyrics-source" class="summer-toc__link" data-toc-level="3">Lyrics Source</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#frequently-asked-questions-change-lyrics-source" class="summer-toc__link" data-toc-level="3">Change Lyrics Source</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#frequently-asked-questions-is-there-a-lastfm-scrobble-feature" class="summer-toc__link" data-toc-level="3">Is there a lastfm scrobble feature?</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#frequently-asked-questions-is-there-a-discord-rich-presence-feature-rpc" class="summer-toc__link" data-toc-level="3">Is there a discord rich presence feature (RPC)?</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#frequently-asked-questions-equalizer-issues-or-missing-feature" class="summer-toc__link" data-toc-level="3">Equalizer issues or missing feature</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#frequently-asked-questions-spotify-support" class="summer-toc__link" data-toc-level="3">Spotify Support</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#frequently-asked-questions-some-flac-files-have-no-sound-at-some-point" class="summer-toc__link" data-toc-level="3">Some FLAC files have no sound at some point</a>
+                </li>
+              
+            </ul>
+          </aside>
+        
+      </div>
     
   </div>
-</footer>
 
-        </div>
+  <button class="summer-totop" type="button" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+  
+  
+  
+    <footer class="summer-footer">
+      <div class="summer-footer__inner">
+        <div class="summer-footer__user">©namidaco</div>
+        
       </div>
-      
-      <script src="../assets/js/docmd-main.js?v=mt61gay0"></script>
-      
-      <script src="../assets/js/docmd-git.js?v=mt61gay0"></script>
-      <script src="../assets/js/docmd-image-lightbox.js?v=mt61gay0" ></script>
-<script src="../assets/js/vendor/minisearch.js?v=mt61gay0" ></script>
-<script src="../assets/js/docmd-search.js?v=mt61gay0" ></script>
-<script src="../assets/js/docmd-git.js?v=mt61gay0" ></script>
-<script src="../assets/js/docmd-ai.js?v=mt61gay0" ></script>
+    </footer>
+  
+
+  
+  <script src="../assets/js/docmd-main.js?v=mtav7zwa"></script>
+
+  <script src="../assets/js/docmd-image-lightbox.js?v=mtav7zwa" ></script>
+<script src="../assets/js/vendor/minisearch.js?v=mtav7zwa" ></script>
+<script src="../assets/js/docmd-search.js?v=mtav7zwa" ></script>
+<script src="../assets/js/docmd-git.js?v=mtav7zwa" ></script>
+<script src="../assets/js/docmd-ai.js?v=mtav7zwa" ></script>
+<script src="../assets/template/summer.js?v=mtav7zwa" ></script>
 
   <!-- Search Modal (Injected by @docmd/plugin-search) -->
   <div id="docmd-search-modal" class="docmd-search-modal" style="display: none;" data-show-confidence="false" data-show-filters="true"
@@ -1200,9 +1486,7 @@ we barely keeping yt support alive as is.</p>
     </script>
 
 <script>window.__git_config={"repo":null,"branch":"main","editLink":false,"lastUpdated":true,"commitHistory":true,"maxCommits":5,"dateFormat":"relative"};window.__git_i18n={"lastUpdated":"Last updated","recentCommits":"Recent commits","viewCommitHistory":"View commit history","editOnGitHub":"Edit on GitHub","editOnGitLab":"Edit on GitLab","editOnBitbucket":"Edit on Bitbucket","editThisPage":"Edit this page","justNow":"just now","minutesAgo":"{n}m ago","hoursAgo":"{n}h ago","daysAgo":"{n}d ago"}</script>
-<div id="docmd-ai-root"></div><script>window.__docmd_ai_config={"endpoint":"https://api.docmd.io/v1/ai/chat","projectId":"docmd_sxy4har0mt4u6z8j","cloud":{"siteId":"docmd_sxy4har0mt4u6z8j","projectId":"docmd_sxy4har0mt4u6z8j"},"captcha":true,"position":"bottom-center","siteTitle":"Namida","siteBase":"/","siteUrl":"https://docs.myproject.com","versions":null,"i18n":null,"navigation":[{"title":"Quick Start","path":"/","icon":"zap"},{"title":"Agent Skills","path":"/skills/","icon":"brain-circuit"},{"title":"Settings","path":"/settings/","icon":"settings","children":[{"title":"Theme","path":"/settings/1-theme-settings/","icon":"download","external":false},{"title":"Indexer","path":"/settings/2-indexer-settings/","icon":"settings","external":false}]},{"title":"FAQ","path":"/faq/","icon":"message-circle-question-mark"},{"title":"Quick Guide","icon":"book-open","collapsible":false,"children":[{"title":"Install","path":"https://docs.docmd.io/getting-started/installation/","icon":"download","external":true},{"title":"Configure","path":"https://docs.docmd.io/configuration/overview/","icon":"settings","external":true},{"title":"Migrate","path":"https://docs.docmd.io/migration/overview/","icon":"arrow-left-right","external":true},{"title":"Deploy","path":"https://docs.docmd.io/deployment/","icon":"rocket","external":true}]},{"title":"GitHub","path":"https://github.com/docmd-io/docmd","icon":"github","external":true}],"searchCapabilities":{"keyword":true,"semantic":false},"isWorkspace":false,"workspaceProjects":[]};</script>
-      
-      
-      
-  </body>
+<div id="docmd-ai-root"></div><script>window.__docmd_ai_config={"endpoint":"https://api.docmd.io/v1/ai/chat","projectId":"docmd_sxy4har0mt4u6z8j","cloud":{"siteId":"docmd_sxy4har0mt4u6z8j","projectId":"docmd_sxy4har0mt4u6z8j"},"captcha":true,"position":"bottom-center","siteTitle":"Namida","siteBase":"/","siteUrl":"https://namidaco.github.io/namida_docs","versions":null,"i18n":null,"navigation":[{"title":"Welcome","path":"/","icon":"house"},{"title":"Features","path":"/features/","icon":"sparkles","collapsible":false,"children":[{"title":"Library & Indexing","path":"/features/library-indexing/","icon":"library","external":false},{"title":"Playback","path":"/features/playback/","icon":"play-circle","external":false},{"title":"Playlists & History","path":"/features/playlists-history/","icon":"list-music","external":false},{"title":"Tag Editor","path":"/features/tag-editor/","icon":"tag","external":false},{"title":"YouTube","path":"/features/youtube/","icon":"youtube","external":false},{"title":"Media Servers","path":"/features/media-servers/","icon":"server","external":false},{"title":"Sync","path":"/features/sync/","icon":"arrow-left-right","external":false},{"title":"Shortcuts","path":"/features/shortcuts/","icon":"keyboard","external":false}]},{"title":"Pages","path":"/pages/","icon":"layout-grid","collapsible":false,"children":[{"title":"Library","path":"/pages/library/","icon":"library-big","external":false},{"title":"YouTube","path":"/pages/youtube/","icon":"youtube","external":false},{"title":"Other","path":"/pages/other/","icon":"layers","external":false}]},{"title":"Settings","path":"/settings/","icon":"settings","collapsible":false,"children":[{"title":"Theme","path":"/settings/1-theme-settings/","icon":"palette","external":false},{"title":"Indexer","path":"/settings/2-indexer-settings/","icon":"database","external":false},{"title":"Playback","path":"/settings/3-playback-settings/","icon":"play","external":false},{"title":"Customizations","path":"/settings/4-customization-settings/","icon":"brush","external":false},{"title":"Youtube","path":"/settings/5-youtube-settings/","icon":"youtube","external":false},{"title":"Extras","path":"/settings/6-extras-settings/","icon":"puzzle","external":false},{"title":"Backup & Restore","path":"/settings/7-backup-restore-settings/","icon":"archive-restore","external":false},{"title":"Advanced","path":"/settings/8-advanced-settings/","icon":"wrench","external":false}]},{"title":"Tips & Tricks","path":"/tips/","icon":"lightbulb"},{"title":"FAQ","path":"/faq/","icon":"message-circle-question-mark"},{"title":"GitHub","path":"https://github.com/namidaco/namida","icon":"github","external":true}],"searchCapabilities":{"keyword":true,"semantic":false},"isWorkspace":false,"workspaceProjects":[]};</script>
+  
+</body>
 </html>

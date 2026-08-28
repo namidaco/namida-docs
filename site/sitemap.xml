@@ -1,32 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://docs.myproject.com/faq/</loc>
+    <loc>https://namidaco.github.io/namida_docs/faq/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://docs.myproject.com/</loc>
+    <loc>https://namidaco.github.io/namida_docs/features/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/features/library-indexing/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/features/media-servers/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/features/playback/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/features/playlists-history/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/features/shortcuts/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/features/sync/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/features/tag-editor/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/features/youtube/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/</loc>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://docs.myproject.com/settings/1-theme-settings/</loc>
+    <loc>https://namidaco.github.io/namida_docs/pages/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://docs.myproject.com/settings/2-indexer-settings/</loc>
+    <loc>https://namidaco.github.io/namida_docs/pages/library/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://docs.myproject.com/settings/</loc>
+    <loc>https://namidaco.github.io/namida_docs/pages/other/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://docs.myproject.com/skills/</loc>
+    <loc>https://namidaco.github.io/namida_docs/pages/youtube/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/settings/1-theme-settings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/settings/2-indexer-settings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/settings/3-playback-settings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/settings/4-customization-settings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/settings/5-youtube-settings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/settings/6-extras-settings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/settings/7-backup-restore-settings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/settings/8-advanced-settings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/settings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namidaco.github.io/namida_docs/tips/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

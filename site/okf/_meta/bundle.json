@@ -1,18 +1,18 @@
 {
-  "okf_version": "0.9.3",
+  "okf_version": "0.9.4",
   "bundle": {
     "name": "namida",
     "title": "Namida",
     "description": "",
-    "url": "https://docs.myproject.com",
+    "url": "https://namidaco.github.io/namida_docs",
     "generated_by": "@docmd/plugin-okf",
-    "generated_at": "2026-08-23T16:45:36.122Z",
+    "generated_at": "2026-08-27T01:50:02.678Z",
     "default_type": "concept"
   },
   "stats": {
-    "concepts": 6,
+    "concepts": 25,
     "by_type": {
-      "concept": 6
+      "concept": 25
     },
     "locales": [],
     "versions": []
@@ -29,9 +29,99 @@
       "tags": []
     },
     {
+      "id": "features",
+      "type": "concept",
+      "title": "Features",
+      "path": "/features/",
+      "file": "concepts/features.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "features-library-indexing",
+      "type": "concept",
+      "title": "Library & Indexing",
+      "path": "/features/library-indexing/",
+      "file": "concepts/features-library-indexing.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "features-media-servers",
+      "type": "concept",
+      "title": "Media Servers",
+      "path": "/features/media-servers/",
+      "file": "concepts/features-media-servers.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "features-playback",
+      "type": "concept",
+      "title": "Playback",
+      "path": "/features/playback/",
+      "file": "concepts/features-playback.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "features-playlists-history",
+      "type": "concept",
+      "title": "Playlists & History",
+      "path": "/features/playlists-history/",
+      "file": "concepts/features-playlists-history.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "features-shortcuts",
+      "type": "concept",
+      "title": "Shortcuts",
+      "path": "/features/shortcuts/",
+      "file": "concepts/features-shortcuts.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "features-sync",
+      "type": "concept",
+      "title": "Sync",
+      "path": "/features/sync/",
+      "file": "concepts/features-sync.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "features-tag-editor",
+      "type": "concept",
+      "title": "Tag Editor",
+      "path": "/features/tag-editor/",
+      "file": "concepts/features-tag-editor.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "features-youtube",
+      "type": "concept",
+      "title": "YouTube",
+      "path": "/features/youtube/",
+      "file": "concepts/features-youtube.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
       "id": "root",
       "type": "concept",
-      "title": "Quick Start",
+      "title": "Welcome",
       "path": "/",
       "file": "concepts/root.md",
       "locale": "",
@@ -39,9 +129,49 @@
       "tags": []
     },
     {
+      "id": "pages",
+      "type": "concept",
+      "title": "Pages",
+      "path": "/pages/",
+      "file": "concepts/pages.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "pages-library",
+      "type": "concept",
+      "title": "Library",
+      "path": "/pages/library/",
+      "file": "concepts/pages-library.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "pages-other",
+      "type": "concept",
+      "title": "Other Pages",
+      "path": "/pages/other/",
+      "file": "concepts/pages-other.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "pages-youtube",
+      "type": "concept",
+      "title": "YouTube Pages",
+      "path": "/pages/youtube/",
+      "file": "concepts/pages-youtube.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
       "id": "settings-1-theme-settings",
       "type": "concept",
-      "title": "Theme Settings",
+      "title": "Theme",
       "path": "/settings/1-theme-settings/",
       "file": "concepts/settings-1-theme-settings.md",
       "locale": "",
@@ -51,9 +181,69 @@
     {
       "id": "settings-2-indexer-settings",
       "type": "concept",
-      "title": "Indexer Settings",
+      "title": "Indexer",
       "path": "/settings/2-indexer-settings/",
       "file": "concepts/settings-2-indexer-settings.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "settings-3-playback-settings",
+      "type": "concept",
+      "title": "Playback",
+      "path": "/settings/3-playback-settings/",
+      "file": "concepts/settings-3-playback-settings.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "settings-4-customization-settings",
+      "type": "concept",
+      "title": "Customizations",
+      "path": "/settings/4-customization-settings/",
+      "file": "concepts/settings-4-customization-settings.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "settings-5-youtube-settings",
+      "type": "concept",
+      "title": "Youtube",
+      "path": "/settings/5-youtube-settings/",
+      "file": "concepts/settings-5-youtube-settings.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "settings-6-extras-settings",
+      "type": "concept",
+      "title": "Extras",
+      "path": "/settings/6-extras-settings/",
+      "file": "concepts/settings-6-extras-settings.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "settings-7-backup-restore-settings",
+      "type": "concept",
+      "title": "Backup & Restore",
+      "path": "/settings/7-backup-restore-settings/",
+      "file": "concepts/settings-7-backup-restore-settings.md",
+      "locale": "",
+      "version": "",
+      "tags": []
+    },
+    {
+      "id": "settings-8-advanced-settings",
+      "type": "concept",
+      "title": "Advanced",
+      "path": "/settings/8-advanced-settings/",
+      "file": "concepts/settings-8-advanced-settings.md",
       "locale": "",
       "version": "",
       "tags": []
@@ -69,11 +259,11 @@
       "tags": []
     },
     {
-      "id": "skills",
+      "id": "tips",
       "type": "concept",
-      "title": "Agent Skills",
-      "path": "/skills/",
-      "file": "concepts/skills.md",
+      "title": "Tips & Tricks",
+      "path": "/tips/",
+      "file": "concepts/tips.md",
       "locale": "",
       "version": "",
       "tags": []

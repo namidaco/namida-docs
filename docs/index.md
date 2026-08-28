@@ -1,94 +1,43 @@
 ---
-title: "Quick Start"
-description: "Welcome to your new documentation site."
+title: "Welcome"
+description: "Namida documentation"
 ---
 
-# Quick Start Your Docs 🚀
+# Welcome
 
-This is the home page of your new **docmd** project. You're currently viewing `docs/index.md` — edit it, and your site updates.
+Namida is a beautiful and feature-rich music & video player with YouTube support, built in Flutter. Available on Android, Windows and Linux.
 
-## Run the dev server
+New here? Start with [Features](/features/) to see what Namida can do. Looking for a specific option? Everything is explained in [Settings](/settings/). Stuck on something? Check the [FAQ](/faq/).
 
-```bash
-npx @docmd/core dev
-```
-
-Open `http://localhost:3000` — the page auto-reloads as you edit.
-
-## Build for production
-
-```bash
-npx @docmd/core build
-```
-
-Output goes to `site/`. Deploy that folder anywhere that serves static files.
-
-## Project structure
-
-```text
-.
-├── docs/                  # Your markdown content
-│   └── index.md           # You are here
-├── assets/                # Custom CSS, JS, and images
-├── docmd.config.json      # Site configuration
-└── package.json           # Node dependencies + scripts
-```
-
-## Features
-
-### 1. Smart containers
-
-```markdown
-::: callout tip "Did you know?"
-You can nest containers, add titles, and use icons.
+::: callout tip
+You can search these docs (⌘k), or ask the AI assistant using the button below.
 :::
 
-::: card "Flexible" icon:layout-grid
-Organise content with cards.
+### Philosophy {#philosophy}
 
-[View the docs →](https://docs.docmd.io){.docmd-button}
+Namida is built around preservation, your data and your music outlive everything else:
+
+- Streamed content is cached and playable offline, nothing is fetched twice for no reason.
+- The cache priority system protects what matters when cleaning up, and VIP items are never auto deleted. Private and deleted YouTube videos become VIP automatically.
+- Sync between devices only adds, it never wipes the other device's data.
+- Listens can't be deleted, only replaced, your history stays truthful.
+- Destructive actions like deleting files are tucked away behind the advanced dialog, and deleted paths are saved to a file in app data folder.
+
+### Get Namida {#get-namida}
+
+- [Stable releases](https://github.com/namidaco/namida/releases)
+- [Beta releases](https://github.com/namidaco/namida-snapshots/releases)
+
+### Community {#community}
+
+- [Telegram (Updates)](https://t.me/namida_official)
+- [Telegram (Chat)](https://t.me/+FmdfsgKoGmM1ZGFk)
+- [Discord](https://discord.gg/WeY7DTVChT)
+
+::: callout warning
+There are no websites for Namida other than GitHub & Telegram, we are not responsible for downloads from other sources.
 :::
-```
 
-Renders as a styled callout and a card with a button.
+---
 
-### 2. Tabs and code
-
-````markdown
-::: tabs
-== tab "JavaScript" icon:braces
-```javascript
-console.log('Hello World');
-```
-
-== tab "Python" icon:code
-```python
-print('Hello World')
-```
-:::
-````
-
-### 3. Built-in plugins
-
-docmd ships with these plugins enabled by default — no install needed:
-
-- **AI Assistant** — interactive documentation chat (100% free with BYOK or docmd Cloud)
-- **Search** — full-text + semantic search (optional)
-- **Sitemap** + **SEO** meta tags
-- **LLMs context** — `llms.txt` and `llms.json` for AI agents
-- **OKF** — Open Knowledge Format bundle at `site/okf/`
-- **Mermaid** diagrams
-- **Git** last-modified timestamps
-- **Math** (KaTeX) — enable with `docmd add math`
-
-See the [full plugin list](https://docs.docmd.io/plugins/usage/).
-
-## Next steps
-
-- **[Install docmd](https://docs.docmd.io/getting-started/installation/)**
-- **[Configure your site](https://docs.docmd.io/configuration/overview/)**
-- **[Browse templates](https://docs.docmd.io/theming/templates/)**
-- **[Deploy to production](https://docs.docmd.io/deployment/)**
-- **[GitHub repo](https://github.com/docmd-io/docmd/)**
-
-Happy documenting! 🎉
+<sub>by @claude</sub>

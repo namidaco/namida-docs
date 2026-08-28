@@ -1,6 +1,6 @@
 {
   "title": "Namida",
-  "url": "https://docs.myproject.com",
+  "url": "https://namidaco.github.io/namida_docs",
   "src": "docs",
   "out": "site",
   "engine": "js",
@@ -35,7 +35,8 @@
     }
   },
   "theme": {
-    "name": "default",
+    "name": "summer",
+    "template": "summer",
     "appearance": "system",
     "codeHighlight": true
   },
@@ -44,62 +45,150 @@
   "copyCode": true,
   "pageNavigation": true,
   "navigation": [
-    { "title": "Quick Start", "path": "/", "icon": "zap" },
-    { "title": "Agent Skills", "path": "/skills/", "icon": "brain-circuit" },
+    { "title": "Welcome", "path": "/", "icon": "house" },
+    {
+      "title": "Features",
+      "path": "/features/",
+      "icon": "sparkles",
+      "collapsible": false,
+      "children": [
+        {
+          "title": "Library & Indexing",
+          "path": "/features/library-indexing.md",
+          "icon": "library",
+          "external": false
+        },
+        {
+          "title": "Playback",
+          "path": "/features/playback.md",
+          "icon": "play-circle",
+          "external": false
+        },
+        {
+          "title": "Playlists & History",
+          "path": "/features/playlists-history.md",
+          "icon": "list-music",
+          "external": false
+        },
+        {
+          "title": "Tag Editor",
+          "path": "/features/tag-editor.md",
+          "icon": "tag",
+          "external": false
+        },
+        {
+          "title": "YouTube",
+          "path": "/features/youtube.md",
+          "icon": "youtube",
+          "external": false
+        },
+        {
+          "title": "Media Servers",
+          "path": "/features/media-servers.md",
+          "icon": "server",
+          "external": false
+        },
+        {
+          "title": "Sync",
+          "path": "/features/sync.md",
+          "icon": "arrow-left-right",
+          "external": false
+        },
+        {
+          "title": "Shortcuts",
+          "path": "/features/shortcuts.md",
+          "icon": "keyboard",
+          "external": false
+        }
+      ]
+    },
+    {
+      "title": "Pages",
+      "path": "/pages/",
+      "icon": "layout-grid",
+      "collapsible": false,
+      "children": [
+        {
+          "title": "Library",
+          "path": "/pages/library.md",
+          "icon": "library-big",
+          "external": false
+        },
+        {
+          "title": "YouTube",
+          "path": "/pages/youtube.md",
+          "icon": "youtube",
+          "external": false
+        },
+        {
+          "title": "Other",
+          "path": "/pages/other.md",
+          "icon": "layers",
+          "external": false
+        }
+      ]
+    },
     {
       "title": "Settings",
       "path": "/settings/",
       "icon": "settings",
+      "collapsible": false,
       "children": [
         {
           "title": "Theme",
           "path": "/settings/1-theme-settings.md",
-          "icon": "download",
+          "icon": "palette",
           "external": false
         },
         {
           "title": "Indexer",
           "path": "/settings/2-indexer-settings.md",
-          "icon": "settings",
+          "icon": "database",
+          "external": false
+        },
+        {
+          "title": "Playback",
+          "path": "/settings/3-playback-settings.md",
+          "icon": "play",
+          "external": false
+        },
+        {
+          "title": "Customizations",
+          "path": "/settings/4-customization-settings.md",
+          "icon": "brush",
+          "external": false
+        },
+        {
+          "title": "Youtube",
+          "path": "/settings/5-youtube-settings.md",
+          "icon": "youtube",
+          "external": false
+        },
+        {
+          "title": "Extras",
+          "path": "/settings/6-extras-settings.md",
+          "icon": "puzzle",
+          "external": false
+        },
+        {
+          "title": "Backup & Restore",
+          "path": "/settings/7-backup-restore-settings.md",
+          "icon": "archive-restore",
+          "external": false
+        },
+        {
+          "title": "Advanced",
+          "path": "/settings/8-advanced-settings.md",
+          "icon": "wrench",
           "external": false
         }
       ]
     },
+    { "title": "Tips & Tricks", "path": "/tips/", "icon": "lightbulb" },
     { "title": "FAQ", "path": "/faq/", "icon": "message-circle-question-mark" },
     {
-      "title": "Quick Guide",
-      "icon": "book-open",
-      "collapsible": false,
-      "children": [
-        {
-          "title": "Install",
-          "path": "https://docs.docmd.io/getting-started/installation/",
-          "icon": "download",
-          "external": true
-        },
-        {
-          "title": "Configure",
-          "path": "https://docs.docmd.io/configuration/overview/",
-          "icon": "settings",
-          "external": true
-        },
-        {
-          "title": "Migrate",
-          "path": "https://docs.docmd.io/migration/overview/",
-          "icon": "arrow-left-right",
-          "external": true
-        },
-        {
-          "title": "Deploy",
-          "path": "https://docs.docmd.io/deployment/",
-          "icon": "rocket",
-          "external": true
-        }
-      ]
-    },
-    {
       "title": "GitHub",
-      "path": "https://github.com/docmd-io/docmd",
+      "path": "https://github.com/namidaco/namida",
       "icon": "github",
       "external": true
     }
@@ -114,7 +203,7 @@
       "maxCommits": 5
     },
     "seo": {
-      "defaultDescription": "Documentation built with docmd."
+      "defaultDescription": "Namida documentation. A beautiful and feature-rich music & video player with YouTube support."
     }
   }
 }

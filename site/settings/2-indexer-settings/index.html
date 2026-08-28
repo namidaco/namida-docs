@@ -1,33 +1,61 @@
 <!--
-  ---------------------------------------------------------------
-  docmd : the zero-config documentation engine.
-  @website https://docmd.io
-  [docmd-source] - Please do not remove this header.
-  ---------------------------------------------------------------
+  ============================================================================
+  @docmd/template-summer  —  layout.ejs
+
+  A complete, modern documentation layout. Built to feel like its
+  own product — not a recolor of the default template. The page is structured
+  as five vertically-stacked, sticky-aware bands:
+
+    1.  Top bar          — logo, centered search, AI "Ask" button, action menu
+    2.  Sub navigation   — section tabs (Documentation, Guides, …) + extras
+    3.  Page header      — sticky breadcrumb + title + copy widgets
+    4.  Layout grid      — sidebar | main content | right-rail TOC
+    5.  Footer           — branding + links
+
+  All CSS lives in assets/css/summer.css and is fully self-contained —
+  docmd-main.css is intentionally NOT loaded.
+
+  Note: menubar, footer and TOC partials are INLINED here (not `include`d)
+  because the docmd core resolves `include()` paths relative to the
+  default layout's directory, not the resolved template's. Inlining
+  guarantees the summer-styled partials always render.
+  ============================================================================
 -->
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="generator" content="docmd v0.9.3">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script>
-      var root = "../../";
-      if (root && !root.endsWith('/')) root += '/';
-      if (root === '') root = './';
-      window.DOCMD_ROOT = root;
+<html lang="en"
+  >
+<head>
+  <meta charset="UTF-8">
+  <meta name="generator" content="docmd template-summer v0.8.7">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fbfaf6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#13110d" media="(prefers-color-scheme: dark)">
+  <title>Indexer · Namida</title>
 
-      window.DOCMD_SITE_ROOT = "/";
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-      window.DOCMD_APPEARANCE = "system";
-      window.DOCMD_VERSION_ROOT = "/";
-      window.DOCMD_BASE = "/";
-      window.DOCMD_LOCALE = "";
-      window.DOCMD_DEFAULT_LOCALE = "";
-    </script>
-    <script>/**
+  
+
+  
+
+  <script>
+    window.DOCMD_TEMPLATE = 'summer';
+    window.DOCMD_ROOT = "../../" || './';
+    window.DOCMD_SITE_ROOT = "/";
+    window.DOCMD_APPEARANCE = "system";
+    window.DOCMD_VERSION_ROOT = "/";
+    window.DOCMD_BASE = "/";
+    window.DOCMD_LOCALE = "";
+    window.DOCMD_DEFAULT_LOCALE = "";
+    const _localePagesEl = document.getElementById('docmd-locale-pages');
+    if (_localePagesEl) {
+      window.DOCMD_LOCALE_PAGES = JSON.parse(_localePagesEl.textContent);
+    }
+  </script>
+
+  <script>/**
  * --------------------------------------------------------------------
  * docmd : the zero-config documentation engine.
  *
@@ -93,177 +121,125 @@
     console.error('Theme init failed', e);
   }
 })();</script>
-    <style>
-      html {
-        visibility: hidden;
-      }
-    </style>
-    <title>
-      Indexer Settings : Namida
-    </title>
-    
-    
 
-    <link id="site-favicon" rel="icon" href="../../assets/favicon.ico?v=mt61gay0">
-    <link rel="stylesheet" href="../../assets/css/docmd-main.css?v=mt61gay0">
-    
-    <link rel="stylesheet" href="../../assets/css/docmd-highlight-light.css?v=mt61gay0" id="hljs-light" >
-    <link rel="stylesheet" href="../../assets/css/docmd-highlight-dark.css?v=mt61gay0" id="hljs-dark" disabled>
-    
-    
-<meta name="description" content="Manage your music library">
-<link rel="canonical" href="https://docs.myproject.com/settings/2-indexer-settings/">
-<meta property="og:title" content="Indexer Settings - Namida">
-<meta property="og:description" content="Manage your music library">
-<meta property="og:url" content="https://docs.myproject.com/settings/2-indexer-settings/">
+  
+
+  <link id="site-favicon" rel="icon" href="../../assets/favicon.ico?v=mtawuc57">
+
+  
+  
+  <link rel="stylesheet" href="../../assets/css/docmd-highlight-light.css?v=mtawuc57" id="hljs-light" >
+  <link rel="stylesheet" href="../../assets/css/docmd-highlight-dark.css?v=mtawuc57" id="hljs-dark" disabled">
+  
+
+  
+<meta name="description" content="Manage your music Library">
+<link rel="canonical" href="https://namidaco.github.io/namida_docs/settings/2-indexer-settings/">
+<meta property="og:title" content="Indexer - Namida">
+<meta property="og:description" content="Manage your music Library">
+<meta property="og:url" content="https://namidaco.github.io/namida_docs/settings/2-indexer-settings/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Indexer Settings - Namida">
-<meta name="twitter:description" content="Manage your music library">
+<meta name="twitter:title" content="Indexer - Namida">
+<meta name="twitter:description" content="Manage your music Library">
 
 
 
 
-<link rel="stylesheet" href="../../assets/css/docmd-git.css?v=mt61gay0" >
-<link rel="stylesheet" href="../../assets/css/docmd-openapi.css?v=mt61gay0" >
-<link rel="stylesheet" href="../../assets/css/docmd-ai.css?v=mt61gay0" >
+<link rel="stylesheet" href="../../assets/css/docmd-theme-summer.css?v=mtawuc57" >
+<link rel="stylesheet" href="../../assets/css/docmd-git.css?v=mtawuc57" >
+<link rel="stylesheet" href="../../assets/css/docmd-openapi.css?v=mtawuc57" >
+<link rel="stylesheet" href="../../assets/css/docmd-ai.css?v=mtawuc57" >
+<link rel="stylesheet" href="../../assets/template/summer.css?v=mtawuc57" >
 
-    
-    
-  </head>
-  <body
-    class="sidebar-collapsible"
-    data-default-collapsed="false"
-    data-copy-code-enabled="true" data-spa-enabled="true" data-source-file="docs/settings/2-indexer-settings.md">
+  
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+</head>
+<body class="summer-template"
+  
+  data-spa-enabled="true"
+  data-copy-code-enabled="true"
+  data-default-collapsed="false">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    
-    
+  
+  
 
-    
-    
-      <aside class="sidebar">
-        <div class="sidebar-header">
-          
-<a href="../../" class="logo-link">
-              <img
-                src="../../assets/images/namida_icon.png"
-                alt="Namida Logo" class="logo-light" style="height: 32px;">
-              <img
-                src="../../assets/images/namida_icon.png"
-                alt="Namida Logo" class="logo-dark" style="height: 32px;">
-            </a>
-          
-          <span class="mobile-view sidebar-menu-button float-right">
-            
-<svg class="lucide-icon icon-menu " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-menu"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M4 5h16" />
-  <path d="M4 12h16" />
-  <path d="M4 19h16" />
-</svg>
-
-          </span>
-        </div>
-        <div class="sidebar-top-group">
-          
-          
-            <div class="sidebar-options-wrapper">
-              
-
-
-<div class="docmd-options-menu">
-    
-    <button class="docmd-search-trigger" aria-label="Search">
+  
+  <header class="summer-topbar" role="banner">
+    <div class="summer-topbar__inner">
+      
+      <div class="summer-topbar__left">
+        <button class="summer-iconbtn summer-topbar__mobile sidebar-menu-button" type="button" data-summer-sidebar-toggle aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
         
-<svg class="lucide-icon icon-search " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-search"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m21 21-4.34-4.34" />
-  <circle cx="11" cy="11" r="8" />
-</svg>
-
-        <span class="search-label">Search</span>
-        <span class="search-keys"><kbd class="docmd-kbd">⌘</kbd><kbd class="docmd-kbd">K</kbd></span>
-    </button>
-    
-
-    
-
-    
-
-    
-    <button class="theme-toggle-button" aria-label="Toggle theme">
+          <a href="../../" class="summer-logo" aria-label="Namida Logo — home">
+            <img src="../../assets/images/namida_icon.png" alt="Namida Logo" class="summer-logo__light" style="height: 32px;">
+            <img src="../../assets/images/namida_icon.png" alt="Namida Logo" class="summer-logo__dark" style="height: 32px;">
+          </a>
         
-<svg class="lucide-icon icon-sun icon-sun" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-sun"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <circle cx="12" cy="12" r="4" />
-  <path d="M12 2v2" />
-  <path d="M12 20v2" />
-  <path d="m4.93 4.93 1.41 1.41" />
-  <path d="m17.66 17.66 1.41 1.41" />
-  <path d="M2 12h2" />
-  <path d="M20 12h2" />
-  <path d="m6.34 17.66-1.41 1.41" />
-  <path d="m19.07 4.93-1.41 1.41" />
-</svg>
- 
-<svg class="lucide-icon icon-moon icon-moon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-moon"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
-</svg>
+      </div>
 
-    </button>
-    
-
-    
-</div>
-
+      <div class="summer-topbar__center">
+        <div class="summer-search-container">
+          <svg class="summer-search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" class="summer-search-input" placeholder="Search (⌘K)" aria-label="Search documentation" autocomplete="off" spellcheck="false">
+          <div class="summer-search-dropdown" style="display: none;">
+            <div class="summer-search-results-wrapper"></div>
+            <div class="summer-search-dropdown-footer">
+              <span><kbd>↑</kbd> <kbd>↓</kbd> to navigate</span>
+              <span><kbd>ESC</kbd> to close</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="summer-topbar__right">
+        
+        
+          <button class="summer-iconbtn theme-toggle-button" type="button" data-summer-theme-toggle aria-label="Toggle theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+          </button>
+        
+
+        
+
+        
+        
+        
+        
+
+        
+
+        
+
+        
+      </div>
+    </div>
+  </header>
+
+  
+  
+
+  
+  <div class="summer-layout">
+
+    
+    
+      <aside class="summer-sidebar" aria-label="Documentation navigation">
+        <button class="summer-sidebar-close summer-iconbtn" type="button" data-summer-sidebar-close aria-label="Close navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div class="summer-sidebar__top">
           
           
           
         </div>
+
         
 
 <nav class="sidebar-nav" aria-label="Main Navigation">
@@ -274,8 +250,8 @@
         <a href="../../" class=" "
           >
            
-<svg class="lucide-icon icon-zap " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-zap"
+<svg class="lucide-icon icon-house " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-house"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -286,12 +262,83 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
 </svg>
 
           
           <span class="nav-item-title">
-            Quick Start
+            Welcome
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="expanded nav-group" >
+      
+        <a href="../../features/" class=" nav-group"
+          >
+           
+<svg class="lucide-icon icon-sparkles " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-sparkles"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+  <path d="M20 2v4" />
+  <path d="M22 4h-4" />
+  <circle cx="4" cy="20" r="2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Features
+            </span>
+          
+          
+        </a>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../features/library-indexing/" class=" "
+          >
+           
+<svg class="lucide-icon icon-library " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-library"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 6 4 14" />
+  <path d="M12 6v14" />
+  <path d="M8 8v12" />
+  <path d="M4 4v16" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Library &amp; Indexing
             </span>
           
           
@@ -303,11 +350,11 @@
     
       <li class="" >
       
-        <a href="../../skills/" class=" "
+        <a href="../../features/playback/" class=" "
           >
            
-<svg class="lucide-icon icon-brain-circuit " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-brain-circuit"
+<svg class="lucide-icon icon-play-circle " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-circle-play"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -318,24 +365,13 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
-  <path d="M9 13a4.5 4.5 0 0 0 3-4" />
-  <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
-  <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
-  <path d="M6 18a4 4 0 0 1-1.967-.516" />
-  <path d="M12 13h4" />
-  <path d="M12 18h6a2 2 0 0 1 2 2v1" />
-  <path d="M12 8h8" />
-  <path d="M16 8V5a2 2 0 0 1 2-2" />
-  <circle cx="16" cy="13" r=".5" />
-  <circle cx="18" cy="3" r=".5" />
-  <circle cx="20" cy="21" r=".5" />
-  <circle cx="20" cy="8" r=".5" />
+  <path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z" />
+  <circle cx="12" cy="12" r="10" />
 </svg>
 
           
           <span class="nav-item-title">
-            Agent Skills
+            Playback
             </span>
           
           
@@ -345,7 +381,363 @@
         
       </li>
     
-      <li class="active-parent collapsible expanded nav-group"  aria-expanded="true" >
+      <li class="" >
+      
+        <a href="../../features/playlists-history/" class=" "
+          >
+           
+<svg class="lucide-icon icon-list-music " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-list-music"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 5H3" />
+  <path d="M11 12H3" />
+  <path d="M11 19H3" />
+  <path d="M21 16V5" />
+  <circle cx="18" cy="16" r="3" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Playlists &amp; History
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../features/tag-editor/" class=" "
+          >
+           
+<svg class="lucide-icon icon-tag " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-tag"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
+  <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Tag Editor
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../features/youtube/" class=" "
+          >
+           
+<svg class="lucide-icon icon-youtube " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-youtube"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+  <path d="m10 15 5-3-5-3z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            YouTube
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../features/media-servers/" class=" "
+          >
+           
+<svg class="lucide-icon icon-server " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-server"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+  <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+  <line x1="6" x2="6.01" y1="6" y2="6" />
+  <line x1="6" x2="6.01" y1="18" y2="18" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Media Servers
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../features/sync/" class=" "
+          >
+           
+<svg class="lucide-icon icon-arrow-left-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-arrow-left-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 3 4 7l4 4" />
+  <path d="M4 7h16" />
+  <path d="m16 21 4-4-4-4" />
+  <path d="M20 17H4" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Sync
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../features/shortcuts/" class=" "
+          >
+           
+<svg class="lucide-icon icon-keyboard " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-keyboard"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 8h.01" />
+  <path d="M12 12h.01" />
+  <path d="M14 8h.01" />
+  <path d="M16 12h.01" />
+  <path d="M18 8h.01" />
+  <path d="M6 8h.01" />
+  <path d="M7 16h10" />
+  <path d="M8 12h.01" />
+  <rect width="20" height="16" x="2" y="4" rx="2" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Shortcuts
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="expanded nav-group" >
+      
+        <a href="../../pages/" class=" nav-group"
+          >
+           
+<svg class="lucide-icon icon-layout-grid " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layout-grid"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="7" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Pages
+            </span>
+          
+          
+        </a>
+        
+
+        
+          <ul class="submenu">
+            
+      <li class="" >
+      
+        <a href="../../pages/library/" class=" "
+          >
+           
+<svg class="lucide-icon icon-library-big " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-library-big"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="18" x="3" y="3" rx="1" />
+  <path d="M7 3v18" />
+  <path d="M20.4 18.9c.2.5-.1 1.1-.6 1.3l-1.9.7c-.5.2-1.1-.1-1.3-.6L11.1 5.1c-.2-.5.1-1.1.6-1.3l1.9-.7c.5-.2 1.1.1 1.3.6Z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Library
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../pages/youtube/" class=" "
+          >
+           
+<svg class="lucide-icon icon-youtube " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-youtube"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+  <path d="m10 15 5-3-5-3z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            YouTube
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../pages/other/" class=" "
+          >
+           
+<svg class="lucide-icon icon-layers " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-layers"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Other
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+          </ul>
+        
+      </li>
+    
+      <li class="active-parent expanded nav-group" >
       
         <a href="../../settings/" class=" nav-group"
           >
@@ -371,23 +763,6 @@
             Settings
             </span>
           
-            <span class="collapse-icon-wrapper">
-<svg class="lucide-icon icon-chevron-right collapse-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-chevron-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m9 18 6-6-6-6" />
-</svg>
-</span>
-          
           
         </a>
         
@@ -400,8 +775,8 @@
         <a href="../../settings/1-theme-settings/" class=" "
           >
            
-<svg class="lucide-icon icon-download " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-download"
+<svg class="lucide-icon icon-palette " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-palette"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -412,9 +787,11 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M12 15V3" />
-  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-  <path d="m7 10 5 5 5-5" />
+  <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
 </svg>
 
           
@@ -434,8 +811,8 @@
         <a href="../../settings/2-indexer-settings/" class="active "
           >
            
-<svg class="lucide-icon icon-settings " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-settings"
+<svg class="lucide-icon icon-database " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-database"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -446,8 +823,9 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
-  <circle cx="12" cy="12" r="3" />
+  <ellipse cx="12" cy="5" rx="9" ry="3" />
+  <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+  <path d="M3 12A9 3 0 0 0 21 12" />
 </svg>
 
           
@@ -462,7 +840,240 @@
         
       </li>
     
+      <li class="" >
+      
+        <a href="../../settings/3-playback-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-play " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-play"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Playback
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../settings/4-customization-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-brush " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-brush"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m11 10 3 3" />
+  <path d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z" />
+  <path d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Customizations
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../settings/5-youtube-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-youtube " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-youtube"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+  <path d="m10 15 5-3-5-3z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Youtube
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../settings/6-extras-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-puzzle " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-puzzle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Extras
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../settings/7-backup-restore-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-archive-restore " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-archive-restore"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="5" x="2" y="3" rx="1" />
+  <path d="M4 8v11a2 2 0 0 0 2 2h2" />
+  <path d="M20 8v11a2 2 0 0 1-2 2h-2" />
+  <path d="m9 15 3-3 3 3" />
+  <path d="M12 12v9" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Backup &amp; Restore
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../settings/8-advanced-settings/" class=" "
+          >
+           
+<svg class="lucide-icon icon-wrench " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-wrench"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Advanced
+            </span>
+          
+          
+        </a>
+        
+
+        
+      </li>
+    
           </ul>
+        
+      </li>
+    
+      <li class="" >
+      
+        <a href="../../tips/" class=" "
+          >
+           
+<svg class="lucide-icon icon-lightbulb " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+  class="lucide lucide-lightbulb"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+  <path d="M9 18h6" />
+  <path d="M10 22h4" />
+</svg>
+
+          
+          <span class="nav-item-title">
+            Tips &amp; Tricks
+            </span>
+          
+          
+        </a>
+        
+
         
       </li>
     
@@ -500,253 +1111,9 @@
         
       </li>
     
-      <li class="expanded nav-group" >
-      
-        <span class="nav-label nav-group">
-           
-<svg class="lucide-icon icon-book-open " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-book-open"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M12 7v14" />
-  <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Quick Guide
-          </span>
-          
-        </span>
-        
-
-        
-          <ul class="submenu">
-            
       <li class="" >
       
-        <a href="https://docs.docmd.io/getting-started/installation/" class=" "
-          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
-           
-<svg class="lucide-icon icon-download " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-download"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M12 15V3" />
-  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-  <path d="m7 10 5 5 5-5" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Install
-            </span>
-          
-           
-<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-external-link"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15 3h6v6" />
-  <path d="M10 14 21 3" />
-  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-</svg>
-
-          
-        </a>
-        
-
-        
-      </li>
-    
-      <li class="" >
-      
-        <a href="https://docs.docmd.io/configuration/overview/" class=" "
-          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
-           
-<svg class="lucide-icon icon-settings " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-settings"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
-  <circle cx="12" cy="12" r="3" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Configure
-            </span>
-          
-           
-<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-external-link"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15 3h6v6" />
-  <path d="M10 14 21 3" />
-  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-</svg>
-
-          
-        </a>
-        
-
-        
-      </li>
-    
-      <li class="" >
-      
-        <a href="https://docs.docmd.io/migration/overview/" class=" "
-          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
-           
-<svg class="lucide-icon icon-arrow-left-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-arrow-left-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M8 3 4 7l4 4" />
-  <path d="M4 7h16" />
-  <path d="m16 21 4-4-4-4" />
-  <path d="M20 17H4" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Migrate
-            </span>
-          
-           
-<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-external-link"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15 3h6v6" />
-  <path d="M10 14 21 3" />
-  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-</svg>
-
-          
-        </a>
-        
-
-        
-      </li>
-    
-      <li class="" >
-      
-        <a href="https://docs.docmd.io/deployment/" class=" "
-          target=&quot;_blank&quot; rel=&quot;noopener&quot;>
-           
-<svg class="lucide-icon icon-rocket " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-rocket"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
-  <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
-  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
-</svg>
-
-          
-          <span class="nav-item-title">
-            Deploy
-            </span>
-          
-           
-<svg class="lucide-icon icon-external-link nav-external-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-external-link"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15 3h6v6" />
-  <path d="M10 14 21 3" />
-  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-</svg>
-
-          
-        </a>
-        
-
-        
-      </li>
-    
-          </ul>
-        
-      </li>
-    
-      <li class="" >
-      
-        <a href="https://github.com/docmd-io/docmd" class=" "
+        <a href="https://github.com/namidaco/namida" class=" "
           target=&quot;_blank&quot; rel=&quot;noopener&quot;>
            
 <svg class="lucide-icon icon-github " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -797,269 +1164,297 @@
     
   </ul>
 </nav>
-        <div class="sidebar-bottom-group mt-auto">
+
+        <div class="summer-sidebar__bottom">
           
           
           
           
         </div>
       </aside>
-      
-      <div class="main-content-wrapper">
-        
-        
-        
-          <header class="page-header">
-            <div class="header-left">
-              
-                <button id="sidebar-toggle-button" class="sidebar-toggle-button"
-                  aria-label="Toggle Sidebar">
-                  
-<svg class="lucide-icon icon-chevron-left " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-chevron-left"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m15 18-6-6 6-6" />
-</svg>
+    
 
+    
+    <main class="summer-main" id="main-content">
+      
+        <div class="summer-pageheader">
+          <div class="summer-pageheader__inner">
+            
+            <div class="summer-pageheader__meta">
+              
+                <nav aria-label="breadcrumb" class="summer-breadcrumbs">
+                  <ol class="summer-breadcrumbs__list">
+                    
+                    
+                      <li class="summer-breadcrumbs__item " >
+                        
+                          <a href="../../settings/" class="summer-breadcrumbs__link">Settings</a>
+                        
+                      </li>
+                    
+                      <li class="summer-breadcrumbs__item is-current" aria-current=&quot;page&quot;>
+                        
+                          <span class="summer-breadcrumbs__current">Indexer</span>
+                        
+                      </li>
+                    
+                  </ol>
+                </nav>
+              
+            </div>
+
+            <div class="summer-copy-widgets">
+              
+                <button class="summer-copy-btn docmd-copy-raw-btn" type="button" data-copied="Copied!" title="Copy Markdown" aria-label="Copy Markdown">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy Markdown</span>
                 </button>
               
-              <div class="header-titles-wrapper">
-                <span class="header-title">
-                  Indexer Settings
-                </span>
-              </div>
-            </div>
-            <div class="header-right">
+              
+                <button class="summer-copy-btn docmd-copy-context-btn" type="button" data-copied="Copied!" title="Copy Context" aria-label="Copy Context">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  <span>Copy Context</span>
+                </button>
               
             </div>
-          </header>
-        
-        <div class="content-theme-cover">
-          <main class="content-area" id="main-content">
-            <div class="content-layout">
-              <div class="main-content">
-                <div class="docmd-breadcrumbs-row">
-                  <div id="docmd-raw-markdown" data-content="---%0D%0Atitle%3A%20%22Indexer%20Settings%22%0D%0Adescription%3A%20%22Manage%20your%20music%20library%22%0D%0A---%0D%0A" style="display: none;"></div>
-                  
-                    <nav aria-label="breadcrumb" class="docmd-breadcrumbs">
-                      <ol>
-                        
-                        
-                          <li class="breadcrumb-item " >
-                            
-                              <a href="../../settings/">Settings</a>
-                            
-                            
-                              <span class="breadcrumb-separator">
-<svg class="lucide-icon icon-chevron-right " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-chevron-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m9 18 6-6-6-6" />
-</svg>
-</span>
-                            
-                          </li>
-                        
-                          <li class="breadcrumb-item active" aria-current=&quot;page&quot;>
-                            
-                              <span>Indexer</span>
-                            
-                            
-                          </li>
-                        
-                      </ol>
-                    </nav>
-                  
+          </div>
+        </div>
+      
 
-                  
-                    <div class="docmd-copy-widgets">
-                      
-                        <button class="docmd-copy-btn docmd-copy-raw-btn" data-copied="Copied!" title="Copy Markdown" aria-label="Copy Markdown">
-                          <span class="docmd-btn-icon">
-<svg class="lucide-icon icon-copy " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-copy"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
-</svg>
-</span>
-                        </button>
-                      
-                      
-                        <button class="docmd-copy-btn docmd-copy-context-btn" data-copied="Copied!" title="Copy Context">
-                          <span class="docmd-btn-icon">
-<svg class="lucide-icon icon-message-square " width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-message-square"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
-</svg>
-</span>
-                          <span class="docmd-btn-text">Copy Context</span>
-                        </button>
-                      
-                    </div>
-                  
-                </div>
-                
-                
-                
-                  <div class="page-navigation">
-                    
-                      <a href="../../settings/1-theme-settings/" class="prev-page">
-                        
-<svg class="lucide-icon icon-arrow-left page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-arrow-left"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m12 19-7-7 7-7" />
-  <path d="M19 12H5" />
-</svg>
+      
 
-                        <span><small>Previous</small><strong>
-                            Theme
-                          </strong></span>
-                      </a>
-                    
-                    
-                      <a href="../../faq/" class="next-page">
-                        <span><small>Next</small>
-                          <strong>
-                            FAQ
-                          </strong></span>
-                        
-<svg class="lucide-icon icon-arrow-right page-nav-icon" width="1em" height="1em" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-  class="lucide lucide-arrow-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" />
-</svg>
+      <div id="docmd-raw-markdown" data-content="---%0Atitle%3A%20%22Indexer%22%0Adescription%3A%20%22Manage%20your%20music%20Library%22%0A---%0A%0A%23%20Indexer%0A%0AControls%20how%20Namida%20finds%20and%20reads%20your%20music%20files.%20The%20library%20is%20folders%20based%2C%20Namida%20scans%20only%20the%20folders%20you%20choose.%0A%0A%23%23%23%20List%20of%20Folders%20%7B%23folders-to-scan%7D%0A%0AThe%20folders%20that%20Namida%20scans%20for%20music.%20You%20can%20add%20local%20folders%2C%20or%20a%20media%20server%20(Subsonic%2C%20Jellyfin%2C%20WebDAV%2C%20SMB)%20to%20index%20it%20like%20a%20normal%20folder%2C%20see%20%5BMedia%20Servers%5D(%2Ffeatures%2Fmedia-servers%2F).%0A%0AEach%20folder%20can%20be%20set%20to%20index%20audio%2C%20videos%20or%20both.%0A%0A%23%23%23%20Excluded%20Folders%20%7B%23excluded-folders%7D%0A%0AFolders%20that%20will%20be%20skipped%20while%20scanning%2C%20useful%20for%20excluding%20notification%20sounds%20or%20recordings%20folders.%0A%0A%23%23%23%20Prevent%20Duplicated%20Tracks%20%7B%23prevent-duplicated-tracks%7D%0A%0AUses%20filename%20to%20uniquely%20identify%20tracks%2C%20so%20the%20same%20file%20existing%20in%20two%20folders%20will%20show%20once.%0A%0A%23%23%23%20Respect%20.nomedia%20%7B%23respect-nomedia%7D%0A%0ASkips%20folders%20that%20contain%20a%20%60.nomedia%60%20file.%0A%0A%23%23%23%20Extract%20feat.%20Artists%20%7B%23extract-feat-artists%7D%0A%0AExtracts%20(feat.%20X)%20and%20(ft.%20X)%20artists%20from%20the%20title%2C%20as%20a%20new%20artist%20entry.%20You%20will%20find%20the%20featured%20artists%20in%20the%20artists%20tab.%0A%0A%23%23%23%20Enable%20Artwork%20Cache%20%7B%23artwork-cache%7D%0A%0AFaster%20loading%20and%20improved%20performance%2C%20but%20uses%20more%20storage.%0A%0A%23%23%23%20Group%20Artworks%20by%20Album%20%7B%23group-artworks-by-album%7D%0A%0ASaves%20one%20artwork%20per%20album%20instead%20of%20one%20per%20track%2C%20saves%20storage.%0A%0A%23%23%23%20Unique%20Artwork%20Hash%20%7B%23unique-artwork-hash%7D%0A%0AIdentifies%20artworks%20by%20their%20content%2C%20prevents%20duplicated%20artworks%20even%20when%20files%20differ.%0A%0A%23%23%23%20Album%20Identifiers%20%7B%23album-identifiers%7D%0A%0AChoose%20which%20fields%20identify%20an%20album.%20By%20default%20the%20album%20name%20alone%2C%20you%20can%20add%20album%20artist%20or%20year%20to%20separate%20albums%20that%20share%20the%20same%20name.%0A%0A%23%23%23%20Artists%20%26%20Genres%20Separators%20%7B%23separators%7D%0A%0ASymbols%20and%20words%20used%20to%20split%20multiple%20artists%20or%20genres%20from%20a%20single%20tag%2C%20like%20%60%2C%60%20%60%3B%60%20%60%26%60%20%60ft.%60.%20You%20can%20also%20blacklist%20words%20so%20they%20never%20get%20split.%0A%0A%3A%3A%3A%20callout%20tip%0ANo%20need%20to%20insert%20spaces%2C%20unless%20you%20want%20a%20letter%20or%20symbol%20that%20can%20be%20found%20in%20a%20whole%20word%20(like%20%60x%60%20and%20%60ft.%60).%0A%3A%3A%3A%0A%0A%23%23%23%20Extension%20(Blacklist)%20%7B%23extensions-blacklist%7D%0A%0AFile%20extensions%20that%20will%20not%20be%20indexed.%0A%0A%23%23%23%20Minimum%20File%20Size%20%26%20Track%20Duration%20%7B%23minimum-size-duration%7D%0A%0AFiles%20smaller%20or%20shorter%20than%20these%20values%20will%20be%20skipped%2C%20useful%20for%20filtering%20out%20voice%20notes%20and%20notification%20sounds.%0A%0A%23%23%23%20Use%20Media%20Store%20%7B%23use-media-store%7D%0A%0A%60Android%20only%60%0A%0AUses%20the%20Android%20system%20index%20instead%20of%20Namida&#039;s%20own%20indexer.%20Instant%20indexing%20time%2C%20but%20some%20metadata%20tags%20will%20be%20missing%2C%20%60.nomedia%60%20is%20forcefully%20respected%2C%20and%20YouTube%20integration%20for%20local%20library%20will%20not%20work.%0A%0A%3A%3A%3A%20callout%20warning%20%22Deprecated%22%0AThis%20feature%20is%20removed%20as%20of%20v6.5.5.%20With%20the%20new%20tagger%20(%60taglib%60)%20being%20stable%20and%20fast%2C%20and%20with%20this%20option%20lacking%20critical%20aspect%20of%20Namida%20and%20many%20users%20reporting%20issues%20after%20manually%20enabling%20and%20forgetting%20it%2C%20It%20is%20no%20longer%20required%20to%20keep%20this%20feature.%0A%3A%3A%3A%0A%0A%23%23%23%20Include%20Videos%20%7B%23include-videos%7D%0A%0AIndex%20video%20files%20as%20well%2C%20videos%20get%20their%20own%20folders%20view%20and%20can%20be%20played%20independently.%0A%0A%23%23%23%20Refresh%20on%20Startup%20%7B%23refresh-on-startup%7D%0A%0AAutomatically%20checks%20for%20newly%20added%20or%20deleted%20files%20on%20every%20app%20start.%0A%0A%23%23%23%20Missing%20Tracks%20%7B%23missing-tracks%7D%0A%0ALists%20tracks%20that%20no%20longer%20exist%20on%20storage%2C%20you%20can%20update%20their%20paths%20to%20keep%20stats%20and%20listens%2C%20see%20%5BLibrary%20%26%20Indexing%5D(%2Ffeatures%2Flibrary-indexing%2F).%0A%0A%23%23%23%20Refresh%20Library%20%26%20Re-index%20%7B%23refresh-reindex%7D%0A%0ARefresh%20checks%20for%20newly%20added%20or%20deleted%20music.%20Re-index%20rebuilds%20the%20whole%20library%20from%20scratch%2C%20artworks%20are%20kept%20as%20long%20as%20they%20still%20exist.%0A%0A---%0A%0A%3Csub%3Eby%20%40claude%3C%2Fsub%3E%0A" style="display: none;"></div>
 
-                      </a>
-                    
-                  </div>
-                
-              </div>
-              
-              <div class="toc-sidebar">
-                
+      <article class="summer-content">
+        <h1 id="indexer" class="docmd-heading"><a href="#indexer" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Indexer</h1>
+<p>Controls how Namida finds and reads your music files. The library is folders based, Namida scans only the folders you choose.</p>
+<h3 id="folders-to-scan" class="docmd-heading"><a href="#folders-to-scan" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>List of Folders</h3>
+<p>The folders that Namida scans for music. You can add local folders, or a media server (Subsonic, Jellyfin, WebDAV, SMB) to index it like a normal folder, see <a href="../../features/media-servers/">Media Servers</a>.</p>
+<p>Each folder can be set to index audio, videos or both.</p>
+<h3 id="excluded-folders" class="docmd-heading"><a href="#excluded-folders" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Excluded Folders</h3>
+<p>Folders that will be skipped while scanning, useful for excluding notification sounds or recordings folders.</p>
+<h3 id="prevent-duplicated-tracks" class="docmd-heading"><a href="#prevent-duplicated-tracks" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Prevent Duplicated Tracks</h3>
+<p>Uses filename to uniquely identify tracks, so the same file existing in two folders will show once.</p>
+<h3 id="respect-nomedia" class="docmd-heading"><a href="#respect-nomedia" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Respect .nomedia</h3>
+<p>Skips folders that contain a <code>.nomedia</code> file.</p>
+<h3 id="extract-feat-artists" class="docmd-heading"><a href="#extract-feat-artists" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Extract feat. Artists</h3>
+<p>Extracts (feat. X) and (ft. X) artists from the title, as a new artist entry. You will find the featured artists in the artists tab.</p>
+<h3 id="artwork-cache" class="docmd-heading"><a href="#artwork-cache" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Enable Artwork Cache</h3>
+<p>Faster loading and improved performance, but uses more storage.</p>
+<h3 id="group-artworks-by-album" class="docmd-heading"><a href="#group-artworks-by-album" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Group Artworks by Album</h3>
+<p>Saves one artwork per album instead of one per track, saves storage.</p>
+<h3 id="unique-artwork-hash" class="docmd-heading"><a href="#unique-artwork-hash" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Unique Artwork Hash</h3>
+<p>Identifies artworks by their content, prevents duplicated artworks even when files differ.</p>
+<h3 id="album-identifiers" class="docmd-heading"><a href="#album-identifiers" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Album Identifiers</h3>
+<p>Choose which fields identify an album. By default the album name alone, you can add album artist or year to separate albums that share the same name.</p>
+<h3 id="separators" class="docmd-heading"><a href="#separators" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Artists &amp; Genres Separators</h3>
+<p>Symbols and words used to split multiple artists or genres from a single tag, like <code>,</code> <code>;</code> <code>&amp;</code> <code>ft.</code>. You can also blacklist words so they never get split.</p>
+<div class="docmd-container callout callout-tip"><div class="callout-content">
+<p>No need to insert spaces, unless you want a letter or symbol that can be found in a whole word (like <code>x</code> and <code>ft.</code>).</p>
+</div></div>
+<h3 id="extensions-blacklist" class="docmd-heading"><a href="#extensions-blacklist" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Extension (Blacklist)</h3>
+<p>File extensions that will not be indexed.</p>
+<h3 id="minimum-size-duration" class="docmd-heading"><a href="#minimum-size-duration" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Minimum File Size &amp; Track Duration</h3>
+<p>Files smaller or shorter than these values will be skipped, useful for filtering out voice notes and notification sounds.</p>
+<h3 id="use-media-store" class="docmd-heading"><a href="#use-media-store" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Use Media Store</h3>
+<p><code>Android only</code></p>
+<p>Uses the Android system index instead of Namida’s own indexer. Instant indexing time, but some metadata tags will be missing, <code>.nomedia</code> is forcefully respected, and YouTube integration for local library will not work.</p>
+<div class="docmd-container callout callout-warning"><div class="callout-title">Deprecated</div><div class="callout-content">
+<p>This feature is removed as of v6.5.5. With the new tagger (<code>taglib</code>) being stable and fast, and with this option lacking critical aspect of Namida and many users reporting issues after manually enabling and forgetting it, It is no longer required to keep this feature.</p>
+</div></div>
+<h3 id="include-videos" class="docmd-heading"><a href="#include-videos" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Include Videos</h3>
+<p>Index video files as well, videos get their own folders view and can be played independently.</p>
+<h3 id="refresh-on-startup" class="docmd-heading"><a href="#refresh-on-startup" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Refresh on Startup</h3>
+<p>Automatically checks for newly added or deleted files on every app start.</p>
+<h3 id="missing-tracks" class="docmd-heading"><a href="#missing-tracks" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Missing Tracks</h3>
+<p>Lists tracks that no longer exist on storage, you can update their paths to keep stats and listens, see <a href="../../features/library-indexing/">Library &amp; Indexing</a>.</p>
+<h3 id="refresh-reindex" class="docmd-heading"><a href="#refresh-reindex" class="heading-anchor" aria-label="Permalink to this section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link2-icon lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2m6 0h2a5 5 0 1 1 0 10h-2m-7-5h8"/></svg></a>Refresh Library &amp; Re-index</h3>
+<p>Refresh checks for newly added or deleted music. Re-index rebuilds the whole library from scratch, artworks are kept as long as they still exist.</p>
+<hr>
+<sub>by @claude</sub>
 
+      </article>
 
-              </div>
-              
-            </div>
-            <div class="page-footer-actions">
-              
-              
-                <span class="git-last-updated" data-timestamp="1787450877000">
-                  <svg class="git-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  <span class="git-label">Last updated:</span>
-                  <span class="git-time" data-timestamp="1787450877000"></span>
-                  
-                  <div class="git-commit-tooltip" role="tooltip">
-                    <div class="git-tooltip-title">Recent commits</div>
-                    <ul class="git-commit-list">
-                      
-                        <li class="git-commit-item">
-                          <div class="git-commit-avatar" title="MSOB7YY">
-                            
-                              <img src="https://www.gravatar.com/avatar/92ea4fe968e00ff0144dc5dfc84fa9d7?d=mp&amp;s=64" alt="MSOB7YY">
-                            
-                          </div>
-                          <div class="git-commit-details">
-                            <div class="git-commit-message" title="initial">initial</div>
-                            <div class="git-commit-meta">
-                              <span class="git-commit-author">MSOB7YY</span>
-                              <span class="git-commit-date" data-timestamp="1787450877000"></span>
-                            </div>
-                          </div>
-                        </li>
-                      
-                    </ul>
-                  </div>
-                  
-                </span>
-              
-              <span class="git-spacer"></span>
-              
-            </div>
-          </main>
+      
+        <nav class="summer-pagenav" aria-label="Page navigation">
           
+            <a href="../../settings/1-theme-settings/" class="summer-pagenav__link summer-pagenav__link--prev">
+              <svg class="summer-pagenav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              <span class="summer-pagenav__label">
+                <span class="summer-pagenav__small">Previous</span>
+                <span class="summer-pagenav__title">Theme</span>
+              </span>
+            </a>
+          
+          
+            <a href="../../settings/3-playback-settings/" class="summer-pagenav__link summer-pagenav__link--next">
+              <span class="summer-pagenav__label">
+                <span class="summer-pagenav__small">Next</span>
+                <span class="summer-pagenav__title">Playback</span>
+              </span>
+              <svg class="summer-pagenav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          
+        </nav>
+      
 
+      
+        <div class="summer-pagefooter">
+          
+            <span></span>
+          
+          
+            <span class="summer-pagefooter__time has-commits" data-timestamp="1787450877000" tabindex="0" aria-haspopup="true" aria-expanded="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Last updated: <time datetime="2026-08-23T02:07:57.000Z">8/23/2026</time></span>
+              
+                <div class="summer-git-popover" role="tooltip">
+                  <div class="summer-git-popover__title">Recent commits</div>
+                  <ul class="summer-git-popover__list">
+                    
+                      <li class="summer-git-popover__item">
+                        <div class="summer-git-popover__avatar" title="MSOB7YY">
+                          
+                            <img src="https://www.gravatar.com/avatar/92ea4fe968e00ff0144dc5dfc84fa9d7?d=mp&amp;s=64" alt="MSOB7YY" loading="lazy">
+                          
+                        </div>
+                        <div class="summer-git-popover__details">
+                          <div class="summer-git-popover__msg" title="initial">initial</div>
+                          <div class="summer-git-popover__meta">
+                            <span class="summer-git-popover__author">MSOB7YY</span>
+                            <span class="summer-git-popover__date" data-timestamp="1787450877000"></span>
+                          </div>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </div>
+              
+            </span>
+          
+        </div>
+      
+    </main>
 
-<footer class="page-footer">
-  <div class="footer-content">
-    <div class="user-footer">©namidaco</div>
+    
+    
+      
+      <div class="summer-toc" aria-label="On this page">
+        
+          <aside class="summer-toc__inner">
+            <h2 class="summer-toc__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                <line x1="21" y1="5" x2="3" y2="5"></line>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+                <line x1="17" y1="19" x2="3" y2="19"></line>
+              </svg>
+              <span>On This Page</span>
+            </h2>
+            <ul class="summer-toc__list">
+              
+                <li class="summer-toc__item summer-toc__item--level-1" data-prev-level="1" data-level="1">
+                  <a href="#indexer" class="summer-toc__link" data-toc-level="1">Indexer</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="1" data-level="3">
+                  <a href="#folders-to-scan" class="summer-toc__link" data-toc-level="3">List of Folders</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#excluded-folders" class="summer-toc__link" data-toc-level="3">Excluded Folders</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#prevent-duplicated-tracks" class="summer-toc__link" data-toc-level="3">Prevent Duplicated Tracks</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#respect-nomedia" class="summer-toc__link" data-toc-level="3">Respect .nomedia</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#extract-feat-artists" class="summer-toc__link" data-toc-level="3">Extract feat. Artists</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#artwork-cache" class="summer-toc__link" data-toc-level="3">Enable Artwork Cache</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#group-artworks-by-album" class="summer-toc__link" data-toc-level="3">Group Artworks by Album</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#unique-artwork-hash" class="summer-toc__link" data-toc-level="3">Unique Artwork Hash</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#album-identifiers" class="summer-toc__link" data-toc-level="3">Album Identifiers</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#separators" class="summer-toc__link" data-toc-level="3">Artists &amp; Genres Separators</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#extensions-blacklist" class="summer-toc__link" data-toc-level="3">Extension (Blacklist)</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#minimum-size-duration" class="summer-toc__link" data-toc-level="3">Minimum File Size &amp; Track Duration</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#use-media-store" class="summer-toc__link" data-toc-level="3">Use Media Store</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#include-videos" class="summer-toc__link" data-toc-level="3">Include Videos</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#refresh-on-startup" class="summer-toc__link" data-toc-level="3">Refresh on Startup</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#missing-tracks" class="summer-toc__link" data-toc-level="3">Missing Tracks</a>
+                </li>
+              
+                <li class="summer-toc__item summer-toc__item--level-3" data-prev-level="3" data-level="3">
+                  <a href="#refresh-reindex" class="summer-toc__link" data-toc-level="3">Refresh Library &amp; Re-index</a>
+                </li>
+              
+            </ul>
+          </aside>
+        
+      </div>
     
   </div>
-</footer>
 
-        </div>
+  <button class="summer-totop" type="button" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+  
+  
+  
+    <footer class="summer-footer">
+      <div class="summer-footer__inner">
+        <div class="summer-footer__user">©namidaco</div>
+        
       </div>
-      
-      <script src="../../assets/js/docmd-main.js?v=mt61gay0"></script>
-      
-      <script src="../../assets/js/docmd-git.js?v=mt61gay0"></script>
-      <script src="../../assets/js/docmd-image-lightbox.js?v=mt61gay0" ></script>
-<script src="../../assets/js/vendor/minisearch.js?v=mt61gay0" ></script>
-<script src="../../assets/js/docmd-search.js?v=mt61gay0" ></script>
-<script src="../../assets/js/docmd-git.js?v=mt61gay0" ></script>
-<script src="../../assets/js/docmd-ai.js?v=mt61gay0" ></script>
+    </footer>
+  
+
+  
+  <script src="../../assets/js/docmd-main.js?v=mtawuc57"></script>
+
+  <script src="../../assets/js/docmd-image-lightbox.js?v=mtawuc57" ></script>
+<script src="../../assets/js/vendor/minisearch.js?v=mtawuc57" ></script>
+<script src="../../assets/js/docmd-search.js?v=mtawuc57" ></script>
+<script src="../../assets/js/docmd-git.js?v=mtawuc57" ></script>
+<script src="../../assets/js/docmd-ai.js?v=mtawuc57" ></script>
+<script src="../../assets/template/summer.js?v=mtawuc57" ></script>
 
   <!-- Search Modal (Injected by @docmd/plugin-search) -->
   <div id="docmd-search-modal" class="docmd-search-modal" style="display: none;" data-show-confidence="false" data-show-filters="true"
@@ -1135,9 +1530,7 @@
     </script>
 
 <script>window.__git_config={"repo":null,"branch":"main","editLink":false,"lastUpdated":true,"commitHistory":true,"maxCommits":5,"dateFormat":"relative"};window.__git_i18n={"lastUpdated":"Last updated","recentCommits":"Recent commits","viewCommitHistory":"View commit history","editOnGitHub":"Edit on GitHub","editOnGitLab":"Edit on GitLab","editOnBitbucket":"Edit on Bitbucket","editThisPage":"Edit this page","justNow":"just now","minutesAgo":"{n}m ago","hoursAgo":"{n}h ago","daysAgo":"{n}d ago"}</script>
-<div id="docmd-ai-root"></div><script>window.__docmd_ai_config={"endpoint":"https://api.docmd.io/v1/ai/chat","projectId":"docmd_sxy4har0mt4u6z8j","cloud":{"siteId":"docmd_sxy4har0mt4u6z8j","projectId":"docmd_sxy4har0mt4u6z8j"},"captcha":true,"position":"bottom-center","siteTitle":"Namida","siteBase":"/","siteUrl":"https://docs.myproject.com","versions":null,"i18n":null,"navigation":[{"title":"Quick Start","path":"/","icon":"zap"},{"title":"Agent Skills","path":"/skills/","icon":"brain-circuit"},{"title":"Settings","path":"/settings/","icon":"settings","children":[{"title":"Theme","path":"/settings/1-theme-settings/","icon":"download","external":false},{"title":"Indexer","path":"/settings/2-indexer-settings/","icon":"settings","external":false}]},{"title":"FAQ","path":"/faq/","icon":"message-circle-question-mark"},{"title":"Quick Guide","icon":"book-open","collapsible":false,"children":[{"title":"Install","path":"https://docs.docmd.io/getting-started/installation/","icon":"download","external":true},{"title":"Configure","path":"https://docs.docmd.io/configuration/overview/","icon":"settings","external":true},{"title":"Migrate","path":"https://docs.docmd.io/migration/overview/","icon":"arrow-left-right","external":true},{"title":"Deploy","path":"https://docs.docmd.io/deployment/","icon":"rocket","external":true}]},{"title":"GitHub","path":"https://github.com/docmd-io/docmd","icon":"github","external":true}],"searchCapabilities":{"keyword":true,"semantic":false},"isWorkspace":false,"workspaceProjects":[]};</script>
-      
-      
-      
-  </body>
+<div id="docmd-ai-root"></div><script>window.__docmd_ai_config={"endpoint":"https://api.docmd.io/v1/ai/chat","projectId":"docmd_sxy4har0mt4u6z8j","cloud":{"siteId":"docmd_sxy4har0mt4u6z8j","projectId":"docmd_sxy4har0mt4u6z8j"},"captcha":true,"position":"bottom-center","siteTitle":"Namida","siteBase":"/","siteUrl":"https://namidaco.github.io/namida_docs","versions":null,"i18n":null,"navigation":[{"title":"Welcome","path":"/","icon":"house"},{"title":"Features","path":"/features/","icon":"sparkles","collapsible":false,"children":[{"title":"Library & Indexing","path":"/features/library-indexing/","icon":"library","external":false},{"title":"Playback","path":"/features/playback/","icon":"play-circle","external":false},{"title":"Playlists & History","path":"/features/playlists-history/","icon":"list-music","external":false},{"title":"Tag Editor","path":"/features/tag-editor/","icon":"tag","external":false},{"title":"YouTube","path":"/features/youtube/","icon":"youtube","external":false},{"title":"Media Servers","path":"/features/media-servers/","icon":"server","external":false},{"title":"Sync","path":"/features/sync/","icon":"arrow-left-right","external":false},{"title":"Shortcuts","path":"/features/shortcuts/","icon":"keyboard","external":false}]},{"title":"Pages","path":"/pages/","icon":"layout-grid","collapsible":false,"children":[{"title":"Library","path":"/pages/library/","icon":"library-big","external":false},{"title":"YouTube","path":"/pages/youtube/","icon":"youtube","external":false},{"title":"Other","path":"/pages/other/","icon":"layers","external":false}]},{"title":"Settings","path":"/settings/","icon":"settings","collapsible":false,"children":[{"title":"Theme","path":"/settings/1-theme-settings/","icon":"palette","external":false},{"title":"Indexer","path":"/settings/2-indexer-settings/","icon":"database","external":false},{"title":"Playback","path":"/settings/3-playback-settings/","icon":"play","external":false},{"title":"Customizations","path":"/settings/4-customization-settings/","icon":"brush","external":false},{"title":"Youtube","path":"/settings/5-youtube-settings/","icon":"youtube","external":false},{"title":"Extras","path":"/settings/6-extras-settings/","icon":"puzzle","external":false},{"title":"Backup & Restore","path":"/settings/7-backup-restore-settings/","icon":"archive-restore","external":false},{"title":"Advanced","path":"/settings/8-advanced-settings/","icon":"wrench","external":false}]},{"title":"Tips & Tricks","path":"/tips/","icon":"lightbulb"},{"title":"FAQ","path":"/faq/","icon":"message-circle-question-mark"},{"title":"GitHub","path":"https://github.com/namidaco/namida","icon":"github","external":true}],"searchCapabilities":{"keyword":true,"semantic":false},"isWorkspace":false,"workspaceProjects":[]};</script>
+  
+</body>
 </html>

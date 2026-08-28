@@ -4,38 +4,152 @@
   "pages": [
     {
       "title": "FAQ",
-      "url": "https://docs.myproject.com/faq/",
+      "url": "https://namidaco.github.io/namida_docs/faq/",
       "description": "Frequently Asked Questions",
       "priority": "medium"
     },
     {
-      "title": "Quick Start",
-      "url": "https://docs.myproject.com/",
-      "description": "Welcome to your new documentation site.",
+      "title": "Features",
+      "url": "https://namidaco.github.io/namida_docs/features/",
+      "description": "Features in Namida",
+      "priority": "medium"
+    },
+    {
+      "title": "Library & Indexing",
+      "url": "https://namidaco.github.io/namida_docs/features/library-indexing/",
+      "description": "A powerful folders based music library",
+      "priority": "medium"
+    },
+    {
+      "title": "Media Servers",
+      "url": "https://namidaco.github.io/namida_docs/features/media-servers/",
+      "description": "Index your servers like normal folders",
+      "priority": "medium"
+    },
+    {
+      "title": "Playback",
+      "url": "https://namidaco.github.io/namida_docs/features/playback/",
+      "description": "Queues, effects, videos and lyrics",
+      "priority": "medium"
+    },
+    {
+      "title": "Playlists & History",
+      "url": "https://namidaco.github.io/namida_docs/features/playlists-history/",
+      "description": "Flexible playlists and a reliable history system",
+      "priority": "medium"
+    },
+    {
+      "title": "Shortcuts",
+      "url": "https://namidaco.github.io/namida_docs/features/shortcuts/",
+      "description": "Keyboard shortcuts on desktop",
+      "priority": "medium"
+    },
+    {
+      "title": "Sync",
+      "url": "https://namidaco.github.io/namida_docs/features/sync/",
+      "description": "Sync app data between your devices",
+      "priority": "medium"
+    },
+    {
+      "title": "Tag Editor",
+      "url": "https://namidaco.github.io/namida_docs/features/tag-editor/",
+      "description": "Edit your music tags right inside Namida",
+      "priority": "medium"
+    },
+    {
+      "title": "YouTube",
+      "url": "https://namidaco.github.io/namida_docs/features/youtube/",
+      "description": "Stream, download and watch YouTube inside Namida",
+      "priority": "medium"
+    },
+    {
+      "title": "Welcome",
+      "url": "https://namidaco.github.io/namida_docs/",
+      "description": "Namida documentation",
       "priority": "high"
     },
     {
-      "title": "Theme Settings",
-      "url": "https://docs.myproject.com/settings/1-theme-settings/",
+      "title": "Pages",
+      "url": "https://namidaco.github.io/namida_docs/pages/",
+      "description": "A tour of every page in Namida",
+      "priority": "medium"
+    },
+    {
+      "title": "Library",
+      "url": "https://namidaco.github.io/namida_docs/pages/library/",
+      "description": "The main library pages",
+      "priority": "medium"
+    },
+    {
+      "title": "Other Pages",
+      "url": "https://namidaco.github.io/namida_docs/pages/other/",
+      "description": "Stats, Sync Manager and About",
+      "priority": "medium"
+    },
+    {
+      "title": "YouTube Pages",
+      "url": "https://namidaco.github.io/namida_docs/pages/youtube/",
+      "description": "The pages of the YouTube section",
+      "priority": "medium"
+    },
+    {
+      "title": "Theme",
+      "url": "https://namidaco.github.io/namida_docs/settings/1-theme-settings/",
       "description": "The overall vibe of your player",
       "priority": "medium"
     },
     {
-      "title": "Indexer Settings",
-      "url": "https://docs.myproject.com/settings/2-indexer-settings/",
-      "description": "Manage your music library",
+      "title": "Indexer",
+      "url": "https://namidaco.github.io/namida_docs/settings/2-indexer-settings/",
+      "description": "Manage your music Library",
+      "priority": "medium"
+    },
+    {
+      "title": "Playback",
+      "url": "https://namidaco.github.io/namida_docs/settings/3-playback-settings/",
+      "description": "Audio, video and queue behavior",
+      "priority": "medium"
+    },
+    {
+      "title": "Customizations",
+      "url": "https://namidaco.github.io/namida_docs/settings/4-customization-settings/",
+      "description": "Customize how your player looks, make it yours",
+      "priority": "medium"
+    },
+    {
+      "title": "Youtube",
+      "url": "https://namidaco.github.io/namida_docs/settings/5-youtube-settings/",
+      "description": "Customize Youtube experience",
+      "priority": "medium"
+    },
+    {
+      "title": "Extras",
+      "url": "https://namidaco.github.io/namida_docs/settings/6-extras-settings/",
+      "description": "Extra settings to fine-tune your experience",
+      "priority": "medium"
+    },
+    {
+      "title": "Backup & Restore",
+      "url": "https://namidaco.github.io/namida_docs/settings/7-backup-restore-settings/",
+      "description": "Backup your database and settings",
+      "priority": "medium"
+    },
+    {
+      "title": "Advanced",
+      "url": "https://namidaco.github.io/namida_docs/settings/8-advanced-settings/",
+      "description": "Advanced Settings, don't touch",
       "priority": "medium"
     },
     {
       "title": "Settings",
-      "url": "https://docs.myproject.com/settings/",
-      "description": "Explaination for in-app settings",
+      "url": "https://namidaco.github.io/namida_docs/settings/",
+      "description": "Explanation for in-app settings",
       "priority": "medium"
     },
     {
-      "title": "Agent Skills",
-      "url": "https://docs.myproject.com/skills/",
-      "description": "Teach AI coding agents to work with docmd projects",
+      "title": "Tips & Tricks",
+      "url": "https://namidaco.github.io/namida_docs/tips/",
+      "description": "Not so obvious features you might have missed",
       "priority": "medium"
     }
   ]

@@ -4,15 +4,53 @@
 
 ## Documentation Files
 
-- [FAQ](https://docs.myproject.com/faq/)
+- [FAQ](https://namidaco.github.io/namida_docs/faq/)
   Frequently Asked Questions
-- [Quick Start](https://docs.myproject.com/)
-  Welcome to your new documentation site.
-- [Theme Settings](https://docs.myproject.com/settings/1-theme-settings/)
+- [Features](https://namidaco.github.io/namida_docs/features/)
+  Features in Namida
+- [Library & Indexing](https://namidaco.github.io/namida_docs/features/library-indexing/)
+  A powerful folders based music library
+- [Media Servers](https://namidaco.github.io/namida_docs/features/media-servers/)
+  Index your servers like normal folders
+- [Playback](https://namidaco.github.io/namida_docs/features/playback/)
+  Queues, effects, videos and lyrics
+- [Playlists & History](https://namidaco.github.io/namida_docs/features/playlists-history/)
+  Flexible playlists and a reliable history system
+- [Shortcuts](https://namidaco.github.io/namida_docs/features/shortcuts/)
+  Keyboard shortcuts on desktop
+- [Sync](https://namidaco.github.io/namida_docs/features/sync/)
+  Sync app data between your devices
+- [Tag Editor](https://namidaco.github.io/namida_docs/features/tag-editor/)
+  Edit your music tags right inside Namida
+- [YouTube](https://namidaco.github.io/namida_docs/features/youtube/)
+  Stream, download and watch YouTube inside Namida
+- [Welcome](https://namidaco.github.io/namida_docs/)
+  Namida documentation
+- [Pages](https://namidaco.github.io/namida_docs/pages/)
+  A tour of every page in Namida
+- [Library](https://namidaco.github.io/namida_docs/pages/library/)
+  The main library pages
+- [Other Pages](https://namidaco.github.io/namida_docs/pages/other/)
+  Stats, Sync Manager and About
+- [YouTube Pages](https://namidaco.github.io/namida_docs/pages/youtube/)
+  The pages of the YouTube section
+- [Theme](https://namidaco.github.io/namida_docs/settings/1-theme-settings/)
   The overall vibe of your player
-- [Indexer Settings](https://docs.myproject.com/settings/2-indexer-settings/)
-  Manage your music library
-- [Settings](https://docs.myproject.com/settings/)
-  Explaination for in-app settings
-- [Agent Skills](https://docs.myproject.com/skills/)
-  Teach AI coding agents to work with docmd projects
+- [Indexer](https://namidaco.github.io/namida_docs/settings/2-indexer-settings/)
+  Manage your music Library
+- [Playback](https://namidaco.github.io/namida_docs/settings/3-playback-settings/)
+  Audio, video and queue behavior
+- [Customizations](https://namidaco.github.io/namida_docs/settings/4-customization-settings/)
+  Customize how your player looks, make it yours
+- [Youtube](https://namidaco.github.io/namida_docs/settings/5-youtube-settings/)
+  Customize Youtube experience
+- [Extras](https://namidaco.github.io/namida_docs/settings/6-extras-settings/)
+  Extra settings to fine-tune your experience
+- [Backup & Restore](https://namidaco.github.io/namida_docs/settings/7-backup-restore-settings/)
+  Backup your database and settings
+- [Advanced](https://namidaco.github.io/namida_docs/settings/8-advanced-settings/)
+  Advanced Settings, don't touch
+- [Settings](https://namidaco.github.io/namida_docs/settings/)
+  Explanation for in-app settings
+- [Tips & Tricks](https://namidaco.github.io/namida_docs/tips/)
+  Not so obvious features you might have missed
