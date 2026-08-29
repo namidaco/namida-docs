@@ -4,10 +4,11 @@ title: Theme
 description: "The overall vibe of your player"
 source: "https://namidaco.github.io/namida_docs/settings/1-theme-settings/"
 path: /settings/1-theme-settings/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.669Z"
+  generated_at: "2026-08-29T01:43:41.451Z"
 ---
 ---
 title: "Theme"
@@ -46,7 +47,7 @@ Use pure black background in dark mode. Useful for AMOLED screens, and looks coo
 
 ### Default Color {#default-color}
 
-Set a color to be used by the player when [Auto Coloring](#auto-coloring) is off. There are two entries, one for light mode and one for dark mode.
+Set a color to be used by the player when [Auto Coloring](#auto-coloring) is off, or when the current track has no artwork. There are two entries, one for light mode and one for dark mode.
 
 ### Language {#language}
 

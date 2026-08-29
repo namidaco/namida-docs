@@ -15,6 +15,8 @@ Edit title, artist, album, genre, year, lyrics, comment, rating, moods and more,
 
 Select multiple tracks and edit them at once, unchanged fields remain untouched. Useful for fixing a whole album or artist.
 
+[`Selection Tips ↗`](/tips#selection)
+
 ### Auto Extract from Filename {#auto-extract}
 
 Fill tags automatically from the filename pattern, handy for files with empty tags.
@@ -23,6 +25,8 @@ Fill tags automatically from the filename pattern, handy for files with empty ta
 Editing files requires storage access on Android.
 WEBM format does not support tag editing.
 :::
+
+---
 
 ### Related Settings {#related-settings}
 

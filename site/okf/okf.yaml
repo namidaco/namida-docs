@@ -5,14 +5,15 @@ bundle:
   description: ""
   url: "https://namidaco.github.io/namida_docs"
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.678Z"
+  generated_at: "2026-08-29T01:43:41.458Z"
   default_type: concept
 stats:
   concepts: 25
   by_type:
     concept: 25
   locales: 
-  versions: 
+  versions:
+    - v6.5.0
 concepts:
   - id: faq
     type: concept
@@ -20,7 +21,7 @@ concepts:
     path: /faq/
     file: concepts/faq.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: features
     type: concept
@@ -28,7 +29,7 @@ concepts:
     path: /features/
     file: concepts/features.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: features-library-indexing
     type: concept
@@ -36,7 +37,7 @@ concepts:
     path: /features/library-indexing/
     file: concepts/features-library-indexing.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: features-media-servers
     type: concept
@@ -44,7 +45,7 @@ concepts:
     path: /features/media-servers/
     file: concepts/features-media-servers.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: features-playback
     type: concept
@@ -52,7 +53,7 @@ concepts:
     path: /features/playback/
     file: concepts/features-playback.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: features-playlists-history
     type: concept
@@ -60,7 +61,7 @@ concepts:
     path: /features/playlists-history/
     file: concepts/features-playlists-history.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: features-shortcuts
     type: concept
@@ -68,7 +69,7 @@ concepts:
     path: /features/shortcuts/
     file: concepts/features-shortcuts.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: features-sync
     type: concept
@@ -76,7 +77,7 @@ concepts:
     path: /features/sync/
     file: concepts/features-sync.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: features-tag-editor
     type: concept
@@ -84,7 +85,7 @@ concepts:
     path: /features/tag-editor/
     file: concepts/features-tag-editor.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: features-youtube
     type: concept
@@ -92,7 +93,7 @@ concepts:
     path: /features/youtube/
     file: concepts/features-youtube.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: root
     type: concept
@@ -100,7 +101,7 @@ concepts:
     path: /
     file: concepts/root.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: pages
     type: concept
@@ -108,7 +109,7 @@ concepts:
     path: /pages/
     file: concepts/pages.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: pages-library
     type: concept
@@ -116,7 +117,7 @@ concepts:
     path: /pages/library/
     file: concepts/pages-library.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: pages-other
     type: concept
@@ -124,7 +125,7 @@ concepts:
     path: /pages/other/
     file: concepts/pages-other.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: pages-youtube
     type: concept
@@ -132,7 +133,7 @@ concepts:
     path: /pages/youtube/
     file: concepts/pages-youtube.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: settings-1-theme-settings
     type: concept
@@ -140,7 +141,7 @@ concepts:
     path: /settings/1-theme-settings/
     file: concepts/settings-1-theme-settings.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: settings-2-indexer-settings
     type: concept
@@ -148,7 +149,7 @@ concepts:
     path: /settings/2-indexer-settings/
     file: concepts/settings-2-indexer-settings.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: settings-3-playback-settings
     type: concept
@@ -156,7 +157,7 @@ concepts:
     path: /settings/3-playback-settings/
     file: concepts/settings-3-playback-settings.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: settings-4-customization-settings
     type: concept
@@ -164,7 +165,7 @@ concepts:
     path: /settings/4-customization-settings/
     file: concepts/settings-4-customization-settings.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: settings-5-youtube-settings
     type: concept
@@ -172,7 +173,7 @@ concepts:
     path: /settings/5-youtube-settings/
     file: concepts/settings-5-youtube-settings.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: settings-6-extras-settings
     type: concept
@@ -180,7 +181,7 @@ concepts:
     path: /settings/6-extras-settings/
     file: concepts/settings-6-extras-settings.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: settings-7-backup-restore-settings
     type: concept
@@ -188,7 +189,7 @@ concepts:
     path: /settings/7-backup-restore-settings/
     file: concepts/settings-7-backup-restore-settings.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: settings-8-advanced-settings
     type: concept
@@ -196,7 +197,7 @@ concepts:
     path: /settings/8-advanced-settings/
     file: concepts/settings-8-advanced-settings.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: settings
     type: concept
@@ -204,7 +205,7 @@ concepts:
     path: /settings/
     file: concepts/settings.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 
   - id: tips
     type: concept
@@ -212,5 +213,5 @@ concepts:
     path: /tips/
     file: concepts/tips.md
     locale: ""
-    version: ""
+    version: v6.5.0
     tags: 

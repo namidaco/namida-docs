@@ -4,10 +4,11 @@ title: "Media Servers"
 description: "Index your servers like normal folders"
 source: "https://namidaco.github.io/namida_docs/features/media-servers/"
 path: /features/media-servers/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.656Z"
+  generated_at: "2026-08-29T01:43:41.442Z"
 ---
 ---
 title: "Media Servers"
@@ -38,6 +39,8 @@ For file based servers (WebDAV, SMB), files are temporarily downloaded for index
 ### Server Playlists {#playlists}
 
 Playlists from your servers can be auto imported on library refresh, see [Playlists & History](/features/playlists-history/#playlists).
+
+---
 
 ### Related Settings {#related-settings}
 

@@ -13,8 +13,8 @@ Namida comes with a full YouTube section, powered by a custom client. Stream, wa
 
 - Best available video & audio quality, you can pick the quality manually too.
 - Audio Only mode, play any video as music without loading the video.
-- Data Saver mode, automatically picks lower quality to save data.
-- Radio, auto start an endless queue based on the current video.
+- Data Saver mode, play audio only if video was not cached.
+- Radio, auto start a queue based on the current video, using YouTube Mix playlist.
 
 ### Video View {#video-view}
 
@@ -22,15 +22,13 @@ Watching videos supports gestures:
 
 - Swipe up or pinch in to enter fullscreen
 - Double tap to seek
-- Swipe vertically to control volume
+- Swipe vertically to control volume/brightness
 - Swipe horizontally to seek
-- Long press for 2x speed
+- Long press for 2x speed [`⚙️ Configure ↗`](/settings/5-youtube-settings/#flags)
 
 ### Miniplayer {#miniplayer}
 
-[`⚙️ Miniplayer Settings ↗`](/settings/5-youtube-settings/#miniplayer)
-
-A YouTube style miniplayer with comments, related videos and video description. It dims automatically after a few seconds to save battery, both the delay and the dim intensity can be changed.
+A YouTube style miniplayer with comments, related videos and video description. It dims automatically after a few seconds to help focus & reduce eye strain. Both the delay and the dim intensity can be changed. [`⚙️ Miniplayer Settings ↗`](/settings/5-youtube-settings/#miniplayer)
 
 ### Downloads {#downloads}
 
@@ -41,7 +39,7 @@ Download any video or audio, with full control over the result:
 - Metadata tags are written to the file, with optional auto title/artist/album extraction from the video title. You can edit every tag before downloading.
 - Output filename builder, similar to yt-dlp format, see [all formats](#filename-formats) below.
 - Both work for single downloads and batch playlist downloads, where playlist formats number the files for you.
-- Default download location, changeable per download.
+- Default download folder, changeable per download.
 - Download notifications `Windows+Linux only`.
 
 ### Filename & Tags Formats {#filename-formats}
@@ -122,7 +120,13 @@ Full comments support with replies. You can prefer top comments or newest commen
 
 [`⚙️ Import Youtube History ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
-You can import your watch history from YouTube takeout files, it gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [YouTube playlists page](/pages/youtube/#playlists).
+You can import your watch history from YouTube takeout files, it gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [YouTube Channels page](/pages/youtube/#channels) & [YouTube playlists page](/pages/youtube/#playlists).
+
+::: callout tip
+Signing in your YouTube account allows you to access your Subscribed Channels and Playlists. This can be better than importing manually depending on your usage.
+:::
+
+---
 
 ### Related Settings {#related-settings}
 

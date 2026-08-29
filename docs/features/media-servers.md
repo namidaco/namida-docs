@@ -28,6 +28,8 @@ For file based servers (WebDAV, SMB), files are temporarily downloaded for index
 
 Playlists from your servers can be auto imported on library refresh, see [Playlists & History](/features/playlists-history/#playlists).
 
+---
+
 ### Related Settings {#related-settings}
 
 - [Indexer, List of Folders](/settings/2-indexer-settings/#folders-to-scan)

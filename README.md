@@ -33,8 +33,10 @@ RULES.md              # writing & style rules
 
 # Notes
 
-- AI submissions are allowed, as long as all the information is correct and not hallucinated, and follows [RULES.md](RULES.md) properly.
+- AI submissions are allowed, as long as all the information is correct and not hallucinated, and follows [RULES](RULES.md) properly.
 - Small fixes (typos, grammar, broken links, etc) are welcomed ^^
 
-> Built by claude
-> Authored by @MSOB7YY
+---
+
+> - Built by claude
+> - Authored by @MSOB7YY

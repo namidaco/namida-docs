@@ -4,10 +4,11 @@ title: Playback
 description: "Queues, effects, videos and lyrics"
 source: "https://namidaco.github.io/namida_docs/features/playback/"
 path: /features/playback/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.657Z"
+  generated_at: "2026-08-29T01:43:41.443Z"
 ---
 ---
 title: "Playback"
@@ -42,7 +43,7 @@ The queue bottom row packs more than it looks:
 
 [`⚙️ Playback Settings ↗`](/settings/3-playback-settings/#crossfade)
 
-Crossfade, play/pause fade effect, gapless playback, skip silence, and an equalizer with loudness enhancer.
+Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equalizer with Loudness Enhancer.
 
 ### Replay Gain {#replay-gain}
 
@@ -70,25 +71,29 @@ Auto fetching & displaying, synced & plain, with support for word synced lrc/ttm
 
 ### Gestures {#gestures}
 
-[`⚙️ Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization)
+[`⚙️ Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization) [`⚙️ Track Tile Customization ↗`](/settings/4-customization-settings/#track-tile)
 
 - Swipe the miniplayer left or right to change tracks, up and down to expand or minimize, and swipe down to dismiss when [Dismissible Miniplayer](/settings/3-playback-settings/#dismissible-miniplayer) is on.
 - Artwork tap and long press actions are configurable, and double tap can toggle lyrics.
+- Swipe left/right on a track or a video to execute actions (ex: play next, open info, go to album, edit tag, etc..)
 - More hidden gestures in [Tips & Tricks](/tips/).
 
 ### Track Menu {#track-menu}
 
-Long press any track for queue control: Play Next, Play Last, Play After a chosen position, repeat for N times, stop after this track, and adding more from the same album, artist or folder. See [Tips & Tricks](/tips/#track-menu) for the full list.
+Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder. See [Tips & Tricks](/tips/#track-menu) for the full list.
 
 ### Sleep Timer {#sleep-timer}
 
 Stop playback after a number of tracks or minutes.
+Sleep Timer can be found in app side bar menu.
 
 ### Waveform Seekbar {#waveform}
 
 [`⚙️ Waveform Bars Count ↗`](/settings/4-customization-settings/#miniplayer-customization)
 
 The seekbar is the actual waveform of the track.
+
+---
 
 ### Related Settings {#related-settings}
 

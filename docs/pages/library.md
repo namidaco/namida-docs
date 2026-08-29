@@ -61,6 +61,8 @@ Browse tracks grouped by the moods, tags and ratings you assign. Assign them fro
 
 Global search across your library. You choose which fields it looks into, title, artist, album, filename, even lyrics. Playing from search supports play modes, selected track only, search results, album, first artist or first genre.
 
+---
+
 ### Related Settings {#related-settings}
 
 - [Extras, Library Tabs](/settings/6-extras-settings/#library-tabs)

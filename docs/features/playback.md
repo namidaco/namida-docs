@@ -63,6 +63,7 @@ Auto fetching & displaying, synced & plain, with support for word synced lrc/ttm
 
 - Swipe the miniplayer left or right to change tracks, up and down to expand or minimize, and swipe down to dismiss when [Dismissible Miniplayer](/settings/3-playback-settings/#dismissible-miniplayer) is on.
 - Artwork tap and long press actions are configurable, and double tap can toggle lyrics.
+- Swipe left/right on a track or a video to execute actions (ex: play next, open info, go to album, edit tag, etc..)
 - More hidden gestures in [Tips & Tricks](/tips/).
 
 ### Track Menu {#track-menu}
@@ -72,12 +73,15 @@ Long press any track for queue control: Play Next, Play Last, Play After latest 
 ### Sleep Timer {#sleep-timer}
 
 Stop playback after a number of tracks or minutes.
+Sleep Timer can be found in app side bar menu.
 
 ### Waveform Seekbar {#waveform}
 
 [`⚙️ Waveform Bars Count ↗`](/settings/4-customization-settings/#miniplayer-customization)
 
 The seekbar is the actual waveform of the track.
+
+---
 
 ### Related Settings {#related-settings}
 

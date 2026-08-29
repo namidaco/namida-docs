@@ -6,6 +6,7 @@ description: "The pages of the YouTube section"
 # YouTube Pages
 
 The pages of the [YouTube](/features/youtube/) section.
+Most pages have local variant and hosted variant for when you are signed in.
 
 ### Home {#home}
 

@@ -23,11 +23,14 @@ Not so obvious features you might have missed.
 
 ### Player {#player}
 
-- Tap the current duration to seek backwards, tap the total duration to seek forwards, by the [Seek Duration](/settings/3-playback-settings/#seek-duration).
+- Tap the current position to seek backwards, tap the total duration to seek forwards, by the [Seek Duration](/settings/3-playback-settings/#seek-duration).
+- Long press the current position to seek to start, long press the total duration to keep seeking forwards
 - Swipe the miniplayer left or right to change tracks.
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
 - Long press the lyrics to enter fullscreen.
 - Long press the audio button in the player to open [Playback Settings](/settings/3-playback-settings/) directly.
+- Long press the video button in the player to control quality or change audio track for videos.
+- Long press lyrics button to configure lyrics for the current track.
 
 ### Track Menu {#track-menu}
 
@@ -61,7 +64,7 @@ Long press a track (or tap its menu) for more than you might expect:
 - Tap a year chip to jump to the same day but in that year.
 - Most Played supports custom time ranges, see your top tracks of any period.
 - Open a track's listens dialog, tap a listen to jump to that day in history, or use the button beside it to open Most Played for that range.
-- Replace all listens of a track with another track, useful after re-downloading a file.
+- Replace all listens of a track with another track, useful after re-downloading a file (Track's Dialog -> Advanced -> Replace all listens).
 - Imported a wrong source? [Remove it from history](/settings/8-advanced-settings/#remove-source-history) in one go.
 
 ### Info & Sorting {#info-sorting}
@@ -82,7 +85,7 @@ Long press a track (or tap its menu) for more than you might expect:
 ### Desktop {#desktop-tips}
 
 - Rate the current track instantly with `Ctrl` + `Alt` + `1..9`, see all [Shortcuts](/features/shortcuts/).
-- Assign your own hotkeys for playback actions from About, then Shortcuts.
+- Assign your own system-wide hotkeys for playback actions from About, then Shortcuts.
 
 ---
 

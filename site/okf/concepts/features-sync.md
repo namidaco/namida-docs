@@ -4,10 +4,11 @@ title: Sync
 description: "Sync app data between your devices"
 source: "https://namidaco.github.io/namida_docs/features/sync/"
 path: /features/sync/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.660Z"
+  generated_at: "2026-08-29T01:43:41.445Z"
 ---
 ---
 title: "Sync"
@@ -34,7 +35,7 @@ You choose the data to send & receive:
 
 - Track stats, favourites and audio configs
 - Playlists & smart playlists, with their artworks
-- History, merged smartly without duplicated listens
+- History, merged without duplicated listens
 - Queues, including the currently playing queue with its position
 - Lyrics, artworks and thumbnails
 - Audio & video cache files
@@ -51,6 +52,8 @@ Newest change wins for most data, while history and playlists use their own merg
 ### Auto Sync {#auto-sync}
 
 Set an auto sync interval and let devices sync on their own whenever they see each other, with auto reconnect.
+
+---
 
 ### Related Settings {#related-settings}
 

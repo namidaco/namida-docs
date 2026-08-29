@@ -4,10 +4,11 @@ title: "Backup & Restore"
 description: "Backup your database and settings"
 source: "https://namidaco.github.io/namida_docs/settings/7-backup-restore-settings/"
 path: /settings/7-backup-restore-settings/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.675Z"
+  generated_at: "2026-08-29T01:43:41.456Z"
 ---
 ---
 title: "Backup & Restore"
@@ -56,7 +57,7 @@ Import your extended streaming history from a Spotify data export, zip or json f
 Import your listens from a ListenBrainz data export, zip or json files.
 
 ::: callout info
-Each import shows a small guide for getting the export file. You can limit the import to a time range, and optionally match against all tracks in your library for better results, which can be slower.
+Each import shows a small guide for getting the export file. You can limit the import to a time range, and optionally add all matched tracks per entry (instead of just one).
 :::
 
 ---

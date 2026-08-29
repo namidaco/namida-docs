@@ -50,7 +50,9 @@ Setting a rating writes it to the file tags of the current track.
 
 ### Custom Hotkeys {#custom-hotkeys}
 
-The full list also lives in the app, under About then Shortcuts. From there you can record your own hotkeys for playback actions like play/pause, next/previous, seek and volume.
+The shortcuts above only work when the app is focused (app-wide). You can set system-wide shortcuts by pressing shortcut icon at the very top (or by going to Settings -> About -> Shortcuts). From there you can record your own hotkeys for playback actions like play/pause, next/previous, seek and volume, etc...
+
+---
 
 ### Related Settings {#related-settings}
 

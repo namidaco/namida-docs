@@ -4,10 +4,11 @@ title: Indexer
 description: "Manage your music Library"
 source: "https://namidaco.github.io/namida_docs/settings/2-indexer-settings/"
 path: /settings/2-indexer-settings/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.670Z"
+  generated_at: "2026-08-29T01:43:41.452Z"
 ---
 ---
 title: "Indexer"
@@ -21,8 +22,6 @@ Controls how Namida finds and reads your music files. The library is folders bas
 ### List of Folders {#folders-to-scan}
 
 The folders that Namida scans for music. You can add local folders, or a media server (Subsonic, Jellyfin, WebDAV, SMB) to index it like a normal folder, see [Media Servers](/features/media-servers/).
-
-Each folder can be set to index audio, videos or both.
 
 ### Excluded Folders {#excluded-folders}
 
@@ -38,7 +37,7 @@ Skips folders that contain a `.nomedia` file.
 
 ### Extract feat. Artists {#extract-feat-artists}
 
-Extracts (feat. X) and (ft. X) artists from the title, as a new artist entry. You will find the featured artists in the artists tab.
+Extracts (feat. X) and (ft. X) artists from the title, as a new artist entry. You will find the featured artists in the [Artists tab](/pages/library/#artists).
 
 ### Enable Artwork Cache {#artwork-cache}
 
@@ -50,11 +49,11 @@ Saves one artwork per album instead of one per track, saves storage.
 
 ### Unique Artwork Hash {#unique-artwork-hash}
 
-Identifies artworks by their content, prevents duplicated artworks even when files differ.
+Identifies artworks by their track's full path instead of just filename. Enable this if you see wrong duplicated artworks.
 
 ### Album Identifiers {#album-identifiers}
 
-Choose which fields identify an album. By default the album name alone, you can add album artist or year to separate albums that share the same name.
+Choose which fields identify an album. By default the Album name + Album's Artist name, you can add Year, MusicBrainz Album ID or MusicBrainz Album Artist ID to separate albums that share the same name.
 
 ### Artists & Genres Separators {#separators}
 

@@ -23,7 +23,7 @@ You choose the data to send & receive:
 
 - Track stats, favourites and audio configs
 - Playlists & smart playlists, with their artworks
-- History, merged smartly without duplicated listens
+- History, merged without duplicated listens
 - Queues, including the currently playing queue with its position
 - Lyrics, artworks and thumbnails
 - Audio & video cache files
@@ -40,6 +40,8 @@ Newest change wins for most data, while history and playlists use their own merg
 ### Auto Sync {#auto-sync}
 
 Set an auto sync interval and let devices sync on their own whenever they see each other, with auto reconnect.
+
+---
 
 ### Related Settings {#related-settings}
 

@@ -4,10 +4,11 @@ title: FAQ
 description: "Frequently Asked Questions"
 source: "https://namidaco.github.io/namida_docs/faq/"
 path: /faq/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.652Z"
+  generated_at: "2026-08-29T01:43:41.440Z"
 ---
 ---
 title: "FAQ"
@@ -25,7 +26,7 @@ description: "Frequently Asked Questions"
 - You can log in from Settings -> Youtube -> Manage your accounts -> Add account to access your playlists, like videos, etc.
 - For more info about these features: https://www.patreon.com/posts/namida-yt-112913142
 
-### Slow/Broken yt loading/downloads
+### Slow/Broken YouTube loading/downloads
 
 This can happen frequently when youtube pushes updates that break clients.
 Most YT issues are fixed asap in beta, try the latest beta from here: https://github.com/namidaco/namida-snapshots/releases
@@ -37,20 +38,20 @@ https://lrclib.net/
 ### Change Lyrics Source
 
 - Not possible directly.
-- You can select the LRC file (by long pressing the lyrics icon in the miniplayer -> add), or just edit tags and paste the lyrics in the lyrics section.
+- You can select the LRC file (by long pressing the lyrics icon in the miniplayer -> add), or just edit tags and paste the lyrics in the lyrics field.
 - You can also copy the LRC file and put it in the same directory as the song, it will appear as long as the filename is the same as the song's.
 - Make sure "Prioritize embedded lyrics" is enabled/disabled depending on where you generally put the lyrics.
 
 ### Is there a lastfm scrobble feature?
 
-No, and not planned. Use PanoScrobbler https://github.com/kawaiiDango/pano-scrobbler, it works with any player and has lots of features.
+No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works with any player and has lots of features.
 
 ### Is there a discord rich presence feature (RPC)?
 
 No, and not planned. Use:
 
-- Kizzy on android: https://github.com/dead8309/Kizzy
-- Music Presence on desktop: https://github.com/ungive/discord-music-presence
+- [Kizzy](https://github.com/dead8309/Kizzy) on android
+- [Music Presence](https://github.com/ungive/discord-music-presence) on desktop
 
 They work with any player.
 
@@ -64,8 +65,7 @@ Otherwise use [Equalizer314](https://f-droid.org/en/packages/com.bearinmind.equa
 ### Spotify Support
 
 Not planned.
-Importing spotify history was added recently [in beta](https://github.com/namidaco/namida-snapshots/releases),
-but that's all.
+Importing spotify history was added recently [in beta](https://github.com/namidaco/namida-snapshots/releases), but that's all.
 
 The reason is simply that spotify is notorious for blocking any attempt at unofficial clients. Even if Namida implements that, it will simply be hit by a DMCA and no longer have support.
 

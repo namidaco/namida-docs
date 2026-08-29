@@ -4,10 +4,11 @@ title: Extras
 description: "Extra settings to fine-tune your experience"
 source: "https://namidaco.github.io/namida_docs/settings/6-extras-settings/"
 path: /settings/6-extras-settings/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.674Z"
+  generated_at: "2026-08-29T01:43:41.455Z"
 ---
 ---
 title: "Extras"
@@ -20,7 +21,7 @@ Library tabs, search, lyrics and other options.
 
 ### Use Collapsed Setting Tiles {#collapsed-tiles}
 
-Show settings sections as a compact list instead of expanded cards.
+Show settings sections in a single list instead of each in a subpage.
 
 ### Enable Bottom Navigation Bar {#bottom-nav-bar}
 
@@ -34,7 +35,7 @@ Keep the video playing in a small floating window when leaving the app.
 
 ### Floating Action Button {#fab}
 
-Choose what the floating button does, like search or shuffle, or hide it.
+Choose what the floating button does, like search, play or shuffle, or hide it.
 
 ### Default Library Tab {#default-library-tab}
 
@@ -93,6 +94,10 @@ Allows pasting links and texts inside the searchbar on the go.
 
 Vibration or haptic feedback for some actions, or none.
 
+::: callout info
+Vibration/Haptic feedback is not for everything, only selective actions, like: Miniplayer expanding, seek magnet (when seeking near the starting edge), seek cancel (when swiping up), tapping duration in video description, executing track swipe action, long press play next/play last, long press folder menu (opens all tracks inside recursively), rebuilding queue without changing item playing.
+:::
+
 ### Extract All Color Palettes {#extract-palettes}
 
 Extracts colors for the whole library at once instead of on play, used by [Auto Coloring](/settings/1-theme-settings/#auto-coloring).
@@ -106,10 +111,10 @@ Hidden experimental options, opened by pressing the flag icon at the top of the 
 - `GRADIENT_TILES_AND_CARDS`, gradient backgrounds for tiles and cards.
 - `MEDIA_WAVE_HAPTIC`, haptics that follow the audio.
 - `SHOW_DESKTOP_TITLE_BAR` & `DESKTOP_TITLE_BAR_ICONS_TYPE`, title bar look on desktop.
-- `YT_STYLE_PLAYER_BUTTON_SWITCHER`, youtube style play/pause switching.
-- `CUSTOM_EQ_PACKAGE`, open a custom equalizer app instead of the built-in one.
+- `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between local style player and youtube style player.
+- `CUSTOM_EQ_PACKAGE`, open a custom equalizer app instead of the system built-in one.
 - `VISUAL_TO_AUDIO_DELAY`, offset visuals to compensate audio latency.
-- `TIME_CAPSULE_YEARS`, years range used by Lost Memories.
+- `TIME_CAPSULE_YEARS`, travel back in time, or into the future.
 - `PREFERRED_SEARCH_TAB`, the tab search opens on.
 
 ::: callout info

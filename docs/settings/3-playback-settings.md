@@ -59,7 +59,7 @@ Choose what opens: the app, the miniplayer or the queue.
 
 ### Dismissible Miniplayer {#dismissible-miniplayer}
 
-Swipe the miniplayer away to stop playback.
+Swipe the miniplayer away to stop playback and clear queue.
 
 ### Normalize Audio {#normalize-audio}
 
@@ -73,7 +73,8 @@ Skips silent parts of the audio.
 
 ### Gapless Playback {#gapless-playback}
 
-Removes the small gap between tracks.
+Removes the small loading delay between tracks, Useful for some albums or for those who can't wait 0.067 seconds between tracks.
+Works by prefetching the next track. This is a beta feature.
 
 ### Crossfade {#crossfade}
 

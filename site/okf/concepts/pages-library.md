@@ -4,10 +4,11 @@ title: Library
 description: "The main library pages"
 source: "https://namidaco.github.io/namida_docs/pages/library/"
 path: /pages/library/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.666Z"
+  generated_at: "2026-08-29T01:43:41.449Z"
 ---
 ---
 title: "Library"
@@ -71,6 +72,8 @@ Browse tracks grouped by the moods, tags and ratings you assign. Assign them fro
 [`⚙️ Search Settings ↗`](/settings/6-extras-settings/#filter-tracks-by)
 
 Global search across your library. You choose which fields it looks into, title, artist, album, filename, even lyrics. Playing from search supports play modes, selected track only, search results, album, first artist or first genre.
+
+---
 
 ### Related Settings {#related-settings}
 

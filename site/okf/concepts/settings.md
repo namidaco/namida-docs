@@ -4,10 +4,11 @@ title: Settings
 description: "Explanation for in-app settings"
 source: "https://namidaco.github.io/namida_docs/settings/"
 path: /settings/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.676Z"
+  generated_at: "2026-08-29T01:43:41.457Z"
 ---
 ---
 title: "Settings"

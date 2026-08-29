@@ -4,10 +4,11 @@ title: "Playlists & History"
 description: "Flexible playlists and a reliable history system"
 source: "https://namidaco.github.io/namida_docs/features/playlists-history/"
 path: /features/playlists-history/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.658Z"
+  generated_at: "2026-08-29T01:43:41.444Z"
 ---
 ---
 title: "Playlists & History"
@@ -22,7 +23,12 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
 
 - M3U playlists, import them natively or keep them synced with the original M3U file, so changes made in Namida reach other apps too. Any playlist can be exported as M3U.
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
-- Custom order, drag tracks to arrange them your way. If a playlist has active sorters, disable them first to reorder manually.
+- Custom order for playlists, Press "edit icon" at top to enable reordering.
+- Custom order for playlist tracks, Press "lock icon" at top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
+
+::: callout warning
+Sorting tracks by a property means your custom order will be lost. you should see a warning and approval is required before applying the new sort.
+:::
 
 ### Smart Playlists {#smart-playlists}
 
@@ -35,6 +41,8 @@ Playlists built from rules instead of manual picking, they update themselves as 
 A reliable and flexible history system. You specify the minimum seconds or percentage to count a listen, and it can be easily modified, manipulated and imported.
 
 Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range.
+
+[`History Tips ↗`](/tips#history-tips)
 
 ### Most Played {#most-played}
 
@@ -53,6 +61,8 @@ Generate tracks related to the current one, typically the ones you often listene
 [`⚙️ Import Settings ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
 Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history.
+
+---
 
 ### Related Settings {#related-settings}
 

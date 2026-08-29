@@ -4,10 +4,11 @@ title: Playback
 description: "Audio, video and queue behavior"
 source: "https://namidaco.github.io/namida_docs/settings/3-playback-settings/"
 path: /settings/3-playback-settings/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.671Z"
+  generated_at: "2026-08-29T01:43:41.453Z"
 ---
 ---
 title: "Playback"
@@ -70,7 +71,7 @@ Choose what opens: the app, the miniplayer or the queue.
 
 ### Dismissible Miniplayer {#dismissible-miniplayer}
 
-Swipe the miniplayer away to stop playback.
+Swipe the miniplayer away to stop playback and clear queue.
 
 ### Normalize Audio {#normalize-audio}
 
@@ -84,7 +85,8 @@ Skips silent parts of the audio.
 
 ### Gapless Playback {#gapless-playback}
 
-Removes the small gap between tracks.
+Removes the small loading delay between tracks, Useful for some albums or for those who can't wait 0.067 seconds between tracks.
+Works by prefetching the next track. This is a beta feature.
 
 ### Crossfade {#crossfade}
 

@@ -4,10 +4,11 @@ title: Features
 description: "Features in Namida"
 source: "https://namidaco.github.io/namida_docs/features/"
 path: /features/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.653Z"
+  generated_at: "2026-08-29T01:43:41.440Z"
 ---
 ---
 title: "Features"

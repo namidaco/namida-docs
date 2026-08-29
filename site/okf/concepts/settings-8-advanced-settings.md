@@ -4,10 +4,11 @@ title: Advanced
 description: "Advanced Settings, don't touch"
 source: "https://namidaco.github.io/namida_docs/settings/8-advanced-settings/"
 path: /settings/8-advanced-settings/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.676Z"
+  generated_at: "2026-08-29T01:43:41.456Z"
 ---
 ---
 title: "Advanced"
@@ -29,6 +30,8 @@ Rebuilds the local videos index.
 ### Remove Source from History {#remove-source-history}
 
 Remove all listens that came from a specific source (like an import) from your history.
+
+[`⚙️ History Import ↗`](/features/playlists-history/#import)
 
 ### Update Directory Path {#update-directory-path}
 

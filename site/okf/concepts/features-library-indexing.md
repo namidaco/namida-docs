@@ -4,10 +4,11 @@ title: "Library & Indexing"
 description: "A powerful folders based music library"
 source: "https://namidaco.github.io/namida_docs/features/library-indexing/"
 path: /features/library-indexing/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.654Z"
+  generated_at: "2026-08-29T01:43:41.441Z"
 ---
 ---
 title: "Library & Indexing"
@@ -55,6 +56,8 @@ Sort by almost any property of the track or the album. Most pages allow picking 
 ### Media Servers {#media-servers}
 
 Your library is not limited to local files, servers can be indexed too, see [Media Servers](/features/media-servers/).
+
+---
 
 ### Related Settings {#related-settings}
 

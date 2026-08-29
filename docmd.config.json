@@ -34,11 +34,20 @@
       "branding": false
     }
   },
+  "versions": {
+    "current": "v6.5.0",
+    "all": [{ "id": "v6.5.0", "dir": "docs", "label": "v6.5.0" }]
+  },
   "theme": {
     "name": "summer",
     "template": "summer",
     "appearance": "system",
-    "codeHighlight": true
+    "codeHighlight": true,
+    "copyWidgets": {
+      "enabled": false,
+      "raw": false,
+      "context": false
+    }
   },
   "minify": true,
   "autoTitleFromH1": true,

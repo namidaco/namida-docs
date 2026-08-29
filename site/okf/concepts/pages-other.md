@@ -4,10 +4,11 @@ title: "Other Pages"
 description: "Stats, Sync Manager and About"
 source: "https://namidaco.github.io/namida_docs/pages/other/"
 path: /pages/other/
-updated: 2026-08-27
+version: v6.5.0
+updated: 2026-08-29
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-27T01:50:02.667Z"
+  generated_at: "2026-08-29T01:43:41.450Z"
 ---
 ---
 title: "Other Pages"

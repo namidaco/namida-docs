@@ -19,6 +19,8 @@ Rebuilds the local videos index.
 
 Remove all listens that came from a specific source (like an import) from your history.
 
+[`⚙️ History Import ↗`](/features/playlists-history/#import)
+
 ### Update Directory Path {#update-directory-path}
 
 Moved your music to a new folder? This updates all track paths from the old directory to the new one, keeping stats and listens.

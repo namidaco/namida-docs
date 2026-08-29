@@ -45,6 +45,8 @@ Sort by almost any property of the track or the album. Most pages allow picking 
 
 Your library is not limited to local files, servers can be indexed too, see [Media Servers](/features/media-servers/).
 
+---
+
 ### Related Settings {#related-settings}
 
 - [Indexer Settings](/settings/2-indexer-settings/)
