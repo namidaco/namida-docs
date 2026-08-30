@@ -1,6 +1,6 @@
 {
   "title": "Namida",
-  "url": "https://namidaco.github.io/namida_docs",
+  "url": "https://namidaco.github.io/namida-docs",
   "src": "docs",
   "out": "site",
   "engine": "js",
@@ -193,8 +193,35 @@
         }
       ]
     },
+    {
+      "title": "Guides",
+      "path": "/guides/",
+      "icon": "graduation-cap",
+      "children": [
+        {
+          "title": "Beginner",
+          "path": "/guides/beginner.md",
+          "icon": "sprout",
+          "external": false
+        },
+        {
+          "title": "Medium",
+          "path": "/guides/medium.md",
+          "icon": "trees",
+          "external": false
+        },
+        {
+          "title": "Namider",
+          "path": "/guides/namider.md",
+          "icon": "flame",
+          "external": false
+        }
+      ]
+    },
     { "title": "Tips & Tricks", "path": "/tips/", "icon": "lightbulb" },
     { "title": "FAQ", "path": "/faq/", "icon": "message-circle-question-mark" },
+    { "title": "Not Planned", "path": "/not-planned/", "icon": "ban" },
+    { "title": "Permissions", "path": "/permissions/", "icon": "shield-check" },
     {
       "title": "GitHub",
       "path": "https://github.com/namidaco/namida",
@@ -205,7 +232,19 @@
   "plugins": {
     "ai": {
       "assistant": true,
-      "projectId": "docmd_sxy4har0mt4u6z8j"
+      "projectId": "docmd_sxy4har0mt4u6z8j",
+      "greeting": "How can I help with these docs today?",
+      "placeholder": "Ask AI a question...",
+      "suggestions": [
+        "How do I get started?",
+        "Show configuration options",
+        "Explain key concepts"
+      ],
+      "contextLimit": 5,
+      "rateLimit": {
+        "maxRequests": 10,
+        "windowMs": 60000
+      }
     },
     "git": {
       "commitHistory": true,

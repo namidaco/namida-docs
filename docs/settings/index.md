@@ -8,7 +8,7 @@ description: "Explanation for in-app settings"
 Everything you can configure in Namida, in the same order as the in-app settings page.
 
 ::: callout info
-Some settings are only available on specific platforms or android versions. They are labeled like `Android 12+ only`.
+Some settings are only available on specific platforms or android versions. They are labeled like `💻 Android 12+ only`.
 :::
 
 ::: callout tip

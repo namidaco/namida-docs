@@ -2,13 +2,13 @@
 type: concept
 title: Indexer
 description: "Manage your music Library"
-source: "https://namidaco.github.io/namida_docs/settings/2-indexer-settings/"
+source: "https://namidaco.github.io/namida-docs/settings/2-indexer-settings/"
 path: /settings/2-indexer-settings/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.452Z"
+  generated_at: "2026-08-30T21:51:03.648Z"
 ---
 ---
 title: "Indexer"
@@ -73,12 +73,12 @@ Files smaller or shorter than these values will be skipped, useful for filtering
 
 ### Use Media Store {#use-media-store}
 
-`Android only`
+`💻 Android only`
 
 Uses the Android system index instead of Namida's own indexer. Instant indexing time, but some metadata tags will be missing, `.nomedia` is forcefully respected, and YouTube integration for local library will not work.
 
 ::: callout warning "Deprecated"
-This feature is removed as of v6.5.5. With the new tagger (`taglib`) being stable and fast, and with this option lacking critical aspect of Namida and many users reporting issues after manually enabling and forgetting it, It is no longer required to keep this feature.
+This feature is removed as of v6.5.5. With the new tagger (`taglib`) being stable and fast, and with this option lacking critical aspects of Namida, and many users reporting issues after manually enabling and forgetting it, it is no longer worth keeping.
 :::
 
 ### Include Videos {#include-videos}

@@ -2,13 +2,13 @@
 type: concept
 title: Theme
 description: "The overall vibe of your player"
-source: "https://namidaco.github.io/namida_docs/settings/1-theme-settings/"
+source: "https://namidaco.github.io/namida-docs/settings/1-theme-settings/"
 path: /settings/1-theme-settings/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.451Z"
+  generated_at: "2026-08-30T21:51:03.647Z"
 ---
 ---
 title: "Theme"
@@ -33,7 +33,7 @@ Might affect performance on low end devices. You can turn it off and set a [Defa
 
 ### Pick Colors from Device Wallpaper {#wallpaper-colors}
 
-`Android 12+ only`
+`💻 Android 12+ only`
 
 Pick colors from your device wallpaper instead of the artwork. Requires [Auto Coloring](#auto-coloring) to be on.
 

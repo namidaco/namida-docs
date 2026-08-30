@@ -2,13 +2,13 @@
 type: concept
 title: Playback
 description: "Audio, video and queue behavior"
-source: "https://namidaco.github.io/namida_docs/settings/3-playback-settings/"
+source: "https://namidaco.github.io/namida-docs/settings/3-playback-settings/"
 path: /settings/3-playback-settings/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.453Z"
+  generated_at: "2026-08-30T21:51:03.649Z"
 ---
 ---
 title: "Playback"
@@ -47,17 +47,17 @@ Never, when miniplayer is expanded, or when miniplayer is expanded and a video i
 
 ### Display Favourite Button in Notification {#fav-button-notification}
 
-`Android only`
+`💻 Android only`
 
 The notification thumbnail might get displaced on some devices.
 
 ### Display Stop Button in Notification {#stop-button-notification}
 
-`Android only`
+`💻 Android only`
 
 ### Display Artwork on Lockscreen {#artwork-lockscreen}
 
-`Android <= 12 only`
+`💻 Android <= 12 only`
 
 ### Kill Player After Dismissing App {#kill-player}
 
@@ -65,7 +65,7 @@ Stops playback completely when you swipe the app away.
 
 ### On Notification Tap {#on-notification-tap}
 
-`Android only`
+`💻 Android only`
 
 Choose what opens: the app, the miniplayer or the queue.
 
@@ -79,13 +79,13 @@ Normalizes volume by reading the replay gain tag, or the info provided by YouTub
 
 ### Skip Silence {#skip-silence}
 
-`Android only`
+`💻 Android only`
 
 Skips silent parts of the audio.
 
 ### Gapless Playback {#gapless-playback}
 
-Removes the small loading delay between tracks, Useful for some albums or for those who can't wait 0.067 seconds between tracks.
+Removes the small loading delay between tracks, useful for some albums or for those who can't wait 0.067 seconds between tracks.
 Works by prefetching the next track. This is a beta feature.
 
 ### Crossfade {#crossfade}
@@ -110,13 +110,13 @@ Pause playback or do nothing when volume reaches zero, with an option to resume 
 
 ### On Interruption {#on-interruption}
 
-`Android only`
+`💻 Android only`
 
 Control what happens on calls and notifications: pause, duck (lower the volume) or do nothing, and whether to resume after the interruption ends.
 
 ### On Device Connect {#on-device-connect}
 
-`Android only`
+`💻 Android only`
 
 Resume playback when a wired or wireless device is connected, if playback was paused by disconnecting it.
 

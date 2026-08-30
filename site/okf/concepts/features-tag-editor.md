@@ -2,13 +2,13 @@
 type: concept
 title: "Tag Editor"
 description: "Edit your music tags right inside Namida"
-source: "https://namidaco.github.io/namida_docs/features/tag-editor/"
+source: "https://namidaco.github.io/namida-docs/features/tag-editor/"
 path: /features/tag-editor/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.446Z"
+  generated_at: "2026-08-30T21:51:03.634Z"
 ---
 ---
 title: "Tag Editor"
@@ -27,7 +27,7 @@ Edit title, artist, album, genre, year, lyrics, comment, rating, moods and more,
 
 Select multiple tracks and edit them at once, unchanged fields remain untouched. Useful for fixing a whole album or artist.
 
-[`Selection Tips ↗`](/tips#selection)
+[`📄 Selection Tips ↗`](/tips/#selection)
 
 ### Auto Extract from Filename {#auto-extract}
 
@@ -42,8 +42,8 @@ WEBM format does not support tag editing.
 
 ### Related Settings {#related-settings}
 
-- [Indexer, Separators](/settings/2-indexer-settings/#separators)
-- [Indexer Settings](/settings/2-indexer-settings/)
+- [⚙️ Indexer, Separators](/settings/2-indexer-settings/#separators)
+- [⚙️ Indexer Settings](/settings/2-indexer-settings/)
 
 ---
 

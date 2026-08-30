@@ -14,6 +14,9 @@ npx @docmd/core dev
 docs/
 ├── index.md          # home page
 ├── tips.md           # tips & tricks
+├── permissions.md    # permissions & why
+├── not-planned.md    # features that will not be added
+├── guides/           # step by step guides by level
 ├── faq.md            # frequently asked questions
 ├── features/         # one file per feature
 ├── pages/            # tour of in-app pages

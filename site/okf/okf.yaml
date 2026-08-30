@@ -3,14 +3,15 @@ bundle:
   name: namida
   title: Namida
   description: ""
-  url: "https://namidaco.github.io/namida_docs"
+  url: "https://namidaco.github.io/namida-docs"
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.458Z"
+  generated_at: "2026-08-30T21:51:03.658Z"
   default_type: concept
 stats:
-  concepts: 25
+  concepts: 31
   by_type:
-    concept: 25
+    concept: 27
+    guide: 4
   locales: 
   versions:
     - v6.5.0
@@ -95,11 +96,51 @@ concepts:
     locale: ""
     version: v6.5.0
     tags: 
+  - id: guides-beginner
+    type: guide
+    title: "Beginner Guides"
+    path: /guides/beginner/
+    file: concepts/guides-beginner.md
+    locale: ""
+    version: v6.5.0
+    tags: 
+  - id: guides
+    type: guide
+    title: Guides
+    path: /guides/
+    file: concepts/guides.md
+    locale: ""
+    version: v6.5.0
+    tags: 
+  - id: guides-medium
+    type: guide
+    title: "Medium Guides"
+    path: /guides/medium/
+    file: concepts/guides-medium.md
+    locale: ""
+    version: v6.5.0
+    tags: 
+  - id: guides-namider
+    type: guide
+    title: "Namider Guides"
+    path: /guides/namider/
+    file: concepts/guides-namider.md
+    locale: ""
+    version: v6.5.0
+    tags: 
   - id: root
     type: concept
     title: Welcome
     path: /
     file: concepts/root.md
+    locale: ""
+    version: v6.5.0
+    tags: 
+  - id: not-planned
+    type: concept
+    title: "Not Planned"
+    path: /not-planned/
+    file: concepts/not-planned.md
     locale: ""
     version: v6.5.0
     tags: 
@@ -132,6 +173,14 @@ concepts:
     title: "YouTube Pages"
     path: /pages/youtube/
     file: concepts/pages-youtube.md
+    locale: ""
+    version: v6.5.0
+    tags: 
+  - id: permissions
+    type: concept
+    title: Permissions
+    path: /permissions/
+    file: concepts/permissions.md
     locale: ""
     version: v6.5.0
     tags: 

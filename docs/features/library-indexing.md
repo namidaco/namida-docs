@@ -9,33 +9,23 @@ Namida builds your library from the folders you choose, with a powerful indexer 
 
 ### Folders Based Library {#folders}
 
-[`⚙️ List of Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
-
-Add the folders you want, exclude the ones you don't. The folders tab lets you browse your library exactly like your file manager, with support for `cover.jpg` style images and `.info.txt` files for displaying small info.
+Add the folders you want, exclude the ones you don't. The folders tab lets you browse your library exactly like your file manager, with support for `cover.jpg` style images and `.info.txt` files for displaying small info. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
 ### Artists & Genres Separators {#separators}
 
-[`⚙️ Separators ↗`](/settings/2-indexer-settings/#separators)
-
-Tracks with multiple artists or genres in one tag get split into separate entries, you control the separator symbols and the blacklisted words. Featured artists in titles can also get their own entry.
+Tracks with multiple artists or genres in one tag get split into separate entries, you control the separator symbols and the blacklisted words. Featured artists in titles can also get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) [`📒 Blacklist Guide ↗`](/guides/beginner/#separator-blacklist)
 
 ### Filtering {#filtering}
 
-[`⚙️ Indexer Settings ↗`](/settings/2-indexer-settings/)
-
-Prevent duplicated tracks, set minimum file size & duration, blacklist extensions and respect `.nomedia`.
+Prevent duplicated tracks, set minimum file size & duration, blacklist extensions and respect `.nomedia`. [`⚙️ Configure Indexer ↗`](/settings/2-indexer-settings/)
 
 ### Videos {#videos}
 
-[`⚙️ Include Videos ↗`](/settings/2-indexer-settings/#include-videos)
-
-Full video library indexing & playback, videos can be played independently, with a dedicated videos folder view.
+Full video library indexing & playback, videos can be played independently, with a dedicated videos folder view. [`⚙️ Configure Include Videos ↗`](/settings/2-indexer-settings/#include-videos)
 
 ### Missing Tracks {#missing-tracks}
 
-[`⚙️ Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
-
-If you moved or renamed files outside Namida, the missing tracks page helps you relink them without losing stats and listens. Whole directories can be updated at once with [Update Directory Path](/settings/8-advanced-settings/#update-directory-path).
+If you moved or renamed files outside Namida, the missing tracks page helps you relink them without losing stats and listens. Whole directories can be updated at once with [`⚙️ Open Update Directory Path ↗`](/settings/8-advanced-settings/#update-directory-path). [`⚙️ Configure Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
 
 ### Sorting & Grouping {#sorting}
 
@@ -43,14 +33,14 @@ Sort by almost any property of the track or the album. Most pages allow picking 
 
 ### Media Servers {#media-servers}
 
-Your library is not limited to local files, servers can be indexed too, see [Media Servers](/features/media-servers/).
+Your library is not limited to local files, servers can be indexed too, see the [`🎉 Media Servers feature ↗`](/features/media-servers/).
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Indexer Settings](/settings/2-indexer-settings/)
-- [Advanced, Update Directory Path](/settings/8-advanced-settings/#update-directory-path)
+- [⚙️ Indexer Settings](/settings/2-indexer-settings/)
+- [⚙️ Advanced, Update Directory Path](/settings/8-advanced-settings/#update-directory-path)
 
 ---
 

@@ -49,9 +49,11 @@ Show the dislike count on videos, data is provided by [returnyoutubedislike.com]
 
 ### Downloads {#downloads}
 
-- Downloads Metadata tags, extract artist, title & album from video info by default.
+- Downloads Metadata tags, controls how tags are filled by default:
+  - If disabled: the channel name becomes the artist, and the video title becomes the title.
+  - If enabled: the video title is split into "Artist - Title" (Artist falls back to the channel name if splitting failed), the channel is also added as the album, and the genre is set to "Nightcore" if the title contains it.
 - Default Download Location.
-- Download notifications `Windows+Linux only`.
+- Download notifications `💻 Windows+Linux only`.
 
 ### On Opening Youtube Link {#on-opening-youtube-link}
 

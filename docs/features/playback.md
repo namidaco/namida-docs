@@ -9,8 +9,6 @@ Everything you expect from a music player, plus some extras.
 
 ### Queue System {#queue}
 
-[`⚙️ Playback Settings ↗`](/settings/3-playback-settings/)
-
 A persistent and reliable queue system, your sessions are saved for later usage. Also:
 
 - Repeat modes: all, none, one, and repeat for N times before playing the next track.
@@ -23,71 +21,65 @@ The queue bottom row packs more than it looks:
 - The clear button removes duplicates, everything before, everything after, or all except the current track.
 - The add button generates and adds tracks:
   - Local: Random, Time Range, Moods, Ratings, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended
-  - YouTube: Random, Time Range, Mix, Similar Release Date, Similar Discover Date, and, Similar Time Range Recommended.
+  - YouTube: Random, Time Range, Mix, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended.
 - A jump button scrolls right to the current track.
 - Tap shuffle to shuffle, long press it to switch between Shuffle Next and Shuffle All.
 
+[`⚙️ Configure Playback ↗`](/settings/3-playback-settings/)
+
 ### Audio Effects {#effects}
 
-[`⚙️ Playback Settings ↗`](/settings/3-playback-settings/#crossfade)
+Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equalizer with Loudness Enhancer. [`⚙️ Configure Effects ↗`](/settings/3-playback-settings/#crossfade)
 
-Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equalizer with Loudness Enhancer.
+Audio configs can also be set per item, check the Sound Control page by pressing the audio effects icon in the player.
 
 ### Replay Gain {#replay-gain}
 
-[`⚙️ Normalize Audio ↗`](/settings/3-playback-settings/#normalize-audio)
-
-Normalizes volume across tracks by reading the replay gain tag, and the loudness info provided by YouTube for videos.
+Normalizes volume across tracks by reading the replay gain tag, and the loudness info provided by YouTube for videos. [`⚙️ Configure Normalize Audio ↗`](/settings/3-playback-settings/#normalize-audio)
 
 ### Pausing Scenarios {#pausing}
 
-[`⚙️ Playback Settings ↗`](/settings/3-playback-settings/#on-interruption)
-
-Control exactly what happens on calls, notifications, volume 0 and device disconnect, and when to resume.
+Control exactly what happens on calls, notifications, volume 0 and device disconnect, and when to resume. [`⚙️ Configure Pausing ↗`](/settings/3-playback-settings/#on-interruption)
 
 ### Video Integration {#video}
 
-[`⚙️ Video Playback ↗`](/settings/3-playback-settings/#video-playback)
-
-Namida can play videos related to your music. Videos are found locally by filename matching, or fetched from YouTube using the link in the track's comment tag or filename.
+Namida can play videos related to your music. Videos are found locally by filename matching, or fetched from YouTube using the link in the track's comment tag or filename. [`⚙️ Configure Video Playback ↗`](/settings/3-playback-settings/#video-playback) [`📒 Link a YouTube Video Guide ↗`](/guides/medium/#link-yt-video) [`📒 Link a Local Video Guide ↗`](/guides/medium/#link-local-video)
 
 ### Lyrics {#lyrics}
 
-[`⚙️ Lyrics Settings ↗`](/settings/6-extras-settings/#lyrics)
-
-Auto fetching & displaying, synced & plain, with support for word synced lrc/ttml files. Long press the lyrics to enter fullscreen.
+Auto fetching & displaying, synced & plain, with support for word synced lrc/ttml files. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
 
 ### Gestures {#gestures}
 
-[`⚙️ Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization) [`⚙️ Track Tile Customization ↗`](/settings/4-customization-settings/#track-tile)
-
 - Swipe the miniplayer left or right to change tracks, up and down to expand or minimize, and swipe down to dismiss when [Dismissible Miniplayer](/settings/3-playback-settings/#dismissible-miniplayer) is on.
-- Artwork tap and long press actions are configurable, and double tap can toggle lyrics.
-- Swipe left/right on a track or a video to execute actions (ex: play next, open info, go to album, edit tag, etc..)
-- More hidden gestures in [Tips & Tricks](/tips/).
+- Artwork tap and long press actions are configurable, and double tap can toggle lyrics. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization)
+- Swipe left/right on a track or a video to execute actions (ex: play next, open info, go to album, edit tags, etc..) [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile)
+- While seeking with the seekbar, swipe upwards to cancel the seek.
+- Seeking very close to the starting edge snaps to the very start.
+- Zoom in on the lyrics to change the font size.
+- Zoom in on the video to enter fullscreen.
+- More hidden gestures in [`📄 Tips & Tricks ↗`](/tips/).
 
 ### Track Menu {#track-menu}
 
-Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder. See [Tips & Tricks](/tips/#track-menu) for the full list.
+Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder. See [`📄 Tips & Tricks ↗`](/tips/#track-menu) for the full list.
 
 ### Sleep Timer {#sleep-timer}
 
 Stop playback after a number of tracks or minutes.
-Sleep Timer can be found in app side bar menu.
+Sleep Timer can be found in the app side menu.
 
 ### Waveform Seekbar {#waveform}
 
-[`⚙️ Waveform Bars Count ↗`](/settings/4-customization-settings/#miniplayer-customization)
-
-The seekbar is the actual waveform of the track.
+The seekbar is the actual waveform of the track. [`⚙️ Configure Waveform Bars ↗`](/settings/4-customization-settings/#miniplayer-customization)
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Playback Settings](/settings/3-playback-settings/)
-- [Extras, Lyrics](/settings/6-extras-settings/#lyrics)
-- [Customizations, Miniplayer](/settings/4-customization-settings/#miniplayer-customization)
+- [⚙️ Playback Settings](/settings/3-playback-settings/)
+- [⚙️ Extras, Lyrics](/settings/6-extras-settings/#lyrics)
+- [⚙️ Customizations, Miniplayer](/settings/4-customization-settings/#miniplayer-customization)
 
 ---
 

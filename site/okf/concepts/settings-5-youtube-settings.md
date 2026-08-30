@@ -2,13 +2,13 @@
 type: concept
 title: Youtube
 description: "Customize Youtube experience"
-source: "https://namidaco.github.io/namida_docs/settings/5-youtube-settings/"
+source: "https://namidaco.github.io/namida-docs/settings/5-youtube-settings/"
 path: /settings/5-youtube-settings/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.454Z"
+  generated_at: "2026-08-30T21:51:03.651Z"
 ---
 ---
 title: "Youtube"
@@ -61,9 +61,11 @@ Show the dislike count on videos, data is provided by [returnyoutubedislike.com]
 
 ### Downloads {#downloads}
 
-- Downloads Metadata tags, extract artist, title & album from video info by default.
+- Downloads Metadata tags, controls how tags are filled by default:
+  - If disabled: the channel name becomes the artist, and the video title becomes the title.
+  - If enabled: the video title is split into "Artist - Title" (Artist falls back to the channel name if splitting failed), the channel is also added as the album, and the genre is set to "Nightcore" if the title contains it.
 - Default Download Location.
-- Download notifications `Windows+Linux only`.
+- Download notifications `💻 Windows+Linux only`.
 
 ### On Opening Youtube Link {#on-opening-youtube-link}
 

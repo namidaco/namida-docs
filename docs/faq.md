@@ -32,35 +32,19 @@ https://lrclib.net/
 
 ### Is there a lastfm scrobble feature?
 
-No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works with any player and has lots of features.
+No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), see [Not Planned](/not-planned/#lastfm).
 
 ### Is there a discord rich presence feature (RPC)?
 
-No, and not planned. Use:
-
-- [Kizzy](https://github.com/dead8309/Kizzy) on android
-- [Music Presence](https://github.com/ungive/discord-music-presence) on desktop
-
-They work with any player.
+No, and not planned. There are apps that work with any player, see [Not Planned](/not-planned/#discord-rpc).
 
 ### Equalizer issues or missing feature
 
-Namida's equalizer is simple and uses native android effects, we always recommend using system wide EQ apps for a better experience and more features.
-Most extra features require writing a custom audio engine, or making sure every android version supports the effect, none of these are planned.
-If you have root, you can use JamesDSP or Viper4Android.
-Otherwise use [Equalizer314](https://f-droid.org/en/packages/com.bearinmind.equalizer314) or [RootlessJamesDSP](https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp).
+Namida's equalizer is simple by design, system wide EQ apps are recommended instead, see [Not Planned](/not-planned/#equalizer) for the reasoning and app suggestions.
 
 ### Spotify Support
 
-Not planned.
-Importing spotify history was added recently [in beta](https://github.com/namidaco/namida-snapshots/releases), but that's all.
-
-The reason is simply that spotify is notorious for blocking any attempt at unofficial clients. Even if Namida implements that, it will simply be hit by a DMCA and no longer have support.
-
-What you can do as an alternative is convert your spotify playlists to YTM, then log in inside Namida to view your YT playlists.
-We are barely keeping YT support alive as is.
-
-Alternatives: [spotiflac](https://github.com/spotbye/SpotiFLAC) or [other tools like it](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/audio/#wiki_.25B7_audio_ripping_tools)
+Not planned. Importing your Spotify history is supported, but that's all. See [Not Planned](/not-planned/#spotify) for the reasoning and alternatives.
 
 ### Some FLAC files have no sound at some point
 

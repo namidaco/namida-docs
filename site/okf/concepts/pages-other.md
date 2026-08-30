@@ -2,13 +2,13 @@
 type: concept
 title: "Other Pages"
 description: "Stats, Sync Manager and About"
-source: "https://namidaco.github.io/namida_docs/pages/other/"
+source: "https://namidaco.github.io/namida-docs/pages/other/"
 path: /pages/other/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.450Z"
+  generated_at: "2026-08-30T21:51:03.644Z"
 ---
 ---
 title: "Other Pages"
@@ -23,13 +23,11 @@ Some info about your library: counts of tracks, albums, artists, genres and styl
 
 ### Sync Manager {#sync-manager}
 
-[`⚙️ Sync ↗`](/features/sync/)
-
-Where device sync happens: start the server, discover and connect devices, choose the data to send & receive, and watch recent actions. See the [Sync feature](/features/sync/).
+Where device sync happens: start the server, discover and connect devices, choose the data to send & receive, and watch recent actions. [`🎉 Sync feature ↗`](/features/sync/) [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
 
 ### About {#about}
 
-App version & changelog, socials, [shortcuts](/features/shortcuts/), licenses, share logs, and links for translating, donating and reporting issues.
+App version & changelog, socials, licenses, share logs, and links for translating, donating and reporting issues. [`🎉 Shortcuts feature ↗`](/features/shortcuts/) [`📄 About Tips ↗`](/tips/#about-tips)
 
 ---
 

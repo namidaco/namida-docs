@@ -2,13 +2,13 @@
 type: concept
 title: Settings
 description: "Explanation for in-app settings"
-source: "https://namidaco.github.io/namida_docs/settings/"
+source: "https://namidaco.github.io/namida-docs/settings/"
 path: /settings/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.457Z"
+  generated_at: "2026-08-30T21:51:03.656Z"
 ---
 ---
 title: "Settings"
@@ -20,7 +20,7 @@ description: "Explanation for in-app settings"
 Everything you can configure in Namida, in the same order as the in-app settings page.
 
 ::: callout info
-Some settings are only available on specific platforms or android versions. They are labeled like `Android 12+ only`.
+Some settings are only available on specific platforms or android versions. They are labeled like `💻 Android 12+ only`.
 :::
 
 ::: callout tip

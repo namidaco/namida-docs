@@ -4,7 +4,7 @@
 
 ---
 
-## [FAQ](https://namidaco.github.io/namida_docs/faq/)
+## [FAQ](https://namidaco.github.io/namida-docs/faq/)
 
 ---
 title: "FAQ"
@@ -40,35 +40,19 @@ https://lrclib.net/
 
 ### Is there a lastfm scrobble feature?
 
-No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works with any player and has lots of features.
+No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), see [Not Planned](/not-planned/#lastfm).
 
 ### Is there a discord rich presence feature (RPC)?
 
-No, and not planned. Use:
-
-- [Kizzy](https://github.com/dead8309/Kizzy) on android
-- [Music Presence](https://github.com/ungive/discord-music-presence) on desktop
-
-They work with any player.
+No, and not planned. There are apps that work with any player, see [Not Planned](/not-planned/#discord-rpc).
 
 ### Equalizer issues or missing feature
 
-Namida's equalizer is simple and uses native android effects, we always recommend using system wide EQ apps for a better experience and more features.
-Most extra features require writing a custom audio engine, or making sure every android version supports the effect, none of these are planned.
-If you have root, you can use JamesDSP or Viper4Android.
-Otherwise use [Equalizer314](https://f-droid.org/en/packages/com.bearinmind.equalizer314) or [RootlessJamesDSP](https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp).
+Namida's equalizer is simple by design, system wide EQ apps are recommended instead, see [Not Planned](/not-planned/#equalizer) for the reasoning and app suggestions.
 
 ### Spotify Support
 
-Not planned.
-Importing spotify history was added recently [in beta](https://github.com/namidaco/namida-snapshots/releases), but that's all.
-
-The reason is simply that spotify is notorious for blocking any attempt at unofficial clients. Even if Namida implements that, it will simply be hit by a DMCA and no longer have support.
-
-What you can do as an alternative is convert your spotify playlists to YTM, then log in inside Namida to view your YT playlists.
-We are barely keeping YT support alive as is.
-
-Alternatives: [spotiflac](https://github.com/spotbye/SpotiFLAC) or [other tools like it](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/audio/#wiki_.25B7_audio_ripping_tools)
+Not planned. Importing your Spotify history is supported, but that's all. See [Not Planned](/not-planned/#spotify) for the reasoning and alternatives.
 
 ### Some FLAC files have no sound at some point
 
@@ -81,7 +65,7 @@ ffmpeg -y -i "path/to/file.flac" -map 0 -c:a flac -compression_level 5 -c:v copy
 
 ---
 
-## [Features](https://namidaco.github.io/namida_docs/features/)
+## [Features](https://namidaco.github.io/namida-docs/features/)
 
 ---
 title: "Features"
@@ -114,7 +98,7 @@ Feature pages link to their related settings, look for the ↗ arrow.
 
 ---
 
-## [Library & Indexing](https://namidaco.github.io/namida_docs/features/library-indexing/)
+## [Library & Indexing](https://namidaco.github.io/namida-docs/features/library-indexing/)
 
 ---
 title: "Library & Indexing"
@@ -127,33 +111,23 @@ Namida builds your library from the folders you choose, with a powerful indexer 
 
 ### Folders Based Library {#folders}
 
-[`⚙️ List of Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
-
-Add the folders you want, exclude the ones you don't. The folders tab lets you browse your library exactly like your file manager, with support for `cover.jpg` style images and `.info.txt` files for displaying small info.
+Add the folders you want, exclude the ones you don't. The folders tab lets you browse your library exactly like your file manager, with support for `cover.jpg` style images and `.info.txt` files for displaying small info. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
 ### Artists & Genres Separators {#separators}
 
-[`⚙️ Separators ↗`](/settings/2-indexer-settings/#separators)
-
-Tracks with multiple artists or genres in one tag get split into separate entries, you control the separator symbols and the blacklisted words. Featured artists in titles can also get their own entry.
+Tracks with multiple artists or genres in one tag get split into separate entries, you control the separator symbols and the blacklisted words. Featured artists in titles can also get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) [`📒 Blacklist Guide ↗`](/guides/beginner/#separator-blacklist)
 
 ### Filtering {#filtering}
 
-[`⚙️ Indexer Settings ↗`](/settings/2-indexer-settings/)
-
-Prevent duplicated tracks, set minimum file size & duration, blacklist extensions and respect `.nomedia`.
+Prevent duplicated tracks, set minimum file size & duration, blacklist extensions and respect `.nomedia`. [`⚙️ Configure Indexer ↗`](/settings/2-indexer-settings/)
 
 ### Videos {#videos}
 
-[`⚙️ Include Videos ↗`](/settings/2-indexer-settings/#include-videos)
-
-Full video library indexing & playback, videos can be played independently, with a dedicated videos folder view.
+Full video library indexing & playback, videos can be played independently, with a dedicated videos folder view. [`⚙️ Configure Include Videos ↗`](/settings/2-indexer-settings/#include-videos)
 
 ### Missing Tracks {#missing-tracks}
 
-[`⚙️ Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
-
-If you moved or renamed files outside Namida, the missing tracks page helps you relink them without losing stats and listens. Whole directories can be updated at once with [Update Directory Path](/settings/8-advanced-settings/#update-directory-path).
+If you moved or renamed files outside Namida, the missing tracks page helps you relink them without losing stats and listens. Whole directories can be updated at once with [`⚙️ Open Update Directory Path ↗`](/settings/8-advanced-settings/#update-directory-path). [`⚙️ Configure Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
 
 ### Sorting & Grouping {#sorting}
 
@@ -161,14 +135,14 @@ Sort by almost any property of the track or the album. Most pages allow picking 
 
 ### Media Servers {#media-servers}
 
-Your library is not limited to local files, servers can be indexed too, see [Media Servers](/features/media-servers/).
+Your library is not limited to local files, servers can be indexed too, see the [`🎉 Media Servers feature ↗`](/features/media-servers/).
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Indexer Settings](/settings/2-indexer-settings/)
-- [Advanced, Update Directory Path](/settings/8-advanced-settings/#update-directory-path)
+- [⚙️ Indexer Settings](/settings/2-indexer-settings/)
+- [⚙️ Advanced, Update Directory Path](/settings/8-advanced-settings/#update-directory-path)
 
 ---
 
@@ -177,7 +151,7 @@ Your library is not limited to local files, servers can be indexed too, see [Med
 
 ---
 
-## [Media Servers](https://namidaco.github.io/namida_docs/features/media-servers/)
+## [Media Servers](https://namidaco.github.io/namida-docs/features/media-servers/)
 
 ---
 title: "Media Servers"
@@ -197,9 +171,7 @@ Multi library support, your library can mix local files with content from your s
 
 ### How It Works {#how}
 
-[`⚙️ List of Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
-
-A server is added as a library folder in the indexer. Enter the server address and credentials, pick a library or share if the server supports it, and Namida indexes it like any other folder. Tracks appear next to your local ones in every tab.
+A server is added as a library folder in the indexer. Enter the server address and credentials, pick a library or share if the server supports it, and Namida indexes it like any other folder. Tracks appear next to your local ones in every tab. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
 ::: callout info
 For file based servers (WebDAV, SMB), files are temporarily downloaded for indexing. Make sure your connection is stable, Wi-Fi is recommended to avoid high data usage.
@@ -207,13 +179,13 @@ For file based servers (WebDAV, SMB), files are temporarily downloaded for index
 
 ### Server Playlists {#playlists}
 
-Playlists from your servers can be auto imported on library refresh, see [Playlists & History](/features/playlists-history/#playlists).
+Playlists from your servers can be auto imported on library refresh, see the [`🎉 Playlists & History feature ↗`](/features/playlists-history/#playlists).
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Indexer, List of Folders](/settings/2-indexer-settings/#folders-to-scan)
+- [⚙️ Indexer, List of Folders](/settings/2-indexer-settings/#folders-to-scan)
 
 ---
 
@@ -222,7 +194,7 @@ Playlists from your servers can be auto imported on library refresh, see [Playli
 
 ---
 
-## [Playback](https://namidaco.github.io/namida_docs/features/playback/)
+## [Playback](https://namidaco.github.io/namida-docs/features/playback/)
 
 ---
 title: "Playback"
@@ -234,8 +206,6 @@ description: "Queues, effects, videos and lyrics"
 Everything you expect from a music player, plus some extras.
 
 ### Queue System {#queue}
-
-[`⚙️ Playback Settings ↗`](/settings/3-playback-settings/)
 
 A persistent and reliable queue system, your sessions are saved for later usage. Also:
 
@@ -249,71 +219,65 @@ The queue bottom row packs more than it looks:
 - The clear button removes duplicates, everything before, everything after, or all except the current track.
 - The add button generates and adds tracks:
   - Local: Random, Time Range, Moods, Ratings, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended
-  - YouTube: Random, Time Range, Mix, Similar Release Date, Similar Discover Date, and, Similar Time Range Recommended.
+  - YouTube: Random, Time Range, Mix, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended.
 - A jump button scrolls right to the current track.
 - Tap shuffle to shuffle, long press it to switch between Shuffle Next and Shuffle All.
 
+[`⚙️ Configure Playback ↗`](/settings/3-playback-settings/)
+
 ### Audio Effects {#effects}
 
-[`⚙️ Playback Settings ↗`](/settings/3-playback-settings/#crossfade)
+Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equalizer with Loudness Enhancer. [`⚙️ Configure Effects ↗`](/settings/3-playback-settings/#crossfade)
 
-Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equalizer with Loudness Enhancer.
+Audio configs can also be set per item, check the Sound Control page by pressing the audio effects icon in the player.
 
 ### Replay Gain {#replay-gain}
 
-[`⚙️ Normalize Audio ↗`](/settings/3-playback-settings/#normalize-audio)
-
-Normalizes volume across tracks by reading the replay gain tag, and the loudness info provided by YouTube for videos.
+Normalizes volume across tracks by reading the replay gain tag, and the loudness info provided by YouTube for videos. [`⚙️ Configure Normalize Audio ↗`](/settings/3-playback-settings/#normalize-audio)
 
 ### Pausing Scenarios {#pausing}
 
-[`⚙️ Playback Settings ↗`](/settings/3-playback-settings/#on-interruption)
-
-Control exactly what happens on calls, notifications, volume 0 and device disconnect, and when to resume.
+Control exactly what happens on calls, notifications, volume 0 and device disconnect, and when to resume. [`⚙️ Configure Pausing ↗`](/settings/3-playback-settings/#on-interruption)
 
 ### Video Integration {#video}
 
-[`⚙️ Video Playback ↗`](/settings/3-playback-settings/#video-playback)
-
-Namida can play videos related to your music. Videos are found locally by filename matching, or fetched from YouTube using the link in the track's comment tag or filename.
+Namida can play videos related to your music. Videos are found locally by filename matching, or fetched from YouTube using the link in the track's comment tag or filename. [`⚙️ Configure Video Playback ↗`](/settings/3-playback-settings/#video-playback) [`📒 Link a YouTube Video Guide ↗`](/guides/medium/#link-yt-video) [`📒 Link a Local Video Guide ↗`](/guides/medium/#link-local-video)
 
 ### Lyrics {#lyrics}
 
-[`⚙️ Lyrics Settings ↗`](/settings/6-extras-settings/#lyrics)
-
-Auto fetching & displaying, synced & plain, with support for word synced lrc/ttml files. Long press the lyrics to enter fullscreen.
+Auto fetching & displaying, synced & plain, with support for word synced lrc/ttml files. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
 
 ### Gestures {#gestures}
 
-[`⚙️ Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization) [`⚙️ Track Tile Customization ↗`](/settings/4-customization-settings/#track-tile)
-
 - Swipe the miniplayer left or right to change tracks, up and down to expand or minimize, and swipe down to dismiss when [Dismissible Miniplayer](/settings/3-playback-settings/#dismissible-miniplayer) is on.
-- Artwork tap and long press actions are configurable, and double tap can toggle lyrics.
-- Swipe left/right on a track or a video to execute actions (ex: play next, open info, go to album, edit tag, etc..)
-- More hidden gestures in [Tips & Tricks](/tips/).
+- Artwork tap and long press actions are configurable, and double tap can toggle lyrics. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization)
+- Swipe left/right on a track or a video to execute actions (ex: play next, open info, go to album, edit tags, etc..) [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile)
+- While seeking with the seekbar, swipe upwards to cancel the seek.
+- Seeking very close to the starting edge snaps to the very start.
+- Zoom in on the lyrics to change the font size.
+- Zoom in on the video to enter fullscreen.
+- More hidden gestures in [`📄 Tips & Tricks ↗`](/tips/).
 
 ### Track Menu {#track-menu}
 
-Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder. See [Tips & Tricks](/tips/#track-menu) for the full list.
+Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder. See [`📄 Tips & Tricks ↗`](/tips/#track-menu) for the full list.
 
 ### Sleep Timer {#sleep-timer}
 
 Stop playback after a number of tracks or minutes.
-Sleep Timer can be found in app side bar menu.
+Sleep Timer can be found in the app side menu.
 
 ### Waveform Seekbar {#waveform}
 
-[`⚙️ Waveform Bars Count ↗`](/settings/4-customization-settings/#miniplayer-customization)
-
-The seekbar is the actual waveform of the track.
+The seekbar is the actual waveform of the track. [`⚙️ Configure Waveform Bars ↗`](/settings/4-customization-settings/#miniplayer-customization)
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Playback Settings](/settings/3-playback-settings/)
-- [Extras, Lyrics](/settings/6-extras-settings/#lyrics)
-- [Customizations, Miniplayer](/settings/4-customization-settings/#miniplayer-customization)
+- [⚙️ Playback Settings](/settings/3-playback-settings/)
+- [⚙️ Extras, Lyrics](/settings/6-extras-settings/#lyrics)
+- [⚙️ Customizations, Miniplayer](/settings/4-customization-settings/#miniplayer-customization)
 
 ---
 
@@ -322,7 +286,7 @@ The seekbar is the actual waveform of the track.
 
 ---
 
-## [Playlists & History](https://namidaco.github.io/namida_docs/features/playlists-history/)
+## [Playlists & History](https://namidaco.github.io/namida-docs/features/playlists-history/)
 
 ---
 title: "Playlists & History"
@@ -335,28 +299,29 @@ description: "Flexible playlists and a reliable history system"
 
 Normal playlists with custom order and the ability to set custom artworks. Also:
 
-- M3U playlists, import them natively or keep them synced with the original M3U file, so changes made in Namida reach other apps too. Any playlist can be exported as M3U.
+- M3U playlists, import them natively or keep them synced with the original M3U file, so changes made in Namida reach other apps too. Any playlist can be converted to M3U and back, or exported as M3U one time. Make sure the folder holding your M3U files is in the indexer folders, so they show up.
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
-- Custom order for playlists, Press "edit icon" at top to enable reordering.
-- Custom order for playlist tracks, Press "lock icon" at top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
+- Custom order for playlists, press the edit icon at the top to enable reordering.
+- Custom order for playlist tracks, press the lock icon at the top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
+- Playlists can be filtered/searched, and can have moods, usable by the player's add tracks (mood) feature.
 
 ::: callout warning
-Sorting tracks by a property means your custom order will be lost. you should see a warning and approval is required before applying the new sort.
+Sorting tracks by a property means your custom order will be lost. You will see a warning, and approval is required before applying the new sort.
 :::
+
+Also see the [`🎉 YouTube feature ↗`](/features/youtube/#playlists) for how local and YouTube playlists relate.
 
 ### Smart Playlists {#smart-playlists}
 
-Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more.
+Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
 
 ### History {#history}
 
-[`⚙️ Count a Listen After ↗`](/settings/3-playback-settings/#count-listen-after)
-
-A reliable and flexible history system. You specify the minimum seconds or percentage to count a listen, and it can be easily modified, manipulated and imported.
+A reliable and flexible history system. You specify the minimum seconds or percentage to count a listen, and it can be easily modified, manipulated and imported. [`⚙️ Configure Listen Counting ↗`](/settings/3-playback-settings/#count-listen-after)
 
 Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range.
 
-[`History Tips ↗`](/tips#history-tips)
+[`📄 History Tips ↗`](/tips/#history-tips)
 
 ### Most Played {#most-played}
 
@@ -372,17 +337,15 @@ Generate tracks related to the current one, typically the ones you often listene
 
 ### History Import {#import}
 
-[`⚙️ Import Settings ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
-
-Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history.
+Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Playback, Count a Listen After](/settings/3-playback-settings/#count-listen-after)
-- [Backup & Restore, History Imports](/settings/7-backup-restore-settings/#import-youtube-history)
-- [Advanced, Remove Source from History](/settings/8-advanced-settings/#remove-source-history)
+- [⚙️ Playback, Count a Listen After](/settings/3-playback-settings/#count-listen-after)
+- [⚙️ Backup & Restore, History Imports](/settings/7-backup-restore-settings/#import-youtube-history)
+- [⚙️ Advanced, Remove Source from History](/settings/8-advanced-settings/#remove-source-history)
 
 ---
 
@@ -391,7 +354,7 @@ Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exp
 
 ---
 
-## [Shortcuts](https://namidaco.github.io/namida_docs/features/shortcuts/)
+## [Shortcuts](https://namidaco.github.io/namida-docs/features/shortcuts/)
 
 ---
 title: "Shortcuts"
@@ -400,7 +363,7 @@ description: "Keyboard shortcuts on desktop"
 
 # Shortcuts
 
-`Windows+Linux only`
+`💻 Windows+Linux only`
 
 Control Namida from the keyboard on desktop.
 
@@ -445,14 +408,14 @@ Setting a rating writes it to the file tags of the current track.
 
 ### Custom Hotkeys {#custom-hotkeys}
 
-The shortcuts above only work when the app is focused (app-wide). You can set system-wide shortcuts by pressing shortcut icon at the very top (or by going to Settings -> About -> Shortcuts). From there you can record your own hotkeys for playback actions like play/pause, next/previous, seek and volume, etc...
+The shortcuts above only work when the app is focused (app-wide). You can set system-wide shortcuts by pressing the shortcut icon at the very top (or by going to Settings -> About -> Shortcuts). From there you can record your own hotkeys for playback actions like play/pause, next/previous, seek and volume, etc...
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Playback, Seek Duration](/settings/3-playback-settings/#seek-duration)
-- [Extras, Library Tabs](/settings/6-extras-settings/#library-tabs)
+- [⚙️ Playback, Seek Duration](/settings/3-playback-settings/#seek-duration)
+- [⚙️ Extras, Library Tabs](/settings/6-extras-settings/#library-tabs)
 
 ---
 
@@ -461,7 +424,7 @@ The shortcuts above only work when the app is focused (app-wide). You can set sy
 
 ---
 
-## [Sync](https://namidaco.github.io/namida_docs/features/sync/)
+## [Sync](https://namidaco.github.io/namida-docs/features/sync/)
 
 ---
 title: "Sync"
@@ -478,9 +441,7 @@ Sync is a new feature and still evolving, both devices must run the same Namida 
 
 ### How It Works {#how}
 
-[`⚙️ Sync ↗`](/settings/7-backup-restore-settings/#sync)
-
-One device starts a server, other devices on the same network discover it and request to connect. The server accepts, rejects or blocks each device. Once connected, you can send and receive data with that device, or all devices at once.
+One device starts a server, other devices on the same network discover it and request to connect. The server accepts, rejects or blocks each device. Once connected, you can send and receive data with that device, or all devices at once. [`⚙️ Open Sync ↗`](/settings/7-backup-restore-settings/#sync) [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
 
 ### What Gets Synced {#data}
 
@@ -510,7 +471,7 @@ Set an auto sync interval and let devices sync on their own whenever they see ea
 
 ### Related Settings {#related-settings}
 
-- [Backup & Restore, Sync](/settings/7-backup-restore-settings/#sync)
+- [⚙️ Backup & Restore, Sync](/settings/7-backup-restore-settings/#sync)
 
 ---
 
@@ -519,7 +480,7 @@ Set an auto sync interval and let devices sync on their own whenever they see ea
 
 ---
 
-## [Tag Editor](https://namidaco.github.io/namida_docs/features/tag-editor/)
+## [Tag Editor](https://namidaco.github.io/namida-docs/features/tag-editor/)
 
 ---
 title: "Tag Editor"
@@ -538,7 +499,7 @@ Edit title, artist, album, genre, year, lyrics, comment, rating, moods and more,
 
 Select multiple tracks and edit them at once, unchanged fields remain untouched. Useful for fixing a whole album or artist.
 
-[`Selection Tips ↗`](/tips#selection)
+[`📄 Selection Tips ↗`](/tips/#selection)
 
 ### Auto Extract from Filename {#auto-extract}
 
@@ -553,8 +514,8 @@ WEBM format does not support tag editing.
 
 ### Related Settings {#related-settings}
 
-- [Indexer, Separators](/settings/2-indexer-settings/#separators)
-- [Indexer Settings](/settings/2-indexer-settings/)
+- [⚙️ Indexer, Separators](/settings/2-indexer-settings/#separators)
+- [⚙️ Indexer Settings](/settings/2-indexer-settings/)
 
 ---
 
@@ -563,7 +524,7 @@ WEBM format does not support tag editing.
 
 ---
 
-## [YouTube](https://namidaco.github.io/namida_docs/features/youtube/)
+## [YouTube](https://namidaco.github.io/namida-docs/features/youtube/)
 
 ---
 title: "YouTube"
@@ -576,38 +537,42 @@ Namida comes with a full YouTube section, powered by a custom client. Stream, wa
 
 ### Streaming {#streaming}
 
-[`⚙️ YouTube Settings ↗`](/settings/5-youtube-settings/)
-
 - Best available video & audio quality, you can pick the quality manually too.
 - Audio Only mode, play any video as music without loading the video.
 - Data Saver mode, play audio only if video was not cached.
 - Radio, auto start a queue based on the current video, using YouTube Mix playlist.
+
+[`⚙️ Configure YouTube ↗`](/settings/5-youtube-settings/)
 
 ### Video View {#video-view}
 
 Watching videos supports gestures:
 
 - Swipe up or pinch in to enter fullscreen
+- Swipe down on the right side to enter fullscreen portrait
+- Swipe up the minimized player on the video part to enter fullscreen
 - Double tap to seek
 - Swipe vertically to control volume/brightness
 - Swipe horizontally to seek
-- Long press for 2x speed [`⚙️ Configure ↗`](/settings/5-youtube-settings/#flags)
+- Seeking very close to the starting edge snaps to the very start
+- While seeking, swipe upwards to cancel
+- Long press for 2x speed [`⚙️ Configure Long Press Speed ↗`](/settings/5-youtube-settings/#flags)
+
+In fullscreen, you can enable glow to show an ambient effect behind the video (might affect performance & battery).
 
 ### Miniplayer {#miniplayer}
 
-A YouTube style miniplayer with comments, related videos and video description. It dims automatically after a few seconds to help focus & reduce eye strain. Both the delay and the dim intensity can be changed. [`⚙️ Miniplayer Settings ↗`](/settings/5-youtube-settings/#miniplayer)
+A YouTube style miniplayer with comments, related videos and video description. It dims automatically after a few seconds to help focus & reduce eye strain. Both the delay and the dim intensity can be changed. [`⚙️ Configure Miniplayer ↗`](/settings/5-youtube-settings/#miniplayer)
 
 ### Downloads {#downloads}
 
-[`⚙️ Downloads Settings ↗`](/settings/5-youtube-settings/#downloads)
-
-Download any video or audio, with full control over the result:
+Download any video or audio, with full control over the result: [`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)
 
 - Metadata tags are written to the file, with optional auto title/artist/album extraction from the video title. You can edit every tag before downloading.
 - Output filename builder, similar to yt-dlp format, see [all formats](#filename-formats) below.
 - Both work for single downloads and batch playlist downloads, where playlist formats number the files for you.
 - Default download folder, changeable per download.
-- Download notifications `Windows+Linux only`.
+- Download notifications `💻 Windows+Linux only`.
 
 ### Filename & Tags Formats {#filename-formats}
 
@@ -658,36 +623,42 @@ Streamed videos and audios are cached, so they play offline later without downlo
 
 - Set a video's cache priority to VIP to prevent auto deletion completely.
 - Private and deleted YouTube videos are automatically set to VIP, so you never lose them.
+- Info of private and deleted videos can still be shown, thanks to [Filmot](https://filmot.com/).
+
+### Playlists {#playlists}
+
+There are 3 kinds of playlists in Namida:
+
+1. **Local playlists**, your normal library playlists, see [`🎉 Playlists & History feature ↗`](/features/playlists-history/).
+2. **Local YouTube playlists**, playlists of YouTube videos, stored inside Namida.
+3. **Hosted/online YouTube playlists**, your account playlists, useful to access them instantly. You can also save them as local YouTube playlists, so videos don't get randomly removed (as YouTube usually does).
+
+How actions map to them:
+
+- While browsing an online public/unlisted playlist, open the menu and use "Save to library", this adds it to your hosted playlists (3).
+- While browsing an online playlist or your account playlists, open the menu and use "Add as a new playlist", this adds it as a local YouTube playlist (2).
+- A local track's "Add to Playlist" adds to local playlists (1).
+- A YouTube video's "Add to Playlist" adds to local YouTube playlists (2) if the local tab is selected, or to your hosted playlists (3) if the YouTube tab is selected.
 
 ### SponsorBlock {#sponsorblock}
 
-[`⚙️ SponsorBlock Settings ↗`](/settings/5-youtube-settings/#sponsorblock)
-
-Skips sponsor segments in videos using community data from [SponsorBlock](https://sponsor.ajay.app/). Segments and heatmap are also shown on the seekbar. You can choose which categories to skip and how.
+Skips sponsor segments in videos using community data from [SponsorBlock](https://sponsor.ajay.app/). Segments and heatmap are also shown on the seekbar. You can choose which categories to skip and how. [`⚙️ Configure SponsorBlock ↗`](/settings/5-youtube-settings/#sponsorblock)
 
 ### Return YouTube Dislike {#return-youtube-dislike}
 
-[`⚙️ RYD Settings ↗`](/settings/5-youtube-settings/#return-youtube-dislike)
-
-Shows the dislike count on videos using [Return YouTube Dislike](https://returnyoutubedislike.com/).
+Shows the dislike count on videos using [Return YouTube Dislike](https://returnyoutubedislike.com/). [`⚙️ Configure RYD ↗`](/settings/5-youtube-settings/#return-youtube-dislike)
 
 ### Accounts {#accounts}
 
-[`⚙️ Accounts Settings ↗`](/settings/5-youtube-settings/#accounts)
-
-Sign in to your account to get personalized related videos and mix playlists, and to interact with videos. Signing in can also provide better download speed and fix some playback issues.
+Sign in to your account to get personalized related videos and mix playlists, and to interact with videos. Signing in can also provide better download speed and fix some playback issues. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
 
 ### Comments {#comments}
 
-[`⚙️ Comments Settings ↗`](/settings/5-youtube-settings/#comments)
-
-Full comments support with replies. You can prefer top comments or newest comments first.
+Full comments support with replies. You can prefer top comments or newest comments first. [`⚙️ Configure Comments ↗`](/settings/5-youtube-settings/#comments)
 
 ### Takeout Import {#history-import}
 
-[`⚙️ Import Youtube History ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
-
-You can import your watch history from YouTube takeout files, it gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [YouTube Channels page](/pages/youtube/#channels) & [YouTube playlists page](/pages/youtube/#playlists).
+You can import your watch history from YouTube takeout files, it gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
 ::: callout tip
 Signing in your YouTube account allows you to access your Subscribed Channels and Playlists. This can be better than importing manually depending on your usage.
@@ -697,10 +668,10 @@ Signing in your YouTube account allows you to access your Subscribed Channels an
 
 ### Related Settings {#related-settings}
 
-- [YouTube Settings](/settings/5-youtube-settings/)
-- [SponsorBlock](/settings/5-youtube-settings/#sponsorblock)
-- [Return YouTube Dislike](/settings/5-youtube-settings/#return-youtube-dislike)
-- [Backup & Restore, for history import](/settings/7-backup-restore-settings/#import-youtube-history)
+- [⚙️ YouTube Settings](/settings/5-youtube-settings/)
+- [⚙️ SponsorBlock](/settings/5-youtube-settings/#sponsorblock)
+- [⚙️ Return YouTube Dislike](/settings/5-youtube-settings/#return-youtube-dislike)
+- [⚙️ Backup & Restore, for history import](/settings/7-backup-restore-settings/#import-youtube-history)
 
 ---
 
@@ -709,7 +680,183 @@ Signing in your YouTube account allows you to access your Subscribed Channels an
 
 ---
 
-## [Welcome](https://namidaco.github.io/namida_docs/)
+## [Beginner Guides](https://namidaco.github.io/namida-docs/guides/beginner/)
+
+---
+title: "Beginner Guides"
+description: "Quick fixes and everyday tasks"
+---
+
+# Beginner Guides
+
+### An artist or genre name gets split {#separator-blacklist}
+
+An artist like "Tyler, The Creator" showing as two artists? The comma separator is splitting it.
+
+1. Open [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators).
+2. Open the blacklist and add the full name.
+3. Refresh the library.
+
+### Some artworks are wrong {#wrong-artworks}
+
+Two different tracks share the same filename, so they share the same artwork.
+
+1. Enable [`⚙️ Configure Unique Artwork Hash ↗`](/settings/2-indexer-settings/#unique-artwork-hash), artworks will be identified by the track's full path instead.
+2. Clear the image cache and refresh, see [`⚙️ Open Clear Caches ↗`](/settings/8-advanced-settings/#clear-caches).
+
+### Some tracks in an album are missing artwork {#album-artworks}
+
+1. Enable [`⚙️ Configure Group Artworks by Album ↗`](/settings/2-indexer-settings/#group-artworks-by-album), the whole album shares one artwork.
+
+### Stop after the current track {#stop-after-track}
+
+1. Open the current track's dialog (tap the player info text, or tap menu in track tile, or long press the video card).
+2. Choose "Stop after this track".
+
+### Change or fix lyrics {#change-lyrics}
+
+1. Long press the lyrics icon in the player.
+2. From there you can pick an LRC file, search for other lyrics, or change the lyrics offset if they are early or late.
+3. To force no lyrics for a track, start its embedded lyrics tag with `IGNORE`, see [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics).
+
+---
+
+<sub>by @claude</sub>
+
+
+---
+
+## [Guides](https://namidaco.github.io/namida-docs/guides/)
+
+---
+title: "Guides"
+description: "Step by step guides for common tasks"
+---
+
+# Guides
+
+Step by step guides for common tasks, sorted by experience level.
+
+- [Beginner](/guides/beginner/), quick fixes and everyday tasks
+- [Medium](/guides/medium/), linking videos, syncing and smart playlists
+- [Namider](/guides/namider/), for those who go all the way
+
+---
+
+<sub>by @claude</sub>
+
+
+---
+
+## [Medium Guides](https://namidaco.github.io/namida-docs/guides/medium/)
+
+---
+title: "Medium Guides"
+description: "Linking videos, syncing and smart playlists"
+---
+
+# Medium Guides
+
+### Link a YouTube video to a track {#link-yt-video}
+
+1. Open the track's dialog and choose "Set Youtube Link".
+2. Paste the video link, done. The video plays with the track when [`⚙️ Configure Video Playback ↗`](/settings/3-playback-settings/#video-playback) is on.
+
+It also works automatically, Namida looks up the track's comment tag (mostly filled by yt-dlp) or its filename for any matching YouTube link. If found, the video is downloaded, cached, and plays once ready. Streaming is not used here, the priority goes to the music file itself.
+
+- In the comment tag, any url format gets matched, example: `https://youtu.be/video_id`
+- In filenames, it should contain `v=video_id` or `id=video_id` to get matched.
+
+### Link a local video to a track {#link-local-video}
+
+1. Put the video inside one of your indexed folders.
+2. Name it so the filename contains at least one of these:
+   - the music filename
+   - the title & first artist of the track
+   - the track's YouTube id (in the comment tag or filename)
+3. Set the [`⚙️ Configure Video Source ↗`](/settings/3-playback-settings/#video-source) to Local or Auto.
+
+Example, this track and video match:
+
+```text
+Alan walker - Faded.m4a
+video alAn WaLkER - faDed (480p).mp4
+```
+
+::: callout info
+Some cleanup is made to improve the matching, all symbols & whitespaces are ignored, so casing and extra words don't break it.
+:::
+
+### Play specific tracks quickly {#play-specific-quickly}
+
+1. Set the left swipe action to "Play After" in [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile).
+2. Swipe on each track you want, they line up right after the current one.
+
+### Sync data between devices {#sync-devices}
+
+1. Install the same Namida version on both devices, and connect them to the same network.
+2. Open the Sync page on both (Settings -> Backup & Restore -> Sync).
+3. Start the server on one device, and search on the other.
+4. Accept the connection request, then choose the data to send & receive.
+5. Press send or receive, that's it. See the [`🎉 Sync feature ↗`](/features/sync/) for what gets synced.
+
+### Update directory path {#update-directory-path}
+
+Moved your music from `/storage/music` to `/storage/audio/music`?
+
+1. Open Update Directory Path in Advanced settings. [`⚙️ Open Update Directory Path ↗`](/settings/8-advanced-settings/#update-directory-path)
+2. Enter the old directory and the new one.
+3. All track paths update, keeping stats and listens.
+
+### Smart playlist examples {#smart-playlist-examples}
+
+Some rule ideas for [`🎉 Smart Playlists feature ↗`](/features/playlists-history/#smart-playlists):
+
+- 90s favourites: Year is between 1990 and 1999, plus Favourite is true.
+- Recent bangers: Rating is greater than 80, plus First listen is within last 3 months.
+- Unheard gems: Listen count is 0, plus Date added is not within last month.
+
+---
+
+<sub>by @claude</sub>
+
+
+---
+
+## [Namider Guides](https://namidaco.github.io/namida-docs/guides/namider/)
+
+---
+title: "Namider Guides"
+description: "For those who go all the way"
+---
+
+# Namider Guides
+
+### Play a loop animation with a track {#loop-animation}
+
+Link a very short video to a track, it loops while the track plays, an animated artwork basically.
+
+1. Pick a short video (a few seconds), or a short YouTube clip.
+2. Link it to the track. [`📒 Link a YouTube Video Guide ↗`](/guides/medium/#link-yt-video) [`📒 Link a Local Video Guide ↗`](/guides/medium/#link-local-video)
+
+### I deleted some music files by mistake, what do? {#recover-deleted}
+
+If they were downloaded from Namida, or have a YouTube link in their comment tag, ez:
+
+1. Select them -> Open dialog -> "Open in Youtube view".
+2. Open the player queue, then download.
+
+If they were deleted from Namida, you can at least recover their paths from `Android/data/com.msob7y.namida/files/Recently Deleted`.
+Use ADB or Shizuku if you don't have access to that folder.
+
+---
+
+<sub>by @claude</sub>
+
+
+---
+
+## [Welcome](https://namidaco.github.io/namida-docs/)
 
 ---
 title: "Welcome"
@@ -728,13 +875,21 @@ You can search these docs (⌘k), or ask the AI assistant using the button below
 
 ### Philosophy {#philosophy}
 
-Namida is built around preservation, your data and your music outlive everything else:
+**Preservation.** Your data and your music outlive everything else:
 
 - Streamed content is cached and playable offline, nothing is fetched twice for no reason.
 - The cache priority system protects what matters when cleaning up, and VIP items are never auto deleted. Private and deleted YouTube videos become VIP automatically.
 - Sync between devices only adds, it never wipes the other device's data.
 - Listens can't be deleted, only replaced, your history stays truthful.
 - Destructive actions like deleting files are tucked away behind the advanced dialog, and deleted paths are saved to a file in app data folder.
+
+**The original experience is cherished.** Content is presented the way it was made:
+
+- Video integration for local music, the song comes with its video, not just a static artwork.
+- The progress bar in the YouTube player sits under the video, not inside it, nothing covers the content.
+- There is no way to stretch or zoom the video out of its real aspect ratio.
+
+**Music should be listened to only when you feel like it.** Namida is against endless queues. Music is a powerful tool that can hijack your brain and take control, and a human should always be in control. There is so much potential in a human, too much of it gets thrown away to entertainment, and music is one of them. Don't let it consume you, listen to things you enjoy, and only when you really want to.
 
 ### Get Namida {#get-namida}
 
@@ -747,6 +902,14 @@ Namida is built around preservation, your data and your music outlive everything
 - [Telegram (Chat)](https://t.me/+FmdfsgKoGmM1ZGFk)
 - [Discord](https://discord.gg/WeY7DTVChT)
 
+### AI Usage
+
+Namida is made by human, **not** vibe coded. AI usage is minimal and very selective.
+Every design choice comes after thoughtful decisions and series of refining, down to every pixel.
+Parts that are built by ai will have a disclaimer. [See here](https://github.com/namidaco/namida/issues/945) for more info.
+
+---
+
 ::: callout warning
 There are no websites for Namida other than GitHub & Telegram, we are not responsible for downloads from other sources.
 :::
@@ -758,7 +921,61 @@ There are no websites for Namida other than GitHub & Telegram, we are not respon
 
 ---
 
-## [Pages](https://namidaco.github.io/namida_docs/pages/)
+## [Not Planned](https://namidaco.github.io/namida-docs/not-planned/)
+
+---
+title: "Not Planned"
+description: "Features that will not be added, and why"
+---
+
+# Not Planned
+
+Features that will not be added to Namida, and the reasoning behind each. The only focus is local library + YouTube.
+
+### Spotify {#spotify}
+
+Not planned.
+Importing your Spotify history is supported, but that's all.
+
+The reason is simply that Spotify is notorious for blocking any attempt at unofficial clients. Even if Namida implements it, it will simply be hit by a DMCA and no longer have support.
+
+What you can do as an alternative is convert your Spotify playlists to YTM, then log in inside Namida to view your YT playlists.
+We are barely keeping YT support alive as is.
+
+Alternatives: [spotiflac](https://github.com/spotbye/SpotiFLAC) or [other tools like it](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/audio/#wiki_.25B7_audio_ripping_tools)
+
+### Other Streaming Services {#streaming-services}
+
+Same story as Spotify. The only focus is local + YouTube, keeping them both polished is already a lot of work.
+
+### LastFm Scrobbling {#lastfm}
+
+Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works with any player and has lots of features.
+
+### Discord Rich Presence (RPC) {#discord-rpc}
+
+Use [Kizzy](https://github.com/dead8309/Kizzy) on android, or [Music Presence](https://github.com/ungive/discord-music-presence) on desktop. They work with any player.
+
+### Advanced Equalizer Features {#equalizer}
+
+Namida's equalizer is simple and uses native android effects, we always recommend using system wide EQ apps for a better experience and more features.
+Most extra features require writing a custom audio engine, or making sure every android version supports the effect, none of these are planned.
+
+- If you have root, you can use JamesDSP or Viper4Android.
+- Otherwise use [Equalizer314](https://f-droid.org/en/packages/com.bearinmind.equalizer314) or [RootlessJamesDSP](https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp).
+
+### Marquee Effect {#marquee}
+
+Scrolling text is distracting and doesn't look so good. Long texts get faded out instead.
+
+---
+
+<sub>by @claude</sub>
+
+
+---
+
+## [Pages](https://namidaco.github.io/namida-docs/pages/)
 
 ---
 title: "Pages"
@@ -784,7 +1001,7 @@ You control which pages appear as tabs and their order, see [Library Tabs](/sett
 
 ---
 
-## [Library](https://namidaco.github.io/namida_docs/pages/library/)
+## [Library](https://namidaco.github.io/namida-docs/pages/library/)
 
 ---
 title: "Library"
@@ -793,7 +1010,7 @@ description: "The main library pages"
 
 # Library Pages
 
-The main tabs of your library. You choose which ones are enabled and their order in [Library Tabs](/settings/6-extras-settings/#library-tabs).
+The main tabs of your library. You choose which ones are enabled and their order in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs).
 
 ### Home {#home}
 
@@ -801,61 +1018,50 @@ Your personalized start page. Mixes generated from your history (Recommended, To
 
 ### Tracks {#tracks}
 
-[`⚙️ Indexer ↗`](/settings/2-indexer-settings/)
-
-All your tracks, sortable by almost any property. Recently added tracks get their own subpage.
+All your tracks, sortable by almost any property. Recently added tracks get their own subpage. Pull down to refresh the library. [`⚙️ Configure Indexer ↗`](/settings/2-indexer-settings/)
 
 ### Albums {#albums}
 
-[`⚙️ Album Tile Customization ↗`](/settings/4-customization-settings/#album-tile)
-
-Your albums as a list or grid. What counts as one album is controlled by [Album Identifiers](/settings/2-indexer-settings/#album-identifiers).
+Your albums as a list or grid. What counts as one album is controlled by [`⚙️ Configure Album Identifiers ↗`](/settings/2-indexer-settings/#album-identifiers). [`⚙️ Configure Album Tiles ↗`](/settings/4-customization-settings/#album-tile)
 
 ### Artists {#artists}
 
-[`⚙️ Separators ↗`](/settings/2-indexer-settings/#separators)
-
-Browse by Artists, Album Artists or Composers. Multiple artists in one tag get split by separators, and featured artists from titles can get their own entry.
+Browse by Artists, Album Artists or Composers, press the type at the top left to switch. Multiple artists in one tag get split by separators, and featured artists from titles can get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators)
 
 ### Genres {#genres}
 
-Your genres, split from tags using the genre separators.
+Your genres, split from tags using the genre separators. Press the type at the top left to switch between Genres and Styles.
 
 ### Playlists {#playlists}
 
-[`⚙️ Playlists & History ↗`](/features/playlists-history/)
-
-Your playlists, along with the built-in ones: History, Most Played and Favourites. Normal, M3U synced and smart playlists all live here.
+Your playlists, along with the built-in ones: History, Most Played and Favourites. Normal, M3U synced and smart playlists all live here. Pull down to refetch M3U and server playlists. [`🎉 Playlists & History feature ↗`](/features/playlists-history/)
 
 ### Folders {#folders}
 
-[`⚙️ List of Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
+Browse your library exactly like your file manager, with separate views for music and videos. Supports folders hierarchy, `cover.jpg` style folder images, and `.info.txt` for displaying small info. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
-Browse your library exactly like your file manager, with separate views for music and videos. Supports folders hierarchy, `cover.jpg` style folder images, and `.info.txt` for displaying small info.
+- Set a specific folder as default, Namida will open it on app launch.
+- In the tracks sort menu, disable "Enable folders hierarchy" to show all folders in a single list instead of a tree view.
 
 ### Queues {#queues}
 
-[`⚙️ Playback Settings ↗`](/settings/3-playback-settings/)
-
-Every listening session is saved automatically, jump back to any previous queue. Never miss your sessions.
+Every listening session is saved automatically, jump back to any previous queue. Never miss your sessions. Press the delete icon at the top to clear some unimportant queues, or swipe a queue left to quickly remove it.
 
 ### Moods, Tags & Rating {#moods-tags-rating}
 
-Browse tracks grouped by the moods, tags and ratings you assign. Assign them from the track menu, they also power mood based [track generation](/features/playlists-history/#generation). On desktop you can rate the current track with a key press, see [Shortcuts](/features/shortcuts/).
+Browse tracks grouped by the moods, tags and ratings you assign. Assign them from the track menu, they also power mood based [track generation](/features/playlists-history/#generation). On desktop you can rate the current track with a key press, see [`🎉 Shortcuts feature ↗`](/features/shortcuts/).
 
 ### Search {#search}
 
-[`⚙️ Search Settings ↗`](/settings/6-extras-settings/#filter-tracks-by)
-
-Global search across your library. You choose which fields it looks into, title, artist, album, filename, even lyrics. Playing from search supports play modes, selected track only, search results, album, first artist or first genre.
+Global search across your library. You choose which fields it looks into, title, artist, album, filename, even lyrics. Playing from search supports play modes, selected track only, search results, album, first artist or first genre. [`⚙️ Configure Search ↗`](/settings/6-extras-settings/#filter-tracks-by)
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Extras, Library Tabs](/settings/6-extras-settings/#library-tabs)
-- [Indexer Settings](/settings/2-indexer-settings/)
-- [Customizations](/settings/4-customization-settings/)
+- [⚙️ Extras, Library Tabs](/settings/6-extras-settings/#library-tabs)
+- [⚙️ Indexer Settings](/settings/2-indexer-settings/)
+- [⚙️ Customizations](/settings/4-customization-settings/)
 
 ---
 
@@ -864,7 +1070,7 @@ Global search across your library. You choose which fields it looks into, title,
 
 ---
 
-## [Other Pages](https://namidaco.github.io/namida_docs/pages/other/)
+## [Other Pages](https://namidaco.github.io/namida-docs/pages/other/)
 
 ---
 title: "Other Pages"
@@ -879,13 +1085,11 @@ Some info about your library: counts of tracks, albums, artists, genres and styl
 
 ### Sync Manager {#sync-manager}
 
-[`⚙️ Sync ↗`](/features/sync/)
-
-Where device sync happens: start the server, discover and connect devices, choose the data to send & receive, and watch recent actions. See the [Sync feature](/features/sync/).
+Where device sync happens: start the server, discover and connect devices, choose the data to send & receive, and watch recent actions. [`🎉 Sync feature ↗`](/features/sync/) [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
 
 ### About {#about}
 
-App version & changelog, socials, [shortcuts](/features/shortcuts/), licenses, share logs, and links for translating, donating and reporting issues.
+App version & changelog, socials, licenses, share logs, and links for translating, donating and reporting issues. [`🎉 Shortcuts feature ↗`](/features/shortcuts/) [`📄 About Tips ↗`](/tips/#about-tips)
 
 ---
 
@@ -894,7 +1098,7 @@ App version & changelog, socials, [shortcuts](/features/shortcuts/), licenses, s
 
 ---
 
-## [YouTube Pages](https://namidaco.github.io/namida_docs/pages/youtube/)
+## [YouTube Pages](https://namidaco.github.io/namida-docs/pages/youtube/)
 
 ---
 title: "YouTube Pages"
@@ -904,7 +1108,7 @@ description: "The pages of the YouTube section"
 # YouTube Pages
 
 The pages of the [YouTube](/features/youtube/) section.
-Most pages have local variant and hosted variant for when you are signed in.
+Most pages have a local variant and a hosted variant for when you are signed in, the hosted one shows your account's live data.
 
 ### Home {#home}
 
@@ -912,9 +1116,7 @@ Your YouTube feed, with notifications and subscriptions when [signed in](/settin
 
 ### Playlists {#playlists}
 
-[`⚙️ Playlists & History ↗`](/features/playlists-history/)
-
-Your YouTube playlists, along with the built-in ones: History, Most Played and Liked. You can create playlists, and import your existing playlists and channels from a YouTube takeout export.
+Your YouTube playlists, along with the built-in ones: History, Most Played and Liked. You can create playlists, and import your existing playlists and channels from a YouTube takeout export. [`🎉 Playlists & History feature ↗`](/features/playlists-history/) [`🎉 YouTube Playlists feature ↗`](/features/youtube/#playlists)
 
 ### Channels {#channels}
 
@@ -926,18 +1128,18 @@ Your YouTube watch history inside Namida, separate from the local one, with its 
 
 ### Downloads {#downloads}
 
-[`⚙️ Downloads ↗`](/features/youtube/#downloads)
-
-Manage all download tasks, pause, resume, retry or cancel, with a failed only filter. Playlists get their own batch download page.
+Manage all download tasks, pause, resume, retry or cancel, with a failed only filter. Playlists get their own batch download page. [`🎉 Downloads feature ↗`](/features/youtube/#downloads)
 
 ### Search {#search}
 
 Search YouTube directly, results include videos, playlists and channels. Offline search is available for browsing what you already have.
 
+---
+
 ### Related Pages {#related}
 
-- [YouTube feature](/features/youtube/)
-- [Youtube Settings](/settings/5-youtube-settings/)
+- [🎉 YouTube feature](/features/youtube/)
+- [⚙️ Youtube Settings](/settings/5-youtube-settings/)
 
 ---
 
@@ -946,7 +1148,56 @@ Search YouTube directly, results include videos, playlists and channels. Offline
 
 ---
 
-## [Theme](https://namidaco.github.io/namida_docs/settings/1-theme-settings/)
+## [Permissions](https://namidaco.github.io/namida-docs/permissions/)
+
+---
+title: "Permissions"
+description: "The permissions Namida uses and why"
+---
+
+# Permissions
+
+The permissions Namida uses and why. Nothing is used for tracking, there are no analytics at all.
+
+### Always Used {#always}
+
+- `WAKE_LOCK`, `FOREGROUND_SERVICE` & `FOREGROUND_SERVICE_MEDIA_PLAYBACK`: keep the app alive for media playback, otherwise the system would kill playback randomly.
+- `INTERNET`: used for many things, like artist/album images, streaming & downloading, lyrics fetching, etc.
+- `READ_EXTERNAL_STORAGE` (Android <= 12): list files from indexer folders only.
+- `READ_MEDIA_AUDIO` (Android 13+): list audio files from indexer folders only.
+- `READ_MEDIA_VIDEO` (Android 13+): list video files from indexer folders only, for video playback.
+- `READ_MEDIA_IMAGES` (Android 13+): list image files from indexer folders only, for fallback covers like `cover.jpg`.
+- `VIBRATE`: vibrate/haptic feedback for some actions, can be turned off in [`⚙️ Configure Vibration ↗`](/settings/6-extras-settings/#vibration).
+- `QUERY_ALL_PACKAGES`: to allow opening custom equalizer apps.
+
+### Requested When Needed {#requested}
+
+- `WRITE_EXTERNAL_STORAGE` (Android <= 10) & `MANAGE_EXTERNAL_STORAGE` / all files access (Android 10+): used for actions that write files, like:
+  - editing audio tags
+  - creating or auto restoring backups
+  - saving artworks
+  - deleting files
+  - compressing images & fixing yt-dlp images
+  - exporting playlists as M3U
+  - downloading YouTube content
+  - playing tracks from a root folder
+  - the in-app file browser
+- `POST_NOTIFICATIONS`: post notifications like history import or download progress.
+- `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS`: improve downloads, they can be throttled when the app is battery restricted.
+- `WRITE_SETTINGS`: to set audio as ringtone, etc.
+
+::: callout info
+On Windows & Linux, none of these apply, the app works like any normal desktop app.
+:::
+
+---
+
+<sub>by @claude</sub>
+
+
+---
+
+## [Theme](https://namidaco.github.io/namida-docs/settings/1-theme-settings/)
 
 ---
 title: "Theme"
@@ -971,7 +1222,7 @@ Might affect performance on low end devices. You can turn it off and set a [Defa
 
 ### Pick Colors from Device Wallpaper {#wallpaper-colors}
 
-`Android 12+ only`
+`💻 Android 12+ only`
 
 Pick colors from your device wallpaper instead of the artwork. Requires [Auto Coloring](#auto-coloring) to be on.
 
@@ -998,7 +1249,7 @@ Change the app language. Translations are made by the community, you can help tr
 
 ---
 
-## [Indexer](https://namidaco.github.io/namida_docs/settings/2-indexer-settings/)
+## [Indexer](https://namidaco.github.io/namida-docs/settings/2-indexer-settings/)
 
 ---
 title: "Indexer"
@@ -1063,12 +1314,12 @@ Files smaller or shorter than these values will be skipped, useful for filtering
 
 ### Use Media Store {#use-media-store}
 
-`Android only`
+`💻 Android only`
 
 Uses the Android system index instead of Namida's own indexer. Instant indexing time, but some metadata tags will be missing, `.nomedia` is forcefully respected, and YouTube integration for local library will not work.
 
 ::: callout warning "Deprecated"
-This feature is removed as of v6.5.5. With the new tagger (`taglib`) being stable and fast, and with this option lacking critical aspect of Namida and many users reporting issues after manually enabling and forgetting it, It is no longer required to keep this feature.
+This feature is removed as of v6.5.5. With the new tagger (`taglib`) being stable and fast, and with this option lacking critical aspects of Namida, and many users reporting issues after manually enabling and forgetting it, it is no longer worth keeping.
 :::
 
 ### Include Videos {#include-videos}
@@ -1094,7 +1345,7 @@ Refresh checks for newly added or deleted music. Re-index rebuilds the whole lib
 
 ---
 
-## [Playback](https://namidaco.github.io/namida_docs/settings/3-playback-settings/)
+## [Playback](https://namidaco.github.io/namida-docs/settings/3-playback-settings/)
 
 ---
 title: "Playback"
@@ -1133,17 +1384,17 @@ Never, when miniplayer is expanded, or when miniplayer is expanded and a video i
 
 ### Display Favourite Button in Notification {#fav-button-notification}
 
-`Android only`
+`💻 Android only`
 
 The notification thumbnail might get displaced on some devices.
 
 ### Display Stop Button in Notification {#stop-button-notification}
 
-`Android only`
+`💻 Android only`
 
 ### Display Artwork on Lockscreen {#artwork-lockscreen}
 
-`Android <= 12 only`
+`💻 Android <= 12 only`
 
 ### Kill Player After Dismissing App {#kill-player}
 
@@ -1151,7 +1402,7 @@ Stops playback completely when you swipe the app away.
 
 ### On Notification Tap {#on-notification-tap}
 
-`Android only`
+`💻 Android only`
 
 Choose what opens: the app, the miniplayer or the queue.
 
@@ -1165,13 +1416,13 @@ Normalizes volume by reading the replay gain tag, or the info provided by YouTub
 
 ### Skip Silence {#skip-silence}
 
-`Android only`
+`💻 Android only`
 
 Skips silent parts of the audio.
 
 ### Gapless Playback {#gapless-playback}
 
-Removes the small loading delay between tracks, Useful for some albums or for those who can't wait 0.067 seconds between tracks.
+Removes the small loading delay between tracks, useful for some albums or for those who can't wait 0.067 seconds between tracks.
 Works by prefetching the next track. This is a beta feature.
 
 ### Crossfade {#crossfade}
@@ -1196,13 +1447,13 @@ Pause playback or do nothing when volume reaches zero, with an option to resume 
 
 ### On Interruption {#on-interruption}
 
-`Android only`
+`💻 Android only`
 
 Control what happens on calls and notifications: pause, duck (lower the volume) or do nothing, and whether to resume after the interruption ends.
 
 ### On Device Connect {#on-device-connect}
 
-`Android only`
+`💻 Android only`
 
 Resume playback when a wired or wireless device is connected, if playback was paused by disconnecting it.
 
@@ -1235,7 +1486,7 @@ Sets the minimum seconds or percentage of a track to count it as a listen in his
 
 ---
 
-## [Customizations](https://namidaco.github.io/namida_docs/settings/4-customization-settings/)
+## [Customizations](https://namidaco.github.io/namida-docs/settings/4-customization-settings/)
 
 ---
 title: "Customizations"
@@ -1248,7 +1499,14 @@ Tweak the looks of every part of the app.
 
 ### General {#general}
 
-- Enable Blur Effect, Enable Glow Effect, Enable Parallax Effect. All three might affect performance on low end devices.
+- Enable Blur Effect, a soft blur behind some small cards (like duration card on videos/track card in home page).
+- Enable Glow Effect, a drop shadow effect around artworks and images.
+- Enable Parallax Effect, the app layer gets smaller while expanding the miniplayer, giving a sense of depth.
+
+::: callout info
+All three might affect performance on low end devices, they are the first things to turn off if the app feels slow, or use [Performance Mode](/settings/8-advanced-settings/#performance-mode).
+:::
+
 - Display remaining duration instead of total.
 - Display actual position instead of difference while seeking.
 - Border Radius Multiplier, controls how rounded the corners are.
@@ -1260,7 +1518,7 @@ Tweak the looks of every part of the app.
 - Display track number in album page.
 - Album card top right date.
 - Force squared album thumbnail.
-- Staggered album gridview.
+- Staggered album gridview, allows non squared artworks to keep their real shape, so the grid flows like a mosaic instead of equal squares.
 - Size of album thumbnail & height of album tile.
 
 ### Track Tile Customization {#track-tile}
@@ -1285,14 +1543,13 @@ Tweak the looks of every part of the app.
 
 ### App Icon {#app-icon}
 
-`Android only`
+`💻 Android only`
 
 Choose a different icon for the app.
 Icons can be submitted on [Our Discord](https://discord.com/channels/1156253663803740271/1423484977693327430/1423671224520671362).
 
-
 ::: callout info
-It is not possible to add a custom icon directly from within Namida. Android doesn't allow this, all icons must be configured prehand.
+It is not possible to add a custom icon directly from within Namida. Android doesn't allow this, all icons must be configured beforehand.
 You can use other methods like a Launcher supporting icon packs, or patch the app.
 :::
 
@@ -1303,7 +1560,7 @@ You can use other methods like a Launcher supporting icon packs, or patch the ap
 
 ---
 
-## [Youtube](https://namidaco.github.io/namida_docs/settings/5-youtube-settings/)
+## [Youtube](https://namidaco.github.io/namida-docs/settings/5-youtube-settings/)
 
 ---
 title: "Youtube"
@@ -1356,9 +1613,11 @@ Show the dislike count on videos, data is provided by [returnyoutubedislike.com]
 
 ### Downloads {#downloads}
 
-- Downloads Metadata tags, extract artist, title & album from video info by default.
+- Downloads Metadata tags, controls how tags are filled by default:
+  - If disabled: the channel name becomes the artist, and the video title becomes the title.
+  - If enabled: the video title is split into "Artist - Title" (Artist falls back to the channel name if splitting failed), the channel is also added as the album, and the genre is set to "Nightcore" if the title contains it.
 - Default Download Location.
-- Download notifications `Windows+Linux only`.
+- Download notifications `💻 Windows+Linux only`.
 
 ### On Opening Youtube Link {#on-opening-youtube-link}
 
@@ -1394,7 +1653,7 @@ Flags are experimental, defaults are fine for most people.
 
 ---
 
-## [Extras](https://namidaco.github.io/namida_docs/settings/6-extras-settings/)
+## [Extras](https://namidaco.github.io/namida-docs/settings/6-extras-settings/)
 
 ---
 title: "Extras"
@@ -1415,7 +1674,7 @@ Quick navigation between library tabs, the items stay inside the drawer both way
 
 ### Enable Picture-in-Picture {#pip}
 
-`Android only`
+`💻 Android only`
 
 Keep the video playing in a small floating window when leaving the app.
 
@@ -1462,7 +1721,7 @@ Where album and artist images come from, with separate lists for albums and arti
 
 ### Immersive Mode {#immersive-mode}
 
-`Android only`
+`💻 Android only`
 
 Hide status & navigation bars while the miniplayer is expanded.
 
@@ -1476,7 +1735,7 @@ Allows pasting links and texts inside the searchbar on the go.
 
 ### Vibration Type {#vibration}
 
-`Android only`
+`💻 Android only`
 
 Vibration or haptic feedback for some actions, or none.
 
@@ -1514,7 +1773,7 @@ Flags are experimental, defaults are fine for most people.
 
 ---
 
-## [Backup & Restore](https://namidaco.github.io/namida_docs/settings/7-backup-restore-settings/)
+## [Backup & Restore](https://namidaco.github.io/namida-docs/settings/7-backup-restore-settings/)
 
 ---
 title: "Backup & Restore"
@@ -1573,7 +1832,7 @@ Each import shows a small guide for getting the export file. You can limit the i
 
 ---
 
-## [Advanced](https://namidaco.github.io/namida_docs/settings/8-advanced-settings/)
+## [Advanced](https://namidaco.github.io/namida-docs/settings/8-advanced-settings/)
 
 ---
 title: "Advanced"
@@ -1594,21 +1853,29 @@ Rebuilds the local videos index.
 
 ### Remove Source from History {#remove-source-history}
 
-Remove all listens that came from a specific source (like an import) from your history.
-
-[`⚙️ History Import ↗`](/features/playlists-history/#import)
+Remove all listens that came from a specific source (like an import) from your history. [`🎉 History Import feature ↗`](/features/playlists-history/#import)
 
 ### Update Directory Path {#update-directory-path}
 
-Moved your music to a new folder? This updates all track paths from the old directory to the new one, keeping stats and listens.
+Moved your music to a new folder? This updates all track paths from the old directory to the new one, keeping stats and listens. [`📒 Update Directory Path Guide ↗`](/guides/medium/#update-directory-path)
 
 ### Fix yt-dlp Big Thumbnail Size {#fix-ytdlp-thumbnail}
 
-Fixes files downloaded by yt-dlp that have oversized embedded thumbnails.
+Files downloaded by yt-dlp can carry a huge embedded thumbnail (webp, usually re-encoded). This re-embeds max image quality available directly without re-encoding it to another format.
+Expected result: smaller file sizes and faster artwork loading, the audio itself is untouched. (example: 1MB -> 128KB per image)
+
+::: callout warning
+Output replaces the files in the selected folder
+:::
 
 ### Compress Images {#compress-images}
 
 Compress artworks and cached images to save storage, you choose the compression percentage.
+Expected result: noticeably less storage used by images, with little visible quality loss at moderate percentages. Original audio files are untouched.
+
+::: callout info
+Output is in a new folder "storage/Namida/Compressed", and won't directly replace the folder you selected
+:::
 
 ### Cache Limits {#cache-limits}
 
@@ -1629,7 +1896,7 @@ Clearing image cache results in a library without images, use only to rebuild th
 
 ---
 
-## [Settings](https://namidaco.github.io/namida_docs/settings/)
+## [Settings](https://namidaco.github.io/namida-docs/settings/)
 
 ---
 title: "Settings"
@@ -1641,7 +1908,7 @@ description: "Explanation for in-app settings"
 Everything you can configure in Namida, in the same order as the in-app settings page.
 
 ::: callout info
-Some settings are only available on specific platforms or android versions. They are labeled like `Android 12+ only`.
+Some settings are only available on specific platforms or android versions. They are labeled like `💻 Android 12+ only`.
 :::
 
 ::: callout tip
@@ -1666,7 +1933,7 @@ Press the search icon in Namida settings to easily find the setting you want.
 
 ---
 
-## [Tips & Tricks](https://namidaco.github.io/namida_docs/tips/)
+## [Tips & Tricks](https://namidaco.github.io/namida-docs/tips/)
 
 ---
 title: "Tips & Tricks"
@@ -1687,6 +1954,7 @@ Not so obvious features you might have missed.
 ### Search {#search}
 
 - Swipe up on the search button to open the keyboard, swipe down to close it.
+- Pasting a YouTube link or a playlist link in the searchbar automatically opens it.
 - When playing from search, you can choose the [Play Mode](/pages/library/#search): selected track only, search results, album, first artist or first genre.
 - Links and texts you copy can appear right in the searchbar, enable [Clipboard Monitoring](/settings/6-extras-settings/#clipboard-monitoring).
 - Settings has its own search, press the search icon at the top of settings.
@@ -1694,13 +1962,21 @@ Not so obvious features you might have missed.
 ### Player {#player}
 
 - Tap the current position to seek backwards, tap the total duration to seek forwards, by the [Seek Duration](/settings/3-playback-settings/#seek-duration).
-- Long press the current position to seek to start, long press the total duration to keep seeking forwards
+- Long press the current position to seek to start, long press the total duration to keep seeking forwards.
+- While seeking, swipe upwards to cancel. Seeking near the starting edge snaps to the very start.
 - Swipe the miniplayer left or right to change tracks.
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
-- Long press the lyrics to enter fullscreen.
+- Long press the lyrics to enter fullscreen, and zoom in/out on the lyrics to change the font size.
 - Long press the audio button in the player to open [Playback Settings](/settings/3-playback-settings/) directly.
 - Long press the video button in the player to control quality or change audio track for videos.
 - Long press lyrics button to configure lyrics for the current track.
+- Press the info text in the player to open the track menu, and press the album name at the top to open the album.
+- Long press the heart icon to add the current track to a playlist.
+- To switch the artist/title locations, toggle "Display artist before title" in [Customizations](/settings/4-customization-settings/#miniplayer-customization).
+- Audio configs (speed, pitch, effects) can be set per item, open the Sound Control page with the audio effects icon in the player.
+- Pressing an item that is already playing, from another queue, silently rebuilds the queue without stopping playback.
+- Open any track's dialog and press play to quickly start a new queue with only that track.
+- Zoom in on the video in the local player to enter fullscreen.
 
 ### Track Menu {#track-menu}
 
@@ -1714,25 +1990,40 @@ Long press a track (or tap its menu) for more than you might expect:
 - Set Youtube Link, attach a video to any local track.
 - Add more from this Album, Artist or Folder to queue.
 
+### Library Pages {#library-pages}
+
+- Pull down to refresh: the tracks page refreshes the library, the playlists page refetches M3U & server playlists, and YouTube pages refresh their content.
+- In media subpages (album tracks, artist tracks, etc), long press the filter icon to quickly open a smart playlist with that media name.
+- In media pages, long press the grid icon to choose a specific count per row (higher numbers can cause performance issues).
+- In the tracks page and media subpages, long press shuffle/play for advanced options.
+- Tap the resume button in media subpages to resume from the last played track, and long press it to jump to that track.
+- If a network image source is enabled, you can edit an album/artist display image by opening its dialog and pressing the artwork edit icon at the top right. Playlist artworks can always be edited.
+  - Note that this is different from editing tags for all tracks inside. Editing artwork from here just edits the display image and doesn't touch the audio files.
+
 ### Downloading {#downloading}
 
 - While downloading from YouTube you can edit the file tags and build the output filename with [yt-dlp style formats](/features/youtube/#filename-formats), like `%(title)s [(%(channel)s)]`.
 - This works for single downloads and for batch playlist downloads, where playlist formats like `%(playlist_autonumber)s` number the files for you.
 - In a playlist download page, selecting the output folder automatically marks the videos that are not downloaded yet, as long as you haven't selected any manually. The long press to select in between trick works there too.
+- In the download sheet, press the "show webm" icon button to show experimental qualities, related: `ALLOW_EXPERIMENTAL_CODECS` & `PREFER_OPUS_FORMAT` in [Flags](/settings/5-youtube-settings/#flags).
 
 ### YouTube {#youtube-tips}
 
+- In the player, press the arrow down to open the menu for the current video. You can add it to favourites from there, which is separate from liking (liking is tied to your YouTube account, while favourites live in Namida only).
 - Long press the copy button on a video to copy specific info, like the title, link or channel.
 - Signing in to your account can provide better download speed and fix some playback issues.
 - You can import your history, playlists and subscriptions from a [YouTube takeout](/features/youtube/#history-import).
 - Set a cached video's priority to VIP so it never gets auto deleted. Private and deleted videos become VIP automatically.
+- Namida can show info of private and deleted videos, thanks to [Filmot](https://filmot.com/).
+- In the youtube search tab, offline search is very useful to find videos you watched previously. You can sort results by most played, recent listen or first listen. Import your YouTube history for better results.
+- Take a snapshot of a channel or playlist: open the videos tab, press "load all", wait, then open the menu and add to a playlist.
 - Extra experimental switches hide behind the flag icon in [Youtube Settings](/settings/5-youtube-settings/#flags) and [Extras Settings](/settings/6-extras-settings/#flags).
 
 ### History {#history-tips}
 
 - Tap calendar icon at top to jump to a specific day.
 - Tap a year chip to jump to the same day but in that year.
-- Most Played supports custom time ranges, see your top tracks of any period.
+- Most Played supports custom time ranges, see your top tracks of any period. Use the slider to navigate adjacent periods easier.
 - Open a track's listens dialog, tap a listen to jump to that day in history, or use the button beside it to open Most Played for that range.
 - Replace all listens of a track with another track, useful after re-downloading a file (Track's Dialog -> Advanced -> Replace all listens).
 - Imported a wrong source? [Remove it from history](/settings/8-advanced-settings/#remove-source-history) in one go.
@@ -1747,10 +2038,27 @@ Long press a track (or tap its menu) for more than you might expect:
 
 - Put a `cover.jpg` (or similar) image inside a folder to use it as the folder artwork.
 - Put a `.info.txt` file inside a folder to display small info about it.
+- Set a specific folder as default, Namida opens it on app launch.
+
+### Scrolling {#scrolling}
+
+The scrollbar needs a small hold, plus dragging slightly outwards, before it starts scrolling. This is intentional: android usually ignores vertical drags close to the edge, and most apps compensate with a big instantly draggable scrollbar, which usually causes many accidental scrolls. Namida keeps the minimal design instead.
 
 ### Colors {#colors-tips}
 
 - In the color palette dialog, long press a color to remove it, and tap a mix to use it as a default color.
+
+### About Page {#about-tips}
+
+- Have an issue? Share logs from Settings -> About.
+- Check your version there too, and an icon appears on the app bar when there is a new version.
+- Open the side menu and press the Namida logo to open the About page.
+- Do NOT press the logo in the About page!! or something very scary will happen!!!1!
+
+### Misc {#misc-tips}
+
+- Long press/Hover on any icon to show a tooltip explaining what it does
+- Did you know you can unlock crossfade and party mode for free? Try reading the dialog that shows, and maybe fight it.
 
 ### Desktop {#desktop-tips}
 

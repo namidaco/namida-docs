@@ -2,13 +2,13 @@
 type: concept
 title: "Backup & Restore"
 description: "Backup your database and settings"
-source: "https://namidaco.github.io/namida_docs/settings/7-backup-restore-settings/"
+source: "https://namidaco.github.io/namida-docs/settings/7-backup-restore-settings/"
 path: /settings/7-backup-restore-settings/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.456Z"
+  generated_at: "2026-08-30T21:51:03.654Z"
 ---
 ---
 title: "Backup & Restore"

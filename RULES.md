@@ -44,12 +44,22 @@ Content...
 - Every section header gets an explicit id: `### Downloads {#downloads}`. This is required, docmd prefixes auto generated ids with the page slug, which breaks cross page anchors. Explicit ids stay stable.
 - The footer credits whoever wrote or meaningfully edited the file, multiple names are fine: `<sub>by @claude & @someone</sub>`.
 
-## Chips
+## Chips & Links
 
 Two kinds of inline code chips are used:
 
-- **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `Android only` ``, `` `Android 12+ only` ``, `` `Windows+Linux only` ``. Source of truth: the `NamidaFeaturesAvailablity` value declared in the setting's enum (any enum `with SettingKeysBase` in `lib/ui/widgets/settings/`).
-- **Related setting link**: feature sections link their setting with a clickable chip right under the header: `` [`⚙️ Miniplayer Settings ↗`](/settings/5-youtube-settings/#miniplayer) ``. Name the setting or use a generic name, always end with the ↗ arrow. Keep a "Related Settings" list at the bottom of feature pages too.
+- **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `NamidaFeaturesAvailablity` value declared in the setting's enum (any enum `with SettingKeysBase` in `lib/ui/widgets/settings/`).
+- **Related link chip**: sections link their related setting/feature/page/guide with a clickable chip placed at the END of the line or the end of the section, never right under the header: ``[`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)``. More than one chip is fine when applicable. Keep a "Related Settings" list at the bottom of feature pages too.
+
+Link icons, always include the type in the name:
+
+| Type          | Icon | Naming example                |
+| ------------- | ---- | ----------------------------- |
+| Setting       | ⚙️   | `⚙️ Configure Downloads ↗`    |
+| Feature       | 🎉   | `🎉 Sync feature ↗`           |
+| Page          | 📄   | `📄 Tracks Page ↗`            |
+| Guide         | 📒   | `📒 Sync Guide ↗`             |
+| Platform only | 💻   | used for availability context |
 
 ## Callouts
 
@@ -74,7 +84,10 @@ Types used: `info`, `tip`, `warning`.
 - `docs/settings/`: one file per in-app settings section, numbered by the in-app order (1-theme ... 8-advanced). Every setting gets its own H3 with a one to three line explanation. Order inside the file follows the in-app order.
 - `docs/features/`: one file per feature, sections describe what the user can do.
 - `docs/pages/`: a tour of in-app pages, grouped (library / youtube / other), small description per page plus chips.
+- `docs/guides/`: step by step guides, grouped by level (beginner / medium / namider).
 - `docs/tips.md`: not so obvious features, grouped by topic.
+- `docs/permissions.md`: the permissions the app uses and why.
+- `docs/not-planned.md`: features that will not be added and why. The FAQ keeps short answers and links here.
 - Sidebar navigation is manual: every new page needs an entry in `docmd.config.json` under `navigation`.
 
 ## Sourcing from Code

@@ -17,7 +17,7 @@ Quick navigation between library tabs, the items stay inside the drawer both way
 
 ### Enable Picture-in-Picture {#pip}
 
-`Android only`
+`💻 Android only`
 
 Keep the video playing in a small floating window when leaving the app.
 
@@ -64,7 +64,7 @@ Where album and artist images come from, with separate lists for albums and arti
 
 ### Immersive Mode {#immersive-mode}
 
-`Android only`
+`💻 Android only`
 
 Hide status & navigation bars while the miniplayer is expanded.
 
@@ -78,7 +78,7 @@ Allows pasting links and texts inside the searchbar on the go.
 
 ### Vibration Type {#vibration}
 
-`Android only`
+`💻 Android only`
 
 Vibration or haptic feedback for some actions, or none.
 

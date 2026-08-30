@@ -21,7 +21,7 @@ Might affect performance on low end devices. You can turn it off and set a [Defa
 
 ### Pick Colors from Device Wallpaper {#wallpaper-colors}
 
-`Android 12+ only`
+`💻 Android 12+ only`
 
 Pick colors from your device wallpaper instead of the artwork. Requires [Auto Coloring](#auto-coloring) to be on.
 

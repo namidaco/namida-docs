@@ -2,13 +2,13 @@
 type: concept
 title: Features
 description: "Features in Namida"
-source: "https://namidaco.github.io/namida_docs/features/"
+source: "https://namidaco.github.io/namida-docs/features/"
 path: /features/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.440Z"
+  generated_at: "2026-08-30T21:51:03.627Z"
 ---
 ---
 title: "Features"

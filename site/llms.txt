@@ -4,53 +4,65 @@
 
 ## Documentation Files
 
-- [FAQ](https://namidaco.github.io/namida_docs/faq/)
+- [FAQ](https://namidaco.github.io/namida-docs/faq/)
   Frequently Asked Questions
-- [Features](https://namidaco.github.io/namida_docs/features/)
+- [Features](https://namidaco.github.io/namida-docs/features/)
   Features in Namida
-- [Library & Indexing](https://namidaco.github.io/namida_docs/features/library-indexing/)
+- [Library & Indexing](https://namidaco.github.io/namida-docs/features/library-indexing/)
   A powerful folders based music library
-- [Media Servers](https://namidaco.github.io/namida_docs/features/media-servers/)
+- [Media Servers](https://namidaco.github.io/namida-docs/features/media-servers/)
   Index your servers like normal folders
-- [Playback](https://namidaco.github.io/namida_docs/features/playback/)
+- [Playback](https://namidaco.github.io/namida-docs/features/playback/)
   Queues, effects, videos and lyrics
-- [Playlists & History](https://namidaco.github.io/namida_docs/features/playlists-history/)
+- [Playlists & History](https://namidaco.github.io/namida-docs/features/playlists-history/)
   Flexible playlists and a reliable history system
-- [Shortcuts](https://namidaco.github.io/namida_docs/features/shortcuts/)
+- [Shortcuts](https://namidaco.github.io/namida-docs/features/shortcuts/)
   Keyboard shortcuts on desktop
-- [Sync](https://namidaco.github.io/namida_docs/features/sync/)
+- [Sync](https://namidaco.github.io/namida-docs/features/sync/)
   Sync app data between your devices
-- [Tag Editor](https://namidaco.github.io/namida_docs/features/tag-editor/)
+- [Tag Editor](https://namidaco.github.io/namida-docs/features/tag-editor/)
   Edit your music tags right inside Namida
-- [YouTube](https://namidaco.github.io/namida_docs/features/youtube/)
+- [YouTube](https://namidaco.github.io/namida-docs/features/youtube/)
   Stream, download and watch YouTube inside Namida
-- [Welcome](https://namidaco.github.io/namida_docs/)
+- [Beginner Guides](https://namidaco.github.io/namida-docs/guides/beginner/)
+  Quick fixes and everyday tasks
+- [Guides](https://namidaco.github.io/namida-docs/guides/)
+  Step by step guides for common tasks
+- [Medium Guides](https://namidaco.github.io/namida-docs/guides/medium/)
+  Linking videos, syncing and smart playlists
+- [Namider Guides](https://namidaco.github.io/namida-docs/guides/namider/)
+  For those who go all the way
+- [Welcome](https://namidaco.github.io/namida-docs/)
   Namida documentation
-- [Pages](https://namidaco.github.io/namida_docs/pages/)
+- [Not Planned](https://namidaco.github.io/namida-docs/not-planned/)
+  Features that will not be added, and why
+- [Pages](https://namidaco.github.io/namida-docs/pages/)
   A tour of every page in Namida
-- [Library](https://namidaco.github.io/namida_docs/pages/library/)
+- [Library](https://namidaco.github.io/namida-docs/pages/library/)
   The main library pages
-- [Other Pages](https://namidaco.github.io/namida_docs/pages/other/)
+- [Other Pages](https://namidaco.github.io/namida-docs/pages/other/)
   Stats, Sync Manager and About
-- [YouTube Pages](https://namidaco.github.io/namida_docs/pages/youtube/)
+- [YouTube Pages](https://namidaco.github.io/namida-docs/pages/youtube/)
   The pages of the YouTube section
-- [Theme](https://namidaco.github.io/namida_docs/settings/1-theme-settings/)
+- [Permissions](https://namidaco.github.io/namida-docs/permissions/)
+  The permissions Namida uses and why
+- [Theme](https://namidaco.github.io/namida-docs/settings/1-theme-settings/)
   The overall vibe of your player
-- [Indexer](https://namidaco.github.io/namida_docs/settings/2-indexer-settings/)
+- [Indexer](https://namidaco.github.io/namida-docs/settings/2-indexer-settings/)
   Manage your music Library
-- [Playback](https://namidaco.github.io/namida_docs/settings/3-playback-settings/)
+- [Playback](https://namidaco.github.io/namida-docs/settings/3-playback-settings/)
   Audio, video and queue behavior
-- [Customizations](https://namidaco.github.io/namida_docs/settings/4-customization-settings/)
+- [Customizations](https://namidaco.github.io/namida-docs/settings/4-customization-settings/)
   Customize how your player looks, make it yours
-- [Youtube](https://namidaco.github.io/namida_docs/settings/5-youtube-settings/)
+- [Youtube](https://namidaco.github.io/namida-docs/settings/5-youtube-settings/)
   Customize Youtube experience
-- [Extras](https://namidaco.github.io/namida_docs/settings/6-extras-settings/)
+- [Extras](https://namidaco.github.io/namida-docs/settings/6-extras-settings/)
   Extra settings to fine-tune your experience
-- [Backup & Restore](https://namidaco.github.io/namida_docs/settings/7-backup-restore-settings/)
+- [Backup & Restore](https://namidaco.github.io/namida-docs/settings/7-backup-restore-settings/)
   Backup your database and settings
-- [Advanced](https://namidaco.github.io/namida_docs/settings/8-advanced-settings/)
+- [Advanced](https://namidaco.github.io/namida-docs/settings/8-advanced-settings/)
   Advanced Settings, don't touch
-- [Settings](https://namidaco.github.io/namida_docs/settings/)
+- [Settings](https://namidaco.github.io/namida-docs/settings/)
   Explanation for in-app settings
-- [Tips & Tricks](https://namidaco.github.io/namida_docs/tips/)
+- [Tips & Tricks](https://namidaco.github.io/namida-docs/tips/)
   Not so obvious features you might have missed

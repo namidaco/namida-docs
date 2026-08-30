@@ -9,28 +9,29 @@ description: "Flexible playlists and a reliable history system"
 
 Normal playlists with custom order and the ability to set custom artworks. Also:
 
-- M3U playlists, import them natively or keep them synced with the original M3U file, so changes made in Namida reach other apps too. Any playlist can be exported as M3U.
+- M3U playlists, import them natively or keep them synced with the original M3U file, so changes made in Namida reach other apps too. Any playlist can be converted to M3U and back, or exported as M3U one time. Make sure the folder holding your M3U files is in the indexer folders, so they show up.
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
-- Custom order for playlists, Press "edit icon" at top to enable reordering.
-- Custom order for playlist tracks, Press "lock icon" at top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
+- Custom order for playlists, press the edit icon at the top to enable reordering.
+- Custom order for playlist tracks, press the lock icon at the top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
+- Playlists can be filtered/searched, and can have moods, usable by the player's add tracks (mood) feature.
 
 ::: callout warning
-Sorting tracks by a property means your custom order will be lost. you should see a warning and approval is required before applying the new sort.
+Sorting tracks by a property means your custom order will be lost. You will see a warning, and approval is required before applying the new sort.
 :::
+
+Also see the [`🎉 YouTube feature ↗`](/features/youtube/#playlists) for how local and YouTube playlists relate.
 
 ### Smart Playlists {#smart-playlists}
 
-Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more.
+Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
 
 ### History {#history}
 
-[`⚙️ Count a Listen After ↗`](/settings/3-playback-settings/#count-listen-after)
-
-A reliable and flexible history system. You specify the minimum seconds or percentage to count a listen, and it can be easily modified, manipulated and imported.
+A reliable and flexible history system. You specify the minimum seconds or percentage to count a listen, and it can be easily modified, manipulated and imported. [`⚙️ Configure Listen Counting ↗`](/settings/3-playback-settings/#count-listen-after)
 
 Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range.
 
-[`History Tips ↗`](/tips#history-tips)
+[`📄 History Tips ↗`](/tips/#history-tips)
 
 ### Most Played {#most-played}
 
@@ -46,17 +47,15 @@ Generate tracks related to the current one, typically the ones you often listene
 
 ### History Import {#import}
 
-[`⚙️ Import Settings ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
-
-Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history.
+Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Playback, Count a Listen After](/settings/3-playback-settings/#count-listen-after)
-- [Backup & Restore, History Imports](/settings/7-backup-restore-settings/#import-youtube-history)
-- [Advanced, Remove Source from History](/settings/8-advanced-settings/#remove-source-history)
+- [⚙️ Playback, Count a Listen After](/settings/3-playback-settings/#count-listen-after)
+- [⚙️ Backup & Restore, History Imports](/settings/7-backup-restore-settings/#import-youtube-history)
+- [⚙️ Advanced, Remove Source from History](/settings/8-advanced-settings/#remove-source-history)
 
 ---
 

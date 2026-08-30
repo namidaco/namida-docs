@@ -2,13 +2,13 @@
 type: concept
 title: Shortcuts
 description: "Keyboard shortcuts on desktop"
-source: "https://namidaco.github.io/namida_docs/features/shortcuts/"
+source: "https://namidaco.github.io/namida-docs/features/shortcuts/"
 path: /features/shortcuts/
 version: v6.5.0
-updated: 2026-08-29
+updated: 2026-08-30
 okf:
   generated_by: "@docmd/plugin-okf"
-  generated_at: "2026-08-29T01:43:41.444Z"
+  generated_at: "2026-08-30T21:51:03.632Z"
 ---
 ---
 title: "Shortcuts"
@@ -17,7 +17,7 @@ description: "Keyboard shortcuts on desktop"
 
 # Shortcuts
 
-`Windows+Linux only`
+`💻 Windows+Linux only`
 
 Control Namida from the keyboard on desktop.
 
@@ -62,14 +62,14 @@ Setting a rating writes it to the file tags of the current track.
 
 ### Custom Hotkeys {#custom-hotkeys}
 
-The shortcuts above only work when the app is focused (app-wide). You can set system-wide shortcuts by pressing shortcut icon at the very top (or by going to Settings -> About -> Shortcuts). From there you can record your own hotkeys for playback actions like play/pause, next/previous, seek and volume, etc...
+The shortcuts above only work when the app is focused (app-wide). You can set system-wide shortcuts by pressing the shortcut icon at the very top (or by going to Settings -> About -> Shortcuts). From there you can record your own hotkeys for playback actions like play/pause, next/previous, seek and volume, etc...
 
 ---
 
 ### Related Settings {#related-settings}
 
-- [Playback, Seek Duration](/settings/3-playback-settings/#seek-duration)
-- [Extras, Library Tabs](/settings/6-extras-settings/#library-tabs)
+- [⚙️ Playback, Seek Duration](/settings/3-playback-settings/#seek-duration)
+- [⚙️ Extras, Library Tabs](/settings/6-extras-settings/#library-tabs)
 
 ---
 
