@@ -2,6 +2,8 @@
 
 Documentation site for [namida](https://github.com/namidaco/namida), built with [docmd](https://github.com/docmd-io/docmd).
 
+Available at [docs.namida.app](https://docs.namida.app).
+
 ## Run locally
 
 ```bash

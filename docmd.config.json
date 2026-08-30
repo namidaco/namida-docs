@@ -1,6 +1,6 @@
 {
   "title": "Namida",
-  "url": "https://namidaco.github.io/namida-docs",
+  "url": "https://docs.namida.app",
   "src": "docs",
   "out": "site",
   "engine": "js",
