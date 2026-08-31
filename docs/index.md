@@ -43,7 +43,8 @@ You can search these docs (⌘k), or ask the AI assistant using the button below
 - [Discord](https://discord.gg/WeY7DTVChT)
 
 ::: callout warning
-There are no websites for Namida other than GitHub & Telegram, we are not responsible for downloads from other sources.
+Namida is only available through [namida.app](https://namida.app), GitHub & Telegram.
+We are not responsible for downloads from other sources.
 :::
 
 ### AI Usage
