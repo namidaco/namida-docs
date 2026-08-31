@@ -14,10 +14,13 @@ description: "Frequently Asked Questions"
 - You can log in from Settings -> Youtube -> Manage your accounts -> Add account to access your playlists, like videos, etc.
 - For more info about these features: https://www.patreon.com/posts/namida-yt-112913142
 
-### Slow/Broken YouTube loading/downloads
+### Slow/Broken YouTube loading/downloads (YouTube playback issues)
 
-This can happen frequently when youtube pushes updates that break clients.
-Most YT issues are fixed asap in beta, try the latest beta from here: https://github.com/namidaco/namida-snapshots/releases
+This can happen frequently when YouTube pushes updates that break clients.
+Most YT issues are fixed asap in beta, try the latest beta from here: https://github.com/namidaco/namida-snapshots/releases.
+Signing in can also provide better download speed and fix some playback issues. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts).
+If the issue persists, try disabling VPN/DNS/Proxy if you have any enabled.
+YouTube could also be restricted in certain areas, try a different VPN in that case.
 
 ### Lyrics Source
 
