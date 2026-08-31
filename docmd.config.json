@@ -49,6 +49,7 @@
       "context": false
     }
   },
+  "customJs": ["assets/js/external-links.js"],
   "minify": true,
   "autoTitleFromH1": true,
   "copyCode": true,
