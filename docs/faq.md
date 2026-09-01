@@ -33,6 +33,10 @@ https://lrclib.net/
 - You can also copy the LRC file and put it in the same directory as the song, it will appear as long as the filename is the same as the song's.
 - Make sure "Prioritize embedded lyrics" is enabled/disabled depending on where you generally put the lyrics.
 
+### Can I use a custom app icon? {#custom-app-icon}
+
+You can pick from the icons that ship with Namida, but a fully custom one is not possible, Android requires all icons to be configured beforehand. See [App Icon](/settings/4-customization-settings/#app-icon), you can also submit an icon there, or use a launcher that supports icon packs.
+
 ### Is there a lastfm scrobble feature?
 
 No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), see [Not Planned](/not-planned/#lastfm).
@@ -44,6 +48,11 @@ No, and not planned. There are apps that work with any player, see [Not Planned]
 ### Equalizer issues or missing feature
 
 Namida's equalizer is simple by design, system wide EQ apps are recommended instead, see [Not Planned](/not-planned/#equalizer) for the reasoning and app suggestions.
+
+### Is Namida available on Google Play?
+
+No, and not planned.
+See [Not Planned](/not-planned/#google-play) for the reasoning, and [`📒 Installation Guide ↗`](/installation/#android) for where to get it.
 
 ### Spotify Support
 

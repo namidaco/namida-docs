@@ -48,6 +48,22 @@ Some cleanup is made to improve the matching, all symbols & whitespaces are igno
 4. Accept the connection request, then choose the data to send & receive.
 5. Press send or receive, that's it. See the [`🎉 Sync feature ↗`](/features/sync/) for what gets synced.
 
+### Path problems after syncing {#sync-path-problems}
+
+Synced to another device and tracks or playlists point to the wrong paths?
+
+1. Open Missing Tracks. [`⚙️ Open Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
+2. Press the select all button, then Update. Everything should be fixed.
+
+For playlists, you can also make them follow your music instead:
+
+1. Convert your playlists to M3U, they are saved in the `Namida/M3U Playlists` folder.
+2. Move the M3U files somewhere inside your music folder.
+3. Refresh the playlists in Namida (pull down in the playlists page), they turn into relative playlists.
+4. Sync them together with the music using [syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or similar apps.
+
+More info: [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
+
 ### Update directory path {#update-directory-path}
 
 Moved your music from `/storage/music` to `/storage/audio/music`?

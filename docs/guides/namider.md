@@ -12,6 +12,8 @@ Link a very short video to a track, it loops while the track plays, an animated 
 1. Pick a short video (a few seconds), or a short YouTube clip.
 2. Link it to the track. [`📒 Link a YouTube Video Guide ↗`](/guides/medium/#link-yt-video) [`📒 Link a Local Video Guide ↗`](/guides/medium/#link-local-video)
 
+Animated artworks work too, embed an animated gif or webp image as the artwork in the track tags and it animates wherever the artwork is shown. [`🎉 Tag Editor feature ↗`](/features/tag-editor/)
+
 ### I deleted some music files by mistake, what do? {#recover-deleted}
 
 If they were downloaded from Namida, or have a YouTube link in their comment tag, ez:

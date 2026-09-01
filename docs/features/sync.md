@@ -29,7 +29,7 @@ You choose the data to send & receive:
 
 ### Smart Matching {#matching}
 
-Your devices don't need identical file paths. Tracks are matched across devices using fingerprints, so stats and listens land on the right files even when libraries live in different folders.
+Your devices don't need identical file paths. Tracks are matched across devices using fingerprints, so stats and listens land on the right files even when libraries live in different folders. If something still ends up with a wrong path, it's an easy fix. [`📒 Path Problems Guide ↗`](/guides/medium/#sync-path-problems)
 
 ### Conflict Resolution {#conflicts}
 

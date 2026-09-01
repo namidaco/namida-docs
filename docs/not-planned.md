@@ -7,6 +7,18 @@ description: "Features that will not be added, and why"
 
 Features that will not be added to Namida, and the reasoning behind each. The only focus is local library + YouTube.
 
+### Google Play {#google-play}
+
+Namida is not on Google Play, and there are no plans to publish it there currently. A few reasons:
+
+- All files access permission (`MANAGE_EXTERNAL_STORAGE`). Google treats it as a special permission that only file manager apps are allowed to have, while Namida needs it for tag editing, backups, saving artworks, downloads and more, see [Permissions](/permissions/#requested). The alternative is SAF, which would work but would make many features tedious to use.
+- Download feature.
+- Donation & Membership links that don't use Google's payment sdk.
+
+A separate version without these could be made, but that's another maintenance cost we are not willing to take, and they contribute to the Namida experience so yeah.
+
+Get Namida from GitHub instead, or use Obtainium to keep it updated. [`📒 Installation Guide ↗`](/installation/#android)
+
 ### Spotify {#spotify}
 
 Not planned.

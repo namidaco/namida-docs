@@ -40,6 +40,7 @@ Not so obvious features you might have missed.
 - Pressing an item that is already playing, from another queue, silently rebuilds the queue without stopping playback.
 - Open any track's dialog and press play to quickly start a new queue with only that track.
 - Zoom in on the video in the local player to enter fullscreen.
+- Namida can play loop animations, link a very short video to a track and it loops while the track plays. Embedding an animated gif or webp as the artwork works too. [`📒 Loop Animation Guide ↗`](/guides/namider/#loop-animation)
 
 ### Track Menu {#track-menu}
 
@@ -94,6 +95,7 @@ Long press a track (or tap its menu) for more than you might expect:
 ### Info & Sorting {#info-sorting}
 
 - Tap any item in the track info dialog to copy it.
+- In a track, album or artist info dialog, tap the artwork to open it in fullscreen, then long press it to save it to storage.
 - Most sort menus allow choosing more than one sorter, and reordering them.
 - Moved your files? The [Missing Tracks](/settings/2-indexer-settings/#missing-tracks) page relinks them without losing stats.
 
