@@ -36,6 +36,8 @@ You can search these docs (⌘k), or ask the AI assistant using the button below
 - [Stable releases](https://github.com/namidaco/namida/releases)
 - [Beta releases](https://github.com/namidaco/namida-snapshots/releases)
 
+Not sure which file to download? See [`📒 Installation Guide ↗`](/installation/) for every platform.
+
 ### Community {#community}
 
 - [Telegram (Updates)](https://t.me/namida_official)
