@@ -38,6 +38,8 @@ You can install beta on top of stable and vice versa, your data stays as is. The
 2. Open the file, Android asks to allow installing from unknown sources the first time.
 3. That's it. Permissions are requested later while you use the app, and only when needed, see [Permissions](/permissions/).
 
+If Google blocks the install, see [Can't install the APK](/faq/#play-protect).
+
 #### Updating {#android-updates}
 
 Installing a newer APK over the current one keeps your data, no need to uninstall.

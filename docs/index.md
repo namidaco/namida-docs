@@ -21,6 +21,7 @@ You can search these docs (⌘k), or ask the AI assistant using the button below
 - The cache priority system protects what matters when cleaning up, and VIP items are never auto deleted. Private and deleted YouTube videos become VIP automatically.
 - Sync between devices only adds, it never wipes the other device's data.
 - Listens can't be deleted, only replaced, your history stays truthful.
+- Every queue is saved automatically and stays forever, the only way to remove one is to delete it yourself. [`📄 Queues Page ↗`](/pages/library/#queues)
 - Destructive actions like deleting files are tucked away behind the advanced dialog, and deleted paths are saved to a file in app data folder.
 
 **The original experience is cherished.** Content is presented the way it was made:

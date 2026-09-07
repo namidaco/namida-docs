@@ -49,6 +49,15 @@ No, and not planned. There are apps that work with any player, see [Not Planned]
 
 Namida's equalizer is simple by design, system wide EQ apps are recommended instead, see [Not Planned](/not-planned/#equalizer) for the reasoning and app suggestions.
 
+### Can't install the APK, Google blocks it {#play-protect}
+
+Play Protect scans apps installed from outside Google Play and sometimes blocks them, the dialog says the app was blocked or wasn't scanned.
+
+- Tap "More details" then "Install anyway" in the dialog.
+- If it keeps blocking, open Play Store -> profile icon -> Play Protect -> settings icon, and turn off "Scan apps with Play Protect", then install and turn it back on.
+
+See [`📒 Installation Guide ↗`](/installation/#android) for which file to download.
+
 ### Is Namida available on Google Play?
 
 No, and not planned.
