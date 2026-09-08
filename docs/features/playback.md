@@ -31,7 +31,18 @@ The queue bottom row packs more than it looks:
 
 Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equalizer with Loudness Enhancer. [`⚙️ Configure Effects ↗`](/settings/3-playback-settings/#crossfade)
 
-Audio configs can also be set per item, check the Sound Control page by pressing the audio effects icon in the player.
+### Sound Control {#sound-control}
+
+Press the audio effects icon in the player to open the Sound Control page. It has two tabs:
+
+- **Global**, applies to everything you play.
+- **Item**, applies to the current track or video only, and a small icon tells you when it has its own settings. Press the reset icon to drop them and fall back to global, or turn on "Force use global config" to ignore per item settings altogether.
+
+Both tabs carry Speed, Pitch (as a percentage or in semitones), Volume, Skip silence, Loudness Enhancer and the Equalizer with its presets. There is also Mono Audio for merging both channels into one.
+
+::: callout tip
+Tap a value icon to type it precisely instead of dragging the slider.
+:::
 
 ### Replay Gain {#replay-gain}
 
@@ -49,6 +60,12 @@ Namida can play videos related to your music. Videos are found locally by filena
 
 Auto fetching & displaying, synced & plain, with support for word synced lrc/ttml files. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
 
+### Subtitles {#subtitles}
+
+`🆕 v7.0.0`
+
+Videos can show subtitles, coming from a file next to the video, from inside the video file, or from YouTube. See the [`🎉 Subtitles feature ↗`](/features/subtitles/).
+
 ### Gestures {#gestures}
 
 - Swipe the miniplayer left or right to change tracks, up and down to expand or minimize, and swipe down to dismiss when [Dismissible Miniplayer](/settings/3-playback-settings/#dismissible-miniplayer) is on.
@@ -63,6 +80,8 @@ Auto fetching & displaying, synced & plain, with support for word synced lrc/ttm
 ### Track Menu {#track-menu}
 
 Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder. See [`📄 Tips & Tricks ↗`](/tips/#track-menu) for the full list.
+
+The menu also has an Advanced section for the heavier stuff, copying and moving files, setting a track as a ringtone, replacing listens and more. [`📄 Advanced Dialog Tips ↗`](/tips/#advanced-dialog)
 
 ### Sleep Timer {#sleep-timer}
 
@@ -80,6 +99,7 @@ The seekbar is the actual waveform of the track. [`⚙️ Configure Waveform Bar
 - [⚙️ Playback Settings](/settings/3-playback-settings/)
 - [⚙️ Extras, Lyrics](/settings/6-extras-settings/#lyrics)
 - [⚙️ Customizations, Miniplayer](/settings/4-customization-settings/#miniplayer-customization)
+- [🎉 Subtitles feature](/features/subtitles/)
 
 ---
 

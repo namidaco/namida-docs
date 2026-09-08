@@ -76,6 +76,12 @@
           "external": false
         },
         {
+          "title": "Subtitles",
+          "path": "/features/subtitles.md",
+          "icon": "captions",
+          "external": false
+        },
+        {
           "title": "Playlists & History",
           "path": "/features/playlists-history.md",
           "icon": "list-music",
@@ -103,6 +109,18 @@
           "title": "Sync",
           "path": "/features/sync.md",
           "icon": "arrow-left-right",
+          "external": false
+        },
+        {
+          "title": "Home Screen Widget",
+          "path": "/features/home-widget.md",
+          "icon": "layout-dashboard",
+          "external": false
+        },
+        {
+          "title": "System Integration",
+          "path": "/features/system-integration.md",
+          "icon": "monitor-smartphone",
           "external": false
         },
         {

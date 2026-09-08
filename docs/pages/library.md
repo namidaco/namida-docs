@@ -9,7 +9,9 @@ The main tabs of your library. You choose which ones are enabled and their order
 
 ### Home {#home}
 
-Your personalized start page. Mixes generated from your history (Recommended, Top Recents, Underrated, Lost Partners, Discover, Random Picks), recent listens, recently added, top recent albums & artists, and Lost Memories, tracks you listened to around this time years ago. Sections are configurable and reorderable.
+Your personalized start page. Mixes generated from your history, recent listens, recently added, top recent albums & artists, and Lost Memories, tracks you listened to around this time years ago. Sections are configurable and reorderable.
+
+The mixes are: Recommended, Supremacy (built around what is playing right now), Top Recents, Underrated, Lost Partners, Discover, Favourites and Random Picks. Empty ones move to the end.
 
 ### Tracks {#tracks}
 
@@ -22,6 +24,12 @@ Your albums as a list or grid. What counts as one album is controlled by [`⚙�
 ### Artists {#artists}
 
 Browse by Artists, Album Artists or Composers, press the type at the top left to switch. Multiple artists in one tag get split by separators, and featured artists from titles can get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators)
+
+### Discover {#discover}
+
+`🆕 v7.0.0`
+
+Your artists laid out as a constellation, each one wired to the artists it actually relates to, through shared albums, features on the same track and shared genres. Press an artist to open it, or shuffle to get a fresh set. Open it from the Artists page.
 
 ### Genres {#genres}
 

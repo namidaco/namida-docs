@@ -11,10 +11,28 @@ Namida comes with a full YouTube section, powered by a custom client. Stream, wa
 
 - Best available video & audio quality, you can pick the quality manually too.
 - Audio Only mode, play any video as music without loading the video.
-- Data Saver mode, play audio only if video was not cached.
+- Data Saver, skip loading video streams to save data, see [below](#data-saver).
 - Radio, auto start a queue based on the current video, using YouTube Mix playlist.
 
 [`⚙️ Configure YouTube ↗`](/settings/5-youtube-settings/)
+
+### Data Saver {#data-saver}
+
+Namida keeps two Data Saver values, one for Wi-Fi and one for mobile data, so you can be relaxed at home and strict outside. Three levels each:
+
+- **Disable**, video is always loaded.
+- **Medium**, audio only (except for shorts).
+- **Extreme**, audio only, always.
+
+Cached videos still play as videos, no matter the level.
+
+It is not in the settings page, you set it right where you need it: press the video quality button in the player, Data Saver sits at the top of the list and shows the current level.
+
+### Subtitles {#subtitles}
+
+`🆕 v7.0.0`
+
+Captions of any video can be shown while watching, including the auto generated ones. See the [`🎉 Subtitles feature ↗`](/features/subtitles/).
 
 ### Video View {#video-view}
 
@@ -93,9 +111,11 @@ Examples:
 
 Streamed videos and audios are cached, so they play offline later without downloading. A cache priority system decides what to keep when cleaning up, so your important stuff stays.
 
-- Set a video's cache priority to VIP to prevent auto deletion completely.
+- Every cached video has a priority: VIP, High, Normal, Low or GETOUT. Cleaning starts from the bottom, and VIP items are never deleted automatically.
 - Private and deleted YouTube videos are automatically set to VIP, so you never lose them.
 - Info of private and deleted videos can still be shown, thanks to [Filmot](https://filmot.com/).
+
+[`⚙️ Configure Cache Limits ↗`](/settings/8-advanced-settings/#cache-limits)
 
 ### Playlists {#playlists}
 
@@ -144,6 +164,7 @@ Signing in your YouTube account allows you to access your Subscribed Channels an
 - [⚙️ SponsorBlock](/settings/5-youtube-settings/#sponsorblock)
 - [⚙️ Return YouTube Dislike](/settings/5-youtube-settings/#return-youtube-dislike)
 - [⚙️ Backup & Restore, for history import](/settings/7-backup-restore-settings/#import-youtube-history)
+- [🎉 Subtitles feature](/features/subtitles/)
 
 ---
 

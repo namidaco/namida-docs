@@ -24,7 +24,8 @@ YouTube could also be restricted in certain areas, try a different VPN in that c
 
 ### Lyrics Source
 
-https://lrclib.net/
+- https://lrclib.net
+- https://lyrics.kugou.com `🆕 v7.0.0`
 
 ### Change Lyrics Source
 
@@ -32,6 +33,24 @@ https://lrclib.net/
 - You can select the LRC file (by long pressing the lyrics icon in the miniplayer -> add), or just edit tags and paste the lyrics in the lyrics field.
 - You can also copy the LRC file and put it in the same directory as the song, it will appear as long as the filename is the same as the song's.
 - Make sure "Prioritize embedded lyrics" is enabled/disabled depending on where you generally put the lyrics.
+
+### I added lyrics but they don't show (or keep showing old ones) {#lyrics-not-showing}
+
+Namida keeps a cached copy of the lyrics it already found for a track, and that copy wins over anything you add later. So the fix is almost always to delete it.
+
+1. Long press the lyrics icon in the player.
+2. The list shows every lyrics Namida found for this track, each one labeled with where it came from: `Cache`, `Local`, the provider name, or the embedded tag.
+3. Press the trash icon on the cached one.
+4. Press done, your new lyrics should be picked up.
+
+If they still don't show, check [Prioritize embedded lyrics](/settings/6-extras-settings/#lyrics):
+
+- **On**, only the lyrics inside the file tags are used, nothing else is even looked at if embedded lyrics exist. Turn it on if you pasted the lyrics in the tag, turn it off if you added an `.lrc` file.
+- **Off**, the order is: cached lyrics -> `.lrc` file next to the track -> embedded tag -> online databases.
+
+::: callout tip
+Also make sure the `.lrc` file sits next to the track and has the same filename, and that the [Lyrics Source](/settings/6-extras-settings/#lyrics) is not set to Internet only.
+:::
 
 ### Can I use a custom app icon? {#custom-app-icon}
 

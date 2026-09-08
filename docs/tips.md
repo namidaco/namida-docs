@@ -32,6 +32,7 @@ Not so obvious features you might have missed.
 - Long press the lyrics to enter fullscreen, and zoom in/out on the lyrics to change the font size.
 - Long press the audio button in the player to open [Playback Settings](/settings/3-playback-settings/) directly.
 - Long press the video button in the player to control quality or change audio track for videos.
+- Press the subtitle icon in the video controls to pick a subtitle, the language you pick is remembered for next videos. [`🎉 Subtitles feature ↗`](/features/subtitles/)
 - Long press lyrics button to configure lyrics for the current track.
 - Press the info text in the player to open the track menu, and press the album name at the top to open the album.
 - Long press the heart icon to add the current track to a playlist.
@@ -53,6 +54,21 @@ Long press a track (or tap its menu) for more than you might expect:
 - Set Rating, Moods and Tags, they get their own [library pages](/pages/library/#moods-tags-rating).
 - Set Youtube Link, attach a video to any local track.
 - Add more from this Album, Artist or Folder to queue.
+
+### Advanced Dialog {#advanced-dialog}
+
+The track menu has an Advanced section:
+
+- Copy or move the files to another folder.
+- Clear specific things for that track, artwork, thumbnail, plain or synced lyrics, video cache and audio cache.
+- Delete the files from storage, deleted paths are saved to a file in the app data folder just in case.
+- Share the files.
+- See which sources the listens came from, useful after importing a history.
+- Set the track as a ringtone, a notification sound or an alarm.
+- Re-index the track, good after editing it outside Namida.
+- Replace all listens of a track with another track.
+- Edit the color palette of the track, add or remove colors and pick a mix.
+- Selecting many tracks from the same folder also shows Update Directory Path right there.
 
 ### Library Pages {#library-pages}
 
@@ -107,7 +123,7 @@ Long press a track (or tap its menu) for more than you might expect:
 
 ### Scrolling {#scrolling}
 
-The scrollbar needs a small hold, plus dragging slightly outwards, before it starts scrolling. This is intentional: android usually ignores vertical drags close to the edge, and most apps compensate with a big instantly draggable scrollbar, which usually causes many accidental scrolls. Namida keeps the minimal design instead.
+The scrollbar needs a small hold before it starts scrolling. This is intentional, most apps have a big instantly draggable scrollbar, which usually causes many accidental scrolls. Namida keeps the minimal design instead.
 
 ### Colors {#colors-tips}
 
@@ -129,6 +145,14 @@ The scrollbar needs a small hold, plus dragging slightly outwards, before it sta
 
 - Rate the current track instantly with `Ctrl` + `Alt` + `1..9`, see all [Shortcuts](/features/shortcuts/).
 - Assign your own system-wide hotkeys for playback actions from About, then Shortcuts.
+- `Ctrl` + `Alt` + `L` shrinks Namida into a small lyrics window, `Esc` brings it back. [`🎉 Mini Lyrics Window ↗`](/features/system-integration/#mini-lyrics)
+- Closing the window keeps Namida in the tray, click the tray icon to bring it back. Change this in [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player).
+
+### Android {#android-tips}
+
+- Add the Namida tile to your quick settings panel to play and pause from anywhere. [`🎉 Quick Settings Tile ↗`](/features/system-integration/#quick-settings-tile)
+- The home screen widget can be configured. [`🎉 Home Screen Widget ↗`](/features/home-widget/)
+- Namida shows up in "Open with" and in the share sheet for audio, video, m3u files and YouTube links. [`🎉 Open With & Share ↗`](/features/system-integration/#open-with)
 
 ---
 

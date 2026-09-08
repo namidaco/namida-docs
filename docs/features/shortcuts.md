@@ -45,8 +45,11 @@ Setting a rating writes it to the file tags of the current track.
 | `Ctrl` + `Shift` + `P` | Open settings search                         |
 | `Ctrl` + `1..9`        | Jump to library tab                          |
 | `Ctrl` + `R`           | Refresh library                              |
+| `Ctrl` + `Alt` + `L`   | Mini lyrics window `🆕 v7.0.0`               |
 | `F11`                  | Fullscreen                                   |
-| `Esc`                  | Go back                                      |
+| `Esc`                  | Go back, or leave the mini lyrics window     |
+
+The mini lyrics window is a small window with the current lyrics line, see [`🎉 System Integration ↗`](/features/system-integration/#mini-lyrics).
 
 ### Custom Hotkeys {#custom-hotkeys}
 
@@ -58,6 +61,7 @@ The shortcuts above only work when the app is focused (app-wide). You can set sy
 
 - [⚙️ Playback, Seek Duration](/settings/3-playback-settings/#seek-duration)
 - [⚙️ Extras, Library Tabs](/settings/6-extras-settings/#library-tabs)
+- [🎉 System Integration](/features/system-integration/)
 
 ---
 

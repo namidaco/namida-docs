@@ -43,7 +43,9 @@ Output is in a new folder "storage/Namida/Compressed", and won't directly replac
 
 ### Cache Limits {#cache-limits}
 
-Maximum size for image, audio and video caches. Oldest and least important items get cleaned first, see [Caching & Offline Playback](/features/youtube/#caching).
+Maximum size for image, audio and video caches. Oldest and least important items get cleaned first.
+
+Each cached video carries a priority, VIP, High, Normal, Low or GETOUT. Cleaning starts from the bottom and never touches VIP items. Change it from the video's menu, see [Caching & Offline Playback](/features/youtube/#caching).
 
 ### Clear Caches {#clear-caches}
 

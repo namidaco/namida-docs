@@ -17,15 +17,34 @@ One device starts a server, other devices on the same network discover it and re
 
 ### What Gets Synced {#data}
 
-You choose the data to send & receive:
+You choose the data to send & receive, every item can be turned on and off on its own.
 
-- Track stats, favourites and audio configs
-- Playlists & smart playlists, with their artworks
-- History, merged without duplicated listens
-- Queues, including the currently playing queue with its position
-- Lyrics, artworks and thumbnails
+On by default:
+
+- Track stats & favourites, for local and YouTube separately
+- Audio configs, the per item sound settings
+- History, for local and YouTube, merged without duplicated listens
+- Playlists & smart playlists, plus your YouTube playlists
+- Saved queues
+- Last played track per source
+- Cached videos priority
+- YouTube subscriptions, with their groups
+
+Off by default, they carry a lot of files and can be slow:
+
+- Lyrics
 - Audio & video cache files
-- YouTube playlists, history, likes and subscriptions
+- Playlist, album and artist artworks
+- YouTube thumbnails, videos and channels
+
+Off by default for another reason, they take over playback on the other device:
+
+- The currently playing queue with its position
+- Playback state
+
+::: callout tip
+Turn on the advanced view in the Sync page to see every item separately instead of the short list.
+:::
 
 ### Smart Matching {#matching}
 
@@ -38,6 +57,12 @@ Newest change wins for most data, while history and playlists use their own merg
 ### Auto Sync {#auto-sync}
 
 Set an auto sync interval and let devices sync on their own whenever they see each other, with auto reconnect.
+
+### Devices {#devices}
+
+Devices show up by the name they broadcast, so you always know what you are sending to. You can rename your own device while the server is running, press the edit icon beside it and the new name is broadcasted right away.
+
+Devices you don't want around can be blocked instead of just rejected, they can no longer reach you and they stop asking. Blocked devices are listed in their own section, with an unblock button.
 
 ---
 

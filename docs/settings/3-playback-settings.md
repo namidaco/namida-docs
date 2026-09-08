@@ -49,7 +49,9 @@ The notification thumbnail might get displaced on some devices.
 
 ### Kill Player After Dismissing App {#kill-player}
 
-Stops playback completely when you swipe the app away.
+Stops playback completely when you swipe the app away. Three modes: Always, If not playing, or Never.
+
+On Windows & Linux this decides what closing the window does, quit the app or minimize to the tray. [`🎉 System Tray ↗`](/features/system-integration/#tray)
 
 ### On Notification Tap {#on-notification-tap}
 
@@ -63,7 +65,12 @@ Swipe the miniplayer away to stop playback and clear queue.
 
 ### Normalize Audio {#normalize-audio}
 
-Normalizes volume by reading the replay gain tag, or the info provided by YouTube for videos.
+Normalizes volume by reading the replay gain tag, or the info provided by YouTube for videos. You pick how it is applied:
+
+- Off.
+- Platform default, the best option for your device.
+- Loudness Enhancer, uses the system effect.
+- Volume, changes the player volume instead, more stable.
 
 ### Skip Silence {#skip-silence}
 

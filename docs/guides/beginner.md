@@ -35,6 +35,8 @@ Two different tracks share the same filename, so they share the same artwork.
 2. From there you can pick an LRC file, search for other lyrics, or change the lyrics offset if they are early or late.
 3. To force no lyrics for a track, start its embedded lyrics tag with `IGNORE`, see [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics).
 
+Added lyrics but the old ones keep showing? A cached copy is winning, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
+
 ---
 
 <sub>by @claude</sub>

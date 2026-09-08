@@ -23,6 +23,12 @@ All three might affect performance on low end devices, they are the first things
 - Font Scale.
 - 12 Hour Format & Date Time Format.
 
+### Home Screen Widget {#home-widget}
+
+`💻 Android only`
+
+Opens the widget settings screen, where you set the look, layout, controls and tap actions of your home screen widget, with a live preview. Changes made from here apply to every widget you already placed. [`🎉 Home Screen Widget feature ↗`](/features/home-widget/)
+
 ### Album Tile Customization {#album-tile}
 
 - Display track number in album page.

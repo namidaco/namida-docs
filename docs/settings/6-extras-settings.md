@@ -51,12 +51,15 @@ All symbols and spaces will be ignored while searching, makes matching easier.
 - Lyrics source, auto, local only or internet only.
 - Stretch lyrics duration.
   - useful to automatically adapt duration on spedup/slowed/nightcore versions.
+- Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
 
 How lyrics are found: Namida looks for synced lyrics first, previously saved lyrics, then `.lrc` files next to the track, then the embedded lyrics tag, then online databases. If no synced lyrics are found, it repeats the same order for plain lyrics, ending with a web search. Local and internet steps can be limited with the source setting above.
 
 ::: callout tip
 Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track.
 :::
+
+Once lyrics are found they get cached, and the cached copy is used first from then on. If lyrics you added later don't show up, delete the cached one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
 
 ### Image Source {#image-source}
 
@@ -98,6 +101,7 @@ Hidden experimental options, opened by pressing the flag icon at the top of the 
 - `FLOATING_ARTWORK_EFFECT` & `TILTING_CARDS_EFFECT`, extra visual effects.
 - `GRADIENT_TILES_AND_CARDS`, gradient backgrounds for tiles and cards.
 - `MEDIA_WAVE_HAPTIC`, haptics that follow the audio.
+- `JELLYS_INVASION` & `JELLYS_COLOR_PALETTE`, lets jellyfishes drift around the app, with a matching color palette.
 - `SHOW_DESKTOP_TITLE_BAR` & `DESKTOP_TITLE_BAR_ICONS_TYPE`, title bar look on desktop.
 - `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between local style player and youtube style player.
 - `CUSTOM_EQ_PACKAGE`, open a custom equalizer app instead of the system built-in one.

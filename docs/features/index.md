@@ -9,11 +9,14 @@ What Namida can do, each feature explained in its own page.
 
 - [Library & Indexing](/features/library-indexing/), a powerful folders based music library
 - [Playback](/features/playback/), queues, effects, videos and lyrics
+- [Subtitles](/features/subtitles/), subtitles & captions for videos
 - [Playlists & History](/features/playlists-history/), flexible playlists and a reliable history system
 - [Tag Editor](/features/tag-editor/), edit your music tags right inside Namida
 - [YouTube](/features/youtube/), stream, download and watch YouTube inside Namida
 - [Media Servers](/features/media-servers/), index your servers like normal folders
 - [Sync](/features/sync/), sync app data between your devices
+- [Home Screen Widget](/features/home-widget/), a player widget on your home screen
+- [System Integration](/features/system-integration/), open with, tray, tiles and more
 - [Shortcuts](/features/shortcuts/), keyboard shortcuts on desktop
 
 Make sure to also check [Tips & Tricks](/tips/) for not so obvious features.
