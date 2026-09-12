@@ -96,7 +96,7 @@
         {
           "title": "YouTube",
           "path": "/features/youtube.md",
-          "icon": "youtube",
+          "icon": "square-play",
           "external": false
         },
         {
@@ -146,7 +146,7 @@
         {
           "title": "YouTube",
           "path": "/pages/youtube.md",
-          "icon": "youtube",
+          "icon": "square-play",
           "external": false
         },
         {
@@ -190,7 +190,7 @@
         {
           "title": "Youtube",
           "path": "/settings/5-youtube-settings.md",
-          "icon": "youtube",
+          "icon": "square-play",
           "external": false
         },
         {
