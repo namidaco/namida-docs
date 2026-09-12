@@ -66,7 +66,7 @@ Files smaller or shorter than these values will be skipped, useful for filtering
 Uses the Android system index instead of Namida's own indexer. Instant indexing time, but some metadata tags will be missing, `.nomedia` is forcefully respected, and YouTube integration for local library will not work.
 
 ::: callout warning "Deprecated"
-This feature is removed as of v6.5.5. With the new tagger (`taglib`) being stable and fast, and with this option lacking critical aspects of Namida, and many users reporting issues after manually enabling and forgetting it, it is no longer worth keeping.
+This feature is removed as of `v7.0.0`. With the new tagger (`taglib`) being stable and fast, and with this option lacking critical aspects of Namida, and many users reporting issues after manually enabling and forgetting it, it is no longer worth keeping.
 :::
 
 ### Include Videos {#include-videos}

@@ -11,7 +11,9 @@ Everything you expect from a music player, plus some extras.
 
 A persistent and reliable queue system, your sessions are saved for later usage. Also:
 
-- Repeat modes: all, none, one, and repeat for N times before playing the next track.
+- Repeat modes: all, none, one, repeat for N times before playing the next track, and Shuffle. `🆕 v7.0.0`
+  - Shuffle picks a random track every time the current one ends or you press next, without touching the queue order. Previous goes back through what actually played.
+- Stop after any track, open the menu of a track in the queue and choose "Stop after this track", this starts a sleep timer that ends on this track. `🆕 v7.0.0`
 - Insert after latest inserted, for inserting multiple tracks one after each other.
 - Play modes when playing from search: selected track only, search results, album, first artist or first genre.
 - Recommended & Similar Release Date additions, add tracks you usually listened to with the current one, or released around the same time.
@@ -58,7 +60,13 @@ Namida can play videos related to your music. Videos are found locally by filena
 
 ### Lyrics {#lyrics}
 
-Auto fetching & displaying, synced & plain, with support for word synced lrc/ttml files. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
+Auto fetching & displaying, synced & plain, with support for word synced lrc/ttml files. Subtitle files next to the track (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work as lyrics too. Online lyrics come from LRCLIB and KuGou, and the best matching result is picked using the track duration. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
+
+### Widescreen Player {#widescreen-player}
+
+`🆕 v7.0.0`
+
+On a wide window, the expanded player shows a maximize icon at its top left. It opens a two pane layout, artwork/video and controls on the left, lyrics or the queue on the right. Press the exit icon or `Esc` to go back.
 
 ### Subtitles {#subtitles}
 

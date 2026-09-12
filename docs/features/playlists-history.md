@@ -23,7 +23,8 @@ Also see the [`🎉 YouTube feature ↗`](/features/youtube/#playlists) for how 
 
 ### Smart Playlists {#smart-playlists}
 
-Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
+Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more. Text rules suggest values from your library as you type.
+They also have their own full page, reachable from the playlists page. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
 
 ### History {#history}
 
@@ -36,6 +37,12 @@ Open a track's listens dialog to see every single listen. Tap a listen to jump t
 ### Most Played {#most-played}
 
 Find your top tracks based on your history record, with a custom time range to see your most beloved tracks at that time.
+
+### Stats & Your Year {#stats}
+
+`🆕 v7.0.0`
+
+Charts built from your history, and a yearly wrap up. See [`📄 Stats Page ↗`](/pages/other/#stats) and [`📄 Your Year Page ↗`](/pages/other/#your-year). Any album, artist, playlist or folder dialog also has a Stats entry with listen stats for just those tracks.
 
 ### Lost Memories {#lost-memories}
 

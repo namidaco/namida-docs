@@ -37,7 +37,7 @@ Your genres, split from tags using the genre separators. Press the type at the t
 
 ### Playlists {#playlists}
 
-Your playlists, along with the built-in ones: History, Most Played and Favourites. Normal, M3U synced and smart playlists all live here. Pull down to refetch M3U and server playlists. [`🎉 Playlists & History feature ↗`](/features/playlists-history/)
+Your playlists, along with the built-in ones: History, Most Played and Favourites. Normal, M3U synced and smart playlists all live here. Pull down to refetch M3U and server playlists. Smart playlists also have their own full page, press the arrow next to their section. [`🎉 Playlists & History feature ↗`](/features/playlists-history/)
 
 ### Folders {#folders}
 
@@ -48,7 +48,19 @@ Browse your library exactly like your file manager, with separate views for musi
 
 ### Queues {#queues}
 
-Every listening session is saved automatically, jump back to any previous queue. Never miss your sessions. Press the delete icon at the top to clear some unimportant queues, or swipe a queue left to quickly remove it.
+Every listening session is saved automatically, jump back to any previous queue. Never miss your sessions. Press the delete icon at the top to clear some unimportant queues, or swipe a queue left to quickly remove it. Inside a queue, the resume button continues from the track you last played in it.
+
+### Queue {#current-queue}
+
+`🆕 v7.0.0`
+
+The currently playing queue as a library tab, so you can keep it a swipe away instead of opening the player. Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs).
+
+### Stats {#stats}
+
+`🆕 v7.0.0`
+
+Your listening stats and charts as a library tab, the same page you get from the chart icon on the Home page. Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs). [`📄 Stats Page ↗`](/pages/other/#stats)
 
 ### Moods, Tags & Rating {#moods-tags-rating}
 
@@ -57,6 +69,8 @@ Browse tracks grouped by the moods, tags and ratings you assign. Assign them fro
 ### Search {#search}
 
 Global search across your library. You choose which fields it looks into, title, artist, album, filename, even lyrics. Playing from search supports play modes, selected track only, search results, album, first artist or first genre. [`⚙️ Configure Search ↗`](/settings/6-extras-settings/#filter-tracks-by)
+
+Searching inside an album, artist, playlist or any other media page orders the results by best match.
 
 ---
 

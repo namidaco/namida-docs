@@ -31,6 +31,7 @@ Show the dislike count on videos, data is provided by [returnyoutubedislike.com]
 - Remember audio only mode.
 - Dim miniplayer after a set number of seconds of inactivity, along with the dim intensity.
 - Seekbar behavior, tap to seek and drag to seek.
+- Drag to seek (Video), when swiping horizontally on the video itself: Never, Expanded Miniplayer, Fullscreen or Always. `🆕 v7.0.0`
 
 ### Content {#content}
 

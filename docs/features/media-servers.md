@@ -18,6 +18,8 @@ Multi library support, your library can mix local files with content from your s
 
 A server is added as a library folder in the indexer. Enter the server address and credentials, pick a library or share if the server supports it, and Namida indexes it like any other folder. Tracks appear next to your local ones in every tab. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
+For Subsonic servers, tracks without their own artwork fall back to the album artwork.
+
 ::: callout info
 For file based servers (WebDAV, SMB), files are temporarily downloaded for indexing. Make sure your connection is stable, Wi-Fi is recommended to avoid high data usage.
 :::

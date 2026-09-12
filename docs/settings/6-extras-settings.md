@@ -31,7 +31,7 @@ The tab the app opens on.
 
 ### Library Tabs {#library-tabs}
 
-Choose which tabs are enabled (tracks, albums, artists, genres, playlists, folders and more), you can reorder the activated tabs.
+Choose which tabs are enabled (tracks, albums, artists, genres, playlists, folders, the current queue, stats and more), you can reorder the activated tabs. [`📄 Library Pages ↗`](/pages/library/)
 
 ### Filter Tracks in Search Lists By {#filter-tracks-by}
 
@@ -54,6 +54,8 @@ All symbols and spaces will be ignored while searching, makes matching easier.
 - Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
 
 How lyrics are found: Namida looks for synced lyrics first, previously saved lyrics, then `.lrc` files next to the track, then the embedded lyrics tag, then online databases. If no synced lyrics are found, it repeats the same order for plain lyrics, ending with a web search. Local and internet steps can be limited with the source setting above.
+
+Files next to the track can be `.lrc`, `.ttml`, `.xml` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename. Online databases are LRCLIB and KuGou, when both return something the result closest to the track duration wins, and the lyrics menu shows where each one came from.
 
 ::: callout tip
 Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track.

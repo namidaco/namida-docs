@@ -48,7 +48,9 @@ Watching videos supports gestures:
 - While seeking, swipe upwards to cancel
 - Long press for 2x speed [`⚙️ Configure Long Press Speed ↗`](/settings/5-youtube-settings/#flags)
 
-In fullscreen, you can enable glow to show an ambient effect behind the video (might affect performance & battery).
+Horizontal seeking on the video can be limited to fullscreen, the expanded miniplayer, always or never. [`⚙️ Configure Drag to seek (Video) ↗`](/settings/5-youtube-settings/#miniplayer)
+
+In fullscreen, you can enable glow to show an ambient effect behind the video (might affect performance & battery). On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video lands in the orientation you are actually holding.
 
 ### Miniplayer {#miniplayer}
 
@@ -63,6 +65,7 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Both work for single downloads and batch playlist downloads, where playlist formats number the files for you.
 - Default download folder, changeable per download.
 - Download notifications `💻 Windows+Linux only`.
+- Downloads that fail because there is no connection resume on their own once it is back, thumbnails retry the same way. `🆕 v7.0.0`
 
 ### Filename & Tags Formats {#filename-formats}
 
@@ -142,7 +145,7 @@ Shows the dislike count on videos using [Return YouTube Dislike](https://returny
 
 ### Accounts {#accounts}
 
-Sign in to your account to get personalized related videos and mix playlists, and to interact with videos. Signing in can also provide better download speed and fix some playback issues. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
+Sign in to your account to get personalized related videos and mix playlists, and to interact with videos. Signing in can also provide better download speed and fix some playback issues. Channels that live under the same Google account (brand accounts) can each be signed in separately. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
 
 ### Comments {#comments}
 

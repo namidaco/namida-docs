@@ -28,6 +28,7 @@ Not so obvious features you might have missed.
 - Long press the current position to seek to start, long press the total duration to keep seeking forwards.
 - While seeking, swipe upwards to cancel. Seeking near the starting edge snaps to the very start.
 - Swipe the miniplayer left or right to change tracks.
+- The repeat button also has a Shuffle mode, next always picks a random track without reordering the queue. [`🎉 Queue System ↗`](/features/playback/#queue)
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
 - Long press the lyrics to enter fullscreen, and zoom in/out on the lyrics to change the font size.
 - Long press the audio button in the player to open [Playback Settings](/settings/3-playback-settings/) directly.
@@ -49,7 +50,7 @@ Long press a track (or tap its menu) for more than you might expect:
 
 - Play Next, Play Last, and Play After, pick an exact position in the queue.
 - Repeat for N times before playing the next track.
-- Stop after this track.
+- Stop after this track, works on any upcoming track in the queue, not only the playing one.
 - Insert after latest inserted, for stacking multiple tracks one after each other.
 - Set Rating, Moods and Tags, they get their own [library pages](/pages/library/#moods-tags-rating).
 - Set Youtube Link, attach a video to any local track.
@@ -79,6 +80,8 @@ The track menu has an Advanced section:
 - Tap the resume button in media subpages to resume from the last played track, and long press it to jump to that track.
 - If a network image source is enabled, you can edit an album/artist display image by opening its dialog and pressing the artwork edit icon at the top right. Playlist artworks can always be edited.
   - Note that this is different from editing tags for all tracks inside. Editing artwork from here just edits the display image and doesn't touch the audio files.
+- Open the dialog of an album, artist, playlist or folder and press Stats to see listen stats for just those tracks.
+- The current queue and the stats page can be library tabs of their own. [`📄 Queue Tab ↗`](/pages/library/#current-queue) [`📄 Stats Tab ↗`](/pages/library/#stats)
 
 ### Downloading {#downloading}
 
@@ -97,6 +100,8 @@ The track menu has an Advanced section:
 - Namida can show info of private and deleted videos, thanks to [Filmot](https://filmot.com/).
 - In the youtube search tab, offline search is very useful to find videos you watched previously. You can sort results by most played, recent listen or first listen. Import your YouTube history for better results.
 - Take a snapshot of a channel or playlist: open the videos tab, press "load all", wait, then open the menu and add to a playlist.
+- Type `after:2024-01-01` or `before:2023-06` in the search text to filter by upload date, or use the filters row. [`📄 Search Filters ↗`](/pages/youtube/#search-filters)
+- In a channel page, the time range icon lists only videos uploaded after or before a date.
 - Extra experimental switches hide behind the flag icon in [Youtube Settings](/settings/5-youtube-settings/#flags) and [Extras Settings](/settings/6-extras-settings/#flags).
 
 ### History {#history-tips}
@@ -107,6 +112,7 @@ The track menu has an Advanced section:
 - Open a track's listens dialog, tap a listen to jump to that day in history, or use the button beside it to open Most Played for that range.
 - Replace all listens of a track with another track, useful after re-downloading a file (Track's Dialog -> Advanced -> Replace all listens).
 - Imported a wrong source? [Remove it from history](/settings/8-advanced-settings/#remove-source-history) in one go.
+- The Stats page has charts for any time range, and a Your Year wrap up shows up on the Home page every December and January. [`📄 Stats Page ↗`](/pages/other/#stats)
 
 ### Info & Sorting {#info-sorting}
 
@@ -139,6 +145,8 @@ The scrollbar needs a small hold before it starts scrolling. This is intentional
 ### Misc {#misc-tips}
 
 - Long press/Hover on any icon to show a tooltip explaining what it does
+- Pages that have a docs page show a guide icon in the app bar, it opens the matching page here.
+- Tag editor and smart playlist fields suggest values from your library as you type.
 - Did you know you can unlock crossfade and party mode for free? Try reading the dialog that shows, and maybe fight it.
 
 ### Desktop {#desktop-tips}
@@ -146,6 +154,7 @@ The scrollbar needs a small hold before it starts scrolling. This is intentional
 - Rate the current track instantly with `Ctrl` + `Alt` + `1..9`, see all [Shortcuts](/features/shortcuts/).
 - Assign your own system-wide hotkeys for playback actions from About, then Shortcuts.
 - `Ctrl` + `Alt` + `L` shrinks Namida into a small lyrics window, `Esc` brings it back. [`🎉 Mini Lyrics Window ↗`](/features/system-integration/#mini-lyrics)
+- On a wide window, the maximize icon at the top left of the expanded player opens a two pane layout with lyrics/queue beside the artwork/video. [`🎉 Widescreen Player ↗`](/features/playback/#widescreen-player)
 - Closing the window keeps Namida in the tray, click the tray icon to bring it back. Change this in [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player).
 
 ### Android {#android-tips}

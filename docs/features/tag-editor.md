@@ -17,6 +17,12 @@ Select multiple tracks and edit them at once, unchanged fields remain untouched.
 
 [`📄 Selection Tips ↗`](/tips/#selection)
 
+### Suggestions {#suggestions}
+
+`🆕 v7.0.0`
+
+Fields like album, artist, album artist, composer, genre, style, moods and tags suggest values from your library as you type, so names stay consistent. Fields that hold multiple values keep suggesting after each separator. The same suggestions show up while building [`🎉 Smart Playlists ↗`](/features/playlists-history/#smart-playlists) rules.
+
 ### Auto Extract from Filename {#auto-extract}
 
 Fill tags automatically from the filename pattern, handy for files with empty tags.

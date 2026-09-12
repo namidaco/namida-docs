@@ -18,7 +18,7 @@ Your YouTube playlists, along with the built-in ones: History, Most Played and L
 
 ### Channels {#channels}
 
-Your subscribed channels, they can be organized into groups. Each channel page shows its videos and info.
+Your subscribed channels, they can be organized into groups. Each channel page shows its videos and info. Press the time range icon in a channel page to list only videos uploaded after or before a date. `🆕 v7.0.0`
 
 ### History {#history}
 
@@ -31,6 +31,18 @@ Manage all download tasks, pause, resume, retry or cancel, with a failed only fi
 ### Search {#search}
 
 Search YouTube directly, results include videos, playlists and channels. Offline search is available for browsing what you already have.
+
+#### Filters {#search-filters}
+
+`🆕 v7.0.0`
+
+A filters row sits above the results:
+
+- Type: All, Videos, Channels, Playlists or Movies.
+- Sort by: Relevance, Rating, Upload date or Views.
+- Date: Last hour, Today, This week, This month, This year, or pick an exact "is After" / "is Before" date.
+
+You can also type the date right in the search text, like `after:2024-01-01` or `before:2023-06`. The date range applies to offline search too.
 
 ---
 

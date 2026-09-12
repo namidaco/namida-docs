@@ -31,7 +31,7 @@ YouTube could also be restricted in certain areas, try a different VPN in that c
 
 - Not possible directly.
 - You can select the LRC file (by long pressing the lyrics icon in the miniplayer -> add), or just edit tags and paste the lyrics in the lyrics field.
-- You can also copy the LRC file and put it in the same directory as the song, it will appear as long as the filename is the same as the song's.
+- You can also copy the LRC file and put it in the same directory as the song, it will appear as long as the filename is the same as the song's. Subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work the same way.
 - Make sure "Prioritize embedded lyrics" is enabled/disabled depending on where you generally put the lyrics.
 
 ### I added lyrics but they don't show (or keep showing old ones) {#lyrics-not-showing}
