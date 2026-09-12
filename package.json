@@ -6,10 +6,32 @@
   "scripts": {
     "dev": "docmd dev",
     "build": "docmd build",
-    "preview": "npx serve site"
+    "preview": "npx serve site",
+    "update-docmd": "node -e \"require('fs').rmSync('package-lock.json',{force:true})\" && npm cache clean --force && npm install"
   },
   "dependencies": {
-    "@docmd/core": "^0.9.3",
-    "@docmd/template-summer": "^0.9.3"
+    "@docmd/api": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-api.tgz",
+    "@docmd/core": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-core.tgz",
+    "@docmd/deployer": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-deployer.tgz",
+    "@docmd/engine-js": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-engine-js.tgz",
+    "@docmd/engine-rust": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-engine-rust.tgz",
+    "@docmd/live": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-live.tgz",
+    "@docmd/parser": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-parser.tgz",
+    "@docmd/plugin-ai": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-ai.tgz",
+    "@docmd/plugin-analytics": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-analytics.tgz",
+    "@docmd/plugin-git": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-git.tgz",
+    "@docmd/plugin-installer": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-installer.tgz",
+    "@docmd/plugin-llms": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-llms.tgz",
+    "@docmd/plugin-mermaid": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-mermaid.tgz",
+    "@docmd/plugin-okf": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-okf.tgz",
+    "@docmd/plugin-openapi": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-openapi.tgz",
+    "@docmd/plugin-search": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-search.tgz",
+    "@docmd/plugin-seo": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-seo.tgz",
+    "@docmd/plugin-sitemap": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-sitemap.tgz",
+    "@docmd/template-summer": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-template-summer.tgz",
+    "@docmd/themes": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-themes.tgz",
+    "@docmd/tui": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-tui.tgz",
+    "@docmd/ui": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-ui.tgz",
+    "@docmd/utils": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-utils.tgz"
   }
 }
