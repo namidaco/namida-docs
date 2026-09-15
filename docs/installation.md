@@ -83,20 +83,17 @@ sudo apt install mpv libmpv2  # Debian/Ubuntu/Mint
 sudo dnf install mpv mpv-libs # Fedora/RHEL
 ```
 
-**wpewebkit** is optional and only needed for YouTube login. Install it yourself, or grab a `_login` file which already bundles it.
+**webkit2gtk** is optional and only needed for YouTube login. Most distros already ship it.
 
 ```bash
-# Arch/Manjaro
-sudo pacman -S wpewebkit
-
-# Debian/Ubuntu/Mint
-sudo apt install libwpewebkit-2.0-1
-
-# Fedora/RHEL
-sudo dnf install dnf-plugins-core
-sudo dnf copr enable philn/wpewebkit
-sudo dnf install wpewebkit
+sudo pacman -S webkit2gtk-4.1          # Arch/Manjaro
+sudo apt install libwebkit2gtk-4.1-0   # Debian/Ubuntu/Mint
+sudo dnf install webkit2gtk4.1         # Fedora/RHEL
 ```
+
+::: callout info
+Older betas had separate `_login` files bundling wpewebkit, they are gone. Every build does login through webkit2gtk now.
+:::
 
 #### Which file {#linux-files}
 
@@ -107,7 +104,6 @@ sudo dnf install wpewebkit
 | `namida-vX.X.X-beta.linux.rpm`           | Fedora, RHEL and friends.                                                                                                                                                     |
 | `Namida-x86_64-<version>.AppImage`       | A single portable file, no installation. Built on an older glibc so it also runs on non rolling distros, and it can update itself through AppImageUpdate or AppImageLauncher. |
 | `Namida-x86_64-<version>.flatpak`        | You already use flatpak. Ships its own mpv.                                                                                                                                   |
-| `*_login.linux.tar.gz` / `.deb` / `.rpm` | Same as the tar.gz/deb/rpm files, but with wpewebkit bundled for YouTube login.                                                                                               |
 
 #### Installing {#linux-install}
 

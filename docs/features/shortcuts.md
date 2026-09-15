@@ -18,9 +18,21 @@ Control Namida from the keyboard on desktop.
 | `Ctrl` + `←` / `→`     | Previous / Next track     |
 | `Ctrl` + `↑` / `↓`     | Volume up / down          |
 | `Ctrl` + `Tab`         | Change repeat mode        |
-| `Ctrl` + `Shift` + `S` | Shuffle                   |
+| `Ctrl` + `Shift` + `S` | Toggle shuffle            |
 
-Seeking jumps by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Shuffle follows your shuffle style, all tracks or next tracks only.
+Seeking jumps by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Shuffle is a toggle, turning it on shuffles the queue and turning it off restores the original order. [`🎉 Queue System ↗`](/features/playback/#queue)
+
+### Zoom {#zoom}
+
+`🆕 v7.1.0`
+
+| Shortcut             | Action         |
+| -------------------- | -------------- |
+| `Ctrl` + mouse wheel | Zoom in / out  |
+| `Ctrl` + `+` / `-`   | Zoom in / out  |
+| `Ctrl` + `0`         | Reset the zoom |
+
+Zoom applies to whatever is open in front of you, the synced lyrics font size, and the card size in a playlist download page. It is the desktop version of the pinch gesture.
 
 ### Current Track {#current-track}
 

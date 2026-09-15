@@ -11,8 +11,11 @@ Everything you expect from a music player, plus some extras.
 
 A persistent and reliable queue system, your sessions are saved for later usage. Also:
 
-- Repeat modes: all, none, one, repeat for N times before playing the next track, and Shuffle. `🆕 v7.0.0`
-  - Shuffle picks a random track every time the current one ends or you press next, without touching the queue order. Previous goes back through what actually played.
+- Repeat modes: Repeat All Queue, Stop on Last Track, Repeat Current Track, repeat for N times before playing the next track, and Repeat All Queue (Shuffle) which reshuffles the queue every time it ends.
+- Shuffle is a toggle, separate from the repeat mode. `🆕 v7.1.0`
+  - Turning it on shuffles the queue itself, the playing track stays first. Turning it off puts the queue back in its original order, and keeps playing the same track.
+  - While it's on, any new queue you start is shuffled too, with the track you pressed first.
+  - It stays on between sessions, and it is the same toggle everywhere: the queue, the home screen widget, media controls and the desktop shortcut.
 - Stop after any track, open the menu of a track in the queue and choose "Stop after this track", this starts a sleep timer that ends on this track. `🆕 v7.0.0`
 - Insert after latest inserted, for inserting multiple tracks one after each other.
 - Play modes when playing from search: selected track only, search results, album, first artist or first genre.
@@ -25,7 +28,7 @@ The queue bottom row packs more than it looks:
   - Local: Random, Time Range, Moods, Ratings, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended
   - YouTube: Random, Time Range, Mix, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended.
 - A jump button scrolls right to the current track.
-- Tap shuffle to shuffle, long press it to switch between Shuffle Next and Shuffle All.
+- Tap shuffle to toggle it, the button stays highlighted while it's on. Long press it for a one time shuffle instead: Shuffle Next shuffles the upcoming tracks, Shuffle All shuffles the whole queue.
 
 [`⚙️ Configure Playback ↗`](/settings/3-playback-settings/)
 
@@ -79,9 +82,11 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 - Swipe the miniplayer left or right to change tracks, up and down to expand or minimize, and swipe down to dismiss when [Dismissible Miniplayer](/settings/3-playback-settings/#dismissible-miniplayer) is on.
 - Artwork tap and long press actions are configurable, and double tap can toggle lyrics. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization)
 - Swipe left/right on a track or a video to execute actions (ex: play next, open info, go to album, edit tags, etc..) [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile)
+- Tap the current position to seek backwards and the total duration to seek forwards, by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Holding either one keeps seeking.
+- Long press the previous button to jump to the start of the track, long press the next button to speed up playback while holding it.
 - While seeking with the seekbar, swipe upwards to cancel the seek.
 - Seeking very close to the starting edge snaps to the very start.
-- Zoom in on the lyrics to change the font size.
+- Zoom in on the lyrics to change the font size. On desktop use `Ctrl` + mouse wheel, `Ctrl` + `+` / `-`, or `Ctrl` + `0` to reset. [`🎉 Shortcuts feature ↗`](/features/shortcuts/#zoom)
 - Zoom in on the video to enter fullscreen.
 - More hidden gestures in [`📄 Tips & Tricks ↗`](/tips/).
 

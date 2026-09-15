@@ -126,7 +126,7 @@ Pressing previous replays the current track if the position is past the seek dur
 How many seconds the seek buttons jump.
 
 ::: callout tip
-You can tap on current duration to seek backwards, and total duration to seek forwards.
+You can tap on current duration to seek backwards, and total duration to seek forwards. Holding either one keeps seeking in that direction.
 :::
 
 ### Minimum Track Duration to Restore Last Position {#restore-last-position}

@@ -66,6 +66,7 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Default download folder, changeable per download.
 - Download notifications `💻 Windows+Linux only`.
 - Downloads that fail because there is no connection resume on their own once it is back, thumbnails retry the same way. `🆕 v7.0.0`
+- Parallel downloads, up to 10 videos at a time, 4 by default. Set it with the flash icon in the [`📄 Downloads page ↗`](/pages/youtube/#downloads). `🆕 v7.1.0`
 
 ### Filename & Tags Formats {#filename-formats}
 

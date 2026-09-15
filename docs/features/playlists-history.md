@@ -56,6 +56,8 @@ Generate tracks related to the current one, typically the ones you often listene
 
 Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
+The Home page rebuilds itself once the import is done, so mixes and recent listens account for what you just imported.
+
 ---
 
 ### Related Settings {#related-settings}

@@ -25,12 +25,14 @@ Not so obvious features you might have missed.
 ### Player {#player}
 
 - Tap the current position to seek backwards, tap the total duration to seek forwards, by the [Seek Duration](/settings/3-playback-settings/#seek-duration).
-- Long press the current position to seek to start, long press the total duration to keep seeking forwards.
+  - Hold them to keep seeking (rewind/fastforward).
+- Long press the previous button to jump to the very start of the track, and long press the next button to speed up playback while you hold it. [`⚙️ Configure Long Press Speed ↗`](/settings/5-youtube-settings/#flags)
 - While seeking, swipe upwards to cancel. Seeking near the starting edge snaps to the very start.
 - Swipe the miniplayer left or right to change tracks.
-- The repeat button also has a Shuffle mode, next always picks a random track without reordering the queue. [`🎉 Queue System ↗`](/features/playback/#queue)
+- Shuffle is a toggle, it shuffles the queue itself and turning it off brings back the original order. Long press it for a one time Shuffle Next or Shuffle All. [`🎉 Queue System ↗`](/features/playback/#queue)
+- The repeat button has its own shuffle flavor, Repeat All Queue (Shuffle) reshuffles the queue each time it reaches the end.
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
-- Long press the lyrics to enter fullscreen, and zoom in/out on the lyrics to change the font size.
+- Long press the lyrics to enter fullscreen, and zoom in/out on the lyrics to change the font size. On desktop it's `Ctrl` + mouse wheel or `Ctrl` + `+` / `-`, and `Ctrl` + `0` resets it.
 - Long press the audio button in the player to open [Playback Settings](/settings/3-playback-settings/) directly.
 - Long press the video button in the player to control quality or change audio track for videos.
 - Press the subtitle icon in the video controls to pick a subtitle, the language you pick is remembered for next videos. [`🎉 Subtitles feature ↗`](/features/subtitles/)
@@ -89,6 +91,7 @@ The track menu has an Advanced section:
 - This works for single downloads and for batch playlist downloads, where playlist formats like `%(playlist_autonumber)s` number the files for you.
 - In a playlist download page, selecting the output folder automatically marks the videos that are not downloaded yet, as long as you haven't selected any manually. The long press to select in between trick works there too.
 - In the download sheet, press the "show webm" icon button to show experimental qualities, related: `ALLOW_EXPERIMENTAL_CODECS` & `PREFER_OPUS_FORMAT` in [Flags](/settings/5-youtube-settings/#flags).
+- The flash icon in the downloads page sets how many downloads run at once, up to 10. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
 
 ### YouTube {#youtube-tips}
 
@@ -113,6 +116,8 @@ The track menu has an Advanced section:
 - Replace all listens of a track with another track, useful after re-downloading a file (Track's Dialog -> Advanced -> Replace all listens).
 - Imported a wrong source? [Remove it from history](/settings/8-advanced-settings/#remove-source-history) in one go.
 - The Stats page has charts for any time range, and a Your Year wrap up shows up on the Home page every December and January. [`📄 Stats Page ↗`](/pages/other/#stats)
+- Long press any chart card to copy its values as text, press its share icon to save it as an image, or use the share icon in the app bar to export all of them at once.
+- The Total Listens donut can be split by genres, styles, moods, tags, artists, album artists, composers or albums, press the category icon on the card.
 
 ### Info & Sorting {#info-sorting}
 
@@ -156,6 +161,7 @@ The scrollbar needs a small hold before it starts scrolling. This is intentional
 - `Ctrl` + `Alt` + `L` shrinks Namida into a small lyrics window, `Esc` brings it back. [`🎉 Mini Lyrics Window ↗`](/features/system-integration/#mini-lyrics)
 - On a wide window, the maximize icon at the top left of the expanded player opens a two pane layout with lyrics/queue beside the artwork/video. [`🎉 Widescreen Player ↗`](/features/playback/#widescreen-player)
 - Closing the window keeps Namida in the tray, click the tray icon to bring it back. Change this in [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player).
+- `Ctrl` + mouse wheel zooms, works on the synced lyrics font size and on the cards of a playlist download page. `Ctrl` + `0` resets it. [`🎉 Zoom Shortcuts ↗`](/features/shortcuts/#zoom)
 
 ### Android {#android-tips}
 

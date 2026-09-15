@@ -28,6 +28,8 @@ Your YouTube watch history inside Namida, separate from the local one, with its 
 
 Manage all download tasks, pause, resume, retry or cancel, with a failed only filter. Playlists get their own batch download page. [`🎉 Downloads feature ↗`](/features/youtube/#downloads)
 
+The flash icon at the top sets how many downloads run at the same time, 4 by default and up to 10, the number on the icon is the current value. The rest keep waiting in the queue until a slot is free. `🆕 v7.1.0`
+
 ### Search {#search}
 
 Search YouTube directly, results include videos, playlists and channels. Offline search is available for browsing what you already have.

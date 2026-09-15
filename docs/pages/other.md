@@ -24,9 +24,12 @@ What you get:
 - Obsession, your most played days and longest session.
 - Discoveries, tracks and artists you found for the first time.
 - Most Played, top tracks, artists, albums and genres for the range.
+- Total Listens, a donut of how your listens are split. Press the category icon on the card to switch between Genres, Styles, Moods, Tags, Artists, Album Artists, Composers and Albums. `🆕 v7.1.0`
 - Rediscoveries, tracks you came back to after a long break.
 - Completed Albums and Genres.
 - Audio, lossless share, plus listens per source, total listen time and release year.
+
+Every card has a share icon that saves it as an image, and long pressing a card copies its values as text. The share icon in the app bar exports all the cards at once.
 
 ::: callout info
 Some charts need listen time data that Namida only started recording in v7.0.0, so they fill up as you listen.
@@ -39,6 +42,8 @@ Some charts need listen time data that Namida only started recording in v7.0.0, 
 A wrap up of one year of listening, for local and YouTube separately. Open it from the Stats page, or from the banner that shows up on the Home page during December and January.
 
 It covers your top tracks and artists, listening clock, longest streak, busiest day, discoveries, oldest favourite, longest session, repeat rate, completed albums, rediscoveries, and a comparison with the year before. The "Year in N Songs" section picks one track for each month.
+
+Swipe through the pages and share the one you like as an image, or press the share icon in the app bar to export every page at once.
 
 ### Sync Manager {#sync-manager}
 

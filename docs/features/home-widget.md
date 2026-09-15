@@ -37,7 +37,9 @@ Opening it from inside Namida applies your changes to every widget you already p
 
 #### Controls {#controls}
 
-Choose which buttons appear: Favourite, Shuffle queue, Previous, Play / Pause, Next, Repeat mode and Stop.
+Choose which buttons appear: Favourite, Shuffle, Previous, Play / Pause, Next, Repeat mode and Stop.
+
+Shuffle and Repeat mode show their current state, they look dimmed while they are off. [`🎉 Queue System ↗`](/features/playback/#queue)
 
 #### Tap Actions {#tap-actions}
 
