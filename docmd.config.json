@@ -43,6 +43,7 @@
     "template": "summer",
     "appearance": "system",
     "codeHighlight": true,
+    "customCss": ["assets/css/overrides.css"],
     "copyWidgets": {
       "enabled": false,
       "raw": false,

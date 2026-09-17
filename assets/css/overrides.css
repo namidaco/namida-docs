@@ -1,0 +1,28 @@
+/* Hidden git popover (min-width 320px, centered on the right-aligned time) widens the mobile layout viewport. */
+@media (max-width: 900px) {
+  .summer-pagefooter {
+    position: relative;
+  }
+
+  .summer-pagefooter__time {
+    position: static;
+  }
+
+  .summer-git-popover {
+    left: 0;
+    right: 0;
+    min-width: 0;
+    max-width: none;
+    transform: translateY(4px);
+  }
+
+  .summer-pagefooter__time.has-commits:hover .summer-git-popover,
+  .summer-pagefooter__time.has-commits:focus .summer-git-popover,
+  .summer-pagefooter__time.has-commits.open .summer-git-popover {
+    transform: translateY(0);
+  }
+}
+
+.docmd-ai-bar-input {
+  min-width: 0;
+}
