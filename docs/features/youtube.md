@@ -12,7 +12,7 @@ Namida comes with a full YouTube section, powered by a custom client. Stream, wa
 - Best available video & audio quality, you can pick the quality manually too.
 - Audio Only mode, play any video as music without loading the video.
 - Data Saver, skip loading video streams to save data, see [below](#data-saver).
-- Radio, auto start a queue based on the current video, using YouTube Mix playlist.
+- Radio, auto start a queue based on the current video, using the YouTube Mix playlist.
 
 [`⚙️ Configure YouTube ↗`](/settings/5-youtube-settings/)
 
@@ -26,7 +26,7 @@ Namida keeps two Data Saver values, one for Wi-Fi and one for mobile data, so yo
 
 Cached videos still play as videos, no matter the level.
 
-It is not in the settings page, you set it right where you need it: press the video quality button in the player, Data Saver sits at the top of the list and shows the current level.
+It is available in the player, not in settings: press the video quality button, Data Saver sits at the top of the list and shows the current level.
 
 ### Subtitles {#subtitles}
 
@@ -127,7 +127,7 @@ There are 3 kinds of playlists in Namida:
 
 1. **Local playlists**, your normal library playlists, see [`🎉 Playlists & History feature ↗`](/features/playlists-history/).
 2. **Local YouTube playlists**, playlists of YouTube videos, stored inside Namida.
-3. **Hosted/online YouTube playlists**, your account playlists, useful to access them instantly. You can also save them as local YouTube playlists, so videos don't get randomly removed (as YouTube usually does).
+3. **Hosted/Online YouTube playlists**, your account playlists, useful to access them instantly. You can also save them as local YouTube playlists, so videos don't get randomly removed (as YouTube usually does).
 
 How actions map to them:
 
@@ -146,7 +146,7 @@ Shows the dislike count on videos using [Return YouTube Dislike](https://returny
 
 ### Accounts {#accounts}
 
-Sign in to your account to get personalized related videos and mix playlists, and to interact with videos. Signing in can also provide better download speed and fix some playback issues. Channels that live under the same Google account (brand accounts) can each be signed in separately. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
+Sign in to your account to get personalized related videos and mixes, and to interact with videos. It can also improve download speed and fix some playback issues. Brand accounts under the same Google account can each be signed in separately. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
 
 ### Comments {#comments}
 
@@ -157,7 +157,7 @@ Full comments support with replies. You can prefer top comments or newest commen
 You can import your watch history from YouTube takeout files, it gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
 ::: callout tip
-Signing in your YouTube account allows you to access your Subscribed Channels and Playlists. This can be better than importing manually depending on your usage.
+Signing in gives live access to your subscriptions and playlists, which can be better than importing them manually.
 :::
 
 ---
@@ -172,4 +172,4 @@ Signing in your YouTube account allows you to access your Subscribed Channels an
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

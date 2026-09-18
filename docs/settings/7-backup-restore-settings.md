@@ -45,9 +45,9 @@ Import your extended streaming history from a Spotify data export, zip or json f
 Import your listens from a ListenBrainz data export, zip or json files.
 
 ::: callout info
-Each import shows a small guide for getting the export file. You can limit the import to a time range, and optionally add all matched tracks per entry (instead of just one).
+Each import shows a short guide for getting the export file. You can limit it to a time range, and choose to add every matched track per entry (instead of just one).
 :::
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

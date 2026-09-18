@@ -7,23 +7,22 @@ description: "For those who go all the way"
 
 ### Play a loop animation with a track {#loop-animation}
 
-Link a very short video to a track, it loops while the track plays, an animated artwork basically.
+Link a very short video to a track, it loops while the track plays, basically an animated artwork.
 
 1. Pick a short video (a few seconds), or a short YouTube clip.
 2. Link it to the track. [`📒 Link a YouTube Video Guide ↗`](/guides/medium/#link-yt-video) [`📒 Link a Local Video Guide ↗`](/guides/medium/#link-local-video)
 
 Animated artworks work too, embed an animated gif or webp image as the artwork in the track tags and it animates wherever the artwork is shown. [`🎉 Tag Editor feature ↗`](/features/tag-editor/)
 
-### I deleted some music files by mistake, what do? {#recover-deleted}
+### I deleted some music files by mistake {#recover-deleted}
 
-If they were downloaded from Namida, or have a YouTube link in their comment tag, ez:
+If they were downloaded from Namida, or have a YouTube link in their comment tag, it's easy:
 
 1. Select them -> Open dialog -> "Open in Youtube view".
 2. Open the player queue, then download.
 
-If they were deleted from Namida, you can at least recover their paths from `Android/data/com.msob7y.namida/files/Recently Deleted`.
-Use ADB or Shizuku if you don't have access to that folder.
+If they were deleted from inside Namida, you can at least recover their paths from [User Data](/storage-paths/#user-data)`/Recently Deleted`.
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

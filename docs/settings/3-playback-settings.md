@@ -23,7 +23,7 @@ Play videos related to the music. Videos can be found locally or fetched from Yo
 
 ### Video Quality {#video-quality}
 
-Preferred qualities to pick. Keeping more alternatives is good in case a quality is not found, otherwise it falls back to the worst quality.
+Preferred qualities, in order. Keep a few alternatives, if none is found the worst quality is used.
 
 ### Local Video Matching {#local-video-matching}
 
@@ -37,15 +37,19 @@ Never, when miniplayer is expanded, or when miniplayer is expanded and a video i
 
 `💻 Android only`
 
-The notification thumbnail might get displaced on some devices.
+Adds a favourite button to the media notification. The thumbnail might get displaced on some devices.
 
 ### Display Stop Button in Notification {#stop-button-notification}
 
 `💻 Android only`
 
+Adds a stop button to the media notification.
+
 ### Display Artwork on Lockscreen {#artwork-lockscreen}
 
 `💻 Android <= 12 only`
+
+Shows the current track's artwork on the lockscreen.
 
 ### Kill Player After Dismissing App {#kill-player}
 
@@ -80,8 +84,7 @@ Skips silent parts of the audio.
 
 ### Gapless Playback {#gapless-playback}
 
-Removes the small loading delay between tracks, useful for some albums or for those who can't wait 0.067 seconds between tracks.
-Works by prefetching the next track. This is a beta feature.
+Removes the small loading delay between tracks by prefetching the next one. Useful for some albums, or for those who can't wait 0.067 seconds between tracks. `Beta feature`.
 
 ### Crossfade {#crossfade}
 
@@ -117,6 +120,8 @@ Resume playback when a wired or wireless device is connected, if playback was pa
 
 ### Jump to First Track After Finishing Queue {#jump-to-first}
 
+When the queue ends, go back to the first track instead of staying on the last one.
+
 ### Previous Button Replays {#previous-button-replays}
 
 Pressing previous replays the current track if the position is past the seek duration, instead of going back.
@@ -139,4 +144,4 @@ Sets the minimum seconds or percentage of a track to count it as a listen in his
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

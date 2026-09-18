@@ -41,7 +41,7 @@ Not so obvious features you might have missed.
 - Long press the heart icon to add the current track to a playlist.
 - To switch the artist/title locations, toggle "Display artist before title" in [Customizations](/settings/4-customization-settings/#miniplayer-customization).
 - Audio configs (speed, pitch, effects) can be set per item, open the Sound Control page with the audio effects icon in the player.
-- Pressing an item that is already playing, from another queue, silently rebuilds the queue without stopping playback.
+- Playing the current track from another list rebuilds the queue silently without interrupting playback.
 - Open any track's dialog and press play to quickly start a new queue with only that track.
 - Zoom in on the video in the local player to enter fullscreen.
 - Namida can play loop animations, link a very short video to a track and it loops while the track plays. Embedding an animated gif or webp as the artwork works too. [`📒 Loop Animation Guide ↗`](/guides/namider/#loop-animation)
@@ -80,8 +80,8 @@ The track menu has an Advanced section:
 - In media pages, long press the grid icon to choose a specific count per row (higher numbers can cause performance issues).
 - In the tracks page and media subpages, long press shuffle/play for advanced options.
 - Tap the resume button in media subpages to resume from the last played track, and long press it to jump to that track.
-- If a network image source is enabled, you can edit an album/artist display image by opening its dialog and pressing the artwork edit icon at the top right. Playlist artworks can always be edited.
-  - Note that this is different from editing tags for all tracks inside. Editing artwork from here just edits the display image and doesn't touch the audio files.
+- With a network image source enabled, open an album or artist dialog and press the edit icon at the top right to change its display image. Playlist artworks can always be edited.
+  - This only changes the display image, the audio files and their tags are untouched.
 - Open the dialog of an album, artist, playlist or folder and press Stats to see listen stats for just those tracks.
 - The current queue and the stats page can be library tabs of their own. [`📄 Queue Tab ↗`](/pages/library/#current-queue) [`📄 Stats Tab ↗`](/pages/library/#stats)
 
@@ -95,13 +95,13 @@ The track menu has an Advanced section:
 
 ### YouTube {#youtube-tips}
 
-- In the player, press the arrow down to open the menu for the current video. You can add it to favourites from there, which is separate from liking (liking is tied to your YouTube account, while favourites live in Namida only).
+- In the player, press the arrow down to open the current video's menu. You can add it to favourites from there, which is separate from liking (liking is tied to your YouTube account, while favourites live in Namida only).
 - Long press the copy button on a video to copy specific info, like the title, link or channel.
 - Signing in to your account can provide better download speed and fix some playback issues.
 - You can import your history, playlists and subscriptions from a [YouTube takeout](/features/youtube/#history-import).
 - Set a cached video's priority to VIP so it never gets auto deleted. Private and deleted videos become VIP automatically.
 - Namida can show info of private and deleted videos, thanks to [Filmot](https://filmot.com/).
-- In the youtube search tab, offline search is very useful to find videos you watched previously. You can sort results by most played, recent listen or first listen. Import your YouTube history for better results.
+- In the YouTube search tab, offline search is very useful to find videos you watched previously. You can sort results by most played, recent listen or first listen. Import your YouTube history for better results.
 - Take a snapshot of a channel or playlist: open the videos tab, press "load all", wait, then open the menu and add to a playlist.
 - Type `after:2024-01-01` or `before:2023-06` in the search text to filter by upload date, or use the filters row. [`📄 Search Filters ↗`](/pages/youtube/#search-filters)
 - In a channel page, the time range icon lists only videos uploaded after or before a date.
@@ -109,7 +109,7 @@ The track menu has an Advanced section:
 
 ### History {#history-tips}
 
-- Tap calendar icon at top to jump to a specific day.
+- Tap the calendar icon at the top to jump to a specific day.
 - Tap a year chip to jump to the same day but in that year.
 - Most Played supports custom time ranges, see your top tracks of any period. Use the slider to navigate adjacent periods easier.
 - Open a track's listens dialog, tap a listen to jump to that day in history, or use the button beside it to open Most Played for that range.
@@ -134,7 +134,7 @@ The track menu has an Advanced section:
 
 ### Scrolling {#scrolling}
 
-The scrollbar needs a small hold before it starts scrolling. This is intentional, most apps have a big instantly draggable scrollbar, which usually causes many accidental scrolls. Namida keeps the minimal design instead.
+The scrollbar needs a short hold before it starts dragging. This is intentional, most apps have a big instantly draggable scrollbar, which usually causes many accidental scrolls. Namida keeps the minimal design instead.
 
 ### Colors {#colors-tips}
 
@@ -149,7 +149,7 @@ The scrollbar needs a small hold before it starts scrolling. This is intentional
 
 ### Misc {#misc-tips}
 
-- Long press/Hover on any icon to show a tooltip explaining what it does
+- Long press or hover on any icon to see a tooltip explaining what it does.
 - Pages that have a docs page show a guide icon in the app bar, it opens the matching page here.
 - Tag editor and smart playlist fields suggest values from your library as you type.
 - Did you know you can unlock crossfade and party mode for free? Try reading the dialog that shows, and maybe fight it.
@@ -171,4 +171,4 @@ The scrollbar needs a small hold before it starts scrolling. This is intentional
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

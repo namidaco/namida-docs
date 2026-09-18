@@ -10,7 +10,7 @@ The permissions Namida uses and why. Nothing is used for tracking, there are no 
 ### Always Used {#always}
 
 - `WAKE_LOCK`, `FOREGROUND_SERVICE` & `FOREGROUND_SERVICE_MEDIA_PLAYBACK`: keep the app alive for media playback, otherwise the system would kill playback randomly.
-- `INTERNET`: used for many things, like artist/album images, streaming & downloading, lyrics fetching, etc.
+- `INTERNET`: used for many things, like artist/album images, streaming, downloads, lyrics and more.
 - `READ_EXTERNAL_STORAGE` (Android <= 12): list files from indexer folders only.
 - `READ_MEDIA_AUDIO` (Android 13+): list audio files from indexer folders only.
 - `READ_MEDIA_VIDEO` (Android 13+): list video files from indexer folders only, for video playback.
@@ -40,4 +40,4 @@ On Windows & Linux, none of these apply, the app works like any normal desktop a
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

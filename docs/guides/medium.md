@@ -10,7 +10,7 @@ description: "Linking videos, syncing and smart playlists"
 1. Open the track's dialog and choose "Set Youtube Link".
 2. Paste the video link, done. The video plays with the track when [`⚙️ Configure Video Playback ↗`](/settings/3-playback-settings/#video-playback) is on.
 
-It also works automatically, Namida looks up the track's comment tag (mostly filled by yt-dlp) or its filename for any matching YouTube link. If found, the video is downloaded, cached, and plays once ready. Streaming is not used here, the priority goes to the music file itself.
+It also works automatically, Namida looks up the track's comment tag (usually filled by yt-dlp) or its filename for a YouTube link. If found, the video is downloaded and cached, then plays once ready. Streaming is not used here since the priority goes to the music file itself.
 
 - In the comment tag, any url format gets matched, example: `https://youtu.be/video_id`
 - In filenames, it should contain `v=video_id` or `id=video_id` to get matched.
@@ -32,7 +32,7 @@ video alAn WaLkER - faDed (480p).mp4
 ```
 
 ::: callout info
-Some cleanup is made to improve the matching, all symbols & whitespaces are ignored, so casing and extra words don't break it.
+Matching ignores casing, symbols and whitespace, and extra words around the name are fine.
 :::
 
 ### Play specific tracks quickly {#play-specific-quickly}
@@ -53,11 +53,11 @@ Some cleanup is made to improve the matching, all symbols & whitespaces are igno
 Synced to another device and tracks or playlists point to the wrong paths?
 
 1. Open Missing Tracks. [`⚙️ Open Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
-2. Press the select all button, then Update. Everything should be fixed.
+2. Press select all, then Update. Everything should be fixed.
 
-For playlists, you can also make them follow your music instead:
+For playlists, you can also make them follow your music files instead:
 
-1. Convert your playlists to M3U, they are saved in the `Namida/M3U Playlists` folder.
+1. Convert your playlists to M3U, they are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`.
 2. Move the M3U files somewhere inside your music folder.
 3. Refresh the playlists in Namida (pull down in the playlists page), they turn into relative playlists.
 4. Sync them together with the music using [syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or similar apps.
@@ -82,4 +82,4 @@ Some rule ideas for [`🎉 Smart Playlists feature ↗`](/features/playlists-his
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

@@ -8,7 +8,7 @@ description: "How to install Namida on Android, Windows and Linux"
 Namida runs on Android, Windows and Linux. There are two channels:
 
 - [Stable releases](https://github.com/namidaco/namida/releases), for everyone.
-- [Beta releases](https://github.com/namidaco/namida-snapshots/releases), new features and fixes land here first. Most YouTube breakages are fixed in beta asap, so it's the first thing to try when something stops working.
+- [Beta releases](https://github.com/namidaco/namida-snapshots/releases), new features and fixes land here first. YouTube fixes are available here first, so try the latest beta first when something stops working.
 
 ::: callout warning
 Namida is only available through [namida.app](https://namida.app), GitHub & Telegram.
@@ -92,18 +92,18 @@ sudo dnf install webkit2gtk4.1         # Fedora/RHEL
 ```
 
 ::: callout info
-Older betas had separate `_login` files bundling wpewebkit, they are gone. Every build does login through webkit2gtk now.
+Older betas had separate `_login` builds bundling wpewebkit. They are gone, every build now logs in through webkit2gtk.
 :::
 
 #### Which file {#linux-files}
 
-| File                                     | Pick it if                                                                                                                                                                    |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `namida-vX.X.X-beta.linux.tar.gz`        | Any distro. This is what the quick install script below uses, or extract and run it yourself.                                                                                 |
-| `namida-vX.X.X-beta.linux.deb`           | Debian, Ubuntu, Mint and friends.                                                                                                                                             |
-| `namida-vX.X.X-beta.linux.rpm`           | Fedora, RHEL and friends.                                                                                                                                                     |
-| `Namida-x86_64-<version>.AppImage`       | A single portable file, no installation. Built on an older glibc so it also runs on non rolling distros, and it can update itself through AppImageUpdate or AppImageLauncher. |
-| `Namida-x86_64-<version>.flatpak`        | You already use flatpak. Ships its own mpv.                                                                                                                                   |
+| File                               | Pick it if                                                                                                                                                                    |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `namida-vX.X.X-beta.linux.tar.gz`  | Any distro. This is what the quick install script below uses, or extract and run it yourself.                                                                                 |
+| `namida-vX.X.X-beta.linux.deb`     | Debian, Ubuntu, Mint and friends.                                                                                                                                             |
+| `namida-vX.X.X-beta.linux.rpm`     | Fedora, RHEL and friends.                                                                                                                                                     |
+| `Namida-x86_64-<version>.AppImage` | A single portable file, no installation. Built on an older glibc so it also runs on non rolling distros, and it can update itself through AppImageUpdate or AppImageLauncher. |
+| `Namida-x86_64-<version>.flatpak`  | You already use flatpak. Ships its own mpv.                                                                                                                                   |
 
 #### Installing {#linux-install}
 
@@ -151,4 +151,4 @@ Namida also has its own built in sync, see [`🎉 Sync feature ↗`](/features/s
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

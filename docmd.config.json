@@ -243,6 +243,7 @@
     { "title": "FAQ", "path": "/faq/", "icon": "message-circle-question-mark" },
     { "title": "Not Planned", "path": "/not-planned/", "icon": "ban" },
     { "title": "Permissions", "path": "/permissions/", "icon": "shield-check" },
+    { "title": "Storage Paths", "path": "/storage-paths/", "icon": "folder-tree" },
     {
       "title": "GitHub",
       "path": "https://github.com/namidaco/namida",

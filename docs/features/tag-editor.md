@@ -41,4 +41,4 @@ WEBM format does not support tag editing.
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

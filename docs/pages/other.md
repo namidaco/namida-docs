@@ -7,7 +7,7 @@ description: "Stats, Sync Manager and About"
 
 ### Stats {#stats}
 
-Some info about your library: counts of tracks, albums, artists, genres and styles, total tracks duration, and your total listen time, for local and YouTube separately. Open it with the chart icon at the top of the Home page, or make it a library tab of its own. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+Library numbers: tracks, albums, artists, genres and styles, total duration, and your total listen time, for local and YouTube separately. Open it with the chart icon at the top of the Home page, or make it a library tab of its own. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
 
 #### Charts {#charts}
 
@@ -55,4 +55,4 @@ App version & changelog, socials, licenses, share logs, and links for translatin
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

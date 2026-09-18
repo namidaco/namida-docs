@@ -27,4 +27,4 @@ Feature pages link to their related settings, look for the ↗ arrow.
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

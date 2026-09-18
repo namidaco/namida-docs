@@ -32,7 +32,7 @@ Seeking jumps by your [Seek Duration](/settings/3-playback-settings/#seek-durati
 | `Ctrl` + `+` / `-`   | Zoom in / out  |
 | `Ctrl` + `0`         | Reset the zoom |
 
-Zoom applies to whatever is open in front of you, the synced lyrics font size, and the card size in a playlist download page. It is the desktop version of the pinch gesture.
+Zoom applies to what is in front of you: the synced lyrics font size, or the card size in a playlist download page. It is the desktop version of the pinch gesture.
 
 ### Current Track {#current-track}
 
@@ -65,7 +65,7 @@ The mini lyrics window is a small window with the current lyrics line, see [`ðŸŽ
 
 ### Custom Hotkeys {#custom-hotkeys}
 
-The shortcuts above only work when the app is focused (app-wide). You can set system-wide shortcuts by pressing the shortcut icon at the very top (or by going to Settings -> About -> Shortcuts). From there you can record your own hotkeys for playback actions like play/pause, next/previous, seek and volume, etc...
+The shortcuts above only work while Namida is focused. For system wide hotkeys, press the shortcut icon at the title bar, or go to Settings -> About -> Shortcuts, and record your own keys for play/pause, next/previous, seek, volume and more.
 
 ---
 
@@ -77,4 +77,4 @@ The shortcuts above only work when the app is focused (app-wide). You can set sy
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

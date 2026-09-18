@@ -39,26 +39,26 @@ Show the dislike count on videos, data is provided by [returnyoutubedislike.com]
 - Show channel watermark in fullscreen.
 - Show video endcards.
 - Auto start radio, automatically adds a mix playlist when playing a single track.
-- Personalized Related Videos (disabling this will increase data usage, because it means fetching another page without account info).
+- Personalized Related Videos, turning it off fetches an extra page without account info, so it uses more data.
 - Personalized Mix Playlists.
-- Enable Search Cleanup, hide garbage unrelated search results.
+- Enable Search Cleanup, hide unrelated search results.
 
 ### Comments {#comments}
 
 - Top comments, display comments at top instead of bottom.
-- Prefer new comments when possible, the cached version will only be used when there is no connection.
+- Prefer new comments when possible, cached comments are only used when offline.
 
 ### Downloads {#downloads}
 
-- Downloads Metadata tags, controls how tags are filled by default:
-  - If disabled: the channel name becomes the artist, and the video title becomes the title.
-  - If enabled: the video title is split into "Artist - Title" (Artist falls back to the channel name if splitting failed), the channel is also added as the album, and the genre is set to "Nightcore" if the title contains it.
+- Downloads Metadata tags, how tags are filled by default:
+  - Off: channel name as artist, video title as title.
+  - On: the video title is split into "Artist - Title" (artist falls back to the channel name), the channel becomes the album, and genre is set to "Nightcore" when the title contains it.
 - Default Download Location.
 - Download notifications `💻 Windows+Linux only`.
 
 ### On Opening Youtube Link {#on-opening-youtube-link}
 
-Choose what happens when opening a YouTube link with Namida: Play, Add to Queue, Add to Playlist, Download, Always Ask, etc..
+Choose what happens when opening a YouTube link with Namida: Play, Add to Queue, Add to Playlist, Download, Always Ask and more.
 
 ### Flags {#flags}
 
@@ -67,7 +67,7 @@ Hidden experimental options, opened by pressing the flag icon at the top of the 
 - `MARK_VIDEO_WATCHED`, mark videos as watched on your account.
 - `TRY_EXTRACT_TAGS_INFO_FROM_DESCRIPTION`, pull tag info from the video description if needed.
 - `INNERTUBE_CLIENT`, change the client used for requests, can fix playback issues.
-- `WHITE_VIDEO_BG_IN_LIGHT_MODE`, fullscreen video will have app background color, not pure black.
+- `WHITE_VIDEO_BG_IN_LIGHT_MODE`, fullscreen video uses the app background color instead of pure black.
 - `ENABLE_DIM_IN_LIGHT_MODE`, dimming miniplayer also works in light mode.
 - `ALLOW_EXPERIMENTAL_CODECS` & `PREFER_OPUS_FORMAT`, audio/video format preferences.
 - `ENABLE_GIF_THUMBNAILS`, animated video thumbnails.
@@ -85,4 +85,4 @@ Flags are experimental, defaults are fine for most people.
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

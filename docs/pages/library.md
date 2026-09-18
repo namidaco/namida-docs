@@ -9,7 +9,7 @@ The main tabs of your library. You choose which ones are enabled and their order
 
 ### Home {#home}
 
-Your personalized start page. Mixes generated from your history, recent listens, recently added, top recent albums & artists, and Lost Memories, tracks you listened to around this time years ago. Sections are configurable and reorderable.
+Your personalized start page: mixes generated from your history, recent listens, recently added, top recent albums & artists, and Lost Memories, tracks you listened to around this time years ago. Sections can be toggled and reordered.
 
 The mixes are: Recommended, Supremacy (built around what is playing right now), Top Recents, Underrated, Lost Partners, Discover, Favourites and Random Picks. Empty ones move to the end.
 
@@ -29,7 +29,7 @@ Browse by Artists, Album Artists or Composers, press the type at the top left to
 
 `🆕 v7.0.0`
 
-Your artists laid out as a constellation, each one wired to the artists it actually relates to, through shared albums, features on the same track and shared genres. Press an artist to open it, or shuffle to get a fresh set. Open it from the Artists page.
+Your artists laid out as a constellation, each one connected to related artists through shared albums, features on the same track and shared genres. Press an artist to open it, or shuffle for a fresh set. Open it from the Artists page.
 
 ### Genres {#genres}
 
@@ -48,7 +48,7 @@ Browse your library exactly like your file manager, with separate views for musi
 
 ### Queues {#queues}
 
-Every listening session is saved automatically, jump back to any previous queue. Never miss your sessions. Press the delete icon at the top to clear some unimportant queues, or swipe a queue left to quickly remove it. Inside a queue, the resume button continues from the track you last played in it.
+Every listening session is saved automatically, so you can jump back to any previous queue. Press the delete icon at the top to clear unimportant queues, or swipe one left to quickly remove it. Inside a queue, the resume button continues from the track you last played in it.
 
 ### Queue {#current-queue}
 
@@ -82,4 +82,4 @@ Searching inside an album, artist, playlist or any other media page orders the r
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

@@ -13,4 +13,4 @@ Step by step guides for common tasks, sorted by experience level.
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

@@ -9,7 +9,7 @@ Tweak the looks of every part of the app.
 
 ### General {#general}
 
-- Enable Blur Effect, a soft blur behind some small cards (like duration card on videos/track card in home page).
+- Enable Blur Effect, a soft blur behind small cards, like the duration card on videos or track cards on the Home page.
 - Enable Glow Effect, a drop shadow effect around artworks and images.
 - Enable Parallax Effect, the app layer gets smaller while expanding the miniplayer, giving a sense of depth.
 
@@ -42,14 +42,14 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 - Force squared track thumbnail.
 - Size of track thumbnail & height of track tile.
 - Swipe actions, set a left and right swipe action for tracks (like play next, add to playlist).
-- Every info position in the tile is customizable, choose exactly what appears in each slot of every row (title, artist, album, year, duration, bitrate and more).
+- Every slot in the tile is customizable, choose what appears in each row: title, artist, album, year, duration, bitrate and more.
 - Display third row & third item in each row, control how much info a track tile shows.
 - Display favourite button.
 - Items separator.
 
 ### Miniplayer Customization {#miniplayer-customization}
 
-- Party Mode, applies a fancy edge breathing effect, colors can be "static" (1 color) or "switching" (all colors from artwork palette moving one after the other).
+- Party Mode, a breathing glow around the edges, with a static color or switching through the artwork palette.
 - Moving particles, the particles speed up with the audio peak.
 - Thumbnail animation intensity, the artwork animates with the audio peak. Separate values for expanded, minimized and lyrics view, plus an inverse option where high peaks make the thumbnail smaller.
 - Artwork gestures, scale multiplier, tap action, long press action and double tap to toggle lyrics.
@@ -61,14 +61,12 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 
 `💻 Android only`
 
-Choose a different icon for the app.
-Icons can be submitted on [Our Discord](https://discord.com/channels/1156253663803740271/1423484977693327430/1423671224520671362).
+Choose a different icon for the app. New icons can be submitted on [our Discord](https://discord.com/channels/1156253663803740271/1423484977693327430/1423671224520671362).
 
 ::: callout info
-It is not possible to add a custom icon directly from within Namida. Android doesn't allow this, all icons must be configured beforehand.
-You can use other methods like a Launcher supporting icon packs, or patch the app.
+Fully custom icons are not possible, Android requires all icons to be configured beforehand. Use a launcher that supports icon packs, or patch the app.
 :::
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

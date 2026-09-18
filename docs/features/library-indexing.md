@@ -9,7 +9,7 @@ Namida builds your library from the folders you choose, with a powerful indexer 
 
 ### Folders Based Library {#folders}
 
-Add the folders you want, exclude the ones you don't. The folders tab lets you browse your library exactly like your file manager, with support for `cover.jpg` style images and `.info.txt` files for displaying small info. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
+Add the folders you want, exclude the ones you don't. The Folders tab browses your library like a file manager, with support for `cover.jpg` style images and `.info.txt` files for small notes. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
 ### Artists & Genres Separators {#separators}
 
@@ -21,7 +21,7 @@ Prevent duplicated tracks, set minimum file size & duration, blacklist extension
 
 ### Videos {#videos}
 
-Full video library indexing & playback, videos can be played independently, with a dedicated videos folder view. [`⚙️ Configure Include Videos ↗`](/settings/2-indexer-settings/#include-videos)
+Videos are indexed and playable on their own, with a dedicated videos folder view. [`⚙️ Configure Include Videos ↗`](/settings/2-indexer-settings/#include-videos)
 
 ### Missing Tracks {#missing-tracks}
 
@@ -44,4 +44,4 @@ Your library is not limited to local files, servers can be indexed too, see the 
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

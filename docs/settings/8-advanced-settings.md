@@ -9,7 +9,8 @@ Caches, fixes and performance.
 
 ### Performance Mode {#performance-mode}
 
-One switch for the heavy visual settings: High performance, Balanced, Good looking, or Custom. It controls things like auto coloring, blur, glow and parallax at once.
+One switch for the heavy visual settings: High performance, Balanced, Good looking, or Custom.
+It controls things like auto coloring, blur, glow and parallax at once.
 
 ### Re-scan Videos {#rescan-videos}
 
@@ -25,8 +26,8 @@ Moved your music to a new folder? This updates all track paths from the old dire
 
 ### Fix yt-dlp Big Thumbnail Size {#fix-ytdlp-thumbnail}
 
-Files downloaded by yt-dlp can carry a huge embedded thumbnail (webp, usually re-encoded). This re-embeds max image quality available directly without re-encoding it to another format.
-Expected result: smaller file sizes and faster artwork loading, the audio itself is untouched. (example: 1MB -> 128KB per image)
+Files downloaded by yt-dlp can carry a huge embedded thumbnail (usually a re-encoded webp). This re-embeds the best available thumbnail quality without converting it, so files shrink (around 1MB to 128KB per image) and artworks load faster. The audio is untouched.
+This modifies the files directly.
 
 ::: callout warning
 Output replaces the files in the selected folder
@@ -34,11 +35,10 @@ Output replaces the files in the selected folder
 
 ### Compress Images {#compress-images}
 
-Compress artworks and cached images to save storage, you choose the compression percentage.
-Expected result: noticeably less storage used by images, with little visible quality loss at moderate percentages. Original audio files are untouched.
+Compress artworks and cached images to save storage, you choose the compression percentage. Moderate values save a lot with little visible loss. The audio files are untouched.
 
 ::: callout info
-Output is in a new folder "storage/Namida/Compressed", and won't directly replace the folder you selected
+Output goes to a new folder [Namida Folder](/storage-paths/#namida-folder)`/Compressed`, it won't replace the folder you selected so you need to manually copy them back.
 :::
 
 ### Cache Limits {#cache-limits}
@@ -57,4 +57,4 @@ Clearing image cache results in a library without images, use only to rebuild th
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

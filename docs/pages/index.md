@@ -17,4 +17,4 @@ You control which pages appear as tabs and their order, see [Library Tabs](/sett
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

@@ -15,7 +15,7 @@ Some settings are only available on specific platforms or android versions. They
 Press the search icon in Namida settings to easily find the setting you want.
 :::
 
-### Sections
+### Sections {#sections}
 
 1. [Theme](/settings/1-theme-settings/), colors, dark mode and language
 2. [Indexer](/settings/2-indexer-settings/), manage your music library
@@ -28,4 +28,4 @@ Press the search icon in Namida settings to easily find the setting you want.
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

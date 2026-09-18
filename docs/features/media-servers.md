@@ -21,7 +21,7 @@ A server is added as a library folder in the indexer. Enter the server address a
 For Subsonic servers, tracks without their own artwork fall back to the album artwork.
 
 ::: callout info
-For file based servers (WebDAV, SMB), files are temporarily downloaded for indexing. Make sure your connection is stable, Wi-Fi is recommended to avoid high data usage.
+File based servers (WebDAV, SMB) download files temporarily for indexing. Use a stable connection, preferably Wi-Fi to avoid high data usage.
 :::
 
 ### Server Playlists {#playlists}
@@ -36,4 +36,4 @@ Playlists from your servers can be auto imported on library refresh, see the [`ð
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

@@ -39,4 +39,4 @@ Added lyrics but the old ones keep showing? A cached copy is winning, see [`📄
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

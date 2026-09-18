@@ -15,19 +15,17 @@ Namida is not on Google Play, and there are no plans to publish it there current
 - Download feature.
 - Donation & Membership links that don't use Google's payment sdk.
 
-A separate version without these could be made, but that's another maintenance cost we are not willing to take, and they contribute to the Namida experience so yeah.
+A separate version without these could be made, but that is extra maintenance we are not willing to take on, and these features are an important part of the Namida experience.
 
 Get Namida from GitHub instead, or use Obtainium to keep it updated. [`📒 Installation Guide ↗`](/installation/#android)
 
 ### Spotify {#spotify}
 
-Not planned.
-Importing your Spotify history is supported, but that's all.
+Not planned. Importing your Spotify history is supported, but that's all.
 
-The reason is simply that Spotify is notorious for blocking any attempt at unofficial clients. Even if Namida implements it, it will simply be hit by a DMCA and no longer have support.
+Spotify is notorious for blocking unofficial clients. Even if Namida added support, a DMCA takedown would end it quickly. We are barely keeping YouTube support alive as is.
 
-What you can do as an alternative is convert your Spotify playlists to YTM, then log in inside Namida to view your YT playlists.
-We are barely keeping YT support alive as is.
+As an alternative, convert your Spotify playlists to YouTube Music, then sign in inside Namida to access them.
 
 Alternatives: [spotiflac](https://github.com/spotbye/SpotiFLAC) or [other tools like it](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/audio/#wiki_.25B7_audio_ripping_tools)
 
@@ -45,8 +43,8 @@ Use [Kizzy](https://github.com/dead8309/Kizzy) on android, or [Music Presence](h
 
 ### Advanced Equalizer Features {#equalizer}
 
-Namida's equalizer is simple and uses native android effects, we always recommend using system wide EQ apps for a better experience and more features.
-Most extra features require writing a custom audio engine, or making sure every android version supports the effect, none of these are planned.
+Namida's equalizer is simple and uses native Android effects, we always recommend using system wide EQ apps for a better experience and more features.
+Anything beyond that needs a custom audio engine, or making sure each Android version supports the effect, none of these are planned.
 
 - If you have root, you can use JamesDSP or Viper4Android.
 - Otherwise use [Equalizer314](https://f-droid.org/en/packages/com.bearinmind.equalizer314) or [RootlessJamesDSP](https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp).
@@ -57,4 +55,4 @@ Scrolling text is distracting and doesn't look so good. Long texts get faded out
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

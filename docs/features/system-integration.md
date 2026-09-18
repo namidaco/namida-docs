@@ -9,9 +9,9 @@ What Namida can do outside of its own window.
 
 ### Open With & Share {#open-with}
 
-Namida registers itself for a lot of things, so it shows up in the share sheet and in "Open with":
+Namida shows up in the share sheet and in "Open with" for:
 
-- Audio and video files, they play right away. Sharing many files at once works too, Sharing a folder works too.
+- Audio and video files, they play right away. Sharing many files, or a whole folder, works too.
 - `.m3u` and `.m3u8` playlist files. [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
 - YouTube links, from any app or browser. What happens next is up to you. [`⚙️ Configure On Opening Youtube Link ↗`](/settings/5-youtube-settings/#on-opening-youtube-link)
 - Shared text, useful for links copied from somewhere else.
@@ -66,4 +66,4 @@ Control playback even when Namida is not focused, see [`🎉 Shortcuts feature �
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

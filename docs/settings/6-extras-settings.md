@@ -13,7 +13,7 @@ Show settings sections in a single list instead of each in a subpage.
 
 ### Enable Bottom Navigation Bar {#bottom-nav-bar}
 
-Quick navigation between library tabs, the items stay inside the drawer both ways.
+Quick navigation between library tabs. The tabs stay in the drawer either way.
 
 ### Enable Picture-in-Picture {#pip}
 
@@ -31,7 +31,7 @@ The tab the app opens on.
 
 ### Library Tabs {#library-tabs}
 
-Choose which tabs are enabled (tracks, albums, artists, genres, playlists, folders, the current queue, stats and more), you can reorder the activated tabs. [`📄 Library Pages ↗`](/pages/library/)
+Choose which tabs are enabled (tracks, albums, artists, genres, playlists, folders, the current queue, stats and more), you can reorder them too. [`📄 Library Pages ↗`](/pages/library/)
 
 ### Filter Tracks in Search Lists By {#filter-tracks-by}
 
@@ -49,11 +49,10 @@ All symbols and spaces will be ignored while searching, makes matching easier.
 
 - Prioritize embedded lyrics over fetched ones.
 - Lyrics source, auto, local only or internet only.
-- Stretch lyrics duration.
-  - useful to automatically adapt duration on spedup/slowed/nightcore versions.
+- Stretch lyrics duration, adapts the timing for sped up, slowed or nightcore versions.
 - Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
 
-How lyrics are found: Namida looks for synced lyrics first, previously saved lyrics, then `.lrc` files next to the track, then the embedded lyrics tag, then online databases. If no synced lyrics are found, it repeats the same order for plain lyrics, ending with a web search. Local and internet steps can be limited with the source setting above.
+How lyrics are found: Namida looks for synced lyrics first, checking previously saved lyrics, then `.lrc` files next to the track, then the embedded lyrics tag, then online databases. If no synced lyrics are found, it repeats the same order for plain lyrics, ending with a web search. The source setting above limits it to local or internet steps.
 
 Files next to the track can be `.lrc`, `.ttml`, `.xml` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename. Online databases are LRCLIB and KuGou, when both return something the result closest to the track duration wins, and the lyrics menu shows where each one came from.
 
@@ -75,7 +74,11 @@ Hide status & navigation bars while the miniplayer is expanded.
 
 ### Swipe to Open Drawer {#swipe-drawer}
 
+Open the side menu by swiping anywhere on the screen (like app bar and navigation bar).
+
 ### Always Expanded Searchbar {#expanded-searchbar}
+
+Keep the searchbar open instead of collapsing it into an icon.
 
 ### Enable Clipboard Monitoring {#clipboard-monitoring}
 
@@ -88,7 +91,7 @@ Allows pasting links and texts inside the searchbar on the go.
 Vibration or haptic feedback for some actions, or none.
 
 ::: callout info
-Vibration/Haptic feedback is not for everything, only selective actions, like: Miniplayer expanding, seek magnet (when seeking near the starting edge), seek cancel (when swiping up), tapping duration in video description, executing track swipe action, long press play next/play last, long press folder menu (opens all tracks inside recursively), rebuilding queue without changing item playing.
+Vibration/Haptic feedback is  only used for selected actions: expanding the miniplayer, seek magnet and seek cancel, tapping a duration in a video description, track swipe actions, long pressing play next/play last, long pressing a folder menu (opens all tracks inside), and rebuilding the queue without changing the playing item.
 :::
 
 ### Extract All Color Palettes {#extract-palettes}
@@ -105,7 +108,7 @@ Hidden experimental options, opened by pressing the flag icon at the top of the 
 - `MEDIA_WAVE_HAPTIC`, haptics that follow the audio.
 - `JELLYS_INVASION` & `JELLYS_COLOR_PALETTE`, lets jellyfishes drift around the app, with a matching color palette.
 - `SHOW_DESKTOP_TITLE_BAR` & `DESKTOP_TITLE_BAR_ICONS_TYPE`, title bar look on desktop.
-- `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between local style player and youtube style player.
+- `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between the local style and YouTube style player.
 - `CUSTOM_EQ_PACKAGE`, open a custom equalizer app instead of the system built-in one.
 - `VISUAL_TO_AUDIO_DELAY`, offset visuals to compensate audio latency.
 - `TIME_CAPSULE_YEARS`, travel back in time, or into the future.
@@ -117,4 +120,4 @@ Flags are experimental, defaults are fine for most people.
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

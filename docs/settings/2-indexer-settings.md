@@ -25,7 +25,7 @@ Skips folders that contain a `.nomedia` file.
 
 ### Extract feat. Artists {#extract-feat-artists}
 
-Extracts (feat. X) and (ft. X) artists from the title, as a new artist entry. You will find the featured artists in the [Artists tab](/pages/library/#artists).
+Extracts (feat. X) and (ft. X) artists from the title as their own artist entry, shown in the [Artists tab](/pages/library/#artists).
 
 ### Enable Artwork Cache {#artwork-cache}
 
@@ -41,7 +41,7 @@ Identifies artworks by their track's full path instead of just filename. Enable 
 
 ### Album Identifiers {#album-identifiers}
 
-Choose which fields identify an album. By default the Album name + Album's Artist name, you can add Year, MusicBrainz Album ID or MusicBrainz Album Artist ID to separate albums that share the same name.
+Which fields identify an album. "Album" name + "Album Artist" name by default, add Year, MusicBrainz Album ID or MusicBrainz Album Artist ID to separate albums that share the same name.
 
 ### Artists & Genres Separators {#separators}
 
@@ -63,10 +63,10 @@ Files smaller or shorter than these values will be skipped, useful for filtering
 
 `💻 Android only`
 
-Uses the Android system index instead of Namida's own indexer. Instant indexing time, but some metadata tags will be missing, `.nomedia` is forcefully respected, and YouTube integration for local library will not work.
+Uses the Android system index instead of Namida's own indexer. Indexing is instant, but some tags will be missing, `.nomedia` is always respected, and YouTube integration for the local library will not work.
 
-::: callout warning "Deprecated"
-This feature is removed as of `v7.0.0`. With the new tagger (`taglib`) being stable and fast, and with this option lacking critical aspects of Namida, and many users reporting issues after manually enabling and forgetting it, it is no longer worth keeping.
+::: callout warning
+Removed in `v7.0.0`. The `taglib` tagger is fast and stable now, this option lacked key features of Namida, and many users enabled it, forgot about it and hit issues.
 :::
 
 ### Include Videos {#include-videos}
@@ -87,4 +87,4 @@ Refresh checks for newly added or deleted music. Re-index rebuilds the whole lib
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

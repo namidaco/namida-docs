@@ -6,7 +6,7 @@ description: "The pages of the YouTube section"
 # YouTube Pages
 
 The pages of the [YouTube](/features/youtube/) section.
-Most pages have a local variant and a hosted variant for when you are signed in, the hosted one shows your account's live data.
+Most pages have a local variant and a hosted one for when you are signed in, showing your account's live data.
 
 ### Home {#home}
 
@@ -28,7 +28,7 @@ Your YouTube watch history inside Namida, separate from the local one, with its 
 
 Manage all download tasks, pause, resume, retry or cancel, with a failed only filter. Playlists get their own batch download page. [`🎉 Downloads feature ↗`](/features/youtube/#downloads)
 
-The flash icon at the top sets how many downloads run at the same time, 4 by default and up to 10, the number on the icon is the current value. The rest keep waiting in the queue until a slot is free. `🆕 v7.1.0`
+The flash icon at the top sets how many downloads run at the same time, 4 by default and up to 10, the icon shows the current value. The rest wait until a slot is free. `🆕 v7.1.0`
 
 ### Search {#search}
 
@@ -55,4 +55,4 @@ You can also type the date right in the search text, like `after:2024-01-01` or 
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

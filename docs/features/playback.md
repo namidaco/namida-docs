@@ -13,15 +13,15 @@ A persistent and reliable queue system, your sessions are saved for later usage.
 
 - Repeat modes: Repeat All Queue, Stop on Last Track, Repeat Current Track, repeat for N times before playing the next track, and Repeat All Queue (Shuffle) which reshuffles the queue every time it ends.
 - Shuffle is a toggle, separate from the repeat mode. `🆕 v7.1.0`
-  - Turning it on shuffles the queue itself, the playing track stays first. Turning it off puts the queue back in its original order, and keeps playing the same track.
-  - While it's on, any new queue you start is shuffled too, with the track you pressed first.
-  - It stays on between sessions, and it is the same toggle everywhere: the queue, the home screen widget, media controls and the desktop shortcut.
-- Stop after any track, open the menu of a track in the queue and choose "Stop after this track", this starts a sleep timer that ends on this track. `🆕 v7.0.0`
-- Insert after latest inserted, for inserting multiple tracks one after each other.
+  - On shuffles the queue with the playing track first, off restores the original order, playback is never interrupted.
+  - While on, new queues start shuffled, with the track you pressed first.
+  - It persists between sessions and is the same toggle everywhere: queue, home screen widget, media controls and the desktop shortcut.
+- Stop after any track, open a queued track's menu and choose "Stop after this track". `🆕 v7.0.0`
+- Insert after latest inserted, for stacking several tracks in order.
 - Play modes when playing from search: selected track only, search results, album, first artist or first genre.
-- Recommended & Similar Release Date additions, add tracks you usually listened to with the current one, or released around the same time.
+- Recommended & Similar Release Date, add tracks you usually listen to with the current one, or released around the same time.
 
-The queue bottom row packs more than it looks:
+The queue's bottom row packs more than it looks:
 
 - The clear button removes duplicates, everything before, everything after, or all except the current track.
 - The add button generates and adds tracks:
@@ -41,7 +41,7 @@ Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equali
 Press the audio effects icon in the player to open the Sound Control page. It has two tabs:
 
 - **Global**, applies to everything you play.
-- **Item**, applies to the current track or video only, and a small icon tells you when it has its own settings. Press the reset icon to drop them and fall back to global, or turn on "Force use global config" to ignore per item settings altogether.
+- **Item**, applies to the current track or video only, a small icon shows when it has its own settings. Press reset to fall back to global, or turn on "Force use global config" to ignore per item settings.
 
 Both tabs carry Speed, Pitch (as a percentage or in semitones), Volume, Skip silence, Loudness Enhancer and the Equalizer with its presets. There is also Mono Audio for merging both channels into one.
 
@@ -63,7 +63,7 @@ Namida can play videos related to your music. Videos are found locally by filena
 
 ### Lyrics {#lyrics}
 
-Auto fetching & displaying, synced & plain, with support for word synced lrc/ttml files. Subtitle files next to the track (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work as lyrics too. Online lyrics come from LRCLIB and KuGou, and the best matching result is picked using the track duration. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
+Lyrics are fetched and shown automatically, synced or plain, with support for displaying word synced lrc/ttml files. Subtitle files next to the track (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work as lyrics too. Online lyrics come from LRCLIB and KuGou, and the best matching result is picked using the track duration. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
 
 ### Widescreen Player {#widescreen-player}
 
@@ -81,7 +81,7 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 
 - Swipe the miniplayer left or right to change tracks, up and down to expand or minimize, and swipe down to dismiss when [Dismissible Miniplayer](/settings/3-playback-settings/#dismissible-miniplayer) is on.
 - Artwork tap and long press actions are configurable, and double tap can toggle lyrics. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization)
-- Swipe left/right on a track or a video to execute actions (ex: play next, open info, go to album, edit tags, etc..) [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile)
+- Swipe left or right on a track or video to execute an action (play next, open info, go to album, edit tags and more). [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile)
 - Tap the current position to seek backwards and the total duration to seek forwards, by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Holding either one keeps seeking.
 - Long press the previous button to jump to the start of the track, long press the next button to speed up playback while holding it.
 - While seeking with the seekbar, swipe upwards to cancel the seek.
@@ -98,8 +98,7 @@ The menu also has an Advanced section for the heavier stuff, copying and moving 
 
 ### Sleep Timer {#sleep-timer}
 
-Stop playback after a number of tracks or minutes.
-Sleep Timer can be found in the app side menu.
+Stop playback after a number of tracks or minutes. Find it in the side menu.
 
 ### Waveform Seekbar {#waveform}
 
@@ -116,4 +115,4 @@ The seekbar is the actual waveform of the track. [`⚙️ Configure Waveform Bar
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

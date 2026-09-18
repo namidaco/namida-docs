@@ -9,11 +9,11 @@ description: "Flexible playlists and a reliable history system"
 
 Normal playlists with custom order and the ability to set custom artworks. Also:
 
-- M3U playlists, import them natively or keep them synced with the original M3U file, so changes made in Namida reach other apps too. Any playlist can be converted to M3U and back, or exported as M3U one time. Make sure the folder holding your M3U files is in the indexer folders, so they show up.
+- M3U playlists, import them or keep them synced with the original file, so changes made in Namida reach other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders.
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
 - Custom order for playlists, press the edit icon at the top to enable reordering.
 - Custom order for playlist tracks, press the lock icon at the top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
-- Playlists can be filtered/searched, and can have moods, usable by the player's add tracks (mood) feature.
+- Playlists can be searched, and can have moods, which is used by the queue's add tracks by mood.
 
 ::: callout warning
 Sorting tracks by a property means your custom order will be lost. You will see a warning, and approval is required before applying the new sort.
@@ -28,7 +28,7 @@ They also have their own full page, reachable from the playlists page. [`📒 Sm
 
 ### History {#history}
 
-A reliable and flexible history system. You specify the minimum seconds or percentage to count a listen, and it can be easily modified, manipulated and imported. [`⚙️ Configure Listen Counting ↗`](/settings/3-playback-settings/#count-listen-after)
+A reliable and flexible history system. You choose the minimum seconds or percentage that counts as a listen. History can be imported from other services, and listens can be replaced, never deleted. [`⚙️ Configure Listen Counting ↗`](/settings/3-playback-settings/#count-listen-after)
 
 Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range.
 
@@ -68,4 +68,4 @@ The Home page rebuilds itself once the import is done, so mixes and recent liste
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

@@ -13,7 +13,7 @@ Switch between System, Light and Dark mode. System follows your device theme.
 
 ### Auto Coloring {#auto-coloring}
 
-Automatically pick player colors from current artwork. Each track gets its own color, applied to the player and the rest of the app.
+Automatically pick player colors from the current artwork. Each track gets its own color, applied to the player and the rest of the app.
 
 ::: callout info
 Might affect performance on low end devices. You can turn it off and set a [Default Color](#default-color) instead.
@@ -43,4 +43,4 @@ Change the app language. Translations are made by the community, you can help tr
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

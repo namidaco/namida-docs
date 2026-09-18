@@ -7,11 +7,11 @@ description: "A player widget on your home screen"
 
 `💻 Android only`
 
-A resizable player widget for your home screen, with a full settings screen behind it.
+A resizable player widget for your home screen, with its own settings screen.
 
 ### Adding It {#adding}
 
-Long press your home screen, open the widgets list and pick Namida. Drop it anywhere and resize it, the layout adapts to the size you give it.
+Long press your home screen, open the widgets list and pick Namida. Drop it anywhere and resize it, the layout adapts to its size.
 
 ### Configuring It {#configuring}
 
@@ -58,4 +58,4 @@ Press Reset at the bottom to go back to the default look.
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>

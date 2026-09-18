@@ -37,12 +37,12 @@ Content...
 
 ---
 
-<sub>by @author</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>
 ```
 
 - Section headers are H3 (`###`), not H2.
 - Every section header gets an explicit id: `### Downloads {#downloads}`. This is required, docmd prefixes auto generated ids with the page slug, which breaks cross page anchors. Explicit ids stay stable.
-- The footer credits whoever wrote or meaningfully edited the file, multiple names are fine: `<sub>by @claude & @someone</sub>`.
+- The footer names the content author and the writer of the text. Append your handle to the writer line if you meaningfully edited the file: `<sub>Author: @MSOB7YY<br>Writer: @claude & @someone</sub>`.
 
 ## Chips & Links
 

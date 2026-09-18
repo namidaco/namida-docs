@@ -48,7 +48,7 @@ Turn on the advanced view in the Sync page to see every item separately instead 
 
 ### Smart Matching {#matching}
 
-Your devices don't need identical file paths. Tracks are matched across devices using fingerprints, so stats and listens land on the right files even when libraries live in different folders. If something still ends up with a wrong path, it's an easy fix. [`📒 Path Problems Guide ↗`](/guides/medium/#sync-path-problems)
+Devices don't need identical file paths. Tracks are matched by fingerprint, so stats and listens land on the right files even when libraries live in different folders. If something still ends up with a wrong path, it's an easy fix. [`📒 Path Problems Guide ↗`](/guides/medium/#sync-path-problems)
 
 ### Conflict Resolution {#conflicts}
 
@@ -60,9 +60,9 @@ Set an auto sync interval and let devices sync on their own whenever they see ea
 
 ### Devices {#devices}
 
-Devices show up by the name they broadcast, so you always know what you are sending to. You can rename your own device while the server is running, press the edit icon beside it and the new name is broadcasted right away.
+Devices show up by the name they broadcast. Rename yours while the server is running, press the edit icon beside it and the new name is broadcast right away.
 
-Devices you don't want around can be blocked instead of just rejected, they can no longer reach you and they stop asking. Blocked devices are listed in their own section, with an unblock button.
+Blocking a device, instead of just rejecting it, stops it from reaching you or asking again. Blocked devices are listed in their own section, with an unblock button.
 
 ---
 
@@ -72,4 +72,4 @@ Devices you don't want around can be blocked instead of just rejected, they can 
 
 ---
 
-<sub>by @claude</sub>
+<sub>Author: @MSOB7YY<br>Writer: @claude</sub>
