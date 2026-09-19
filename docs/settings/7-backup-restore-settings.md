@@ -30,7 +30,7 @@ Sync app data between your devices over local network, see the [Sync feature](/f
 
 ### Import Youtube History {#import-youtube-history}
 
-Import your watch history from a YouTube takeout export (`watch-history.json`). Watches get matched with your library or YouTube videos and merged into history.
+Import your watch history from a YouTube takeout export (`watch-history.json` or `watch-history.html`). Watches get matched with your library or YouTube videos and merged into history.
 
 ### Import LastFm History {#import-lastfm-history}
 

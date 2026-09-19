@@ -74,7 +74,9 @@ Hidden experimental options, opened by pressing the flag icon at the top of the 
 - `ENABLE_STREAM_SEGMENTS` & `ENABLE_SEEK_HEATMAP`, segments and heatmap on the seekbar.
 - `PREFER_MIX_PLAYLIST_AS_RELATED_VIDEOS`, use mixes for the related section, useful if related videos are _unrelated_.
 - `SHOW_LIKE_STATUS_ON_CARDS`, show your like status on video cards, can increase data usage.
-- `LONG_PRESS_SPEED`, the playback speed used while long pressing the video.
+- `PREFER_LIKE_BUTTON_OVER_FAVOURITE`, show a like button instead of the heart in the notification, widgets and player while playing YouTube items, when signed in.
+- `LINK_LIKE_BUTTON_WITH_FAVOURITES`, liking a video adds it to your local YouTube favourites, unliking or disliking removes it.
+- `USE_NEW_NOTIFICATIONS_EXTRACTOR`, use it if you don't see new notifications, the order might not be accurate when enabled.
 - `MAX_PAGE_CACHE_DURATION_VALIDITY`, how long cached pages stay valid.
 - `REFRESH_JS_PLAYER`, refetch the player, can fix streaming issues.
 - `COPY_YT_HISTORY_TO_LOCAL_HISTORY`, add local youtube history watches into local history.

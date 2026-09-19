@@ -24,7 +24,7 @@ Also see the [`🎉 YouTube feature ↗`](/features/youtube/#playlists) for how 
 ### Smart Playlists {#smart-playlists}
 
 Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more. Text rules suggest values from your library as you type.
-They also have their own full page, reachable from the playlists page. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
+They also have their own full page, reachable from the playlists page, where you can reorder them. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
 
 ### History {#history}
 
@@ -37,6 +37,10 @@ Open a track's listens dialog to see every single listen. Tap a listen to jump t
 ### Most Played {#most-played}
 
 Find your top tracks based on your history record, with a custom time range to see your most beloved tracks at that time.
+
+- Use the slider to move between adjacent periods.
+- Pick a single day with a days radius around it, to see what you were into around that day.
+- Ranges can be day based or clock based. Day based starts from the beginning of the day, clock based counts back from the current time.
 
 ### Stats & Your Year {#stats}
 

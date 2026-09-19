@@ -106,9 +106,10 @@ Hidden experimental options, opened by pressing the flag icon at the top of the 
 - `FLOATING_ARTWORK_EFFECT` & `TILTING_CARDS_EFFECT`, extra visual effects.
 - `GRADIENT_TILES_AND_CARDS`, gradient backgrounds for tiles and cards.
 - `MEDIA_WAVE_HAPTIC`, haptics that follow the audio.
-- `JELLYS_INVASION` & `JELLYS_COLOR_PALETTE`, lets jellyfishes drift around the app, with a matching color palette.
+- `JELLYS_INVASION` & `JELLYS_COLOR_PALETTE`, lets jellyfishes drift around the app, with a matching color palette. Can also be toggled from the jellyfish button in the theme settings.
 - `SHOW_DESKTOP_TITLE_BAR` & `DESKTOP_TITLE_BAR_ICONS_TYPE`, title bar look on desktop.
 - `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between the local style and YouTube style player.
+- `RECENT_SEARCHES`, saves your searches and shows them in the search page.
 - `CUSTOM_EQ_PACKAGE`, open a custom equalizer app instead of the system built-in one.
 - `VISUAL_TO_AUDIO_DELAY`, offset visuals to compensate audio latency.
 - `TIME_CAPSULE_YEARS`, travel back in time, or into the future.

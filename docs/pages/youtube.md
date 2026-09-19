@@ -11,6 +11,7 @@ Most pages have a local variant and a hosted one for when you are signed in, sho
 ### Home {#home}
 
 Your YouTube feed, with notifications and subscriptions when [signed in](/settings/5-youtube-settings/#accounts).
+In notifications, you can play all unread videos at once, and comment notifications open the comment with its replies. If new notifications don't show up, switch the extractor from the button at the top.
 
 ### Playlists {#playlists}
 

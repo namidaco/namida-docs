@@ -21,12 +21,13 @@ Not so obvious features you might have missed.
 - When playing from search, you can choose the [Play Mode](/pages/library/#search): selected track only, search results, album, first artist or first genre.
 - Links and texts you copy can appear right in the searchbar, enable [Clipboard Monitoring](/settings/6-extras-settings/#clipboard-monitoring).
 - Settings has its own search, press the search icon at the top of settings.
+- Your recent searches can be saved and shown in the search page, enable `RECENT_SEARCHES` in the [Extras Flags](/settings/6-extras-settings/#flags).
 
 ### Player {#player}
 
 - Tap the current position to seek backwards, tap the total duration to seek forwards, by the [Seek Duration](/settings/3-playback-settings/#seek-duration).
   - Hold them to keep seeking (rewind/fastforward).
-- Long press the previous button to jump to the very start of the track, and long press the next button to speed up playback while you hold it. [`⚙️ Configure Long Press Speed ↗`](/settings/5-youtube-settings/#flags)
+- Long press the previous button to jump to the very start of the track, and long press the next button to speed up playback while you hold it. [`⚙️ Configure Long Press Speed ↗`](/settings/3-playback-settings/#long-press-speed)
 - While seeking, swipe upwards to cancel. Seeking near the starting edge snaps to the very start.
 - Swipe the miniplayer left or right to change tracks.
 - Shuffle is a toggle, it shuffles the queue itself and turning it off brings back the original order. Long press it for a one time Shuffle Next or Shuffle All. [`🎉 Queue System ↗`](/features/playback/#queue)
@@ -111,7 +112,7 @@ The track menu has an Advanced section:
 
 - Tap the calendar icon at the top to jump to a specific day.
 - Tap a year chip to jump to the same day but in that year.
-- Most Played supports custom time ranges, see your top tracks of any period. Use the slider to navigate adjacent periods easier.
+- Most Played supports custom time ranges, see your top tracks of any period. Use the slider to navigate adjacent periods easier, or pick a single day with a days radius.
 - Open a track's listens dialog, tap a listen to jump to that day in history, or use the button beside it to open Most Played for that range.
 - Replace all listens of a track with another track, useful after re-downloading a file (Track's Dialog -> Advanced -> Replace all listens).
 - Imported a wrong source? [Remove it from history](/settings/8-advanced-settings/#remove-source-history) in one go.

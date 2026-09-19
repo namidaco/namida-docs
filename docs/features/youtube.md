@@ -46,7 +46,7 @@ Watching videos supports gestures:
 - Swipe horizontally to seek
 - Seeking very close to the starting edge snaps to the very start
 - While seeking, swipe upwards to cancel
-- Long press for 2x speed [`⚙️ Configure Long Press Speed ↗`](/settings/5-youtube-settings/#flags)
+- Long press for 1.5x speed [`⚙️ Configure Long Press Speed ↗`](/settings/3-playback-settings/#long-press-speed)
 
 Horizontal seeking on the video can be limited to fullscreen, the expanded miniplayer, always or never. [`⚙️ Configure Drag to seek (Video) ↗`](/settings/5-youtube-settings/#miniplayer)
 
@@ -154,7 +154,7 @@ Full comments support with replies. You can prefer top comments or newest commen
 
 ### Takeout Import {#history-import}
 
-You can import your watch history from YouTube takeout files, it gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
+You can import your watch history from YouTube takeout files, both json and html formats work, it gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
 ::: callout tip
 Signing in gives live access to your subscriptions and playlists, which can be better than importing them manually.

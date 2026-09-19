@@ -106,6 +106,10 @@ Pressing next on the last item jumps to the first one, and vice versa.
 
 Pause playback or do nothing when volume reaches zero, with an option to resume if it was paused for less than a set number of minutes.
 
+### Long-Press Action: Speed {#long-press-speed}
+
+The playback speed used while long pressing the next button or the video, 1.5x by default.
+
 ### On Interruption {#on-interruption}
 
 `💻 Android only`
