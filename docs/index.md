@@ -64,7 +64,9 @@ We are not responsible for downloads from other sources.
 
 Namida is made by human, **not** vibe coded. AI usage is minimal and very selective.
 Every design choice comes after thoughtful decisions and series of refining, down to every pixel.
-Parts built with AI carry a disclaimer, [see here](https://github.com/namidaco/namida/issues/945) for more info.
+Parts built with AI have a disclaimer, [see here](https://github.com/namidaco/namida/issues/945) for more info.
+
+[**Why AI at all (rant) ↗**](/ai-usage/)
 
 ---
 
