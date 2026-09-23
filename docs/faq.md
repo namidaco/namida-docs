@@ -60,6 +60,15 @@ Also make sure the `.lrc` file sits next to the track and has the same filename,
 
 You can pick from the icons that ship with Namida, but a fully custom one is not possible, Android requires all icons to be configured beforehand. See [App Icon](/settings/4-customization-settings/#app-icon), you can also submit an icon there, or use a launcher that supports icon packs.
 
+### Why aren't smart playlists treated as normal playlists? {#smart-playlists}
+
+They are a different thing. A smart playlist is only a set of rules, and its tracks are found only when you open it.
+
+- Listing them with normal playlists means finding the tracks of every smart playlist all the time, which would easily hurt performance.
+- Tracks can't be added to a smart playlist manually, the rules decide what's in it. Mixing them with normal playlists would make that confusing.
+
+See [`🎉 Smart Playlists feature ↗`](/features/playlists-history/#smart-playlists)
+
 ### Is there a LastFm scrobble feature? {#lastfm}
 
 No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), see [Not Planned](/not-planned/#lastfm).

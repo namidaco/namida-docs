@@ -26,6 +26,8 @@ Also see the [`🎉 YouTube feature ↗`](/features/youtube/#playlists) for how 
 Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more. Text rules suggest values from your library as you type.
 They also have their own full page, reachable from the playlists page, where you can reorder them. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
 
+Their tracks are found only when you open them, and tracks can't be added to them manually, so they are kept apart from normal playlists. [`📄 Why aren't smart playlists treated as normal playlists? ↗`](/faq/#smart-playlists)
+
 ### History {#history}
 
 A reliable and flexible history system. You choose the minimum seconds or percentage that counts as a listen. History can be imported from other services, and listens can be replaced, never deleted. [`⚙️ Configure Listen Counting ↗`](/settings/3-playback-settings/#count-listen-after)
