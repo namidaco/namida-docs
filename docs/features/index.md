@@ -15,6 +15,7 @@ What Namida can do, each feature explained in its own page.
 - [YouTube](/features/youtube/), stream, download and watch YouTube inside Namida
 - [Media Servers](/features/media-servers/), index your servers like normal folders
 - [Sync](/features/sync/), sync app data between your devices
+- [Listening Party](/features/party/), listen to the same queue with other people, in sync
 - [Home Screen Widget](/features/home-widget/), a player widget on your home screen
 - [System Integration](/features/system-integration/), open with, tray, tiles and more
 - [Shortcuts](/features/shortcuts/), keyboard shortcuts on desktop

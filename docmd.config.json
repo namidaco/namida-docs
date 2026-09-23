@@ -113,6 +113,12 @@
           "external": false
         },
         {
+          "title": "Listening Party",
+          "path": "/features/party.md",
+          "icon": "party-popper",
+          "external": false
+        },
+        {
           "title": "Home Screen Widget",
           "path": "/features/home-widget.md",
           "icon": "layout-dashboard",
