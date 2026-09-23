@@ -85,6 +85,14 @@ Lists tracks that no longer exist on storage, you can update their paths to keep
 
 Refresh checks for newly added or deleted music. Re-index rebuilds the whole library from scratch, artworks are kept as long as they still exist.
 
+Ways to refresh the library:
+
+- Pull down in the [Tracks page](/pages/library/#tracks).
+- "Refresh Library" in the quick suggestions at the top of the settings page.
+- The refresh icon at the top right of the Indexer card.
+- The "Refresh Library" tile inside the Indexer card.
+- On desktop, the refresh icon in the title bar, or `Ctrl` + `R`. [`🎉 Shortcuts feature ↗`](/features/shortcuts/#navigation)
+
 ---
 
 <sub>Author: @MSOB7YY<br>Writer: @claude</sub>

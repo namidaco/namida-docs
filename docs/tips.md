@@ -130,7 +130,7 @@ The track menu has an Advanced section:
 ### Folders {#folders-tips}
 
 - Put a `cover.jpg` (or similar) image inside a folder to use it as the folder artwork.
-- Put a `.info.txt` file inside a folder to display small info about it.
+- Put a `.info.txt` file inside a folder to display small info about it. [Refresh the library](/settings/2-indexer-settings/#refresh-reindex) after editing it to see the changes.
 - Set a specific folder as default, Namida opens it on app launch.
 
 ### Scrolling {#scrolling}

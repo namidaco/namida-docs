@@ -44,6 +44,7 @@ Your playlists, along with the built-in ones: History, Most Played and Favourite
 Browse your library exactly like your file manager, with separate views for music and videos. Supports folders hierarchy, `cover.jpg` style folder images, and `.info.txt` for displaying small info. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
 - Set a specific folder as default, Namida will open it on app launch.
+- Edits to a `.info.txt` file show up after refreshing the library. [`⚙️ Refresh Library ↗`](/settings/2-indexer-settings/#refresh-reindex)
 - In the tracks sort menu, disable "Enable folders hierarchy" to show all folders in a single list instead of a tree view.
 
 ### Queues {#queues}
