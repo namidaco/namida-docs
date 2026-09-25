@@ -9,7 +9,7 @@ Library tabs, search, lyrics and other options.
 
 ### Use Collapsed Setting Tiles {#collapsed-tiles}
 
-Show settings sections in a single list instead of each in a subpage.
+Show all settings sections in a single list, instead of opening each one in its own page.
 
 ### Enable Bottom Navigation Bar {#bottom-nav-bar}
 
@@ -43,7 +43,7 @@ Ignores prefixes like "The" and "A" while sorting.
 
 ### Enable Search Cleanup {#search-cleanup}
 
-All symbols and spaces will be ignored while searching, makes matching easier.
+Ignores symbols and spaces while searching, so matches are easier to find.
 
 ### Lyrics {#lyrics}
 
@@ -52,9 +52,9 @@ All symbols and spaces will be ignored while searching, makes matching easier.
 - Stretch lyrics duration, adapts the timing for sped up, slowed or nightcore versions.
 - Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
 
-How lyrics are found: Namida looks for synced lyrics first, checking previously saved lyrics, then `.lrc` files next to the track, then the embedded lyrics tag, then online databases. If no synced lyrics are found, it repeats the same order for plain lyrics, ending with a web search. The source setting above limits it to local or internet steps.
+How lyrics are found: Namida looks for synced lyrics first, checking previously saved lyrics, then `.lrc` files next to the track, then the embedded lyrics tag, then online databases. If no synced lyrics are found, it repeats the same order for plain lyrics, ending with a web search. The lyrics source above limits this to only the local steps or only the internet steps.
 
-Files next to the track can be `.lrc`, `.ttml`, `.xml` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename. Online databases are LRCLIB and KuGou, when both return something the result closest to the track duration wins, and the lyrics menu shows where each one came from.
+Files next to the track can be `.lrc`, `.ttml`, `.xml` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename. Online databases are LRCLIB and KuGou. When both find lyrics, the one closest to the track duration is used, and the lyrics menu shows where each one came from.
 
 ::: callout tip
 Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track.
@@ -74,7 +74,7 @@ Hide status & navigation bars while the miniplayer is expanded.
 
 ### Swipe to Open Drawer {#swipe-drawer}
 
-Open the side menu by swiping anywhere on the screen (like app bar and navigation bar).
+Open the side menu by swiping anywhere on the screen (like the app bar and navigation bar).
 
 ### Always Expanded Searchbar {#expanded-searchbar}
 
@@ -82,7 +82,7 @@ Keep the searchbar open instead of collapsing it into an icon.
 
 ### Enable Clipboard Monitoring {#clipboard-monitoring}
 
-Allows pasting links and texts inside the searchbar on the go.
+Links and text you copy can show up right in the searchbar.
 
 ### Vibration Type {#vibration}
 
@@ -91,16 +91,16 @@ Allows pasting links and texts inside the searchbar on the go.
 Vibration or haptic feedback for some actions, or none.
 
 ::: callout info
-Vibration/Haptic feedback is  only used for selected actions: expanding the miniplayer, seek magnet and seek cancel, tapping a duration in a video description, track swipe actions, long pressing play next/play last, long pressing a folder menu (opens all tracks inside), and rebuilding the queue without changing the playing item.
+Vibration/Haptic feedback is only used for selected actions: expanding the miniplayer, seek magnet and seek cancel, tapping a duration in a video description, track swipe actions, long pressing play next/play last, long pressing a folder menu (opens all tracks inside), and rebuilding the queue without changing the playing item.
 :::
 
 ### Extract All Color Palettes {#extract-palettes}
 
-Extracts colors for the whole library at once instead of on play, used by [Auto Coloring](/settings/1-theme-settings/#auto-coloring).
+Extracts colors for the whole library at once, instead of when each track plays. Used by [Auto Coloring](/settings/1-theme-settings/#auto-coloring).
 
 ### Flags {#flags}
 
-Hidden experimental options, opened by pressing the flag icon at the top of the Extras settings card:
+Hidden experimental options. Press the flag icon at the top of the Extras settings card to open them:
 
 - `TAP_TO_SCROLL`, `ENHANCED_DRAG_TO_SCROLL` & `SMOOTH_SCROLLING`, scrolling behavior tweaks.
 - `FLOATING_ARTWORK_EFFECT` & `TILTING_CARDS_EFFECT`, extra visual effects.
@@ -111,7 +111,7 @@ Hidden experimental options, opened by pressing the flag icon at the top of the 
 - `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between the local style and YouTube style player.
 - `RECENT_SEARCHES`, saves your searches and shows them in the search page.
 - `CUSTOM_EQ_PACKAGE`, open a custom equalizer app instead of the system built-in one.
-- `VISUAL_TO_AUDIO_DELAY`, offset visuals to compensate audio latency.
+- `VISUAL_TO_AUDIO_DELAY`, shift the visuals to make up for audio delay.
 - `TIME_CAPSULE_YEARS`, travel back in time, or into the future.
 - `PREFERRED_SEARCH_TAB`, the tab search opens on.
 

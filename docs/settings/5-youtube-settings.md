@@ -23,13 +23,13 @@ Skip sponsor segments in videos, powered by [SponsorBlock](https://sponsor.ajay.
 
 ### Return Youtube Dislike {#return-youtube-dislike}
 
-Show the dislike count on videos, data is provided by [returnyoutubedislike.com](https://returnyoutubedislike.com/).
+Show the dislike count on videos, using data from [returnyoutubedislike.com](https://returnyoutubedislike.com/).
 
 ### Miniplayer {#miniplayer}
 
 - Youtube-style Miniplayer.
 - Remember audio only mode.
-- Dim miniplayer after a set number of seconds of inactivity, along with the dim intensity.
+- Dim the miniplayer after a set number of seconds of inactivity, and choose how dark it gets.
 - Seekbar behavior, tap to seek and drag to seek.
 - Drag to seek (Video), when swiping horizontally on the video itself: Never, Expanded Miniplayer, Fullscreen or Always. `🆕 v7.0.0`
 
@@ -45,7 +45,7 @@ Show the dislike count on videos, data is provided by [returnyoutubedislike.com]
 
 ### Comments {#comments}
 
-- Top comments, display comments at top instead of bottom.
+- Top comments, display comments at the top instead of the bottom.
 - Prefer new comments when possible, cached comments are only used when offline.
 
 ### Downloads {#downloads}
@@ -62,13 +62,13 @@ Choose what happens when opening a YouTube link with Namida: Play, Add to Queue,
 
 ### Flags {#flags}
 
-Hidden experimental options, opened by pressing the flag icon at the top of the Youtube settings card:
+Hidden experimental options. Press the flag icon at the top of the Youtube settings card to open them:
 
 - `MARK_VIDEO_WATCHED`, mark videos as watched on your account.
 - `TRY_EXTRACT_TAGS_INFO_FROM_DESCRIPTION`, pull tag info from the video description if needed.
 - `INNERTUBE_CLIENT`, change the client used for requests, can fix playback issues.
 - `WHITE_VIDEO_BG_IN_LIGHT_MODE`, fullscreen video uses the app background color instead of pure black.
-- `ENABLE_DIM_IN_LIGHT_MODE`, dimming miniplayer also works in light mode.
+- `ENABLE_DIM_IN_LIGHT_MODE`, the miniplayer dim also works in light mode.
 - `ALLOW_EXPERIMENTAL_CODECS` & `PREFER_OPUS_FORMAT`, audio/video format preferences.
 - `ENABLE_GIF_THUMBNAILS`, animated video thumbnails.
 - `ENABLE_STREAM_SEGMENTS` & `ENABLE_SEEK_HEATMAP`, segments and heatmap on the seekbar.
@@ -76,10 +76,10 @@ Hidden experimental options, opened by pressing the flag icon at the top of the 
 - `SHOW_LIKE_STATUS_ON_CARDS`, show your like status on video cards, can increase data usage.
 - `PREFER_LIKE_BUTTON_OVER_FAVOURITE`, show a like button instead of the heart in the notification, widgets and player while playing YouTube items, when signed in.
 - `LINK_LIKE_BUTTON_WITH_FAVOURITES`, liking a video adds it to your local YouTube favourites, unliking or disliking removes it.
-- `USE_NEW_NOTIFICATIONS_EXTRACTOR`, use it if you don't see new notifications, the order might not be accurate when enabled.
+- `USE_NEW_NOTIFICATIONS_EXTRACTOR`, try it if new notifications don't show up, but their order might not be accurate.
 - `MAX_PAGE_CACHE_DURATION_VALIDITY`, how long cached pages stay valid.
 - `REFRESH_JS_PLAYER`, refetch the player, can fix streaming issues.
-- `COPY_YT_HISTORY_TO_LOCAL_HISTORY`, add local youtube history watches into local history.
+- `COPY_YT_HISTORY_TO_LOCAL_HISTORY`, copy your YouTube watches to the local history, as listens of the local tracks linked to the same video.
 
 ::: callout info
 Flags are experimental, defaults are fine for most people.

@@ -11,9 +11,9 @@ Features that will not be added to Namida, and the reasoning behind each. The on
 
 Namida is not on Google Play, and there are no plans to publish it there currently. A few reasons:
 
-- All files access permission (`MANAGE_EXTERNAL_STORAGE`). Google treats it as a special permission that only file manager apps are allowed to have, while Namida needs it for tag editing, backups, saving artworks, downloads and more, see [Permissions](/permissions/#requested). The alternative is SAF, which would work but would make many features tedious to use.
+- All files access permission (`MANAGE_EXTERNAL_STORAGE`). Google treats it as a special permission that only file manager apps are allowed to have, while Namida needs it for tag editing, backups, saving artworks, downloads and more, see [Permissions](/permissions/#requested). The alternative is SAF (Android's Storage Access Framework), which would work but would make many features tedious to use.
 - Download feature.
-- Donation & Membership links that don't use Google's payment sdk.
+- Donation & Membership links that don't use Google's payment system.
 
 A separate version without these could be made, but that is extra maintenance we are not willing to take on, and these features are an important part of the Namida experience.
 
@@ -39,7 +39,7 @@ Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works wit
 
 ### Discord Rich Presence (RPC) {#discord-rpc}
 
-Use [Kizzy](https://github.com/dead8309/Kizzy) on android, or [Music Presence](https://github.com/ungive/discord-music-presence) on desktop. They work with any player.
+Use [Kizzy](https://github.com/dead8309/Kizzy) on Android, or [Music Presence](https://github.com/ungive/discord-music-presence) on desktop. They work with any player.
 
 ### Advanced Equalizer Features {#equalizer}
 

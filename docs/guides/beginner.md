@@ -26,7 +26,7 @@ Two different tracks share the same filename, so they share the same artwork.
 
 ### Stop after the current track {#stop-after-track}
 
-1. Open the current track's dialog (tap the player info text, or tap menu in track tile, or long press the video card).
+1. Open the current track's dialog (tap the player info text, or tap the menu in a track tile, or long press the video card).
 2. Choose "Stop after this track".
 
 ### Change or fix lyrics {#change-lyrics}

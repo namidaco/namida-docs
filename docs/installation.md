@@ -8,7 +8,7 @@ description: "How to install Namida on Android, Windows and Linux"
 Namida runs on Android, Windows and Linux. There are two channels:
 
 - [Stable releases](https://github.com/namidaco/namida/releases), for everyone.
-- [Beta releases](https://github.com/namidaco/namida-snapshots/releases), new features and fixes land here first. YouTube fixes are available here first, so try the latest beta first when something stops working.
+- [Beta releases](https://github.com/namidaco/namida-snapshots/releases), new features and fixes are released here first. If YouTube or anything else stops working, try the latest beta.
 
 ::: callout warning
 Namida is only available through [namida.app](https://namida.app), GitHub & Telegram.

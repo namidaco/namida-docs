@@ -50,7 +50,7 @@ Watching videos supports gestures:
 
 Horizontal seeking on the video can be limited to fullscreen, the expanded miniplayer, always or never. [`⚙️ Configure Drag to seek (Video) ↗`](/settings/5-youtube-settings/#miniplayer)
 
-In fullscreen, you can enable glow to show an ambient effect behind the video (might affect performance & battery). On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video lands in the orientation you are actually holding.
+In fullscreen, you can enable glow to show an ambient effect behind the video (might affect performance & battery). On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video matches how you are actually holding the device.
 
 ### Miniplayer {#miniplayer}
 
@@ -154,7 +154,7 @@ Full comments support with replies. You can prefer top comments or newest commen
 
 ### Takeout Import {#history-import}
 
-You can import your watch history from YouTube takeout files, both json and html formats work, it gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
+You can import your watch history from YouTube takeout files, both json and html formats work. It gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
 ::: callout tip
 Signing in gives live access to your subscriptions and playlists, which can be better than importing them manually.

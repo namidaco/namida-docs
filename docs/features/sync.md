@@ -48,7 +48,7 @@ Turn on the advanced view in the Sync page to see every item separately instead 
 
 ### Smart Matching {#matching}
 
-Devices don't need identical file paths. Tracks are matched by fingerprint, so stats and listens land on the right files even when libraries live in different folders. If something still ends up with a wrong path, it's an easy fix. [`📒 Path Problems Guide ↗`](/guides/medium/#sync-path-problems)
+Devices don't need identical file paths. Tracks are matched by fingerprint, so stats and listens are applied to the right files even when libraries live in different folders. If something still ends up with a wrong path, it's an easy fix. [`📒 Path Problems Guide ↗`](/guides/medium/#sync-path-problems)
 
 ### Conflict Resolution {#conflicts}
 

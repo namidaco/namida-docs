@@ -18,7 +18,7 @@ Creates a backup file, you choose what to include: database, settings, playlists
 
 ### Default Backup Location {#backup-location}
 
-Where backups are saved and looked up.
+Where backups are saved, and where Automatic restore looks for them.
 
 ### Auto Backup Interval {#auto-backup-interval}
 
@@ -26,7 +26,7 @@ Automatically create a backup every set number of days.
 
 ### Sync {#sync}
 
-Sync app data between your devices over local network, see the [Sync feature](/features/sync/) for details.
+Sync app data between your devices over the local network, see the [Sync feature](/features/sync/) for details.
 
 ### Import Youtube History {#import-youtube-history}
 

@@ -13,7 +13,7 @@ A persistent and reliable queue system, your sessions are saved for later usage.
 
 - Repeat modes: Repeat All Queue, Stop on Last Track, Repeat Current Track, repeat for N times before playing the next track, and Repeat All Queue (Shuffle) which reshuffles the queue every time it ends.
 - Shuffle is a toggle, separate from the repeat mode. `🆕 v7.1.0`
-  - On shuffles the queue with the playing track first, off restores the original order, playback is never interrupted.
+  - Turning it on shuffles the queue with the playing track first, turning it off restores the original order. Playback is never interrupted.
   - While on, new queues start shuffled, with the track you pressed first.
   - It persists between sessions and is the same toggle everywhere: queue, home screen widget, media controls and the desktop shortcut.
 - Stop after any track, open a queued track's menu and choose "Stop after this track". `🆕 v7.0.0`

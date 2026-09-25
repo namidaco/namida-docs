@@ -7,7 +7,7 @@ description: "Features in Namida"
 
 What Namida can do, each feature explained in its own page.
 
-- [Library & Indexing](/features/library-indexing/), a powerful folders based music library
+- [Library & Indexing](/features/library-indexing/), a powerful folder based music library
 - [Playback](/features/playback/), queues, effects, videos and lyrics
 - [Subtitles](/features/subtitles/), subtitles & captions for videos
 - [Playlists & History](/features/playlists-history/), flexible playlists and a reliable history system

@@ -35,9 +35,9 @@ Not so obvious features you might have missed.
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
 - Long press the lyrics to enter fullscreen, and zoom in/out on the lyrics to change the font size. On desktop it's `Ctrl` + mouse wheel or `Ctrl` + `+` / `-`, and `Ctrl` + `0` resets it.
 - Long press the audio button in the player to open [Playback Settings](/settings/3-playback-settings/) directly.
-- Long press the video button in the player to control quality or change audio track for videos.
+- Long press the video button in the player to control quality or change the audio track for videos.
 - Press the subtitle icon in the video controls to pick a subtitle, the language you pick is remembered for next videos. [`🎉 Subtitles feature ↗`](/features/subtitles/)
-- Long press lyrics button to configure lyrics for the current track.
+- Long press the lyrics button to configure lyrics for the current track.
 - Press the info text in the player to open the track menu, and press the album name at the top to open the album.
 - Long press the heart icon to add the current track to a playlist.
 - To switch the artist/title locations, toggle "Display artist before title" in [Customizations](/settings/4-customization-settings/#miniplayer-customization).
@@ -54,7 +54,7 @@ Long press a track (or tap its menu) for more than you might expect:
 - Play Next, Play Last, and Play After, pick an exact position in the queue.
 - Repeat for N times before playing the next track.
 - Stop after this track, works on any upcoming track in the queue, not only the playing one.
-- Insert after latest inserted, for stacking multiple tracks one after each other.
+- Insert after latest inserted, for stacking multiple tracks one after another.
 - Set Rating, Moods and Tags, they get their own [library pages](/pages/library/#moods-tags-rating).
 - Set Youtube Link, attach a video to any local track.
 - Add more from this Album, Artist or Folder to queue.
@@ -64,7 +64,7 @@ Long press a track (or tap its menu) for more than you might expect:
 The track menu has an Advanced section:
 
 - Copy or move the files to another folder.
-- Clear specific things for that track, artwork, thumbnail, plain or synced lyrics, video cache and audio cache.
+- Clear specific things for that track: artwork, thumbnail, plain or synced lyrics, video cache and audio cache.
 - Delete the files from storage, deleted paths are saved to a file in the app data folder just in case.
 - Share the files.
 - See which sources the listens came from, useful after importing a history.
@@ -91,7 +91,7 @@ The track menu has an Advanced section:
 - While downloading from YouTube you can edit the file tags and build the output filename with [yt-dlp style formats](/features/youtube/#filename-formats), like `%(title)s [(%(channel)s)]`.
 - This works for single downloads and for batch playlist downloads, where playlist formats like `%(playlist_autonumber)s` number the files for you.
 - In a playlist download page, selecting the output folder automatically marks the videos that are not downloaded yet, as long as you haven't selected any manually. The long press to select in between trick works there too.
-- In the download sheet, press the "show webm" icon button to show experimental qualities, related: `ALLOW_EXPERIMENTAL_CODECS` & `PREFER_OPUS_FORMAT` in [Flags](/settings/5-youtube-settings/#flags).
+- In the download sheet, press the "show webm" icon button to show experimental qualities, see also `ALLOW_EXPERIMENTAL_CODECS` & `PREFER_OPUS_FORMAT` in [Flags](/settings/5-youtube-settings/#flags).
 - The flash icon in the downloads page sets how many downloads run at once, up to 10. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
 
 ### YouTube {#youtube-tips}
@@ -112,7 +112,7 @@ The track menu has an Advanced section:
 
 - Tap the calendar icon at the top to jump to a specific day.
 - Tap a year chip to jump to the same day but in that year.
-- Most Played supports custom time ranges, see your top tracks of any period. Use the slider to navigate adjacent periods easier, or pick a single day with a days radius.
+- Most Played supports custom time ranges, see your top tracks of any period. Use the slider to navigate adjacent periods more easily, or pick a single day with a days radius.
 - Open a track's listens dialog, tap a listen to jump to that day in history, or use the button beside it to open Most Played for that range.
 - Replace all listens of a track with another track, useful after re-downloading a file (Track's Dialog -> Advanced -> Replace all listens).
 - Imported a wrong source? [Remove it from history](/settings/8-advanced-settings/#remove-source-history) in one go.

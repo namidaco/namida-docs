@@ -43,7 +43,7 @@ Not directly, but you can provide your own lyrics per track:
 Namida caches the lyrics it finds for a track, and the cached copy wins over anything you add later. Delete it:
 
 1. Long press the lyrics icon in the player.
-2. Every lyrics found for this track is listed, labeled with its source: `Cache`, `Local`, the provider name, or the embedded tag.
+2. All lyrics found for this track are listed, labeled with its source: `Cache`, `Local`, the provider name, or the embedded tag.
 3. Press the trash icon on the cached one.
 4. Press done, the new lyrics get picked up.
 
@@ -58,7 +58,7 @@ Also make sure the `.lrc` file sits next to the track and has the same filename,
 
 ### Can I use a custom app icon? {#custom-app-icon}
 
-You can pick from the icons that ship with Namida, but a fully custom one is not possible, Android requires all icons to be configured beforehand. See [App Icon](/settings/4-customization-settings/#app-icon), you can also submit an icon there, or use a launcher that supports icon packs.
+You can pick from the icons that ship with Namida, but a fully custom one is not possible, Android only allows icons that are already built into the app. See [App Icon](/settings/4-customization-settings/#app-icon), where you can also submit an icon, or use a launcher that supports icon packs.
 
 ### Why aren't smart playlists treated as normal playlists? {#smart-playlists}
 

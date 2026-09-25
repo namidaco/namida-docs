@@ -30,8 +30,8 @@ The permissions Namida uses and why. Nothing is used for tracking, there are no 
   - downloading YouTube content
   - playing tracks from a root folder
   - the in-app file browser
-- `POST_NOTIFICATIONS`: post notifications like history import or download progress.
-- `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS`: improve downloads, they can be throttled when the app is battery restricted.
+- `POST_NOTIFICATIONS`: show notifications like history import or download progress.
+- `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS`: improve downloads, they can be slowed down when the app is battery restricted.
 - `WRITE_SETTINGS`: to set audio as ringtone, etc.
 
 ::: callout info

@@ -9,14 +9,14 @@ description: "Flexible playlists and a reliable history system"
 
 Normal playlists with custom order and the ability to set custom artworks. Also:
 
-- M3U playlists, import them or keep them synced with the original file, so changes made in Namida reach other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders.
+- M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders.
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
 - Custom order for playlists, press the edit icon at the top to enable reordering.
 - Custom order for playlist tracks, press the lock icon at the top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
-- Playlists can be searched, and can have moods, which is used by the queue's add tracks by mood.
+- Playlists can be searched, and can have moods, which the queue uses when adding tracks by mood.
 
 ::: callout warning
-Sorting tracks by a property means your custom order will be lost. You will see a warning, and approval is required before applying the new sort.
+Sorting tracks by a property means your custom order will be lost. You will see a warning, and you need to confirm before the new sort is applied.
 :::
 
 Also see the [`🎉 YouTube feature ↗`](/features/youtube/#playlists) for how local and YouTube playlists relate.
@@ -62,7 +62,7 @@ Generate tracks related to the current one, typically the ones you often listene
 
 Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
-The Home page rebuilds itself once the import is done, so mixes and recent listens account for what you just imported.
+The Home page rebuilds itself once the import is done, so mixes and recent listens include what you just imported.
 
 ---
 

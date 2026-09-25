@@ -5,7 +5,7 @@ description: "Manage your music Library"
 
 # Indexer
 
-Controls how Namida finds and reads your music files. The library is folders based, Namida scans only the folders you choose.
+Controls how Namida finds and reads your music files. The library is folder based, Namida only scans the folders you choose.
 
 ### List of Folders {#folders-to-scan}
 
@@ -13,11 +13,11 @@ The folders that Namida scans for music. You can add local folders, or a media s
 
 ### Excluded Folders {#excluded-folders}
 
-Folders that will be skipped while scanning, useful for excluding notification sounds or recordings folders.
+Folders to skip while scanning, like notification sounds or recordings.
 
 ### Prevent Duplicated Tracks {#prevent-duplicated-tracks}
 
-Uses filename to uniquely identify tracks, so the same file existing in two folders will show once.
+Tracks with the same filename show only once, even if they are in different folders.
 
 ### Respect .nomedia {#respect-nomedia}
 
@@ -25,7 +25,7 @@ Skips folders that contain a `.nomedia` file.
 
 ### Extract feat. Artists {#extract-feat-artists}
 
-Extracts (feat. X) and (ft. X) artists from the title as their own artist entry, shown in the [Artists tab](/pages/library/#artists).
+Artists written as (feat. X) or (ft. X) in the title are added as separate artists, shown in the [Artists tab](/pages/library/#artists).
 
 ### Enable Artwork Cache {#artwork-cache}
 
@@ -33,11 +33,11 @@ Faster loading and improved performance, but uses more storage.
 
 ### Group Artworks by Album {#group-artworks-by-album}
 
-Saves one artwork per album instead of one per track, saves storage.
+Saves one artwork per album instead of one per track, which uses less storage.
 
 ### Unique Artwork Hash {#unique-artwork-hash}
 
-Identifies artworks by their track's full path instead of just filename. Enable this if you see wrong duplicated artworks.
+Identifies artworks by the track's full path instead of just the filename. Enable this if different tracks show the same wrong artwork.
 
 ### Album Identifiers {#album-identifiers}
 
@@ -48,7 +48,7 @@ Which fields identify an album. "Album" name + "Album Artist" name by default, a
 Symbols and words used to split multiple artists or genres from a single tag, like `,` `;` `&` `ft.`. You can also blacklist words so they never get split.
 
 ::: callout tip
-No need to insert spaces, unless you want a letter or symbol that can be found in a whole word (like `x` and `ft.`).
+No need to add spaces, unless the separator can also appear inside a word (like `x` and `ft.`).
 :::
 
 ### Extension (Blacklist) {#extensions-blacklist}
@@ -66,12 +66,12 @@ Files smaller or shorter than these values will be skipped, useful for filtering
 Uses the Android system index instead of Namida's own indexer. Indexing is instant, but some tags will be missing, `.nomedia` is always respected, and YouTube integration for the local library will not work.
 
 ::: callout warning
-Removed in `v7.0.0`. The `taglib` tagger is fast and stable now, this option lacked key features of Namida, and many users enabled it, forgot about it and hit issues.
+Removed in `v7.0.0`. The `taglib` tagger is now fast and stable, this option was missing key Namida features, and many users turned it on, forgot about it and ran into issues.
 :::
 
 ### Include Videos {#include-videos}
 
-Index video files as well, videos get their own folders view and can be played independently.
+Index video files too. Videos get their own folders view and can be played on their own.
 
 ### Refresh on Startup {#refresh-on-startup}
 

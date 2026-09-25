@@ -16,7 +16,7 @@ Animated artworks work too, embed an animated gif or webp image as the artwork i
 
 ### I deleted some music files by mistake {#recover-deleted}
 
-If they were downloaded from Namida, or have a YouTube link in their comment tag, it's easy:
+If they were downloaded with Namida, or have a YouTube link in their comment tag, it's easy:
 
 1. Select them -> Open dialog -> "Open in Youtube view".
 2. Open the player queue, then download.

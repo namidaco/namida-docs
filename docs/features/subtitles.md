@@ -25,7 +25,7 @@ Three places, all listed together in the same menu:
 
 - **YouTube captions**, every caption track the video offers, including the auto generated ones.
 - **Subtitle files** sitting next to your video, with the same filename. `.srt`, `.vtt`, `.ass`, `.ssa`, `.sbv`, `.lrc`, `.xml` & `.ttml` are supported.
-- **Subtitles inside the video file itself**, the ones muxed into the container.
+- **Subtitles inside the video file itself**, the ones embedded in the video.
 
 For local music, Namida also looks next to the video linked to the track, not only next to the track file. [`🎉 Video Integration ↗`](/features/playback/#video)
 

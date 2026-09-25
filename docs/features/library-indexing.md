@@ -1,13 +1,13 @@
 ---
 title: "Library & Indexing"
-description: "A powerful folders based music library"
+description: "A powerful folder based music library"
 ---
 
 # Library & Indexing
 
 Namida builds your library from the folders you choose, with a powerful indexer powered by `taglib`.
 
-### Folders Based Library {#folders}
+### Folder Based Library {#folders}
 
 Add the folders you want, exclude the ones you don't. The Folders tab browses your library like a file manager, with support for `cover.jpg` style images and `.info.txt` files for small notes. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 

@@ -65,7 +65,7 @@ The mini lyrics window is a small window with the current lyrics line, see [`ðŸŽ
 
 ### Custom Hotkeys {#custom-hotkeys}
 
-The shortcuts above only work while Namida is focused. For system wide hotkeys, press the shortcut icon at the title bar, or go to Settings -> About -> Shortcuts, and record your own keys for play/pause, next/previous, seek, volume and more.
+The shortcuts above only work while Namida is focused. For system wide hotkeys, press the shortcut icon in the title bar, or go to Settings -> About -> Shortcuts, and record your own keys for play/pause, next/previous, seek, volume and more.
 
 ---
 

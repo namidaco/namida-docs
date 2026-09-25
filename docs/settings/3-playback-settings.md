@@ -8,7 +8,7 @@ description: "Audio, video and queue behavior"
 Everything about how Namida plays your music and videos.
 
 ::: callout tip
-This section can be accessed directly in the player by long pressing the audio button.
+Long press the audio button in the player to open this section.
 :::
 
 ### Enable Video Playback {#video-playback}
@@ -17,13 +17,13 @@ Play videos related to the music. Videos can be found locally or fetched from Yo
 
 ### Video Source {#video-source}
 
-- Auto: gives priority to local videos, if not found it fetches from YouTube.
+- Auto: uses local videos first, if none is found it fetches from YouTube.
 - Local Videos: checks if any video file inside your folders has a filename that matches the track.
 - From Youtube: checks the track filename & comment tag for a matching YouTube link, videos are cached for later use.
 
 ### Video Quality {#video-quality}
 
-Preferred qualities, in order. Keep a few alternatives, if none is found the worst quality is used.
+Your preferred qualities, in order. Keep a few alternatives, if none of them is available the lowest quality is used.
 
 ### Local Video Matching {#local-video-matching}
 
@@ -31,13 +31,13 @@ How local videos are matched with tracks, by title or filename, with an option t
 
 ### Keep Screen Awake When {#keep-screen-awake}
 
-Never, when miniplayer is expanded, or when miniplayer is expanded and a video is playing.
+Never, when the miniplayer is expanded, or when the miniplayer is expanded and a video is playing.
 
 ### Display Favourite Button in Notification {#fav-button-notification}
 
 `💻 Android only`
 
-Adds a favourite button to the media notification. The thumbnail might get displaced on some devices.
+Adds a favourite button to the media notification. The thumbnail might move out of place on some devices.
 
 ### Display Stop Button in Notification {#stop-button-notification}
 
@@ -65,11 +65,11 @@ Choose what opens: the app, the miniplayer or the queue.
 
 ### Dismissible Miniplayer {#dismissible-miniplayer}
 
-Swipe the miniplayer away to stop playback and clear queue.
+Swipe the miniplayer away to stop playback and clear the queue.
 
 ### Normalize Audio {#normalize-audio}
 
-Normalizes volume by reading the replay gain tag, or the info provided by YouTube for videos. You pick how it is applied:
+Keeps the volume consistent between tracks, using the replay gain tag, or the loudness info YouTube provides for videos. You pick how it is applied:
 
 - Off.
 - Platform default, the best option for your device.
@@ -84,7 +84,7 @@ Skips silent parts of the audio.
 
 ### Gapless Playback {#gapless-playback}
 
-Removes the small loading delay between tracks by prefetching the next one. Useful for some albums, or for those who can't wait 0.067 seconds between tracks. `Beta feature`.
+Removes the small delay between tracks by loading the next one early. Useful for some albums, or for those who can't wait 0.067 seconds between tracks. `Beta feature`.
 
 ### Crossfade {#crossfade}
 
@@ -128,23 +128,23 @@ When the queue ends, go back to the first track instead of staying on the last o
 
 ### Previous Button Replays {#previous-button-replays}
 
-Pressing previous replays the current track if the position is past the seek duration, instead of going back.
+If the track has played longer than the seek duration, pressing previous restarts it instead of going to the previous track.
 
 ### Seek Duration {#seek-duration}
 
 How many seconds the seek buttons jump.
 
 ::: callout tip
-You can tap on current duration to seek backwards, and total duration to seek forwards. Holding either one keeps seeking in that direction.
+Tap the current position to seek backwards, and the total duration to seek forwards. Hold either one to keep seeking in that direction.
 :::
 
 ### Minimum Track Duration to Restore Last Position {#restore-last-position}
 
-Tracks longer than this will resume from where you left them, useful for podcasts and long mixes.
+Tracks longer than this resume from where you left off, useful for podcasts and long mixes.
 
 ### Count a Listen After {#count-listen-after}
 
-Sets the minimum seconds or percentage of a track to count it as a listen in history.
+How much of a track must play, in seconds or percentage, before it counts as a listen in history.
 
 ---
 

@@ -5,7 +5,7 @@ description: "Where Namida keeps its files on each platform"
 
 # Storage Paths
 
-Namida keeps its files in a few base folders. Each one lands in a different place depending on the platform.
+Namida keeps its files in a few base folders. Each one is in a different place depending on the platform.
 
 ### User Data {#user-data}
 

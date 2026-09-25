@@ -5,7 +5,7 @@ description: "Customize how your player looks, make it yours"
 
 # Customizations
 
-Tweak the looks of every part of the app.
+Change how every part of the app looks.
 
 ### General {#general}
 
@@ -14,7 +14,7 @@ Tweak the looks of every part of the app.
 - Enable Parallax Effect, the app layer gets smaller while expanding the miniplayer, giving a sense of depth.
 
 ::: callout info
-All three might affect performance on low end devices, they are the first things to turn off if the app feels slow, or use [Performance Mode](/settings/8-advanced-settings/#performance-mode).
+All three might affect performance on low end devices. If the app feels slow, turn them off first, or use [Performance Mode](/settings/8-advanced-settings/#performance-mode).
 :::
 
 - Display remaining duration instead of total.
@@ -64,7 +64,7 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 Choose a different icon for the app. New icons can be submitted on [our Discord](https://discord.com/channels/1156253663803740271/1423484977693327430/1423671224520671362).
 
 ::: callout info
-Fully custom icons are not possible, Android requires all icons to be configured beforehand. Use a launcher that supports icon packs, or patch the app.
+Fully custom icons are not possible, Android only allows icons that are already built into the app. Use a launcher that supports icon packs, or patch the app.
 :::
 
 ---

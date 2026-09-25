@@ -5,7 +5,7 @@ description: "The overall vibe of your player"
 
 # Theme
 
-Control how Namida looks. Colors, dark mode and language.
+Control how Namida looks: colors, dark mode and language.
 
 ### Theme Mode {#theme-mode}
 
@@ -31,15 +31,15 @@ The miniplayer will always use the current track colors, even when Auto Coloring
 
 ### Use Pitch Black {#pitch-black}
 
-Use pure black background in dark mode. Useful for AMOLED screens, and looks cooler.
+Use a pure black background in dark mode. Useful for AMOLED screens, and looks cooler.
 
 ### Default Color {#default-color}
 
-Set a color to be used by the player when [Auto Coloring](#auto-coloring) is off, or when the current track has no artwork. There are two entries, one for light mode and one for dark mode.
+The color the player uses when [Auto Coloring](#auto-coloring) is off, or when the current track has no artwork. There are two, one for light mode and one for dark mode.
 
 ### Language {#language}
 
-Change the app language. Translations are made by the community, you can help translating Namida at the [translation repo](https://github.com/namidaco/namida-translations).
+Change the app language. Translations are made by the community, you can help translate Namida at the [translation repo](https://github.com/namidaco/namida-translations).
 
 ---
 
