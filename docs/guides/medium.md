@@ -48,6 +48,20 @@ Matching ignores casing, symbols and whitespace, and extra words around the name
 4. Accept the connection request, then choose the data to send & receive.
 5. Press send or receive, that's it. See the [`🎉 Sync feature ↗`](/features/sync/) for what gets synced.
 
+### Sync music files between devices {#sync-music-files}
+
+Sync and listening parties don't send your music files for now, use another app to move them:
+
+- [Syncthing](https://syncthing.net) ([Android](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/)), keeps a folder the same on all your devices, new music shows up on the others automatically.
+- [LocalSend](https://localsend.org), sends files and folders over the local network. Good for a one time copy.
+- [Namida Sync](https://github.com/010101-sans/namida_sync), a community app made for Namida, see [Companion Apps](/installation/#companion-apps).
+
+Then:
+
+1. Send or sync your music folder to the other device.
+2. Add that folder on the other device, and refresh the library. [`⚙️ Configure List of Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
+3. Sync your data, tracks get matched even if the folders are different. [`🎉 Smart Matching ↗`](/features/sync/#matching)
+
 ### Path problems after syncing {#sync-path-problems}
 
 Synced to another device and tracks or playlists point to the wrong paths?

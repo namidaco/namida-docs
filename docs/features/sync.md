@@ -46,6 +46,10 @@ Off by default for another reason, they take over playback on the other device:
 Turn on the advanced view in the Sync page to see every item separately instead of the short list.
 :::
 
+::: callout info
+Music files are not synced for now, use apps like Syncthing or LocalSend to copy them. [`📒 Syncing Music Files Guide ↗`](/guides/medium/#sync-music-files)
+:::
+
 ### Smart Matching {#matching}
 
 Devices don't need identical file paths. Tracks are matched by fingerprint, so stats and listens are applied to the right files even when libraries live in different folders. If something still ends up with a wrong path, it's an easy fix. [`📒 Path Problems Guide ↗`](/guides/medium/#sync-path-problems)

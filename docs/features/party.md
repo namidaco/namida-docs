@@ -17,7 +17,7 @@ Listening parties are new and still evolving. If joining fails with a version mi
 
 One person hosts the room and owns the queue. Everyone else joins with a code or an invite link, and their player follows the room instead of leading it.
 
-No audio is sent between devices. Each device plays its own copy of the track, kept in step with the room.
+No audio is sent between devices. Each device plays its own copy of the track, kept in step with the room. To have the same files on every device, see [`📒 Syncing Music Files Guide ↗`](/guides/medium/#sync-music-files)
 
 Open it from "Listening party" in the quick tiles at the top of settings, or from the side menu. It can also be a library tab of its own. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
 
