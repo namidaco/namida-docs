@@ -13,6 +13,7 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
   - Sharing a playlist as a file isn't possible, send its M3U file with apps like [Syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or [LocalSend](https://localsend.org) instead. Converted playlists are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-path-problems)
   - Between Namida devices, Sync can send your playlists too, they arrive as normal playlists instead of M3U. [`🎉 Sync feature ↗`](/features/sync/#data)
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
+- YouTube playlist downloads can be added to a library playlist, in the same order as the source. `🆕 v7.4.0` [`🎉 Into a Library Playlist ↗`](/features/youtube/#playlist-downloads)
 - Custom order for playlists, press the edit icon at the top to enable reordering.
 - Custom order for playlist tracks, press the lock icon at the top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
 - Playlists can be searched, and can have moods, which the queue uses when adding tracks by mood.
@@ -63,6 +64,8 @@ Generate tracks related to the current one, typically the ones you often listene
 ### History Import {#import}
 
 Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
+
+Your history is backed up before importing, unless you turn it off, and the progress dialog shows each step on its own. `🆕 v7.4.0`
 
 The Home page rebuilds itself once the import is done, so mixes and recent listens include what you just imported.
 

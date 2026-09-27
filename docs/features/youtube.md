@@ -56,6 +56,18 @@ In fullscreen, you can enable glow to show an ambient effect behind the video (m
 
 A YouTube style miniplayer with comments, related videos and video description. It dims automatically after a few seconds to help focus & reduce eye strain. Both the delay and the dim intensity can be changed. [`⚙️ Configure Miniplayer ↗`](/settings/5-youtube-settings/#miniplayer)
 
+More related videos load as you scroll to the end, or with the "Show more" button when comments are at the bottom. `🆕 v7.4.0` [`⚙️ Configure Top Comments ↗`](/settings/5-youtube-settings/#comments)
+
+Links in the description that point to another video at a timestamp play it next, starting from that timestamp. Tapping a hashtag opens a page with its videos, shorts and playlists. `🆕 v7.4.0`
+
+#### Chapters {#chapters}
+
+`🆕 v7.4.0`
+
+Videos with chapters show a chapters row above the description, open it by tapping the title area. Each chapter shows its length, the current one shows its progress, and played ones are dimmed. Tap a chapter to seek to it, or press "Show All" to list all of them in a sheet.
+
+Long press a chapter to copy a link to its timestamp, or to download only that chapter. [`🎉 Chapter Downloads ↗`](#chapters-downloads)
+
 ### Downloads {#downloads}
 
 Download any video or audio, with full control over the result: [`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)
@@ -67,6 +79,45 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Download notifications `💻 Windows+Linux only`.
 - Downloads that fail because there is no connection resume on their own once it is back, thumbnails retry the same way. `🆕 v7.0.0`
 - Parallel downloads, up to 10 videos at a time, 4 by default. Set it with the flash icon in the [`📄 Downloads page ↗`](/pages/youtube/#downloads). `🆕 v7.1.0`
+- Big files download over multiple connections at once, 3 by default and up to 8, set from the same flash icon as "Threads per download". Servers that don't support it fall back to a single connection. `🆕 v7.4.0`
+- Remove sponsor segments from the downloaded file, see [below](#sponsorblock-downloads). `🆕 v7.4.0`
+- Split by Chapters, save each chapter of the video as its own file, see [below](#chapters-downloads). `🆕 v7.4.0`
+- Playlist downloads can be added to a library playlist, see [below](#playlist-downloads). `🆕 v7.4.0`
+
+The extra file options (Split by Chapters, Remove Sponsor Segments, Keep cached versions and more) are in the Edit Tags sheet, press the pencil icon beside the video title in the download sheet. For playlists, press the gear button in the playlist download page.
+
+#### Removing Sponsor Segments {#sponsorblock-downloads}
+
+`🆕 v7.4.0`
+
+Cut out sponsors, intros and other [SponsorBlock](#sponsorblock) segments from the downloaded file. The cut is lossless, and the cover art and tags are written again after it.
+
+- Turn it on with "Remove Sponsor Segments from Downloads" in the SponsorBlock settings, then pick which categories get removed. Sponsor, Self Promotion and Interaction Reminder are picked by default. [`⚙️ Configure SponsorBlock ↗`](/settings/5-youtube-settings/#sponsorblock)
+- The same tile shows in the Edit Tags sheet, press its pencil icon to pick different categories for that download only.
+- Segments shorter than the minimum segment duration are kept.
+
+#### Chapter Downloads {#chapters-downloads}
+
+`🆕 v7.4.0`
+
+Turn on "Split by Chapters" and a video with chapters gets saved as a folder, with one file per chapter:
+
+```text
+Video Title/
+  01. Intro.m4a
+  02. First Song.m4a
+  03. Second Song.m4a
+```
+
+Each part is tagged with the chapter title as the title, the video title as the album, and the chapter number as the track number. Videos without chapters download as a single file like usual.
+
+To download only one chapter, long press it in the [miniplayer](#miniplayer) chapters and choose Download. The file is trimmed to that chapter and named after it.
+
+#### Into a Library Playlist {#playlist-downloads}
+
+`🆕 v7.4.0`
+
+In a playlist download page, open the settings with the gear button and turn on "Add to Playlist". Downloaded tracks get added to a library playlist named after the folder (or the YouTube playlist), kept in the same order as the source playlist, even if they finish downloading in a different order. The playlist is created if it doesn't exist. Requires "Add audio to local library". [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
 
 ### Filename & Tags Formats {#filename-formats}
 
@@ -115,11 +166,17 @@ Examples:
 
 Streamed videos and audios are cached, so they play offline later without downloading. A cache priority system decides what to keep when cleaning up, so your important stuff stays.
 
-- Every cached video has a priority: VIP, High, Normal, Low or GETOUT. Cleaning starts from the bottom, and VIP items are never deleted automatically.
+- Every cached video has a priority: VIP, High, Normal, Low or Disable. Cleaning starts from the bottom, and VIP items are never deleted automatically.
 - Private and deleted YouTube videos are automatically set to VIP, so you never lose them.
 - Info of private and deleted videos can still be shown, thanks to [Filmot](https://filmot.com/).
 
 [`⚙️ Configure Cache Limits ↗`](/settings/8-advanced-settings/#cache-limits)
+
+You can also cache ahead of time, without saving any files to your downloads folder. Use "Cache" from the menu of a video, a YouTube playlist, or a local YouTube playlist, pick audio only or a video quality, and the videos are ready for offline playback. Tasks show up in the [`📄 Downloads page ↗`](/pages/youtube/#downloads) like downloads. `🆕 v7.4.0`
+
+::: callout info
+Items cached this way get the normal priority, set them to VIP if you want to make sure they are never cleaned up.
+:::
 
 ### Playlists {#playlists}
 
@@ -132,13 +189,18 @@ There are 3 kinds of playlists in Namida:
 How actions map to them:
 
 - While browsing an online public/unlisted playlist, open the menu and use "Save to library", this adds it to your hosted playlists (3).
-- While browsing an online playlist or your account playlists, open the menu and use "Add as a new playlist", this adds it as a local YouTube playlist (2).
+- While browsing an online playlist or your account playlists, open the menu and use "Import playlist", this adds it as a local YouTube playlist (2).
 - A local track's "Add to Playlist" adds to local playlists (1).
 - A YouTube video's "Add to Playlist" adds to local YouTube playlists (2) if the local tab is selected, or to your hosted playlists (3) if the YouTube tab is selected.
+- A local track that has a YouTube link can be added to YouTube playlists too, open its dialog and press the menu button beside "Open in Youtube view", this gives the YouTube video menu for it. `🆕 v7.4.0`
+
+Editing one of your own account playlists from its menu also lets you choose "Add new videos to the top", press the settings icon beside the privacy chips. `🆕 v7.4.0`
 
 ### SponsorBlock {#sponsorblock}
 
 Skips sponsor segments in videos using community data from [SponsorBlock](https://sponsor.ajay.app/). Segments and heatmap are also shown on the seekbar. You can choose which categories to skip and how. [`⚙️ Configure SponsorBlock ↗`](/settings/5-youtube-settings/#sponsorblock)
+
+The same segments can be cut out of your downloads. `🆕 v7.4.0` [`🎉 Removing Sponsor Segments ↗`](#sponsorblock-downloads)
 
 ### Return YouTube Dislike {#return-youtube-dislike}
 
@@ -151,6 +213,8 @@ Sign in to your account to get personalized related videos and mixes, and to int
 ### Comments {#comments}
 
 Full comments support with replies. You can prefer top comments or newest comments first. [`⚙️ Configure Comments ↗`](/settings/5-youtube-settings/#comments)
+
+Channel custom emojis, voice replies (shown as their transcript) and the "comments paused" notice are all shown. Closing the comment sheet with unsent text asks before discarding it. `🆕 v7.4.0`
 
 ### Takeout Import {#history-import}
 

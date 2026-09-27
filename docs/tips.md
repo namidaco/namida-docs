@@ -20,7 +20,7 @@ Not so obvious features you might have missed.
 - Pasting a YouTube link or a playlist link in the searchbar automatically opens it.
 - When playing from search, you can choose the [Play Mode](/pages/library/#search): selected track only, search results, album, first artist or first genre.
 - Links and texts you copy can appear right in the searchbar, enable [Clipboard Monitoring](/settings/6-extras-settings/#clipboard-monitoring).
-- Settings has its own search, press the search icon at the top of settings.
+- Settings has its own search, press the Search button in settings.
 - Your recent searches can be saved and shown in the search page, enable `RECENT_SEARCHES` in the [Extras Flags](/settings/6-extras-settings/#flags).
 
 ### Player {#player}
@@ -55,7 +55,7 @@ Long press a track (or tap its menu) for more than you might expect:
 - Repeat for N times before playing the next track.
 - Stop after this track, works on any upcoming track in the queue, not only the playing one.
 - Insert after latest inserted, for stacking multiple tracks one after another.
-- Set Rating, Moods and Tags, they get their own [library pages](/pages/library/#moods-tags-rating).
+- Set Rating, Moods and Tags, they get their own [library pages](/pages/library/#moods-tags-rating). For many tracks at once, use the "Set Rating" icon beside Edit Tags.
 - Set Youtube Link, attach a video to any local track.
 - Add more from this Album, Artist or Folder to queue.
 
@@ -64,7 +64,7 @@ Long press a track (or tap its menu) for more than you might expect:
 The track menu has an Advanced section:
 
 - Copy or move the files to another folder.
-- Clear specific things for that track: artwork, thumbnail, plain or synced lyrics, video cache and audio cache.
+- Clear specific things for that track: artwork, thumbnail, plain or synced lyrics, video cache, audio cache and server cache.
 - Delete the files from storage, deleted paths are saved to a file in the app data folder just in case.
 - Share the files.
 - See which sources the listens came from, useful after importing a history.
@@ -84,7 +84,9 @@ The track menu has an Advanced section:
 - With a network image source enabled, open an album or artist dialog and press the edit icon at the top right to change its display image. Playlist artworks can always be edited.
   - This only changes the display image, the audio files and their tags are untouched.
 - Open the dialog of an album, artist, playlist or folder and press Stats to see listen stats for just those tracks.
-- The current queue and the stats page can be library tabs of their own. [`📄 Queue Tab ↗`](/pages/library/#current-queue) [`📄 Stats Tab ↗`](/pages/library/#stats)
+- The current queue, the stats page, smart playlists and the listening party can be library tabs of their own. [`📄 Queue Tab ↗`](/pages/library/#current-queue) [`📄 Stats Tab ↗`](/pages/library/#stats)
+- Tabs with variants, like Tracks: Audio or Folders: Videos, share one slot in the navigation bar, long press it to switch. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+- Press the map icon in an artist page to see where that artist sits among the rest of your library. [`📄 Artists Map ↗`](/pages/library/#artists-map)
 
 ### Downloading {#downloading}
 
@@ -92,7 +94,9 @@ The track menu has an Advanced section:
 - This works for single downloads and for batch playlist downloads, where playlist formats like `%(playlist_autonumber)s` number the files for you.
 - In a playlist download page, selecting the output folder automatically marks the videos that are not downloaded yet, as long as you haven't selected any manually. The long press to select in between trick works there too.
 - In the download sheet, press the "show webm" icon button to show experimental qualities, see also `ALLOW_EXPERIMENTAL_CODECS` & `PREFER_OPUS_FORMAT` in [Flags](/settings/5-youtube-settings/#flags).
-- The flash icon in the downloads page sets how many downloads run at once, up to 10. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
+- The flash icon in the downloads page sets how many downloads run at once, up to 10, and how many connections each download uses. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
+- Long press a chapter in the YouTube miniplayer to download only that chapter, or turn on "Split by Chapters" to save every chapter as its own file. [`🎉 Chapter Downloads ↗`](/features/youtube/#chapters-downloads)
+- Use "Cache" instead of download on a video or a playlist to keep it for offline playback without saving any files. [`🎉 Caching ↗`](/features/youtube/#caching)
 
 ### YouTube {#youtube-tips}
 
@@ -102,7 +106,8 @@ The track menu has an Advanced section:
 - You can import your history, playlists and subscriptions from a [YouTube takeout](/features/youtube/#history-import).
 - Set a cached video's priority to VIP so it never gets auto deleted. Private and deleted videos become VIP automatically.
 - Namida can show info of private and deleted videos, thanks to [Filmot](https://filmot.com/).
-- In the YouTube search tab, offline search is very useful to find videos you watched previously. You can sort results by most played, recent listen or first listen. Import your YouTube history for better results.
+- In the YouTube search tab, offline search is very useful to find videos you watched previously. You can sort results by most played, recent listen or first listen, or turn on the "Cache" chip to see only what plays offline. Import your YouTube history for better results.
+- Long press a chapter in the miniplayer to copy a link to its timestamp.
 - Take a snapshot of a channel or playlist: open the videos tab, press "load all", wait, then open the menu and add to a playlist.
 - Type `after:2024-01-01` or `before:2023-06` in the search text to filter by upload date, or use the filters row. [`📄 Search Filters ↗`](/pages/youtube/#search-filters)
 - In a channel page, the time range icon lists only videos uploaded after or before a date.
@@ -123,7 +128,7 @@ The track menu has an Advanced section:
 ### Info & Sorting {#info-sorting}
 
 - Tap any item in the track info dialog to copy it.
-- In a track, album or artist info dialog, tap the artwork to open it in fullscreen, then long press it to save it to storage.
+- In a track, album or artist info dialog, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop.
 - Most sort menus allow choosing more than one sorter, and reordering them.
 - Moved your files? The [Missing Tracks](/settings/2-indexer-settings/#missing-tracks) page relinks them without losing stats.
 
@@ -166,7 +171,7 @@ The scrollbar needs a short hold before it starts dragging. This is intentional,
 
 ### Android {#android-tips}
 
-- Add the Namida tile to your quick settings panel to play and pause from anywhere. [`🎉 Quick Settings Tile ↗`](/features/system-integration/#quick-settings-tile)
+- Add the Namida tile to your quick settings panel to play and pause from anywhere, and the Namida Shuffle tile to toggle shuffle. [`🎉 Quick Settings Tile ↗`](/features/system-integration/#quick-settings-tile)
 - The home screen widget can be configured. [`🎉 Home Screen Widget ↗`](/features/home-widget/)
 - Namida shows up in "Open with" and in the share sheet for audio, video, m3u files and YouTube links. [`🎉 Open With & Share ↗`](/features/system-integration/#open-with)
 

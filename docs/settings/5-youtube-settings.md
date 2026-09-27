@@ -16,10 +16,12 @@ Sign in to your account, or multiple accounts, to interact with videos and get p
 Skip sponsor segments in videos, powered by [SponsorBlock](https://sponsor.ajay.app/).
 
 - Enable SponsorBlock.
+- Remove Sponsor Segments from Downloads, cut out the chosen categories from the downloaded files. `🆕 v7.4.0` [`🎉 Removing Sponsor Segments ↗`](/features/youtube/#sponsorblock-downloads)
 - Hide skip button after a set time.
 - Minimum segment duration, segments shorter than this are ignored.
-- Categories: Sponsor, Self Promotion, Intro, Outro, Filler, Preview, Music Offtopic, Highlight and Interaction Reminder.
+- Categories: Sponsor, Self Promotion, Intro, Outro, Filler, Preview, Hook, Music Offtopic, Highlight and Interaction Reminder.
 - Per category behavior: Auto Skip, Auto Skip Once, Show Skip button, Show in Seekbar, or disabled.
+- Per category "Remove from downloads" switch, on by default for Sponsor, Self Promotion and Interaction Reminder. Highlight can't be removed, it's a single moment instead of a segment. `🆕 v7.4.0`
 
 ### Return Youtube Dislike {#return-youtube-dislike}
 
@@ -45,7 +47,7 @@ Show the dislike count on videos, using data from [returnyoutubedislike.com](htt
 
 ### Comments {#comments}
 
-- Top comments, display comments at the top instead of the bottom.
+- Top comments, display comments at the top instead of the bottom. When on, more related videos load as you scroll, when off, a "Show more" button loads them.
 - Prefer new comments when possible, cached comments are only used when offline.
 
 ### Downloads {#downloads}
@@ -55,6 +57,8 @@ Show the dislike count on videos, using data from [returnyoutubedislike.com](htt
   - On: the video title is split into "Artist - Title" (artist falls back to the channel name), the channel becomes the album, and genre is set to "Nightcore" when the title contains it.
 - Default Download Location.
 - Download notifications `💻 Windows+Linux only`.
+
+Other download options live in the download sheet itself, like Split by Chapters and removing sponsor segments, while parallel downloads and threads per download are set in the Downloads page. [`🎉 Downloads feature ↗`](/features/youtube/#downloads)
 
 ### On Opening Youtube Link {#on-opening-youtube-link}
 

@@ -46,6 +46,8 @@ Picking a language yourself moves it to the top of that list for the next videos
 
 Styled subtitles (`.ass` and `.ssa`) keep their original look, fonts, colors and positioning, on Windows and Linux. Everywhere else they are shown as plain text under the video.
 
+YouTube captions that come with colors keep them on every platform, along with bold, italic, underline and the karaoke highlight that moves along the line. `🆕 v7.4.0`
+
 ::: callout info
 Image based subtitles (the kind found in some rips) can only be drawn on Windows and Linux. They still appear in the list elsewhere, but greyed out.
 :::

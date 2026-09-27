@@ -12,7 +12,7 @@ Some settings only work on specific platforms or Android versions. They are labe
 :::
 
 ::: callout tip
-Use the search icon in Namida settings to quickly find any setting.
+Use the Search button in Namida settings to quickly find any setting.
 :::
 
 ### Sections {#sections}
@@ -25,6 +25,10 @@ Use the search icon in Namida settings to quickly find any setting.
 6. [Extras](/settings/6-extras-settings/), library tabs, search and other options
 7. [Backup & Restore](/settings/7-backup-restore-settings/), backups, imports and sync
 8. [Advanced](/settings/8-advanced-settings/), caches, fixes and performance
+
+### Quick Tiles {#quick-tiles}
+
+The tiles at the top of the settings page are shortcuts: Add Folder, Refresh Library, [Sync](/features/sync/), [Listening party](/features/party/), [Sleep timer](/features/playback/#sleep-timer) and [Sound Control](/features/playback/#sound-control). The sleep timer tile shows what's left while it runs. `🆕 v7.4.0`
 
 ---
 

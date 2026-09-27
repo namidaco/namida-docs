@@ -17,6 +17,18 @@ Select multiple tracks and edit them at once, unchanged fields remain untouched.
 
 [`📄 Selection Tips ↗`](/tips/#selection)
 
+`🆕 v7.4.0`
+
+- Values shared by all tracks are filled in already. When tracks have different values, the field shows `<Multiple values>` and stays untouched unless you type something.
+- Each field has a menu on its right: Undo, Clear, Find & replace, and the list of existing values with their track counts, tap one to set it for all tracks.
+- Find & replace uses the same text filters as [smart playlists](/features/playlists-history/#smart-playlists) (contains, starts with, regex and more), with a Match case switch and a live preview of what changes.
+- Some fields that are empty in all tracks, like Lyricist or Record Label, are grouped under "More".
+- Editing from an album gives an "Auto track numbers" switch, it numbers tracks by their current order, per disc.
+- Moods, tags and rating are edited at the bottom. Values that only some tracks have show how many tracks have them, tap to add them to all tracks, remove them, or keep them as they are.
+- Before saving, a summary lists every change and how many tracks it affects.
+
+Moods, tags and rating can also be set for many tracks without opening the tag editor, press the "Set Rating" icon at the end of the Edit Tags row in the tracks menu.
+
 ### Suggestions {#suggestions}
 
 `🆕 v7.0.0`

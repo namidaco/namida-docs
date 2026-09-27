@@ -46,6 +46,7 @@ Import your listens from a ListenBrainz data export, zip or json files.
 
 ::: callout info
 Each import shows a short guide for getting the export file. You can limit it to a time range, and choose to add every matched track per entry (instead of just one).
+"Backup history before importing" is on by default, it saves your history to the backup location first, as a `Namida History Backup` file. Automatic restore skips these files, use Manual restore to bring one back. `🆕 v7.4.0`
 :::
 
 ---

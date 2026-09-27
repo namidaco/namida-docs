@@ -12,6 +12,7 @@ Most pages have a local variant and a hosted one for when you are signed in, sho
 
 Your YouTube feed, with notifications and subscriptions when [signed in](/settings/5-youtube-settings/#accounts).
 In notifications, you can play all unread videos at once, and comment notifications open the comment with its replies. If new notifications don't show up, switch the extractor from the button at the top.
+Open a notification's menu and press "More" to hide it, or to turn off notifications from that channel. `🆕 v7.4.0`
 
 ### Playlists {#playlists}
 
@@ -30,10 +31,13 @@ Your YouTube watch history inside Namida, separate from the local one, with its 
 Manage all download tasks, pause, resume, retry or cancel, with a failed only filter. Playlists get their own batch download page. [`🎉 Downloads feature ↗`](/features/youtube/#downloads)
 
 The flash icon at the top sets how many downloads run at the same time, 4 by default and up to 10, the icon shows the current value. The rest wait until a slot is free. `🆕 v7.1.0`
+The same dialog has "Threads per download", how many connections each big file downloads over, 3 by default and up to 8. `🆕 v7.4.0`
+
+Cache tasks show up here too, grouped under their playlist. While downloads or [server caching](/features/media-servers/#offline-caching) are running, an icon with a count shows in the app bar, press it to open this page. `🆕 v7.4.0`
 
 ### Search {#search}
 
-Search YouTube directly, results include videos, playlists and channels. Offline search is available for browsing what you already have.
+Search YouTube directly, results include videos, playlists and channels. Offline search is available for browsing what you already have, turn on the "Cache" chip to see only videos you can play offline (cached audio, cached video or a linked local track). `🆕 v7.4.0`
 
 #### Filters {#search-filters}
 
@@ -46,6 +50,12 @@ A filters row sits above the results:
 - Date: Last hour, Today, This week, This month, This year, or pick an exact "is After" / "is Before" date.
 
 You can also type the date right in the search text, like `after:2024-01-01` or `before:2023-06`. The date range applies to offline search too.
+
+### Hashtag {#hashtag}
+
+`🆕 v7.4.0`
+
+Tap a hashtag in a video description or a comment to open its page, with the videos, shorts and playlists using it.
 
 ---
 

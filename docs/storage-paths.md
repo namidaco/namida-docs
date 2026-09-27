@@ -9,7 +9,7 @@ Namida keeps its files in a few base folders. Each one is in a different place d
 
 ### User Data {#user-data}
 
-Settings, playlists, history, queues, extracted artworks, lyrics, subtitles, logs and the image/audio/video caches. This is what backups read from.
+Settings, playlists, history, queues, extracted artworks, lyrics, subtitles, logs and the image/audio/video/server caches. This is what backups read from.
 
 | Platform           | Path                                                       |
 | ------------------ | ---------------------------------------------------------- |
@@ -18,7 +18,7 @@ Settings, playlists, history, queues, extracted artworks, lyrics, subtitles, log
 | Windows (portable) | `<namida folder>\files`                                    |
 | Linux              | `~/.namida`                                                |
 
-Notable subfolders: `Playlists`, `History`, `Queues`, `Artworks`, `Lyrics`, `Subtitles`, `Youtube`, `Recently Deleted`, `Logs`.
+Notable subfolders: `Playlists`, `History`, `Queues`, `Artworks`, `Lyrics`, `Subtitles`, `Youtube`, `Servers Cache`, `Recently Deleted`, `Logs`.
 
 ::: callout warning
 On Android 11+ this folder is not reachable from a normal file manager. Use ADB or Shizuku if you need to open it directly.

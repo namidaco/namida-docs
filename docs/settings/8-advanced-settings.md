@@ -42,13 +42,31 @@ Output goes to a new folder [Namida Folder](/storage-paths/#namida-folder)`/Comp
 
 ### Cache Limits {#cache-limits}
 
-Maximum size for image, audio and video caches. Oldest and least important items get cleaned first.
+Maximum size for server, image, audio and video caches. Oldest and least important items get cleaned first.
 
-Each cached video has a priority: VIP, High, Normal, Low or GETOUT. Cleaning starts from the bottom and never touches VIP items. Change it from the video's menu, see [Caching & Offline Playback](/features/youtube/#caching).
+| Cache                   | Android | Windows & Linux |
+| ----------------------- | ------- | --------------- |
+| Server `🆕 v7.4.0`      | 4 GB    | 12 GB           |
+| Image                   | 256 MB  | 2 GB            |
+| Audio                   | 4 GB    | 12 GB           |
+| Video                   | 8 GB    | 24 GB           |
+
+Each cached video has a priority: VIP, High, Normal, Low or Disable. Cleaning starts from the bottom and never touches VIP items. Change it from the video's menu, see [Caching & Offline Playback](/features/youtube/#caching).
+
+Server tracks you cached yourself are never deleted automatically either, but they still count towards the limit. [`🎉 Offline Caching ↗`](/features/media-servers/#offline-caching)
 
 ### Clear Caches {#clear-caches}
 
-Clear image, audio or video cache. For video and audio cache you can choose exactly what to delete.
+Clear server, image, audio or video cache. Each tile shows the current size, and you pick what to delete before anything is removed.
+
+| Cache              | What you can pick                                                                                                                              |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Server `🆕 v7.4.0` | The tracks you cached yourself (not selected by default), the other streamed files, and unfinished downloads.                                 |
+| Image              | Each image folder: track artworks, video thumbnails, artist and album images, YouTube thumbnails and channel images.                          |
+| Audio              | Everything, or press Choose to pick single items, which can be sorted by size, oldest watch or total listens.                                  |
+| Video              | Same as audio.                                                                                                                                 |
+
+When choosing audio or video items, you can also select everything of a priority at once `🆕 v7.4.0`, unfinished downloads, or files already in your local library.
 
 ::: callout warning
 Clearing the image cache leaves your library without images. Only use it to rebuild the image cache.

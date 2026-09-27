@@ -28,6 +28,8 @@ NFC tags carrying a YouTube link open in Namida too.
 
 Add the Namida tile to your quick settings panel to play and pause without opening anything. The tile shows the current state, so you can tell at a glance if something is playing.
 
+There is also a "Namida Shuffle" tile, it toggles shuffle and shows whether it's on. `🆕 v7.4.0` [`🎉 Queue System ↗`](/features/playback/#queue)
+
 ### Home Screen Widget {#home-widget}
 
 `💻 Android only`
@@ -38,7 +40,7 @@ A resizable player widget with its own settings screen, see the [`🎉 Home Scre
 
 `💻 Windows+Linux only`
 
-Namida lives in the system tray while it runs. Click the icon to hide or show the window, right click it for a small menu with the current track, previous, play/pause, next, open, mini lyrics window and exit.
+Namida lives in the system tray while it runs. Click the icon to hide or show the window, right click it for a small menu with the current track, previous, play/pause, next, favourite, open, mini lyrics window and exit.
 
 Closing the window minimizes to the tray instead of quitting, unless you tell it otherwise. [`⚙️ Configure Kill Player After Dismissing App ↗`](/settings/3-playback-settings/#kill-player)
 

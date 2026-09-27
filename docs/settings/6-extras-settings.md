@@ -31,7 +31,9 @@ The tab the app opens on.
 
 ### Library Tabs {#library-tabs}
 
-Choose which tabs are enabled (tracks, albums, artists, genres, playlists, folders, the current queue, stats and more), you can reorder them too. [`📄 Library Pages ↗`](/pages/library/)
+Choose which tabs are enabled (tracks, albums, artists, genres, playlists, smart playlists, folders, the current queue, stats, listening party and more), you can reorder them too. [`📄 Library Pages ↗`](/pages/library/)
+
+Tracks and Folders have variants, audio only or videos only for Tracks, music or videos for Folders. With [Include Videos](/settings/2-indexer-settings/#include-videos) on, chips under each of them pick which variants are enabled. Variants of the same tab share a single slot in the navigation bar, long press it to switch between them. `🆕 v7.4.0`
 
 ### Filter Tracks in Search Lists By {#filter-tracks-by}
 
@@ -47,8 +49,9 @@ Ignores symbols and spaces while searching, so matches are easier to find.
 
 ### Lyrics {#lyrics}
 
-- Prioritize embedded lyrics over fetched ones.
 - Lyrics source, auto, local only or internet only.
+- Romanization, see [below](#romanization). `🆕 v7.4.0`
+- Prioritize embedded lyrics over fetched ones.
 - Stretch lyrics duration, adapts the timing for sped up, slowed or nightcore versions.
 - Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
 
@@ -61,6 +64,23 @@ Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for tha
 :::
 
 Once lyrics are found they get cached, and the cached copy is used first from then on. If lyrics you added later don't show up, delete the cached one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
+
+### Romanization {#romanization}
+
+`🆕 v7.4.0`
+
+Read non latin text in latin letters. Found inside the Lyrics card, press it to open the options:
+
+- **Romanization: Lyrics**, adds the romanized text under each synced lyrics line. Plain lyrics are not romanized.
+- **Romanization: Sort by**, text sorts use the romanized text, so a Japanese title like `さくら` sorts under S. [`🎉 Sorting ↗`](/features/library-indexing/#sorting)
+- **Dictionary**, needed for Japanese kanji and Chinese characters. It's a one time download, and turning on either option downloads it automatically. Press it again to delete it.
+
+Supported: Japanese (hiragana, katakana, kanji), Chinese, Korean, Greek, Cyrillic, Armenian and Georgian.
+Dictionary is only needed for kanji and Chinese.
+
+::: callout info
+Lyrics that contain any Japanese kana are read as Japanese, otherwise Chinese characters become pinyin.
+:::
 
 ### Image Source {#image-source}
 
@@ -107,9 +127,11 @@ Hidden experimental options. Press the flag icon at the top of the Extras settin
 - `GRADIENT_TILES_AND_CARDS`, gradient backgrounds for tiles and cards.
 - `MEDIA_WAVE_HAPTIC`, haptics that follow the audio.
 - `JELLYS_INVASION` & `JELLYS_COLOR_PALETTE`, lets jellyfishes drift around the app, with a matching color palette. Can also be toggled from the jellyfish button in the theme settings.
+- `KEEP_VIDEO_FRAME_ON_SWITCH`, when switching to an item whose video is already downloaded, keep the last video frame until the next one shows, instead of flashing the artwork in between. `🆕 v7.4.0`
 - `SHOW_DESKTOP_TITLE_BAR` & `DESKTOP_TITLE_BAR_ICONS_TYPE`, title bar look on desktop.
 - `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between the local style and YouTube style player.
 - `RECENT_SEARCHES`, saves your searches and shows them in the search page.
+- `RESUME_UI`, the resume button and the highlight on the last played item in pages like albums, playlists and queues. On by default, turn it off to hide both and stop tracking where you left off. `🆕 v7.4.0`
 - `CUSTOM_EQ_PACKAGE`, open a custom equalizer app instead of the system built-in one.
 - `VISUAL_TO_AUDIO_DELAY`, shift the visuals to make up for audio delay.
 - `TIME_CAPSULE_YEARS`, travel back in time, or into the future.

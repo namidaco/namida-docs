@@ -28,6 +28,7 @@ The queue's bottom row packs more than it looks:
   - Local: Random, Time Range, Moods, Ratings, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended
   - YouTube: Random, Time Range, Mix, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended.
 - A jump button scrolls right to the current track.
+- In a queue mixing tracks and videos, the add to playlist button asks whether to add the tracks or the videos.
 - Tap shuffle to toggle it, the button stays highlighted while it's on. Long press it for a one time shuffle instead: Shuffle Next shuffles the upcoming tracks, Shuffle All shuffles the whole queue.
 
 [`⚙️ Configure Playback ↗`](/settings/3-playback-settings/)
@@ -38,7 +39,7 @@ Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equali
 
 ### Sound Control {#sound-control}
 
-Press the audio effects icon in the player to open the Sound Control page. It has two tabs:
+Press the audio effects icon in the player, or the Sound Control tile at the top of settings, to open the Sound Control page. It has two tabs:
 
 - **Global**, applies to everything you play.
 - **Item**, applies to the current track or video only, a small icon shows when it has its own settings. Press reset to fall back to global, or turn on "Force use global config" to ignore per item settings.
@@ -65,11 +66,15 @@ Namida can play videos related to your music. Videos are found locally by filena
 
 Lyrics are fetched and shown automatically, synced or plain, with support for displaying word synced lrc/ttml files. Subtitle files next to the track (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work as lyrics too. Online lyrics come from LRCLIB and KuGou, and the best matching result is picked using the track duration. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
 
+Synced lyrics in Japanese, Chinese, Korean, Greek, Cyrillic and a few more scripts can show a romanized line under each line. `🆕 v7.4.0` [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
+
 ### Widescreen Player {#widescreen-player}
 
 `🆕 v7.0.0`
 
 On a wide window, the expanded player shows a maximize icon at its top left. It opens a two pane layout, artwork/video and controls on the left, lyrics or the queue on the right. Press the exit icon or `Esc` to go back.
+
+Scroll away from the current track or lyrics line, and a Jump button shows up to bring you back. `🆕 v7.4.0`
 
 ### Subtitles {#subtitles}
 
@@ -98,7 +103,7 @@ The menu also has an Advanced section for the heavier stuff, copying and moving 
 
 ### Sleep Timer {#sleep-timer}
 
-Stop playback after a number of tracks or minutes. Find it in the side menu.
+Stop playback after a number of tracks or minutes. Find it in the side menu, or in the quick tiles at the top of settings, where it also shows what's left while it runs.
 
 ### Waveform Seekbar {#waveform}
 

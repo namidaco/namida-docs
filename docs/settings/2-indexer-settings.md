@@ -25,7 +25,7 @@ Skips folders that contain a `.nomedia` file.
 
 ### Extract feat. Artists {#extract-feat-artists}
 
-Artists written as (feat. X) or (ft. X) in the title are added as separate artists, shown in the [Artists tab](/pages/library/#artists).
+Artists written as (feat. X) or (ft. X) in the title are added as separate artists, shown in the [Artists tab](/pages/library/#artists). Square brackets like [feat. X] work too.
 
 ### Enable Artwork Cache {#artwork-cache}
 
@@ -46,6 +46,7 @@ Which fields identify an album. "Album" name + "Album Artist" name by default, a
 ### Artists & Genres Separators {#separators}
 
 Symbols and words used to split multiple artists or genres from a single tag, like `,` `;` `&` `ft.`. You can also blacklist words so they never get split.
+Composers are split using the artists separators too. `🆕 v7.4.0`
 
 ::: callout tip
 No need to add spaces, unless the separator can also appear inside a word (like `x` and `ft.`).

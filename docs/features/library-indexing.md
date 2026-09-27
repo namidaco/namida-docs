@@ -13,7 +13,7 @@ Add the folders you want, exclude the ones you don't. The Folders tab browses yo
 
 ### Artists & Genres Separators {#separators}
 
-Tracks with multiple artists or genres in one tag get split into separate entries, you control the separator symbols and the blacklisted words. Featured artists in titles can also get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) [`📒 Blacklist Guide ↗`](/guides/beginner/#separator-blacklist)
+Tracks with multiple artists or genres in one tag get split into separate entries, you control the separator symbols and the blacklisted words. Composers follow the artists separators. Featured artists in titles can also get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) [`📒 Blacklist Guide ↗`](/guides/beginner/#separator-blacklist)
 
 ### Filtering {#filtering}
 
@@ -30,6 +30,10 @@ If you moved or renamed files outside Namida, the missing tracks page helps you 
 ### Sorting & Grouping {#sorting}
 
 Sort by almost any property of the track or the album. Most pages allow picking more than one sorter and reordering them, so you can sort by artist, then year, then title. Albums can be identified by name alone or combined with album artist or year, and common prefixes like "The" can be ignored while sorting.
+
+Text sorting ignores accents and reads numbers by their value, so `Ànteros` sits next to `Anteros`, and `2.mp3` comes before `10.mp3`. This applies to every text sort, including playlists and folders. `🆕 v7.4.0`
+
+Non latin titles and artists can also be sorted by their romanized form. [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
 
 ### Media Servers {#media-servers}
 
