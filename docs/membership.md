@@ -58,11 +58,15 @@ Everything else is free, here is a taste of it.
 **Everything else**
 
 - A folder based [library](/features/library-indexing/) with a powerful indexer, smart sorting and [media servers](/features/media-servers/) with offline caching.
-- [Playback](/features/playback/) with a reliable queue system, sound control, equalizer, replay gain, video integration and lyrics with romanization.
-- [Playlists and history](/features/playlists-history/), M3U and smart playlists, most played, stats and your year.
+- [Playback](/features/playback/) with a reliable queue system, video integration and a waveform seekbar.
+- Deep control over how things play, global or per track [sound control](/features/playback/#sound-control) with an equalizer, [replay gain](/features/playback/#replay-gain), skip silence, play/pause fade, [pausing scenarios](/features/playback/#pausing) and a [sleep timer](/features/playback/#sleep-timer).
+- [Lyrics](/features/playback/#lyrics), synced or plain, with smooth animations and word by word sync, a simple lyrics line under the artwork and [romanization](/settings/6-extras-settings/#romanization). [Subtitles](/features/subtitles/) for local and YouTube videos too, keeping their original styles.
+- [Playlists and history](/features/playlists-history/), M3U and smart playlists, and a reliable history system.
+- Charts and insights from your history, [most played](/features/playlists-history/#most-played) for any time range, [stats](/features/playlists-history/#stats) and your year, [lost memories](/features/playlists-history/#lost-memories) from years ago and [smort tracks generation](/features/playlists-history/#generation) based on what you listen to.
 - A full [tag editor](/features/tag-editor/), for single and multiple tracks.
 - [Sync](/features/sync/) between your devices, and [listening parties](/features/party/), joining them or hosting on your own device or server.
-- [Home screen widget](/features/home-widget/), [system integration](/features/system-integration/), [shortcuts](/features/shortcuts/) and a mini lyrics window.
+- Desktop apps for Windows and Linux, with a [widescreen player](/features/playback/#widescreen-player), system tray, [shortcuts](/features/shortcuts/) and a [mini lyrics window](/features/system-integration/#mini-lyrics).
+- [Home screen widget](/features/home-widget/) and [system integration](/features/system-integration/).
 - Themes and [customizations](/settings/4-customization-settings/) for almost every part of the app.
 
 ### Tiers {#tiers}
