@@ -99,6 +99,15 @@ When documenting from the namida codebase:
 - Document what the user can do and what happens, never how it is implemented. Implementation details (buffer sizes, algorithms, file formats) drift with refactors and don't help users.
 - Don't guess. If a behavior can't be confirmed from code, the README, or the maintainer, leave it out.
 
+## Updating for a New Release
+
+The namida commit the docs are based on is stored in `package.json` under `namida.commit`.
+
+1. In the namida repo, list what changed since then: `git log --reverse <commit>..HEAD`.
+2. Inspect each commit's actual diff (`git show <hash>`), not only its message, and check the final code at HEAD since later commits can change things. New UI strings show up in `en.arb`, the translations submodule isn't pinned by namida commits, so compare it by date.
+3. Update the docs. Mark new features, settings and sections with `` `🆕 vX.Y.Z` ``, on its own line under the header or at the end of the line.
+4. Set `namida.commit` and `namida.version` in `package.json` to the new HEAD, and bump `version` there and `versions` in `docmd.config.json`.
+
 ## Verification
 
 Before committing:
