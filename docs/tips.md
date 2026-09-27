@@ -31,7 +31,7 @@ Not so obvious features you might have missed.
 - While seeking, swipe upwards to cancel. Seeking near the starting edge snaps to the very start.
 - Swipe the miniplayer left or right to change tracks.
 - Shuffle is a toggle, it shuffles the queue itself and turning it off brings back the original order. Long press it for a one time Shuffle Next or Shuffle All. [`🎉 Queue System ↗`](/features/playback/#queue)
-- The repeat button has its own shuffle flavor, Repeat All Queue (Shuffle) reshuffles the queue each time it reaches the end.
+- The repeat button has its own shuffle flavor, Repeat All Queue (Shuffle) reshuffles the queue each time it reaches the end. [`🎉 Repeat Modes ↗`](/features/playback/#repeat-modes)
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
 - Long press the lyrics to enter fullscreen, and zoom in/out on the lyrics to change the font size. On desktop it's `Ctrl` + mouse wheel or `Ctrl` + `+` / `-`, and `Ctrl` + `0` resets it.
 - Long press the audio button in the player to open [Playback Settings](/settings/3-playback-settings/) directly.
@@ -87,6 +87,7 @@ The track menu has an Advanced section:
 - The current queue, the stats page, smart playlists and the listening party can be library tabs of their own. [`📄 Queue Tab ↗`](/pages/library/#current-queue) [`📄 Stats Tab ↗`](/pages/library/#stats)
 - Tabs with variants, like Tracks: Audio or Folders: Videos, share one slot in the navigation bar, long press it to switch. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
 - Press the map icon in an artist page to see where that artist sits among the rest of your library. [`📄 Artists Map ↗`](/pages/library/#artists-map)
+- Tapping or long pressing a track's thumbnail can run an action of your choice, like play next or open its info. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#track-tile)
 
 ### Downloading {#downloading}
 
@@ -128,7 +129,7 @@ The track menu has an Advanced section:
 ### Info & Sorting {#info-sorting}
 
 - Tap any item in the track info dialog to copy it.
-- In a track, album or artist info dialog, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop.
+- In a track, album or artist info dialog, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop. You can zoom in until single pixels show, and they stay sharp.
 - Most sort menus allow choosing more than one sorter, and reordering them.
 - Moved your files? The [Missing Tracks](/settings/2-indexer-settings/#missing-tracks) page relinks them without losing stats.
 
@@ -148,7 +149,7 @@ The scrollbar needs a short hold before it starts dragging. This is intentional,
 
 ### About Page {#about-tips}
 
-- Have an issue? Share logs from Settings -> About.
+- Have an issue? Press "Report an issue" in Settings -> About, it fills in your version and device info and gets the logs ready. [`📄 About Page ↗`](/pages/other/#about)
 - Check your version there too, and an icon appears on the app bar when there is a new version.
 - Open the side menu and press the Namida logo to open the About page.
 - Do NOT press the logo in the About page!! or something very scary will happen!!!1!

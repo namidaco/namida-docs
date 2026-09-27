@@ -76,7 +76,7 @@ Index video files too. Videos get their own folders view and can be played on th
 
 ### Refresh on Startup {#refresh-on-startup}
 
-Automatically checks for newly added or deleted files on every app start.
+Automatically checks for newly added, changed or deleted files on every app start.
 
 ### Missing Tracks {#missing-tracks}
 
@@ -85,6 +85,8 @@ Lists tracks that no longer exist on storage, you can update their paths to keep
 ### Refresh Library & Re-index {#refresh-reindex}
 
 Refresh checks for newly added or deleted music. Re-index rebuilds the whole library from scratch, artworks are kept as long as they still exist.
+
+Files changed outside Namida, like tags edited in another app, are read again on refresh too. `🆕 v7.5.0`
 
 Ways to refresh the library:
 

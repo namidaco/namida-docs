@@ -78,7 +78,9 @@ Press a member to make them admin, transfer host, kick or ban them. A ban blocks
 
 ### The Queue {#queue}
 
-The room has one queue that everyone sees. Adding, removing and reordering works from the normal player queue, your action is sent to the host and comes back to everybody. When a guest plays a list, it gets added after the current track. The queue loops, after the last track it goes back to the first.
+The room has one queue that everyone sees. Adding, removing and reordering works from the normal player queue, your action is sent to the host and comes back to everybody. When a guest plays a list, it gets added after the current track.
+
+The room has its own repeat mode, starting with the host's, and anyone with playback control can change it for everyone. The modes work like in your normal player, except Stop on Last Track, which always goes back to the first track and pauses. `🆕 v7.5.0` [`🎉 Repeat Modes ↗`](/features/playback/#repeat-modes)
 
 Local files are matched by title, artist, album and duration, so the same track on another device is found even in a different folder. [`🎉 Smart Matching ↗`](/features/sync/#matching)
 
@@ -91,7 +93,7 @@ Tracks that still have no match show "Unavailable on this device". When the part
 Your player follows the room while you are in it:
 
 - Without playback control, pausing only pauses your device, the party keeps playing. Press play to catch up.
-- Repeat is set to repeat all, and speed and per track sound settings are ignored.
+- Repeat follows the room, see [above](#queue), and speed and per track sound settings are ignored.
 - Notification, lockscreen and headset buttons follow your permissions too.
 
 Once you leave, your own queue comes back where you left it, paused. The party queue never replaces your saved queues. [`📄 Queues Page ↗`](/pages/library/#queues)

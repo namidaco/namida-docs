@@ -9,9 +9,9 @@ description: "Flexible playlists and a reliable history system"
 
 Normal playlists with custom order and the ability to set custom artworks. Also:
 
-- M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders.
+- M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders, except [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists` which always loads. `🆕 v7.5.0`
   - Sharing a playlist as a file isn't possible, send its M3U file with apps like [Syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or [LocalSend](https://localsend.org) instead. Converted playlists are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-path-problems)
-  - Between Namida devices, Sync can send your playlists too, they arrive as normal playlists instead of M3U. [`🎉 Sync feature ↗`](/features/sync/#data)
+  - Between Namida devices, Sync can send your playlists too. M3U playlists arrive as M3U files in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`, the rest as normal playlists. `🆕 v7.5.0` [`🎉 Sync feature ↗`](/features/sync/#data)
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
 - YouTube playlist downloads can be added to a library playlist, in the same order as the source. `🆕 v7.4.0` [`🎉 Into a Library Playlist ↗`](/features/youtube/#playlist-downloads)
 - Custom order for playlists, press the edit icon at the top to enable reordering.
@@ -27,7 +27,9 @@ Also see the [`🎉 YouTube feature ↗`](/features/youtube/#playlists) for how 
 ### Smart Playlists {#smart-playlists}
 
 Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more. Text rules suggest values from your library as you type.
-They also have their own full page, reachable from the playlists page, where you can reorder them. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
+They also have their own full page, reachable from the playlists page, where you can create and reorder them. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
+
+Their tracks can be sorted by more than one property, like artist, then year, then title. `🆕 v7.5.0`
 
 Their tracks are found only when you open them, and tracks can't be added to them manually, so they are kept apart from normal playlists. [`📄 Why aren't smart playlists treated as normal playlists? ↗`](/faq/#smart-playlists)
 

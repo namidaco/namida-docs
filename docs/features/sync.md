@@ -42,6 +42,10 @@ Off by default for another reason, they take over playback on the other device:
 - The currently playing queue with its position
 - Playback state
 
+Off by default too, since devices usually want their own:
+
+- Settings, for general, playback and YouTube. Only the settings you changed are sent, and the newest change wins for each one. Device specific ones like folders, language, caches and the download location stay on each device. `🆕 v7.5.0`
+
 ::: callout tip
 Turn on the advanced view in the Sync page to see every item separately instead of the short list.
 :::
@@ -70,13 +74,13 @@ Blocking a device, instead of just rejecting it, stops it from reaching you or a
 
 ### Connect by IP {#connect-by-ip}
 
-`🆕 v7.4.2`
+`🆕 v7.5.0`
 
 Device not showing up? Press the link icon beside Available Devices, and type the address shown under Server on the other device. Namida remembers it and reconnects on its own when Auto Reconnect is on. [`📄 Sync devices can't find or connect ↗`](/faq/#sync-troubleshooting)
 
 ### Diagnostics {#diagnostics}
 
-`🆕 v7.4.2`
+`🆕 v7.5.0`
 
 The icon beside Available Devices runs a quick network check, then gives a report you can copy or share. It shows your network, the server state, firewall info on Windows and Linux, and whether the other device can be reached. Share it when reporting a sync problem. [`📄 Sync devices can't find or connect ↗`](/faq/#sync-troubleshooting)
 

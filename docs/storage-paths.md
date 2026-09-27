@@ -35,7 +35,7 @@ The user facing folder, everything Namida writes out for you to keep or move aro
 | Windows (portable) | `<namida folder>\Namida`     |
 | Linux              | `~/Namida`                   |
 
-Subfolders: `Backups`, `Compressed`, `M3U Playlists`, `Artworks`, `Downloads`.
+Subfolders: `Backups`, `Compressed`, `M3U Playlists`, `Artworks`, `Downloads`, and on Android `Logs` for the logs zip made by [Report an issue](/pages/other/#about).
 
 On Windows and Linux this sits on the first drive Namida detects, usually the one above.
 

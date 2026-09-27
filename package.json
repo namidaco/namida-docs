@@ -1,9 +1,9 @@
 {
   "name": "namida-docs",
-  "version": "7.4.0",
+  "version": "7.5.0",
   "namida": {
-    "version": "7.4.0",
-    "commit": "54e149f4e003ddb7e7ef756eb26b878f5a11eae8"
+    "version": "7.5.0",
+    "commit": "acb1e1622600440cc793f389f497e6771c732c5e"
   },
   "private": true,
   "type": "module",

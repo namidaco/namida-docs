@@ -47,12 +47,12 @@ See [Lyrics](/settings/6-extras-settings/#lyrics) for the full lookup order.
 Not directly, but you can provide your own lyrics per track:
 
 - Long press the lyrics icon in the player and add an LRC file, or paste the lyrics in the lyrics tag using the tag editor.
-- Put an `.lrc` file next to the song with the same filename. Subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work too.
+- Put an `.lrc` file next to the song with the same filename, or in one of your [lyrics folders](/settings/6-extras-settings/#lyrics-folders). Subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) and `.txt` for plain lyrics work too.
 - Set [Prioritize embedded lyrics](/settings/6-extras-settings/#lyrics) depending on where you usually keep them.
 
 ### I added lyrics but they don't show (or keep showing old ones) {#lyrics-not-showing}
 
-Namida caches the lyrics it finds for a track, and the cached copy wins over anything you add later. Delete it:
+Namida caches the lyrics it finds for a track, and the cached copy wins over anything you add later. Setting the [Lyrics Save Location](/settings/6-extras-settings/#lyrics-save-location) to Track folder or Lyrics folders avoids this, files there are checked before the cache. Otherwise, delete the cached copy:
 
 1. Long press the lyrics icon in the player.
 2. All lyrics found for this track are listed, labeled with its source: `Cache`, `Local`, the provider name, or the embedded tag.
@@ -62,7 +62,7 @@ Namida caches the lyrics it finds for a track, and the cached copy wins over any
 If they still don't show, check [Prioritize embedded lyrics](/settings/6-extras-settings/#lyrics):
 
 - **On**, if the file has embedded lyrics, nothing else is looked at. Turn it on if you pasted lyrics in the tag, off if you added an `.lrc` file.
-- **Off**, the order is: cached lyrics -> `.lrc` file next to the track -> embedded tag -> online databases.
+- **Off**, the order is: cached lyrics -> `.lrc` file next to the track or in lyrics folders -> embedded tag -> `.txt` files -> online databases. If the Lyrics Save Location is Track folder or Lyrics folders, the `.lrc` file is checked before the cached lyrics instead.
 
 ::: callout tip
 Also make sure the `.lrc` file sits next to the track and has the same filename, and that the [Lyrics Source](/settings/6-extras-settings/#lyrics) is not set to Internet only.

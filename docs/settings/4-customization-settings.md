@@ -42,6 +42,7 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 - Force squared track thumbnail.
 - Size of track thumbnail & height of track tile.
 - Swipe actions, set a left and right swipe action for tracks (like play next, add to playlist).
+- Artwork Gestures, a tap and a long press action for the thumbnail of tracks and videos in lists, separate from the player artwork. `🆕 v7.5.0`
 - Every slot in the tile is customizable, choose what appears in each row: title, artist, album, year, duration, bitrate and more.
 - Display third row & third item in each row, control how much info a track tile shows.
 - Display favourite button.

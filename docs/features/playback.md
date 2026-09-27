@@ -11,7 +11,7 @@ Everything you expect from a music player, plus some extras.
 
 A persistent and reliable queue system, your sessions are saved for later usage. Also:
 
-- Repeat modes: Repeat All Queue, Stop on Last Track, Repeat Current Track, repeat for N times before playing the next track, and Repeat All Queue (Shuffle) which reshuffles the queue every time it ends.
+- Repeat modes, including repeat for N times and a shuffle flavor, see [below](#repeat-modes).
 - Shuffle is a toggle, separate from the repeat mode. `🆕 v7.1.0`
   - Turning it on shuffles the queue with the playing track first, turning it off restores the original order. Playback is never interrupted.
   - While on, new queues start shuffled, with the track you pressed first.
@@ -32,6 +32,18 @@ The queue's bottom row packs more than it looks:
 - Tap shuffle to toggle it, the button stays highlighted while it's on. Long press it for a one time shuffle instead: Shuffle Next shuffles the upcoming tracks, Shuffle All shuffles the whole queue.
 
 [`⚙️ Configure Playback ↗`](/settings/3-playback-settings/)
+
+### Repeat Modes {#repeat-modes}
+
+Press the repeat button in the player to pick one:
+
+- **Stop on Last Track**, playback pauses after the last track. [`⚙️ Jump to First Track After Finishing Queue ↗`](/settings/3-playback-settings/#jump-to-first)
+- **Repeat Current Track**, the current track plays again and again.
+- **Repeat for N times**, the current track repeats N times, then the next one plays.
+- **Repeat All Queue**, the queue loops.
+- **Repeat All Queue (Shuffle)**, the queue is reshuffled every time it ends.
+
+In a [listening party](/features/party/#queue), the room has its own repeat mode that everyone follows.
 
 ### Audio Effects {#effects}
 
@@ -68,6 +80,10 @@ Lyrics are fetched and shown automatically, synced or plain, with support for di
 
 Synced lyrics in Japanese, Chinese, Korean, Greek, Cyrillic and a few more scripts can show a romanized line under each line. `🆕 v7.4.0` [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
 
+The simple lyrics line under the artwork shows translations and romanizations too, and word synced lyrics light up word by word there, like in the lyrics view. Line synced lyrics get a short reveal with the sung colors when they become current. `🆕 v7.5.0` [`⚙️ Configure Simple Lyrics Line ↗`](/settings/6-extras-settings/#lyrics)
+
+Choose where lyrics are saved, the cache, the track folder or your own lyrics folders, and delete them along with the track. `🆕 v7.5.0` [`⚙️ Configure Lyrics Save Location ↗`](/settings/6-extras-settings/#lyrics-save-location)
+
 ### Widescreen Player {#widescreen-player}
 
 `🆕 v7.0.0`
@@ -87,6 +103,7 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 - Swipe the miniplayer left or right to change tracks, up and down to expand or minimize, and swipe down to dismiss when [Dismissible Miniplayer](/settings/3-playback-settings/#dismissible-miniplayer) is on.
 - Artwork tap and long press actions are configurable, and double tap can toggle lyrics. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization)
 - Swipe left or right on a track or video to execute an action (play next, open info, go to album, edit tags and more). [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile)
+- Tap or long press the thumbnail of a track or video to execute an action too, off by default. `🆕 v7.5.0` [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#track-tile)
 - Tap the current position to seek backwards and the total duration to seek forwards, by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Holding either one keeps seeking.
 - Long press the previous button to jump to the start of the track, long press the next button to speed up playback while holding it.
 - While seeking with the seekbar, swipe upwards to cancel the seek.
