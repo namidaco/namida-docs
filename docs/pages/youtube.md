@@ -10,9 +10,9 @@ Most pages have a local variant and a hosted one for when you are signed in, sho
 
 ### Home {#home}
 
-Your YouTube feed, with notifications and subscriptions when [signed in](/settings/5-youtube-settings/#accounts).
+Your YouTube feed, with notifications and subscriptions when [signed in](/settings/5-youtube-settings/#accounts). Your account's home feed needs a membership. [`📄 Membership ↗`](/membership/#benefits)
 In notifications, you can play all unread videos at once, and comment notifications open the comment with its replies. If new notifications don't show up, switch the extractor from the button at the top.
-Open a notification's menu and press "More" to hide it, or to turn off notifications from that channel. `🆕 v7.4.0`
+Open a notification's menu and press "More" to hide it, or to turn off notifications from that channel, this one needs a membership. `🆕 v7.4.0`
 
 ### Playlists {#playlists}
 
@@ -24,7 +24,7 @@ Your subscribed channels, they can be organized into groups. Each channel page s
 
 ### History {#history}
 
-Your YouTube watch history inside Namida, separate from the local one, with its own Most Played.
+Your YouTube watch history inside Namida, separate from the local one, with its own Most Played. The watch history of your account is available too, with a membership. [`📄 Membership ↗`](/membership/#benefits)
 
 ### Downloads {#downloads}
 

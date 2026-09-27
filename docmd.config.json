@@ -247,6 +247,7 @@
     },
     { "title": "Tips & Tricks", "path": "/tips/", "icon": "lightbulb" },
     { "title": "FAQ", "path": "/faq/", "icon": "message-circle-question-mark" },
+    { "title": "Membership", "path": "/membership/", "icon": "heart-handshake" },
     { "title": "Not Planned", "path": "/not-planned/", "icon": "ban" },
     { "title": "Permissions", "path": "/permissions/", "icon": "shield-check" },
     { "title": "Storage Paths", "path": "/storage-paths/", "icon": "folder-tree" },

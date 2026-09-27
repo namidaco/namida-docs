@@ -89,6 +89,7 @@ Removes the small delay between tracks by loading the next one early. Useful for
 ### Crossfade {#crossfade}
 
 Fades between tracks. You can set the crossfade duration and how many seconds before the end it should trigger.
+Part of the membership, or find the easter egg to unlock it for free. [`📄 Membership ↗`](/membership/#benefits) [`📄 Easter Egg Tip ↗`](/tips/#misc-tips)
 
 ### Fade Effect on Play/Pause {#fade-play-pause}
 

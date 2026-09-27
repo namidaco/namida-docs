@@ -158,7 +158,7 @@ The scrollbar needs a short hold before it starts dragging. This is intentional,
 - Long press or hover on any icon to see a tooltip explaining what it does.
 - Pages that have a docs page show a guide icon in the app bar, it opens the matching page here.
 - Tag editor and smart playlist fields suggest values from your library as you type.
-- Did you know you can unlock crossfade and party mode for free? Try reading the dialog that shows, and maybe fight it.
+- Did you know you can unlock crossfade and party mode for free? Try reading the dialog that shows, and maybe fight it. [`📄 Membership ↗`](/membership/#benefits)
 
 ### Desktop {#desktop-tips}
 

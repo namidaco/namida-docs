@@ -12,7 +12,7 @@ No. Searching, playing, liking, downloading, browsing your playlists and most ot
 - A membership unlocks some newly added YouTube features, on top of supporting the project. They only make sense when signed in to your account.
 - Get it through [Patreon](https://patreon.com/namidaco). Donations through [kofi](https://ko-fi.com/namidaco) or [buymeacoffee](https://buymeacoffee.com/namidaco) get a coupon by email, which can take a few days.
 - Sign in from Settings -> Youtube -> Manage Your Accounts -> Add account. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
-- [More about membership features](https://www.patreon.com/posts/namida-yt-112913142).
+- See [Membership](/membership/) for what it unlocks and how to get it.
 
 ### YouTube is slow or broken {#youtube-broken}
 

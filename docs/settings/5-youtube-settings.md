@@ -9,7 +9,7 @@ Settings for the [YouTube](/features/youtube/) section.
 
 ### Manage Your Accounts {#accounts}
 
-Sign in to your account, or multiple accounts, to interact with videos and get personalized content.
+Sign in to your account, or multiple accounts, to interact with videos and get personalized content. The membership page is here too, multiple accounts need a `pookie` membership. [`📄 Membership ↗`](/membership/)
 
 ### SponsorBlock {#sponsorblock}
 

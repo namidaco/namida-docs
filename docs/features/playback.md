@@ -35,7 +35,7 @@ The queue's bottom row packs more than it looks:
 
 ### Audio Effects {#effects}
 
-Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equalizer with Loudness Enhancer. [`⚙️ Configure Effects ↗`](/settings/3-playback-settings/#crossfade)
+Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, and an Equalizer with Loudness Enhancer. Crossfade is part of the membership, or find the easter egg to unlock it for free. [`⚙️ Configure Effects ↗`](/settings/3-playback-settings/#crossfade) [`📄 Membership ↗`](/membership/#benefits)
 
 ### Sound Control {#sound-control}
 

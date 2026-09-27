@@ -13,7 +13,7 @@ Namida is not on Google Play, and there are no plans to publish it there current
 
 - All files access permission (`MANAGE_EXTERNAL_STORAGE`). Google treats it as a special permission that only file manager apps are allowed to have, while Namida needs it for tag editing, backups, saving artworks, downloads and more, see [Permissions](/permissions/#requested). The alternative is SAF (Android's Storage Access Framework), which would work but would make many features tedious to use.
 - Download feature.
-- Donation & Membership links that don't use Google's payment system.
+- Donation & [Membership](/membership/) links that don't use Google's payment system.
 
 A separate version without these could be made, but that is extra maintenance we are not willing to take on, and these features are an important part of the Namida experience.
 

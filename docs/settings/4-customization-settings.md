@@ -49,7 +49,7 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 
 ### Miniplayer Customization {#miniplayer-customization}
 
-- Party Mode, a breathing glow around the edges, with a static color or switching through the artwork palette.
+- Party Mode, a breathing glow around the edges, with a static color or switching through the artwork palette. Part of the membership, or find the easter egg to unlock it for free. [`📄 Membership ↗`](/membership/#benefits) [`📄 Easter Egg Tip ↗`](/tips/#misc-tips)
 - Moving particles, the particles speed up with the audio peak.
 - Thumbnail animation intensity, the artwork animates with the audio peak. Separate values for expanded, minimized and lyrics view, plus an inverse option where high peaks make the thumbnail smaller.
 - Artwork gestures, scale multiplier, tap action, long press action and double tap to toggle lyrics.

@@ -196,6 +196,8 @@ How actions map to them:
 
 Editing one of your own account playlists from its menu also lets you choose "Add new videos to the top", press the settings icon beside the privacy chips. `🆕 v7.4.0`
 
+Saving, editing and deleting your account playlists needs a membership, while browsing them, creating new ones and adding videos is free. [`📄 Membership ↗`](/membership/#benefits)
+
 ### SponsorBlock {#sponsorblock}
 
 Skips sponsor segments in videos using community data from [SponsorBlock](https://sponsor.ajay.app/). Segments and heatmap are also shown on the seekbar. You can choose which categories to skip and how. [`⚙️ Configure SponsorBlock ↗`](/settings/5-youtube-settings/#sponsorblock)
@@ -210,9 +212,13 @@ Shows the dislike count on videos using [Return YouTube Dislike](https://returny
 
 Sign in to your account to get personalized related videos and mixes, and to interact with videos. It can also improve download speed and fix some playback issues. Brand accounts under the same Google account can each be signed in separately. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
 
+Likes, your playlists, subscriptions and notifications are free once signed in, some other account features need a membership. [`📄 Membership ↗`](/membership/#benefits)
+
 ### Comments {#comments}
 
 Full comments support with replies. You can prefer top comments or newest comments first. [`⚙️ Configure Comments ↗`](/settings/5-youtube-settings/#comments)
+
+Reading comments is free, writing and liking them needs a membership. [`📄 Membership ↗`](/membership/#benefits)
 
 Channel custom emojis, voice replies (shown as their transcript) and the "comments paused" notice are all shown. Closing the comment sheet with unsent text asks before discarding it. `🆕 v7.4.0`
 
