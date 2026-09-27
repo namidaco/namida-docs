@@ -44,7 +44,7 @@ Matching ignores casing, symbols and whitespace, and extra words around the name
 
 1. Install the same Namida version on both devices, and connect them to the same network.
 2. Open the Sync page on both (Settings -> Backup & Restore -> Sync).
-3. Start the server on one device, and search on the other.
+3. Start the server on one device, and search on the other. Not showing up? See [`📄 Sync devices can't find or connect ↗`](/faq/#sync-troubleshooting).
 4. Accept the connection request, then choose the data to send & receive.
 5. Press send or receive, that's it. See the [`🎉 Sync feature ↗`](/features/sync/) for what gets synced.
 

@@ -23,6 +23,18 @@ YouTube updates can break clients from time to time, fixes are available in beta
 3. Disable any VPN, custom DNS or proxy.
 4. If YouTube is restricted in your area, try a different VPN instead.
 
+### Sync devices can't find or connect {#sync-troubleshooting}
+
+1. Make sure both devices run the same Namida version and are on the same network. Guest networks and some routers keep devices apart, and a VPN can get in the way too.
+2. Device not found? Connect by IP instead, using the address shown under Server on the other device. [`🎉 Connect by IP ↗`](/features/sync/#connect-by-ip)
+3. Found, but connecting fails or times out? A firewall on the server device is blocking Namida, allow it:
+   - Windows: set your network to Private, then allow Namida in Windows Security -> Firewall & network protection -> Allow an app through firewall.
+   - Linux with ufw: `sudo ufw allow 62310/tcp`
+   - Linux with firewalld: `sudo firewall-cmd --permanent --add-port=62310/tcp && sudo firewall-cmd --reload`
+   - If the device isn't found either, allow `5353/udp` the same way.
+4. Worked before and suddenly stopped? Turn your network adapter off and on again, or restart the device.
+5. Still stuck? Press Diagnostics on both devices, and share both reports in a [GitHub issue](https://github.com/namidaco/namida/issues). [`🎉 Diagnostics ↗`](/features/sync/#diagnostics)
+
 ### Where do lyrics come from? {#lyrics-source}
 
 - [LRCLIB](https://lrclib.net)
