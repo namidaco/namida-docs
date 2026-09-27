@@ -42,6 +42,7 @@ Not so obvious features you might have missed.
 - Long press the heart icon to add the current track to a playlist.
 - To switch the artist/title locations, toggle "Display artist before title" in [Customizations](/settings/4-customization-settings/#miniplayer-customization).
 - Audio configs (speed, pitch, effects) can be set per item, open the Sound Control page with the audio effects icon in the player.
+- In the equalizer, letting go of a band close to 0 snaps it to exactly 0.
 - Playing the current track from another list rebuilds the queue silently without interrupting playback.
 - Open any track's dialog and press play to quickly start a new queue with only that track.
 - Zoom in on the video in the local player to enter fullscreen.
@@ -52,6 +53,7 @@ Not so obvious features you might have missed.
 Long press a track (or tap its menu) for more than you might expect:
 
 - Play Next, Play Last, and Play After, pick an exact position in the queue.
+  - For a track or video that's already in the queue, long press them to move it there instead of adding it again.
 - Repeat for N times before playing the next track.
 - Stop after this track, works on any upcoming track in the queue, not only the playing one.
 - Insert after latest inserted, for stacking multiple tracks one after another.
@@ -81,6 +83,7 @@ The track menu has an Advanced section:
 - In media pages, long press the grid icon to choose a specific count per row (higher numbers can cause performance issues).
 - In the tracks page and media subpages, long press shuffle/play for advanced options.
 - Tap the resume button in media subpages to resume from the last played track, and long press it to jump to that track.
+- In the Home page, tapping a Recent Queues card that was played from a playlist or folder opens that playlist or folder, long press it to open its dialog. [`📄 Home Page ↗`](/pages/library/#home)
 - With a network image source enabled, open an album or artist dialog and press the edit icon at the top right to change its display image. Playlist artworks can always be edited.
   - This only changes the display image, the audio files and their tags are untouched.
 - Open the dialog of an album, artist, playlist or folder and press Stats to see listen stats for just those tracks.
@@ -138,6 +141,7 @@ The track menu has an Advanced section:
 - Put a `cover.jpg` (or similar) image inside a folder to use it as the folder artwork.
 - Put a `.info.txt` file inside a folder to display small info about it. [Refresh the library](/settings/2-indexer-settings/#refresh-reindex) after editing it to see the changes.
 - Set a specific folder as default, Namida opens it on app launch.
+- With "Enable Folders Hierarchy" on, a folder's menu button shows only the tracks directly inside it, long press the button or the folder itself to include tracks from all subfolders. [`📄 Folders Page ↗`](/pages/library/#folders)
 
 ### Scrolling {#scrolling}
 
