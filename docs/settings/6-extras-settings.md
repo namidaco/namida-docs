@@ -23,7 +23,7 @@ Keep the video playing in a small floating window when leaving the app.
 
 ### Floating Action Button {#fab}
 
-Choose what the floating button does, like search, play or shuffle, or hide it.
+Choose what the floating button does (like search, play or shuffle), or hide it.
 
 ### Default Library Tab {#default-library-tab}
 
@@ -33,7 +33,8 @@ The tab the app opens on.
 
 Choose which tabs are enabled (tracks, albums, artists, genres, playlists, smart playlists, folders, the current queue, stats, listening party and more), you can reorder them too. [`📄 Library Pages ↗`](/pages/library/)
 
-Tracks and Folders have variants, audio only or videos only for Tracks, music or videos for Folders. Tracks variants show only when [Include Videos](/settings/2-indexer-settings/#include-videos) is on. Variants of the same tab share a single slot in the navigation bar, long press it to switch between them, or press the arrow beside it in the side menu. `🆕 v7.4.0`
+Tracks and Folders have variants (audio only or videos only for Tracks, music or videos for Folders). Tracks variants show only when [Include Videos](/settings/2-indexer-settings/#include-videos) is on.
+Variants of the same tab share a single slot in the navigation bar, long press it to switch between them, or press the arrow beside it in the side menu. `🆕 v7.4.0`
 
 ### Filter Tracks in Search Lists By {#filter-tracks-by}
 
@@ -57,15 +58,17 @@ Ignores symbols and spaces while searching, so matches are easier to find.
   - Shows translations and romanizations under each line, and word synced lyrics light up word by word like in the lyrics view. `🆕 v7.5.0`
 - Lyrics save location & Lyrics folders, see [below](#lyrics-save-location). `🆕 v7.5.0`
 
-How lyrics are found: Namida looks for synced lyrics first, checking saved lyrics (the cache, files next to the track and your [lyrics folders](#lyrics-folders)), then the embedded lyrics tag, then plain `.txt` lyrics, then online databases, ending with a web search for plain lyrics. The lyrics source above limits this to only the local steps or only the internet steps.
+How lyrics are found: Namida looks for synced lyrics first, checking saved lyrics (the cache, files next to the track and your [lyrics folders](#lyrics-folders)), then the embedded lyrics tag, then plain `.txt` lyrics, then online databases, ending with a web search for plain lyrics.
+The lyrics source above limits this to only the local steps or only the internet steps.
 
-Files next to the track can be `.lrc`, `.ttml`, `.txt` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename. Online databases are LRCLIB and KuGou. When both find lyrics, the one closest to the track duration is used, and the lyrics menu shows where each one came from.
+Files next to the track can be `.lrc`, `.ttml`, `.txt` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename.
+Online databases are LRCLIB and KuGou. When both find lyrics, the one closest to the track duration is used, and the lyrics menu shows where each one came from.
 
 ::: callout tip
 Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track.
 :::
 
-Once lyrics are found they get saved, in the cache by default, and the saved copy is used first from then on. If lyrics you added later don't show up, pick them in the [lyrics picker](/features/playback/#lyrics-picker) and press Save, or delete the saved one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
+Once lyrics are found they get saved (in the cache by default), and the saved copy is used first from then on. If lyrics you added later don't show up, pick them in the [lyrics picker](/features/playback/#lyrics-picker) and press Save, or delete the saved one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
 
 ### Romanization {#romanization}
 
@@ -74,7 +77,7 @@ Once lyrics are found they get saved, in the cache by default, and the saved cop
 Read non latin text in latin letters. Found inside the Lyrics card, press it to open the options:
 
 - **Romanization: Lyrics**, adds the romanized text under each synced lyrics line. Plain lyrics are not romanized.
-- **Romanization: Sort by**, text sorts use the romanized text, so a Japanese title like `さくら` sorts under S. [`🎉 Sorting ↗`](/features/library-indexing/#sorting)
+- **Romanization: Sort by**, text sorts use the romanized text (so a Japanese title like `さくら` sorts under S). [`🎉 Sorting ↗`](/features/library-indexing/#sorting)
 - **Dictionary**, needed for Japanese kanji and Chinese characters. It's a one time download, done automatically when an option needs it. Press it again to delete it.
 
 Supported: Japanese (hiragana, katakana, kanji), Chinese, Korean, Greek, Cyrillic, Armenian and Georgian.
@@ -98,7 +101,8 @@ Press the trash icon beside a location to delete lyrics there when you delete a 
 
 `🆕 v7.5.0`
 
-Extra folders to look for lyrics in, matched by track filename. Inside a lyrics folder, Namida first looks in the same subfolders your library has, then directly inside it. For example, with `Music` in your [library folders](/settings/2-indexer-settings/#folders-to-scan), `Music/Artist/song.mp3` finds `Lyrics/Artist/song.lrc` or `Lyrics/song.lrc`.
+Extra folders to look for lyrics in, matched by track filename. Inside a lyrics folder, Namida first looks in the same subfolders your library has, then directly inside it.
+For example, with `Music` in your [library folders](/settings/2-indexer-settings/#folders-to-scan), `Music/Artist/song.mp3` finds `Lyrics/Artist/song.lrc` or `Lyrics/song.lrc`.
 
 When Lyrics folders is the save location, lyrics are saved in the first folder, keeping your library's subfolders.
 
@@ -153,7 +157,7 @@ Visual:
 Scrolling:
 
 - `SMOOTH_SCROLLING (💻 Windows+Linux only)`, `ENHANCED_DRAG_TO_SCROLL` & `TAP_TO_SCROLL`, scrolling behavior tweaks.
-- `SCROLLBAR_THUMB_LABEL`, shows where you are while dragging the scrollbar, like the letter, year or date, depending on the sort. `🆕 v7.8.0`
+- `SCROLLBAR_THUMB_LABEL`, shows where you are while dragging the scrollbar (like the letter, year or date, depending on the sort). `🆕 v7.8.0`
 
 Desktop:
 
@@ -166,7 +170,7 @@ Misc:
 - `RECENT_SEARCHES`, saves your searches and shows them in the search page.
 - `PREFERRED_SEARCH_TAB`, the tab search opens on.
 - `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between the local style and YouTube style player.
-- `KEEP_VIDEO_FRAME_ON_SWITCH`, when switching to an item whose video is already downloaded, keep the last video frame until the next one shows, instead of flashing the artwork in between. `🆕 v7.4.0`
+- `KEEP_VIDEO_FRAME_ON_SWITCH`, when switching to an item whose video is already downloaded, keep the last video frame until the next one shows (instead of flashing the artwork in between). `🆕 v7.4.0`
 - `TIME_CAPSULE_YEARS`, travel back in time, or into the future.
 
 ::: callout info

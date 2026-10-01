@@ -9,8 +9,8 @@ description: "Frequently Asked Questions"
 
 No. Searching, playing, liking, downloading, browsing your playlists and most other things are free.
 
-- A membership unlocks some newly added YouTube features, on top of supporting the project. They only make sense when signed in to your account.
-- Get it through [Patreon](https://patreon.com/namidaco). Donations through [kofi](https://ko-fi.com/namidaco) or [buymeacoffee](https://buymeacoffee.com/namidaco) get a coupon by email, which can take a few days.
+- A membership unlocks some newly added YouTube features (on top of supporting the project). They only make sense when signed in to your account.
+- Get it through [Patreon](https://patreon.com/namidaco). Donations through [kofi](https://ko-fi.com/namidaco) or [buymeacoffee](https://buymeacoffee.com/namidaco) get a coupon by email (which can take a few days).
 - Sign in from Settings -> Youtube -> Manage Your Accounts -> Add account. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
 - See [Membership](/membership/) for what it unlocks and how to get it.
 
@@ -26,7 +26,7 @@ YouTube updates can break clients from time to time, fixes are available in beta
 ### Sync devices can't find or connect {#sync-troubleshooting}
 
 1. Make sure both devices run the same Namida version and are on the same network. Guest networks and some routers keep devices apart, and a VPN can get in the way too.
-2. Device not found? Connect by IP instead, using the address shown under Server on the other device. [`🎉 Connect by IP ↗`](/features/sync/#connect-by-ip)
+2. Device not found? Connect by IP instead (using the address shown under Server on the other device). [`🎉 Connect by IP ↗`](/features/sync/#connect-by-ip)
 3. Found, but connecting fails or times out? A firewall on the server device is blocking Namida, allow it:
    - Windows: set your network to Private, then allow Namida in Windows Security -> Firewall & network protection -> Allow an app through firewall.
    - Linux with ufw: `sudo ufw allow 62310/tcp`
@@ -53,10 +53,11 @@ Not directly, but you can provide your own lyrics per track:
 
 ### I added lyrics but they don't show (or keep showing old ones) {#lyrics-not-showing}
 
-Namida caches the lyrics it finds for a track, and the cached copy wins over anything you add later. Setting the [Lyrics Save Location](/settings/6-extras-settings/#lyrics-save-location) to Track folder or Lyrics folders avoids this, files there are checked before the cache. Otherwise, delete the cached copy:
+Namida caches the lyrics it finds for a track, and the cached copy wins over anything you add later.
+Setting the [Lyrics Save Location](/settings/6-extras-settings/#lyrics-save-location) to Track folder or Lyrics folders avoids this (files there are checked before the cache). Otherwise, delete the cached copy:
 
 1. Long press the lyrics icon in the player.
-2. All lyrics found for this track are listed, labeled with its source: `Cache`, `Local`, the provider name, or the embedded tag. The ones in use are marked Active
+2. All lyrics found for this track are listed, labeled with its source: `Cache`, `Local`, the provider name, or the embedded tag. The ones in use are marked Active.
 3. Open the ⋮ menu on the cached one and press Delete.
 4. Press done, the new lyrics get picked up.
 
@@ -73,14 +74,15 @@ Also make sure the `.lrc` file sits next to the track and has the same filename,
 
 ### Can I use a custom app icon? {#custom-app-icon}
 
-You can pick from the icons that ship with Namida, but a fully custom one is not possible, Android only allows icons that are already built into the app. See [App Icon](/settings/4-customization-settings/#app-icon), where you can also submit an icon, or use a launcher that supports icon packs.
+You can pick from the icons that ship with Namida, but a fully custom one is not possible (Android only allows icons that are already built into the app).
+See [App Icon](/settings/4-customization-settings/#app-icon), where you can also submit an icon, or use a launcher that supports icon packs.
 
 ### Why aren't smart playlists treated as normal playlists? {#smart-playlists}
 
 They are a different thing. A smart playlist is only a set of rules, and its tracks are found only when you open it.
 
 - Listing them with normal playlists means finding the tracks of every smart playlist all the time, which would easily hurt performance.
-- Tracks can't be added to a smart playlist manually, the rules decide what's in it. Mixing them with normal playlists would make that confusing.
+- Tracks can't be added to a smart playlist manually (the rules decide what's in it). Mixing them with normal playlists would make that confusing.
 
 See [`🎉 Smart Playlists feature ↗`](/features/smart-playlists/)
 
@@ -100,11 +102,11 @@ For a system wide equalizer that also works for other apps, use [Equalizer314](h
 ### Android asks for USB DAC access every time I plug it in {#usb-dac-permission}
 
 Android forgets the access once the DAC is unplugged, unless Namida is set as the DAC's default app in that dialog.
-Android only offers "always" for DACs without a microphone, since Namida doesn't ask for microphone access. Nothing is wrong with your DAC. [`🎉 USB Direct Access ↗`](/features/playback/#usb-direct)
+Android only offers "always" for DACs without a microphone (since Namida doesn't ask for microphone access). Nothing is wrong with your DAC. [`🎉 USB Direct Access ↗`](/features/playback/#usb-direct)
 
 ### Can't install the APK, Google blocks it {#play-protect}
 
-Play Protect scans apps installed from outside Google Play and sometimes blocks them, the dialog says the app was blocked or wasn't scanned.
+Play Protect scans apps installed from outside Google Play and sometimes blocks them (the dialog says the app was blocked or wasn't scanned).
 
 - Tap "More details" then "Install anyway" in the dialog.
 - If it keeps blocking, open Play Store -> profile icon -> Play Protect -> settings icon, and turn off "Scan apps with Play Protect", then install and turn it back on.

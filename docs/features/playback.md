@@ -60,7 +60,7 @@ Press the audio effects icon in the player, the Sound Control tile at the top of
 - Normalize audio. [`⚙️ Configure Normalize Audio ↗`](/settings/3-playback-settings/#normalize-audio)
 - Two tabs:
   - **Global**, applies to everything you play.
-  - **Item**, applies to the current track or video only, a small icon shows when it has its own settings. Press reset to fall back to global, or turn on "Force use Global Config" to ignore per item settings.
+  - **Item**, applies to the current track or video only (a small icon shows when it has its own settings). Press reset to fall back to global, or turn on "Force use Global Config" to ignore per item settings.
 - **Mono audio**, both sides play the same sound. `🆕 v7.8.0`
 
 Both tabs carry Skip Silence `💻 Android+Linux only`, Pitch (as a percentage or in semitones), Speed, Volume, Loudness Enhancer and the [Equalizer](#equalizer) with its presets.
@@ -157,20 +157,21 @@ Namida can play videos related to your music. Videos are found locally by filena
 
 ### Lyrics {#lyrics}
 
-Lyrics are fetched and shown automatically, synced or plain, with support for displaying word synced lrc/ttml files. Subtitle files next to the track (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work as lyrics too. Online lyrics come from LRCLIB and KuGou, and the best matching result is picked using the track duration. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
+Lyrics are fetched and shown automatically (synced or plain), with support for displaying word synced lrc/ttml files. Subtitle files next to the track (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work as lyrics too.
+Online lyrics come from LRCLIB and KuGou, and the best matching result is picked using the track duration. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
 
 Synced lyrics in Japanese, Chinese, Korean, Greek, Cyrillic and a few more scripts can show a romanized line under each line. `🆕 v7.4.0` [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
 
-The simple lyrics line under the artwork shows translations and romanizations too, and word synced lyrics light up word by word there, like in the lyrics view. Line synced lyrics get a short reveal with the sung colors when they become current. `🆕 v7.5.0` [`⚙️ Configure Simple Lyrics Line ↗`](/settings/6-extras-settings/#lyrics)
+The simple lyrics line under the artwork shows translations and romanizations too, and word synced lyrics light up word by word there (like in the lyrics view). Line synced lyrics get a short reveal with the sung colors when they become current. `🆕 v7.5.0` [`⚙️ Configure Simple Lyrics Line ↗`](/settings/6-extras-settings/#lyrics)
 
-Choose where lyrics are saved, the cache, the track folder or your own lyrics folders, and delete them along with the track. `🆕 v7.5.0` [`⚙️ Configure Lyrics Save Location ↗`](/settings/6-extras-settings/#lyrics-save-location)
+Choose where lyrics are saved (the cache, the track folder or your own lyrics folders), and delete them along with the track. `🆕 v7.5.0` [`⚙️ Configure Lyrics Save Location ↗`](/settings/6-extras-settings/#lyrics-save-location)
 
 #### Lyrics Picker {#lyrics-picker}
 
 Long press the lyrics button in the player (right click on desktop) to see every lyrics found for the track. Add, search, edit or shift them from there, and: `🆕 v7.8.0`
 
 - The ones in use are marked Active, tap others and press Save to use them instead.
-- Embed, from the ⋮ menu, writes them into the track's lyrics tag.
+- Embed (from the ⋮ menu) writes them into the track's lyrics tag.
 - A "Prioritize embedded lyrics" switch shows when the track has embedded lyrics.
 - Font Scale sets the lyrics size, for normal and fullscreen.
 
@@ -178,7 +179,7 @@ Long press the lyrics button in the player (right click on desktop) to see every
 
 `🆕 v7.0.0`
 
-On a wide window, the expanded player shows a maximize icon at its top left. It opens a two pane layout, artwork/video and controls on the left, lyrics or the queue on the right. Press the exit icon or `Esc` to go back.
+On a wide window, the expanded player shows a maximize icon at its top left. It opens a two pane layout (artwork/video and controls on the left, lyrics or the queue on the right). Press the exit icon or `Esc` to go back.
 
 Scroll away from the current track or lyrics line, and a Jump button shows up to bring you back. `🆕 v7.4.0`
 
@@ -206,11 +207,11 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 
 Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder. See [`📄 Tips & Tricks ↗`](/tips/#track-menu) for the full list.
 
-The menu also has an Advanced section for the heavier stuff, copying and moving files, setting a track as a ringtone, replacing listens and more. [`📄 Advanced Dialog Tips ↗`](/tips/#advanced-dialog)
+The menu also has an Advanced section for the heavier stuff (copying and moving files, setting a track as a ringtone, replacing listens and more). [`📄 Advanced Dialog Tips ↗`](/tips/#advanced-dialog)
 
 ### Sleep Timer {#sleep-timer}
 
-Stop playback after a number of tracks or minutes. Find it in the side menu, or in the quick tiles at the top of settings, where it also shows what's left while it runs.
+Stop playback after a number of tracks or minutes. Find it in the side menu, or in the quick tiles at the top of settings (where it also shows what's left while it runs).
 
 Presets set it in one tap, press + to add your own, or long press one to remove it. `🆕 v7.8.0`
 

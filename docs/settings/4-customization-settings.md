@@ -9,7 +9,7 @@ Change how every part of the app looks.
 
 ### General {#general}
 
-- Enable Blur Effect, a soft blur behind small cards, like the duration card on videos or track cards on the Home page.
+- Enable Blur Effect, a soft blur behind small cards (like the duration card on videos or track cards on the Home page).
 - Enable Glow Effect, a drop shadow effect around artworks and images.
 - Enable Parallax Effect, the app layer gets smaller while expanding the miniplayer, giving a sense of depth.
 
@@ -19,7 +19,7 @@ All three might affect performance on low end devices. If the app feels slow, tu
 
 - Background effect, animated effects behind the pages. Auto (default) follows the season. `🆕 v7.8.0`
 - Overlay effect, the same effects on top of the whole app. `🆕 v7.8.0`
-- Wallpaper, your own image behind the pages, needs the `BACKGROUND_IMAGES` [flag](/settings/6-extras-settings/#flags). `🆕 v7.8.0`
+- Wallpaper, your own image behind the pages (needs the `BACKGROUND_IMAGES` [flag](/settings/6-extras-settings/#flags)). `🆕 v7.8.0`
 
 [`🎉 Effects & Visualizers ↗`](/features/effects/)
 
@@ -33,7 +33,7 @@ All three might affect performance on low end devices. If the app feels slow, tu
 
 `💻 Android only`
 
-Opens the widget settings screen, where you set the look, layout, controls and tap actions of your home screen widget, with a live preview. Changes made from here apply to every widget you already placed. [`🎉 Home Screen Widget feature ↗`](/features/home-widget/)
+Opens the widget settings screen, where you set the look, layout, controls and tap actions of your home screen widget (with a live preview). Changes made from here apply to every widget you already placed. [`🎉 Home Screen Widget feature ↗`](/features/home-widget/)
 
 ### Album Tile Customization {#album-tile}
 
@@ -48,7 +48,7 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 - Force squared track thumbnail.
 - Size of track thumbnail & height of track tile.
 - Swipe actions, set a left and right swipe action for tracks (like play next, add to playlist).
-- Artwork Gestures, a tap and a long press action for the thumbnail of tracks and videos in lists, separate from the player artwork. `🆕 v7.5.0`
+- Artwork Gestures, a tap and a long press action for the thumbnail of tracks and videos in lists (separate from the player artwork). `🆕 v7.5.0`
 - Every slot in the tile is customizable, choose what appears in each row: title, artist, album, year, duration, bitrate and more.
 - Display third row & third item in each row, control how much info a track tile shows.
 - Display favourite button.
@@ -72,7 +72,7 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 Choose a different icon for the app. New icons can be submitted on [our Discord](https://discord.com/channels/1156253663803740271/1423484977693327430/1423671224520671362).
 
 ::: callout info
-Fully custom icons are not possible, Android only allows icons that are already built into the app. Use a launcher that supports icon packs, or patch the app.
+Fully custom icons are not possible (Android only allows icons that are already built into the app). Use a launcher that supports icon packs, or patch the app.
 :::
 
 ---

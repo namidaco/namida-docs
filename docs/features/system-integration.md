@@ -11,7 +11,7 @@ What Namida can do outside of its own window.
 
 Namida shows up in the share sheet and in "Open with" for:
 
-- Audio and video files, they play right away. Sharing many files, or a whole folder, works too.
+- Audio and video files, they play right away. Sharing many files (or a whole folder) works too.
 - `.m3u` and `.m3u8` playlist files. [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
 - YouTube links, from any app or browser. What happens next is up to you. [`⚙️ Configure On Opening Youtube Link ↗`](/settings/5-youtube-settings/#on-opening-youtube-link)
 - Shared text, useful for links copied from somewhere else.
@@ -48,7 +48,7 @@ Closing the window minimizes to the tray instead of quitting, unless you tell it
 
 `🆕 v7.0.0` `💻 Windows+Linux only`
 
-A small window showing the current lyrics line, good for keeping lyrics around while you do something else. Open it from the tray menu or with `Ctrl` + `Alt` + `L`, press `Esc` or the same shortcut to go back to the normal window.
+A small window showing the current lyrics line (good for keeping lyrics around while you do something else). Open it from the tray menu or with `Ctrl` + `Alt` + `L`, press `Esc` or the same shortcut to go back to the normal window.
 
 [`🎉 Shortcuts feature ↗`](/features/shortcuts/)
 

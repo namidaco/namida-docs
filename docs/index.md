@@ -40,7 +40,8 @@ Then browse [Features](/features/) to see everything else, and [Tips & Tricks](/
 - The progress bar in the YouTube player sits under the video, not inside it, nothing covers the content.
 - There is no way to stretch or zoom the video out of its real aspect ratio.
 
-**Music should be listened to only when you feel like it.** Namida is against endless queues. Music is a powerful tool that can hijack your brain and take control, and a human should always be in control. So much human potential gets thrown away to entertainment, and music is part of that. Don't let it consume you, listen to what you enjoy, and only when you really want to.
+**Music should be listened to only when you feel like it.** Namida is against endless queues.
+Music is a powerful tool that can hijack your brain and take control, and a human should always be in control. So much human potential gets thrown away to entertainment, and music is part of that. Don't let it consume you, listen to what you enjoy, and only when you really want to.
 
 ### Get Namida {#get-namida}
 

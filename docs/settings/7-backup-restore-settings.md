@@ -38,15 +38,15 @@ Import your scrobbles from a LastFm csv export.
 
 ### Import Spotify History {#import-spotify-history}
 
-Import your extended streaming history from a Spotify data export, zip or json files.
+Import your extended streaming history from a Spotify data export (zip or json files).
 
 ### Import ListenBrainz History {#import-listenbrainz-history}
 
-Import your listens from a ListenBrainz data export, zip or json files.
+Import your listens from a ListenBrainz data export (zip or json files).
 
 ::: callout info
 Each import shows a short guide for getting the export file. You can limit it to a time range, and choose to add every matched track per entry (instead of just one).
-"Backup history before importing" is on by default, it saves your history to the backup location first, as a `Namida History Backup` file. Automatic restore skips these files, use Manual restore to bring one back. `🆕 v7.4.0`
+"Backup history before importing" is on by default, it saves your history to the backup location first (as a `Namida History Backup` file). Automatic restore skips these files, use Manual restore to bring one back. `🆕 v7.4.0`
 :::
 
 ---

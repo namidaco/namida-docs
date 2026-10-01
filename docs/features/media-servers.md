@@ -16,12 +16,12 @@ Multi library support, your library can mix local files with content from your s
 
 ### How It Works {#how}
 
-A server is added as a library folder in the indexer. Enter the server address and credentials, pick a library or share if the server supports it, and Namida indexes it like any other folder. Tracks appear next to your local ones in every tab. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
+A server is added as a library folder in the indexer. Enter the server address and credentials, pick a library or share (if the server supports it), and Namida indexes it like any other folder. Tracks appear next to your local ones in every tab. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
 For Subsonic servers, tracks without their own artwork fall back to the album artwork.
 
 ::: callout info
-File based servers (WebDAV, SMB) download files temporarily for indexing. Use a stable connection, preferably Wi-Fi to avoid high data usage.
+File based servers (WebDAV, SMB) download files temporarily for indexing. Use a stable connection (preferably Wi-Fi to avoid high data usage).
 :::
 
 ### Server Playlists {#playlists}
@@ -40,7 +40,7 @@ Keep server tracks on your device to play them offline. Open the menu of a track
 - On Windows and Linux, the notification when it's done follows [`⚙️ Download notifications ↗`](/settings/5-youtube-settings/#downloads).
 - Tasks without a connection wait and continue once it's back.
 
-Cached tracks play from the device, even offline. Most streamed tracks are kept too, they get cleaned up once the server cache is full, but the ones you cached yourself are never deleted automatically. [`⚙️ Configure Server Cache ↗`](/settings/8-advanced-settings/#cache-limits)
+Cached tracks play from the device, even offline. Most streamed tracks are kept too (they get cleaned up once the server cache is full), but the ones you cached yourself are never deleted automatically. [`⚙️ Configure Server Cache ↗`](/settings/8-advanced-settings/#cache-limits)
 
 ::: callout info
 The server cache sits in [User Data](/storage-paths/#user-data)`/Servers Cache`. To remove a single track from it, open its menu, then Advanced, then Clear.

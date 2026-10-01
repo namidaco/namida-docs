@@ -12,7 +12,7 @@ Some settings only work on specific platforms or Android versions. They are labe
 :::
 
 ::: callout tip
-Use the Search button in Namida settings to quickly find any setting. It matches the options inside settings too, like an effect or a performance mode.
+Use the Search button in Namida settings to quickly find any setting. It matches the options inside settings too (like an effect or a performance mode).
 :::
 
 ### Sections {#sections}

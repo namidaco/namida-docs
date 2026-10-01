@@ -44,7 +44,7 @@ Off by default for another reason, they take over playback on the other device:
 
 Off by default too, since devices usually want their own:
 
-- Settings, for general, playback and YouTube. Only the settings you changed are sent, and the newest change wins for each one. Device specific ones, like folders, language, caches, the download location, audio output and backgrounds, stay on each device. `🆕 v7.5.0`
+- Settings, for general, playback and YouTube. Only the settings you changed are sent, and the newest change wins for each one. Device specific ones (like folders, language, caches, the download location, audio output and backgrounds) stay on each device. `🆕 v7.5.0`
 
 ::: callout tip
 Turn on the advanced view in the Sync page to see every item separately instead of the short list.
@@ -60,7 +60,7 @@ Devices don't need identical file paths. Tracks are matched by fingerprint, so s
 
 ### Conflict Resolution {#conflicts}
 
-Newest change wins for most data, while history and playlists use their own merge logic, added items are combined and duplicates are dropped.
+Newest change wins for most data, while history and playlists use their own merge logic (added items are combined and duplicates are dropped).
 
 ### Auto Sync {#auto-sync}
 
@@ -70,7 +70,7 @@ Set an auto sync interval and let devices sync on their own whenever they see ea
 
 Devices show up by the name they broadcast. Rename yours while the server is running, press the edit icon beside it and the new name is broadcast right away.
 
-Blocking a device, instead of just rejecting it, stops it from reaching you or asking again. Blocked devices are listed in their own section, with an unblock button.
+Blocking a device (instead of just rejecting it) stops it from reaching you or asking again. Blocked devices are listed in their own section, with an unblock button.
 
 ### Connect by IP {#connect-by-ip}
 

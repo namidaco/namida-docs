@@ -9,7 +9,7 @@ The main tabs of your library. You choose which ones are enabled and their order
 
 ### Home {#home}
 
-Your personalized start page: mixes generated from your history, recent listens, recently added, top recent albums & artists, and Lost Memories, tracks you listened to around this time years ago. Sections can be toggled and reordered.
+Your personalized start page: mixes generated from your history, recent listens, recently added, top recent albums & artists, and Lost Memories (tracks you listened to around this time years ago). Sections can be toggled and reordered.
 
 The mixes are: Recommended, Supremacy (built around what is playing right now), Top Recents, Underrated, Lost Partners, Discover, Favourites and Random Picks. Empty ones move to the end.
 
@@ -17,7 +17,7 @@ The mixes are: Recommended, Supremacy (built around what is playing right now), 
 
 All your tracks, sortable by almost any property. Recently added tracks get their own subpage. Pull down to refresh the library. [`⚙️ Configure Indexer ↗`](/settings/2-indexer-settings/)
 
-With [Include Videos](/settings/2-indexer-settings/#include-videos) on, the tab can also show audio only or videos only, as "Tracks: Audio" and "Tracks: Videos". They share one tab slot, and a switcher next to the tracks count moves between them. `🆕 v7.4.0` [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+With [Include Videos](/settings/2-indexer-settings/#include-videos) on, the tab can also show audio only or videos only (as "Tracks: Audio" and "Tracks: Videos"). They share one tab slot, and a switcher next to the tracks count moves between them. `🆕 v7.4.0` [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
 
 ### Albums {#albums}
 
@@ -41,7 +41,8 @@ Your artists laid out as a constellation, each one connected to related artists 
 
 `🆕 v7.4.0`
 
-Your whole library of artists on one map. Related artists sit next to each other, and each group gets its own color. Zoomed out you see colored dots, bigger for artists with more tracks, with the names of the biggest ones. Zoom in and the dots turn into artist tiles, tap one to open it, or long press for its dialog.
+Your whole library of artists on one map. Related artists sit next to each other, and each group gets its own color.
+Zoomed out you see colored dots (bigger for artists with more tracks), with the names of the biggest ones. Zoom in and the dots turn into artist tiles, tap one to open it, or long press for its dialog.
 
 Open it with the map icon in the Discover page, or from an artist page to start centered on that artist. The buttons at the top switch between the graph and a grid layout, and fit everything back on screen.
 
@@ -51,7 +52,8 @@ Your genres, split from tags using the genre separators. Press the type at the t
 
 ### Playlists {#playlists}
 
-Your playlists, along with the built-in ones: History, Most Played and Favourites. Normal, M3U synced and smart playlists all live here. Pull down to refetch M3U and server playlists. Smart playlists also have their own full page, press the arrow next to their section, or enable it as a library tab of its own. [`🎉 Playlists & History feature ↗`](/features/playlists-history/)
+Your playlists, along with the built-in ones: History, Most Played and Favourites. Normal, M3U synced and smart playlists all live here. Pull down to refetch M3U and server playlists.
+Smart playlists also have their own full page, press the arrow next to their section, or enable it as a library tab of its own. [`🎉 Playlists & History feature ↗`](/features/playlists-history/)
 
 The tags row above the list filters playlists by their tags, pinned playlists stay at the top, and the checklist icon selects many at once. `🆕 v7.8.0` [`🎉 Playlist Tags ↗`](/features/playlists-history/#playlist-tags)
 
@@ -81,7 +83,7 @@ The currently playing queue as a library tab, so you can keep it a swipe away in
 
 `🆕 v7.0.0`
 
-Your listening stats and charts as a library tab, the same page you get from the chart icon on the Home page. Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs). [`📄 Stats Page ↗`](/pages/other/#stats)
+Your listening stats and charts as a library tab (the same page you get from the chart icon on the Home page). Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs). [`📄 Stats Page ↗`](/pages/other/#stats)
 
 ### Smart Playlists {#smart-playlists}
 
@@ -97,7 +99,7 @@ The listening party page as a library tab, to create or join a room and follow i
 
 ### Moods, Tags & Rating {#moods-tags-rating}
 
-Browse tracks grouped by the moods, tags and ratings you assign. Assign them from the track menu, for many tracks at once too, they also power mood based [track generation](/features/playlists-history/#generation). On desktop you can rate the current track with a key press, see [`🎉 Shortcuts feature ↗`](/features/shortcuts/).
+Browse tracks grouped by the moods, tags and ratings you assign. Assign them from the track menu (for many tracks at once too), they also power mood based [track generation](/features/playlists-history/#generation). On desktop you can rate the current track with a key press, see [`🎉 Shortcuts feature ↗`](/features/shortcuts/).
 
 ### Search {#search}
 
@@ -105,7 +107,7 @@ Global search across your library. You choose which fields it looks into: title,
 
 Results are ranked by a match score:
 
-- Exact matches score the highest, then close matches. For fields with multiple values, like artists or genres, matching any single value counts.
+- Exact matches score the highest, then close matches. For fields with multiple values (like artists or genres), matching any single value counts.
 - The more of your typed words a track matches, the higher it ranks. Small typos are forgiven in the title, artist, album and filename.
 - Title counts the most, then artist and album, then filename. Other fields like genre, comment or lyrics are only checked when these don't match.
 - Tracks you listen to more get a small boost.

@@ -7,7 +7,7 @@ description: "What a membership unlocks and how to get one"
 
 Namida is free, with no ads and no tracking. Nearly everything in these docs works without paying anything, and without an account.
 
-A membership is how you support the project and keep it growing. As a thank you, it unlocks a few extras on top, mostly for YouTube while signed in to your account, and some visual effects.
+A membership is how you support the project and keep it growing. As a thank you, it unlocks a few extras on top (mostly for YouTube while signed in to your account, and some visual effects).
 
 ### What It Unlocks {#benefits}
 
@@ -30,7 +30,7 @@ A membership is how you support the project and keep it growing. As a thank you,
 Supporter effects and visualizers are marked with a crown in the app. [`🎉 Effects & Visualizers ↗`](/features/effects/#membership)
 
 ::: callout tip
-To keep a public playlist for free, use "Import playlist" from its menu instead, it's saved inside Namida. [`🎉 YouTube Playlists ↗`](/features/youtube/#playlists)
+To keep a public playlist for free, use "Import playlist" from its menu instead (it's saved inside Namida). [`🎉 YouTube Playlists ↗`](/features/youtube/#playlists)
 :::
 
 ### Free for Everyone {#free}
@@ -102,7 +102,7 @@ Open the membership page from Settings -> Youtube -> Manage Your Accounts, then 
 There are two ways to get one:
 
 - **Patreon**, subscribe on [Patreon](https://patreon.com/namidaco), then press "Sign in to your patreon account" in the membership page. If the browser doesn't bring you back to Namida, press "Issues?" and paste the link it ended on.
-- **Coupon**, donate through [kofi](https://ko-fi.com/namidaco) or [buymeacoffee](https://buymeacoffee.com/namidaco) and you get a coupon code by email, which can take a few days. Enter the code and your email in the Coupon section, then press Claim. The page shows when it expires.
+- **Coupon**, donate through [kofi](https://ko-fi.com/namidaco) or [buymeacoffee](https://buymeacoffee.com/namidaco) and you get a coupon code by email (which can take a few days). Enter the code and your email in the Coupon section, then press Claim. The page shows when it expires.
 
 ::: callout info
 YouTube features still need you to sign in to your YouTube account, the membership only unlocks them. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)

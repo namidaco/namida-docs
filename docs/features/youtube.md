@@ -18,7 +18,7 @@ Namida comes with a full YouTube section, powered by a custom client. Stream, wa
 
 ### Data Saver {#data-saver}
 
-Namida keeps two Data Saver values, one for Wi-Fi and one for mobile data, so you can be relaxed at home and strict outside. Three levels each:
+Namida keeps two Data Saver values (one for Wi-Fi and one for mobile data), so you can be relaxed at home and strict outside. Three levels each:
 
 - **Disable**, video is always loaded.
 - **Medium**, audio only (except for shorts).
@@ -50,7 +50,8 @@ Watching videos supports gestures:
 
 Horizontal seeking on the video can be limited to fullscreen, the expanded miniplayer, always or never. [`⚙️ Configure Drag to seek (Video) ↗`](/settings/5-youtube-settings/#miniplayer)
 
-In fullscreen, you can enable glow to show an ambient effect behind the video (might affect performance & battery). On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video matches how you are actually holding the device.
+In fullscreen, you can enable glow to show an ambient effect behind the video (might affect performance & battery).
+On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video matches how you are actually holding the device.
 
 ### Miniplayer {#miniplayer}
 
@@ -78,14 +79,15 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Default download folder, changeable per download.
 - Download notifications `💻 Windows+Linux only`.
 - Downloads that fail because there is no connection resume on their own once it is back, thumbnails retry the same way. `🆕 v7.0.0`
-- Parallel downloads, up to 10 videos at a time, 4 by default. Set it with the flash icon in the [`📄 Downloads page ↗`](/pages/youtube/#downloads). `🆕 v7.1.0`
-- Big files download over multiple connections at once, 3 by default and up to 8, set from the same flash icon as "Threads per download". Servers that don't support it fall back to a single connection. `🆕 v7.4.0`
+- Parallel downloads, up to 10 videos at a time (4 by default). Set it with the flash icon in the [`📄 Downloads page ↗`](/pages/youtube/#downloads). `🆕 v7.1.0`
+- Big files download over multiple connections at once (3 by default and up to 8), set from the same flash icon as "Threads per download". Servers that don't support it fall back to a single connection. `🆕 v7.4.0`
 - Remove sponsor segments from the downloaded file, see [below](#sponsorblock-downloads). `🆕 v7.4.0`
 - Split by Chapters, save each chapter of the video as its own file, see [below](#chapters-downloads). `🆕 v7.4.0`
 - Playlist downloads can be added to a library playlist, see [below](#playlist-downloads). `🆕 v7.4.0`
 - Set file last modified as video upload date, files get the video's date instead of the download time. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
 
-The extra file options (Split by Chapters, Remove Sponsor Segments, Keep cached versions and more) are in the Edit Tags sheet, press the pencil icon beside the video title in the download sheet. For playlists, press the gear button in the playlist download page.
+The extra file options (Split by Chapters, Remove Sponsor Segments, Keep cached versions and more) are in the Edit Tags sheet, press the pencil icon beside the video title in the download sheet.
+For playlists, press the gear button in the playlist download page.
 
 #### Removing Sponsor Segments {#sponsorblock-downloads}
 
@@ -118,7 +120,8 @@ To download only one chapter, long press it in the [miniplayer](#miniplayer) cha
 
 `🆕 v7.4.0`
 
-In a playlist download page, open the settings with the gear button and turn on "Add to Playlist". Downloaded tracks get added to a library playlist named after the folder (or the YouTube playlist), kept in the same order as the source playlist, even if they finish downloading in a different order. The playlist is created if it doesn't exist. Requires "Add audio to local library". [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
+In a playlist download page, open the settings with the gear button and turn on "Add to Playlist".
+Downloaded tracks get added to a library playlist named after the folder (or the YouTube playlist), kept in the same order as the source playlist, even if they finish downloading in a different order. The playlist is created if it doesn't exist. Requires "Add audio to local library". [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
 
 ### Filename & Tags Formats {#filename-formats}
 
@@ -173,7 +176,8 @@ Streamed videos and audios are cached, so they play offline later without downlo
 
 [`⚙️ Configure Cache Limits ↗`](/settings/8-advanced-settings/#cache-limits)
 
-You can also cache ahead of time, without saving any files to your downloads folder. Use "Cache" from the menu of a video, a YouTube playlist, or a local YouTube playlist, pick audio only or a video quality, and the videos are ready for offline playback. Tasks show up in the [`📄 Downloads page ↗`](/pages/youtube/#downloads) like downloads. `🆕 v7.4.0`
+You can also cache ahead of time, without saving any files to your downloads folder.
+Use "Cache" from the menu of a video, a YouTube playlist, or a local YouTube playlist, pick audio only or a video quality, and the videos are ready for offline playback. Tasks show up in the [`📄 Downloads page ↗`](/pages/youtube/#downloads) like downloads. `🆕 v7.4.0`
 
 ::: callout info
 Items cached this way get the normal priority, set them to VIP if you want to make sure they are never cleaned up.
@@ -225,7 +229,8 @@ Channel custom emojis, voice replies (shown as their transcript) and the "commen
 
 ### Takeout Import {#history-import}
 
-You can import your watch history from YouTube takeout files, both json and html formats work. It gets merged into Namida history like any local listen. Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
+You can import your watch history from YouTube takeout files (both json and html formats work). It gets merged into Namida history like any local listen.
+Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
 ::: callout tip
 Signing in gives live access to your subscriptions and playlists, which can be better than importing them manually.

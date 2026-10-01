@@ -33,7 +33,7 @@ Faster loading and improved performance, but uses more storage.
 
 ### Group Artworks by Album {#group-artworks-by-album}
 
-Saves one artwork per album instead of one per track, which uses less storage.
+Saves one artwork per album instead of one per track (which uses less storage).
 
 ### Unique Artwork Hash {#unique-artwork-hash}
 
@@ -45,7 +45,7 @@ Which fields identify an album. "Album" name + "Album Artist" name by default, a
 
 ### Artists & Genres Separators {#separators}
 
-Symbols and words used to split multiple artists or genres from a single tag, like `,` `;` `&` `ft.`. You can also blacklist words so they never get split.
+Symbols and words used to split multiple artists or genres from a single tag (like `,` `;` `&` `ft.`). You can also blacklist words so they never get split.
 Composers are split using the artists separators too. `🆕 v7.4.0`
 
 ::: callout tip
@@ -84,9 +84,9 @@ Lists tracks that no longer exist on storage, you can update their paths to keep
 
 ### Refresh Library & Re-index {#refresh-reindex}
 
-Refresh checks for newly added or deleted music. Re-index rebuilds the whole library from scratch, artworks are kept as long as they still exist.
+Refresh checks for newly added or deleted music. Re-index rebuilds the whole library from scratch (artworks are kept as long as they still exist).
 
-Files changed outside Namida, like tags edited in another app, are read again on refresh too. `🆕 v7.5.0`
+Files changed outside Namida (like tags edited in another app) are read again on refresh too. `🆕 v7.5.0`
 
 Ways to refresh the library:
 

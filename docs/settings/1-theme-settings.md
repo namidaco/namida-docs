@@ -35,7 +35,7 @@ Use a pure black background in dark mode. Useful for AMOLED screens, and looks c
 
 ### Default Color {#default-color}
 
-The color the player uses when [Auto Coloring](#auto-coloring) is off, or when the current track has no artwork. There are two, one for light mode and one for dark mode.
+The color the player uses when [Auto Coloring](#auto-coloring) is off, or when the current track has no artwork. There are two (one for light mode and one for dark mode).
 
 ### Language {#language}
 

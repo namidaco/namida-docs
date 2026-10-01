@@ -7,7 +7,7 @@ description: "Stats, Sync Manager and About"
 
 ### Stats {#stats}
 
-Library numbers: tracks, albums, artists, genres and styles, total duration, and your total listen time, for local and YouTube separately. Open it with the chart icon at the top of the Home page, or make it a library tab of its own. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+Library numbers: tracks, albums, artists, genres and styles, total duration, and your total listen time (for local and YouTube separately). Open it with the chart icon at the top of the Home page, or make it a library tab of its own. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
 
 #### Charts {#charts}
 
@@ -39,7 +39,7 @@ Some charts need listen time data that Namida only started recording in v7.0.0, 
 
 `🆕 v7.0.0`
 
-A wrap up of one year of listening, for local and YouTube separately. Open it from the Stats page, or from the banner that shows up on the Home page during December and January.
+A wrap up of one year of listening (for local and YouTube separately). Open it from the Stats page, or from the banner that shows up on the Home page during December and January.
 
 It covers your top tracks and artists, listening clock, longest streak, busiest day, discoveries, oldest favourite, longest session, repeat rate, completed albums, rediscoveries, and a comparison with the year before. The "Year in N Songs" section picks one track for each month.
 
@@ -53,9 +53,10 @@ Where device sync happens: start the server, discover and connect devices, choos
 
 App version & changelog, socials, licenses, share logs, and links for translating, donating and reporting issues. [`🎉 Shortcuts feature ↗`](/features/shortcuts/) [`📄 About Tips ↗`](/tips/#about-tips)
 
-"Report an issue" lets you pick a bug report, a YouTube problem, a feature request or a question, then opens the GitHub form with your version and device info filled in. For bugs and YouTube problems, the logs zip is ready too, attach it to the issue. On desktop its folder opens, on Android it's saved in [Namida Folder](/storage-paths/#namida-folder)`/Logs`. `🆕 v7.5.0`
+"Report an issue" lets you pick a bug report, a YouTube problem, a feature request or a question, then opens the GitHub form with your version and device info filled in.
+For bugs and YouTube problems, the logs zip is ready too, attach it to the issue. On desktop its folder opens, on Android it's saved in [Namida Folder](/storage-paths/#namida-folder)`/Logs`. `🆕 v7.5.0`
 
-Shared logs leave out personal info, like device names and folder paths.
+Shared logs leave out personal info (like device names and folder paths).
 
 The Eggs card shows your eggs, their hints, and what you unlocked with them. `🆕 v7.8.0` [`📄 Eggs ↗`](/membership/#eggs)
 

@@ -25,7 +25,7 @@ Not so obvious features you might have missed.
 
 ### Player {#player}
 
-- Tap the current position to seek backwards, tap the total duration to seek forwards, by the [Seek Duration](/settings/3-playback-settings/#seek-duration).
+- Tap the current position to seek backwards, tap the total duration to seek forwards (by the [Seek Duration](/settings/3-playback-settings/#seek-duration)).
   - Hold them to keep seeking (rewind/fastforward).
 - Long press the previous button to jump to the very start of the track, and long press the next button to speed up playback while you hold it. [`⚙️ Configure Long Press Speed ↗`](/settings/3-playback-settings/#long-press-speed)
 - While seeking, swipe upwards to cancel. Seeking near the starting edge snaps to the very start.
@@ -54,7 +54,7 @@ Not so obvious features you might have missed.
 
 Long press a track (or tap its menu) for more than you might expect:
 
-- Play Next, Play Last, and Play After, pick an exact position in the queue.
+- Play Next, Play Last, and Play After (pick an exact position in the queue).
   - For a track or video that's already in the queue, long press them to move it there instead of adding it again.
 - Repeat for N times before playing the next track.
 - Stop after this track, works on any upcoming track in the queue, not only the playing one.
@@ -84,8 +84,8 @@ The track menu has an Advanced section:
 - In media subpages (album tracks, artist tracks, etc), long press the filter icon to quickly open a smart playlist with that media name.
 - In media pages, long press the grid icon to choose a specific count per row (higher numbers can cause performance issues).
 - In the tracks page and media subpages, long press shuffle/play for advanced options.
-  - Play can sort the tracks, and skip the ones below a minimum, like a rating of 75% for your top rated only. `🆕 v7.8.0`
-  - Shuffle can pick a number of tracks, with a minimum too, and exclude your most recent listens. `🆕 v7.8.0`
+  - Play can sort the tracks, and skip the ones below a minimum (like a rating of 75% for your top rated only). `🆕 v7.8.0`
+  - Shuffle can pick a number of tracks (with a minimum too) and exclude your most recent listens. `🆕 v7.8.0`
 - In an album, artist, playlist or folder dialog, the sort button beside Play All opens the same options, and so does long pressing Shuffle. `🆕 v7.8.0`
 - Tap the resume button in media subpages to resume from the last played track, and long press it to jump to that track.
 - In the Home page, tapping a Recent Queues card that was played from a playlist or folder opens that playlist or folder, long press it to open its dialog. [`📄 Home Page ↗`](/pages/library/#home)
@@ -93,7 +93,7 @@ The track menu has an Advanced section:
   - This only changes the display image, the audio files and their tags are untouched.
 - Open the dialog of an album, artist, playlist or folder and press Stats to see listen stats for just those tracks.
 - The current queue, the stats page, smart playlists and the listening party can be library tabs of their own. [`📄 Queue Tab ↗`](/pages/library/#current-queue) [`📄 Stats Tab ↗`](/pages/library/#stats)
-- Tabs with variants, like Tracks: Audio or Folders: Videos, share one slot in the navigation bar, long press it to switch. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+- Tabs with variants (like Tracks: Audio or Folders: Videos) share one slot in the navigation bar, long press it to switch. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
 - Press the map icon in an artist page to see where that artist sits among the rest of your library. [`📄 Artists Map ↗`](/pages/library/#artists-map)
 - Tapping or long pressing a track's thumbnail can run an action of your choice, like play next or open its info. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#track-tile)
 
@@ -101,9 +101,9 @@ The track menu has an Advanced section:
 
 - While downloading from YouTube you can edit the file tags and build the output filename with [yt-dlp style formats](/features/youtube/#filename-formats), like `%(title)s [(%(channel)s)]`.
 - This works for single downloads and for batch playlist downloads, where playlist formats like `%(playlist_autonumber)s` number the files for you.
-- In a playlist download page, selecting the output folder automatically marks the videos that are not downloaded yet, as long as you haven't selected any manually. The long press to select in between trick works there too.
+- In a playlist download page, selecting the output folder automatically marks the videos that are not downloaded yet (as long as you haven't selected any manually). The long press to select in between trick works there too.
 - In the download sheet, press the "show webm" icon button to show experimental qualities, see also `ALLOW_EXPERIMENTAL_CODECS` & `PREFER_OPUS_FORMAT` in [Flags](/settings/5-youtube-settings/#flags).
-- The flash icon in the downloads page sets how many downloads run at once, up to 10, and how many connections each download uses. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
+- The flash icon in the downloads page sets how many downloads run at once (up to 10) and how many connections each download uses. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
 - Long press a chapter in the YouTube miniplayer to download only that chapter, or turn on "Split by Chapters" to save every chapter as its own file. [`🎉 Chapter Downloads ↗`](/features/youtube/#chapters-downloads)
 - Use "Cache" instead of download on a video or a playlist to keep it for offline playback without saving any files. [`🎉 Caching ↗`](/features/youtube/#caching)
 
@@ -138,7 +138,7 @@ The track menu has an Advanced section:
 
 - Tap any item in the track info dialog to copy it.
 - In a track, album or artist info dialog, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop. You can zoom in until single pixels show, and they stay sharp.
-- Sort by more than one property, like artist, then year, then title. Press Advanced in any sort menu to pick and reorder them. Available for tracks, and now albums, artists, genres and playlists too. `🆕 v7.8.0`
+- Sort by more than one property (like artist, then year, then title). Press Advanced in any sort menu to pick and reorder them. Available for tracks, and now albums, artists, genres and playlists too. `🆕 v7.8.0`
 - Sort by Random (Daily) for a random order that stays the same all day, and changes the next day. `🆕 v7.8.0`
 - The tag editor keeps file dates by default, so edited tracks don't jump to the top of Recently Added. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
 - Moved your files? The [Missing Tracks](/settings/2-indexer-settings/#missing-tracks) page relinks them without losing stats.
@@ -152,7 +152,7 @@ The track menu has an Advanced section:
 
 ### Scrolling {#scrolling}
 
-The scrollbar needs a short hold before it starts dragging. This is intentional, most apps have a big instantly draggable scrollbar, which usually causes many accidental scrolls. Namida keeps the minimal design instead.
+The scrollbar needs a short hold before it starts dragging. This is intentional, most apps have a big instantly draggable scrollbar (which usually causes many accidental scrolls). Namida keeps the minimal design instead.
 
 Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-settings/#flags) to see the letter or date you're at while dragging. `🆕 v7.8.0`
 

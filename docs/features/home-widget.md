@@ -11,7 +11,7 @@ A resizable player widget for your home screen, with its own settings screen.
 
 ### Adding It {#adding}
 
-Long press your home screen, open the widgets list and pick Namida. Drop it anywhere and resize it, the layout adapts to its size.
+Long press your home screen, open the widgets list and pick Namida. Drop it anywhere and resize it (the layout adapts to its size).
 
 ### Configuring It {#configuring}
 

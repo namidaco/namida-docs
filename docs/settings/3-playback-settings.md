@@ -23,11 +23,11 @@ Play videos related to the music. Videos can be found locally or fetched from Yo
 
 ### Video Quality {#video-quality}
 
-Your preferred qualities, in order. Keep a few alternatives, if none of them is available the lowest quality is used.
+Your preferred qualities, in order. Keep a few alternatives (if none of them is available the lowest quality is used).
 
 ### Local Video Matching {#local-video-matching}
 
-How local videos are matched with tracks, by title or filename, with an option to match inside the same directory only.
+How local videos are matched with tracks (by title or filename), with an option to match inside the same directory only.
 
 ### Keep Screen Awake When {#keep-screen-awake}
 
@@ -55,7 +55,7 @@ Shows the current track's artwork on the lockscreen.
 
 Stops playback completely when you swipe the app away. Three modes: Always, If not playing, or Never.
 
-On Windows & Linux this decides what closing the window does, quit the app or minimize to the tray. [`🎉 System Tray ↗`](/features/system-integration/#tray)
+On Windows & Linux this decides what closing the window does (quit the app or minimize to the tray). [`🎉 System Tray ↗`](/features/system-integration/#tray)
 
 ### On Notification Tap {#on-notification-tap}
 
@@ -75,12 +75,12 @@ Opens the Sound Control page: output device, bit-perfect, the equalizer, speed, 
 
 ### Normalize Audio {#normalize-audio}
 
-Keeps the volume consistent between tracks, using the replay gain tag, or the loudness info YouTube provides for videos. You pick how it is applied:
+Keeps the volume consistent between tracks (using the replay gain tag, or the loudness info YouTube provides for videos). You pick how it is applied:
 
 - Off.
 - Platform default, the best option for your device.
 - Loudness Enhancer, uses the system effect.
-- Volume, changes the player volume instead, more stable.
+- Volume, changes the player volume instead (more stable).
 
 ### Skip Silence {#skip-silence}
 
@@ -117,7 +117,7 @@ Pause playback or do nothing when volume reaches zero, with an option to resume 
 
 ### Long-Press Action: Speed {#long-press-speed}
 
-The playback speed used while long pressing the next button or the video, 1.5x by default.
+The playback speed used while long pressing the next button or the video (1.5x by default).
 
 ### On Interruption {#on-interruption}
 
@@ -153,7 +153,7 @@ Tracks longer than this resume from where you left off, useful for podcasts and 
 
 ### Count a Listen After {#count-listen-after}
 
-How much of a track must play, in seconds or percentage, before it counts as a listen in history.
+How much of a track must play (in seconds or percentage) before it counts as a listen in history.
 
 ---
 

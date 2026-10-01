@@ -32,19 +32,20 @@ Options while creating:
 - **Party password**
 - **Listen on this device**, turn it off to use the device as a remote control only
 - **Require approval to join**, you accept or reject each person
-- **Start with current queue**, the room opens with what you are playing, on by default
+- **Start with current queue**, the room opens with what you are playing (on by default)
 - **Public room**, anyone can find it while browsing. With **Share what's playing**, the public list also shows the current track
-- **Host on this device**, for people on the same network, no server or membership needed
+- **Host on this device**, for people on the same network (no server or membership needed)
 - **Custom server**, the server URL and password of your own server, see [below](#self-hosting)
 
-Creating a room on the Namida server needs a `cutie` membership or higher, higher tiers allow bigger rooms and more open rooms at once, see [`📄 Membership ↗`](/membership/#tiers). If you reach the limit, your open parties are listed so you can close one. Joining is always free, and hosting on your own device or your own server needs no membership at all.
+Creating a room on the Namida server needs a `cutie` membership or higher (higher tiers allow bigger rooms and more open rooms at once), see [`📄 Membership ↗`](/membership/#tiers). If you reach the limit, your open parties are listed so you can close one.
+Joining is always free, and hosting on your own device or your own server needs no membership at all.
 
 ### Joining {#join}
 
 Paste an invite link or type the code, with the password if the room has one. On Android, opening an invite link opens the app and joins the room right away.
 
 ::: callout info
-A code alone only works for rooms on the Namida server. Rooms on your local network or on a custom server need the invite link, since it carries the address.
+A code alone only works for rooms on the Namida server. Rooms on your local network or on a custom server need the invite link (since it carries the address).
 :::
 
 - **Public rooms** are listed at the bottom, tap one to join. You can hide all rooms from a host you are not interested in.
@@ -61,7 +62,8 @@ Only the host changes the room options, accepts join requests, makes admins and 
 
 The host picks what guests are allowed to do: control playback, add to queue, edit queue and chat. Each one is a separate switch, by default guests can add to the queue and chat. Guests can always remove or move the tracks they added themselves.
 
-Leaving as the host gives two choices, leave or close the party for everyone. If the host leaves or loses connection, everyone sees that the host is offline, and after a minute an admin (or the member who has been there the longest) becomes the host and the party continues. A party hosted on your own device closes once you leave.
+Leaving as the host gives two choices, leave or close the party for everyone.
+If the host leaves or loses connection, everyone sees that the host is offline, and after a minute an admin (or the member who has been there the longest) becomes the host and the party continues. A party hosted on your own device closes once you leave.
 
 ### Managing the Room {#host}
 
@@ -70,7 +72,7 @@ The host has a Host settings card in the Party tab:
 - Guest permissions
 - Require approval to join, requests show up in a Join requests card with accept and reject
 - Public room & Share what's playing
-- Lock party, no one new can join, members who drop can still come back
+- Lock party, no one new can join (members who drop can still come back)
 - Set or remove the password
 - Banned members, with an unban button
 
@@ -80,11 +82,12 @@ Press a member to make them admin, transfer host, kick or ban them. A ban blocks
 
 The room has one queue that everyone sees. Adding, removing and reordering works from the normal player queue, your action is sent to the host and comes back to everybody. When a guest plays a list, it gets added after the current track.
 
-The room has its own repeat mode, starting with the host's, and anyone with playback control can change it for everyone. The modes work like in your normal player, except Stop on Last Track, which always goes back to the first track and pauses. `🆕 v7.5.0` [`🎉 Repeat Modes ↗`](/features/playback/#repeat-modes)
+The room has its own repeat mode (starting with the host's), and anyone with playback control can change it for everyone.
+The modes work like in your normal player, except Stop on Last Track (which always goes back to the first track and pauses). `🆕 v7.5.0` [`🎉 Repeat Modes ↗`](/features/playback/#repeat-modes)
 
 Local files are matched by title, artist, album and duration, so the same track on another device is found even in a different folder. [`🎉 Smart Matching ↗`](/features/sync/#matching)
 
-When someone doesn't have the file, Namida plays a YouTube version instead: the video linked to the track if it has one, or a video found by searching for it. Found ones are marked with an info icon, since they might not be the right one. [`🎉 YouTube feature ↗`](/features/youtube/)
+When someone doesn't have the file, Namida plays a YouTube version instead: the video linked to the track if it has one, or a video found by searching for it. Found ones are marked with an info icon (since they might not be the right one). [`🎉 YouTube feature ↗`](/features/youtube/)
 
 Tracks that still have no match show "Unavailable on this device". When the party reaches one, that device pauses and waits until the party moves on.
 
@@ -119,7 +122,8 @@ Every track the party played is listed, even after you leave. Press "Save as pla
 - The server only passes messages along, it never reads them
 - Nothing is kept after a room ends, and no room lives longer than 24 hours
 
-While a room is open, the server holds the room code and options, the ban list, and for each person a display name, a device id and an IP address, used only for rate limiting and bans. All of it is deleted when the room ends: the host closes it, nobody is connected for 10 minutes, or 24 hours pass.
+While a room is open, the server holds the room code and options, the ban list, and for each person a display name, a device id and an IP address (used only for rate limiting and bans).
+All of it is deleted when the room ends: the host closes it, nobody is connected for 10 minutes, or 24 hours pass.
 
 Other people in the room see your name, the tracks you add and your chat messages. They never see your files, their paths, or your IP. When approval is on, your device id is sent to the host along with your request.
 

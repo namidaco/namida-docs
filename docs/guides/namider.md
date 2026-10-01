@@ -7,7 +7,7 @@ description: "For those who go all the way"
 
 ### Play a loop animation with a track {#loop-animation}
 
-Link a very short video to a track, it loops while the track plays, basically an animated artwork.
+Link a very short video to a track, it loops while the track plays (basically an animated artwork).
 
 1. Pick a short video (a few seconds), or a short YouTube clip.
 2. Link it to the track. [`📒 Link a YouTube Video Guide ↗`](/guides/medium/#link-yt-video) [`📒 Link a Local Video Guide ↗`](/guides/medium/#link-local-video)

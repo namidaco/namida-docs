@@ -7,11 +7,11 @@ description: "Subtitles & captions for videos"
 
 `🆕 v7.0.0`
 
-Namida can show subtitles for anything it plays as a video, YouTube videos and local videos alike.
+Namida can show subtitles for anything it plays as a video (YouTube videos and local videos alike).
 
 ### Turning Them On {#enable}
 
-Press the subtitle icon in the video controls, at the top of the player. The list shows every subtitle Namida found for what is playing, pick one and it starts right away. Pick "Disable" to turn them off again.
+Press the subtitle icon in the video controls (at the top of the player). The list shows every subtitle Namida found for what is playing, pick one and it starts right away. Pick "Disable" to turn them off again.
 
 The icon only appears when the current video has subtitles.
 
@@ -23,7 +23,7 @@ The choice is remembered, once subtitles are on they stay on for the next videos
 
 Three places, all listed together in the same menu:
 
-- **YouTube captions**, every caption track the video offers, including the auto generated ones.
+- **YouTube captions**, every caption track the video offers (including the auto generated ones).
 - **Subtitle files** sitting next to your video, with the same filename. `.srt`, `.vtt`, `.ass`, `.ssa`, `.sbv`, `.lrc`, `.xml` & `.ttml` are supported.
 - **Subtitles inside the video file itself**, the ones embedded in the video.
 

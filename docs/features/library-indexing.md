@@ -29,7 +29,8 @@ If you moved or renamed files outside Namida, the missing tracks page helps you 
 
 ### Sorting & Grouping {#sorting}
 
-Sort by almost any property of the track or the album. Most pages allow picking more than one sorter and reordering them, so you can sort by artist, then year, then title. Albums can be identified by name alone or combined with album artist or year, and common prefixes like "The" can be ignored while sorting.
+Sort by almost any property of the track or the album. Most pages allow picking more than one sorter and reordering them, so you can sort by artist, then year, then title.
+Albums can be identified by name alone or combined with album artist or year, and common prefixes like "The" can be ignored while sorting.
 
 Albums, artists, genres and playlists can use several sorters too, from Advanced in their sort menu. Sort menus also have quick Reverse Order, Ignore prefixes and Romanization toggles. `🆕 v7.8.0`
 
@@ -39,7 +40,7 @@ Non latin titles and artists can also be sorted by their romanized form. [`⚙�
 
 ### File Dates {#file-dates}
 
-Date Added and Date Modified come from the file itself. They decide the date sorts, [smart playlist](/features/smart-playlists/#date-rules) date rules, and Recently Added on the Home page, where a file that was just changed jumps to the top.
+Date Added and Date Modified come from the file itself. They decide the date sorts, [smart playlist](/features/smart-playlists/#date-rules) date rules, and Recently Added on the Home page (where a file that was just changed jumps to the top).
 
 So Namida can keep file dates:
 

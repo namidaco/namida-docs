@@ -9,14 +9,14 @@ description: "Flexible playlists and a reliable history system"
 
 Normal playlists with custom order and the ability to set custom artworks. Also:
 
-- M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders, except [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists` which always loads. `🆕 v7.5.0`
+- M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders (except [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists` which always loads). `🆕 v7.5.0`
   - Sharing a playlist as a file isn't possible, send its M3U file with apps like [Syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or [LocalSend](https://localsend.org) instead. Converted playlists are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-path-problems)
   - Between Namida devices, Sync can send your playlists too. M3U playlists arrive as M3U files in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`, the rest as normal playlists. `🆕 v7.5.0` [`🎉 Sync feature ↗`](/features/sync/#data)
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
 - YouTube playlist downloads can be added to a library playlist, in the same order as the source. `🆕 v7.4.0` [`🎉 Into a Library Playlist ↗`](/features/youtube/#playlist-downloads)
 - Custom order for playlists, press the edit icon at the top to enable reordering.
 - Custom order for playlist tracks, press the lock icon at the top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
-- Playlists can be searched, and can have moods, which the queue uses when adding tracks by mood. Search matches [tags](#playlist-tags) too.
+- Playlists can be searched, and can have moods (which the queue uses when adding tracks by mood). Search matches [tags](#playlist-tags) too.
 - Pin a playlist from its menu to keep it at the top. `🆕 v7.8.0`
 - Select many playlists with the checklist icon at the top, to tag, pin, play, merge, export or delete them at once. `🆕 v7.8.0`
 - M3U playlists keep their comment, moods, tags and sorting. `🆕 v7.8.0`
@@ -48,7 +48,7 @@ Tags and pins sync along with their playlists, and smart playlists can pick trac
 
 Playlists built from rules instead of manual picking, they update themselves as your library and history change.
 
-They also have their own full page, reachable from the playlists page, where you can create and reorder them.
+They also have their own full page (reachable from the playlists page), where you can create and reorder them.
 
 All rules, how to combine them, and examples from easy to complex: [`🎉 Smart Playlists feature ↗`](/features/smart-playlists/)
 
@@ -80,13 +80,13 @@ Meet the tracks you listened to around this time, but N years ago.
 
 ### Smort Tracks Generation {#generation}
 
-Generate tracks related to the current one, typically the ones you often listened to in the same period, based on your history. You can also generate from a time range, moods, ratings, similar release date, or randomly.
+Generate tracks related to the current one (typically the ones you often listened to in the same period), based on your history. You can also generate from a time range, moods, ratings, similar release date, or randomly.
 
 ### History Import {#import}
 
 Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
 
-Your history is backed up before importing, unless you turn it off, and the progress dialog shows each step on its own. `🆕 v7.4.0`
+Your history is backed up before importing (unless you turn it off), and the progress dialog shows each step on its own. `🆕 v7.4.0`
 
 The Home page rebuilds itself once the import is done, so mixes and recent listens include what you just imported.
 

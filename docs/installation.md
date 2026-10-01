@@ -75,7 +75,7 @@ Linux builds are beta only for now, a stable one is coming.
 
 #### Dependencies {#linux-dependencies}
 
-**mpv** is required for playback. You can skip this if you install through a package manager, the AppImage or the flatpak, they handle it themselves.
+**mpv** is required for playback. You can skip this if you install through a package manager, the AppImage or the flatpak (they handle it themselves).
 
 ```bash
 sudo pacman -S mpv            # Arch/Manjaro
