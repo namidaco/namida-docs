@@ -32,8 +32,9 @@ Two different tracks share the same filename, so they share the same artwork.
 ### Change or fix lyrics {#change-lyrics}
 
 1. Long press the lyrics icon in the player.
-2. From there you can pick an LRC file, search for other lyrics, or change the lyrics offset if they are early or late.
-3. To force no lyrics for a track, start its embedded lyrics tag with `IGNORE`, see [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics).
+2. From there you can pick an LRC file, search for other lyrics, or change the lyrics offset if they are early or late. Tap the lyrics you want and press Save to use them, the ones in use are marked Active.
+3. To save them inside the file, press Embed from their ⋮ menu.
+4. To force no lyrics for a track, start its embedded lyrics tag with `IGNORE`, see [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics).
 
 Added lyrics but the old ones keep showing? A cached copy is winning, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
 

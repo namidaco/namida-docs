@@ -20,7 +20,7 @@ Not so obvious features you might have missed.
 - Pasting a YouTube link or a playlist link in the searchbar automatically opens it.
 - When playing from search, you can choose the [Play Mode](/pages/library/#search): selected track only, search results, album, first artist or first genre.
 - Links and texts you copy can appear right in the searchbar, enable [Clipboard Monitoring](/settings/6-extras-settings/#clipboard-monitoring).
-- Settings has its own search, press the Search button in settings.
+- Settings has its own search, press the Search button in settings. It finds options inside settings too, like "Sakura". `🆕 v7.8.0`
 - Your recent searches can be saved and shown in the search page, enable `RECENT_SEARCHES` in the [Extras Flags](/settings/6-extras-settings/#flags).
 
 ### Player {#player}
@@ -33,16 +33,18 @@ Not so obvious features you might have missed.
 - Shuffle is a toggle, it shuffles the queue itself and turning it off brings back the original order. Long press it for a one time Shuffle Next or Shuffle All. [`🎉 Queue System ↗`](/features/playback/#queue)
 - The repeat button has its own shuffle flavor, Repeat All Queue (Shuffle) reshuffles the queue each time it reaches the end. [`🎉 Repeat Modes ↗`](/features/playback/#repeat-modes)
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
-- Long press the lyrics to enter fullscreen, and zoom in/out on the lyrics to change the font size. On desktop it's `Ctrl` + mouse wheel or `Ctrl` + `+` / `-`, and `Ctrl` + `0` resets it.
-- Long press the audio button in the player to open [Playback Settings](/settings/3-playback-settings/) directly.
+- Long press the lyrics to enter fullscreen, and pinch the lyrics to change the font size. On desktop it's `Ctrl` + mouse wheel or `Ctrl` + `+` / `-`, and `Ctrl` + `0` resets it.
+- Long press the audio button in the player for a quick menu with the [Audio path](/features/playback/#audio-path) and [Playback Settings](/settings/3-playback-settings/).
 - Long press the video button in the player to control quality or change the audio track for videos.
 - Press the subtitle icon in the video controls to pick a subtitle, the language you pick is remembered for next videos. [`🎉 Subtitles feature ↗`](/features/subtitles/)
-- Long press the lyrics button to configure lyrics for the current track.
+- Long press the lyrics button (right click on desktop) to configure lyrics for the current track, or embed them into the file. [`🎉 Lyrics Picker ↗`](/features/playback/#lyrics-picker)
+- Long press a sleep timer preset to remove it. [`🎉 Sleep Timer ↗`](/features/playback/#sleep-timer)
 - Press the info text in the player to open the track menu, and press the album name at the top to open the album.
 - Long press the heart icon to add the current track to a playlist.
 - To switch the artist/title locations, toggle "Display artist before title" in [Customizations](/settings/4-customization-settings/#miniplayer-customization).
 - Audio configs (speed, pitch, effects) can be set per item, open the Sound Control page with the audio effects icon in the player.
-- In the equalizer, letting go of a band close to 0 snaps it to exactly 0.
+- In the equalizer's Sliders view, letting go of a band close to 0 snaps it to exactly 0.
+- Long press an empty spot in the equalizer curve to add a band right there. [`🎉 Equalizer ↗`](/features/playback/#equalizer)
 - Playing the current track from another list rebuilds the queue silently without interrupting playback.
 - Open any track's dialog and press play to quickly start a new queue with only that track.
 - Zoom in on the video in the local player to enter fullscreen.
@@ -82,6 +84,9 @@ The track menu has an Advanced section:
 - In media subpages (album tracks, artist tracks, etc), long press the filter icon to quickly open a smart playlist with that media name.
 - In media pages, long press the grid icon to choose a specific count per row (higher numbers can cause performance issues).
 - In the tracks page and media subpages, long press shuffle/play for advanced options.
+  - Play can sort the tracks, and skip the ones below a minimum, like a rating of 75% for your top rated only. `🆕 v7.8.0`
+  - Shuffle can pick a number of tracks, with a minimum too, and exclude your most recent listens. `🆕 v7.8.0`
+- In an album, artist, playlist or folder dialog, the sort button beside Play All opens the same options, and so does long pressing Shuffle. `🆕 v7.8.0`
 - Tap the resume button in media subpages to resume from the last played track, and long press it to jump to that track.
 - In the Home page, tapping a Recent Queues card that was played from a playlist or folder opens that playlist or folder, long press it to open its dialog. [`📄 Home Page ↗`](/pages/library/#home)
 - With a network image source enabled, open an album or artist dialog and press the edit icon at the top right to change its display image. Playlist artworks can always be edited.
@@ -133,7 +138,9 @@ The track menu has an Advanced section:
 
 - Tap any item in the track info dialog to copy it.
 - In a track, album or artist info dialog, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop. You can zoom in until single pixels show, and they stay sharp.
-- Most sort menus allow choosing more than one sorter, and reordering them.
+- Sort by more than one property, like artist, then year, then title. Press Advanced in any sort menu to pick and reorder them. Available for tracks, and now albums, artists, genres and playlists too. `🆕 v7.8.0`
+- Sort by Random (Daily) for a random order that stays the same all day, and changes the next day. `🆕 v7.8.0`
+- The tag editor keeps file dates by default, so edited tracks don't jump to the top of Recently Added. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
 - Moved your files? The [Missing Tracks](/settings/2-indexer-settings/#missing-tracks) page relinks them without losing stats.
 
 ### Folders {#folders-tips}
@@ -146,6 +153,8 @@ The track menu has an Advanced section:
 ### Scrolling {#scrolling}
 
 The scrollbar needs a short hold before it starts dragging. This is intentional, most apps have a big instantly draggable scrollbar, which usually causes many accidental scrolls. Namida keeps the minimal design instead.
+
+Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-settings/#flags) to see the letter or date you're at while dragging. `🆕 v7.8.0`
 
 ### Colors {#colors-tips}
 
@@ -163,7 +172,7 @@ The scrollbar needs a short hold before it starts dragging. This is intentional,
 - Long press or hover on any icon to see a tooltip explaining what it does.
 - Pages that have a docs page show a guide icon in the app bar, it opens the matching page here.
 - Tag editor and smart playlist fields suggest values from your library as you type.
-- Did you know you can unlock crossfade and party mode for free? Try reading the dialog that shows, and maybe fight it. [`📄 Membership ↗`](/membership/#benefits)
+- Supporter features for free? Yup, if you find the eggs Namida hid around the app, the hints are in About -> Eggs. Try reading the dialog that shows too, and maybe fight it a little. [`📄 Eggs ↗`](/membership/#eggs)
 
 ### Desktop {#desktop-tips}
 
@@ -172,7 +181,7 @@ The scrollbar needs a short hold before it starts dragging. This is intentional,
 - `Ctrl` + `Alt` + `L` shrinks Namida into a small lyrics window, `Esc` brings it back. [`🎉 Mini Lyrics Window ↗`](/features/system-integration/#mini-lyrics)
 - On a wide window, the maximize icon at the top left of the expanded player opens a two pane layout with lyrics/queue beside the artwork/video. [`🎉 Widescreen Player ↗`](/features/playback/#widescreen-player)
 - Closing the window keeps Namida in the tray, click the tray icon to bring it back. Change this in [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player).
-- `Ctrl` + mouse wheel zooms, works on the synced lyrics font size and on the cards of a playlist download page. `Ctrl` + `0` resets it. [`🎉 Zoom Shortcuts ↗`](/features/shortcuts/#zoom)
+- `Ctrl` + mouse wheel zooms, works on the lyrics font size and on the cards of a playlist download page. `Ctrl` + `0` resets it. [`🎉 Zoom Shortcuts ↗`](/features/shortcuts/#zoom)
 
 ### Android {#android-tips}
 

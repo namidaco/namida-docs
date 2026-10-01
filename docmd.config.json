@@ -35,8 +35,8 @@
     }
   },
   "versions": {
-    "current": "v7.5.0",
-    "all": [{ "id": "v7.5.0", "dir": "docs", "label": "v7.5.0" }]
+    "current": "v7.8.0",
+    "all": [{ "id": "v7.8.0", "dir": "docs", "label": "v7.8.0" }]
   },
   "theme": {
     "name": "summer",
@@ -89,6 +89,12 @@
           "external": false
         },
         {
+          "title": "Smart Playlists",
+          "path": "/features/smart-playlists.md",
+          "icon": "wand-sparkles",
+          "external": false
+        },
+        {
           "title": "Tag Editor",
           "path": "/features/tag-editor.md",
           "icon": "tag",
@@ -116,6 +122,12 @@
           "title": "Listening Party",
           "path": "/features/party.md",
           "icon": "party-popper",
+          "external": false
+        },
+        {
+          "title": "Effects & Visualizers",
+          "path": "/features/effects.md",
+          "icon": "sparkle",
           "external": false
         },
         {

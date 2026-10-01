@@ -17,6 +17,12 @@ Change how every part of the app looks.
 All three might affect performance on low end devices. If the app feels slow, turn them off first, or use [Performance Mode](/settings/8-advanced-settings/#performance-mode).
 :::
 
+- Background effect, animated effects behind the pages. Auto (default) follows the season. `🆕 v7.8.0`
+- Overlay effect, the same effects on top of the whole app. `🆕 v7.8.0`
+- Wallpaper, your own image behind the pages, needs the `BACKGROUND_IMAGES` [flag](/settings/6-extras-settings/#flags). `🆕 v7.8.0`
+
+[`🎉 Effects & Visualizers ↗`](/features/effects/)
+
 - Display remaining duration instead of total.
 - Display actual position instead of difference while seeking.
 - Border Radius Multiplier, controls how rounded the corners are.
@@ -50,8 +56,9 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 
 ### Miniplayer Customization {#miniplayer-customization}
 
-- Party Mode, a breathing glow around the edges, with a static color or switching through the artwork palette. Part of the membership, or find the easter egg to unlock it for free. [`📄 Membership ↗`](/membership/#benefits) [`📄 Easter Egg Tip ↗`](/tips/#misc-tips)
-- Moving particles, the particles speed up with the audio peak.
+- Party Mode, a breathing glow around the edges, with a static color or switching through the artwork palette. Part of the membership, or unlock it with an egg. [`📄 Membership ↗`](/membership/#benefits) [`📄 Eggs ↗`](/membership/#eggs)
+- Visualizer, visuals in the expanded player that move with the music. Particles (formerly "Enable moving particles") is one of them. `🆕 v7.8.0` [`🎉 Visualizers ↗`](/features/effects/#visualizers)
+- Player background, the artwork or your own image behind the expanded player. `🆕 v7.8.0` [`🎉 Player Background ↗`](/features/effects/#player-background)
 - Thumbnail animation intensity, the artwork animates with the audio peak. Separate values for expanded, minimized and lyrics view, plus an inverse option where high peaks make the thumbnail smaller.
 - Artwork gestures, scale multiplier, tap action, long press action and double tap to toggle lyrics.
 - Waveform bars count.

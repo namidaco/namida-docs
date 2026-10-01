@@ -18,7 +18,7 @@ Settings, playlists, history, queues, extracted artworks, lyrics, subtitles, log
 | Windows (portable) | `<namida folder>\files`                                    |
 | Linux              | `~/.namida`                                                |
 
-Notable subfolders: `Playlists`, `History`, `Queues`, `Artworks`, `Lyrics`, `Subtitles`, `Youtube`, `Servers Cache`, `Recently Deleted`, `Logs`.
+Notable subfolders: `Playlists`, `History`, `Queues`, `Artworks`, `Lyrics`, `Subtitles`, `Youtube`, `Servers Cache`, `Recently Deleted`, `Logs`, `Wallpapers`.
 
 ::: callout warning
 On Android 11+ this folder is not reachable from a normal file manager. Use ADB or Shizuku if you need to open it directly.

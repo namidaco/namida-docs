@@ -83,6 +83,7 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Remove sponsor segments from the downloaded file, see [below](#sponsorblock-downloads). `🆕 v7.4.0`
 - Split by Chapters, save each chapter of the video as its own file, see [below](#chapters-downloads). `🆕 v7.4.0`
 - Playlist downloads can be added to a library playlist, see [below](#playlist-downloads). `🆕 v7.4.0`
+- Set file last modified as video upload date, files get the video's date instead of the download time. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
 
 The extra file options (Split by Chapters, Remove Sponsor Segments, Keep cached versions and more) are in the Edit Tags sheet, press the pencil icon beside the video title in the download sheet. For playlists, press the gear button in the playlist download page.
 

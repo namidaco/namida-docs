@@ -53,6 +53,8 @@ Your genres, split from tags using the genre separators. Press the type at the t
 
 Your playlists, along with the built-in ones: History, Most Played and Favourites. Normal, M3U synced and smart playlists all live here. Pull down to refetch M3U and server playlists. Smart playlists also have their own full page, press the arrow next to their section, or enable it as a library tab of its own. [`🎉 Playlists & History feature ↗`](/features/playlists-history/)
 
+The tags row above the list filters playlists by their tags, pinned playlists stay at the top, and the checklist icon selects many at once. `🆕 v7.8.0` [`🎉 Playlist Tags ↗`](/features/playlists-history/#playlist-tags)
+
 ### Folders {#folders}
 
 Browse your library exactly like your file manager, with separate views for music and videos. Supports folders hierarchy, `cover.jpg` style folder images, and `.info.txt` for displaying small info. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
@@ -85,7 +87,7 @@ Your listening stats and charts as a library tab, the same page you get from the
 
 `🆕 v7.4.0`
 
-The full smart playlists page as a library tab. Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs). [`🎉 Smart Playlists feature ↗`](/features/playlists-history/#smart-playlists)
+The full smart playlists page as a library tab. Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs). [`🎉 Smart Playlists feature ↗`](/features/smart-playlists/)
 
 ### Listening Party {#party}
 

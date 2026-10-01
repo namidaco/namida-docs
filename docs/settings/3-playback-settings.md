@@ -8,7 +8,7 @@ description: "Audio, video and queue behavior"
 Everything about how Namida plays your music and videos.
 
 ::: callout tip
-Long press the audio button in the player to open this section.
+Long press the audio button in the player, then press Playback, to open this section.
 :::
 
 ### Enable Video Playback {#video-playback}
@@ -67,6 +67,12 @@ Choose what opens: the app, the miniplayer or the queue.
 
 Swipe the miniplayer away to stop playback and clear the queue.
 
+### Sound Control {#sound-control}
+
+`🆕 v7.8.0`
+
+Opens the Sound Control page: output device, bit-perfect, the equalizer, speed, pitch and more. [`🎉 Sound Control ↗`](/features/playback/#sound-control)
+
 ### Normalize Audio {#normalize-audio}
 
 Keeps the volume consistent between tracks, using the replay gain tag, or the loudness info YouTube provides for videos. You pick how it is applied:
@@ -78,7 +84,7 @@ Keeps the volume consistent between tracks, using the replay gain tag, or the lo
 
 ### Skip Silence {#skip-silence}
 
-`💻 Android only`
+`💻 Android+Linux only`
 
 Skips silent parts of the audio.
 
@@ -89,11 +95,13 @@ Removes the small delay between tracks by loading the next one early. Useful for
 ### Crossfade {#crossfade}
 
 Fades between tracks. You can set the crossfade duration and how many seconds before the end it should trigger.
-Part of the membership, or find the easter egg to unlock it for free. [`📄 Membership ↗`](/membership/#benefits) [`📄 Easter Egg Tip ↗`](/tips/#misc-tips)
+Part of the membership, or unlock it with an egg. [`📄 Membership ↗`](/membership/#benefits) [`📄 Eggs ↗`](/membership/#eggs)
+
+Turned off while [Bit-perfect](/features/playback/#bit-perfect) or [USB direct access](/features/playback/#usb-direct) is on. `🆕 v7.8.0`
 
 ### Fade Effect on Play/Pause {#fade-play-pause}
 
-Fades audio in and out instead of an instant play or pause, with separate durations for each.
+Fades audio in and out instead of an instant play or pause, with separate durations for each. Turned off while [Bit-perfect](/features/playback/#bit-perfect) is on. `🆕 v7.8.0`
 
 ### Auto Play on Next/Previous {#auto-play-next-prev}
 

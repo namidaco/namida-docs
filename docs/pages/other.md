@@ -57,6 +57,8 @@ App version & changelog, socials, licenses, share logs, and links for translatin
 
 Shared logs leave out personal info, like device names and folder paths.
 
+The Eggs card shows your eggs, their hints, and what you unlocked with them. `🆕 v7.8.0` [`📄 Eggs ↗`](/membership/#eggs)
+
 ---
 
 <sub>Author: @MSOB7YY<br>Writer: @claude</sub>

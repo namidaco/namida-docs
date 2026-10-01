@@ -16,7 +16,11 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
 - YouTube playlist downloads can be added to a library playlist, in the same order as the source. `🆕 v7.4.0` [`🎉 Into a Library Playlist ↗`](/features/youtube/#playlist-downloads)
 - Custom order for playlists, press the edit icon at the top to enable reordering.
 - Custom order for playlist tracks, press the lock icon at the top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
-- Playlists can be searched, and can have moods, which the queue uses when adding tracks by mood.
+- Playlists can be searched, and can have moods, which the queue uses when adding tracks by mood. Search matches [tags](#playlist-tags) too.
+- Pin a playlist from its menu to keep it at the top. `🆕 v7.8.0`
+- Select many playlists with the checklist icon at the top, to tag, pin, play, merge, export or delete them at once. `🆕 v7.8.0`
+- M3U playlists keep their comment, moods, tags and sorting. `🆕 v7.8.0`
+- Remove Duplicates is in the playlist menu, under Advanced. `🆕 v7.8.0`
 
 ::: callout warning
 Sorting tracks by a property means your custom order will be lost. You will see a warning, and you need to confirm before the new sort is applied.
@@ -24,14 +28,29 @@ Sorting tracks by a property means your custom order will be lost. You will see 
 
 Also see the [`🎉 YouTube feature ↗`](/features/youtube/#playlists) for how local and YouTube playlists relate.
 
+### Playlist Tags {#playlist-tags}
+
+`🆕 v7.8.0`
+
+Organize your playlists with tags, like `gym`, `chill` or `anime/openings`.
+
+- Add tags from a playlist's menu -> Tags/Moods. Select many playlists to tag them all at once.
+- Use a slash to put a tag inside another, like `gym/cardio`. Filtering by `gym` shows those too.
+- Tap a tag in the tags row to show only its playlists, or hold it to hide them instead.
+- The ⋯ chip can play the shown playlists, save the filter, group the page by tags, or manage your tags.
+- Importing a folder of M3U files tags each playlist with its folder name. [`📄 Playlists Page ↗`](/pages/library/#playlists)
+
+YouTube playlists can be tagged and pinned too. [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists)
+
+Tags and pins sync along with their playlists, and smart playlists can pick tracks by tag. [`🎉 Smart Playlists ↗`](/features/smart-playlists/#text-rules)
+
 ### Smart Playlists {#smart-playlists}
 
-Playlists built from rules instead of manual picking, they update themselves as your library and history change. Combine conditions like contains, starts with, is greater than, is within last, is between dates, and apply them to almost any property: artist, genre, rating, year, listen count, favourite status and more. Text rules suggest values from your library as you type.
-They also have their own full page, reachable from the playlists page, where you can create and reorder them. [`📒 Smart Playlist Examples Guide ↗`](/guides/medium/#smart-playlist-examples)
+Playlists built from rules instead of manual picking, they update themselves as your library and history change.
 
-Their tracks can be sorted by more than one property, like artist, then year, then title. `🆕 v7.5.0`
+They also have their own full page, reachable from the playlists page, where you can create and reorder them.
 
-Their tracks are found only when you open them, and tracks can't be added to them manually, so they are kept apart from normal playlists. [`📄 Why aren't smart playlists treated as normal playlists? ↗`](/faq/#smart-playlists)
+All rules, how to combine them, and examples from easy to complex: [`🎉 Smart Playlists feature ↗`](/features/smart-playlists/)
 
 ### History {#history}
 

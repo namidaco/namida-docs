@@ -32,7 +32,8 @@ Seeking jumps by your [Seek Duration](/settings/3-playback-settings/#seek-durati
 | `Ctrl` + `+` / `-`   | Zoom in / out  |
 | `Ctrl` + `0`         | Reset the zoom |
 
-Zoom applies to what is in front of you: the synced lyrics font size, or the card size in a playlist download page. It is the desktop version of the pinch gesture.
+Zoom applies to what is in front of you: the lyrics font size, or the card size in a playlist download page. It is the desktop version of the pinch gesture.
+The lyrics size can also be set from the [lyrics picker](/features/playback/#lyrics-picker).
 
 ### Current Track {#current-track}
 

@@ -51,7 +51,7 @@ Ignores symbols and spaces while searching, so matches are easier to find.
 
 - Lyrics source, auto, local only or internet only.
 - Romanization, see [below](#romanization). `🆕 v7.4.0`
-- Prioritize embedded lyrics over fetched ones.
+- Prioritize embedded lyrics, the lyrics tag wins over lyrics files and online lyrics.
 - Stretch lyrics duration, adapts the timing for sped up, slowed or nightcore versions.
 - Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
   - Shows translations and romanizations under each line, and word synced lyrics light up word by word like in the lyrics view. `🆕 v7.5.0`
@@ -65,7 +65,7 @@ Files next to the track can be `.lrc`, `.ttml`, `.txt` or subtitle files (`.srt`
 Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track.
 :::
 
-Once lyrics are found they get saved, in the cache by default, and the saved copy is used first from then on. If lyrics you added later don't show up, delete the saved one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
+Once lyrics are found they get saved, in the cache by default, and the saved copy is used first from then on. If lyrics you added later don't show up, pick them in the [lyrics picker](/features/playback/#lyrics-picker) and press Save, or delete the saved one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
 
 ### Romanization {#romanization}
 
@@ -75,7 +75,7 @@ Read non latin text in latin letters. Found inside the Lyrics card, press it to 
 
 - **Romanization: Lyrics**, adds the romanized text under each synced lyrics line. Plain lyrics are not romanized.
 - **Romanization: Sort by**, text sorts use the romanized text, so a Japanese title like `さくら` sorts under S. [`🎉 Sorting ↗`](/features/library-indexing/#sorting)
-- **Dictionary**, needed for Japanese kanji and Chinese characters. It's a one time download, and turning on either option downloads it automatically. Press it again to delete it.
+- **Dictionary**, needed for Japanese kanji and Chinese characters. It's a one time download, done automatically when an option needs it. Press it again to delete it.
 
 Supported: Japanese (hiragana, katakana, kanji), Chinese, Korean, Greek, Cyrillic, Armenian and Georgian.
 Dictionary is only needed for kanji and Chinese.
@@ -142,20 +142,32 @@ Extracts colors for the whole library at once, instead of when each track plays.
 
 Hidden experimental options. Press the flag icon at the top of the Extras settings card to open them:
 
-- `TAP_TO_SCROLL`, `ENHANCED_DRAG_TO_SCROLL` & `SMOOTH_SCROLLING`, scrolling behavior tweaks.
-- `FLOATING_ARTWORK_EFFECT` & `TILTING_CARDS_EFFECT`, extra visual effects.
+Visual:
+
+- `JELLYS_INVASION` & `JELLYS_COLOR_PALETTE`, lets jellyfishes drift around the app, with a matching color palette. Tap the jellyfish button in the theme settings to toggle them, long press it for both options.
 - `GRADIENT_TILES_AND_CARDS`, gradient backgrounds for tiles and cards.
-- `MEDIA_WAVE_HAPTIC`, haptics that follow the audio.
-- `JELLYS_INVASION` & `JELLYS_COLOR_PALETTE`, lets jellyfishes drift around the app, with a matching color palette. Can also be toggled from the jellyfish button in the theme settings.
-- `KEEP_VIDEO_FRAME_ON_SWITCH`, when switching to an item whose video is already downloaded, keep the last video frame until the next one shows, instead of flashing the artwork in between. `🆕 v7.4.0`
-- `SHOW_DESKTOP_TITLE_BAR` & `DESKTOP_TITLE_BAR_ICONS_TYPE`, title bar look on desktop.
-- `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between the local style and YouTube style player.
-- `RECENT_SEARCHES`, saves your searches and shows them in the search page.
-- `RESUME_UI`, the resume button and the highlight on the last played item in pages like albums, playlists and queues. On by default, turn it off to hide both and stop tracking where you left off. `🆕 v7.4.0`
-- `CUSTOM_EQ_PACKAGE`, open a custom equalizer app instead of the system built-in one.
+- `BACKGROUND_IMAGES`, custom images for the [wallpaper](/features/effects/#wallpaper) and [player background](/features/effects/#player-background). `🆕 v7.8.0`
+- `FLOATING_ARTWORK_EFFECT (💻 Android only)` & `TILTING_CARDS_EFFECT (💻 Windows+Linux only)`, extra visual effects.
+- `MEDIA_WAVE_HAPTIC (💻 Android only)`, haptics that follow the audio.
+
+Scrolling:
+
+- `SMOOTH_SCROLLING (💻 Windows+Linux only)`, `ENHANCED_DRAG_TO_SCROLL` & `TAP_TO_SCROLL`, scrolling behavior tweaks.
+- `SCROLLBAR_THUMB_LABEL`, shows where you are while dragging the scrollbar, like the letter, year or date, depending on the sort. `🆕 v7.8.0`
+
+Desktop:
+
+- `SHOW_DESKTOP_TITLE_BAR` & `DESKTOP_TITLE_BAR_ICONS_TYPE (💻 Linux only)`, title bar look on desktop.
+
+Misc:
+
 - `VISUAL_TO_AUDIO_DELAY`, shift the visuals to make up for audio delay.
-- `TIME_CAPSULE_YEARS`, travel back in time, or into the future.
+- `RESUME_UI`, the resume button and the highlight on the last played item in pages like albums, playlists and queues. On by default, turn it off to hide both and stop tracking where you left off. `🆕 v7.4.0`
+- `RECENT_SEARCHES`, saves your searches and shows them in the search page.
 - `PREFERRED_SEARCH_TAB`, the tab search opens on.
+- `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between the local style and YouTube style player.
+- `KEEP_VIDEO_FRAME_ON_SWITCH`, when switching to an item whose video is already downloaded, keep the last video frame until the next one shows, instead of flashing the artwork in between. `🆕 v7.4.0`
+- `TIME_CAPSULE_YEARS`, travel back in time, or into the future.
 
 ::: callout info
 Flags are experimental, defaults are fine for most people.

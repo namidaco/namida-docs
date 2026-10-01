@@ -18,6 +18,8 @@ Open a notification's menu and press "More" to hide it, or to turn off notificat
 
 Your YouTube playlists, along with the built-in ones: History, Most Played and Liked. You can create playlists, and import your existing playlists and channels from a YouTube takeout export. [`🎉 Playlists & History feature ↗`](/features/playlists-history/) [`🎉 YouTube Playlists feature ↗`](/features/youtube/#playlists)
 
+Local YouTube playlists can be tagged, pinned and filtered too. `🆕 v7.8.0` [`🎉 Playlist Tags ↗`](/features/playlists-history/#playlist-tags)
+
 ### Channels {#channels}
 
 Your subscribed channels, they can be organized into groups. Each channel page shows its videos and info. Press the time range icon in a channel page to list only videos uploaded after or before a date. `🆕 v7.0.0`

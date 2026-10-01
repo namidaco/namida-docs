@@ -24,7 +24,7 @@ On by default:
 - Track stats & favourites, for local and YouTube separately
 - Audio configs, the per item sound settings
 - History, for local and YouTube, merged without duplicated listens
-- Playlists & smart playlists, plus your YouTube playlists
+- Playlists & smart playlists, plus your YouTube playlists, with their tags and pins `🆕 v7.8.0`
 - Saved queues
 - Last played track per source
 - Cached videos priority
@@ -44,7 +44,7 @@ Off by default for another reason, they take over playback on the other device:
 
 Off by default too, since devices usually want their own:
 
-- Settings, for general, playback and YouTube. Only the settings you changed are sent, and the newest change wins for each one. Device specific ones like folders, language, caches and the download location stay on each device. `🆕 v7.5.0`
+- Settings, for general, playback and YouTube. Only the settings you changed are sent, and the newest change wins for each one. Device specific ones, like folders, language, caches, the download location, audio output and backgrounds, stay on each device. `🆕 v7.5.0`
 
 ::: callout tip
 Turn on the advanced view in the Sync page to see every item separately instead of the short list.

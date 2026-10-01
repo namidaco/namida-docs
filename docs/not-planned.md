@@ -41,14 +41,6 @@ Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works wit
 
 Use [Kizzy](https://github.com/dead8309/Kizzy) on Android, or [Music Presence](https://github.com/ungive/discord-music-presence) on desktop. They work with any player.
 
-### Advanced Equalizer Features {#equalizer}
-
-Namida's equalizer is simple and uses native Android effects, we always recommend using system wide EQ apps for a better experience and more features.
-Anything beyond that needs a custom audio engine, or making sure each Android version supports the effect, none of these are planned.
-
-- If you have root, you can use JamesDSP or Viper4Android.
-- Otherwise use [Equalizer314](https://f-droid.org/en/packages/com.bearinmind.equalizer314) or [RootlessJamesDSP](https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp).
-
 ### Marquee Effect {#marquee}
 
 Scrolling text is distracting and doesn't look so good. Long texts get faded out instead.

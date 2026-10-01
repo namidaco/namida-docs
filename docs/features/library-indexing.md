@@ -31,9 +31,27 @@ If you moved or renamed files outside Namida, the missing tracks page helps you 
 
 Sort by almost any property of the track or the album. Most pages allow picking more than one sorter and reordering them, so you can sort by artist, then year, then title. Albums can be identified by name alone or combined with album artist or year, and common prefixes like "The" can be ignored while sorting.
 
+Albums, artists, genres and playlists can use several sorters too, from Advanced in their sort menu. Sort menus also have quick Reverse Order, Ignore prefixes and Romanization toggles. `🆕 v7.8.0`
+
 Text sorting ignores accents and reads numbers by their value, so `Ànteros` sits next to `Anteros`, and `2.mp3` comes before `10.mp3`. This applies to every text sort, including playlists and folders. `🆕 v7.4.0`
 
 Non latin titles and artists can also be sorted by their romanized form. [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
+
+### File Dates {#file-dates}
+
+Date Added and Date Modified come from the file itself. They decide the date sorts, [smart playlist](/features/smart-playlists/#date-rules) date rules, and Recently Added on the Home page, where a file that was just changed jumps to the top.
+
+So Namida can keep file dates:
+
+- **Tag editor**, "Keep file dates" is on by default. Turn it off and edited files get today's date. [`🎉 Keep File Dates ↗`](/features/tag-editor/#keep-file-dates)
+- **Rating, moods and tags** from the track menu always keep them.
+- **YouTube downloads**, "Set file last modified as video upload date" dates files by the video, so old videos don't flood Recently Added. [`🎉 Downloads ↗`](/features/youtube/#downloads)
+
+Files copied with a tool that doesn't keep dates look newly added too.
+
+::: callout info
+Edited a file in another app that kept its dates? Refresh might miss it, re-index the track from its menu -> Advanced.
+:::
 
 ### Media Servers {#media-servers}
 

@@ -88,11 +88,13 @@ Moved your music from `/storage/music` to `/storage/audio/music`?
 
 ### Smart playlist examples {#smart-playlist-examples}
 
-Some rule ideas for [`🎉 Smart Playlists feature ↗`](/features/playlists-history/#smart-playlists):
+Some rule ideas, all in one group with All:
 
-- 90s favourites: Year is between 1990 and 1999, plus Favourite is true.
-- Recent bangers: Rating is greater than 80, plus First listen is within last 3 months.
-- Unheard gems: Listen count is 0, plus Date added is not within last month.
+- 90s favourites: Year <u>is in Between</u> `1990-01-01` and `1999-12-31`, plus Favourite <u>is True</u>.
+- Recent bangers: Rating <u>is Greater Than</u> `80`, plus First listen <u>is Within Last</u> `3 Months`.
+- Unheard gems: Total Listens <u>is Same</u> `0`, plus Date Added <u>is not Within Last</u> `1 Months`.
+
+More examples from easy to complex, and how rules combine, in [`🎉 Smart Playlists feature ↗`](/features/smart-playlists/#examples).
 
 ---
 

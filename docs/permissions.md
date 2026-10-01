@@ -33,6 +33,7 @@ The permissions Namida uses and why. Nothing is used for tracking, there are no 
 - `POST_NOTIFICATIONS`: show notifications like history import, download or server caching progress.
 - `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS`: improve downloads, they can be slowed down when the app is battery restricted.
 - `WRITE_SETTINGS`: to set audio as ringtone, etc.
+- USB device access: only with [USB direct access](/features/playback/#usb-direct), to use your USB DAC. Asked again after unplugging? See [why](/faq/#usb-dac-permission). `🆕 v7.8.0`
 
 ::: callout info
 On Windows & Linux, none of these apply, the app works like any normal desktop app.

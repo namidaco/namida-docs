@@ -7,22 +7,27 @@ description: "What a membership unlocks and how to get one"
 
 Namida is free, with no ads and no tracking. Nearly everything in these docs works without paying anything, and without an account.
 
-A membership is how you support the project and keep it growing. As a thank you, it unlocks a few extras on top, mostly for YouTube while signed in to your account.
+A membership is how you support the project and keep it growing. As a thank you, it unlocks a few extras on top, mostly for YouTube while signed in to your account, and some visual effects.
 
 ### What It Unlocks {#benefits}
 
-| Feature                                                  | Needs                                               |
-| -------------------------------------------------------- | --------------------------------------------------- |
-| Like, dislike & mark videos as watched                   | Free, just sign in                                  |
-| Your playlists: browse, create, add & remove videos      | Free, just sign in                                  |
-| Subscriptions & notifications                            | Free, just sign in                                  |
-| Home feed & watch history                                | `cutie`                                             |
-| Comments, subscribing & channel notifications            | `cutie`                                             |
-| Save to library, edit & delete playlists                 | `cutie`                                             |
-| Hide or turn off notifications                           | `cutie`                                             |
-| Create a listening party on the Namida server            | `cutie`                                             |
-| Party Mode & Crossfade                                   | `cutie`, or find the [easter egg](/tips/#misc-tips) |
-| Multiple YouTube accounts                                | `pookie`                                            |
+| Feature                                                                     | Needs                           |
+| --------------------------------------------------------------------------- | ------------------------------- |
+| Like, dislike & mark videos as watched                                      | Free, just sign in              |
+| Your playlists: browse, create, add & remove videos                         | Free, just sign in              |
+| Subscriptions & notifications                                               | Free, just sign in              |
+| Home feed & watch history                                                   | `cutie`                         |
+| Comments, subscribing & channel notifications                               | `cutie`                         |
+| Save to library, edit & delete playlists                                    | `cutie`                         |
+| Hide or turn off notifications                                              | `cutie`                         |
+| Create a listening party on the Namida server                               | `cutie`                         |
+| Party Mode & Crossfade                                                      | `cutie`, or 1 [egg](#eggs) each |
+| Extra effects: starfield, galaxy, aurora, fireworks & deep ocean `🆕 v7.8.0` | `cutie`, or 1 [egg](#eggs) each |
+| Extra visualizers: mirrored bars, outline, glow & edge lights `🆕 v7.8.0`    | `cutie`, or 1 [egg](#eggs) each |
+| Custom image for wallpaper & player background `🆕 v7.8.0`                   | `cutie`, or 1 [egg](#eggs) each |
+| Multiple YouTube accounts                                                   | `pookie`                        |
+
+Supporter effects and visualizers are marked with a crown in the app. [`🎉 Effects & Visualizers ↗`](/features/effects/#membership)
 
 ::: callout tip
 To keep a public playlist for free, use "Import playlist" from its menu instead, it's saved inside Namida. [`🎉 YouTube Playlists ↗`](/features/youtube/#playlists)
@@ -59,15 +64,26 @@ Everything else is free, here is a taste of it.
 
 - A folder based [library](/features/library-indexing/) with a powerful indexer, smart sorting and [media servers](/features/media-servers/) with offline caching.
 - [Playback](/features/playback/) with a reliable queue system, video integration and a waveform seekbar.
-- Deep control over how things play, global or per track [sound control](/features/playback/#sound-control) with an equalizer, [replay gain](/features/playback/#replay-gain), skip silence, play/pause fade, [pausing scenarios](/features/playback/#pausing) and a [sleep timer](/features/playback/#sleep-timer).
+- Deep control over how things play, global or per track [sound control](/features/playback/#sound-control) with a [parametric equalizer](/features/playback/#equalizer), [bit-perfect output](/features/playback/#bit-perfect), [replay gain](/features/playback/#replay-gain), skip silence, play/pause fade, [pausing scenarios](/features/playback/#pausing) and a [sleep timer](/features/playback/#sleep-timer).
 - [Lyrics](/features/playback/#lyrics), synced or plain, with smooth animations and word by word sync, a simple lyrics line under the artwork and [romanization](/settings/6-extras-settings/#romanization). [Subtitles](/features/subtitles/) for local and YouTube videos too, keeping their original styles.
-- [Playlists and history](/features/playlists-history/), M3U and smart playlists, and a reliable history system.
+- [Playlists and history](/features/playlists-history/), M3U playlists, [playlist tags](/features/playlists-history/#playlist-tags), [smart playlists](/features/smart-playlists/), and a reliable history system.
 - Charts and insights from your history, [most played](/features/playlists-history/#most-played) for any time range, [stats](/features/playlists-history/#stats) and your year, [lost memories](/features/playlists-history/#lost-memories) from years ago and [smort tracks generation](/features/playlists-history/#generation) based on what you listen to.
 - A full [tag editor](/features/tag-editor/), for single and multiple tracks.
 - [Sync](/features/sync/) between your devices, and [listening parties](/features/party/), joining them or hosting on your own device or server.
 - Desktop apps for Windows and Linux, with a [widescreen player](/features/playback/#widescreen-player), system tray, [shortcuts](/features/shortcuts/) and a [mini lyrics window](/features/system-integration/#mini-lyrics).
 - [Home screen widget](/features/home-widget/) and [system integration](/features/system-integration/).
-- Themes and [customizations](/settings/4-customization-settings/) for almost every part of the app.
+- Themes, [customizations](/settings/4-customization-settings/) for almost every part of the app, and [effects & visualizers](/features/effects/).
+
+### Eggs {#eggs}
+
+`🆕 v7.8.0`
+
+No membership? Go egg hunting. Namida hides eggs all around the app, and each one unlocks a supporter feature of your choice. There are enough for all of them, if you can find them.
+
+- Stuck? Settings -> About -> Eggs has a hint for every egg.
+- Some eggs only come out on special days, keep an eye on the top of the app.
+- Crack an egg when a feature asks for a membership, and it's yours to keep.
+- Regret it? Sell it back for your egg from the same About card, no questions asked.
 
 ### Tiers {#tiers}
 

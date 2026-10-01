@@ -12,6 +12,8 @@ Caches, fixes and performance.
 One switch for the heavy visual settings: High performance, Balanced, Good looking, or Custom.
 It controls things like auto coloring, blur, glow and parallax at once.
 
+It also holds the [effects and visualizer](/features/effects/) settings, High performance turns them off. `🆕 v7.8.0`
+
 ### Re-scan Videos {#rescan-videos}
 
 Rebuilds the local videos index.
@@ -34,7 +36,7 @@ The files in the selected folder are replaced.
 
 ### Compress Images {#compress-images}
 
-Compress artworks and cached images to save storage, you choose the compression percentage. Moderate values save a lot with little visible loss. The audio files are untouched.
+Compress artworks and cached images to save storage, you choose the compression percentage. Moderate values save a lot with little visible loss. The audio files are untouched. "Keep file dates" keeps the original dates on the compressed images.
 
 ::: callout info
 Output goes to a new folder [Namida Folder](/storage-paths/#namida-folder)`/Compressed`. The selected folder is not changed, so copy the files back manually if you want to replace the originals.

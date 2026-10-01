@@ -47,6 +47,7 @@ See [Lyrics](/settings/6-extras-settings/#lyrics) for the full lookup order.
 Not directly, but you can provide your own lyrics per track:
 
 - Long press the lyrics icon in the player and add an LRC file, or paste the lyrics in the lyrics tag using the tag editor.
+- Or embed any of them into the track, from their ⋮ menu in the same list. [`🎉 Lyrics Picker ↗`](/features/playback/#lyrics-picker)
 - Put an `.lrc` file next to the song with the same filename, or in one of your [lyrics folders](/settings/6-extras-settings/#lyrics-folders). Subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) and `.txt` for plain lyrics work too.
 - Set [Prioritize embedded lyrics](/settings/6-extras-settings/#lyrics) depending on where you usually keep them.
 
@@ -55,9 +56,11 @@ Not directly, but you can provide your own lyrics per track:
 Namida caches the lyrics it finds for a track, and the cached copy wins over anything you add later. Setting the [Lyrics Save Location](/settings/6-extras-settings/#lyrics-save-location) to Track folder or Lyrics folders avoids this, files there are checked before the cache. Otherwise, delete the cached copy:
 
 1. Long press the lyrics icon in the player.
-2. All lyrics found for this track are listed, labeled with its source: `Cache`, `Local`, the provider name, or the embedded tag.
-3. Press the trash icon on the cached one.
+2. All lyrics found for this track are listed, labeled with its source: `Cache`, `Local`, the provider name, or the embedded tag. The ones in use are marked Active
+3. Open the ⋮ menu on the cached one and press Delete.
 4. Press done, the new lyrics get picked up.
+
+Or simply tap the lyrics you want and press Save.
 
 If they still don't show, check [Prioritize embedded lyrics](/settings/6-extras-settings/#lyrics):
 
@@ -79,7 +82,7 @@ They are a different thing. A smart playlist is only a set of rules, and its tra
 - Listing them with normal playlists means finding the tracks of every smart playlist all the time, which would easily hurt performance.
 - Tracks can't be added to a smart playlist manually, the rules decide what's in it. Mixing them with normal playlists would make that confusing.
 
-See [`🎉 Smart Playlists feature ↗`](/features/playlists-history/#smart-playlists)
+See [`🎉 Smart Playlists feature ↗`](/features/smart-playlists/)
 
 ### Is there a LastFm scrobble feature? {#lastfm}
 
@@ -89,9 +92,15 @@ No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scr
 
 No, and not planned. There are apps that work with any player, see [Not Planned](/not-planned/#discord-rpc).
 
-### Equalizer issues or missing features {#equalizer}
+### Can I use my AutoEq or Equalizer APO settings? {#equalizer}
 
-Namida's equalizer is simple by design, system wide EQ apps are recommended instead, see [Not Planned](/not-planned/#equalizer) for the reasoning and app suggestions.
+Yes, import your `ParametricEQ.txt` file, or paste it with Import -> From clipboard in the equalizer.
+For a system wide equalizer that also works for other apps, use [Equalizer314](https://f-droid.org/en/packages/com.bearinmind.equalizer314) or [RootlessJamesDSP](https://f-droid.org/en/packages/me.timschneeberger.rootlessjamesdsp) on Android (but they don't apply while USB direct access is in use). [`🎉 Equalizer ↗`](/features/playback/#equalizer)
+
+### Android asks for USB DAC access every time I plug it in {#usb-dac-permission}
+
+Android forgets the access once the DAC is unplugged, unless Namida is set as the DAC's default app in that dialog.
+Android only offers "always" for DACs without a microphone, since Namida doesn't ask for microphone access. Nothing is wrong with your DAC. [`🎉 USB Direct Access ↗`](/features/playback/#usb-direct)
 
 ### Can't install the APK, Google blocks it {#play-protect}
 
