@@ -1,13 +1,14 @@
 // by claude
 // GoatCounter page views: counts each SPA page change and shows the page's
 // view count in the page footer (plus the site total on the home page).
-// Counts come from the public counter endpoint, which GoatCounter's CDN
-// caches for a few hours, so the badge lags behind the dashboard.
+// The counter endpoint is only fresh when a `start` date is given, the bare
+// url is served stale from GoatCounter's CDN for hours.
 (function () {
   'use strict';
 
   var ENDPOINT = 'https://namida.goatcounter.com';
   var BADGE_CLASS = 'summer-pagefooter__views';
+  var COUNT_SINCE = '2020-01-01';
 
   if (location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
 
@@ -32,7 +33,7 @@
   }
 
   function fetchCount(path) {
-    return fetch(ENDPOINT + '/counter/' + encodeURIComponent(path) + '.json', { cache: 'no-store' })
+    return fetch(ENDPOINT + '/counter/' + encodeURIComponent(path) + '.json?start=' + COUNT_SINCE, { cache: 'no-store' })
       .then(function (res) { return res.json(); })
       .then(function (json) { return json.count !== '0' ? json.count : null; })
       .catch(function () { return null; });
