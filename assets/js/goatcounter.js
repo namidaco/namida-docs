@@ -1,6 +1,8 @@
 // by claude
 // GoatCounter page views: counts each SPA page change and shows the page's
 // view count in the page footer (plus the site total on the home page).
+// Counts come from the public counter endpoint, which GoatCounter's CDN
+// caches for a few hours, so the badge lags behind the dashboard.
 (function () {
   'use strict';
 
@@ -20,7 +22,8 @@
   document.head.appendChild(script);
 
   function pagePath() {
-    return location.pathname.replace(/index\.html$/, '');
+    var path = location.pathname.replace(/index\.html$/, '').replace(/\/+$/, '');
+    return path || '/';
   }
 
   function count() {
@@ -29,35 +32,32 @@
   }
 
   function fetchCount(path) {
-    return fetch(ENDPOINT + '/counter/' + encodeURIComponent(path) + '.json')
-      .then(function (res) { return res.ok ? res.json() : null; })
-      .then(function (json) { return json ? json.count : null; })
+    return fetch(ENDPOINT + '/counter/' + encodeURIComponent(path) + '.json', { cache: 'no-store' })
+      .then(function (res) { return res.json(); })
+      .then(function (json) { return json.count !== '0' ? json.count : null; })
       .catch(function () { return null; });
   }
 
   function renderBadge(path) {
-    var footer = document.querySelector('.summer-pagefooter');
-    if (!footer || footer.querySelector('.' + BADGE_CLASS)) return;
-
-    var badge = document.createElement('span');
-    badge.className = BADGE_CLASS;
-    badge.hidden = true;
-    badge.innerHTML =
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
-      '<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>' +
-      '<span></span>';
-    footer.insertBefore(badge, footer.firstChild);
-
-    var label = badge.lastChild;
     var requests = [fetchCount(path)];
     if (path === '/') requests.push(fetchCount('TOTAL'));
 
     Promise.all(requests).then(function (counts) {
-      if (!badge.isConnected || counts[0] === null) return;
+      if (counts[0] === null || pagePath() !== path) return;
+      var footer = document.querySelector('.summer-pagefooter');
+      if (!footer || footer.querySelector('.' + BADGE_CLASS)) return;
+
       var text = counts[0] + ' views';
       if (counts[1]) text += ' · ' + counts[1] + ' total';
-      label.textContent = text;
-      badge.hidden = false;
+
+      var badge = document.createElement('span');
+      badge.className = BADGE_CLASS;
+      badge.innerHTML =
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>' +
+        '<span></span>';
+      badge.lastChild.textContent = text;
+      footer.insertBefore(badge, footer.firstChild);
     });
   }
 
