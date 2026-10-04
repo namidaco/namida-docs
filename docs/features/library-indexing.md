@@ -11,9 +11,16 @@ Namida builds your library from the folders you choose, with a powerful indexer 
 
 Add the folders you want, exclude the ones you don't. The Folders tab browses your library like a file manager, with support for `cover.jpg` style images and `.info.txt` files for small notes. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
-### Artists & Genres Separators {#separators}
+### Separators {#separators}
 
-Tracks with multiple artists or genres in one tag get split into separate entries, you control the separator symbols and the blacklisted words. Composers follow the artists separators. Featured artists in titles can also get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) [`📒 Blacklist Guide ↗`](/guides/beginner/#separator-blacklist)
+A tag holding multiple values gets split into separate entries, so a track shows under each of its artists, albums, genres and so on:
+
+- Artists, album artists and composers use the artists separators.
+- Genres and styles use the genres separators.
+- Moods and tags use both, plus `;` `,` `//` `\\`.
+- Albums only split on `;`, `\\` and the non-breaking space (NBSP).
+
+You control the artists and genres separators and their blacklisted words. Featured artists in titles can also get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) [`📒 Blacklist Guide ↗`](/guides/beginner/#separator-blacklist)
 
 ### Filtering {#filtering}
 

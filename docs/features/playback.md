@@ -78,7 +78,7 @@ A parametric equalizer with as many bands as you want, on every platform. Old se
 - Drag a band on the curve to tune it, or long press an empty spot to add one. A Sliders view is there too.
 - Any band type (peak, shelf, low/high pass, notch...), on both channels or just one.
 - Auto preamp and a limiter keep boosts from distorting.
-- Built-in or your own presets, each can follow an [output device](#output-device).
+- Built-in or your own presets, each can follow an [output device](#output-device). Long press a preset to use it for the current device, save the current bands into it, rename or delete it.
 - Import from [AutoEq](https://autoeq.app) or Equalizer APO, or export as Equalizer APO text.
 
 ::: callout info

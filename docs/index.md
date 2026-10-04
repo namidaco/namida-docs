@@ -40,6 +40,14 @@ Then browse [Features](/features/) to see everything else, and [Tips & Tricks](/
 - The progress bar in the YouTube player sits under the video, not inside it, nothing covers the content.
 - There is no way to stretch or zoom the video out of its real aspect ratio.
 
+**Music should feel alive.** Not just a static artwork and a progress bar:
+
+- Thumbnails animate with the beat. [`⚙️ Configure Thumbnail Animation ↗`](/settings/4-customization-settings/#miniplayer-customization)
+- The seekbar is the actual waveform of the track. [`🎉 Waveform Seekbar ↗`](/features/playback/#waveform)
+- Local tracks can play with their linked videos. [`🎉 Video Integration ↗`](/features/playback/#video)
+- Short loop animations (or animated artworks) that play along with the track. [`📒 Loop Animation Guide ↗`](/guides/namider/#loop-animation)
+- Visualizers and effects that move with the music. `🆕 v7.8.0` [`🎉 Effects & Visualizers ↗`](/features/effects/)
+
 **Music should be listened to only when you feel like it.** Namida is against endless queues.
 Music is a powerful tool that can hijack your brain and take control, and a human should always be in control. So much human potential gets thrown away to entertainment, and music is part of that. Don't let it consume you, listen to what you enjoy, and only when you really want to.
 
