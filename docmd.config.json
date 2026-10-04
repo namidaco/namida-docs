@@ -143,6 +143,12 @@
           "external": false
         },
         {
+          "title": "Automation & Other Apps",
+          "path": "/features/automation.md",
+          "icon": "workflow",
+          "external": false
+        },
+        {
           "title": "Shortcuts",
           "path": "/features/shortcuts.md",
           "icon": "keyboard",

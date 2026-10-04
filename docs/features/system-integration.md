@@ -6,21 +6,37 @@ description: "How Namida talks to the rest of your device"
 # System Integration
 
 What Namida can do outside of its own window.
+For Tasker, scripts and scrobblers, see [`🎉 Automation & Other Apps ↗`](/features/automation/).
 
 ### Open With & Share {#open-with}
 
-Namida shows up in the share sheet and in "Open with" for:
+Any app that can "open" or "share" something can hand it to Namida:
 
-- Audio and video files, they play right away. Sharing many files (or a whole folder) works too.
-- `.m3u` and `.m3u8` playlist files. [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
-- YouTube links, from any app or browser. What happens next is up to you. [`⚙️ Configure On Opening Youtube Link ↗`](/settings/5-youtube-settings/#on-opening-youtube-link)
-- Shared text, useful for links copied from somewhere else.
+- Audio and video files play right away, many files or whole folders (subfolders included) too.
+- `.m3u` and `.m3u8` playlist files play the tracks inside them. [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
+- YouTube video links follow your "On Opening Youtube Link" choice, YouTube playlist links open the playlist page. [`⚙️ Configure On Opening Youtube Link ↗`](/settings/5-youtube-settings/#on-opening-youtube-link)
+- Links inside shared text are picked up too, so a message with a few YouTube links works.
+- Party invite links open the join page. [`🎉 Listening Party feature ↗`](/features/party/#join)
 
-It can also be set as your default music player, and it answers voice assistant requests to play music.
+On Android this covers the share sheet, "Open with" and NFC tags carrying a YouTube link, and Namida can be set as your default music player.
 
-::: callout tip
-NFC tags carrying a YouTube link open in Namida too.
+On desktop the same works through file associations, drag & drop onto the window and the command line (`namida <files, folders or links>`). If Namida is already open, the existing window plays them.
+
+::: callout info
+Voice assistants can open Namida and use the media controls below, but a spoken "play some artist" search is not handled yet, Namida just opens.
 :::
+
+### Media Controls {#media-controls}
+
+Namida shows standard media controls wherever the system offers them:
+
+- Notification and lock screen, with play, pause, next, previous, seek and favourite (or like, for YouTube). [`⚙️ Configure Display Favourite Button in Notification ↗`](/settings/3-playback-settings/#fav-button-notification)
+- Headset and Bluetooth buttons.
+- Android Auto and Wear OS, where Namida shows up as a media app with the current queue to play from (repeat and shuffle included).
+- Windows media keys and the media flyout (with a timeline).
+- Linux desktop media widgets and shell extensions, through MPRIS.
+
+Other apps can read and control the same session too. [`🎉 Automation & Other Apps ↗`](/features/automation/)
 
 ### Quick Settings Tile {#quick-settings-tile}
 
@@ -62,6 +78,7 @@ Control playback even when Namida is not focused, see [`🎉 Shortcuts feature �
 
 ### Related {#related}
 
+- [🎉 Automation & Other Apps](/features/automation/)
 - [🎉 Home Screen Widget](/features/home-widget/)
 - [🎉 Shortcuts](/features/shortcuts/)
 - [⚙️ Youtube, On Opening Youtube Link](/settings/5-youtube-settings/#on-opening-youtube-link)
