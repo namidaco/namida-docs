@@ -50,7 +50,7 @@
       "context": false
     }
   },
-  "customJs": ["assets/js/external-links.js"],
+  "customJs": ["assets/js/external-links.js", "assets/js/goatcounter.js"],
   "minify": true,
   "autoTitleFromH1": true,
   "copyCode": true,

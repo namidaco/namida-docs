@@ -26,3 +26,15 @@
 .docmd-ai-bar-input {
   min-width: 0;
 }
+
+.summer-pagefooter__views {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.summer-pagefooter__views svg {
+  width: 14px;
+  height: 14px;
+  color: var(--summer-fg-faint);
+}
