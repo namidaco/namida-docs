@@ -96,6 +96,30 @@ Some rule ideas, all in one group with All:
 
 More examples from easy to complex, and how rules combine, in [`🎉 Smart Playlists feature ↗`](/features/smart-playlists/#examples).
 
+### Split a CUE album into tracks {#split-cue}
+
+Albums saved as one big file with a `.cue` sheet show up as a single track in Namida. Split them once into separate files, it doesn't lose any quality and every feature works on the result.
+
+Apps that read the `.cue` sheet and copy its tags to the new files:
+
+- Windows: [foobar2000](https://www.foobar2000.org), open the `.cue` file, select all tracks, right click -> Convert -> Quick convert, and pick FLAC.
+- macOS: [XLD](https://tmkk.undo.jp/xld/index_e.html).
+- Linux: [Flacon](https://flacon.github.io).
+- Android: [Flac Cue Splitter](https://play.google.com/store/apps/details?id=com.ex.ogg).
+
+Prefer the command line? [FFcuesplitter](https://github.com/jeanslack/FFcuesplitter) does the same on Windows, macOS and Linux (needs Python and ffmpeg installed):
+
+```bash
+pip install ffcuesplitter
+ffcuesplitter -i "album.cue" -o "output folder"
+```
+
+::: callout tip
+Move the original album file out of your indexed folders (or delete it), otherwise it shows up next to the split tracks.
+:::
+
+For albums meant to play without pauses, turn on gapless playback. [`⚙️ Configure Gapless Playback ↗`](/settings/3-playback-settings/#gapless-playback)
+
 ---
 
 <sub>Author: @MSOB7YY<br>Writer: @claude</sub>

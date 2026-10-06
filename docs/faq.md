@@ -123,6 +123,10 @@ See [Not Planned](/not-planned/#google-play) for the reasoning, and [`📒 Insta
 
 No, and not planned. Importing your Spotify history is supported, but that's all. See [Not Planned](/not-planned/#spotify) for the reasoning and alternatives.
 
+### Are CUE sheets supported? {#cue-sheets}
+
+No, and not planned. Split the album into separate tracks once, it doesn't lose any quality. See [Not Planned](/not-planned/#cue-sheets) for the reasoning. [`📒 Split a CUE album ↗`](/guides/medium/#split-cue)
+
 ### Some FLAC files go silent at some point {#flac-silent}
 
 Check the source you got them from, or re-encode the file with ffmpeg at compression level 5:
