@@ -165,7 +165,7 @@ Desktop:
 
 Misc:
 
-- `VISUAL_TO_AUDIO_DELAY`, shift the visuals to make up for audio delay.
+- `VISUAL_TO_AUDIO_DELAY`, delays lyrics and subtitles to make up for audio delay (like bluetooth headphones). The [lyrics editor](/features/lyrics-editor/#latency) takes it into account too.
 - `RESUME_UI`, the resume button and the highlight on the last played item in pages like albums, playlists and queues. On by default, turn it off to hide both and stop tracking where you left off. `🆕 v7.4.0`
 - `RECENT_SEARCHES`, saves your searches and shows them in the search page.
 - `PREFERRED_SEARCH_TAB`, the tab search opens on.

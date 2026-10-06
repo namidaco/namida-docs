@@ -168,8 +168,9 @@ Choose where lyrics are saved (the cache, the track folder or your own lyrics fo
 
 #### Lyrics Picker {#lyrics-picker}
 
-Long press the lyrics button in the player (right click on desktop) to see every lyrics found for the track. Add, search, edit or shift them from there, and: `🆕 v7.8.0`
+Long press the lyrics button in the player (right click on desktop) to see every lyrics found for the track. Search, shift or edit them from there, and: `🆕 v7.8.0`
 
+- The edit icon opens the lyrics in the lyrics editor, and Add starts new ones there. `🆕 v8.0.0` [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/)
 - The ones in use are marked Active, tap others and press Save to use them instead.
 - Embed (from the ⋮ menu) writes them into the track's lyrics tag.
 - A "Prioritize embedded lyrics" switch shows when the track has embedded lyrics.

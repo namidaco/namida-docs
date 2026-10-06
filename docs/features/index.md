@@ -13,6 +13,7 @@ What Namida can do, each feature explained in its own page.
 - [Playlists & History](/features/playlists-history/), flexible playlists and a reliable history system
 - [Smart Playlists](/features/smart-playlists/), playlists built from rules, from simple to complex
 - [Tag Editor](/features/tag-editor/), edit your music tags right inside Namida
+- [Lyrics Editor](/features/lyrics-editor/), sync lyrics yourself, line by line or word by word
 - [YouTube](/features/youtube/), stream, download and watch YouTube inside Namida
 - [Media Servers](/features/media-servers/), index your servers like normal folders
 - [Sync](/features/sync/), sync app data between your devices

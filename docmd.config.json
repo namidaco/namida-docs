@@ -101,6 +101,12 @@
           "external": false
         },
         {
+          "title": "Lyrics Editor",
+          "path": "/features/lyrics-editor.md",
+          "icon": "mic-vocal",
+          "external": false
+        },
+        {
           "title": "YouTube",
           "path": "/features/youtube.md",
           "icon": "square-play",

@@ -64,6 +64,12 @@ Setting a rating writes it to the file tags of the current track.
 
 The mini lyrics window is a small window with the current lyrics line, see [`🎉 System Integration ↗`](/features/system-integration/#mini-lyrics).
 
+### Lyrics Editor {#lyrics-editor}
+
+`🆕 v8.0.0`
+
+The lyrics editor has its own shortcuts for syncing, see [`🎉 Lyrics Editor Shortcuts ↗`](/features/lyrics-editor/#shortcuts).
+
 ### Custom Hotkeys {#custom-hotkeys}
 
 The shortcuts above only work while Namida is focused.

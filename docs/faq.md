@@ -47,6 +47,7 @@ See [Lyrics](/settings/6-extras-settings/#lyrics) for the full lookup order.
 Not directly, but you can provide your own lyrics per track:
 
 - Long press the lyrics icon in the player and add an LRC file, or paste the lyrics in the lyrics tag using the tag editor.
+- Or write and sync them yourself. `🆕 v8.0.0` [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/)
 - Or embed any of them into the track, from their ⋮ menu in the same list. [`🎉 Lyrics Picker ↗`](/features/playback/#lyrics-picker)
 - Put an `.lrc` file next to the song with the same filename, or in one of your [lyrics folders](/settings/6-extras-settings/#lyrics-folders). Subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) and `.txt` for plain lyrics work too.
 - Set [Prioritize embedded lyrics](/settings/6-extras-settings/#lyrics) depending on where you usually keep them.
