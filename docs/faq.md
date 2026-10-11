@@ -131,11 +131,15 @@ No, and not planned. Split the album into separate tracks once, it doesn't lose 
 
 ### Some FLAC files go silent at some point {#flac-silent}
 
-Check the source you got them from, or re-encode the file with ffmpeg at compression level 5:
+The file has a damaged spot, usually from a bad download or rip. Try the latest [beta release](https://github.com/namidaco/namida-snapshots/releases) first, it plays past damaged spots with a short gap instead of going silent.
+
+To repair the file itself, re-encode it with ffmpeg, which skips the damaged spot and writes a clean copy:
 
 ```bash
 ffmpeg -y -i "path/to/file.flac" -map 0 -c:a flac -compression_level 5 -c:v copy "path/to/output.flac"
 ```
+
+`flac -t "path/to/file.flac"` tells whether a file is damaged.
 
 ---
 
