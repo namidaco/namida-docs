@@ -22,6 +22,8 @@ YouTube updates can break clients from time to time, fixes are available in beta
 2. Sign in to your account, it can improve download speed and fix some playback issues. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
 3. Disable any VPN, custom DNS or proxy.
 4. If YouTube is restricted in your area, try a different VPN instead.
+5. Still doesn't play? Send the logs (they show which JS player failed) with "Report an issue". [`📄 About Page ↗`](/pages/other/#about)
+6. Then open the YouTube flags, press `REFRESH_JS_PLAYER`, and make sure `INNERTUBE_CLIENT` is set to Default. [`⚙️ Configure YouTube Flags ↗`](/settings/5-youtube-settings/#flags)
 
 ### Sync devices can't find or connect {#sync-troubleshooting}
 

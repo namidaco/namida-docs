@@ -5,13 +5,12 @@ description: "Quick fixes and everyday tasks"
 
 # Beginner Guides
 
-### An artist or genre name gets split {#separator-blacklist}
+### An artist, genre or album name gets split {#separator-blacklist}
 
 An artist like "Tyler, The Creator" showing as two artists? The comma separator is splitting it.
 
-1. Open [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators).
-2. Open the blacklist and add the full name.
-3. Refresh the library.
+1. Open [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) and pick Artists, Genres or Albums.
+2. Type the full name (the preview shows how it gets split) and tap Blacklist.
 
 ### Some artworks are wrong {#wrong-artworks}
 

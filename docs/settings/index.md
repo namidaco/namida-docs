@@ -15,6 +15,10 @@ Some settings only work on specific platforms or Android versions. They are labe
 Use the Search button in Namida settings to quickly find any setting. It matches the options inside settings too (like an effect or a performance mode).
 :::
 
+::: callout tip
+Moving some sliders to the very start or end turns the option always on or always off (like Always or Never).
+:::
+
 ### Sections {#sections}
 
 1. [Theme](/settings/1-theme-settings/), colors, dark mode and language

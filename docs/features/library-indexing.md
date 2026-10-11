@@ -18,9 +18,9 @@ A tag holding multiple values gets split into separate entries, so a track shows
 - Artists, album artists and composers use the artists separators.
 - Genres and styles use the genres separators.
 - Moods and tags use both, plus `;` `,` `//` `\\`.
-- Albums only split on `;`, `\\` and the non-breaking space (NBSP).
+- Albums use the albums separators, only the non-breaking space (NBSP) by default.
 
-You control the artists and genres separators and their blacklisted words. Featured artists in titles can also get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) [`📒 Blacklist Guide ↗`](/guides/beginner/#separator-blacklist)
+You control all the separators and their blacklisted words. Featured artists in titles can also get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) [`📒 Blacklist Guide ↗`](/guides/beginner/#separator-blacklist)
 
 ### Filtering {#filtering}
 

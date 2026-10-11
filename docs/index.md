@@ -32,6 +32,7 @@ Then browse [Features](/features/) to see everything else, and [Tips & Tricks](/
 - Sync between devices only adds, it never wipes the other device's data.
 - Listens can't be deleted, only replaced, your history stays truthful.
 - Every queue is saved automatically and stays forever, the only way to remove one is to delete it yourself. [`📄 Queues Page ↗`](/pages/library/#queues)
+- The Refresh on Startup scan skips deletions, files that are no longer reachable don't get removed from your library suddenly. [`⚙️ Configure Refresh on Startup ↗`](/settings/2-indexer-settings/#refresh-on-startup)
 - Destructive actions like deleting files sit behind the advanced dialog, and deleted paths are saved to a file in the app data folder.
 
 **The original experience is cherished.** Content is presented the way it was made:

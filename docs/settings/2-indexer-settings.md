@@ -43,10 +43,11 @@ Identifies artworks by the track's full path instead of just the filename. Enabl
 
 Which fields identify an album. "Album" name + "Album Artist" name by default, add Year, MusicBrainz Album ID or MusicBrainz Album Artist ID to separate albums that share the same name.
 
-### Artists & Genres Separators {#separators}
+### Separators {#separators}
 
-Symbols and words used to split multiple artists or genres from a single tag (like `,` `;` `&` `ft.`). You can also blacklist words so they never get split.
+Symbols and words used to split multiple artists, genres or albums from a single tag (like `,` `;` `&` `ft.`). Each one has a blacklist too, for names that should never get split (letter case does not matter). Type any text to preview how it gets split before adding anything.
 Composers are split using the artists separators too. `🆕 v7.4.0`
+Albums only split on the non-breaking space (NBSP) by default, type `NBSP` to add it back. `🆕 v7.8.0`
 
 ::: callout tip
 No need to add spaces, unless the separator can also appear inside a word (like `x` and `ft.`).
@@ -76,7 +77,7 @@ Index video files too. Videos get their own folders view and can be played on th
 
 ### Refresh on Startup {#refresh-on-startup}
 
-Automatically checks for newly added, changed or deleted files on every app start.
+Automatically checks for newly added or changed files on every app start. It skips deletions, so files that are no longer reachable don't get removed suddenly (a manual refresh removes them).
 
 ### Missing Tracks {#missing-tracks}
 

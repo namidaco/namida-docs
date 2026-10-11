@@ -166,6 +166,7 @@ Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-setting
 - Check your version there too, and an icon appears on the app bar when there is a new version.
 - Open the side menu and press the Namida logo to open the About page.
 - Do NOT press the logo in the About page!! or something very scary will happen!!!1!
+- Use the Jellyda app icon with Jellys Invasion on, then open the About page for a cool ambient experience ;)
 
 ### Misc {#misc-tips}
 
