@@ -62,6 +62,22 @@ Then:
 2. Add that folder on the other device, and refresh the library. [`⚙️ Configure List of Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 3. Sync your data, tracks get matched even if the folders are different. [`🎉 Smart Matching ↗`](/features/sync/#matching)
 
+### Sync playlists between devices {#sync-playlists}
+
+Two ways:
+
+- **Sync**, sends your playlists to another Namida device with their tags and pins. M3U playlists arrive as M3U files in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`, the rest as normal playlists. [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
+- **M3U files**, playlists live inside your music folder and travel with it, other apps can read them too.
+
+For M3U files:
+
+1. Convert your playlists to M3U, they are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`.
+2. Move the M3U files somewhere inside your music folder.
+3. Refresh the playlists in Namida (pull down in the playlists page), they turn into relative playlists.
+4. Sync them together with the music using [syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or similar apps. [`📒 Syncing Music Files Guide ↗`](/guides/medium/#sync-music-files)
+
+More info: [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
+
 ### Path problems after syncing {#sync-path-problems}
 
 Synced to another device and tracks or playlists point to the wrong paths?
@@ -69,14 +85,7 @@ Synced to another device and tracks or playlists point to the wrong paths?
 1. Open Missing Tracks. [`⚙️ Open Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
 2. Press select all, then Update. Everything should be fixed.
 
-For playlists, you can also make them follow your music files instead:
-
-1. Convert your playlists to M3U, they are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`.
-2. Move the M3U files somewhere inside your music folder.
-3. Refresh the playlists in Namida (pull down in the playlists page), they turn into relative playlists.
-4. Sync them together with the music using [syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or similar apps.
-
-More info: [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
+For playlists, you can also make them follow your music files instead. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-playlists)
 
 ### Update directory path {#update-directory-path}
 
