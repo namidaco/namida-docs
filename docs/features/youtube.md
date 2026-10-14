@@ -41,12 +41,14 @@ Watching videos supports gestures:
 - Swipe up or pinch in to enter fullscreen
 - Swipe down on the right side to enter fullscreen portrait
 - Swipe up the minimized player on the video part to enter fullscreen
-- Double tap to seek
-- Swipe vertically to control volume/brightness
+- Double tap the left or right side to seek, keep tapping to seek further
+- In fullscreen, swipe vertically on the right side for volume, and on the left side for brightness (on Android, going past 100% raises the screen brightness too)
 - Swipe horizontally to seek
 - Seeking very close to the starting edge snaps to the very start
 - While seeking, swipe upwards to cancel
 - Long press for 1.5x speed [`⚙️ Configure Long Press Speed ↗`](/settings/3-playback-settings/#long-press-speed)
+
+The lock button in fullscreen blocks all gestures and controls until you unlock it.
 
 Horizontal seeking on the video can be limited to fullscreen, the expanded miniplayer, always or never. [`⚙️ Configure Drag to seek (Video) ↗`](/settings/5-youtube-settings/#miniplayer)
 

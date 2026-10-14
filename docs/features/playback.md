@@ -257,7 +257,7 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 - Seeking very close to the starting edge snaps to the very start.
 - Swipe the lyrics left or right in fullscreen or in the widescreen player to skip tracks. `🆕 v8.2.0`
 - Pinch the lyrics to change the font size, separately for normal and fullscreen. On desktop use `Ctrl` + mouse wheel, `Ctrl` + `+` / `-`, or `Ctrl` + `0` to reset. [`🎉 Shortcuts feature ↗`](/features/shortcuts/#zoom)
-- Zoom in on the video to enter fullscreen.
+- Zoom in on the video, or double tap it, to enter fullscreen. [`🎉 Video View gestures ↗`](/features/youtube/#video-view)
 - More hidden gestures in [`📄 Tips & Tricks ↗`](/tips/).
 
 ### Track Menu {#track-menu}
