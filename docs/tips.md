@@ -127,7 +127,7 @@ The track menu has an Advanced section:
 - Take a snapshot of a channel or playlist: open the videos tab, press "load all", wait, then open the menu and add to a playlist.
 - Type `after:2024-01-01` or `before:2023-06` in the search text to filter by upload date, or use the filters row. [`📄 Search Filters ↗`](/pages/youtube/#search-filters)
 - In a channel page, the time range icon lists only videos uploaded after or before a date.
-- In the YouTube page, tap the selected section again (like Home or Playlists) to switch it between local and YouTube. `🆕 v8.2.0`
+- In the YouTube page, tap the selected section again (like Home or Playlists) to switch it between Namida and your account. `🆕 v8.2.0`
 - Extra experimental switches hide behind the flag icon in [Youtube Settings](/settings/5-youtube-settings/#flags) and [Extras Settings](/settings/6-extras-settings/#flags).
 
 ### History {#history-tips}

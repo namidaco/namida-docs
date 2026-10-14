@@ -81,7 +81,7 @@ Hidden experimental options. Press the flag icon at the top of the Youtube setti
 - `PREFER_MIX_PLAYLIST_AS_RELATED_VIDEOS`, use mixes for the related section (useful if related videos are _unrelated_).
 - `SHOW_LIKE_STATUS_ON_CARDS`, show your like status on video cards (can increase data usage).
 - `PREFER_LIKE_BUTTON_OVER_FAVOURITE`, show a like button instead of the heart in the notification, widgets and player while playing YouTube items (when signed in).
-- `LINK_LIKE_BUTTON_WITH_FAVOURITES`, liking a video adds it to your local YouTube favourites, unliking or disliking removes it.
+- `LINK_LIKE_BUTTON_WITH_FAVOURITES`, liking a video adds it to your Namida YouTube favourites, unliking or disliking removes it.
 - `USE_NEW_NOTIFICATIONS_EXTRACTOR`, try it if new notifications don't show up, but their order might not be accurate.
 - `MAX_PAGE_CACHE_DURATION_VALIDITY`, how long cached pages stay valid.
 - `RESET_YOUTUBE_SESSION`, start a fresh YouTube session while keeping your accounts (can fix streaming issues). Namida also resets it on its own when playback keeps failing. `🆕 v8.2.0`

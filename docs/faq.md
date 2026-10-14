@@ -25,6 +25,15 @@ YouTube updates can break clients from time to time, fixes are available in beta
 5. Still doesn't play? Send the logs (they show which JS player failed) with "Report an issue". [`📄 About Page ↗`](/pages/other/#about)
 6. Then open the YouTube flags, press `RESET_YOUTUBE_SESSION`, and make sure `INNERTUBE_CLIENT` is set to Default. [`⚙️ Configure YouTube Flags ↗`](/settings/5-youtube-settings/#flags)
 
+### What do Local and YouTube mean in the YouTube tab? {#youtube-local-vs-account}
+
+They are where a section's data comes from, tap the selected section again to switch.
+
+- Local is your Namida data, kept on your device and available without signing in (not related to your local music library).
+- YouTube is your signed-in account's live data.
+
+The two are separate, a playlist made in Namida doesn't show in your account and the other way around. "Import playlist" copies an account playlist into Namida. [`🎉 Namida & Account ↗`](/features/youtube/#namida-account)
+
 ### Sync devices can't find or connect {#sync-troubleshooting}
 
 1. Make sure both devices run the same Namida version and are on the same network. Guest networks and some routers keep devices apart, and a VPN can get in the way too.

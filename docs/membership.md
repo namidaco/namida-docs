@@ -45,7 +45,7 @@ Everything else is free, here is a taste of it.
 - The full video player, with gestures, fullscreen, subtitles, chapters and picture-in-picture.
 - Search with filters, and offline search through everything you watched before.
 - Every option in the video menu: favourites, add to playlist, download, cache, copy, go to channel, play next, play after, play last, stop after this video and more.
-- Your own local YouTube playlists, favourites, subscriptions with groups, history and most played.
+- Your own Namida YouTube playlists, favourites, subscriptions with groups, history and most played.
 - SponsorBlock, Return YouTube Dislike, comments, related videos, hashtags and channel pages.
 - Info of private and deleted videos, thanks to Filmot.
 - Importing your history, playlists and subscriptions from a YouTube takeout.

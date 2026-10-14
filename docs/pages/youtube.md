@@ -6,7 +6,7 @@ description: "The pages of the YouTube section"
 # YouTube Pages
 
 The pages of the [YouTube](/features/youtube/) section.
-Most pages have a local variant and a hosted one for when you are signed in (showing your account's live data).
+Most pages have a Namida variant, and an account one for when you are signed in.
 
 ### Sections {#sections}
 
@@ -15,7 +15,7 @@ Most pages have a local variant and a hosted one for when you are signed in (sho
 The header at the top of the YouTube tab switches between Home, Notifications, Channels, Playlists and Downloads. A small badge shows each one's source:
 
 - Local: what Namida keeps on your device (its own watch history, playlists and subscribed channels).
-- YouTube: your signed-in account's live data, the default once you are signed in.
+- YouTube: your signed-in account's live data, the default once you are signed in. [`🎉 Namida & Account ↗`](/features/youtube/#namida-account)
 
 Navigating:
 
@@ -33,7 +33,7 @@ Open a notification's menu and press "More" to hide it, or to turn off notificat
 
 Your YouTube playlists, along with the built-in ones: History, Most Played and Favourites. You can create playlists, and import your existing playlists and channels from a YouTube takeout export. [`🎉 Playlists & History feature ↗`](/features/playlists-history/) [`🎉 YouTube Playlists feature ↗`](/features/youtube/#playlists)
 
-Local YouTube playlists can be tagged, pinned and filtered too. `🆕 v7.8.0` [`🎉 Playlist Tags ↗`](/features/playlists-history/#playlist-tags)
+Namida YouTube playlists can be tagged, pinned and filtered too. `🆕 v7.8.0` [`🎉 Playlist Tags ↗`](/features/playlists-history/#playlist-tags)
 
 ### Channels {#channels}
 
@@ -43,7 +43,10 @@ Tap the channel picture or banner to view it fullscreen, with a save button. `�
 
 ### History {#history}
 
-Your YouTube watch history inside Namida (separate from the local one), with its own Most Played. The watch history of your account is available too, with a membership. [`📄 Membership ↗`](/membership/#benefits)
+There are two YouTube histories:
+
+- Namida: the videos you watched in Namida, with their own Most Played. Find it in the Playlists section (Local), it's kept apart from the history of your local music library.
+- Account: your account's watch history, at the top of the Playlists section (YouTube). Needs a membership. [`📄 Membership ↗`](/membership/#benefits)
 
 ### Downloads {#downloads}
 

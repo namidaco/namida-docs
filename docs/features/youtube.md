@@ -178,26 +178,35 @@ Streamed videos and audios are cached, so they play offline later without downlo
 [`⚙️ Configure Cache Limits ↗`](/settings/8-advanced-settings/#cache-limits)
 
 You can also cache ahead of time, without saving any files to your downloads folder.
-Use "Cache" from the menu of a video, a YouTube playlist, or a local YouTube playlist, pick audio only or a video quality, and the videos are ready for offline playback. Tasks show up in the [`📄 Downloads page ↗`](/pages/youtube/#downloads) like downloads. `🆕 v7.4.0`
+Use "Cache" from the menu of a video, a YouTube playlist, or a Namida YouTube playlist, pick audio only or a video quality, and the videos are ready for offline playback. Tasks show up in the [`📄 Downloads page ↗`](/pages/youtube/#downloads) like downloads. `🆕 v7.4.0`
 
 ::: callout info
 Items cached this way get the normal priority, set them to VIP if you want to make sure they are never cleaned up.
 :::
+
+### Namida & Account {#namida-account}
+
+Your YouTube data lives in two separate places:
+
+- **Namida**, kept on your device and works without signing in: watch history, most played, favourites, playlists and subscribed channels (with groups).
+- **Account**, your signed-in account's live data: home feed, notifications, subscriptions, playlists and watch history.
+
+The app labels them Local and YouTube, in the YouTube tab sections and in the "Add to Playlist" sheet. [`📄 YouTube Sections ↗`](/pages/youtube/#sections)
 
 ### Playlists {#playlists}
 
 There are 3 kinds of playlists in Namida:
 
 1. **Local playlists**, your normal library playlists, see [`🎉 Playlists & History feature ↗`](/features/playlists-history/).
-2. **Local YouTube playlists**, playlists of YouTube videos, stored inside Namida.
-3. **Hosted/Online YouTube playlists**, your account playlists, useful to access them instantly. You can also save them as local YouTube playlists, so videos don't get randomly removed (as YouTube usually does).
+2. **Namida YouTube playlists**, playlists of YouTube videos, stored inside Namida.
+3. **Account YouTube playlists**, your account playlists, useful to access them instantly. You can also save them as Namida YouTube playlists, so videos don't get randomly removed (as YouTube usually does).
 
 How actions map to them:
 
-- While browsing an online public/unlisted playlist, open the menu and use "Save to library", this adds it to your hosted playlists (3).
-- While browsing an online playlist or your account playlists, open the menu and use "Import playlist", this adds it as a local YouTube playlist (2).
+- While browsing a public/unlisted YouTube playlist, open the menu and use "Save to library", this adds it to your account playlists (3).
+- While browsing a YouTube playlist or your account playlists, open the menu and use "Import playlist", this adds it as a Namida YouTube playlist (2).
 - A local track's "Add to Playlist" adds to local playlists (1).
-- A YouTube video's "Add to Playlist" adds to local YouTube playlists (2) if the local tab is selected, or to your hosted playlists (3) if the YouTube tab is selected.
+- A YouTube video's "Add to Playlist" adds to Namida YouTube playlists (2) if the Local tab is selected, or to your account playlists (3) if the YouTube tab is selected.
 - A local track that has a YouTube link can be added to YouTube playlists too, open its dialog and press the menu button beside "Open in Youtube view", this gives the YouTube video menu for it. `🆕 v7.4.0`
 
 Editing one of your own account playlists from its menu also lets you choose "Add new videos to the top", press the settings icon beside the privacy chips. `🆕 v7.4.0`
@@ -231,7 +240,7 @@ Channel custom emojis, voice replies (shown as their transcript) and the "commen
 ### Takeout Import {#history-import}
 
 You can import your watch history from YouTube takeout files (both json and html formats work). It gets merged into Namida history like any local listen.
-The same takeout can also bring your favourites (liked videos) and playlists (as local YouTube playlists), you choose what gets imported. `🆕 v8.2.0`
+The same takeout can also bring your favourites (liked videos) and playlists (as Namida YouTube playlists), you choose what gets imported. `🆕 v8.2.0`
 Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-data)
 
 ::: callout tip
