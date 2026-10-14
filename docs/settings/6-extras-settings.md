@@ -70,7 +70,7 @@ Lyrics that contain any Japanese kana are read as Japanese, otherwise Chinese ch
 ### Lyrics {#lyrics}
 
 - Lyrics source, auto, local only or internet only.
-- Prefer embedded lyrics, the lyrics tag wins over lyrics files and online lyrics: Always, Never, or Synced (default, only when the tag has synced lyrics). `🆕 v8.2.0`
+- Prefer embedded lyrics, the lyrics tag wins over lyrics files and online lyrics: Always, Never, or Synced `🆕 v8.2.0` (default, only when the tag has synced lyrics).
 - Stretch lyrics duration, adapts the timing for sped up, slowed or nightcore versions.
 - Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
   - Shows translations and romanizations under each line, and word synced lyrics light up word by word like in the lyrics view. `🆕 v7.5.0`
@@ -83,7 +83,7 @@ Files next to the track can be `.lrc`, `.ttml`, `.txt` or subtitle files (`.srt`
 Online databases are LRCLIB and KuGou. When both find lyrics, the one closest to the track duration is used, and the lyrics menu shows where each one came from.
 
 ::: callout tip
-Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track. For fetched lyrics, pick Ignore from their menu in the [lyrics picker](/features/playback/#lyrics-picker). `🆕 v8.2.0`
+Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track. For fetched lyrics, pick Ignore `🆕 v8.2.0` from their menu in the [lyrics picker](/features/playback/#lyrics-picker).
 :::
 
 Once lyrics are found they get saved (in the cache by default), and the saved copy is used first from then on. If lyrics you added later don't show up, pick them in the [lyrics picker](/features/playback/#lyrics-picker) and press Save, or delete the saved one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).

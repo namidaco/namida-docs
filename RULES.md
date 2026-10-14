@@ -107,7 +107,7 @@ The namida commit the docs are based on is stored in `package.json` under `namid
 
 1. In the namida repo, list what changed since then: `git log --reverse <commit>..HEAD`.
 2. Inspect each commit's actual diff (`git show <hash>`), not only its message, and check the final code at HEAD since later commits can change things. New UI strings show up in `en.arb`, the translations submodule isn't pinned by namida commits, so compare it by date.
-3. Update the docs. Mark new features, settings and sections with `` `🆕 vX.Y.Z` ``, on its own line under the header or at the end of the line.
+3. Update the docs. Mark new features, settings and sections with `` `🆕 vX.Y.Z` ``, on its own line under the header or at the end of the line. A marker reads as covering its whole line, so when only part of a line is new, move that part to a sub-bullet in lists, otherwise put the marker right after the new part (``turn on the "Cache" chip `🆕 v7.4.0` to see...``), or the new sentence on its own line as a last resort. Minor details (like a restriction) need no marker.
 4. Set `namida.commit` and `namida.version` in `package.json` to the new HEAD, and bump `version` there and `versions` in `docmd.config.json`.
 
 ## Verification

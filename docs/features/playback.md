@@ -210,7 +210,7 @@ Long press the lyrics button in the player (right click on desktop) to see every
 - The edit icon opens the lyrics in the lyrics editor, and Add starts new ones there. `🆕 v8.2.0` [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/)
 - The ones in use are marked Active, tap others and press Save to use them instead.
 - Embed (from the ⋮ menu) writes them into the track's lyrics tag.
-- "Prefer embedded lyrics" (global) shows when the track has embedded lyrics: Never, Synced (only when they're synced) or Always. `🆕 v8.2.0`
+- "Prefer embedded lyrics" (global) shows when the track has embedded lyrics: Never, Synced `🆕 v8.2.0` (only when they're synced) or Always.
 - Ignore (from the ⋮ menu of fetched lyrics) hides them and stops fetching lyrics for that track. `🆕 v8.2.0`
 - Font Scale sets the lyrics size, for normal and fullscreen.
 

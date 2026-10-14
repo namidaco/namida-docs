@@ -145,7 +145,7 @@ Random (Daily) keeps the same random order for the whole day, it's in every trac
 
 ### Smart Search {#smart-search}
 
-The same rules work as a one time search, press the filter icon at the end of the chips row in the search page. Long press it to edit the rules, the add icon there saves them as a new smart playlist. `🆕 v8.2.0`
+The same rules work as a one time search, press the filter icon at the end of the chips row in the search page. Long press it to edit the rules, the add icon there `🆕 v8.2.0` saves them as a new smart playlist.
 
 In album, artist and other media pages, long press the filter icon to start one filled with that media.
 

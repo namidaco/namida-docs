@@ -26,7 +26,8 @@ On by default:
 - Track stats & favourites, for local and YouTube separately
 - Audio configs, the per item sound settings
 - History, for local and YouTube, merged without duplicated listens
-- Playlists & smart playlists, plus your YouTube playlists, with their tags and pins `🆕 v7.8.0`
+- Playlists & smart playlists, plus your YouTube playlists
+  - With their tags and pins `🆕 v7.8.0`
 - Saved queues
 - Last played track per source
 - Cached videos priority

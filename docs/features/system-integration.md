@@ -12,7 +12,8 @@ For Tasker, scripts and scrobblers, see [`🎉 Automation & Other Apps ↗`](/fe
 
 Any app that can "open" or "share" something can hand it to Namida:
 
-- Audio and video files play right away, many files or whole folders (subfolders included) too. They don't join your library, but keep their info in the queue and history. `🆕 v8.2.0`
+- Audio and video files play right away, many files or whole folders (subfolders included) too.
+  - They don't join your library, but keep their info in the queue and history. `🆕 v8.2.0`
 - `.m3u` and `.m3u8` playlist files play the tracks inside them. [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
 - YouTube video links follow your "On Opening Youtube Link" choice, YouTube playlist links open the playlist page. [`⚙️ Configure On Opening Youtube Link ↗`](/settings/5-youtube-settings/#on-opening-youtube-link)
 - Links inside shared text are picked up too, so a message with a few YouTube links works.

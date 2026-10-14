@@ -11,7 +11,8 @@ Albums, artists, genres, languages, moods, tags and playlists (YouTube ones too)
 
 ### Home {#home}
 
-Your personalized start page: mixes generated from your history, recent listens, recently added, top recent albums & artists, and Lost Memories (tracks you listened to around this time years ago). Sections can be toggled and reordered. Pinned playlists get a section of their own too. `🆕 v8.2.0`
+Your personalized start page: mixes generated from your history, recent listens, recently added, top recent albums & artists, and Lost Memories (tracks you listened to around this time years ago). Sections can be toggled and reordered.
+Pinned playlists get a section of their own too. `🆕 v8.2.0`
 
 The mixes are: Recommended, Supremacy (built around what is playing right now), Top Recents, Underrated, Lost Partners, Discover, Favourites and Random Picks. Empty ones move to the end.
 
@@ -131,7 +132,7 @@ Results are ranked by a match score:
 - Tracks you listen to more get a small boost.
 - Results that score far below the best match are hidden behind a Show more button. `🆕 v8.2.0`
 
-This ranking is the "Auto" sort in the search sort menu, pick any other sort to order the results by it instead. Searching inside an album, artist, playlist or any other media page uses the same ranking, and so does filtering the albums, artists, genres or playlists pages. `🆕 v8.2.0`
+This ranking is the "Auto" sort in the search sort menu, pick any other sort to order the results by it instead. Filtering the albums, artists, genres or playlists pages uses the same ranking `🆕 v8.2.0`, and so does searching inside an album, artist, playlist or any other media page.
 
 ---
 

@@ -37,7 +37,8 @@ It can also be an artwork gesture, a notification button on Android, or `Ctrl` +
 1. Long press the lyrics icon in the player.
 2. From there you can pick an LRC file, search for other lyrics, or change the lyrics offset if they are early or late. Tap the lyrics you want and press Save to use them (the ones in use are marked Active).
 3. To fix the text or the timing of single lines, press their edit icon, see [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/).
-4. To save them inside the file, press Embed from their ⋮ menu. Synced embedded lyrics are used first, change it from "Prefer embedded lyrics" at the top. `🆕 v8.2.0`
+4. To save them inside the file, press Embed from their ⋮ menu.
+   - Synced embedded lyrics are used first, change it from "Prefer embedded lyrics" at the top. `🆕 v8.2.0`
 5. Wrong lyrics keep getting fetched? Press Ignore from the ⋮ menu of the cached ones, they get hidden and won't be fetched again for this track. `🆕 v8.2.0`
 6. To force no lyrics for a track, start its embedded lyrics tag with `IGNORE`, see [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics).
 

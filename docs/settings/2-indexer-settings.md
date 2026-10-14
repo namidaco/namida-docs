@@ -54,7 +54,7 @@ Which fields identify an album. "Album" name + "Album Artist" name by default, a
 
 ### Include Videos {#include-videos}
 
-Index video files too. Videos get their own folders view and can be played on their own. The refresh icon beside the switch re-scans local videos. `🆕 v8.2.0`
+Index video files too. Videos get their own folders view and can be played on their own. The refresh icon `🆕 v8.2.0` beside the switch re-scans local videos.
 
 ### Respect .nomedia {#respect-nomedia}
 

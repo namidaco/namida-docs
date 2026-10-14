@@ -98,7 +98,7 @@ Turned off while [Bit-perfect](/features/playback/#bit-perfect), [USB direct acc
 
 ### Fade Effect on Play/Pause {#fade-play-pause}
 
-Fades audio in and out instead of an instant play or pause, with separate durations for each. Turned off while [Bit-perfect](/features/playback/#bit-perfect) is on. `🆕 v7.8.0`
+Fades audio in and out instead of an instant play or pause, with separate durations for each. Turned off while [Bit-perfect](/features/playback/#bit-perfect) is on.
 
 ### Auto Play on Next/Previous {#auto-play-next-prev}
 

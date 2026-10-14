@@ -37,7 +37,8 @@ Local YouTube playlists can be tagged, pinned and filtered too. `🆕 v7.8.0` [`
 
 ### Channels {#channels}
 
-Your subscribed channels, they can be organized into groups. Each channel page shows its videos and info. Press the time range icon in a channel page to list only videos uploaded after or before a date. `🆕 v7.0.0`
+Your subscribed channels, they can be organized into groups. Each channel page shows its videos and info.
+Press the time range icon in a channel page to list only videos uploaded after or before a date. `🆕 v7.0.0`
 Tap the channel picture or banner to view it fullscreen, with a save button. `🆕 v8.2.0`
 
 ### History {#history}
@@ -56,7 +57,7 @@ Cache tasks show up here too, grouped under their playlist. While downloads or [
 ### Search {#search}
 
 Search YouTube directly, results include videos, playlists and channels.
-Offline search is available for browsing what you already have, turn on the "Cache" chip to see only videos you can play offline (cached audio, cached video or a linked local track). `🆕 v7.4.0`
+Offline search is available for browsing what you already have, turn on the "Cache" chip `🆕 v7.4.0` to see only videos you can play offline (cached audio, cached video or a linked local track).
 
 #### Filters {#search-filters}
 

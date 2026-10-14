@@ -78,7 +78,7 @@ Everything else is free, here is a taste of it.
 
 `🆕 v7.8.0`
 
-No membership? Go egg hunting. Namida hides eggs all around the app, and you can crack them for supporter features of your choice. Each feature costs 2 or 3 eggs, so pick wisely. `🆕 v8.2.0`
+No membership? Go egg hunting. Namida hides eggs all around the app, and you can crack them for supporter features of your choice. Each feature costs 2 or 3 eggs `🆕 v8.2.0`, so pick wisely.
 
 - Stuck? Settings -> About -> Eggs has a hint for every egg.
 - Some eggs only come out on special days, keep an eye on the top of the app.

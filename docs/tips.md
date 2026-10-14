@@ -20,7 +20,8 @@ Not so obvious features you might have missed.
 - Pasting a YouTube link or a playlist link in the searchbar automatically opens it.
 - When playing from search, you can choose the [Play Mode](/pages/library/#search): selected track only, search results, album, first artist or first genre.
 - Links and texts you copy can appear right in the searchbar, enable [Clipboard Monitoring](/settings/6-extras-settings/#clipboard-monitoring).
-- Settings has its own search, press the Search button in settings. It finds options inside settings too, like "Sakura". `🆕 v7.8.0`
+- Settings has its own search, press the Search button in settings.
+  - It finds options inside settings too, like "Sakura". `🆕 v7.8.0`
   - The "Changed" chip there lists every setting you changed, each with a button to reset it. `🆕 v8.2.0`
 - Your recent searches can be saved and shown in the search page, enable `RECENT_SEARCHES` in the [Extras Flags](/settings/6-extras-settings/#flags).
 
@@ -30,7 +31,8 @@ Not so obvious features you might have missed.
   - Hold them to keep seeking (rewind/fastforward).
 - Long press the previous button to jump to the very start of the track, and long press the next button to speed up playback while you hold it. [`⚙️ Configure Long Press Speed ↗`](/settings/3-playback-settings/#long-press-speed)
 - While seeking, swipe upwards to cancel. Seeking near the starting edge snaps to the very start.
-- Swipe the miniplayer left or right to change tracks, works on the fullscreen lyrics and the widescreen player lyrics too. `🆕 v8.2.0`
+- Swipe the miniplayer left or right to change tracks.
+  - Works on the fullscreen lyrics and the widescreen player lyrics too. `🆕 v8.2.0`
 - Shuffle is a toggle, it shuffles the queue itself and turning it off brings back the original order. Long press it for a one time Shuffle Next or Shuffle All. [`🎉 Queue System ↗`](/features/playback/#queue)
 - The repeat button has its own shuffle flavor, Repeat All Queue (Shuffle) reshuffles the queue each time it reaches the end. [`🎉 Repeat Modes ↗`](/features/playback/#repeat-modes)
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
@@ -62,7 +64,8 @@ Long press a track (or tap its menu) for more than you might expect:
 - Insert after latest inserted, for stacking multiple tracks one after another.
 - Set Rating, Moods and Tags, they get their own [library pages](/pages/library/#moods-tags-rating). For many tracks at once, use the "Set Rating" icon beside Edit Tags.
 - Set Youtube Link, attach a video to any local track.
-- Add more from this Album, Artist or Folder to queue. Long press the + to configure what gets added. `🆕 v8.2.0`
+- Add more from this Album, Artist or Folder to queue.
+  - Long press the + to configure what gets added. `🆕 v8.2.0`
 
 ### Advanced Dialog {#advanced-dialog}
 
@@ -94,7 +97,8 @@ The track menu has an Advanced section:
   - This only changes the display image, the audio files and their tags are untouched.
 - Open the dialog of an album, artist, playlist or folder and press Stats to see listen stats for just those tracks.
 - The current queue, the stats page, smart playlists and the listening party can be library tabs of their own. [`📄 Queue Tab ↗`](/pages/library/#current-queue) [`📄 Stats Tab ↗`](/pages/library/#stats)
-- Tabs with variants (like Tracks: Audio or Folders: Videos) share one slot in the navigation bar, long press it to switch. Long pressing the YouTube tab jumps to one of its sections. `🆕 v8.2.0` [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+- Tabs with variants (like Tracks: Audio or Folders: Videos) share one slot in the navigation bar, long press it to switch. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+  - Long pressing the YouTube tab jumps to one of its sections. `🆕 v8.2.0`
 - In the playlists page grouped by tags, long press a tag header to select all its playlists. `🆕 v8.2.0`
 - In an artist page, long press the icon of the albums, EPs or singles row to sort them. `🆕 v8.2.0`
 - Press the map icon in an artist page to see where that artist sits among the rest of your library. [`📄 Artists Map ↗`](/pages/library/#artists-map)
@@ -132,7 +136,8 @@ The track menu has an Advanced section:
 - Tap a year chip to jump to the same day but in that year.
 - The search icon beside the year chips searches your history. `🆕 v8.2.0`
 - Most Played supports custom time ranges, see your top tracks of any period. Use the slider to navigate adjacent periods more easily, or pick a single day with a days radius.
-- Open a track's listens dialog, tap a listen to jump to that day in history, or use the button beside it to open Most Played for that range. After jumping, arrows at the bottom move between its other listens. `🆕 v8.2.0`
+- Open a track's listens dialog, tap a listen to jump to that day in history, or use the button beside it to open Most Played for that range.
+  - After jumping, arrows at the bottom move between its other listens. `🆕 v8.2.0`
 - Replace all listens of a track with another track, useful after re-downloading a file (Track's Dialog -> Advanced -> Replace all listens).
 - Imported a wrong source? [Remove it from history](/settings/8-advanced-settings/#remove-source-history) in one go.
 - The Stats page has charts for any time range, and a Your Year wrap up shows up on the Home page every December and January. [`📄 Stats Page ↗`](/pages/other/#stats)
@@ -144,7 +149,8 @@ The track menu has an Advanced section:
 - Tap any item in the track info dialog to copy it.
 - In a track, album or artist info dialog, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop. You can zoom in until single pixels show, and they stay sharp.
 - Covers made from several tracks (like in a playlist page) open in a swipeable viewer when you tap one of their images, use the arrow keys on desktop. The viewer can save the whole collage too. `🆕 v8.2.0`
-- Sort by more than one property (like artist, then year, then title). Press Advanced in any sort menu to pick and reorder them. Available for tracks, and now albums, artists, genres and playlists too. `🆕 v7.8.0`
+- Sort by more than one property (like artist, then year, then title). Press Advanced in any sort menu to pick and reorder them.
+  - Available for tracks, and now albums, artists, genres and playlists too. `🆕 v7.8.0`
 - Sort by Random (Daily) for a random order that stays the same all day, and changes the next day. `🆕 v7.8.0`
 - The tag editor keeps file dates by default, so edited tracks don't jump to the top of Recently Added. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
 - Moved your files? The [Missing Tracks](/settings/2-indexer-settings/#missing-tracks) page relinks them without losing stats.

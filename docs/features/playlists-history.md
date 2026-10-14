@@ -9,9 +9,10 @@ description: "Flexible playlists and a reliable history system"
 
 Normal playlists with custom order and the ability to set custom artworks. Also:
 
-- M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders (except [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists` which always loads). `🆕 v7.5.0`
+- M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders (except [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists` which always loads `🆕 v7.5.0`).
   - Sharing a playlist as a file isn't possible, send its M3U file with apps like [Syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or [LocalSend](https://localsend.org) instead. Converted playlists are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-playlists)
-  - Between Namida devices, Sync can send your playlists too. M3U playlists arrive as M3U files in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`, the rest as normal playlists. `🆕 v7.5.0` [`🎉 Sync feature ↗`](/features/sync/#data)
+  - Between Namida devices, Sync can send your playlists too. [`🎉 Sync feature ↗`](/features/sync/#data)
+    - M3U playlists arrive as M3U files in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`, the rest as normal playlists. `🆕 v7.5.0`
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
 - YouTube playlist downloads can be added to a library playlist, in the same order as the source. `🆕 v7.4.0` [`🎉 Into a Library Playlist ↗`](/features/youtube/#playlist-downloads)
 - Custom order for playlists, press the edit icon at the top to enable reordering.
@@ -39,7 +40,8 @@ Organize your playlists with tags, like `gym`, `chill` or `anime/openings`.
 - Add tags from a playlist's menu -> Tags/Moods. Select many playlists to tag them all at once.
 - Use a slash to put a tag inside another, like `gym/cardio`. Filtering by `gym` shows those too.
 - Tap a tag in the tags row to show only its playlists, or hold it to hide them instead.
-- The ⋯ chip can play the shown playlists, save the filter, group the page by tags, or manage your tags. When grouped, long press a tag's header to select all its playlists. `🆕 v8.2.0`
+- The ⋯ chip can play the shown playlists, save the filter, group the page by tags, or manage your tags.
+  - When grouped, long press a tag's header to select all its playlists. `🆕 v8.2.0`
 - Importing a folder of M3U files tags each playlist with its folder name. [`📄 Playlists Page ↗`](/pages/library/#playlists)
 
 YouTube playlists can be tagged and pinned too. [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists)
@@ -58,7 +60,8 @@ All rules, how to combine them, and examples from easy to complex: [`🎉 Smart 
 
 A reliable and flexible history system. You choose the minimum seconds or percentage that counts as a listen. History can be imported from other services, and listens can be replaced, never deleted. [`⚙️ Configure Listen Counting ↗`](/settings/3-playback-settings/#count-listen-after)
 
-Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range. After jumping, arrows at the bottom move between that track's other listens. `🆕 v8.2.0`
+Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range.
+After jumping, arrows at the bottom move between that track's other listens. `🆕 v8.2.0`
 
 Search the history with the icon at the end of the years row, only the listens of matching tracks are shown. `🆕 v8.2.0`
 
