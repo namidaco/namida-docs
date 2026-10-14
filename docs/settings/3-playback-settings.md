@@ -81,7 +81,7 @@ Keeps the volume consistent between tracks (using the replay gain tag, or the lo
 
 `💻 Android+Linux only`
 
-Skips silent parts of the audio.
+Skips silent parts of the audio (not for YouTube).
 
 ### Gapless Playback {#gapless-playback}
 

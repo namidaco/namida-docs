@@ -62,6 +62,8 @@ For bugs and YouTube problems, the logs zip is ready too, attach it to the issue
 
 Shared logs leave out personal info (like device names and folder paths).
 
+The Stats card sums up your library, its arrow opens the full [Stats page](#stats).
+
 The Eggs card shows your eggs, their hints, and what you unlocked with them. `🆕 v7.8.0` [`📄 Eggs ↗`](/membership/#eggs)
 
 ---

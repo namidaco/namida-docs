@@ -48,6 +48,8 @@ The release type tag decides if an album is a single, an EP or an album. `🆕 v
 
 Albums, artists, genres and playlists can use several sorters too, from Advanced in their sort menu. Sort menus also have quick Reverse Order, Ignore prefixes and Romanization toggles. `🆕 v7.8.0`
 
+In Advanced, each sorter can be reversed on its own (like newest year first, then title A to Z), and Reverse Order still flips the whole list. `🆕 v8.2.0`
+
 Text sorting ignores accents and reads numbers by their value, so `Ànteros` sits next to `Anteros`, and `2.mp3` comes before `10.mp3`. This applies to every text sort, including playlists and folders. `🆕 v7.4.0`
 
 Non latin titles and artists can also be sorted by their romanized form. [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)

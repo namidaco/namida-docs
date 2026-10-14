@@ -151,6 +151,7 @@ The track menu has an Advanced section:
 - Covers made from several tracks (like in a playlist page) open in a swipeable viewer when you tap one of their images, use the arrow keys on desktop. The viewer can save the whole collage too. `🆕 v8.2.0`
 - Sort by more than one property (like artist, then year, then title). Press Advanced in any sort menu to pick and reorder them.
   - Available for tracks, and now albums, artists, genres and playlists too. `🆕 v7.8.0`
+  - Press the arrow beside a sorter to reverse only that one. `🆕 v8.2.0`
 - Sort by Random (Daily) for a random order that stays the same all day, and changes the next day. `🆕 v7.8.0`
 - The tag editor keeps file dates by default, so edited tracks don't jump to the top of Recently Added. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
 - Moved your files? The [Missing Tracks](/settings/2-indexer-settings/#missing-tracks) page relinks them without losing stats.

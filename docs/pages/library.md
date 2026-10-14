@@ -94,7 +94,7 @@ Only the newest 20 queues load at first, press "Load all" at the bottom for the 
 
 `🆕 v7.0.0`
 
-The currently playing queue as a library tab, so you can keep it a swipe away instead of opening the player. Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs).
+The currently playing queue as a library tab, so you can keep it a swipe away instead of opening the player. Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs). [`🎉 Queue System ↗`](/features/playback/#queue)
 
 ### Stats {#stats}
 

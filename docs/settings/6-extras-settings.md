@@ -56,7 +56,7 @@ Ignores symbols and spaces while searching, so matches are easier to find.
 
 Read non latin text in latin letters. Press it to open the options:
 
-- **Romanization: Lyrics**, adds the romanized text under each synced lyrics line. Plain lyrics are not romanized.
+- **Romanization: Lyrics**, adds the romanized text under each synced lyrics line. Plain lyrics are not romanized, and lines that already have their own romanized line are skipped.
 - **Romanization: Sort by**, text sorts use the romanized text (so a Japanese title like `さくら` sorts under S). [`🎉 Sorting ↗`](/features/library-indexing/#sorting)
 - **Dictionary**, needed for Japanese kanji and Chinese characters. It's a one time download, done automatically when an option needs it. Press it again to delete it.
 

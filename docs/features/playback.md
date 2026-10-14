@@ -30,6 +30,7 @@ The queue's bottom row packs more than it looks:
   - Local: Random, Time Range, Moods, Ratings, Similar Release Date, Similar Discover Date, Similar Time Range, Similar Tracks and Recommended
   - YouTube: Random, Time Range, Mix, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended.
 - A jump button scrolls right to the current track.
+  - Queues open at the playing track and follow it as it changes, until you scroll away (the jump button starts following again). `🆕 v8.2.0`
 - In a queue mixing tracks and videos, the add to playlist button asks whether to add the tracks or the videos.
 - Tap shuffle to toggle it, the button stays highlighted while it's on. Long press it for a one time shuffle instead: Shuffle Next shuffles the upcoming tracks, Shuffle All shuffles the whole queue.
 
@@ -197,7 +198,7 @@ Online lyrics come from LRCLIB and KuGou, and the best matching result is picked
 
 Synced lyrics in Japanese, Chinese, Korean, Greek, Cyrillic and a few more scripts can show a romanized line under each line. `🆕 v7.4.0` [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
 
-The simple lyrics line under the artwork shows translations and romanizations too, and word synced lyrics light up word by word there (like in the lyrics view). Line synced lyrics get a short reveal with the sung colors when they become current. `🆕 v7.5.0` [`⚙️ Configure Simple Lyrics Line ↗`](/settings/6-extras-settings/#lyrics)
+The simple lyrics line under the artwork shows translations and romanizations too, and word synced lyrics light up word by word there (like in the lyrics view). `🆕 v7.5.0` [`⚙️ Configure Simple Lyrics Line ↗`](/settings/6-extras-settings/#lyrics)
 
 Choose where lyrics are saved (the cache, the track folder or your own lyrics folders), and delete them along with the track. `🆕 v7.5.0` [`⚙️ Configure Lyrics Save Location ↗`](/settings/6-extras-settings/#lyrics-save-location)
 
