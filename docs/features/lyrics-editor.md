@@ -5,7 +5,7 @@ description: "Sync lyrics yourself, line by line or word by word"
 
 # Lyrics Editor
 
-`🆕 v8.0.0`
+`🆕 v8.2.0`
 
 Create synced lyrics from scratch, or fix the timing of lyrics you already have. Sync line by line or word by word (karaoke style), with a waveform to help you find the right spot. Works for local tracks and YouTube videos.
 
@@ -130,7 +130,7 @@ Press Save to save the lyrics in your [lyrics save location](/settings/6-extras-
 
 - Lines without timing are listed first, and left out of the saved lyrics.
 - If no line has a timing, the lyrics are saved as plain lyrics.
-- If the track's embedded lyrics are used instead of files, a note shows with a button to turn off [Prioritize embedded lyrics](/settings/6-extras-settings/#lyrics).
+- If the track's embedded lyrics are used instead of files, a note shows with a button to turn off [Prefer embedded lyrics](/settings/6-extras-settings/#lyrics).
 - If the track's lyrics were set to Ignore, saving undoes that.
 
 The saved lyrics are a normal LRC file that other players can read:
@@ -144,16 +144,16 @@ The saved lyrics are a normal LRC file that other players can read:
 
 `💻 Windows+Linux only`
 
-| Shortcut                               | Action                             |
-| -------------------------------------- | ---------------------------------- |
-| `Enter`                                | Sync (hold it for a word)          |
-| `Space`                                | Play / Pause                       |
-| `←` / `→`                              | -2s / +2s                          |
-| `↑` / `↓`                              | Previous / next line               |
-| `[` / `]`                              | Move the line 50ms earlier / later |
-| `Ctrl` + `Z`                           | Undo                               |
-| `Ctrl` + `Y` or `Ctrl` + `Shift` + `Z` | Redo                               |
-| `Ctrl` + `S`                           | Save                               |
+| Shortcut | Action |
+| --- | --- |
+| `Enter` | Sync (hold it for a word) |
+| `Space` | Play / Pause |
+| `←` / `→` | -2s / +2s |
+| `↑` / `↓` | Previous / next line |
+| `[` / `]` | Move the line 50ms earlier / later |
+| `Ctrl` + `Z` | Undo |
+| `Ctrl` + `Y` or `Ctrl` + `Shift` + `Z` | Redo |
+| `Ctrl` + `S` | Save |
 
 ---
 

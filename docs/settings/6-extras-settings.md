@@ -31,10 +31,12 @@ The tab the app opens on.
 
 ### Library Tabs {#library-tabs}
 
-Choose which tabs are enabled (tracks, albums, artists, genres, playlists, smart playlists, folders, the current queue, stats, listening party and more), you can reorder them too. [`📄 Library Pages ↗`](/pages/library/)
+Choose which tabs are enabled (tracks, albums, artists, genres, languages, playlists, smart playlists, folders, the current queue, stats, listening party and more), you can reorder them too. [`📄 Library Pages ↗`](/pages/library/)
 
 Tracks and Folders have variants (audio only or videos only for Tracks, music or videos for Folders). Tracks variants show only when [Include Videos](/settings/2-indexer-settings/#include-videos) is on.
 Variants of the same tab share a single slot in the navigation bar, long press it to switch between them, or press the arrow beside it in the side menu. `🆕 v7.4.0`
+
+YouTube sections (home, notifications, channels, playlists and downloads) can be tabs of their own too, and long pressing the YouTube tab jumps to any section. `🆕 v8.2.0`
 
 ### Filter Tracks in Search Lists By {#filter-tracks-by}
 
@@ -48,33 +50,11 @@ Ignores prefixes like "The" and "A" while sorting.
 
 Ignores symbols and spaces while searching, so matches are easier to find.
 
-### Lyrics {#lyrics}
-
-- Lyrics source, auto, local only or internet only.
-- Romanization, see [below](#romanization). `🆕 v7.4.0`
-- Prioritize embedded lyrics, the lyrics tag wins over lyrics files and online lyrics.
-- Stretch lyrics duration, adapts the timing for sped up, slowed or nightcore versions.
-- Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
-  - Shows translations and romanizations under each line, and word synced lyrics light up word by word like in the lyrics view. `🆕 v7.5.0`
-- Lyrics save location & Lyrics folders, see [below](#lyrics-save-location). `🆕 v7.5.0`
-
-How lyrics are found: Namida looks for synced lyrics first, checking saved lyrics (the cache, files next to the track and your [lyrics folders](#lyrics-folders)), then the embedded lyrics tag, then plain `.txt` lyrics, then online databases, ending with a web search for plain lyrics.
-The lyrics source above limits this to only the local steps or only the internet steps.
-
-Files next to the track can be `.lrc`, `.ttml`, `.txt` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename.
-Online databases are LRCLIB and KuGou. When both find lyrics, the one closest to the track duration is used, and the lyrics menu shows where each one came from.
-
-::: callout tip
-Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track.
-:::
-
-Once lyrics are found they get saved (in the cache by default), and the saved copy is used first from then on. If lyrics you added later don't show up, pick them in the [lyrics picker](/features/playback/#lyrics-picker) and press Save, or delete the saved one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
-
 ### Romanization {#romanization}
 
 `🆕 v7.4.0`
 
-Read non latin text in latin letters. Found inside the Lyrics card, press it to open the options:
+Read non latin text in latin letters. Press it to open the options:
 
 - **Romanization: Lyrics**, adds the romanized text under each synced lyrics line. Plain lyrics are not romanized.
 - **Romanization: Sort by**, text sorts use the romanized text (so a Japanese title like `さくら` sorts under S). [`🎉 Sorting ↗`](/features/library-indexing/#sorting)
@@ -87,15 +67,26 @@ Dictionary is only needed for kanji and Chinese.
 Lyrics that contain any Japanese kana are read as Japanese, otherwise Chinese characters become pinyin.
 :::
 
-### Lyrics Save Location {#lyrics-save-location}
+### Lyrics {#lyrics}
 
-`🆕 v7.5.0`
+- Lyrics source, auto, local only or internet only.
+- Prefer embedded lyrics, the lyrics tag wins over lyrics files and online lyrics: Always, Never, or Synced (default, only when the tag has synced lyrics). `🆕 v8.2.0`
+- Stretch lyrics duration, adapts the timing for sped up, slowed or nightcore versions.
+- Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
+  - Shows translations and romanizations under each line, and word synced lyrics light up word by word like in the lyrics view. `🆕 v7.5.0`
+- Lyrics folders & Lyrics save location (inside it), see [below](#lyrics-folders). `🆕 v7.5.0`
 
-Where lyrics you add or that get fetched are saved: Cache (default), Track folder, or Lyrics folders. They are saved as `.lrc` for synced lyrics or `.txt` for plain ones, named like the track. If the location can't be written to, the cache is used.
+How lyrics are found: Namida looks for synced lyrics first, checking saved lyrics (the cache, files next to the track and your [lyrics folders](#lyrics-folders)), then the embedded lyrics tag, then plain `.txt` lyrics, then online databases, ending with a web search for plain lyrics.
+The lyrics source above limits this to only the local steps or only the internet steps.
 
-The saved location is checked first when looking for lyrics, so your edits always win.
+Files next to the track can be `.lrc`, `.ttml`, `.txt` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename.
+Online databases are LRCLIB and KuGou. When both find lyrics, the one closest to the track duration is used, and the lyrics menu shows where each one came from.
 
-Press the trash icon beside a location to delete lyrics there when you delete a track from Namida. Lyrics that another track uses are kept.
+::: callout tip
+Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track. For fetched lyrics, pick Ignore from their menu in the [lyrics picker](/features/playback/#lyrics-picker). `🆕 v8.2.0`
+:::
+
+Once lyrics are found they get saved (in the cache by default), and the saved copy is used first from then on. If lyrics you added later don't show up, pick them in the [lyrics picker](/features/playback/#lyrics-picker) and press Save, or delete the saved one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
 
 ### Lyrics Folders {#lyrics-folders}
 
@@ -105,6 +96,16 @@ Extra folders to look for lyrics in, matched by track filename. Inside a lyrics 
 For example, with `Music` in your [library folders](/settings/2-indexer-settings/#folders-to-scan), `Music/Artist/song.mp3` finds `Lyrics/Artist/song.lrc` or `Lyrics/song.lrc`.
 
 When Lyrics folders is the save location, lyrics are saved in the first folder, keeping your library's subfolders.
+
+### Lyrics Save Location {#lyrics-save-location}
+
+`🆕 v7.5.0`
+
+Where lyrics you add or that get fetched are saved: Cache (default), Track folder, or Lyrics folders. They are saved as `.lrc` for synced lyrics or `.txt` for plain ones, named like the track. If the location can't be written to, the cache is used.
+
+The saved location is checked first when looking for lyrics, so your edits always win.
+
+Press the trash icon beside a location to delete lyrics there when you delete a track from Namida. Lyrics that another track uses are kept.
 
 ### Image Source {#image-source}
 
@@ -152,6 +153,8 @@ Visual:
 - `GRADIENT_TILES_AND_CARDS`, gradient backgrounds for tiles and cards.
 - `BACKGROUND_IMAGES`, custom images for the [wallpaper](/features/effects/#wallpaper) and [player background](/features/effects/#player-background). `🆕 v7.8.0`
 - `FLOATING_ARTWORK_EFFECT (💻 Android only)` & `TILTING_CARDS_EFFECT (💻 Windows+Linux only)`, extra visual effects.
+- `SUBPAGE_HEADER_STYLE` & `ARTWORK_COLLAGE_STYLE`, the header style of album, artist, genre and playlist pages (set per page type), and the look of covers made from several tracks. `🆕 v8.2.0`
+- `LYRICS_ANIMATIONS`, choose the lyrics effects for the simple line, normal and expanded views, with presets from off to full. `🆕 v8.2.0`
 - `MEDIA_WAVE_HAPTIC (💻 Android only)`, haptics that follow the audio.
 
 Scrolling:
@@ -171,6 +174,7 @@ Misc:
 - `PREFERRED_SEARCH_TAB`, the tab search opens on.
 - `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between the local style and YouTube style player.
 - `KEEP_VIDEO_FRAME_ON_SWITCH`, when switching to an item whose video is already downloaded, keep the last video frame until the next one shows (instead of flashing the artwork in between). `🆕 v7.4.0`
+- `ASK_BEFORE_REPLACING_QUEUE`, asks before playing something that would replace the current queue: replace it, keep it, or add the new tracks to it. `🆕 v8.2.0`
 - `TIME_CAPSULE_YEARS`, travel back in time, or into the future.
 
 ::: callout info

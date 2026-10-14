@@ -8,6 +8,21 @@ description: "The pages of the YouTube section"
 The pages of the [YouTube](/features/youtube/) section.
 Most pages have a local variant and a hosted one for when you are signed in (showing your account's live data).
 
+### Sections {#sections}
+
+`🆕 v8.2.0`
+
+The header at the top of the YouTube tab switches between Home, Notifications, Channels, Playlists and Downloads. A small badge shows each one's source:
+
+- Local: what Namida keeps on your device (its own watch history, playlists and subscribed channels).
+- YouTube: your signed-in account's live data, the default once you are signed in.
+
+Navigating:
+
+- Tap the selected section again to switch its source.
+- Long press the YouTube tab (or press its arrow in the side menu) to jump straight to a section.
+- Pin a section as a library tab of its own. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+
 ### Home {#home}
 
 Your YouTube feed, with notifications and subscriptions when [signed in](/settings/5-youtube-settings/#accounts). Your account's home feed needs a membership. [`📄 Membership ↗`](/membership/#benefits)
@@ -16,13 +31,14 @@ Open a notification's menu and press "More" to hide it, or to turn off notificat
 
 ### Playlists {#playlists}
 
-Your YouTube playlists, along with the built-in ones: History, Most Played and Liked. You can create playlists, and import your existing playlists and channels from a YouTube takeout export. [`🎉 Playlists & History feature ↗`](/features/playlists-history/) [`🎉 YouTube Playlists feature ↗`](/features/youtube/#playlists)
+Your YouTube playlists, along with the built-in ones: History, Most Played and Favourites. You can create playlists, and import your existing playlists and channels from a YouTube takeout export. [`🎉 Playlists & History feature ↗`](/features/playlists-history/) [`🎉 YouTube Playlists feature ↗`](/features/youtube/#playlists)
 
 Local YouTube playlists can be tagged, pinned and filtered too. `🆕 v7.8.0` [`🎉 Playlist Tags ↗`](/features/playlists-history/#playlist-tags)
 
 ### Channels {#channels}
 
 Your subscribed channels, they can be organized into groups. Each channel page shows its videos and info. Press the time range icon in a channel page to list only videos uploaded after or before a date. `🆕 v7.0.0`
+Tap the channel picture or banner to view it fullscreen, with a save button. `🆕 v8.2.0`
 
 ### History {#history}
 
@@ -51,8 +67,10 @@ A filters row sits above the results:
 - Type: All, Videos, Channels, Playlists or Movies.
 - Sort by: Relevance, Rating, Upload date or Views.
 - Date: Last hour, Today, This week, This month, This year, or pick an exact "is After" / "is Before" date.
+- Match: Exact phrase or In title, plus words to exclude. `🆕 v8.2.0`
 
 You can also type the date right in the search text (like `after:2024-01-01` or `before:2023-06`). The date range applies to offline search too.
+Same for match filters (`"exact phrase"`, `intitle:word`, `-word`), offline search included. Exact searches also skip autocorrect. `🆕 v8.2.0`
 
 ### Hashtag {#hashtag}
 

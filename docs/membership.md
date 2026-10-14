@@ -11,21 +11,21 @@ A membership is how you support the project and keep it growing. As a thank you,
 
 ### What It Unlocks {#benefits}
 
-| Feature                                                                     | Needs                           |
-| --------------------------------------------------------------------------- | ------------------------------- |
-| Like, dislike & mark videos as watched                                      | Free, just sign in              |
-| Your playlists: browse, create, add & remove videos                         | Free, just sign in              |
-| Subscriptions & notifications                                               | Free, just sign in              |
-| Home feed & watch history                                                   | `cutie`                         |
-| Comments, subscribing & channel notifications                               | `cutie`                         |
-| Save to library, edit & delete playlists                                    | `cutie`                         |
-| Hide or turn off notifications                                              | `cutie`                         |
-| Create a listening party on the Namida server                               | `cutie`                         |
-| Party Mode & Crossfade                                                      | `cutie`, or 1 [egg](#eggs) each |
-| Extra effects: starfield, galaxy, aurora, fireworks & deep ocean `🆕 v7.8.0` | `cutie`, or 1 [egg](#eggs) each |
-| Extra visualizers: mirrored bars, outline, glow & edge lights `🆕 v7.8.0`    | `cutie`, or 1 [egg](#eggs) each |
-| Custom image for wallpaper & player background `🆕 v7.8.0`                   | `cutie`, or 1 [egg](#eggs) each |
-| Multiple YouTube accounts                                                   | `pookie`                        |
+| Feature | Needs |
+| --- | --- |
+| Like, dislike & mark videos as watched | Free, just sign in |
+| Your playlists: browse, create, add & remove videos | Free, just sign in |
+| Subscriptions & notifications | Free, just sign in |
+| Home feed & watch history | `cutie` |
+| Comments, subscribing & channel notifications | `cutie` |
+| Save to library, edit & delete playlists | `cutie` |
+| Hide or turn off notifications | `cutie` |
+| Create a listening party on the Namida server | `cutie` |
+| Party Mode & Crossfade | `cutie`, or 3 [eggs](#eggs) each |
+| Extra effects: starfield, galaxy, aurora, fireworks & deep ocean `🆕 v7.8.0` | `cutie`, or 2 [eggs](#eggs) each |
+| Extra visualizers: mirrored bars, outline, glow & edge lights `🆕 v7.8.0` | `cutie`, or 2 [eggs](#eggs) each |
+| Custom image for wallpaper & player background `🆕 v7.8.0` | `cutie`, or 3 [eggs](#eggs) each |
+| Multiple YouTube accounts | `pookie` |
 
 Supporter effects and visualizers are marked with a crown in the app. [`🎉 Effects & Visualizers ↗`](/features/effects/#membership)
 
@@ -63,9 +63,9 @@ Everything else is free, here is a taste of it.
 **Everything else**
 
 - A folder based [library](/features/library-indexing/) with a powerful indexer, smart sorting and [media servers](/features/media-servers/) with offline caching.
-- [Playback](/features/playback/) with a reliable queue system, video integration and a waveform seekbar.
-- Deep control over how things play, global or per track [sound control](/features/playback/#sound-control) with a [parametric equalizer](/features/playback/#equalizer), [bit-perfect output](/features/playback/#bit-perfect), [replay gain](/features/playback/#replay-gain), skip silence, play/pause fade, [pausing scenarios](/features/playback/#pausing) and a [sleep timer](/features/playback/#sleep-timer).
-- [Lyrics](/features/playback/#lyrics), synced or plain, with smooth animations and word by word sync, a simple lyrics line under the artwork and [romanization](/settings/6-extras-settings/#romanization). [Subtitles](/features/subtitles/) for local and YouTube videos too, keeping their original styles.
+- [Playback](/features/playback/) with a reliable queue system, video integration, a waveform seekbar, [bookmarks](/features/playback/#bookmarks) and [chapters](/features/playback/#chapters).
+- Deep control over how things play, global or per track [sound control](/features/playback/#sound-control) with a [parametric equalizer](/features/playback/#equalizer), [sound effects](/features/playback/#sound-effects), [bit-perfect output](/features/playback/#bit-perfect), [replay gain](/features/playback/#replay-gain), skip silence, play/pause fade, [pausing scenarios](/features/playback/#pausing) and a [sleep timer](/features/playback/#sleep-timer).
+- [Lyrics](/features/playback/#lyrics), synced or plain, with smooth animations and word by word sync, a simple lyrics line under the artwork, [romanization](/settings/6-extras-settings/#romanization) and a [lyrics editor](/features/lyrics-editor/). [Subtitles](/features/subtitles/) for local and YouTube videos too, keeping their original styles.
 - [Playlists and history](/features/playlists-history/), M3U playlists, [playlist tags](/features/playlists-history/#playlist-tags), [smart playlists](/features/smart-playlists/), and a reliable history system.
 - Charts and insights from your history, [most played](/features/playlists-history/#most-played) for any time range, [stats](/features/playlists-history/#stats) and your year, [lost memories](/features/playlists-history/#lost-memories) from years ago and [smort tracks generation](/features/playlists-history/#generation) based on what you listen to.
 - A full [tag editor](/features/tag-editor/), for single and multiple tracks.
@@ -78,19 +78,20 @@ Everything else is free, here is a taste of it.
 
 `🆕 v7.8.0`
 
-No membership? Go egg hunting. Namida hides eggs all around the app, and each one unlocks a supporter feature of your choice. There are enough for all of them, if you can find them.
+No membership? Go egg hunting. Namida hides eggs all around the app, and you can crack them for supporter features of your choice. Each feature costs 2 or 3 eggs, so pick wisely. `🆕 v8.2.0`
 
 - Stuck? Settings -> About -> Eggs has a hint for every egg.
 - Some eggs only come out on special days, keep an eye on the top of the app.
-- Crack an egg when a feature asks for a membership, and it's yours to keep.
-- Regret it? Sell it back for your egg from the same About card, no questions asked.
+- Find them all for a little gift. `🆕 v8.2.0`
+- Crack the eggs when a feature asks for a membership, and it's yours to keep.
+- Regret it? Sell it back for your eggs from the same About card, no questions asked.
 
 ### Tiers {#tiers}
 
-| Tier       | Price       | Listening party rooms           |
-| ---------- | ----------- | ------------------------------- |
-| `cutie`    | $4 / month  | up to 50 members, 2 open rooms  |
-| `pookie`   | $7 / month  | up to 100 members, 3 open rooms |
+| Tier | Price | Listening party rooms |
+| --- | --- | --- |
+| `cutie` | $4 / month | up to 50 members, 2 open rooms |
+| `pookie` | $7 / month | up to 100 members, 3 open rooms |
 | `patootie` | $20 / month | up to 200 members, 4 open rooms |
 
 Each tier includes everything from the tiers below it. [`🎉 Listening Party ↗`](/features/party/#create)

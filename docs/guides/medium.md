@@ -13,7 +13,7 @@ description: "Linking videos, syncing and smart playlists"
 It also works automatically, Namida looks up the track's comment tag (usually filled by yt-dlp) or its filename for a YouTube link. If found, the video is downloaded and cached, then plays once ready. Streaming is not used here since the priority goes to the music file itself.
 
 - In the comment tag, any url format gets matched, example: `https://youtu.be/video_id`
-- In filenames, it should contain `v=video_id` or `id=video_id` to get matched.
+- In filenames, it should contain `v=video_id` or `id=video_id`, or end with `[video_id]` (the yt-dlp default) to get matched. `🆕 v8.2.0`
 
 ### Link a local video to a track {#link-local-video}
 
@@ -43,7 +43,7 @@ Matching ignores casing, symbols and whitespace, and extra words around the name
 ### Sync data between devices {#sync-devices}
 
 1. Install the same Namida version on both devices, and connect them to the same network.
-2. Open the Sync page on both (Settings -> Backup & Restore -> Sync).
+2. Open the Sync page on both (Settings -> Backup & Restore -> Sync, or the Sync button on the first page of a fresh install). `🆕 v8.2.0`
 3. Start the server on one device, and search on the other. Not showing up? See [`📄 Sync devices can't find or connect ↗`](/faq/#sync-troubleshooting).
 4. Accept the connection request, then choose the data to send & receive.
 5. Press send or receive, that's it. See the [`🎉 Sync feature ↗`](/features/sync/) for what gets synced.

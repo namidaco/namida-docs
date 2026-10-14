@@ -15,12 +15,12 @@ Tracks are found only when you open the playlist, and can't be added manually. [
 
 Rules live inside groups. Each group picks **All** (every rule must match) or **Any** (one is enough) for its rules, and a separate All/Any at the top joins the groups together (shown once there are 2 groups or more):
 
-| Setup                                     | Means                  |
-| ----------------------------------------- | ---------------------- |
-| One group, All                            | A and B and C          |
-| One group, Any                            | A or B or C            |
+| Setup | Means |
+| --- | --- |
+| One group, All | A and B and C |
+| One group, Any | A or B or C |
 | Two groups, All for rules, Any for groups | (A and B) or (C and D) |
-| Two groups, Any for rules, All for groups | (A or B) and (C or D)  |
+| Two groups, Any for rules, All for groups | (A or B) and (C or D) |
 
 The count under the dialog title shows how many tracks match as you edit.
 
@@ -48,6 +48,7 @@ Good to know:
 - **Cleanup** (on by default) ignores case, accents and symbols, so `beyonce` matches `Beyoncé`.
 - Fields with several values (like artists or genres) match when any value matches. Negative filters match only when none does.
 - Playlist and Playlist tags are the playlists the track is in, and their [tags](/features/playlists-history/#playlist-tags). `gym` matches `gym/cardio` too.
+- Language tags are turned into one form like `English (eng)` (from `en`, `eng` or `English`), so match against that, like "Language <u>Contains</u> `english`". `🆕 v8.2.0`
 - A-Z filters compare alphabetically, so "is in Between A and C" includes `Coldplay`.
 - Values are suggested from your library as you type.
 - A value can include other fields of the same track (with the source icon beside it). Title <u>Contains</u> [Artist] finds titles that mention their own artist.
@@ -57,21 +58,21 @@ Good to know:
 
 **Sources:**
 
-| Source                        | Value                                                                   |
-| ----------------------------- | ----------------------------------------------------------------------- |
-| Total Listens                 | listens count, never played tracks count as 0                           |
-| Total Listens (Between Dates) | listens count inside a date range, see below                            |
-| Listens per Month `🆕 v7.8.0` | average listens per month, since the first listen or date added         |
-| Rating                        | 0 to 100                                                                |
-| Last Played Position          | seconds                                                                 |
-| Played Percentage             | 0 to 100, how far the track was played last time                        |
-| Duration                      | seconds                                                                 |
-| Size                          | bytes, the slider works in MB                                           |
-| Bitrate                       | kb/s (`320`)                                                            |
-| Sample Rate, Bit Depth, BPM   | as stored in the file                                                   |
-| Track/Disc Number & Total     | as stored in the tags                                                   |
-| Playlists Count `🆕 v7.8.0`   | how many playlists the track is in                                      |
-| Total Tracks `🆕 v7.8.0`      | how many tracks the album, artist, genre or folder has, see [Per](#per) |
+| Source | Value |
+| --- | --- |
+| Total Listens | listens count, never played tracks count as 0 |
+| Total Listens (Between Dates) | listens count inside a date range, see below |
+| Listens per Month `🆕 v7.8.0` | average listens per month, since the first listen or date added |
+| Rating | 0 to 100 |
+| Last Played Position | seconds |
+| Played Percentage | 0 to 100, how far the track was played last time |
+| Duration | seconds |
+| Size | bytes, the slider works in MB |
+| Bitrate | kb/s (`320`) |
+| Sample Rate, Bit Depth, BPM | as stored in the file |
+| Track/Disc Number & Total | as stored in the tags |
+| Playlists Count `🆕 v7.8.0` | how many playlists the track is in |
+| Total Tracks `🆕 v7.8.0` | how many tracks the album, artist, genre or folder has, see [Per](#per) |
 
 **Filters:** is Same, is Not Same, is Greater Than, is Smaller Than, is Greater Than + is Same (≥), is Smaller Than + is Same (≤), is in Between and is Outside. "is in Between" includes both ends.
 
@@ -124,7 +125,9 @@ Good to know:
 
 **Filters:** is True, is False and is Unknown.
 
-Single means the track is alone in its album.
+- **Single** is True when:
+  - the release type tag says single `🆕 v8.2.0`
+  - or there's no release type tag, and the track is the only one in its album
 
 ### Limit {#limit}
 
@@ -142,7 +145,7 @@ Random (Daily) keeps the same random order for the whole day, it's in every trac
 
 ### Smart Search {#smart-search}
 
-The same rules work as a one time search, press the filter icon at the end of the chips row in the search page. Long press it to edit the rules.
+The same rules work as a one time search, press the filter icon at the end of the chips row in the search page. Long press it to edit the rules, the add icon there saves them as a new smart playlist. `🆕 v8.2.0`
 
 In album, artist and other media pages, long press the filter icon to start one filled with that media.
 

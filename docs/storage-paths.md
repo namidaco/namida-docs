@@ -11,12 +11,12 @@ Namida keeps its files in a few base folders. Each one is in a different place d
 
 Settings, playlists, history, queues, extracted artworks, lyrics, subtitles, logs and the image/audio/video/server caches. This is what backups read from.
 
-| Platform           | Path                                                       |
-| ------------------ | ---------------------------------------------------------- |
-| Android            | `/storage/emulated/0/Android/data/com.msob7y.namida/files` |
-| Windows            | `C:\Users\USERNAME\.namida`                                |
-| Windows (portable) | `<namida folder>\files`                                    |
-| Linux              | `~/.namida`                                                |
+| Platform | Path |
+| --- | --- |
+| Android | `/storage/emulated/0/Android/data/com.msob7y.namida/files` |
+| Windows | `C:\Users\USERNAME\.namida` |
+| Windows (portable) | `<namida folder>\files` |
+| Linux | `~/.namida` |
 
 Notable subfolders: `Playlists`, `History`, `Queues`, `Artworks`, `Lyrics`, `Subtitles`, `Youtube`, `Servers Cache`, `Recently Deleted`, `Logs`, `Wallpapers`.
 
@@ -28,12 +28,12 @@ On Android 11+ this folder is not reachable from a normal file manager. Use ADB 
 
 The user facing folder, everything Namida writes out for you to keep or move around.
 
-| Platform           | Path                         |
-| ------------------ | ---------------------------- |
-| Android            | `/storage/emulated/0/Namida` |
-| Windows            | `C:\Namida`                  |
-| Windows (portable) | `<namida folder>\Namida`     |
-| Linux              | `~/Namida`                   |
+| Platform | Path |
+| --- | --- |
+| Android | `/storage/emulated/0/Namida` |
+| Windows | `C:\Namida` |
+| Windows (portable) | `<namida folder>\Namida` |
+| Linux | `~/Namida` |
 
 Subfolders: `Backups`, `Compressed`, `M3U Playlists`, `Artworks`, `Downloads`, and on Android `Logs` for the logs zip made by [Report an issue](/pages/other/#about).
 
@@ -45,12 +45,12 @@ On Windows and Linux this sits on the first drive Namida detects, usually the on
 
 Throwaway data like waveforms. Safe to delete, it gets rebuilt.
 
-| Platform           | Path                                                       |
-| ------------------ | ---------------------------------------------------------- |
-| Android            | `/storage/emulated/0/Android/data/com.msob7y.namida/cache` |
-| Windows            | `C:\Users\USERNAME\AppData\Local\com.msob7y\namida`        |
-| Windows (portable) | `<namida folder>\cache`                                    |
-| Linux              | `~/.cache/com.msob7y.namida`                               |
+| Platform | Path |
+| --- | --- |
+| Android | `/storage/emulated/0/Android/data/com.msob7y.namida/cache` |
+| Windows | `C:\Users\USERNAME\AppData\Local\com.msob7y\namida` |
+| Windows (portable) | `<namida folder>\cache` |
+| Linux | `~/.cache/com.msob7y.namida` |
 
 ---
 

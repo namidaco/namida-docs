@@ -13,16 +13,27 @@ Multi library support, your library can mix local files with content from your s
 - Jellyfin
 - WebDAV
 - SMB (network shares)
+- FTP & SFTP `🆕 v8.2.0`
+- Storage Access Framework on Android, for folders from other apps (RSAF, Google Drive, Nextcloud, file managers, etc) `🆕 v8.2.0`
 
 ### How It Works {#how}
 
 A server is added as a library folder in the indexer. Enter the server address and credentials, pick a library or share (if the server supports it), and Namida indexes it like any other folder. Tracks appear next to your local ones in every tab. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
+Storage Access Framework folders are picked from the system file picker instead.
 
 For Subsonic servers, tracks without their own artwork fall back to the album artwork.
 
+Server tracks keep their folder structure in the Folders tab. `🆕 v8.2.0`
+
 ::: callout info
-File based servers (WebDAV, SMB) download files temporarily for indexing. Use a stable connection (preferably Wi-Fi to avoid high data usage).
+FTP servers download files temporarily for indexing. Use a stable connection (preferably Wi-Fi to avoid high data usage).
 :::
+
+### Playback Reports {#playback-reports}
+
+`🆕 v8.2.0`
+
+Subsonic and Jellyfin servers see what you're playing and count your plays. Listens made offline are sent to Subsonic servers once you're back online. On by default, turn it off with the `SERVER_PLAYBACK_REPORTS` flag. [`⚙️ Advanced Flags ↗`](/settings/8-advanced-settings/#flags)
 
 ### Server Playlists {#playlists}
 
@@ -53,6 +64,7 @@ The server cache sits in [User Data](/storage-paths/#user-data)`/Servers Cache`.
 - [⚙️ Indexer, List of Folders](/settings/2-indexer-settings/#folders-to-scan)
 - [⚙️ Advanced, Cache Limits](/settings/8-advanced-settings/#cache-limits)
 - [⚙️ Advanced, Clear Caches](/settings/8-advanced-settings/#clear-caches)
+- [⚙️ Advanced, Flags](/settings/8-advanced-settings/#flags)
 
 ---
 

@@ -7,7 +7,7 @@ description: "Stats, Sync Manager and About"
 
 ### Stats {#stats}
 
-Library numbers: tracks, albums, artists, genres and styles, total duration, and your total listen time (for local and YouTube separately). Open it with the chart icon at the top of the Home page, or make it a library tab of its own. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+Library numbers: tracks, albums, artists, genres, styles and languages, total duration, and your total listen time (for local and YouTube separately). Open it with the chart icon at the top of the Home page, or make it a library tab of its own. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
 
 #### Charts {#charts}
 
@@ -18,7 +18,7 @@ Charts built from your history, switchable between local and YouTube. Pick a tim
 What you get:
 
 - Summary, total listens, listen time, days and streak.
-- Listens per month and per day.
+- Listens per month and per day (the line switches between total and daily). `🆕 v8.2.0`
 - Listening Clock, the hours of the day you listen the most.
 - Habits, repeat rate, library reach, and when your first and last listens of the day usually happen.
 - Obsession, your most played days and longest session.
@@ -30,6 +30,8 @@ What you get:
 - Audio, lossless share, plus listens per source, total listen time and release year.
 
 Every card has a share icon that saves it as an image, and long pressing a card copies its values as text. The share icon in the app bar exports all the cards at once.
+
+The menu on top tracks and Discoveries plays, shuffles or saves them as a playlist, and longer lists have a Show more button. `🆕 v8.2.0`
 
 ::: callout info
 Some charts need listen time data that Namida only started recording in v7.0.0, so they fill up as you listen.
@@ -44,6 +46,8 @@ A wrap up of one year of listening (for local and YouTube separately). Open it f
 It covers your top tracks and artists, listening clock, longest streak, busiest day, discoveries, oldest favourite, longest session, repeat rate, completed albums, rediscoveries, and a comparison with the year before. The "Year in N Songs" section picks one track for each month.
 
 Swipe through the pages and share the one you like as an image, or press the share icon in the app bar to export every page at once.
+
+Top tracks and discoveries have the same menu to play or save them as a playlist. `🆕 v8.2.0`
 
 ### Sync Manager {#sync-manager}
 

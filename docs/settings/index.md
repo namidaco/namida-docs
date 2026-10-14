@@ -13,6 +13,7 @@ Some settings only work on specific platforms or Android versions. They are labe
 
 ::: callout tip
 Use the Search button in Namida settings to quickly find any setting. It matches the options inside settings too (like an effect or a performance mode).
+Results show where each option exists, tap one to jump right to it, or flip a switch without leaving the results. The "Changed" chip lists every setting you changed, each with a reset button. `🆕 v8.2.0`
 :::
 
 ::: callout tip

@@ -21,7 +21,7 @@ Get Namida from GitHub instead, or use Obtainium to keep it updated. [`📒 Inst
 
 ### Spotify {#spotify}
 
-Not planned. Importing your Spotify history is supported, but that's all.
+Not planned. Importing your Spotify history and favourites (liked songs) is supported, but that's all.
 
 Spotify is notorious for blocking unofficial clients. Even if Namida added support, a DMCA takedown would end it quickly. We are barely keeping YouTube support alive as is.
 
@@ -36,6 +36,7 @@ Same story as Spotify. The only focus is local + YouTube, keeping them both poli
 ### LastFm Scrobbling {#lastfm}
 
 Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works with any player and has lots of features.
+It reads the media notification, which is enough for most. Namida also shares the MusicBrainz ids from your tags (Android), so scrobbles can match the exact recording instead of a guess from title and artist, once PanoScrobbler supports reading them. `🆕 v8.2.0` [`🎉 Automation & Other Apps ↗`](/features/automation/#what-apps-can-do)
 
 ### Discord Rich Presence (RPC) {#discord-rpc}
 

@@ -11,6 +11,8 @@ A powerful tag editor powered by `taglib`.
 
 Edit title, artist, album, genre, year, lyrics, comment, rating, moods and more, along with the artwork.
 
+Fields the file holds as separate values (like several artists) show joined with `; `, and stay separate values when saved. `🆕 v8.2.0`
+
 ### Multiple Tracks Editing {#multiple}
 
 Select multiple tracks and edit them at once (unchanged fields remain untouched). Useful for fixing a whole album or artist.
@@ -34,6 +36,8 @@ Moods, tags and rating can also be set for many tracks without opening the tag e
 `🆕 v7.0.0`
 
 Fields like album, artist, album artist, composer, genre, style, moods and tags suggest values from your library as you type (so names stay consistent). Fields that hold multiple values keep suggesting after each separator. The same suggestions show up while building [`🎉 Smart Playlists ↗`](/features/smart-playlists/) rules.
+
+Language suggests every language, the ones written in the script of the lyrics or title first. `🆕 v8.2.0`
 
 ### Keep File Dates {#keep-file-dates}
 

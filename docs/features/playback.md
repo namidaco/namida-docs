@@ -17,7 +17,9 @@ A persistent and reliable queue system, your sessions are saved for later usage.
   - While on, new queues start shuffled, with the track you pressed first.
   - It persists between sessions and is the same toggle everywhere: queue, home screen widget, media controls and the desktop shortcut.
 - Stop after any track, open a queued track's menu and choose "Stop after this track". `🆕 v7.0.0`
+  - For the playing track, there's also a notification button, an artwork gesture action and `Ctrl` + `Space`. `🆕 v8.2.0`
 - Insert after latest inserted, for stacking several tracks in order.
+- With the `ASK_BEFORE_REPLACING_QUEUE` [flag](/settings/6-extras-settings/#flags), playing something new asks whether to replace the queue, keep it, or add the new tracks next, after or last. The "Play (Choose)" gesture action always asks. `🆕 v8.2.0`
 - Play modes when playing from search: selected track only, search results, album, first artist or first genre.
 - Recommended & Similar Release Date, add tracks you usually listen to with the current one, or released around the same time.
 
@@ -25,7 +27,7 @@ The queue's bottom row packs more than it looks:
 
 - The clear button removes duplicates, everything before, everything after, or all except the current track.
 - The add button generates and adds tracks:
-  - Local: Random, Time Range, Moods, Ratings, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended
+  - Local: Random, Time Range, Moods, Ratings, Similar Release Date, Similar Discover Date, Similar Time Range, Similar Tracks and Recommended
   - YouTube: Random, Time Range, Mix, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended.
 - A jump button scrolls right to the current track.
 - In a queue mixing tracks and videos, the add to playlist button asks whether to add the tracks or the videos.
@@ -47,21 +49,34 @@ In a [listening party](/features/party/#queue), the room has its own repeat mode
 
 ### Audio Effects {#effects}
 
-Crossfade, Play/Pause fade effect, Gapless playback, Skip silence, a parametric [Equalizer](#equalizer) and Loudness Enhancer. Crossfade is part of the membership, or unlock it with an [egg](/membership/#eggs). [`⚙️ Configure Effects ↗`](/settings/3-playback-settings/#crossfade) [`📄 Membership ↗`](/membership/#benefits)
+Crossfade (with [smart & beat matched](#beat-matching) styles), Play/Pause fade effect, Gapless playback, Skip silence, a parametric [Equalizer](#equalizer), [Sound effects](#sound-effects) and Loudness Enhancer. Crossfade is part of the membership, or unlock it with an [egg](/membership/#eggs). [`⚙️ Configure Effects ↗`](/settings/3-playback-settings/#crossfade) [`📄 Membership ↗`](/membership/#benefits)
 
 Looking for visual effects and visualizers instead? See [`🎉 Effects & Visualizers ↗`](/features/effects/)
+
+### Smart & Beat Matching {#beat-matching}
+
+`🆕 v8.2.0`
+
+Crossfade's Style option changes how automatic crossfades happen:
+
+- **Smart**, starts the crossfade where the track fades out or ends, and skips the silence at the start of the next one.
+- **Beat matching**, also matches the tempo and lines up the beats of both tracks. While it's on, shuffle prefers tracks with a close tempo and a compatible key.
+
+Upcoming tracks are analyzed in the background (BPM and key tags are used when present). To analyze the whole library at once, or write the analyzed BPM into tracks missing it, use the `ANALYZE_RHYTHM` flag in [Advanced settings](/settings/8-advanced-settings/#flags). [`⚙️ Configure Crossfade ↗`](/settings/3-playback-settings/#crossfade)
 
 ### Sound Control {#sound-control}
 
 Press the audio effects icon in the player, the Sound Control tile at the top of settings, or [Sound Control](/settings/3-playback-settings/#sound-control) in playback settings. From top to bottom:
 
-- [Output device](#output-device), [Bit-perfect](#bit-perfect) and [USB direct access](#usb-direct). `🆕 v7.8.0`
+- [Output device](#output-device), [Bit-perfect](#bit-perfect) and [USB direct access](#usb-direct) (or [Exclusive mode](#exclusive-mode) on Windows & Linux). `🆕 v7.8.0`
 - [Audio path](#audio-path), and what Bit-perfect and USB direct access turn off. `🆕 v7.8.0`
 - Normalize audio. [`⚙️ Configure Normalize Audio ↗`](/settings/3-playback-settings/#normalize-audio)
 - Two tabs:
   - **Global**, applies to everything you play.
-  - **Item**, applies to the current track or video only (a small icon shows when it has its own settings). Press reset to fall back to global, or turn on "Force use Global Config" to ignore per item settings.
+  - **Item**, applies to the current track or video only, anything you don't change there follows Global (a small icon shows when it has its own settings). Press reset to fall back to global, or turn on "Force use Global Config" to ignore per item settings.
+  - Save the current settings as a preset with the save icon on each tab, tap a preset to apply it to the open tab, or long press it to save over, rename or delete it. `🆕 v8.2.0`
 - **Mono audio**, both sides play the same sound. `🆕 v7.8.0`
+- [Sound effects](#sound-effects). `🆕 v8.2.0`
 
 Both tabs carry Skip Silence `💻 Android+Linux only`, Pitch (as a percentage or in semitones), Speed, Volume, Loudness Enhancer and the [Equalizer](#equalizer) with its presets.
 
@@ -85,6 +100,17 @@ A parametric equalizer with as many bands as you want, on every platform. Old se
 On Windows, only Peak bands for now.
 On Android, long press "Open App" to pick an external equalizer app.
 :::
+
+### Sound Effects {#sound-effects}
+
+`🆕 v8.2.0` `💻 Android only`
+
+At the bottom of Sound Control, tap one to turn it on, drag across it to set its intensity.
+
+- **Headphones**: crossfeed & virtual surround.
+- **Tone**: bass enhancer, tube warmth & compressor.
+- **Space**: reverb, echo, chorus & 8D audio.
+- **Instrumental**, lowers the vocals.
 
 ### Output Device {#output-device}
 
@@ -127,6 +153,15 @@ It works with or without Bit-perfect:
 
 Asked for access every time? See the [FAQ](/faq/#usb-dac-permission).
 
+#### Exclusive Mode {#exclusive-mode}
+
+`🆕 v8.2.0` `💻 Windows+Linux only`
+
+Namida takes the output device for itself (like [Bit-perfect](#bit-perfect) does), but keeps your effects:
+
+- **Off**: other apps' sounds and crossfade.
+- **Still working**: the equalizer, speed, pitch, volume and the rest of the effects.
+
 #### Audio Path {#audio-path}
 
 Every step the audio goes through (from the file to your device), with the ones that change it highlighted. Open it from Sound Control, or by long pressing the audio/video button in the player.
@@ -166,15 +201,35 @@ The simple lyrics line under the artwork shows translations and romanizations to
 
 Choose where lyrics are saved (the cache, the track folder or your own lyrics folders), and delete them along with the track. `🆕 v7.5.0` [`⚙️ Configure Lyrics Save Location ↗`](/settings/6-extras-settings/#lyrics-save-location)
 
+The `LYRICS_ANIMATIONS` [flag](/settings/6-extras-settings/#flags) turns each lyrics animation on or off, separately for the simple line, normal and expanded views, or all at once with a preset. `🆕 v8.2.0`
+
 #### Lyrics Picker {#lyrics-picker}
 
 Long press the lyrics button in the player (right click on desktop) to see every lyrics found for the track. Search, shift or edit them from there, and: `🆕 v7.8.0`
 
-- The edit icon opens the lyrics in the lyrics editor, and Add starts new ones there. `🆕 v8.0.0` [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/)
+- The edit icon opens the lyrics in the lyrics editor, and Add starts new ones there. `🆕 v8.2.0` [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/)
 - The ones in use are marked Active, tap others and press Save to use them instead.
 - Embed (from the ⋮ menu) writes them into the track's lyrics tag.
-- A "Prioritize embedded lyrics" switch shows when the track has embedded lyrics.
+- "Prefer embedded lyrics" (global) shows when the track has embedded lyrics: Never, Synced (only when they're synced) or Always. `🆕 v8.2.0`
+- Ignore (from the ⋮ menu of fetched lyrics) hides them and stops fetching lyrics for that track. `🆕 v8.2.0`
 - Font Scale sets the lyrics size, for normal and fullscreen.
+
+#### Translations {#lyrics-translations}
+
+Synced lyrics can show a translation under each line, written in any of these ways:
+
+```text
+[00:12.16]Can we put it out?
+[00:12.16]On peut l'éteindre ?
+[00:14.50]Every word's too loud|Chaque mot est trop fort
+[00:17.80]We gotta slow down  On doit ralentir
+```
+
+- Same time on the next line, this is how the [lyrics editor](/features/lyrics-editor/#saving) saves them.
+- `|` with the translation right after it, `loud|Chaque` works but `loud | Chaque` stays one line.
+- 2 or more spaces.
+
+Lines with word by word timing only support the same time way.
 
 ### Widescreen Player {#widescreen-player}
 
@@ -200,13 +255,14 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 - Long press the previous button to jump to the start of the track, long press the next button to speed up playback while holding it.
 - While seeking with the seekbar, swipe upwards to cancel the seek.
 - Seeking very close to the starting edge snaps to the very start.
+- Swipe the lyrics left or right in fullscreen or in the widescreen player to skip tracks. `🆕 v8.2.0`
 - Pinch the lyrics to change the font size, separately for normal and fullscreen. On desktop use `Ctrl` + mouse wheel, `Ctrl` + `+` / `-`, or `Ctrl` + `0` to reset. [`🎉 Shortcuts feature ↗`](/features/shortcuts/#zoom)
 - Zoom in on the video to enter fullscreen.
 - More hidden gestures in [`📄 Tips & Tricks ↗`](/tips/).
 
 ### Track Menu {#track-menu}
 
-Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder. See [`📄 Tips & Tricks ↗`](/tips/#track-menu) for the full list.
+Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder (long press its + to pick the sorting, filters and how many). See [`📄 Tips & Tricks ↗`](/tips/#track-menu) for the full list.
 
 The menu also has an Advanced section for the heavier stuff (copying and moving files, setting a track as a ringtone, replacing listens and more). [`📄 Advanced Dialog Tips ↗`](/tips/#advanced-dialog)
 
@@ -219,6 +275,27 @@ Presets set it in one tap, press + to add your own, or long press one to remove 
 ### Waveform Seekbar {#waveform}
 
 The seekbar is the actual waveform of the track. [`⚙️ Configure Waveform Bars ↗`](/settings/4-customization-settings/#miniplayer-customization)
+
+### Bookmarks {#bookmarks}
+
+`🆕 v8.2.0`
+
+Mark spots in a track or video to come back to them.
+
+- Add one by long pressing the seekbar, from the notification button, an artwork gesture action, or with `Ctrl` + `B`.
+- They show as ticks on the seekbar, tap near one to jump there. Long press a tick to see all of them.
+- Track info and the track menu list them too, with rename and remove.
+
+### Chapters {#chapters}
+
+`🆕 v8.2.0`
+
+Local tracks and videos with embedded chapters show them (existing files need a re-index).
+
+- Gaps on the seekbar mark them, tap near one to jump there.
+- The current chapter shows beside the audio/video info in the player, tap it for the full list. Track info and the track menu list them too.
+- Skip between them with the notification buttons, `Shift` + `←` / `→`, or the next/previous buttons with [Next/Previous jump between chapters](/settings/3-playback-settings/#skip-buttons-chapters).
+- YouTube downloads keep their chapters.
 
 ---
 

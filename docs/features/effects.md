@@ -23,22 +23,22 @@ Effects and visualizers might affect performance on low end devices. [Performanc
 
 Both pick from the same list:
 
-| Effect     | What you see                                                         |
-| ---------- | -------------------------------------------------------------------- |
-| Auto       | the current season's effect, nothing outside a season, see below    |
-| None       |                                                                      |
-| Particles  | soft dots in the app color                                           |
-| Halloween  | pumpkins, skulls, ghosts, bats and falling leaves                    |
-| Christmas  | snowmen, snow and a string of colored bulbs                          |
-| Ramadan    | crescents, hanging lanterns and sparkles                             |
-| Sakura     | falling petals                                                       |
-| Rain       | falling streaks                                                      |
-| Fireflies  | flickering glows                                                     |
-| Starfield  | stars, sparkles and shooting stars                                   |
-| Galaxy     | a slowly spinning galaxy with nebula glows                           |
-| Aurora     | aurora curtains colored by the current artwork                       |
-| Fireworks  | bursts that follow the beats                                         |
-| Deep ocean | marine snow, glowing plankton, fish, jellyfish and bubbles           |
+| Effect | What you see |
+| --- | --- |
+| Auto | the current season's effect, nothing outside a season, see below |
+| None |  |
+| Particles | soft dots in the app color |
+| Halloween | pumpkins, skulls, ghosts, bats and falling leaves |
+| Christmas | snowmen, snow and a string of colored bulbs |
+| Ramadan | crescents, hanging lanterns and sparkles |
+| Sakura | falling petals |
+| Rain | falling streaks |
+| Fireflies | flickering glows |
+| Starfield | stars, sparkles and shooting stars |
+| Galaxy | a slowly spinning galaxy with nebula glows |
+| Aurora | aurora curtains colored by the current artwork |
+| Fireworks | bursts that follow the beats |
+| Deep ocean | marine snow, glowing plankton, fish, jellyfish and bubbles |
 
 Background effect is Auto by default.
 Overlay effect is None by default.
@@ -90,7 +90,7 @@ A background behind the expanded player, fading in as you expand it:
 - **Artwork**, the current artwork or video thumbnail, crossfading on each track change.
 - **Custom**, an image of your choice (needs the `BACKGROUND_IMAGES` [flag](/settings/6-extras-settings/#flags)).
 
-Then tune it with Blur, Dim Intensity, Vignette (darker edges) and Animated (the image gently zooms with the music).
+Then tune it with Blur, Dim Intensity, Vignette (faded edges) and Animated (the image gently zooms with the music).
 "Color when expanded" keeps the player's color tint while expanded, turn it off to let the background show as it is.
 
 ### Wallpaper {#wallpaper}

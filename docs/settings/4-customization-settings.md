@@ -23,11 +23,11 @@ All three might affect performance on low end devices. If the app feels slow, tu
 
 [`🎉 Effects & Visualizers ↗`](/features/effects/)
 
-- Display remaining duration instead of total.
-- Display actual position instead of difference while seeking.
 - Border Radius Multiplier, controls how rounded the corners are.
 - Font Scale.
 - 12 Hour Format & Date Time Format.
+- Display remaining duration instead of total.
+- Display actual position instead of difference while seeking.
 
 ### Home Screen Widget {#home-widget}
 
@@ -53,6 +53,7 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 - Display third row & third item in each row, control how much info a track tile shows.
 - Display favourite button.
 - Items separator.
+- Artists Display Separator, joins multiple artists with your own separator (like `A & B`) instead of showing the tag as is. `🆕 v8.2.0`
 
 ### Miniplayer Customization {#miniplayer-customization}
 
@@ -61,6 +62,7 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 - Player background, the artwork or your own image behind the expanded player. `🆕 v7.8.0` [`🎉 Player Background ↗`](/features/effects/#player-background)
 - Thumbnail animation intensity, the artwork animates with the audio peak. Separate values for expanded, minimized and lyrics view, plus an inverse option where high peaks make the thumbnail smaller.
 - Artwork gestures, scale multiplier, tap action, long press action and double tap to toggle lyrics.
+  - Flip Artwork action, shows the back cover (embedded, or an image like `back.jpg` in the track folder). `🆕 v8.2.0`
 - Waveform bars count.
 - Display audio info in miniplayer.
 - Display artist before title.

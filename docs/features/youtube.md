@@ -83,6 +83,7 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Big files download over multiple connections at once (3 by default and up to 8), set from the same flash icon as "Threads per download". Servers that don't support it fall back to a single connection. `🆕 v7.4.0`
 - Remove sponsor segments from the downloaded file, see [below](#sponsorblock-downloads). `🆕 v7.4.0`
 - Split by Chapters, save each chapter of the video as its own file, see [below](#chapters-downloads). `🆕 v7.4.0`
+- Video chapters are kept in the downloaded file. `🆕 v8.2.0`
 - Playlist downloads can be added to a library playlist, see [below](#playlist-downloads). `🆕 v7.4.0`
 - Set file last modified as video upload date, files get the video's date instead of the download time. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
 
@@ -127,33 +128,33 @@ Downloaded tracks get added to a library playlist named after the folder (or the
 
 Use these inside `%(...)s` to build the output filename, or the tags:
 
-| Format                        | Meaning                                                                                          |
-| ----------------------------- | ------------------------------------------------------------------------------------------------ |
-| `video_id`, `id`              | video identifier                                                                                 |
-| `video_url`, `url`            | video full url                                                                                   |
-| `video_title`, `fulltitle`    | video full title                                                                                 |
-| `title`                       | extracted music title from video title (Navjaxx - **Fading Light** (Slowed))                     |
-| `artist`                      | extracted music artist from video title (**Navjaxx** - Fading Light (Slowed)), or else `channel` |
-| `genre`                       | music genre, automatically set to Nightcore when the video title contains "nightcore"            |
-| `ext`                         | format container extension (mp4, m4a, webm), added automatically if not specified                |
-| `channel_fulltitle`           | channel full name                                                                                |
-| `channel`, `uploader`         | channel name (excluding " - Topic")                                                              |
-| `channel_id`, `uploader_id`   | channel id                                                                                       |
-| `channel_url`, `uploader_url` | channel url                                                                                      |
-| `timestamp`                   | UNIX timestamp of the video, milliseconds since epoch                                            |
-| `upload_date`                 | upload date of the video, converted to local time (yyyyMMdd)                                     |
-| `view_count`                  | view count of the video                                                                          |
-| `like_count`                  | like count of the video                                                                          |
-| `description`                 | video description, links are wrapped in a markdown style                                         |
-| `duration`                    | video duration in seconds (204)                                                                  |
-| `duration_string`             | video duration formatted (3:24)                                                                  |
-| `playlist_title`              | title of the playlist containing the video                                                       |
-| `playlist_id`                 | id of the playlist containing the video                                                          |
-| `playlist`                    | `playlist_title` if available, or else `playlist_id`                                             |
-| `playlist_count`              | total videos count in the playlist                                                               |
-| `playlist_index`              | index of the video in the playlist, starts at 0                                                  |
-| `playlist_autonumber`         | position of the video in the playlist, starts at 1                                               |
-| `none`                        | empty field, useful for tags to override any other settings                                      |
+| Format | Meaning |
+| --- | --- |
+| `video_id`, `id` | video identifier |
+| `video_url`, `url` | video full url |
+| `video_title`, `fulltitle` | video full title |
+| `title` | extracted music title from video title (Navjaxx - **Fading Light** (Slowed)) |
+| `artist` | extracted music artist from video title (**Navjaxx** - Fading Light (Slowed)), or else `channel` |
+| `genre` | music genre, automatically set to Nightcore when the video title contains "nightcore" |
+| `ext` | format container extension (mp4, m4a, webm), added automatically if not specified |
+| `channel_fulltitle` | channel full name |
+| `channel`, `uploader` | channel name (excluding " - Topic") |
+| `channel_id`, `uploader_id` | channel id |
+| `channel_url`, `uploader_url` | channel url |
+| `timestamp` | UNIX timestamp of the video, milliseconds since epoch |
+| `upload_date` | upload date of the video, converted to local time (yyyyMMdd) |
+| `view_count` | view count of the video |
+| `like_count` | like count of the video |
+| `description` | video description, links are wrapped in a markdown style |
+| `duration` | video duration in seconds (204) |
+| `duration_string` | video duration formatted (3:24) |
+| `playlist_title` | title of the playlist containing the video |
+| `playlist_id` | id of the playlist containing the video |
+| `playlist` | `playlist_title` if available, or else `playlist_id` |
+| `playlist_count` | total videos count in the playlist |
+| `playlist_index` | index of the video in the playlist, starts at 0 |
+| `playlist_autonumber` | position of the video in the playlist, starts at 1 |
+| `none` | empty field, useful for tags to override any other settings |
 
 Examples:
 
@@ -230,7 +231,8 @@ Channel custom emojis, voice replies (shown as their transcript) and the "commen
 ### Takeout Import {#history-import}
 
 You can import your watch history from YouTube takeout files (both json and html formats work). It gets merged into Namida history like any local listen.
-Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
+The same takeout can also bring your favourites (liked videos) and playlists (as local YouTube playlists), you choose what gets imported. `🆕 v8.2.0`
+Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-data)
 
 ::: callout tip
 Signing in gives live access to your subscriptions and playlists, which can be better than importing them manually.
@@ -243,7 +245,7 @@ Signing in gives live access to your subscriptions and playlists, which can be b
 - [⚙️ YouTube Settings](/settings/5-youtube-settings/)
 - [⚙️ SponsorBlock](/settings/5-youtube-settings/#sponsorblock)
 - [⚙️ Return YouTube Dislike](/settings/5-youtube-settings/#return-youtube-dislike)
-- [⚙️ Backup & Restore, for history import](/settings/7-backup-restore-settings/#import-youtube-history)
+- [⚙️ Backup & Restore, for history import](/settings/7-backup-restore-settings/#import-data)
 - [🎉 Subtitles feature](/features/subtitles/)
 
 ---

@@ -14,10 +14,6 @@ It controls things like auto coloring, blur, glow and parallax at once.
 
 It also holds the [effects and visualizer](/features/effects/) settings, High performance turns them off. `🆕 v7.8.0`
 
-### Re-scan Videos {#rescan-videos}
-
-Rebuilds the local videos index.
-
 ### Remove Source from History {#remove-source-history}
 
 Remove all listens that came from a specific source (like an import) from your history. [`🎉 History Import feature ↗`](/features/playlists-history/#import)
@@ -37,21 +33,24 @@ The files in the selected folder are replaced.
 ### Compress Images {#compress-images}
 
 Compress artworks and cached images to save storage, you choose the compression percentage. Moderate values save a lot with little visible loss. The audio files are untouched. "Keep file dates" keeps the original dates on the compressed images.
+Animated images are skipped and transparency is kept. `🆕 v8.2.0`
 
 ::: callout info
-Output goes to a new folder [Namida Folder](/storage-paths/#namida-folder)`/Compressed`. The selected folder is not changed, so copy the files back manually if you want to replace the originals.
+Namida's own image caches are replaced in place (only when the result is smaller). `🆕 v8.2.0`
+Other folders go to [Namida Folder](/storage-paths/#namida-folder)`/Compressed` with the same folder structure. The selected folder is not changed, so copy the files back manually if you want to replace the originals.
 :::
 
 ### Cache Limits {#cache-limits}
 
 Maximum size for server, image, audio and video caches. Oldest and least important items get cleaned first.
+Each limit is set from the wheel on its [Clear](#clear-caches) tile. `🆕 v8.2.0`
 
-| Cache                   | Android | Windows & Linux |
-| ----------------------- | ------- | --------------- |
-| Server `🆕 v7.4.0`      | 4 GB    | 12 GB           |
-| Image                   | 256 MB  | 2 GB            |
-| Audio                   | 4 GB    | 12 GB           |
-| Video                   | 8 GB    | 24 GB           |
+| Cache | Android | Windows & Linux |
+| --- | --- | --- |
+| Server `🆕 v7.4.0` | 4 GB | 12 GB |
+| Image | 256 MB | 2 GB |
+| Audio | 4 GB | 12 GB |
+| Video | 8 GB | 24 GB |
 
 Each cached video has a priority: VIP, High, Normal, Low or Disable. Cleaning starts from the bottom and never touches VIP items. Change it from the video's menu, see [Caching & Offline Playback](/features/youtube/#caching).
 
@@ -61,18 +60,37 @@ Server tracks you cached yourself are never deleted automatically either, but th
 
 Clear server, image, audio or video cache. Each tile shows the current size, and you pick what to delete before anything is removed.
 
-| Cache              | What you can pick                                                                                                                              |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Server `🆕 v7.4.0` | The tracks you cached yourself (not selected by default), the other streamed files, and unfinished downloads.                                 |
-| Image              | Each image folder: track artworks, video thumbnails, artist and album images, YouTube thumbnails and channel images.                          |
-| Audio              | Everything, or press Choose to pick single items, which can be sorted by size, oldest watch or total listens.                                  |
-| Video              | Same as audio.                                                                                                                                 |
+| Cache | What you can pick |
+| --- | --- |
+| Server `🆕 v7.4.0` | The tracks you cached yourself (not selected by default), the other streamed files, and unfinished downloads. |
+| Image | Each image folder: track artworks, video thumbnails, artist and album images, YouTube thumbnails and channel images. |
+| Audio | Everything, or press Choose to pick single items, which can be sorted by size, oldest watch or total listens. |
+| Video | Same as audio. |
 
 When choosing audio or video items, you can also select everything of a priority at once `🆕 v7.4.0`, unfinished downloads, or files already in your local library.
 
 ::: callout warning
 Clearing the image cache leaves your library without images. Only use it to rebuild the image cache.
 :::
+
+### Flags {#flags}
+
+`🆕 v8.2.0`
+
+Hidden options. Press the flag icon at the top of the Advanced settings card to open them:
+
+Integrations (💻 Android only):
+
+- `ANDROID_AUTO_AND_WEAR`, shows the queue in Android Auto and Wear OS, on by default.
+- `NOW_PLAYING_BROADCAST`, sends the current track to Tasker and other automation apps. [`🎉 Broadcasts ↗`](/features/automation/#broadcasts)
+- `STATUS_BAR_LYRICS`, the current lyrics line in the status bar of supported systems (ColorOS & HyperLyric, SuperLyric, Flyme & Lyricon). [`🎉 Status Bar Lyrics ↗`](/features/system-integration/#status-bar-lyrics)
+
+Others:
+
+- `WEBHOOK`, posts playback events (track changed, play, pause) to a URL of your choice. [`🎉 Webhook ↗`](/features/automation/#broadcasts)
+- `SERVER_PLAYBACK_REPORTS`, tells Subsonic and Jellyfin servers what you play, on by default. [`🎉 Playback Reports ↗`](/features/media-servers/#playback-reports)
+- `ANALYZE_RHYTHM`, analyzes the tempo and beats of the whole library ahead of time, for the beat matched [crossfade](/features/playback/#beat-matching). The tag button writes the analyzed BPM to files that have none.
+- `DETECT_FAKE_LOSSLESS_FILES`, scans your lossless files for ones made from a lossy source, upsampled or bit-padded. The results can be saved as a playlist.
 
 ---
 

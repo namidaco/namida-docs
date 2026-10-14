@@ -21,12 +21,12 @@ We are not responsible for downloads from other sources.
 
 Every release has an APK per architecture, beta adds a clone variant on top.
 
-| File                                  | Channel       | Pick it if                                                                                                |
-| ------------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------- |
-| `namida-vX.X.X-arm64-v8a.apk`         | stable & beta | Default choice, works on any modern 64 bit device.                                                        |
-| `namida-vX.X.X-armeabi-v7a.apk`       | stable & beta | Old 32 bit device, or the arm64 one refuses to install.                                                   |
-| `namida-vX.X.X-clone-arm64-v8a.apk`   | beta only     | You want the beta beside your stable Namida. Different app id, so it's a separate app with separate data. |
-| `namida-vX.X.X-clone-armeabi-v7a.apk` | beta only     | Same clone, for 32 bit devices.                                                                           |
+| File | Channel | Pick it if |
+| --- | --- | --- |
+| `namida-vX.X.X-arm64-v8a.apk` | stable & beta | Default choice, works on any modern 64 bit device. |
+| `namida-vX.X.X-armeabi-v7a.apk` | stable & beta | Old 32 bit device, or the arm64 one refuses to install. |
+| `namida-vX.X.X-clone-arm64-v8a.apk` | beta only | You want the beta beside your stable Namida. Different app id, so it's a separate app with separate data. |
+| `namida-vX.X.X-clone-armeabi-v7a.apk` | beta only | Same clone, for 32 bit devices. |
 
 ::: callout info
 You can install beta on top of stable and vice versa, your data stays as is. The clone builds are the only separate app.
@@ -54,10 +54,10 @@ Namida is not on Google Play and will not be, see [Not Planned](/not-planned/#go
 
 #### Which file {#windows-files}
 
-| File                                    | Pick it if                                                                                    |
-| --------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `Namida-x86_64-<version>-Installer.exe` | Normal install. Creates shortcuts and updates in place, recommended.                          |
-| `Namida-x86_64-<version>-Portable.zip`  | Nothing installed on the system. Extract anywhere and run `namida.exe`, good for a usb drive. |
+| File | Pick it if |
+| --- | --- |
+| `Namida-x86_64-<version>-Installer.exe` | Normal install. Creates shortcuts and updates in place, recommended. |
+| `Namida-x86_64-<version>-Portable.zip` | Nothing installed on the system. Extract anywhere and run `namida.exe`, good for a usb drive. |
 
 #### Installing {#windows-install}
 
@@ -83,7 +83,7 @@ sudo apt install mpv libmpv2  # Debian/Ubuntu/Mint
 sudo dnf install mpv mpv-libs # Fedora/RHEL
 ```
 
-**webkit2gtk** is optional and only needed for YouTube login. Most distros already ship it.
+**webkit2gtk** is optional and only needed for YouTube login. Most distros already ship it, and the AppImage and flatpak include it.
 
 ```bash
 sudo pacman -S webkit2gtk-4.1          # Arch/Manjaro
@@ -97,13 +97,13 @@ Older betas had separate `_login` builds bundling wpewebkit. They are gone, ever
 
 #### Which file {#linux-files}
 
-| File                               | Pick it if                                                                                                                                                                    |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `namida-vX.X.X-beta.linux.tar.gz`  | Any distro. This is what the quick install script below uses, or extract and run it yourself.                                                                                 |
-| `namida-vX.X.X-beta.linux.deb`     | Debian, Ubuntu, Mint and friends.                                                                                                                                             |
-| `namida-vX.X.X-beta.linux.rpm`     | Fedora, RHEL and friends.                                                                                                                                                     |
-| `Namida-x86_64-<version>.AppImage` | A single portable file, no installation. Built on an older glibc so it also runs on non rolling distros, and it can update itself through AppImageUpdate or AppImageLauncher. |
-| `Namida-x86_64-<version>.flatpak`  | You already use flatpak. Ships its own mpv.                                                                                                                                   |
+| File | Pick it if |
+| --- | --- |
+| `namida-vX.X.X-beta.linux.tar.gz` | Any distro. This is what the quick install script below uses, or extract and run it yourself. |
+| `namida-vX.X.X-beta.linux.deb` | Debian, Ubuntu, Mint and friends. |
+| `namida-vX.X.X-beta.linux.rpm` | Fedora, RHEL and friends. |
+| `Namida-x86_64-<version>.AppImage` | A single portable file, no installation. Everything is bundled so it runs on any distro, and it can update itself. |
+| `Namida-x86_64-<version>.flatpak` | You already use flatpak. Ships its own mpv. |
 
 #### Installing {#linux-install}
 
@@ -132,7 +132,16 @@ chmod +x Namida-x86_64-<version>.AppImage
 Flatpak:
 
 ```bash
-flatpak install ./Namida-x86_64-<version>.flatpak
+flatpak install --user ./Namida-x86_64-<version>.flatpak
+flatpak run app.namida.Namida
+```
+
+Coming from the old `com.msob7y.namida` flatpak? The id is now `app.namida.Namida` `🆕 v8.2.0`, close Namida and move your data before removing the old one:
+
+```bash
+mv ~/.var/app/com.msob7y.namida ~/.var/app/app.namida.Namida
+mv ~/.var/app/app.namida.Namida/data/com.msob7y.namida ~/.var/app/app.namida.Namida/data/app.namida.Namida
+flatpak uninstall --user com.msob7y.namida
 ```
 
 Nix (Home Manager) is available at [namida-nix](https://codeberg.org/iWisp360/namida-nix).

@@ -35,20 +35,22 @@ Show the dislike count on videos, using data from [returnyoutubedislike.com](htt
 - Seekbar behavior, tap to seek and drag to seek.
 - Drag to seek (Video), when swiping horizontally on the video itself: Never, Expanded Miniplayer, Fullscreen or Always. `🆕 v7.0.0`
 
+### Comments {#comments}
+
+- Top comments, display comments at the top instead of the bottom.
+  - When on, more related videos load as you scroll.
+  - When off, a "Show more" button loads more related videos.
+- Prefer new comments when possible, cached comments are only used when offline.
+
 ### Content {#content}
 
-- Show Shorts in & Show Mixes in, control where shorts and mix playlists appear.
 - Show channel watermark in fullscreen.
 - Show video endcards.
 - Auto start radio, automatically adds a mix playlist when playing a single track.
 - Personalized Related Videos, turning it off fetches an extra page without account info (so it uses more data).
 - Personalized Mix Playlists.
 - Enable Search Cleanup, hide unrelated search results.
-
-### Comments {#comments}
-
-- Top comments, display comments at the top instead of the bottom. When on, more related videos load as you scroll, when off, a "Show more" button loads them.
-- Prefer new comments when possible, cached comments are only used when offline.
+- Show Shorts in & Show Mixes in, control where shorts and mix playlists appear.
 
 ### Downloads {#downloads}
 
@@ -82,7 +84,7 @@ Hidden experimental options. Press the flag icon at the top of the Youtube setti
 - `LINK_LIKE_BUTTON_WITH_FAVOURITES`, liking a video adds it to your local YouTube favourites, unliking or disliking removes it.
 - `USE_NEW_NOTIFICATIONS_EXTRACTOR`, try it if new notifications don't show up, but their order might not be accurate.
 - `MAX_PAGE_CACHE_DURATION_VALIDITY`, how long cached pages stay valid.
-- `REFRESH_JS_PLAYER`, refetch the player (can fix streaming issues).
+- `RESET_YOUTUBE_SESSION`, start a fresh YouTube session while keeping your accounts (can fix streaming issues). Namida also resets it on its own when playback keeps failing. `🆕 v8.2.0`
 - `COPY_YT_HISTORY_TO_LOCAL_HISTORY`, copy your YouTube watches to the local history, as listens of the local tracks linked to the same video.
 
 ::: callout info

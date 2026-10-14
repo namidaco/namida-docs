@@ -11,12 +11,13 @@ New here? Follow the [Quickstart](#quickstart) below or check [Features](/featur
 
 ::: callout tip
 Search these docs with Ctrl/⌘ + K, or ask the AI assistant using the button below.
+They are inside Namida too (even offline), look for the guide icon at the top of a page. `🆕 v8.2.0`
 :::
 
 ### Quickstart {#quickstart}
 
 1. Install Namida. [`📒 Installation Guide ↗`](/installation/)
-2. On first launch, the setup screen asks for storage permission on Android and for your music folders. Add the folders holding your music and exclude any you don't want. Theme, language and restoring a backup are there too.
+2. On first launch, add the folders holding your music, Namida only scans the folders you choose. Moving from another device? Restore a backup or sync from it right there instead of starting fresh. [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
 3. Press the arrow to finish, Namida scans the folders and builds your library. Pull down on the Tracks page to refresh whenever you add new music. [`⚙️ Configure Indexer ↗`](/settings/2-indexer-settings/)
 4. Tap a track to play it. The miniplayer appears at the bottom, swipe up to expand it, and long press any track for options. [`🎉 Playback feature ↗`](/features/playback/)
 5. For YouTube, open the YouTube tab, or use the Search to find videos. Sign in to get your playlists, subscriptions and more. [`🎉 YouTube feature ↗`](/features/youtube/)

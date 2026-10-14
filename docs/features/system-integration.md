@@ -12,7 +12,7 @@ For Tasker, scripts and scrobblers, see [`🎉 Automation & Other Apps ↗`](/fe
 
 Any app that can "open" or "share" something can hand it to Namida:
 
-- Audio and video files play right away, many files or whole folders (subfolders included) too.
+- Audio and video files play right away, many files or whole folders (subfolders included) too. They don't join your library, but keep their info in the queue and history. `🆕 v8.2.0`
 - `.m3u` and `.m3u8` playlist files play the tracks inside them. [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
 - YouTube video links follow your "On Opening Youtube Link" choice, YouTube playlist links open the playlist page. [`⚙️ Configure On Opening Youtube Link ↗`](/settings/5-youtube-settings/#on-opening-youtube-link)
 - Links inside shared text are picked up too, so a message with a few YouTube links works.
@@ -21,6 +21,7 @@ Any app that can "open" or "share" something can hand it to Namida:
 On Android this covers the share sheet, "Open with" and NFC tags carrying a YouTube link, and Namida can be set as your default music player.
 
 On desktop the same works through file associations, drag & drop onto the window and the command line (`namida <files, folders or links>`). If Namida is already open, the existing window plays them.
+While dragging, the window shows drop zones to Play, Play Last or More (opens the menu for what you dropped). `🆕 v8.2.0`
 
 ::: callout info
 Voice assistants can open Namida and use the media controls below, but a spoken "play some artist" search is not handled yet, Namida just opens.
@@ -30,10 +31,10 @@ Voice assistants can open Namida and use the media controls below, but a spoken 
 
 Namida shows standard media controls wherever the system offers them:
 
-- Notification and lock screen, with play, pause, next, previous, seek and favourite (or like, for YouTube). [`⚙️ Configure Display Favourite Button in Notification ↗`](/settings/3-playback-settings/#fav-button-notification)
+- Notification and lock screen, with play, pause, next, previous and seek, plus buttons you pick and reorder (favourite, shuffle, repeat, chapters, sleep timer, add to playlist, etc). `🆕 v8.2.0` [`⚙️ Configure Notification Buttons ↗`](/settings/3-playback-settings/#notification-buttons)
 - Headset and Bluetooth buttons.
-- Android Auto and Wear OS, where Namida shows up as a media app with the current queue to play from (repeat and shuffle included).
-- Windows media keys and the media flyout (with a timeline).
+- Android Auto and Wear OS, where Namida shows up as a media app with the current queue to play from (repeat and shuffle included). The queue can be turned off with the `ANDROID_AUTO_AND_WEAR` [flag](/settings/8-advanced-settings/#flags). `🆕 v8.2.0`
+- Windows media keys and the media flyout (with a timeline you can seek on).
 - Linux desktop media widgets and shell extensions, through MPRIS.
 
 Other apps can read and control the same session too. [`🎉 Automation & Other Apps ↗`](/features/automation/)
@@ -45,6 +46,12 @@ Other apps can read and control the same session too. [`🎉 Automation & Other 
 Add the Namida tile to your quick settings panel to play and pause without opening anything. The tile shows the current state, so you can tell at a glance if something is playing.
 
 There is also a "Namida Shuffle" tile, it toggles shuffle and shows whether it's on. `🆕 v7.4.0` [`🎉 Queue System ↗`](/features/playback/#queue)
+
+### Status Bar Lyrics {#status-bar-lyrics}
+
+`🆕 v8.2.0` `💻 Android only`
+
+Shows the current lyrics line in the status bar, on systems and modules that support it (ColorOS, HyperLyric, SuperLyric, Flyme and Lyricon). Pick the ones you use from `STATUS_BAR_LYRICS`, in the flags at the top of Advanced settings. [`⚙️ Configure Flags ↗`](/settings/8-advanced-settings/#flags)
 
 ### Home Screen Widget {#home-widget}
 
@@ -81,6 +88,8 @@ Control playback even when Namida is not focused, see [`🎉 Shortcuts feature �
 - [🎉 Automation & Other Apps](/features/automation/)
 - [🎉 Home Screen Widget](/features/home-widget/)
 - [🎉 Shortcuts](/features/shortcuts/)
+- [⚙️ Playback, Notification Buttons](/settings/3-playback-settings/#notification-buttons)
+- [⚙️ Advanced, Flags](/settings/8-advanced-settings/#flags)
 - [⚙️ Youtube, On Opening Youtube Link](/settings/5-youtube-settings/#on-opening-youtube-link)
 
 ---

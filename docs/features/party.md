@@ -120,7 +120,7 @@ Every track the party played is listed, even after you leave. Press "Save as pla
 - No accounts, joining needs nothing but a room code
 - No audio ever leaves your device
 - The server only passes messages along, it never reads them
-- Nothing is kept after a room ends, and no room lives longer than 24 hours
+- Nothing is kept after a room ends, and no room stays longer than 24 hours
 
 While a room is open, the server holds the room code and options, the ban list, and for each person a display name, a device id and an IP address (used only for rate limiting and bans).
 All of it is deleted when the room ends: the host closes it, nobody is connected for 10 minutes, or 24 hours pass.

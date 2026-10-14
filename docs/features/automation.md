@@ -13,6 +13,49 @@ The everyday side of this is in [`🎉 System Integration ↗`](/features/system
 - Start playback with anything Namida accepts through "Open with" or share (files, folders, playlists, YouTube links, text with links and party invites). [`🎉 Open With & Share ↗`](/features/system-integration/#open-with)
 - Control playback through the media session (play, pause, stop, next, previous and seek, plus repeat and shuffle where the app offers them). [`🎉 Media Controls ↗`](/features/system-integration/#media-controls)
 - Read the current track (title, artist, album, duration and position) with media or notification access. Tasker, scrobblers (Pano Scrobbler, Last.fm apps, etc) and watch companions all use this.
+- Read the ids from the file tags (MusicBrainz, ISRC, AcoustID, etc) in the media session, under keys like `org.musicbrainz.MUSICBRAINZ_TRACKID`, so scrobblers can match the exact recording (although none read them yet). `💻 Android only` `🆕 v8.2.0`
+- Get every track change, play and pause with the full track info (file path, queue position, MusicBrainz ids), through broadcasts or a webhook. `🆕 v8.2.0` [See below](#broadcasts)
+
+### Broadcasts & Webhook {#broadcasts}
+
+`🆕 v8.2.0`
+
+Turn them on from the flag icon at the top of Advanced settings:
+
+- `NOW_PLAYING_BROADCAST`, an Android broadcast on every track change, play and pause, for Tasker and other automation apps. `💻 Android only`
+- `WEBHOOK`, posts the same events as JSON to a url, you pick which events (track changed, play, pause).
+
+Each event has the full track info, including the file path (or video id for YouTube) and ids from the file tags (MusicBrainz, ISRC, AcoustID, etc), see the [event format](#event-format). Broadcast actions are in the [cheat sheet](#cheat-sheet). [`⚙️ Configure Flags ↗`](/settings/8-advanced-settings/#flags)
+
+### Event Format {#event-format}
+
+`🆕 v8.2.0`
+
+Broadcasts and the webhook send the same fields:
+
+- Sent as:
+  - Webhook: JSON, like the example below.
+  - Broadcasts: extras with the same names.
+- `event`: `trackChanged` / `play` / `pause`
+- `path` is the file path, YouTube videos have `videoId` instead.
+- Tag ids (like `MUSICBRAINZ_TRACKID`) are only there when the file has them.
+
+```json
+{
+  "event": "trackChanged",
+  "playing": true,
+  "positionMS": 0,
+  "title": "Song",
+  "artist": "Artist",
+  "album": "Album",
+  "genre": "Pop",
+  "durationMS": 215000,
+  "path": "/storage/emulated/0/Music/song.flac",
+  "queueIndex": 4,
+  "queueLength": 20,
+  "MUSICBRAINZ_TRACKID": "d6118046-407d-4e06-a1ba-49c399a4c42f"
+}
+```
 
 ### Cheat Sheet {#cheat-sheet}
 
@@ -48,6 +91,15 @@ adb shell cmd media_session dispatch play-pause
 adb shell cmd media_session dispatch next
 ```
 
+**Android, reading broadcasts** `🆕 v8.2.0`
+
+| Action | Sent on |
+| --- | --- |
+| `com.msob7y.namida.metachanged` | Track changed |
+| `com.msob7y.namida.playstatechanged` | Play and pause |
+
+In Tasker, use the "Intent Received" event with one of these actions, the extras arrive as variables (`%title`, `%artist`, `%path`, etc). All fields are in the [event format](#event-format).
+
 **Windows**
 
 ```sh
@@ -73,10 +125,6 @@ playerctl -p namida open file:///home/me/Music/song.flac
 
 The MPRIS name is `org.mpris.MediaPlayer2.namida`, `playerctl -l` lists it while Namida runs.
 
-### Not Available Yet {#not-yet}
-
-There is no plugin API, no broadcast on track change and no webhook, so outside apps only get what the media session carries (no file path, no MusicBrainz ids). These are tracked in [#27](https://github.com/namidaco/namida/issues/27), [#948](https://github.com/namidaco/namida/issues/948) and [#1040](https://github.com/namidaco/namida/issues/1040).
-
 ---
 
 ### Related {#related}
@@ -84,6 +132,7 @@ There is no plugin API, no broadcast on track change and no webhook, so outside 
 - [🎉 System Integration](/features/system-integration/)
 - [🎉 Shortcuts](/features/shortcuts/)
 - [🎉 Listening Party](/features/party/)
+- [⚙️ Advanced, Flags](/settings/8-advanced-settings/#flags)
 - [⚙️ Youtube, On Opening Youtube Link](/settings/5-youtube-settings/#on-opening-youtube-link)
 
 ---

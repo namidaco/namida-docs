@@ -15,6 +15,8 @@ Sync is a new feature and still evolving, both devices must run the same Namida 
 
 One device starts a server, other devices on the same network discover it and request to connect. The server accepts, rejects or blocks each device. Once connected, you can send and receive data with that device, or all devices at once. [`⚙️ Open Sync ↗`](/settings/7-backup-restore-settings/#sync) [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
 
+Accepted devices are paired and verify each other on every connection, so another device can't pretend to be one of yours (devices accepted on older versions need accepting once again). `🆕 v8.2.0`
+
 ### What Gets Synced {#data}
 
 You choose the data to send & receive, every item can be turned on and off on its own.

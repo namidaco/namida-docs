@@ -33,17 +33,12 @@ How local videos are matched with tracks (by title or filename), with an option 
 
 Never, when the miniplayer is expanded, or when the miniplayer is expanded and a video is playing.
 
-### Display Favourite Button in Notification {#fav-button-notification}
+### Notification Buttons {#notification-buttons}
 
-`💻 Android only`
+`🆕 v8.2.0` `💻 Android only`
 
-Adds a favourite button to the media notification. The thumbnail might move out of place on some devices.
-
-### Display Stop Button in Notification {#stop-button-notification}
-
-`💻 Android only`
-
-Adds a stop button to the media notification.
+Pick and reorder the media notification buttons: favourite, stop, shuffle, repeat, seek, chapters, sleep timer, stop after this track, add to playlist and bookmark. For add to playlist, you pick the playlist it adds to.
+On Android 11 and below, the thumbnail might move out of place with 5 buttons.
 
 ### Display Artwork on Lockscreen {#artwork-lockscreen}
 
@@ -97,7 +92,9 @@ Removes the small delay between tracks by loading the next one early. Useful for
 Fades between tracks. You can set the crossfade duration and how many seconds before the end it should trigger.
 Part of the membership, or unlock it with an egg. [`📄 Membership ↗`](/membership/#benefits) [`📄 Eggs ↗`](/membership/#eggs)
 
-Turned off while [Bit-perfect](/features/playback/#bit-perfect) or [USB direct access](/features/playback/#usb-direct) is on. `🆕 v7.8.0`
+Style: Smart starts automatic crossfades where the track fades out, Beat matching also lines up the beats. `🆕 v8.2.0` [`🎉 Smart & Beat Matching ↗`](/features/playback/#beat-matching)
+
+Turned off while [Bit-perfect](/features/playback/#bit-perfect), [USB direct access](/features/playback/#usb-direct) or [Exclusive mode](/features/playback/#exclusive-mode) is on. `🆕 v7.8.0`
 
 ### Fade Effect on Play/Pause {#fade-play-pause}
 
@@ -138,6 +135,12 @@ When the queue ends, go back to the first track instead of staying on the last o
 ### Previous Button Replays {#previous-button-replays}
 
 If the track has played longer than the seek duration, pressing previous restarts it instead of going to the previous track.
+
+### Next/Previous Jump Between Chapters {#skip-buttons-chapters}
+
+`🆕 v8.2.0`
+
+In a track or video with chapters, next and previous jump between its chapters instead of changing the track. [`🎉 Chapters ↗`](/features/playback/#chapters)
 
 ### Seek Duration {#seek-duration}
 

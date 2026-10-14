@@ -23,7 +23,7 @@ YouTube updates can break clients from time to time, fixes are available in beta
 3. Disable any VPN, custom DNS or proxy.
 4. If YouTube is restricted in your area, try a different VPN instead.
 5. Still doesn't play? Send the logs (they show which JS player failed) with "Report an issue". [`📄 About Page ↗`](/pages/other/#about)
-6. Then open the YouTube flags, press `REFRESH_JS_PLAYER`, and make sure `INNERTUBE_CLIENT` is set to Default. [`⚙️ Configure YouTube Flags ↗`](/settings/5-youtube-settings/#flags)
+6. Then open the YouTube flags, press `RESET_YOUTUBE_SESSION`, and make sure `INNERTUBE_CLIENT` is set to Default. [`⚙️ Configure YouTube Flags ↗`](/settings/5-youtube-settings/#flags)
 
 ### Sync devices can't find or connect {#sync-troubleshooting}
 
@@ -49,10 +49,10 @@ See [Lyrics](/settings/6-extras-settings/#lyrics) for the full lookup order.
 Not directly, but you can provide your own lyrics per track:
 
 - Long press the lyrics icon in the player and add an LRC file, or paste the lyrics in the lyrics tag using the tag editor.
-- Or write and sync them yourself. `🆕 v8.0.0` [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/)
+- Or write and sync them yourself. `🆕 v8.2.0` [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/)
 - Or embed any of them into the track, from their ⋮ menu in the same list. [`🎉 Lyrics Picker ↗`](/features/playback/#lyrics-picker)
 - Put an `.lrc` file next to the song with the same filename, or in one of your [lyrics folders](/settings/6-extras-settings/#lyrics-folders). Subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) and `.txt` for plain lyrics work too.
-- Set [Prioritize embedded lyrics](/settings/6-extras-settings/#lyrics) depending on where you usually keep them.
+- Set [Prefer embedded lyrics](/settings/6-extras-settings/#lyrics) depending on where you usually keep them.
 
 ### I added lyrics but they don't show (or keep showing old ones) {#lyrics-not-showing}
 
@@ -66,10 +66,11 @@ Setting the [Lyrics Save Location](/settings/6-extras-settings/#lyrics-save-loca
 
 Or simply tap the lyrics you want and press Save.
 
-If they still don't show, check [Prioritize embedded lyrics](/settings/6-extras-settings/#lyrics):
+If they still don't show, check [Prefer embedded lyrics](/settings/6-extras-settings/#lyrics):
 
-- **On**, if the file has embedded lyrics, nothing else is looked at. Turn it on if you pasted lyrics in the tag, off if you added an `.lrc` file.
-- **Off**, the order is: cached lyrics -> `.lrc` file next to the track or in lyrics folders -> embedded tag -> `.txt` files -> online databases. If the Lyrics Save Location is Track folder or Lyrics folders, the `.lrc` file is checked before the cached lyrics instead.
+- **Always**, if the file has embedded lyrics, nothing else is looked at. Pick it if you pasted lyrics in the tag, Never if you added an `.lrc` file.
+- **Synced** (default), same as Always, but only when the embedded lyrics are synced. `🆕 v8.2.0`
+- **Never**, the order is: cached lyrics -> `.lrc` file next to the track or in lyrics folders -> embedded tag -> `.txt` files -> online databases. If the Lyrics Save Location is Track folder or Lyrics folders, the `.lrc` file is checked before the cached lyrics instead.
 
 ::: callout tip
 Also make sure the `.lrc` file sits next to the track and has the same filename, and that the [Lyrics Source](/settings/6-extras-settings/#lyrics) is not set to Internet only.
@@ -123,7 +124,7 @@ See [Not Planned](/not-planned/#google-play) for the reasoning, and [`📒 Insta
 
 ### Is Spotify supported? {#spotify}
 
-No, and not planned. Importing your Spotify history is supported, but that's all. See [Not Planned](/not-planned/#spotify) for the reasoning and alternatives.
+No, and not planned. Importing your Spotify history and favourites (liked songs) is supported, but that's all. See [Not Planned](/not-planned/#spotify) for the reasoning and alternatives.
 
 ### Are CUE sheets supported? {#cue-sheets}
 

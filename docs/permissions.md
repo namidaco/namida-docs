@@ -30,6 +30,7 @@ The permissions Namida uses and why. Nothing is used for tracking, there are no 
   - downloading YouTube content
   - playing tracks from a root folder
   - the in-app file browser
+- Folder access: only for folders added with the [Storage Access Framework](/settings/2-indexer-settings/#add-folder), Namida keeps access to the folder you pick. `🆕 v8.2.0`
 - `POST_NOTIFICATIONS`: show notifications like history import, download or server caching progress.
 - `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS`: improve downloads, they can be slowed down when the app is battery restricted.
 - `WRITE_SETTINGS`: to set audio as ringtone, etc.

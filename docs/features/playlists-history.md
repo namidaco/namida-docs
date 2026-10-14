@@ -18,12 +18,14 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
 - Custom order for playlist tracks, press the lock icon at the top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
 - Playlists can be searched, and can have moods (which the queue uses when adding tracks by mood). Search matches [tags](#playlist-tags) too.
 - Pin a playlist from its menu to keep it at the top. `🆕 v7.8.0`
+- Pinned playlists can show on the Home page too, enable Pinned Playlists from its configure button. `🆕 v8.2.0`
 - Select many playlists with the checklist icon at the top, to tag, pin, play, merge, export or delete them at once. `🆕 v7.8.0`
 - M3U playlists keep their comment, moods, tags and sorting. `🆕 v7.8.0`
 - Remove Duplicates is in the playlist menu, under Advanced. `🆕 v7.8.0`
+- Add a description from the playlist menu -> Edit (YouTube playlists too), it shows on the playlist page. `🆕 v8.2.0`
 
-::: callout warning
-Sorting tracks by a property means your custom order will be lost. You will see a warning, and you need to confirm before the new sort is applied.
+::: callout info
+Sorting a playlist's tracks keeps your custom order, clearing all sorters asks whether to restore it. Synced M3U files keep the custom order too. `🆕 v8.2.0`
 :::
 
 Also see the [`🎉 YouTube feature ↗`](/features/youtube/#playlists) for how local and YouTube playlists relate.
@@ -37,7 +39,7 @@ Organize your playlists with tags, like `gym`, `chill` or `anime/openings`.
 - Add tags from a playlist's menu -> Tags/Moods. Select many playlists to tag them all at once.
 - Use a slash to put a tag inside another, like `gym/cardio`. Filtering by `gym` shows those too.
 - Tap a tag in the tags row to show only its playlists, or hold it to hide them instead.
-- The ⋯ chip can play the shown playlists, save the filter, group the page by tags, or manage your tags.
+- The ⋯ chip can play the shown playlists, save the filter, group the page by tags, or manage your tags. When grouped, long press a tag's header to select all its playlists. `🆕 v8.2.0`
 - Importing a folder of M3U files tags each playlist with its folder name. [`📄 Playlists Page ↗`](/pages/library/#playlists)
 
 YouTube playlists can be tagged and pinned too. [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists)
@@ -56,7 +58,9 @@ All rules, how to combine them, and examples from easy to complex: [`🎉 Smart 
 
 A reliable and flexible history system. You choose the minimum seconds or percentage that counts as a listen. History can be imported from other services, and listens can be replaced, never deleted. [`⚙️ Configure Listen Counting ↗`](/settings/3-playback-settings/#count-listen-after)
 
-Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range.
+Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range. After jumping, arrows at the bottom move between that track's other listens. `🆕 v8.2.0`
+
+Search the history with the icon at the end of the years row, only the listens of matching tracks are shown. `🆕 v8.2.0`
 
 [`📄 History Tips ↗`](/tips/#history-tips)
 
@@ -74,6 +78,8 @@ Find your top tracks based on your history record, with a custom time range to s
 
 Charts built from your history, and a yearly wrap up. See [`📄 Stats Page ↗`](/pages/other/#stats) and [`📄 Your Year Page ↗`](/pages/other/#your-year). Any album, artist, playlist or folder dialog also has a Stats entry with listen stats for just those tracks.
 
+Top tracks and discoveries can be played, shuffled or saved as a playlist from their menu. `🆕 v8.2.0` [`📄 Stats Charts ↗`](/pages/other/#charts)
+
 ### Lost Memories {#lost-memories}
 
 Meet the tracks you listened to around this time, but N years ago.
@@ -82,9 +88,13 @@ Meet the tracks you listened to around this time, but N years ago.
 
 Generate tracks related to the current one (typically the ones you often listened to in the same period), based on your history. You can also generate from a time range, moods, ratings, similar release date, or randomly.
 
+Similar Tracks matches the current track by genre, style, mood, artist, tempo, key and more, pick what to match by from its filter button. `🆕 v8.2.0`
+
 ### History Import {#import}
 
-Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-youtube-history)
+Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-data)
+
+The same exports can bring your liked tracks (YouTube, Spotify and ListenBrainz) as favourites, and YouTube playlists, pick what to import before starting. `🆕 v8.2.0`
 
 Your history is backed up before importing (unless you turn it off), and the progress dialog shows each step on its own. `🆕 v7.4.0`
 
@@ -95,7 +105,7 @@ The Home page rebuilds itself once the import is done, so mixes and recent liste
 ### Related Settings {#related-settings}
 
 - [⚙️ Playback, Count a Listen After](/settings/3-playback-settings/#count-listen-after)
-- [⚙️ Backup & Restore, History Imports](/settings/7-backup-restore-settings/#import-youtube-history)
+- [⚙️ Backup & Restore, Import data](/settings/7-backup-restore-settings/#import-data)
 - [⚙️ Advanced, Remove Source from History](/settings/8-advanced-settings/#remove-source-history)
 
 ---

@@ -50,18 +50,18 @@ Content...
 
 Two kinds of inline code chips are used:
 
-- **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `NamidaFeaturesAvailablity` value declared in the setting's enum (any enum `with SettingKeysBase` in `lib/ui/widgets/settings/`).
+- **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `availability:` (`NamidaFeaturesAvailablity`) of the setting's entry in `lib/ui/widgets/settings/`.
 - **Related link chip**: sections link their related setting/feature/page/guide with a clickable chip placed at the END of the line or the end of the section, never right under the header: ``[`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)``. More than one chip is fine when applicable. Keep a "Related Settings" list at the bottom of feature pages too.
 
 Link icons, always include the type in the name:
 
-| Type          | Icon | Naming example                |
-| ------------- | ---- | ----------------------------- |
-| Setting       | ⚙️   | `⚙️ Configure Downloads ↗`    |
-| Feature       | 🎉   | `🎉 Sync feature ↗`           |
-| Page          | 📄   | `📄 Tracks Page ↗`            |
-| Guide         | 📒   | `📒 Sync Guide ↗`             |
-| Platform only | 💻   | used for availability context |
+| Type | Icon | Naming example |
+| --- | --- | --- |
+| Setting | ⚙️ | `⚙️ Configure Downloads ↗` |
+| Feature | 🎉 | `🎉 Sync feature ↗` |
+| Page | 📄 | `📄 Tracks Page ↗` |
+| Guide | 📒 | `📒 Sync Guide ↗` |
+| Platform only | 💻 | used for availability context |
 
 ## Callouts
 
@@ -96,8 +96,8 @@ Types used: `info`, `tip`, `warning`.
 
 When documenting from the namida codebase:
 
-- Setting titles & subtitles: the `lookupMap` in each `lib/ui/widgets/settings/*.dart` file maps every setting to its `lang.*` keys, resolve them in `en.arb`.
-- Platform availability: `NamidaFeaturesAvailablity` on the setting's enum entry.
+- Setting titles, subtitles & in-app order: the `_sections` list in each `lib/ui/widgets/settings/*.dart` file, every entry has its `title`/`subtitle` as `lang.*` keys, resolve them in `en.arb`. Each inner list is a section (shown with a divider in the app).
+- Platform availability: `availability:` on the setting's entry.
 - Document what the user can do and what happens, never how it is implemented. Implementation details (buffer sizes, algorithms, file formats) drift with refactors and don't help users.
 - Don't guess. If a behavior can't be confirmed from code, the README, or the maintainer, leave it out.
 

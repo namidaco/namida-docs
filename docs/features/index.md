@@ -21,7 +21,7 @@ What Namida can do, each feature explained in its own page.
 - [Effects & Visualizers](/features/effects/), animated backgrounds and visualizers that move with your music
 - [Home Screen Widget](/features/home-widget/), a player widget on your home screen
 - [System Integration](/features/system-integration/), open with, media controls, tray, tiles and more
-- [Automation & Other Apps](/features/automation/), Tasker, scrobblers and scripts, with a cheat sheet
+- [Automation & Other Apps](/features/automation/), Tasker, scrobblers, webhooks and scripts, with a cheat sheet
 - [Shortcuts](/features/shortcuts/), keyboard shortcuts on desktop
 
 Make sure to also check [Tips & Tricks](/tips/) for not so obvious features.
