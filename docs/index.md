@@ -7,7 +7,7 @@ description: "Namida documentation"
 
 Namida is a beautiful and feature-rich music & video player with YouTube support, built in Flutter. Available on Android, Windows and Linux.
 
-New here? Follow the [Quickstart](#quickstart) below or check [Features](/features/) to see what Namida can do. Looking for a specific option? Everything is explained in [Settings](/settings/). Stuck on something? Check the [FAQ](/faq/).
+New here? Follow the [Quickstart](#quickstart) below or check [Features](/features/) to see what Namida can do. Looking for a specific option? Everything is explained in [Settings](/settings/). Stuck on something? Check the [FAQ](/faq/). Just updated? See [What's New](/whats-new/).
 
 ::: callout tip
 Search these docs with Ctrl/⌘ + K, or ask the AI assistant using the button below.

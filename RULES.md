@@ -15,7 +15,7 @@ Rules for writing and editing these docs. They apply to humans and AI assistants
 - No em dash or en dash (—, –), use a comma instead.
 - Put a side note in parentheses instead of chaining commas: `sometimes blocks them (the dialog says the app was blocked)`. Two main clauses joined by a comma are fine as is.
 - A single newline renders as a line break, so never hard wrap lines, and only add a break where it fits: in a long paragraph, at the point where it moves to a new topic (local vs online, single video vs playlists). Usually one per paragraph. Never one sentence per line, never inside list items, and keep a short closing sentence on the same line.
-- No emojis (except in major headings if really needed).
+- No emojis (except in major headings if really needed). `docs/whats-new.md` is the exception, its emojis are intended, keep them.
 - Use setting/feature titles exactly as they appear in the app (source: `external/language/translations/en.arb` in the namida repo). Descriptions can be extended beyond the in-app subtitle when helpful.
 - "Namida" is written like this.
 
@@ -90,6 +90,7 @@ Types used: `info`, `tip`, `warning`.
 - `docs/tips.md`: not so obvious features, grouped by topic.
 - `docs/permissions.md`: the permissions the app uses and why.
 - `docs/not-planned.md`: features that will not be added and why. The FAQ keeps short answers and links here.
+- `docs/whats-new.md`: generated from the `🆕` markers by `npm run whats-new` (also runs on `npm run build`). Never edit inside its `<!-- generated -->` blocks, a short note written under a version heading is kept.
 - Sidebar navigation is manual: every new page needs an entry in `docmd.config.json` under `navigation`.
 
 ## Sourcing from Code
@@ -109,6 +110,7 @@ The namida commit the docs are based on is stored in `package.json` under `namid
 2. Inspect each commit's actual diff (`git show <hash>`), not only its message, and check the final code at HEAD since later commits can change things. New UI strings show up in `en.arb`, the translations submodule isn't pinned by namida commits, so compare it by date.
 3. Update the docs. Mark new features, settings and sections with `` `🆕 vX.Y.Z` ``, on its own line under the header or at the end of the line. A marker reads as covering its whole line, so when only part of a line is new, move that part to a sub-bullet in lists, otherwise put the marker right after the new part (``turn on the "Cache" chip `🆕 v7.4.0` to see...``), or the new sentence on its own line as a last resort. Minor details (like a restriction) need no marker.
 4. Set `namida.commit` and `namida.version` in `package.json` to the new HEAD, and bump `version` there and `versions` in `docmd.config.json`.
+5. Run `npm run whats-new` to list the new markers in [What's New](docs/whats-new.md).
 
 ## Verification
 

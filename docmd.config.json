@@ -58,6 +58,7 @@
   "navigation": [
     { "title": "Welcome", "path": "/", "icon": "house" },
     { "title": "Installation", "path": "/installation/", "icon": "download" },
+    { "title": "What's New", "path": "/whats-new/", "icon": "megaphone" },
     {
       "title": "Features",
       "path": "/features/",

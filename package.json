@@ -9,7 +9,9 @@
   "type": "module",
   "scripts": {
     "dev": "docmd dev",
+    "prebuild": "node scripts/whats-new.js",
     "build": "docmd build",
+    "whats-new": "node scripts/whats-new.js",
     "preview": "npx serve site",
     "update-docmd": "node -e \"require('fs').rmSync('package-lock.json',{force:true})\" && npm cache clean --force && npm install"
   },
