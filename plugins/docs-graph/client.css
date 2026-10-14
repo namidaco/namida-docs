@@ -1,0 +1,412 @@
+.docs-graph,
+.docs-graph-local {
+  --docs-graph-features: #2a78d6;
+  --docs-graph-settings: #eb6834;
+  --docs-graph-pages: #1baf7a;
+  --docs-graph-other: #898781;
+  --docs-graph-version: var(--summer-fg-soft);
+  color: var(--summer-fg-muted);
+  font-size: var(--summer-text-sm);
+}
+
+html[data-theme="dark"] .docs-graph,
+html[data-theme="dark"] .docs-graph-local {
+  --docs-graph-features: #3987e5;
+  --docs-graph-settings: #d95926;
+  --docs-graph-pages: #199e70;
+}
+
+.docs-graph {
+  margin: 16px 0 24px;
+}
+
+.docs-graph button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.docs-graph__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.docs-graph__views {
+  display: inline-flex;
+  border: 1px solid var(--summer-border);
+  border-radius: var(--summer-radius-sm);
+  overflow: hidden;
+}
+
+.docs-graph__views button {
+  padding: 4px 12px;
+}
+
+.docs-graph__views button[aria-pressed="true"] {
+  background: var(--summer-accent-soft);
+  color: var(--summer-fg);
+}
+
+.docs-graph__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.docs-graph .docs-graph__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border: 1px solid var(--summer-border);
+  border-radius: 999px;
+  color: var(--summer-fg);
+  transition: opacity 350ms ease, transform 160ms var(--summer-ease-out), border-color var(--summer-fast) var(--summer-ease);
+}
+
+.docs-graph .docs-graph__chip:hover {
+  border-color: var(--summer-border-strong);
+}
+
+.docs-graph .docs-graph__chip:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .docs-graph .docs-graph__chip,
+  .docs-graph__chip .docs-graph__dot {
+    transition: none;
+  }
+
+  .docs-graph .docs-graph__chip:active {
+    transform: none;
+  }
+}
+
+.docs-graph .docs-graph__chip[hidden] {
+  display: none;
+}
+
+.docs-graph .docs-graph__chip[aria-pressed="false"] {
+  opacity: 0.4;
+}
+
+.docs-graph__dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--docs-graph-dot);
+}
+
+.docs-graph__dot--version {
+  border-radius: 2px;
+  transform: rotate(45deg) scale(0.85);
+}
+
+.docs-graph__chip .docs-graph__dot {
+  transition: transform 350ms var(--summer-ease-out);
+}
+
+.docs-graph__chip[aria-pressed="false"] .docs-graph__dot {
+  transform: scale(0.8);
+}
+
+.docs-graph__chip[aria-pressed="false"] .docs-graph__dot--version {
+  transform: rotate(45deg) scale(0.7);
+}
+
+.docs-graph__search {
+  width: 200px;
+  min-width: 0;
+  margin-left: auto;
+  padding: 4px 10px;
+  border: 1px solid var(--summer-border);
+  border-radius: var(--summer-radius-sm);
+  background: var(--summer-bg);
+  color: var(--summer-fg);
+  font: inherit;
+}
+
+.docs-graph__body {
+  position: relative;
+}
+
+.docs-graph__stage {
+  height: 70vh;
+  min-height: 420px;
+  border: 1px solid var(--summer-border);
+  border-radius: var(--summer-radius-lg);
+  background: var(--summer-bg);
+  overflow: hidden;
+}
+
+.docs-graph__panel {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 280px;
+  max-height: calc(100% - 24px);
+  overflow-y: auto;
+  padding: 12px;
+  border: 1px solid var(--summer-border);
+  border-radius: var(--summer-radius-lg);
+  background: var(--summer-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.docs-graph__panel[hidden] {
+  display: none;
+}
+
+.docs-graph__panel-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.docs-graph .docs-graph__close {
+  margin-left: auto;
+  padding: 0 4px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.docs-graph__title {
+  display: block;
+  margin: 6px 0 2px;
+  font-size: var(--summer-text-base);
+  font-weight: 600;
+}
+
+.docs-graph__parent {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.docs-graph__heading {
+  margin: 12px 0 4px;
+  color: var(--summer-fg);
+  font-weight: 600;
+}
+
+.docs-graph .docs-graph__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.docs-graph .docs-graph__list li {
+  margin: 0;
+  padding: 0;
+}
+
+.docs-graph .docs-graph__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 3px 6px;
+  border-radius: var(--summer-radius-xs);
+  color: var(--summer-fg);
+  text-align: left;
+}
+
+.docs-graph .docs-graph__item:hover {
+  background: var(--summer-bg-subtle);
+}
+
+@media (max-width: 720px) {
+  .docs-graph__search {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .docs-graph__stage {
+    height: 60vh;
+  }
+
+  .docs-graph__panel {
+    position: static;
+    width: auto;
+    max-height: none;
+    margin-top: 12px;
+    box-shadow: none;
+  }
+}
+
+.docs-graph-local {
+  margin: 0 0 8px;
+  padding: 14px 16px 16px;
+  border: 1px solid var(--summer-border);
+  border-radius: var(--summer-radius-lg);
+}
+
+.docs-graph-local__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+  margin-bottom: 10px;
+}
+
+.docs-graph-local__title {
+  color: var(--summer-fg);
+  font-weight: 600;
+}
+
+.docs-graph-local__flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(24px, 72px) auto minmax(24px, 72px) minmax(0, 1fr);
+  grid-template-areas:
+    "in-caption . . . out-caption"
+    "in in-curves center out-curves out";
+  row-gap: 4px;
+}
+
+.docs-graph-local__caption {
+  color: var(--summer-fg-faint);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.docs-graph-local__caption--in {
+  grid-area: in-caption;
+  text-align: right;
+}
+
+.docs-graph-local__caption--out {
+  grid-area: out-caption;
+}
+
+.docs-graph-local .docs-graph-local__list {
+  align-self: center;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.docs-graph-local__list--in {
+  grid-area: in;
+}
+
+.docs-graph-local__list--out {
+  grid-area: out;
+}
+
+.docs-graph-local .docs-graph-local__list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.docs-graph-local .docs-graph-local__list--in li {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.docs-graph-local__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.docs-graph-local .docs-graph-local__list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.docs-graph-local .docs-graph-local__list a:hover {
+  color: var(--summer-accent);
+}
+
+.docs-graph-local .docs-graph-local__page {
+  overflow: hidden;
+  color: var(--summer-fg);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.docs-graph-local__parts {
+  overflow: hidden;
+  font-size: 0.625rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.docs-graph-local .docs-graph-local__empty {
+  color: var(--summer-fg-faint);
+}
+
+.docs-graph-local__curves {
+  width: 100%;
+  height: var(--docs-graph-local-height);
+}
+
+.docs-graph-local__curves--in {
+  grid-area: in-curves;
+}
+
+.docs-graph-local__curves--out {
+  grid-area: out-curves;
+}
+
+.docs-graph-local__curves path {
+  fill: none;
+  stroke: var(--summer-border-strong);
+  stroke-width: 1.25;
+  vector-effect: non-scaling-stroke;
+}
+
+.docs-graph-local__center {
+  grid-area: center;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border: 1px solid var(--summer-border-strong);
+  border-radius: 999px;
+  color: var(--summer-fg);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .docs-graph-local__flow {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "center" "in-caption" "in" "out-caption" "out";
+  }
+
+  .docs-graph-local__curves {
+    display: none;
+  }
+
+  .docs-graph-local__caption--in {
+    margin-top: 8px;
+    text-align: left;
+  }
+
+  .docs-graph-local .docs-graph-local__list--in li {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .docs-graph-local__center {
+    justify-self: start;
+  }
+}

@@ -72,7 +72,7 @@ Everything else is free, here is a taste of it.
 - [Sync](/features/sync/) between your devices, and [listening parties](/features/party/), joining them or hosting on your own device or server.
 - Desktop apps for Windows and Linux, with a [widescreen player](/features/playback/#widescreen-player), system tray, [shortcuts](/features/shortcuts/) and a [mini lyrics window](/features/system-integration/#mini-lyrics).
 - [Home screen widget](/features/home-widget/) and [system integration](/features/system-integration/).
-- Themes, [customizations](/settings/4-customization-settings/) for almost every part of the app, and [effects & visualizers](/features/effects/).
+- [Themes](/settings/1-theme-settings/), [customizations](/settings/4-customization-settings/) for almost every part of the app, and [effects & visualizers](/features/effects/).
 
 ### Eggs {#eggs}
 

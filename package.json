@@ -38,6 +38,7 @@
     "@docmd/themes": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-themes.tgz",
     "@docmd/tui": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-tui.tgz",
     "@docmd/ui": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-ui.tgz",
-    "@docmd/utils": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-utils.tgz"
+    "@docmd/utils": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-utils.tgz",
+    "force-graph": "1.51.4"
   }
 }

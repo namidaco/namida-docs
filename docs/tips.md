@@ -79,7 +79,7 @@ The track menu has an Advanced section:
 - Set the track as a ringtone, a notification sound or an alarm.
 - Re-index the track, good after editing it outside Namida.
 - Replace all listens of a track with another track.
-- Edit the color palette of the track, add or remove colors and pick a mix.
+- Edit the [color palette](/settings/1-theme-settings/#auto-coloring) of the track, add or remove colors and pick a mix.
 - Selecting many tracks from the same folder also shows Update Directory Path right there.
 
 ### Library Pages {#library-pages}
@@ -170,7 +170,7 @@ Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-setting
 
 ### Colors {#colors-tips}
 
-- In the color palette dialog, long press a color to remove it, and tap a mix to use it as a default color.
+- In the color palette dialog, long press a color to remove it, and tap a mix to use it as a [default color](/settings/1-theme-settings/#default-color).
 
 ### About Page {#about-tips}
 

@@ -79,7 +79,8 @@ Types used: `info`, `tip`, `warning`.
 
 - Internal links use clean urls: `/settings/3-playback-settings/`, `/features/youtube/#downloads`.
 - Link generously between settings, features, pages and tips. A feature should link its settings, a setting can link the feature it powers.
-- Never link an anchor that doesn't exist yet, unless you create it in the same change.
+- Never link an anchor that doesn't exist yet, unless you create it in the same change. The build checks this, its `[docs-graph]` line lists every internal link or `#anchor` that doesn't resolve, with file and line.
+- Every page gets a generated Page Connections box (pages linking to it and pages it links to, with the exact sections), so never write manual "linked from" lists.
 
 ## Structure
 
@@ -91,7 +92,8 @@ Types used: `info`, `tip`, `warning`.
 - `docs/permissions.md`: the permissions the app uses and why.
 - `docs/not-planned.md`: features that will not be added and why. The FAQ keeps short answers and links here.
 - `docs/whats-new.md`: generated from the `🆕` markers by `npm run whats-new` (also runs on `npm run build`). Never edit inside its `<!-- generated -->` blocks, a short note written under a version heading is kept.
-- Sidebar navigation is manual: every new page needs an entry in `docmd.config.json` under `navigation`.
+- `docs/graph.md`: the interactive docs graph, built by `plugins/docs-graph` from the links, section ids and `🆕` markers of every page. Add `graph: false` to a page's frontmatter to leave it out of the graph and of Page Connections.
+- Sidebar navigation is manual: every new page needs an entry in `docmd.config.json` under `navigation`. Its order is also the order of pages in the graph's Kasane view.
 
 ## Sourcing from Code
 
@@ -117,5 +119,5 @@ The namida commit the docs are based on is stored in `package.json` under `namid
 Before committing:
 
 1. `npm run build` must pass.
-2. Check that every internal link and `#anchor` you touched resolves in the built `site/` output.
+2. The `[docs-graph]` line of the build output says `0 broken`, it lists every internal link and `#anchor` that doesn't resolve.
 3. No em/en dashes slipped in (search for `—` and `–` in your changed files).

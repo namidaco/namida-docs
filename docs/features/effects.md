@@ -76,7 +76,7 @@ Add-ons, any combination, together with a main style:
 - **Beat rings**, growing out of the artwork on each beat.
 - **Reactive particles**, coming out from around the artwork.
 
-**Color Palette** colors them with the artwork colors instead of the theme color. **Disable All** turns everything off.
+**Color Palette** colors them with the artwork colors instead of the [theme color](/settings/1-theme-settings/). **Disable All** turns everything off.
 
 While the queue is open, only Edge lights and Particles stay, the rest fade out.
 
