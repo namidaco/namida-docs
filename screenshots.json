@@ -50,15 +50,15 @@
       "search": ["search", "search_results_menu", "search_albums_all", "search_artists_all"]
     },
     "/pages/youtube/": {
-      "sections": ["yt_home_local"],
+      "sections": ["yt_home_local", "yt_notifications_flags"],
       "home": ["yt_home_feed"],
       "playlists": ["yt_playlists", "yt_playlists_account", "yt_local_playlist", "yt_liked", "yt_most_played", "yt_hosted_playlist"],
-      "channels": ["yt_channels", "yt_channel_page", "yt_user_channels"],
+      "channels": ["yt_channels", "yt_channel_page", "yt_user_channels", "yt_channels_local", "yt_channel_groups"],
       "history": ["yt_history", "yt_account_history"],
       "downloads": ["yt_downloads"]
     },
     "/pages/other/": {
-      "stats": ["stats"],
+      "stats": ["stats", "yt_stats"],
       "charts": ["stats_year"],
       "your-year": ["your_year"],
       "sync-manager": ["sync_manager"],
@@ -68,27 +68,27 @@
       "folders": ["folders"],
       "separators": ["settings_indexer_separators_dialog"],
       "missing-tracks": ["missing_tracks"],
-      "sorting": ["tracks_sort", "albums_sort", "playlists_grouped"]
+      "sorting": ["tracks_sort", "albums_sort", "playlists_grouped", "sort_preset_name"]
     },
     "/features/playback/": {
-      "queue": ["player_queue", "queue_insertion", "player_queue_shuffle_menu"],
+      "queue": ["player_queue", "queue_insertion", "player_queue_shuffle_menu", "player_queue_configure", "advanced_shuffle", "add_tracks_mood", "add_tracks_ratings"],
       "beat-matching": ["settings_playback_crossfade"],
-      "sound-control": ["sound_control", "sound_control_item"],
-      "equalizer": ["sound_equalizer", "sound_control_templates"],
+      "sound-control": ["sound_control", "sound_control_item", "player_audio_configure", "sound_control_precise", "sound_control_save_preset"],
+      "equalizer": ["sound_equalizer", "sound_control_templates", "sound_control_band", "sound_control_eq_preset"],
       "output-device": ["sound_control_output"],
       "audio-path": ["audio_path"],
       "video": ["player", "video_fullscreen", "player_video_menu"],
       "lyrics": ["player_lyrics", "lyrics_fullscreen"],
-      "lyrics-picker": ["lyrics_picker"],
+      "lyrics-picker": ["lyrics_picker", "lyrics_offset"],
       "widescreen-player": ["wide_player"],
-      "track-menu": ["track_menu", "player_menu"],
-      "sleep-timer": ["sleep_timer"],
+      "track-menu": ["track_menu", "player_menu", "go_to_artist", "stats_card", "rating_simple", "track_set_as"],
+      "sleep-timer": ["sleep_timer", "sleep_timer_preset"],
       "bookmarks": ["bookmarks"]
     },
     "/features/playlists-history/": {
-      "playlists": ["playlists", "playlist_menu", "playlists_add_menu"],
-      "playlist-tags": ["playlist_tags", "playlists_grouped"],
-      "smart-playlists": ["smart_playlists"],
+      "playlists": ["playlists", "playlist_menu", "playlists_add_menu", "create_playlist", "rename_playlist", "playlists_configure", "playlists_merge", "duplicates_dialog"],
+      "playlist-tags": ["playlist_tags", "playlists_grouped", "playlist_tags_moods"],
+      "smart-playlists": ["smart_playlists", "smart_playlist_moods"],
       "history": ["history", "history_jump_to_day"],
       "most-played": ["most_played", "most_played_range_menu"],
       "stats": ["stats", "your_year"],
@@ -98,43 +98,54 @@
     "/features/smart-playlists/": {
       "": ["smart_playlist_dialog", "smart_playlist_editor_filled"],
       "rules": ["smart_playlist_editor", "smart_playlist_rule"],
-      "limit": ["smart_playlist_limit"]
+      "limit": ["smart_playlist_limit"],
+      "smart-search": ["smart_search"]
     },
     "/features/tag-editor/": {
-      "single": ["tag_editor", "tag_editor_more_fields"],
-      "multiple": ["tag_editor_multi"]
+      "single": ["tag_editor", "tag_editor_more_fields", "tag_editor_fields"],
+      "multiple": ["tag_editor_multi", "tag_editor_tracks", "tag_editor_find_replace"]
     },
     "/features/lyrics-editor/": {
       "open": ["lyrics_editor", "wide_lyrics_editor"],
-      "edit-line": ["lyrics_editor_line_menu"]
+      "edit-line": ["lyrics_editor_line_menu", "lyrics_editor_edit_line"],
+      "text": ["lyrics_editor_text"],
+      "tools": ["lyrics_editor_offset", "lyrics_editor_stretch"],
+      "latency": ["lyrics_editor_latency"],
+      "shortcuts": ["lyrics_editor_shortcuts"]
     },
     "/features/youtube/": {
       "data-saver": ["data_saver"],
-      "miniplayer": ["yt_player"],
-      "downloads": ["yt_downloads"],
-      "playlists": ["yt_local_playlist"],
-      "accounts": ["yt_manage_accounts"]
+      "miniplayer": ["yt_player", "yt_video_info"],
+      "downloads": ["yt_downloads", "yt_download_sheet", "yt_parallel_downloads", "yt_download_task_info", "yt_playlist_download_configure"],
+      "playlists": ["yt_local_playlist", "yt_add_to_playlist"],
+      "accounts": ["yt_manage_accounts"],
+      "caching": ["yt_clear_video"]
     },
     "/features/media-servers/": {
       "supported": ["settings_add_folder"]
     },
     "/features/sync/": {
-      "devices": ["sync_manager"]
+      "devices": ["sync_manager"],
+      "connect-by-ip": ["sync_connect_ip"],
+      "diagnostics": ["sync_diagnostics"]
     },
     "/membership/": {
-      "get": ["membership"]
+      "get": ["membership"],
+      "eggs": ["eggs_unlock"]
     },
     "/features/party/": {
       "create": ["party_lobby"],
-      "host": ["party_room"],
+      "host": ["party_room", "party_leave", "party_password"],
       "queue": ["party_room_queue"],
-      "chat": ["party_room_chat"]
+      "chat": ["party_room_chat", "party_reactions"],
+      "history": ["party_save_history"]
     },
     "/features/effects/": {
       "background-overlay": ["effect_particles", "effect_rain", "effect_overlay_fireflies"],
       "seasons": ["effect_sakura"],
       "visualizers": ["visualizer_bars", "visualizer_waves", "visualizer_beat_rings", "visualizer_particles"],
-      "player-background": ["player_background_artwork", "effect_aurora"]
+      "player-background": ["player_background_artwork", "effect_aurora"],
+      "wallpaper": ["settings_customization_wallpaper"]
     },
     "/features/shortcuts/": {
       "": ["shortcuts"]
@@ -150,10 +161,12 @@
     },
     "/settings/2-indexer-settings/": {
       "": { "shots": ["settings_indexer"], "collapsed": "Whole page" },
-      "add-folder": ["settings_add_folder", "file_browser"],
+      "add-folder": ["settings_add_folder", "file_browser", "settings_indexer_server_folder", "file_browser_path", "file_browser_new_folder"],
       "missing-tracks": ["missing_tracks"],
       "separators": ["settings_indexer_separators", "settings_indexer_separators_dialog"],
-      "album-identifiers": ["settings_indexer_album_identifiers"]
+      "album-identifiers": ["settings_indexer_album_identifiers"],
+      "refresh-reindex": ["settings_indexer_reindex"],
+      "extensions-blacklist": ["settings_indexer_extensions"]
     },
     "/settings/3-playback-settings/": {
       "": { "shots": ["settings_playback"], "collapsed": "Whole page" },
@@ -161,7 +174,9 @@
       "video-quality": ["settings_playback_video_quality"],
       "sound-control": ["sound_control"],
       "crossfade": ["settings_playback_crossfade"],
-      "local-video-matching": ["settings_playback_local_video_matching"]
+      "local-video-matching": ["settings_playback_local_video_matching"],
+      "notification-buttons": ["settings_playback_notification_buttons"],
+      "count-listen-after": ["settings_playback_count_listen"]
     },
     "/settings/4-customization-settings/": {
       "": { "shots": ["settings_customization"], "collapsed": "Whole page" },
@@ -170,19 +185,22 @@
     },
     "/settings/5-youtube-settings/": {
       "": { "shots": ["settings_youtube"], "collapsed": "Whole page" },
-      "sponsorblock": ["settings_youtube_sponsorblock"],
-      "flags": ["settings_youtube_flags"],
+      "sponsorblock": ["settings_youtube_sponsorblock", "settings_sponsorblock_server", "settings_sponsorblock_category"],
+      "flags": ["settings_youtube_flags", "settings_youtube_page_cache"],
       "accounts": ["yt_manage_accounts"],
-      "return-youtube-dislike": ["settings_youtube_ryd"]
+      "return-youtube-dislike": ["settings_youtube_ryd"],
+      "content": ["settings_youtube_shorts"]
     },
     "/settings/6-extras-settings/": {
       "": { "shots": ["settings_extras"], "collapsed": "Whole page" },
       "default-library-tab": ["settings_extras_default_tab"],
       "library-tabs": ["settings_extras_library_tabs"],
       "romanization": ["settings_extras_romanization"],
-      "flags": ["settings_extras_flags"],
+      "flags": ["settings_extras_flags", "settings_extras_subpage_header", "settings_extras_lyrics_effects"],
       "filter-tracks-by": ["settings_extras_filter_search"],
-      "lyrics-save-location": ["settings_extras_lyrics_save_location"]
+      "lyrics-save-location": ["settings_extras_lyrics_save_location"],
+      "ignore-prefixes": ["settings_extras_common_prefixes"],
+      "image-source": ["settings_extras_image_source"]
     },
     "/settings/7-backup-restore-settings/": {
       "": { "shots": ["settings_backup"], "collapsed": "Whole page" },
@@ -195,7 +213,10 @@
       "": { "shots": ["settings_advanced"], "collapsed": "Whole page" },
       "performance-mode": ["settings_advanced_performance"],
       "update-directory-path": ["settings_advanced_update_path"],
-      "flags": ["settings_advanced_flags"]
+      "flags": ["settings_advanced_flags"],
+      "remove-source-history": ["settings_advanced_remove_source"],
+      "compress-images": ["settings_advanced_compress_images"],
+      "clear-caches": ["settings_advanced_clear_images", "settings_advanced_clear_server", "settings_advanced_clear_video_cache"]
     },
     "/guides/beginner/": {
       "separator-blacklist": ["settings_indexer_separators_dialog"],
@@ -213,10 +234,13 @@
       "selection": ["selection", "selection_expanded"],
       "track-menu": ["track_menu", "track_clear"],
       "advanced-dialog": ["track_advanced"],
-      "history-tips": ["track_listens", "track_stats"],
+      "history-tips": ["track_listens", "track_stats", "track_stats_add"],
       "info-sorting": ["album_dialog", "artist_dialog", "track_info"],
-      "colors-tips": ["track_color_palette"],
+      "colors-tips": ["track_color_palette", "track_palette_add"],
       "about-tips": ["about"]
+    },
+    "/features/automation/": {
+      "broadcasts": ["settings_extras_integrations", "settings_extras_webhook"]
     }
   }
 }
