@@ -3,7 +3,8 @@
   "version": "8.2.0",
   "namida": {
     "version": "8.2.0",
-    "commit": "fa6b4778450b1f38cb240146fc81ae02aaa9c15a"
+    "commit": "fa6b4778450b1f38cb240146fc81ae02aaa9c15a",
+    "screenshotsCommit": "latest"
   },
   "private": true,
   "type": "module",

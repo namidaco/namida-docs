@@ -1,0 +1,226 @@
+.docs-shots {
+  margin: 1.1rem 0 1.4rem;
+}
+
+.docs-shots__tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.65rem;
+}
+
+.docs-shots__tab {
+  font: inherit;
+  font-size: 0.82rem;
+  color: inherit;
+  background: transparent;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 999px;
+  padding: 0.2rem 0.85rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.docs-shots__tab[aria-selected='true'] {
+  opacity: 1;
+  background: rgba(127, 127, 127, 0.16);
+}
+
+.docs-shots__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  overflow-x: auto;
+  padding: 0.2rem 0.1rem 0.6rem;
+}
+
+.docs-shots__row[hidden] {
+  display: none;
+}
+
+.docs-shot {
+  position: relative;
+  flex: 0 0 auto;
+  width: 240px;
+  line-height: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(127, 127, 127, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(127, 127, 127, 0.15);
+}
+
+.docs-shot--wide {
+  width: min(100%, 760px);
+}
+
+.docs-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.docs-shot .docs-shot__dark {
+  display: none;
+}
+
+html[data-theme='dark'] .docs-shot .docs-shot__light {
+  display: none;
+}
+
+html[data-theme='dark'] .docs-shot .docs-shot__dark {
+  display: block;
+}
+
+.docs-shot--failed,
+.docs-shots--failed {
+  display: none;
+}
+
+.docs-shots--collapsed > summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.65rem;
+}
+
+.docs-shots-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.82);
+  cursor: zoom-out;
+}
+
+.docs-shots-lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 12px;
+}
+
+.docs-shots-lightbox img.docs-shots-lightbox__tall {
+  max-height: none;
+  width: min(92vw, 520px);
+  margin: auto;
+  align-self: flex-start;
+}
+
+.docs-shot__spot {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.docs-shot__spot:hover,
+.docs-shot__spot--active {
+  background: rgba(255, 160, 50, 0.16);
+  border-color: rgba(255, 145, 35, 0.9);
+}
+
+.docs-shots-target {
+  border-radius: 6px;
+  background: rgba(255, 160, 50, 0.14);
+  box-shadow: 0 0 0 6px rgba(255, 160, 50, 0.14);
+}
+
+.docs-shots-preview {
+  position: fixed;
+  z-index: 9998;
+  width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  pointer-events: none;
+  background: rgba(127, 127, 127, 0.15);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(127, 127, 127, 0.2);
+}
+
+.docs-shots-preview__crop {
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.docs-shots-preview--shot {
+  width: 210px;
+}
+
+.docs-shots-preview--wide {
+  width: 420px;
+}
+
+.docs-shots-preview--shot img {
+  display: block;
+  width: 100%;
+  max-height: 470px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.docs-screens {
+  margin: 16px 0 24px;
+}
+
+.docs-screens__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.docs-screens__switch {
+  display: inline-flex;
+  border: 1px solid var(--summer-border);
+  border-radius: var(--summer-radius-sm);
+  overflow: hidden;
+}
+
+.docs-screens__switch-button {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.docs-screens__switch-button[aria-pressed='true'] {
+  background: var(--summer-accent-soft);
+  color: var(--summer-fg);
+}
+
+.docs-screens__stage {
+  height: 75vh;
+  min-height: 460px;
+  border: 1px solid var(--summer-border);
+  border-radius: var(--summer-radius-lg);
+  background: var(--summer-bg);
+  overflow: hidden;
+}
+
+.docs-screens__tip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 200px;
+  font-size: 0.85rem;
+}
+
+.docs-screens__tip img {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+}
+
+.docs-screens__tip em {
+  opacity: 0.7;
+  font-size: 0.75rem;
+}

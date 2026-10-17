@@ -1,0 +1,222 @@
+{
+  "base": "https://cdn.jsdelivr.net/gh/namidaco/namida-assets@{commit}/screenshots/docs",
+  "platforms": {
+    "android": "Android",
+    "windows": "Desktop"
+  },
+  "tileAliases": {
+    "/settings/2-indexer-settings/": {
+      "extract-feat-artists": ["Extract feat. artists from title"],
+      "minimum-size-duration": ["Minimum Track Duration"],
+      "folders-to-scan": ["Folders list"]
+    },
+    "/settings/3-playback-settings/": {
+      "crossfade": ["Enable Crossfade Effect"],
+      "fade-play-pause": ["Enable Fade Effect on Play/Pause", "Play Fade Duration", "Pause Fade Duration"],
+      "long-press-speed": ["Long-Press Action"],
+      "restore-last-position": ["Minimum track duration to restore last played position"]
+    },
+    "/settings/4-customization-settings/": {
+      "general": ["Enable Blur Effect", "Enable Glow Effect", "Enable Parallax Effect", "Background effect", "Overlay effect", "Border Radius Multiplier", "Font Scale", "12 Hour Format", "Date Time Format", "Display remaining duration instead of total", "Display actual position instead of difference while seeking"]
+    },
+    "/settings/5-youtube-settings/": {
+      "miniplayer": ["Youtube-style Miniplayer", "Remember audio only mode", "Dim miniplayer after 15 seconds of inactivity", "Dim Intensity", "Seekbar"],
+      "comments": ["Top comments", "Prefer new comments when possible"],
+      "content": ["Show channel watermark in fullscreen", "Show video endcards", "Auto start radio", "Personalized Related Videos", "Personalized Mix Playlists", "Enable Search Cleanup", "Show Shorts in", "Show Mixes in"],
+      "downloads": ["Downloads Metadata tags", "Default Download Location", "Downloads -> Notifications"]
+    },
+    "/settings/8-advanced-settings/": {
+      "clear-caches": ["Clear Audio Cache", "Clear Image cache", "Clear Server Cache", "Clear Video Cache"]
+    }
+  },
+  "pages": {
+    "/pages/library/": {
+      "home": ["home", "home_configure", "home_mix_dialog", "recently_added"],
+      "tracks": ["tracks", "tracks_sort_menu", "tracks_sort"],
+      "albums": ["albums", "album_page", "albums_type_menu"],
+      "artists": ["artists", "artist_page", "artists_type_menu"],
+      "discover": ["discover"],
+      "artists-map": ["artists_map"],
+      "genres": ["genres", "genre_page"],
+      "languages": ["languages", "language_page"],
+      "playlists": ["playlists", "playlist_page", "playlist_tags"],
+      "folders": ["folders", "folders_sort"],
+      "queues": ["queues", "queue_page", "queue_dialog"],
+      "current-queue": ["current_queue"],
+      "stats": ["stats"],
+      "smart-playlists": ["smart_playlists", "smart_playlist_page"],
+      "party": ["party_lobby", "party_room"],
+      "moods-tags-rating": ["moods", "tags", "ratings", "mood_page", "tag_page", "rating_page"],
+      "search": ["search", "search_results_menu", "search_albums_all", "search_artists_all"]
+    },
+    "/pages/youtube/": {
+      "sections": ["yt_home_local"],
+      "home": ["yt_home_feed"],
+      "playlists": ["yt_playlists", "yt_playlists_account", "yt_local_playlist", "yt_liked", "yt_most_played", "yt_hosted_playlist"],
+      "channels": ["yt_channels", "yt_channel_page", "yt_user_channels"],
+      "history": ["yt_history", "yt_account_history"],
+      "downloads": ["yt_downloads"]
+    },
+    "/pages/other/": {
+      "stats": ["stats"],
+      "charts": ["stats_year"],
+      "your-year": ["your_year"],
+      "sync-manager": ["sync_manager"],
+      "about": ["about", "about_report_issue"]
+    },
+    "/features/library-indexing/": {
+      "folders": ["folders"],
+      "separators": ["settings_indexer_separators_dialog"],
+      "missing-tracks": ["missing_tracks"],
+      "sorting": ["tracks_sort", "albums_sort", "playlists_grouped"]
+    },
+    "/features/playback/": {
+      "queue": ["player_queue", "queue_insertion", "player_queue_shuffle_menu"],
+      "beat-matching": ["settings_playback_crossfade"],
+      "sound-control": ["sound_control", "sound_control_item"],
+      "equalizer": ["sound_equalizer", "sound_control_templates"],
+      "output-device": ["sound_control_output"],
+      "audio-path": ["audio_path"],
+      "video": ["player", "video_fullscreen", "player_video_menu"],
+      "lyrics": ["player_lyrics", "lyrics_fullscreen"],
+      "lyrics-picker": ["lyrics_picker"],
+      "widescreen-player": ["wide_player"],
+      "track-menu": ["track_menu", "player_menu"],
+      "sleep-timer": ["sleep_timer"],
+      "bookmarks": ["bookmarks"]
+    },
+    "/features/playlists-history/": {
+      "playlists": ["playlists", "playlist_menu", "playlists_add_menu"],
+      "playlist-tags": ["playlist_tags", "playlists_grouped"],
+      "smart-playlists": ["smart_playlists"],
+      "history": ["history", "history_jump_to_day"],
+      "most-played": ["most_played", "most_played_range_menu"],
+      "stats": ["stats", "your_year"],
+      "lost-memories": ["home_scrolled"],
+      "generation": ["add_tracks"]
+    },
+    "/features/smart-playlists/": {
+      "": ["smart_playlist_dialog", "smart_playlist_editor_filled"],
+      "rules": ["smart_playlist_editor", "smart_playlist_rule"],
+      "limit": ["smart_playlist_limit"]
+    },
+    "/features/tag-editor/": {
+      "single": ["tag_editor", "tag_editor_more_fields"],
+      "multiple": ["tag_editor_multi"]
+    },
+    "/features/lyrics-editor/": {
+      "open": ["lyrics_editor", "wide_lyrics_editor"],
+      "edit-line": ["lyrics_editor_line_menu"]
+    },
+    "/features/youtube/": {
+      "data-saver": ["data_saver"],
+      "miniplayer": ["yt_player"],
+      "downloads": ["yt_downloads"],
+      "playlists": ["yt_local_playlist"],
+      "accounts": ["yt_manage_accounts"]
+    },
+    "/features/media-servers/": {
+      "supported": ["settings_add_folder"]
+    },
+    "/features/sync/": {
+      "devices": ["sync_manager"]
+    },
+    "/membership/": {
+      "get": ["membership"]
+    },
+    "/features/party/": {
+      "create": ["party_lobby"],
+      "host": ["party_room"],
+      "queue": ["party_room_queue"],
+      "chat": ["party_room_chat"]
+    },
+    "/features/effects/": {
+      "background-overlay": ["effect_particles", "effect_rain", "effect_overlay_fireflies"],
+      "seasons": ["effect_sakura"],
+      "visualizers": ["visualizer_bars", "visualizer_waves", "visualizer_beat_rings", "visualizer_particles"],
+      "player-background": ["player_background_artwork", "effect_aurora"]
+    },
+    "/features/shortcuts/": {
+      "": ["shortcuts"]
+    },
+    "/settings/": {
+      "sections": ["settings", "settings_search", "settings_changed"]
+    },
+    "/settings/1-theme-settings/": {
+      "": { "shots": ["settings_theme"], "collapsed": "Whole page" },
+      "pitch-black": ["black_settings_theme"],
+      "default-color": ["settings_theme_color_picker"],
+      "language": ["settings_theme_language"]
+    },
+    "/settings/2-indexer-settings/": {
+      "": { "shots": ["settings_indexer"], "collapsed": "Whole page" },
+      "add-folder": ["settings_add_folder", "file_browser"],
+      "missing-tracks": ["missing_tracks"],
+      "separators": ["settings_indexer_separators", "settings_indexer_separators_dialog"],
+      "album-identifiers": ["settings_indexer_album_identifiers"]
+    },
+    "/settings/3-playback-settings/": {
+      "": { "shots": ["settings_playback"], "collapsed": "Whole page" },
+      "video-source": ["settings_playback_video_source"],
+      "video-quality": ["settings_playback_video_quality"],
+      "sound-control": ["sound_control"],
+      "crossfade": ["settings_playback_crossfade"],
+      "local-video-matching": ["settings_playback_local_video_matching"]
+    },
+    "/settings/4-customization-settings/": {
+      "": { "shots": ["settings_customization"], "collapsed": "Whole page" },
+      "general": ["settings_customization_background_effect", "settings_customization_date_format", "settings_customization_font_scale"],
+      "miniplayer-customization": ["settings_customization_miniplayer", "settings_customization_visualizer", "settings_customization_player_background"]
+    },
+    "/settings/5-youtube-settings/": {
+      "": { "shots": ["settings_youtube"], "collapsed": "Whole page" },
+      "sponsorblock": ["settings_youtube_sponsorblock"],
+      "flags": ["settings_youtube_flags"],
+      "accounts": ["yt_manage_accounts"],
+      "return-youtube-dislike": ["settings_youtube_ryd"]
+    },
+    "/settings/6-extras-settings/": {
+      "": { "shots": ["settings_extras"], "collapsed": "Whole page" },
+      "default-library-tab": ["settings_extras_default_tab"],
+      "library-tabs": ["settings_extras_library_tabs"],
+      "romanization": ["settings_extras_romanization"],
+      "flags": ["settings_extras_flags"],
+      "filter-tracks-by": ["settings_extras_filter_search"],
+      "lyrics-save-location": ["settings_extras_lyrics_save_location"]
+    },
+    "/settings/7-backup-restore-settings/": {
+      "": { "shots": ["settings_backup"], "collapsed": "Whole page" },
+      "create-backup": ["settings_backup_create"],
+      "restore-backup": ["settings_backup_restore"],
+      "sync": ["sync_manager"],
+      "import-data": ["settings_backup_import"]
+    },
+    "/settings/8-advanced-settings/": {
+      "": { "shots": ["settings_advanced"], "collapsed": "Whole page" },
+      "performance-mode": ["settings_advanced_performance"],
+      "update-directory-path": ["settings_advanced_update_path"],
+      "flags": ["settings_advanced_flags"]
+    },
+    "/guides/beginner/": {
+      "separator-blacklist": ["settings_indexer_separators_dialog"],
+      "stop-after-track": ["track_menu"],
+      "change-lyrics": ["lyrics_picker"],
+      "sync-lyrics": ["lyrics_editor"]
+    },
+    "/guides/medium/": {
+      "link-yt-video": ["yt_link"],
+      "play-specific-quickly": ["advanced_play"],
+      "sync-devices": ["sync_manager"],
+      "update-directory-path": ["settings_advanced_update_path"]
+    },
+    "/tips/": {
+      "selection": ["selection", "selection_expanded"],
+      "track-menu": ["track_menu", "track_clear"],
+      "advanced-dialog": ["track_advanced"],
+      "history-tips": ["track_listens", "track_stats"],
+      "info-sorting": ["album_dialog", "artist_dialog", "track_info"],
+      "colors-tips": ["track_color_palette"],
+      "about-tips": ["about"]
+    }
+  }
+}

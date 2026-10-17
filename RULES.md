@@ -95,6 +95,16 @@ Types used: `info`, `tip`, `warning`.
 - `docs/graph.md`: the interactive docs graph, built by `plugins/docs-graph` from the links, section ids and `🆕` markers of every page. Add `graph: false` to a page's frontmatter to leave it out of the graph and of Page Connections.
 - Sidebar navigation is manual: every new page needs an entry in `docmd.config.json` under `navigation`. Its order is also the order of pages in the graph's Kasane view.
 
+## Screenshots
+
+- Never put images in the pages. `screenshots.json` maps a page and a section id to shot ids, `plugins/docs-shots` places them at the end of that section. The `""` key is the page intro, `{ "shots": [...], "collapsed": "Whole page" }` folds them.
+- Shot ids are the scene ids of `scripts/screenshots/scenes.json` in the namida repo, the images live in [namida-assets](https://github.com/namidaco/namida-assets) (`screenshots/docs/<platform>/<theme>/<id>.webp`). Light/dark follow the site theme, Android and Desktop become tabs when both exist.
+- Settings tiles in a shot turn into hotspots for the section with the same title on that page, and a link to such a section shows the tile while hovered. Both come from the heading titles, so keep settings headings exactly as the in-app titles (a heading like `A & B` matches both tiles).
+- A link to any section or page with shots shows its first shot while hovered. The [Screens Map](/screens/) draws every screen from the `parent` each scene has in `scenes.json` (namida repo), a new screen only needs its `parent` there.
+- The build's `[docs-shots]` line lists every id or section that doesn't exist, it must say `0 problems`.
+- To preview shots that aren't published yet: `DOCS_SHOTS_BASE=<url> npm run build`, with that url serving a copy of `screenshots/docs`.
+- Shots link to a namida-assets commit, `namida.screenshotsCommit` in `package.json`: `latest` (the default) is its main at build time, a commit sha freezes them. The build line ends with the commit it used.
+
 ## Sourcing from Code
 
 When documenting from the namida codebase:
@@ -120,4 +130,5 @@ Before committing:
 
 1. `npm run build` must pass.
 2. The `[docs-graph]` line of the build output says `0 broken`, it lists every internal link and `#anchor` that doesn't resolve.
-3. No em/en dashes slipped in (search for `—` and `–` in your changed files).
+3. The `[docs-shots]` line says `0 problems`.
+4. No em/en dashes slipped in (search for `—` and `–` in your changed files).

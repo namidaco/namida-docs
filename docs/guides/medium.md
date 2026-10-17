@@ -22,7 +22,7 @@ It also works automatically, Namida looks up the track's comment tag (usually fi
 2. Name it so the filename contains at least one of these:
    - the music filename
    - the title & first artist of the track
-   - the track's YouTube id (in the comment tag or filename)
+   - the track's youtube id (in the comment tag or filename)
 3. Set the [`⚙️ Configure Video Source ↗`](/settings/3-playback-settings/#video-source) to Local or Auto.
 
 Example, this track and video match:
