@@ -53,7 +53,7 @@
       "sections": ["yt_home_local", "yt_notifications_flags"],
       "home": ["yt_home_feed"],
       "playlists": ["yt_playlists", "yt_playlists_account", "yt_local_playlist", "yt_liked", "yt_most_played", "yt_hosted_playlist"],
-      "channels": ["yt_channels", "yt_channel_page", "yt_user_channels", "yt_channels_local", "yt_channel_groups"],
+      "channels": ["yt_channels", "yt_channel_page", "yt_user_channels", "yt_channels_local", "yt_channels_groups_menu", "yt_channel_groups"],
       "history": ["yt_history", "yt_account_history"],
       "downloads": ["yt_downloads"]
     },
