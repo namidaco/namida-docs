@@ -23,6 +23,13 @@
   }
 }
 
+/* toc-disabled hardcodes a sidebar column, which stays empty once the sidebar turns into a drawer. */
+@media (max-width: 900px) {
+  .summer-template.toc-disabled .summer-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 .docmd-ai-bar-input {
   min-width: 0;
 }
