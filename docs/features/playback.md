@@ -60,8 +60,11 @@ Looking for visual effects and visualizers instead? See [`🎉 Effects & Visuali
 
 Crossfade's Style option changes how automatic crossfades happen:
 
+- **Default**, starts the crossfade the set amount of seconds before the track ends.
 - **Smart**, starts the crossfade where the track fades out or ends, and skips the silence at the start of the next one.
-- **Beat matching**, also matches the tempo and lines up the beats of both tracks. While it's on, shuffle prefers tracks with a close tempo and a compatible key.
+- **Beat matching**, does what Smart does, and also matches the tempo and lines up the beats of both tracks. While it's on, shuffle prefers tracks with a close tempo and a compatible key.
+
+[Skip Silence](/settings/3-playback-settings/#skip-silence) is not part of these styles, it skips silent parts anywhere in a track, with or without crossfade.
 
 Upcoming tracks are analyzed in the background (BPM and key tags are used when present). To analyze the whole library at once, or write the analyzed BPM into tracks missing it, use the `ANALYZE_RHYTHM` flag in [Advanced settings](/settings/8-advanced-settings/#flags). [`⚙️ Configure Crossfade ↗`](/settings/3-playback-settings/#crossfade)
 

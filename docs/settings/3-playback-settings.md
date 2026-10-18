@@ -81,7 +81,8 @@ Keeps the volume consistent between tracks (using the replay gain tag, or the lo
 
 `💻 Android+Linux only`
 
-Skips silent parts of the audio (not for YouTube).
+Skips silent parts anywhere in the track, with or without crossfade (not for YouTube).
+The Smart [crossfade](#crossfade) style is a different thing, it only changes where automatic crossfades start.
 
 ### Gapless Playback {#gapless-playback}
 
@@ -92,7 +93,13 @@ Removes the small delay between tracks by loading the next one early. Useful for
 Fades between tracks. You can set the crossfade duration and how many seconds before the end it should trigger.
 Part of the membership, or unlock it with an egg. [`📄 Membership ↗`](/membership/#benefits) [`📄 Eggs ↗`](/membership/#eggs)
 
-Style: Smart starts automatic crossfades where the track fades out, Beat matching also lines up the beats. `🆕 v8.2.0` [`🎉 Smart & Beat Matching ↗`](/features/playback/#beat-matching)
+The Style option changes how automatic crossfades happen. `🆕 v8.2.0` [`🎉 Smart & Beat Matching ↗`](/features/playback/#beat-matching)
+
+- **Default**, starts the crossfade the set amount of seconds before the track ends.
+- **Smart**, starts the crossfade where the track fades out or ends, and skips the silence at the start of the next one.
+- **Beat matching**, does what Smart does, and also matches the tempo and lines up the beats of both tracks.
+
+Smart and Beat matching analyze upcoming tracks in the background, the `ANALYZE_RHYTHM` flag analyzes the whole library ahead of time. [`⚙️ Analyze Rhythm Flag ↗`](/settings/8-advanced-settings/#flags)
 
 Turned off while [Bit-perfect](/features/playback/#bit-perfect), [USB direct access](/features/playback/#usb-direct) or [Exclusive mode](/features/playback/#exclusive-mode) is on. `🆕 v7.8.0`
 

@@ -89,7 +89,7 @@ Others:
 
 - `WEBHOOK`, posts playback events (track changed, play, pause) to a URL of your choice. [`🎉 Webhook ↗`](/features/automation/#broadcasts)
 - `SERVER_PLAYBACK_REPORTS`, tells Subsonic and Jellyfin servers what you play, on by default. [`🎉 Playback Reports ↗`](/features/media-servers/#playback-reports)
-- `ANALYZE_RHYTHM`, analyzes the tempo and beats of the whole library ahead of time, for the beat matched [crossfade](/features/playback/#beat-matching). The tag button writes the analyzed BPM to files that have none.
+- `ANALYZE_RHYTHM`, analyzes the whole library ahead of time for the [crossfade styles](/features/playback/#beat-matching): where each track fades out (Smart), plus tempo, key and beats (Beat matching). The tag button writes the analyzed BPM to files that have none.
 - `DETECT_FAKE_LOSSLESS_FILES`, scans your lossless files for ones made from a lossy source, upsampled or bit-padded. The results can be saved as a playlist.
 
 ---
