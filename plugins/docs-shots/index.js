@@ -369,22 +369,19 @@ function renderSpot(tile, heading) {
 
 // -- right before the next heading of the same or a higher level, a divider or the page connections box
 function findSectionEnd(html, anchor) {
-  let level = 1;
   let searchFrom = 0;
   if (anchor !== PAGE_TOP) {
-    const heading = new RegExp(`<h([1-6])\\b[^>]*\\bid="${anchor}"[^>]*>`).exec(html);
+    const heading = new RegExp(`<h[1-6]\\b[^>]*\\bid="${anchor}"[^>]*>`).exec(html);
     if (heading === null) return -1;
-    level = Number(heading[1]);
     searchFrom = heading.index + heading[0].length;
   } else {
     const title = /<h1\b[^>]*>[\s\S]*?<\/h1>/.exec(html);
     if (title === null) return 0;
     searchFrom = title.index + title[0].length;
-    // -- under the page's intro, before its first section
-    level = 6;
   }
+  // -- before the next heading of any level, so a parent's shots stay above its subsections
   const rest = html.slice(searchFrom);
-  const end = new RegExp(`<h[1-${level}][\\s>]|<hr\\b|<section class="docs-graph-local"`).exec(rest);
+  const end = /<h[1-6][\s>]|<hr\b|<section class="docs-graph-local"/.exec(rest);
   return end === null ? html.length : searchFrom + end.index;
 }
 
