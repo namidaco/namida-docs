@@ -48,7 +48,7 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 - Force squared track thumbnail.
 - Size of track thumbnail & height of track tile.
 - Swipe actions, set a left and right swipe action for tracks (like play next, add to playlist).
-- Artwork Gestures, a tap and a long press action for the thumbnail of tracks and videos in lists (separate from the player artwork). `🆕 v7.5.0`
+- Artwork Gestures, a tap and a long press action for the thumbnail of tracks and videos in lists (separate from the player artwork). `🆕 v7.5.0` [`⚙️ Track Actions ↗`](/settings/4-customization-settings/#track-actions)
 - Every slot in the tile is customizable, choose what appears in each row: title, artist, album, year, duration, bitrate and more.
 - Display third row & third item in each row, control how much info a track tile shows.
 - Display favourite button.
@@ -61,8 +61,7 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 - Visualizer, visuals in the expanded player that move with the music. Particles (formerly "Enable moving particles") is one of them. `🆕 v7.8.0` [`🎉 Visualizers ↗`](/features/effects/#visualizers)
 - Player background, the artwork or your own image behind the expanded player. `🆕 v7.8.0` [`🎉 Player Background ↗`](/features/effects/#player-background)
 - Thumbnail animation intensity, the artwork animates with the audio peak. Separate values for expanded, minimized and lyrics view, plus an inverse option where high peaks make the thumbnail smaller.
-- Artwork gestures, scale multiplier, tap action, long press action and double tap to toggle lyrics.
-  - Flip Artwork action, shows the back cover (embedded, or an image like `back.jpg` in the track folder). `🆕 v8.2.0`
+- Artwork gestures, scale multiplier, tap action, long press action and double tap to toggle lyrics. [`⚙️ Track Actions ↗`](/settings/4-customization-settings/#track-actions)
 - Waveform bars count.
 - Display audio info in miniplayer.
 - Display artist before title.
@@ -76,6 +75,26 @@ Choose a different icon for the app. New icons can be submitted on [our Discord]
 ::: callout info
 Fully custom icons are not possible (Android only allows icons that are already built into the app). Use a launcher that supports icon packs, or patch the app.
 :::
+
+### Track Actions {#track-actions}
+
+What track swipes and artwork gestures can do.
+
+- Play (Single), plays only that track.
+- Play (Choose), plays the list from that track, asking whether to replace the queue or keep it. `🆕 v8.2.0`
+- Play Next, Play Last & Play After (after the latest inserted track).
+- Add to Playlist, Info, Total Listens, Edit Tags, Edit Artwork, Set Rating & Rating/Moods/Tags.
+- Artwork (Open / Save).
+- Go to Track (in the Tracks tab), Album, Artist & Folder.
+- Copy (Title / Artist / Artist + Title / Link).
+- Search YouTube, searches the artist and title.
+- Delete.
+
+The player artwork has no play actions or Delete, and gets these instead:
+
+- Add bookmark & Stop after this track. `🆕 v8.2.0`
+- Flip Artwork, shows the back cover (embedded, or an image like `back.jpg` in the track folder). `🆕 v8.2.0`
+- Focus, scrolls to the playing track in the open page (first occurrence) and briefly highlights it. If the track isn't in that page, the Tracks tab opens instead.
 
 ---
 

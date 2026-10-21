@@ -73,6 +73,7 @@ Two ways:
 For M3U files:
 
 1. Convert your playlists to M3U, they are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`.
+   - Exporting selected playlists converts them all at once, or saves unlinked copies to any folder you pick. `🆕 v8.2.0`
 2. Move the M3U files somewhere inside your music folder.
 3. Refresh the playlists in Namida (pull down in the playlists page), they turn into relative playlists.
 4. Sync them together with the music using [syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or similar apps. [`📒 Syncing Music Files Guide ↗`](/guides/medium/#sync-music-files)

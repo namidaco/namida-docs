@@ -14,7 +14,7 @@ What each version added or changed, linked to where these docs explain it. Newes
 ## 🏷️ v8.2.0 {#v8-2-0}
 
 <!-- generated -->
-`✨ 1 new page` `🆕 16 new sections` `🔄 77 updated sections`
+`✨ 1 new page` `🆕 16 new sections` `🔄 78 updated sections`
 
 ::: callout tip
 ✨ New page: [Lyrics Editor](/features/lyrics-editor/)
@@ -45,7 +45,7 @@ What each version added or changed, linked to where these docs explain it. Newes
 - [Settings](/settings/)
 - [Indexer](/settings/2-indexer-settings/): 🔄 [Add Folder](/settings/2-indexer-settings/#add-folder), [Separators](/settings/2-indexer-settings/#separators), [Include Videos](/settings/2-indexer-settings/#include-videos)
 - [Playback](/settings/3-playback-settings/): 🆕 [Notification Buttons](/settings/3-playback-settings/#notification-buttons), [Next/Previous Jump Between Chapters](/settings/3-playback-settings/#skip-buttons-chapters) · 🔄 [Crossfade](/settings/3-playback-settings/#crossfade)
-- [Customizations](/settings/4-customization-settings/): 🔄 [Track Tile Customization](/settings/4-customization-settings/#track-tile), [Miniplayer Customization](/settings/4-customization-settings/#miniplayer-customization)
+- [Customizations](/settings/4-customization-settings/): 🔄 [Track Tile Customization](/settings/4-customization-settings/#track-tile), [Track Actions](/settings/4-customization-settings/#track-actions)
 - [Youtube](/settings/5-youtube-settings/): 🔄 [Flags](/settings/5-youtube-settings/#flags)
 - [Extras](/settings/6-extras-settings/): 🔄 [Library Tabs](/settings/6-extras-settings/#library-tabs), [Lyrics](/settings/6-extras-settings/#lyrics), [Flags](/settings/6-extras-settings/#flags)
 - [Backup & Restore](/settings/7-backup-restore-settings/): 🔄 [Restore Backup](/settings/7-backup-restore-settings/#restore-backup), [Import data](/settings/7-backup-restore-settings/#import-data)
@@ -54,7 +54,7 @@ What each version added or changed, linked to where these docs explain it. Newes
 **📒 Guides**
 
 - [Beginner Guides](/guides/beginner/): 🆕 [Sync lyrics yourself](/guides/beginner/#sync-lyrics) · 🔄 [Stop after the current track](/guides/beginner/#stop-after-track), [Change or fix lyrics](/guides/beginner/#change-lyrics)
-- [Medium Guides](/guides/medium/): 🔄 [Link a YouTube video to a track](/guides/medium/#link-yt-video), [Sync data between devices](/guides/medium/#sync-devices)
+- [Medium Guides](/guides/medium/): 🔄 [Link a YouTube video to a track](/guides/medium/#link-yt-video), [Sync data between devices](/guides/medium/#sync-devices), [Sync playlists between devices](/guides/medium/#sync-playlists)
 
 **📌 More**
 

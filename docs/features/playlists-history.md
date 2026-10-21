@@ -11,6 +11,7 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
 
 - M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders (except [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists` which always loads `🆕 v7.5.0`).
   - Sharing a playlist as a file isn't possible, send its M3U file with apps like [Syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or [LocalSend](https://localsend.org) instead. Converted playlists are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-playlists)
+  - Exporting selected playlists converts them all at once, or saves unlinked copies to any folder you pick. `🆕 v8.2.0`
   - Between Namida devices, Sync can send your playlists too. [`🎉 Sync feature ↗`](/features/sync/#data)
     - M3U playlists arrive as M3U files in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`, the rest as normal playlists. `🆕 v7.5.0`
 - Server playlists, auto import playlists from configured music web servers (Jellyfin, Subsonic/Navidrome and others) on library refresh.
