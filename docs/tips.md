@@ -50,7 +50,10 @@ Not so obvious features you might have missed.
 - Long press an empty spot in the equalizer curve to add a band right there. [`🎉 Equalizer ↗`](/features/playback/#equalizer)
 - Playing the current track from another list rebuilds the queue silently without interrupting playback.
 - Open any track's dialog and press play to quickly start a new queue with only that track.
-- Zoom in on the video in the local player to enter fullscreen.
+- Enter fullscreen easily: [`🎉 Video Fullscreen ↗`](/features/youtube/#fullscreen)
+  - Double tap the video in the local player.
+  - Swipe up on the video in the YouTube player for landscape.
+  - Swipe down on the right side of the YouTube player for portrait.
 - Namida can play loop animations, link a very short video to a track and it loops while the track plays. Embedding an animated gif or webp as the artwork works too. [`📒 Loop Animation Guide ↗`](/guides/namider/#loop-animation)
 
 ### Track Menu {#track-menu}
@@ -147,7 +150,7 @@ The track menu has an Advanced section:
 ### Info & Sorting {#info-sorting}
 
 - Tap any item in the track info dialog to copy it.
-- In a track, album or artist info dialog, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop. You can zoom in until single pixels show, and they stay sharp.
+- In a track or video info dialog, or at the top of an album, artist or playlist page, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop. You can zoom in until single pixels show, and they stay sharp.
 - Covers made from several tracks (like in a playlist page) open in a swipeable viewer when you tap one of their images, use the arrow keys on desktop. The viewer can save the whole collage too. `🆕 v8.2.0`
 - Sort by more than one property (like artist, then year, then title). Press Advanced in any sort menu to pick and reorder them.
   - Available for tracks, and now albums, artists, genres and playlists too. `🆕 v7.8.0`

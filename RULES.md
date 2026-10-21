@@ -15,6 +15,7 @@ Rules for writing and editing these docs. They apply to humans and AI assistants
 - No em dash or en dash (—, –), use a comma instead.
 - Put a side note in parentheses instead of chaining commas: `sometimes blocks them (the dialog says the app was blocked)`. Two main clauses joined by a comma are fine as is.
 - A single newline renders as a line break, so never hard wrap lines, and only add a break where it fits: in a long paragraph, at the point where it moves to a new topic (local vs online, single video vs playlists). Usually one per paragraph. Never one sentence per line, never inside list items, and keep a short closing sentence on the same line.
+- Don't pack unrelated points into one paragraph, list them as bullets under a short lead in (`In fullscreen:`). A paragraph is for one topic.
 - No emojis (except in major headings if really needed). `docs/whats-new.md` is the exception, its emojis are intended, keep them.
 - Use setting/feature titles exactly as they appear in the app (source: `external/language/translations/en.arb` in the namida repo). Descriptions can be extended beyond the in-app subtitle when helpful.
 - "Namida" is written like this.

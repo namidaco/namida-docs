@@ -115,6 +115,7 @@
     },
     "/features/youtube/": {
       "data-saver": ["data_saver"],
+      "fullscreen": ["video_fullscreen"],
       "miniplayer": ["yt_player", "yt_video_info"],
       "downloads": ["yt_downloads", "yt_download_sheet", "yt_parallel_downloads", "yt_download_task_info", "yt_playlist_download_configure"],
       "playlists": ["yt_local_playlist", "yt_add_to_playlist"],

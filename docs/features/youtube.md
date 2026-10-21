@@ -38,22 +38,36 @@ Captions of any video can be shown while watching, including the auto generated 
 
 Watching videos supports gestures:
 
-- Swipe up or pinch in to enter fullscreen
-- Swipe down on the right side to enter fullscreen portrait
-- Swipe up the minimized player on the video part to enter fullscreen
 - Double tap the left or right side to seek, keep tapping to seek further
-- In fullscreen, swipe vertically on the right side for volume, and on the left side for brightness (on Android, going past 100% raises the screen brightness too)
 - Swipe horizontally to seek
 - Seeking very close to the starting edge snaps to the very start
 - While seeking, swipe upwards to cancel
 - Long press for 1.5x speed [`⚙️ Configure Long Press Speed ↗`](/settings/3-playback-settings/#long-press-speed)
 
-The lock button in fullscreen blocks all gestures and controls until you unlock it.
-
 Horizontal seeking on the video can be limited to fullscreen, the expanded miniplayer, always or never. [`⚙️ Configure Drag to seek (Video) ↗`](/settings/5-youtube-settings/#miniplayer)
 
-In fullscreen, you can enable glow to show an ambient effect behind the video (might affect performance & battery).
-On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video matches how you are actually holding the device.
+### Fullscreen {#fullscreen}
+
+Ways to enter fullscreen:
+
+- Swipe up on the video for landscape, works on the minimized player too
+- Swipe down on the right side of the expanded player to enter fullscreen portrait
+- The fullscreen button in the video controls
+- Tapping a short opens it in fullscreen directly
+- Double tap the video in the local player [`🎉 Video Integration ↗`](/features/playback/#video)
+
+In fullscreen:
+
+- Swipe vertically on the right side for volume, and on the left side for brightness (on Android, going past 100% raises the screen brightness too)
+- The lock button blocks all gestures and controls until you unlock it
+- You can enable glow to show an ambient effect behind the video (might affect performance & battery)
+- On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video matches how you are actually holding the device
+
+#### Other Fullscreens {#other-fullscreens}
+
+- Lyrics, long press them, or `Ctrl` + `Shift` + `L` on desktop [`🎉 Lyrics ↗`](/features/playback/#lyrics)
+- Artwork, tap it in a track or video info dialog, or at the top of an album/artist/playlist page [`📄 Info & Sorting Tips ↗`](/tips/#info-sorting)
+- The app window on desktop, with `F11` [`🎉 Shortcuts ↗`](/features/shortcuts/#navigation)
 
 ### Miniplayer {#miniplayer}
 
