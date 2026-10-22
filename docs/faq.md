@@ -107,6 +107,16 @@ No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scr
 
 Yes, turn on Discord Rich Presence in Extras settings. `🆕 v8.4.0` [`🎉 Discord Rich Presence ↗`](/features/system-integration/#discord)
 
+### Why doesn't Discord show the track artwork? {#discord-artwork}
+
+Discord only shows images from an online link, it can't take an image from your device.
+
+- Local tracks show the Namida icon, since their artwork only exists on your device.
+- YouTube videos show their thumbnail on desktop only. There the Discord app turns the link into an image, while on Android Namida talks to Discord directly, where that needs your Discord login token (what unofficial apps use, and it has a risk getting your account banned).
+
+Apps that show local artwork either search the track on online services (sending its title, artist and album) or pass the image through their own server. Namida does neither, your library stays on your device.
+On desktop, [Music Presence](https://github.com/ungive/discord-music-presence) works with Namida and shows local artwork (through its own server). [`🎉 Discord Rich Presence ↗`](/features/system-integration/#discord)
+
 ### Can I use my AutoEq or Equalizer APO settings? {#equalizer}
 
 Yes, import your `ParametricEQ.txt` file, or paste it with Import -> From clipboard in the equalizer.

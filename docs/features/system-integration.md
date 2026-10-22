@@ -60,7 +60,7 @@ Shows the current lyrics line in the status bar, on systems and modules that sup
 
 `🆕 v8.4.0`
 
-Shows what you're listening to on your Discord profile, with the title, artist and a progress bar. YouTube videos link to the video (and show its thumbnail on desktop). Pausing clears it.
+Shows what you're listening to on your Discord profile, with the title, artist and a progress bar. YouTube videos link to the video (and show its thumbnail on desktop). Local tracks show the Namida icon instead of their artwork, see [why](/faq/#discord-artwork). Pausing clears it.
 
 - **Desktop**, works through the Discord app, which needs to be running. It uses the account signed in there.
 - **Android**, the first time you turn it on, Discord asks you to sign in and allow Namida to set your status. Sign out from the same tile.

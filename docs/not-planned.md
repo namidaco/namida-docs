@@ -35,8 +35,17 @@ Same story as Spotify. The only focus is local + YouTube, keeping them both poli
 
 ### LastFm Scrobbling {#lastfm}
 
-Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works with any player and has lots of features.
+Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works with any player (Android, Windows and Linux) and has lots of features.
 It reads the media notification, which is enough for most. Namida also shares the MusicBrainz ids from your tags (Android), so scrobbles can match the exact recording instead of a guess from title and artist, once PanoScrobbler supports reading them. `🆕 v8.2.0` [`🎉 Automation & Other Apps ↗`](/features/automation/#what-apps-can-do)
+
+A built-in scrobbler isn't planned because:
+
+- It would work the same, Namida already sends the full track info through the media session (SMTC/MPRIS on desktop).
+- The battery cost of a separate app is negligible, Android delivers the media notification anyway, and a built-in scrobbler would make the same network requests.
+- It doesn't stop at scrobbling. Next come other services (ListenBrainz, Libre.fm, Maloja, etc), syncing loves with favourites, scrobble edits and blocklists, a whole scrobbler app inside a player.
+- Account security. A scrobbler has to store your account tokens plus an api secret that can't really be hidden in a source available app.
+
+Namida keeps its own history and stats locally, and you can import your LastFm history into it. [`🎉 History ↗`](/features/playlists-history/#history) [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-data)
 
 ### CUE Sheets {#cue-sheets}
 
