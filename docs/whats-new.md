@@ -11,6 +11,50 @@ What each version added or changed, linked to where these docs explain it. Newes
 **Looking for every change?** This page only follows the docs. The full changelog of each version (fixes and improvements included) is on GitHub. [`📜 Stable Releases ↗`](https://github.com/namidaco/namida/releases) [`🧪 Beta Releases ↗`](https://github.com/namidaco/namida-snapshots/releases)
 :::
 
+## 🏷️ v8.4.0 {#v8-4-0}
+
+<!-- generated -->
+`🆕 5 new sections` `🔄 45 updated sections`
+
+**🎉 Features**
+
+- [Playback](/features/playback/): 🔄 [Queue System](/features/playback/#queue), [Smart & Beat Matching](/features/playback/#beat-matching), [Video Integration](/features/playback/#video), [Lyrics Picker](/features/playback/#lyrics-picker), [Gestures](/features/playback/#gestures)
+- [Playlists & History](/features/playlists-history/): 🔄 [Playlists](/features/playlists-history/#playlists)
+- [Smart Playlists](/features/smart-playlists/): 🔄 [Text Rules](/features/smart-playlists/#text-rules), [Number Rules](/features/smart-playlists/#number-rules)
+- [Tag Editor](/features/tag-editor/): 🔄 [Single Track Editing](/features/tag-editor/#single), [Multiple Tracks Editing](/features/tag-editor/#multiple)
+- [YouTube](/features/youtube/): 🆕 [YouTube Music](/features/youtube/#youtube-music) · 🔄 [Downloads](/features/youtube/#downloads), [Downloaded Videos](/features/youtube/#downloaded-videos), [Takeout Import](/features/youtube/#history-import)
+- [Media Servers](/features/media-servers/): 🔄 [How It Works](/features/media-servers/#how)
+- [Listening Party](/features/party/): 🔄 [Starting a Party](/features/party/#create), [Joining](/features/party/#join)
+- [Effects & Visualizers](/features/effects/): 🆕 [Lyrics Background](/features/effects/#lyrics-background) · 🔄 [Player Background](/features/effects/#player-background)
+- [System Integration](/features/system-integration/): 🆕 [Discord Rich Presence](/features/system-integration/#discord) · 🔄 [Open With & Share](/features/system-integration/#open-with)
+- [Automation & Other Apps](/features/automation/): 🔄 [Cheat Sheet](/features/automation/#cheat-sheet)
+- [Shortcuts](/features/shortcuts/): 🔄 [Playback](/features/shortcuts/#playback), [Navigation](/features/shortcuts/#navigation), [Custom Hotkeys](/features/shortcuts/#custom-hotkeys)
+
+**📄 Pages**
+
+- [Library](/pages/library/): 🔄 [Queues](/pages/library/#queues), [Search](/pages/library/#search)
+- [YouTube Pages](/pages/youtube/): 🆕 [Music](/pages/youtube/#music) · 🔄 [Sections](/pages/youtube/#sections), [Channels](/pages/youtube/#channels), [Downloads](/pages/youtube/#downloads), [Filters](/pages/youtube/#search-filters)
+
+**⚙️ Settings**
+
+- [Customizations](/settings/4-customization-settings/): 🔄 [Miniplayer Customization](/settings/4-customization-settings/#miniplayer-customization), [Track Actions](/settings/4-customization-settings/#track-actions)
+- [Extras](/settings/6-extras-settings/): 🆕 [Integrations](/settings/6-extras-settings/#integrations) · 🔄 [Library Tabs](/settings/6-extras-settings/#library-tabs), [Filter Tracks in Search Lists By](/settings/6-extras-settings/#filter-tracks-by), [Romanization](/settings/6-extras-settings/#romanization), [Flags](/settings/6-extras-settings/#flags)
+- [Backup & Restore](/settings/7-backup-restore-settings/): 🔄 [Import data](/settings/7-backup-restore-settings/#import-data)
+- [Advanced](/settings/8-advanced-settings/): 🔄 [Flags](/settings/8-advanced-settings/#flags)
+
+**📒 Guides**
+
+- [Medium Guides](/guides/medium/): 🔄 [Link a YouTube video to a track](/guides/medium/#link-yt-video), [Sync playlists between devices](/guides/medium/#sync-playlists)
+
+**📌 More**
+
+- [Tips & Tricks](/tips/): 🔄 [Player](/tips/#player), [Track Menu](/tips/#track-menu), [Library Pages](/tips/#library-pages), [Scrolling](/tips/#scrolling), [Misc](/tips/#misc-tips)
+- [FAQ](/faq/): 🔄 [Is there a Discord Rich Presence (RPC) feature?](/faq/#discord-rpc)
+- [Membership](/membership/): 🔄 [Free for Everyone](/membership/#free)
+<!-- /generated -->
+
+---
+
 ## 🏷️ v8.2.0 {#v8-2-0}
 
 <!-- generated -->

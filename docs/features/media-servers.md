@@ -26,14 +26,16 @@ For Subsonic servers, tracks without their own artwork fall back to the album ar
 Server tracks keep their folder structure in the Folders tab. `🆕 v8.2.0`
 
 ::: callout info
-FTP servers download files temporarily for indexing. Use a stable connection (preferably Wi-Fi to avoid high data usage).
+FTP servers download parts of each file temporarily for indexing. Use a stable connection (preferably Wi-Fi to avoid high data usage).
 :::
+
+Lyrics stored on Jellyfin and Subsonic servers show as the track's embedded lyrics (Subsonic needs a server supporting OpenSubsonic lyrics, like Navidrome). `🆕 v8.4.0`
 
 ### Playback Reports {#playback-reports}
 
 `🆕 v8.2.0`
 
-Subsonic and Jellyfin servers see what you're playing and count your plays. Listens made offline are sent to Subsonic servers once you're back online. On by default, turn it off with the `SERVER_PLAYBACK_REPORTS` flag. [`⚙️ Advanced Flags ↗`](/settings/8-advanced-settings/#flags)
+Subsonic and Jellyfin servers see what you're playing and count your plays. Listens made offline are sent to Subsonic servers once you're back online. On by default, turn it off with the `SERVER_PLAYBACK_REPORTS` flag. [`⚙️ Integrations Flags ↗`](/settings/6-extras-settings/#integrations)
 
 ### Server Playlists {#playlists}
 
@@ -64,7 +66,7 @@ The server cache sits in [User Data](/storage-paths/#user-data)`/Servers Cache`.
 - [⚙️ Indexer, List of Folders](/settings/2-indexer-settings/#folders-to-scan)
 - [⚙️ Advanced, Cache Limits](/settings/8-advanced-settings/#cache-limits)
 - [⚙️ Advanced, Clear Caches](/settings/8-advanced-settings/#clear-caches)
-- [⚙️ Advanced, Flags](/settings/8-advanced-settings/#flags)
+- [⚙️ Extras, Integrations](/settings/6-extras-settings/#integrations)
 
 ---
 

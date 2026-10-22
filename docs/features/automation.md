@@ -20,12 +20,12 @@ The everyday side of this is in [`🎉 System Integration ↗`](/features/system
 
 `🆕 v8.2.0`
 
-Turn them on from the flag icon at the top of Advanced settings:
+Turn them on from the flag icon of the Integrations card in Extras settings:
 
 - `NOW_PLAYING_BROADCAST`, an Android broadcast on every track change, play and pause, for Tasker and other automation apps. `💻 Android only`
 - `WEBHOOK`, posts the same events as JSON to a url, you pick which events (track changed, play, pause).
 
-Each event has the full track info, including the file path (or video id for YouTube) and ids from the file tags (MusicBrainz, ISRC, AcoustID, etc), see the [event format](#event-format). Broadcast actions are in the [cheat sheet](#cheat-sheet). [`⚙️ Configure Flags ↗`](/settings/8-advanced-settings/#flags)
+Each event has the full track info, including the file path (or video id for YouTube) and ids from the file tags (MusicBrainz, ISRC, AcoustID, etc), see the [event format](#event-format). Broadcast actions are in the [cheat sheet](#cheat-sheet). [`⚙️ Configure Integrations ↗`](/settings/6-extras-settings/#integrations)
 
 ### Event Format {#event-format}
 
@@ -70,6 +70,7 @@ The exact values to type into Tasker's "Send Intent", MacroDroid's "Launch Inten
 | Play a playlist file | `android.intent.action.VIEW` | Data: a `.m3u` or `.m3u8` path, Mime: `*/*` |
 | Open a YouTube link | `android.intent.action.VIEW` | Data: `https://youtu.be/VIDEO_ID` or any youtube.com link |
 | Share text with links | `android.intent.action.SEND` | Mime: `text/plain`, Extra `android.intent.extra.TEXT`: the text |
+| One file `🆕 v8.4.0` | `android.intent.action.SEND` | Mime: `audio/*` or `video/*`, Extra `android.intent.extra.STREAM`: the uri |
 | Several files | `android.intent.action.SEND_MULTIPLE` | Mime: `audio/*`, Extra `android.intent.extra.STREAM`: list of uris |
 | Join a party | `android.intent.action.VIEW` | Data: `namida://party?c=CODE` |
 | Just open Namida | `android.intent.action.MUSIC_PLAYER` | nothing |
@@ -132,7 +133,7 @@ The MPRIS name is `org.mpris.MediaPlayer2.namida`, `playerctl -l` lists it while
 - [🎉 System Integration](/features/system-integration/)
 - [🎉 Shortcuts](/features/shortcuts/)
 - [🎉 Listening Party](/features/party/)
-- [⚙️ Advanced, Flags](/settings/8-advanced-settings/#flags)
+- [⚙️ Extras, Integrations](/settings/6-extras-settings/#integrations)
 - [⚙️ Youtube, On Opening Youtube Link](/settings/5-youtube-settings/#on-opening-youtube-link)
 
 ---

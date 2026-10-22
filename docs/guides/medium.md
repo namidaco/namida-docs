@@ -16,6 +16,11 @@ It also works automatically, Namida looks up the track's comment tag (usually fi
 - In filenames, it should contain `v=video_id` or `id=video_id` to get matched.
   - Ending with `[video_id]` (the yt-dlp default) works too. `🆕 v8.2.0`
 
+Video is out of sync with the track (like a video with an intro)? Open the Set Youtube Link dialog again, then either: `🆕 v8.4.0`
+
+- Press Auto to match the video with the track's audio using magic.
+- Or add `t=` to the link yourself (like `?t=5.235` or `t=1m30s`), the video then starts from that point.
+
 ### Link a local video to a track {#link-local-video}
 
 1. Put the video inside one of your indexed folders.
@@ -74,6 +79,7 @@ For M3U files:
 
 1. Convert your playlists to M3U, they are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`.
    - Exporting selected playlists converts them all at once, or saves unlinked copies to any folder you pick. `🆕 v8.2.0`
+   - Long press Convert to M3U in a playlist's menu to save it right in your music folder (next to its tracks or any folder), then skip steps 2 and 3. `🆕 v8.4.0`
 2. Move the M3U files somewhere inside your music folder.
 3. Refresh the playlists in Namida (pull down in the playlists page), they turn into relative playlists.
 4. Sync them together with the music using [syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or similar apps. [`📒 Syncing Music Files Guide ↗`](/guides/medium/#sync-music-files)

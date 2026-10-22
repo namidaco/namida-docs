@@ -60,6 +60,8 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 - Party Mode, a breathing glow around the edges, with a static color or switching through the artwork palette. Part of the membership, or unlock it with an egg. [`📄 Membership ↗`](/membership/#benefits) [`📄 Eggs ↗`](/membership/#eggs)
 - Visualizer, visuals in the expanded player that move with the music. Particles (formerly "Enable moving particles") is one of them. `🆕 v7.8.0` [`🎉 Visualizers ↗`](/features/effects/#visualizers)
 - Player background, the artwork or your own image behind the expanded player. `🆕 v7.8.0` [`🎉 Player Background ↗`](/features/effects/#player-background)
+  - Or an animated one: mesh gradient, ambient lights & bokeh. `🆕 v8.4.0`
+- Lyrics (Fullscreen), the background behind fullscreen lyrics, and a visualizer for tracks without lyrics. `🆕 v8.4.0` [`🎉 Lyrics Background ↗`](/features/effects/#lyrics-background)
 - Thumbnail animation intensity, the artwork animates with the audio peak. Separate values for expanded, minimized and lyrics view, plus an inverse option where high peaks make the thumbnail smaller.
 - Artwork gestures, scale multiplier, tap action, long press action and double tap to toggle lyrics. [`⚙️ Track Actions ↗`](/settings/4-customization-settings/#track-actions)
 - Waveform bars count.
@@ -80,8 +82,9 @@ Fully custom icons are not possible (Android only allows icons that are already 
 
 What track swipes and artwork gestures can do.
 
-- Play (Single), plays only that track.
-- Play (Choose), plays the list from that track, asking whether to replace the queue or keep it. `🆕 v8.2.0`
+- Play (Single), plays only that track, replacing the queue.
+- Play (Choose), asks how to play the list starting from that track: replace the queue, keep it, or add it next, after or last. `🆕 v8.2.0`
+  - Play (Keep queue) can also take that track alone, it plays now and the current queue continues after it. `🆕 v8.4.0`
 - Play Next, Play Last & Play After (after the latest inserted track).
 - Add to Playlist, Info, Total Listens, Edit Tags, Edit Artwork, Set Rating & Rating/Moods/Tags.
 - Artwork (Open / Save).

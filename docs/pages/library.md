@@ -86,7 +86,7 @@ Browse your library exactly like your file manager, with separate views for musi
 
 ### Queues {#queues}
 
-Every listening session is saved automatically, so you can jump back to any previous queue. Press the delete icon at the top to clear unimportant queues, or swipe one left to quickly remove it. Inside a queue, the resume button continues from the track you last played in it.
+Every listening session is saved automatically, so you can jump back to any previous queue. Press the delete icon at the top to clear unimportant queues, or swipe one left to quickly remove it. Inside a queue, the resume button continues from the track you last played in it, and the search box filters its tracks. `🆕 v8.4.0`
 
 Only the newest 20 queues load at first, press "Load all" at the bottom for the rest. `🆕 v7.4.0`
 
@@ -123,6 +123,7 @@ The moods and tags pages can be searched and sorted, and so can the tracks insid
 ### Search {#search}
 
 Global search across your library. You choose which fields it looks into: title, artist, album, filename, even lyrics. Playing from search supports play modes: selected track only, search results, album, first artist or first genre. [`⚙️ Configure Search ↗`](/settings/6-extras-settings/#filter-tracks-by)
+The filter icon in the search page picks the fields right there, and can save them as presets (like lyrics only) for the search page only. `🆕 v8.4.0`
 
 Results are ranked by a match score:
 

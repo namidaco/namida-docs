@@ -79,18 +79,10 @@ Clearing the image cache leaves your library without images. Only use it to rebu
 
 Hidden options. Press the flag icon at the top of the Advanced settings card to open them:
 
-Integrations (💻 Android only):
-
-- `ANDROID_AUTO_AND_WEAR`, shows the queue in Android Auto and Wear OS, on by default.
-- `NOW_PLAYING_BROADCAST`, sends the current track to Tasker and other automation apps. [`🎉 Broadcasts ↗`](/features/automation/#broadcasts)
-- `STATUS_BAR_LYRICS`, the current lyrics line in the status bar of supported systems (ColorOS & HyperLyric, SuperLyric, Flyme & Lyricon). [`🎉 Status Bar Lyrics ↗`](/features/system-integration/#status-bar-lyrics)
-
-Others:
-
-- `WEBHOOK`, posts playback events (track changed, play, pause) to a URL of your choice. [`🎉 Webhook ↗`](/features/automation/#broadcasts)
-- `SERVER_PLAYBACK_REPORTS`, tells Subsonic and Jellyfin servers what you play, on by default. [`🎉 Playback Reports ↗`](/features/media-servers/#playback-reports)
 - `ANALYZE_RHYTHM`, analyzes the whole library ahead of time for the [crossfade styles](/features/playback/#beat-matching): where each track fades out (Smart), plus tempo, key and beats (Beat matching). The tag button writes the analyzed BPM to files that have none.
 - `DETECT_FAKE_LOSSLESS_FILES`, scans your lossless files for ones made from a lossy source, upsampled or bit-padded. The results can be saved as a playlist.
+
+Integration flags (like `WEBHOOK` and `STATUS_BAR_LYRICS`) moved to the [Integrations](/settings/6-extras-settings/#integrations) card in Extras settings. `🆕 v8.4.0`
 
 ---
 

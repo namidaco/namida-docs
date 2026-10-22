@@ -35,6 +35,7 @@ Options while creating:
 - **Start with current queue**, the room opens with what you are playing (on by default)
 - **Public room**, anyone can find it while browsing. With **Share what's playing**, the public list also shows the current track
 - **Host on this device**, for people on the same network (no server or membership needed)
+  - With **Public room** on, devices on the same network find it in the public rooms list. `🆕 v8.4.0`
 - **Custom server**, the server URL and password of your own server, see [below](#self-hosting)
 
 Creating a room on the Namida server needs a `cutie` membership or higher (higher tiers allow bigger rooms and more open rooms at once), see [`📄 Membership ↗`](/membership/#tiers). If you reach the limit, your open parties are listed so you can close one.
@@ -45,10 +46,11 @@ Joining is always free, and hosting on your own device or your own server needs 
 Paste an invite link or type the code, with the password if the room has one. On Android, opening an invite link opens the app and joins the room right away.
 
 ::: callout info
-A code alone only works for rooms on the Namida server. Rooms on your local network or on a custom server need the invite link (since it carries the address).
+A code alone only works for rooms on the Namida server. Rooms on your local network or on a custom server need the invite link (since it carries the address), unless a local room is public and shows in the list.
 :::
 
 - **Public rooms** are listed at the bottom, tap one to join. You can hide all rooms from a host you are not interested in.
+  - Public rooms on your network show first, with a wifi icon. `🆕 v8.4.0`
 - **Rejoin** lists the rooms you were in lately. Rejoining gets your seat back, without the password or approval.
 - **Your name** is how others see you in the room. It is the same name your device uses in [`🎉 Sync ↗`](/features/sync/#devices), changing one changes the other.
 

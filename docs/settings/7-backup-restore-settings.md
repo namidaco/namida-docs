@@ -37,6 +37,7 @@ Sync app data between your devices over the local network, see the [Sync feature
 Pick a source, then choose what to import from its export (history / favourites / playlists) `🆕 v8.2.0`
 
 - YouTube: a takeout export (zip files or the extracted folder), for watch history, favourites (liked videos) and playlists. Watches get matched with your library or YouTube videos and merged into history.
+  - Subscriptions too, they become your subscribed channels in Namida (include them when exporting the takeout). `🆕 v8.4.0`
 - LastFm: a csv export of your scrobbles.
 - Spotify: a data export (zip or json files), for your extended streaming history and favourites (liked songs).
 - ListenBrainz: a data export (zip or json files), for your listens and favourites (loved tracks).

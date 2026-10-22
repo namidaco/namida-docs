@@ -9,8 +9,9 @@ description: "Flexible playlists and a reliable history system"
 
 Normal playlists with custom order and the ability to set custom artworks. Also:
 
-- M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. M3U files only show up if their folder is in the indexer folders (except [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists` which always loads `🆕 v7.5.0`).
+- M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. New M3U files only show up if their folder is in the indexer folders (except [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists` which always loads `🆕 v7.5.0`). Files already linked to a playlist (synced imports and conversions) load from any folder. `🆕 v8.4.0`
   - Sharing a playlist as a file isn't possible, send its M3U file with apps like [Syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or [LocalSend](https://localsend.org) instead. Converted playlists are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-playlists)
+  - Long press Convert to M3U in the playlist menu to save it in the folder holding its tracks, or any folder you pick. When creating a new playlist as M3U, the folder button next to the switch picks its folder. `🆕 v8.4.0`
   - Exporting selected playlists converts them all at once, or saves unlinked copies to any folder you pick. `🆕 v8.2.0`
   - Between Namida devices, Sync can send your playlists too. [`🎉 Sync feature ↗`](/features/sync/#data)
     - M3U playlists arrive as M3U files in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`, the rest as normal playlists. `🆕 v7.5.0`
@@ -23,6 +24,9 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
 - Pinned playlists can show on the Home page too, enable Pinned Playlists from its configure button. `🆕 v8.2.0`
 - Select many playlists with the checklist icon at the top, to tag, pin, play, merge, export or delete them at once. `🆕 v7.8.0`
 - M3U playlists keep their comment, moods, tags and sorting. `🆕 v7.8.0`
+  - The name, description, moods and tags are also read from and written to the M3U file (`#PLAYLIST`, `#DESCRIPTION`, `#TAGS` for moods and `#CATEGORY` for tags), so other apps can use them. Edits made in Namida and in other apps are both kept. `🆕 v8.4.0`
+  - `#PLAYLIST` names the playlist only when Namida first finds the file, names with characters like `/` use the file name instead.
+  - Lines written by other apps (like `#UUID` or `#AUTHOR`) stay as they are, `#PLAYLISTSIZE` and `#DURATION` get updated. `🆕 v8.4.0`
 - Remove Duplicates is in the playlist menu, under Advanced. `🆕 v7.8.0`
 - Add a description from the playlist menu -> Edit (YouTube playlists too), it shows on the playlist page. `🆕 v8.2.0`
 

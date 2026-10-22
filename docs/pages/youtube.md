@@ -12,7 +12,7 @@ Most pages have a Namida variant, and an account one for when you are signed in.
 
 `🆕 v8.2.0`
 
-The header at the top of the YouTube tab switches between Home, Notifications, Channels, Playlists and Downloads. A small badge shows each one's source:
+The header at the top of the YouTube tab switches between Home, Music `🆕 v8.4.0`, Notifications, Channels, Playlists and Downloads. A small badge shows each one's source:
 
 - Local: what Namida keeps on your device (its own watch history, playlists and subscribed channels).
 - YouTube: your signed-in account's live data, the default once you are signed in. [`🎉 Namida & Account ↗`](/features/youtube/#namida-account)
@@ -29,6 +29,19 @@ Your YouTube feed, with notifications and subscriptions when [signed in](/settin
 In notifications, you can play all unread videos at once, and comment notifications open the comment with its replies. If new notifications don't show up, switch the extractor from the button at the top.
 Open a notification's menu and press "More" to hide it, or to turn off notifications from that channel (this one needs a membership). `🆕 v7.4.0`
 
+### Music {#music}
+
+`🆕 v8.4.0`
+
+YouTube Music, right inside the YouTube tab, no account needed.
+
+- The home has mood chips (like Relax or Workout) to filter it, and buttons for Explore, Charts, Moods and New releases. Charts can be picked by country.
+- Tap a song to play it, the rest of its row becomes the queue. Long press anything for its menu.
+- Album pages show the album with its tracks, tap the artist name to open the artist.
+- Artist pages have Play and Shuffle for the artist's songs, a Channel button for the YouTube channel, and the artist's sections.
+
+YouTube Music playlists open in full with their real tracks, instead of as mixes.
+
 ### Playlists {#playlists}
 
 Your YouTube playlists, along with the built-in ones: History, Most Played and Favourites. You can create playlists, and import your existing playlists and channels from a YouTube takeout export. [`🎉 Playlists & History feature ↗`](/features/playlists-history/) [`🎉 YouTube Playlists feature ↗`](/features/youtube/#playlists)
@@ -38,6 +51,7 @@ Namida YouTube playlists can be tagged, pinned and filtered too. `🆕 v7.8.0` [
 ### Channels {#channels}
 
 Your subscribed channels, they can be organized into groups. Each channel page shows its videos and info.
+Long press a Subscribe button (on a channel page, a channel card or under a video) to manage its groups: search, create, rename or remove them, and favourite the channel. Pick a group from the filter button at the top to see only its channels and videos. `🆕 v8.4.0`
 Press the time range icon in a channel page to list only videos uploaded after or before a date. `🆕 v7.0.0`
 Tap the channel picture or banner to view it fullscreen, with a save button. `🆕 v8.2.0`
 
@@ -57,6 +71,8 @@ The same dialog has "Threads per download", how many connections each big file d
 
 Cache tasks show up here too, grouped under their playlist. While downloads or [server caching](/features/media-servers/#offline-caching) are running, an icon with a count shows in the app bar, press it to open this page. `🆕 v7.4.0`
 
+The playlist download page has the quality, Invert Selection and select all at the top, with the output folder and the filename format (and a preview of it). The format sheet's Edit Tags sets the default tags of your downloads. `🆕 v8.4.0`
+
 ### Search {#search}
 
 Search YouTube directly, results include videos, playlists and channels.
@@ -68,6 +84,7 @@ Offline search is available for browsing what you already have, turn on the "Cac
 
 A filters row sits above the results:
 
+- YouTube Music: searches YouTube Music instead, with its own categories (songs, videos, albums, artists, playlists). `🆕 v8.4.0`
 - Type: All, Videos, Channels, Playlists or Movies.
 - Sort by: Relevance, Rating, Upload date or Views.
 - Date: Last hour, Today, This week, This month, This year, or pick an exact "is After" / "is Before" date.

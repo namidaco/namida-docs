@@ -13,6 +13,8 @@ Edit title, artist, album, genre, year, lyrics, comment, rating, moods and more,
 
 Fields the file holds as separate values (like several artists) show joined with `; `, and stay separate values when saved. `🆕 v8.2.0`
 
+BPM and Key fields can be added from the pencil icon (Tag Fields). BPM has ×2 and ÷2 buttons, and both can be filled by analyzing the track with the magic pen button. `🆕 v8.4.0`
+
 ### Multiple Tracks Editing {#multiple}
 
 Select multiple tracks and edit them at once (unchanged fields remain untouched). Useful for fixing a whole album or artist.
@@ -23,6 +25,7 @@ Select multiple tracks and edit them at once (unchanged fields remain untouched)
 
 - Values shared by all tracks are filled in already. When tracks have different values, the field shows `<Multiple values>` and stays untouched unless you type something.
 - Each field has a menu on its right: Undo, Clear, Find & replace, and the list of existing values with their track counts (tap one to set it for all tracks).
+  - Fill empty only, writes the new value only to tracks where that field is empty. `🆕 v8.4.0`
 - Find & replace uses the same text filters as [smart playlists](/features/smart-playlists/#text-rules) (contains, starts with, regex and more), with a Match case switch and a live preview of what changes.
 - Some fields that are empty in all tracks (like Lyricist or Record Label) are grouped under "More".
 - Editing from an album gives an "Auto track numbers" switch, it numbers tracks by their current order, per disc.

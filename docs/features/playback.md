@@ -15,10 +15,11 @@ A persistent and reliable queue system, your sessions are saved for later usage.
 - Shuffle is a toggle, separate from the repeat mode. `🆕 v7.1.0`
   - Turning it on shuffles the queue with the playing track first, turning it off restores the original order. Playback is never interrupted.
   - While on, new queues start shuffled, with the track you pressed first.
-  - It persists between sessions and is the same toggle everywhere: queue, home screen widget, media controls and the desktop shortcut.
+  - It persists between sessions and is the same toggle everywhere: queue, home screen widget and media controls.
 - Stop after any track, open a queued track's menu and choose "Stop after this track". `🆕 v7.0.0`
   - For the playing track, there's also a notification button, an artwork gesture action and `Ctrl` + `Space`. `🆕 v8.2.0`
 - Insert after latest inserted, for stacking several tracks in order.
+- Search inside the queue with the search icon at its top, tapping a result jumps to it. `🆕 v8.4.0`
 - With the `ASK_BEFORE_REPLACING_QUEUE` [flag](/settings/6-extras-settings/#flags), playing something new asks whether to replace the queue, keep it, or add the new tracks next, after or last. The "Play (Choose)" gesture action always asks. `🆕 v8.2.0`
 - Play modes when playing from search: selected track only, search results, album, first artist or first genre.
 - Recommended & Similar Release Date, add tracks you usually listen to with the current one, or released around the same time.
@@ -32,7 +33,10 @@ The queue's bottom row packs more than it looks:
 - A jump button scrolls right to the current track.
   - Queues open at the playing track and follow it as it changes, until you scroll away (the jump button starts following again). `🆕 v8.2.0`
 - In a queue mixing tracks and videos, the add to playlist button asks whether to add the tracks or the videos.
-- Tap shuffle to toggle it, the button stays highlighted while it's on. Long press it for a one time shuffle instead: Shuffle Next shuffles the upcoming tracks, Shuffle All shuffles the whole queue.
+- The shuffle button has 3 modes, the first tap asks which one and long press changes it later. Lines inside the button show the chosen mode. `🆕 v8.4.0`
+  - Shuffle On/Off, the toggle above, the button stays highlighted while it's on.
+  - Shuffle Next, shuffles the upcoming tracks once.
+  - Shuffle All, shuffles the whole queue once.
 
 [`⚙️ Configure Playback ↗`](/settings/3-playback-settings/)
 
@@ -67,6 +71,8 @@ Crossfade's Style option changes how automatic crossfades happen:
 [Skip Silence](/settings/3-playback-settings/#skip-silence) is not part of these styles, it skips silent parts anywhere in a track, with or without crossfade.
 
 Upcoming tracks are analyzed in the background (BPM and key tags are used when present). To analyze the whole library at once, or write the analyzed BPM into tracks missing it, use the `ANALYZE_RHYTHM` flag in [Advanced settings](/settings/8-advanced-settings/#flags). [`⚙️ Configure Crossfade ↗`](/settings/3-playback-settings/#crossfade)
+
+Track info shows the analyzed BPM and key of tracks whose tags have none. The analyzed BPM follows the usual tempo of the track's genre, like 172 instead of 86 for drum & bass. `🆕 v8.4.0`
 
 ### Sound Control {#sound-control}
 
@@ -194,6 +200,8 @@ Control exactly what happens on calls, notifications, volume 0 and device discon
 
 Namida can play videos related to your music. Videos are found locally by filename matching, or fetched from YouTube using the link in the track's comment tag or filename. [`⚙️ Configure Video Playback ↗`](/settings/3-playback-settings/#video-playback) [`📒 Link a YouTube Video Guide ↗`](/guides/medium/#link-yt-video) [`📒 Link a Local Video Guide ↗`](/guides/medium/#link-local-video)
 
+A linked YouTube video can start from a later point to line up with the track, Namida can find that point for you. `🆕 v8.4.0` [`📒 Video Offset ↗`](/guides/medium/#link-yt-video)
+
 ### Lyrics {#lyrics}
 
 Lyrics are fetched and shown automatically (synced or plain), with support for displaying word synced lrc/ttml files. Subtitle files next to the track (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work as lyrics too.
@@ -216,7 +224,7 @@ Long press the lyrics button in the player (right click on desktop) to see every
 - Embed (from the ⋮ menu) writes them into the track's lyrics tag.
 - "Prefer embedded lyrics" (global) shows when the track has embedded lyrics: Never, Synced `🆕 v8.2.0` (only when they're synced) or Always.
 - Ignore (from the ⋮ menu of fetched lyrics) hides them and stops fetching lyrics for that track. `🆕 v8.2.0`
-- Font Scale sets the lyrics size, for normal and fullscreen.
+- Font Scale sets the lyrics size, for normal and fullscreen (and the widescreen player when opened from there `🆕 v8.4.0`).
 
 #### Translations {#lyrics-translations}
 
@@ -260,7 +268,8 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 - While seeking with the seekbar, swipe upwards to cancel the seek.
 - Seeking very close to the starting edge snaps to the very start.
 - Swipe the lyrics left or right in fullscreen or in the widescreen player to skip tracks. `🆕 v8.2.0`
-- Pinch the lyrics to change the font size, separately for normal and fullscreen. On desktop use `Ctrl` + mouse wheel, `Ctrl` + `+` / `-`, or `Ctrl` + `0` to reset. [`🎉 Shortcuts feature ↗`](/features/shortcuts/#zoom)
+- Hold a lyrics line for a second (right click on desktop) in fullscreen or in the widescreen player to copy it. `🆕 v8.4.0`
+- Pinch the lyrics to change the font size, separately for normal, fullscreen and the widescreen player `🆕 v8.4.0`. On desktop use `Ctrl` + mouse wheel, `Ctrl` + `+` / `-`, or `Ctrl` + `0` to reset. [`🎉 Shortcuts feature ↗`](/features/shortcuts/#zoom)
 - Double tap the video to enter fullscreen, or see more ways here: [`🎉 Video Fullscreen ↗`](/features/youtube/#fullscreen)
 - More hidden gestures in [`📄 Tips & Tricks ↗`](/tips/).
 

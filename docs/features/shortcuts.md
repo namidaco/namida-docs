@@ -20,9 +20,9 @@ Control Namida from the keyboard on desktop.
 | `Ctrl` + `↑` / `↓` | Volume up / down |
 | `Ctrl` + `Space` | Stop after this track `🆕 v8.2.0` |
 | `Ctrl` + `Tab` | Change repeat mode |
-| `Ctrl` + `Shift` + `S` | Toggle shuffle |
+| `Ctrl` + `Shift` + `S` | Shuffle, following the shuffle button mode `🆕 v8.4.0` |
 
-Seeking jumps by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Shuffle is a toggle, turning it on shuffles the queue and turning it off restores the original order. [`🎉 Queue System ↗`](/features/playback/#queue)
+Seeking jumps by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Shuffle follows the mode of the shuffle button: a toggle, Shuffle Next or Shuffle All. [`🎉 Queue System ↗`](/features/playback/#queue)
 
 ### Zoom {#zoom}
 
@@ -65,6 +65,7 @@ Setting a rating writes it to the file tags of the current track.
 | `F11` | Fullscreen |
 | `Esc` | Go back, or leave the mini lyrics window |
 
+After pressing `Tab`, the arrow keys move between items instead, and `Esc` leaves them. `🆕 v8.4.0`
 The mini lyrics window is a small window with the current lyrics line, see [`🎉 System Integration ↗`](/features/system-integration/#mini-lyrics).
 In the fullscreen artwork viewer, `←` / `→` switch between images. `🆕 v8.2.0`
 
@@ -76,8 +77,12 @@ The lyrics editor has its own shortcuts for syncing, see [`🎉 Lyrics Editor Sh
 
 ### Custom Hotkeys {#custom-hotkeys}
 
-The shortcuts above only work while Namida is focused.
-For system wide hotkeys, press the shortcut icon in the title bar (or go to Settings -> About -> Shortcuts), and record your own keys for play/pause, next/previous, seek, volume and stop after this track `🆕 v8.2.0`.
+The shortcuts above only work while Namida is focused, and all of them are listed in the shortcuts dialog (press the shortcut icon in the title bar, or go to Settings -> About -> Shortcuts). It groups them in cards, with a search field. `🆕 v8.4.0`
+
+For system wide hotkeys, press the globe button beside play/pause, next/previous, seek, volume or stop after this track `🆕 v8.2.0`, then press your keys right there. `🆕 v8.4.0`
+
+- Keys already used by another shortcut, or keys that type text (like a plain letter), show a warning and can't be saved.
+- If the system refuses the hotkey (like when another app uses it), the error shows and the old one is kept.
 
 ---
 

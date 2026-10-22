@@ -33,10 +33,11 @@ Not so obvious features you might have missed.
 - While seeking, swipe upwards to cancel. Seeking near the starting edge snaps to the very start.
 - Swipe the miniplayer left or right to change tracks.
   - Works on the fullscreen lyrics and the widescreen player lyrics too. `🆕 v8.2.0`
-- Shuffle is a toggle, it shuffles the queue itself and turning it off brings back the original order. Long press it for a one time Shuffle Next or Shuffle All. [`🎉 Queue System ↗`](/features/playback/#queue)
+- Shuffle can be a toggle (it shuffles the queue itself and turning it off brings back the original order), or a one time Shuffle Next or Shuffle All. Long press it to pick the mode. `🆕 v8.4.0` [`🎉 Queue System ↗`](/features/playback/#queue)
 - The repeat button has its own shuffle flavor, Repeat All Queue (Shuffle) reshuffles the queue each time it reaches the end. [`🎉 Repeat Modes ↗`](/features/playback/#repeat-modes)
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
 - Long press the lyrics to enter fullscreen, and pinch the lyrics to change the font size. On desktop it's `Ctrl` + mouse wheel or `Ctrl` + `+` / `-`, and `Ctrl` + `0` resets it.
+  - In fullscreen, hold a line for a second to copy it. `🆕 v8.4.0`
 - Long press the audio button in the player for a quick menu with the [Audio path](/features/playback/#audio-path) and [Playback Settings](/settings/3-playback-settings/).
 - Long press the video button in the player to control quality or change the audio track for videos.
 - Press the subtitle icon in the video controls to pick a subtitle, the language you pick is remembered for next videos. [`🎉 Subtitles feature ↗`](/features/subtitles/)
@@ -67,6 +68,7 @@ Long press a track (or tap its menu) for more than you might expect:
 - Insert after latest inserted, for stacking multiple tracks one after another.
 - Set Rating, Moods and Tags, they get their own [library pages](/pages/library/#moods-tags-rating). For many tracks at once, use the "Set Rating" icon beside Edit Tags.
 - Set Youtube Link, attach a video to any local track.
+- In Add to Playlist, open a playlist's menu (menu button or long press), then tap its artwork or name at the top to open it, scrolled to the track and highlighted. For YouTube videos, the same menu has "Go to Playlist" option. `🆕 v8.4.0`
 - Add more from this Album, Artist or Folder to queue.
   - Long press the + to configure what gets added. `🆕 v8.2.0`
 
@@ -103,6 +105,7 @@ The track menu has an Advanced section:
 - Tabs with variants (like Tracks: Audio or Folders: Videos) share one slot in the navigation bar, long press it to switch. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
   - Long pressing the YouTube tab jumps to one of its sections. `🆕 v8.2.0`
 - In the playlists page grouped by tags, long press a tag header to select all its playlists. `🆕 v8.2.0`
+- In a playlist's menu, long press Convert to M3U to pick where the file is saved: the default folder, the folder holding its tracks or any folder. `🆕 v8.4.0`
 - In an artist page, long press the icon of the albums, EPs or singles row to sort them. `🆕 v8.2.0`
 - Press the map icon in an artist page to see where that artist sits among the rest of your library. [`📄 Artists Map ↗`](/pages/library/#artists-map)
 - Tapping or long pressing a track's thumbnail can run an action of your choice, like play next or open its info. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#track-tile)
@@ -111,7 +114,7 @@ The track menu has an Advanced section:
 
 - While downloading from YouTube you can edit the file tags and build the output filename with [yt-dlp style formats](/features/youtube/#filename-formats), like `%(title)s [(%(channel)s)]`.
 - This works for single downloads and for batch playlist downloads, where playlist formats like `%(playlist_autonumber)s` number the files for you.
-- In a playlist download page, selecting the output folder automatically marks the videos that are not downloaded yet (as long as you haven't selected any manually). The long press to select in between trick works there too.
+- In a playlist download page, selecting the output folder automatically marks the videos that are not downloaded yet (as long as you haven't selected any manually). The long press to select in between trick works there too. [`🎉 Downloaded Videos ↗`](/features/youtube/#downloaded-videos)
 - In the download sheet, press the "show webm" icon button to show experimental qualities, see also `ALLOW_EXPERIMENTAL_CODECS` & `PREFER_OPUS_FORMAT` in [Flags](/settings/5-youtube-settings/#flags).
 - The flash icon in the downloads page sets how many downloads run at once (up to 10) and how many connections each download uses. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
 - Long press a chapter in the YouTube miniplayer to download only that chapter, or turn on "Split by Chapters" to save every chapter as its own file. [`🎉 Chapter Downloads ↗`](/features/youtube/#chapters-downloads)
@@ -168,7 +171,8 @@ The track menu has an Advanced section:
 
 ### Scrolling {#scrolling}
 
-The scrollbar needs a short hold before it starts dragging. This is intentional, most apps have a big instantly draggable scrollbar (which usually causes many accidental scrolls). Namida keeps the minimal design instead.
+The scrollbar needs a short hold before it starts dragging. This is intentional, most apps have a big instantly draggable scrollbar (which usually causes many accidental scrolls). Namida keeps the minimal design with the low cortisol behaviour instead.
+Prefer the instant drag? Turn on `EASY_SCROLLBAR_GRAB` in the [Extras Flags](/settings/6-extras-settings/#flags). `🆕 v8.4.0`
 
 Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-settings/#flags) to see the letter or date you're at while dragging. `🆕 v7.8.0`
 
@@ -189,6 +193,7 @@ Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-setting
 - Long press or hover on any icon to see a tooltip explaining what it does.
 - Pages that have a docs page show a guide icon in the app bar, it opens the matching page here (even offline `🆕 v8.2.0`).
 - Tag editor and smart playlist fields suggest values from your library as you type.
+- In lists you can reorder (like library tabs, sorters or home sections), the active items stay on top. Tap an item or drag it across them to turn it on or off. `🆕 v8.4.0`
 - Supporter features for free? Yup, if you find the eggs Namida hid around the app, the hints are in About -> Eggs. Try reading the dialog that shows too, and maybe fight it a little. [`📄 Eggs ↗`](/membership/#eggs)
 
 ### Desktop {#desktop-tips}
@@ -199,7 +204,7 @@ Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-setting
 - On a wide window, the maximize icon at the top left of the expanded player opens a two pane layout with lyrics/queue beside the artwork/video. [`🎉 Widescreen Player ↗`](/features/playback/#widescreen-player)
 - Closing the window keeps Namida in the tray, click the tray icon to bring it back. Change this in [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player).
 - `Ctrl` + mouse wheel zooms, works on the lyrics font size and on the cards of a playlist download page. `Ctrl` + `0` resets it. [`🎉 Zoom Shortcuts ↗`](/features/shortcuts/#zoom)
-- Drag files onto the window and drop them on Play, Play Last or More. `🆕 v8.2.0`
+- Drag files onto the window and drop them on Play, Play (Choose) or More. `🆕 v8.2.0`
 
 ### Android {#android-tips}
 

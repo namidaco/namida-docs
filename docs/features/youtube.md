@@ -16,6 +16,12 @@ Namida comes with a full YouTube section, powered by a custom client. Stream, wa
 
 [`⚙️ Configure YouTube ↗`](/settings/5-youtube-settings/)
 
+### YouTube Music {#youtube-music}
+
+`🆕 v8.4.0`
+
+Browse YouTube Music from the Music section of the YouTube tab: moods, charts, new releases, albums and artists. YouTube search can switch to YouTube Music too. [`📄 Music Page ↗`](/pages/youtube/#music)
+
 ### Data Saver {#data-saver}
 
 Namida keeps two Data Saver values (one for Wi-Fi and one for mobile data), so you can be relaxed at home and strict outside. Three levels each:
@@ -93,6 +99,7 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Output filename builder, similar to yt-dlp format, see [all formats](#filename-formats) below.
 - Both work for single downloads and batch playlist downloads, where playlist formats number the files for you.
 - Default download folder, changeable per download.
+  - Pick a subfolder right in the download sheet, next to the output type. `🆕 v8.4.0`
 - Download notifications `💻 Windows+Linux only`.
 - Downloads that fail because there is no connection resume on their own once it is back, thumbnails retry the same way. `🆕 v7.0.0`
 - Parallel downloads, up to 10 videos at a time (4 by default). Set it with the flash icon in the [`📄 Downloads page ↗`](/pages/youtube/#downloads). `🆕 v7.1.0`
@@ -105,6 +112,23 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 
 The extra file options (Split by Chapters, Remove Sponsor Segments, Keep cached versions and more) are in the Edit Tags sheet, press the pencil icon beside the video title in the download sheet.
 For playlists, press the gear button in the playlist download page.
+
+#### Downloaded Videos {#downloaded-videos}
+
+A downloaded video shows a tick on the [miniplayer](#miniplayer) download button, pressing it still opens the download sheet if you want another copy. In a playlist download page, the header counts the videos already in the chosen folder, and the rest get selected for you. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
+
+- Files deleted outside Namida show as not downloaded again, checked when you come back to the app or open the downloads page. `🆕 v8.4.0`
+- Removing a task without deleting its file keeps the video marked as downloaded, as long as the file is in your library ("Add audio to local library"). `🆕 v8.4.0`
+- A file with the same name in the folder is skipped, or replaced if "Override old files in the same folder" is on (the gear button of a playlist download page). The download sheet warns about it before you start.
+- In the downloads page, a downloaded task can be renamed (the file too), edited and downloaded again, or removed with or without its file.
+
+With the [cache](#caching):
+
+- Videos you already streamed in the same quality are copied from the cache instead of being downloaded again.
+- "Keep cached versions" also keeps a copy of the download in the cache.
+- A video that became private or deleted can still be downloaded from its cached copy, and its info is saved as a json file next to it.
+
+Your downloaded audio (or any library track linked to the video) plays instead of streaming while in Audio Only mode or offline. [`🎉 Streaming ↗`](#streaming)
 
 #### Removing Sponsor Segments {#sponsorblock-downloads}
 
@@ -257,6 +281,7 @@ Channel custom emojis, voice replies (shown as their transcript) and the "commen
 
 You can import your watch history from YouTube takeout files (both json and html formats work). It gets merged into Namida history like any local listen.
 The same takeout can also bring your favourites (liked videos) and playlists (as Namida YouTube playlists), you choose what gets imported. `🆕 v8.2.0`
+Subscriptions can come from the same takeout too, they become your subscribed channels. `🆕 v8.4.0`
 Your playlists and subscribed channels can be imported from takeout too, right in the [`📄 YouTube Channels Page ↗`](/pages/youtube/#channels) & [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists). [`⚙️ Configure History Import ↗`](/settings/7-backup-restore-settings/#import-data)
 
 ::: callout tip

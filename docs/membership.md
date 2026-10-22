@@ -40,6 +40,7 @@ Everything else is free, here is a taste of it.
 **YouTube, no account needed** [`🎉 YouTube feature ↗`](/features/youtube/)
 
 - Streaming in the best quality, audio only mode, data saver and radio mixes.
+- YouTube Music, with its moods, charts, new releases, albums and artists. `🆕 v8.4.0`
 - Downloads of any video, audio or whole playlist, with tags, filename formats, splitting by chapters, removing sponsor segments and multiple connections.
 - Caching for offline playback, with a priority system that keeps what matters to you.
 - The full video player, with gestures, fullscreen, subtitles, chapters and picture-in-picture.

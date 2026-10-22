@@ -89,9 +89,23 @@ A background behind the expanded player, fading in as you expand it:
 - **None**, the usual player.
 - **Artwork**, the current artwork or video thumbnail, crossfading on each track change.
 - **Custom**, an image of your choice (needs the `BACKGROUND_IMAGES` [flag](/settings/6-extras-settings/#flags)).
+- **Mesh gradient**, **Ambient lights** and **Bokeh**, animated backgrounds made from the artwork colors. `🆕 v8.4.0`
 
-Then tune it with Blur, Dim Intensity, Vignette (faded edges) and Animated (the image gently zooms with the music).
+Then tune it with Blur, Dim Intensity, Vignette (faded edges) and Animated (the image gently zooms with the music, ambient lights and bokeh glow with it).
 "Color when expanded" keeps the player's color tint while expanded, turn it off to let the background show as it is.
+
+### Lyrics Background {#lyrics-background}
+
+`🆕 v8.4.0`
+
+The background of fullscreen lyrics, set from Lyrics (Fullscreen) in Miniplayer Customization:
+
+- **Artwork**, the blurred artwork.
+- **Ambient lights** (default) or **Bokeh**, animated with the music. 
+  - **Always** on: show the effect all the time.
+  - **Always** off: show the effect only when a track has no lyrics, tracks with lyrics show the **Artwork** background (to reduce distraction).
+
+Tracks without lyrics can show a visualizer there too: Bars, Waves or Mirrored bars.
 
 ### Wallpaper {#wallpaper}
 
@@ -108,7 +122,7 @@ Supporter extras are marked with a crown, they need a membership or 1 [egg](/mem
 
 Everything else is free.
 
-Background, overlay, player background and wallpaper are kept per device, visualizers are synced. [`🎉 Sync feature ↗`](/features/sync/)
+Background, overlay, player background, lyrics background and wallpaper are kept per device, visualizers are synced (except the lyrics one). [`🎉 Sync feature ↗`](/features/sync/)
 
 ---
 

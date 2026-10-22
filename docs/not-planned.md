@@ -38,10 +38,6 @@ Same story as Spotify. The only focus is local + YouTube, keeping them both poli
 Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scrobbler), it works with any player and has lots of features.
 It reads the media notification, which is enough for most. Namida also shares the MusicBrainz ids from your tags (Android), so scrobbles can match the exact recording instead of a guess from title and artist, once PanoScrobbler supports reading them. `🆕 v8.2.0` [`🎉 Automation & Other Apps ↗`](/features/automation/#what-apps-can-do)
 
-### Discord Rich Presence (RPC) {#discord-rpc}
-
-Use [Kizzy](https://github.com/dead8309/Kizzy) on Android, or [Music Presence](https://github.com/ungive/discord-music-presence) on desktop. They work with any player.
-
 ### CUE Sheets {#cue-sheets}
 
 Albums stored as one big file with a `.cue` sheet show as a single track. In Namida, each track is its own file, and most features are built around that (tag editing, lyrics files, deleting, sharing, waveform). A track that is only a part of a bigger file would only work halfway in most of them.

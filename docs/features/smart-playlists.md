@@ -32,7 +32,7 @@ Sources come in 4 types: Text, Number, Date and Condition.
 
 ### Text Rules {#text-rules}
 
-**Sources:** Title, Album, Artist, Album Artist, Composer, Genre, Style, Comment, Description, Synopsis, Language, Record Label, Release Type, Format, Channels, Lyrics, Moods, Tags, Playlist `🆕 v7.8.0`, Playlist tags `🆕 v7.8.0`, Youtube Link, Youtube ID, File Name, Filename without extension, File Full Path, Folder Name, Folder Path and Extension.
+**Sources:** Title, Album, Artist, Album Artist, Composer, Genre, Style, Comment, Description, Synopsis, Language, Record Label, Release Type, Key `🆕 v8.4.0`, Format, Channels, Lyrics, Moods, Tags, Playlist `🆕 v7.8.0`, Playlist tags `🆕 v7.8.0`, Youtube Link, Youtube ID, File Name, Filename without extension, File Full Path, Folder Name, Folder Path and Extension.
 
 **Filters:**
 
@@ -69,7 +69,7 @@ Good to know:
 | Duration | seconds |
 | Size | bytes, the slider works in MB |
 | Bitrate | kb/s (`320`) |
-| Sample Rate, Bit Depth, BPM | as stored in the file |
+| Sample Rate, Bit Depth, BPM | as stored in the file, tracks without a BPM count as 0 `🆕 v8.4.0` |
 | Track/Disc Number & Total | as stored in the tags |
 | Playlists Count `🆕 v7.8.0` | how many playlists the track is in |
 | Total Tracks `🆕 v7.8.0` | how many tracks the album, artist, genre or folder has, see [Per](#per) |
@@ -145,7 +145,7 @@ Random (Daily) keeps the same random order for the whole day, it's in every trac
 
 ### Smart Search {#smart-search}
 
-The same rules work as a one time search, press the filter icon at the end of the chips row in the search page. Long press it to edit the rules, the add icon there `🆕 v8.2.0` saves them as a new smart playlist.
+The same rules work as a one time search, press the Smart Search button (magic pen icon) at the end of the chips row in the search page. Long press it to edit the rules, the add icon there `🆕 v8.2.0` saves them as a new smart playlist.
 
 In album, artist and other media pages, long press the filter icon to start one filled with that media.
 

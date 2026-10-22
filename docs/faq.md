@@ -105,7 +105,7 @@ No, and not planned. Use [PanoScrobbler](https://github.com/kawaiiDango/pano-scr
 
 ### Is there a Discord Rich Presence (RPC) feature? {#discord-rpc}
 
-No, and not planned. There are apps that work with any player, see [Not Planned](/not-planned/#discord-rpc).
+Yes, turn on Discord Rich Presence in Extras settings. `🆕 v8.4.0` [`🎉 Discord Rich Presence ↗`](/features/system-integration/#discord)
 
 ### Can I use my AutoEq or Equalizer APO settings? {#equalizer}
 
