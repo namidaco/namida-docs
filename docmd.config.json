@@ -288,7 +288,7 @@
   "plugins": {
     "ai": {
       "assistant": true,
-      "projectId": "docmd_sxy4har0mt4u6z8j",
+      "projectId": "docmd_lq0y3qjjmvn47z92",
       "greeting": "How can I help with these docs today?",
       "placeholder": "Ask AI a question...",
       "suggestions": [
@@ -310,6 +310,7 @@
       "defaultDescription": "Namida documentation. A beautiful and feature-rich music & video player with YouTube support."
     },
     "./plugins/docs-graph": {},
-    "./plugins/docs-shots": {}
+    "./plugins/docs-shots": {},
+    "./plugins/ask-ai": {}
   }
 }
