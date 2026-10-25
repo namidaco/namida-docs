@@ -36,6 +36,17 @@ Moving some sliders to the very start or end turns the option always on or alway
 
 The tiles at the top of the settings page are shortcuts: Add Folder, Refresh Library, [Sync](/features/sync/), [Listening party](/features/party/), [Sleep timer](/features/playback/#sleep-timer) and [Sound Control](/features/playback/#sound-control). The sleep timer tile shows what's left while it runs. `🆕 v7.4.0`
 
+### Settings Icon {#settings-icon}
+
+The settings icon at the top of the app can show a few small signs:
+
+- **Radar icon**, this device is running a Sync server, so other devices can find it. Keeping it running might use more battery.
+- **Green dot** (top right), a device is connected through Sync.
+- **Ring around the icon**, Sync is sending or receiving data. It fills up as the transfer goes. `🆕 v8.5.0`
+- **Purple dot** (bottom right), your Discord status is showing what you're listening to.
+
+The Sync quick tile shows the same Sync signs, plus a gray dot when a device that connected earlier got disconnected. [`🎉 Sync feature ↗`](/features/sync/) [`🎉 Discord Rich Presence ↗`](/features/system-integration/#discord)
+
 ---
 
 <sub>Author: @MSOB7YY<br>Writer: @claude</sub>

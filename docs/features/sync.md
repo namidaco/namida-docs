@@ -17,6 +17,8 @@ One device starts a server, other devices on the same network discover it and re
 
 Accepted devices are paired and verify each other on every connection, so another device can't pretend to be one of yours (devices accepted on older versions need accepting once again). `🆕 v8.2.0`
 
+The [settings icon](/settings/#settings-icon) and the [Sync quick tile](/settings/#quick-tiles) show the Sync state (server running, a device connected or data being sent). The tile also shows a gray dot when a device that connected earlier got disconnected.
+
 ### What Gets Synced {#data}
 
 You choose the data to send & receive, every item can be turned on and off on its own.

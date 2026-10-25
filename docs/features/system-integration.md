@@ -65,7 +65,7 @@ Shows what you're listening to on your Discord profile, with the title, artist a
 - **Desktop**, works through the Discord app, which needs to be running. It uses the account signed in there.
 - **Android**, the first time you turn it on, Discord asks you to sign in and allow Namida to set your status. Sign out from the same tile.
 
-A small purple dot on the settings icon shows while your status is shared. [`⚙️ Configure Discord Rich Presence ↗`](/settings/6-extras-settings/#integrations)
+A small purple dot on the [settings icon](/settings/#settings-icon) shows while your status is shared. [`⚙️ Configure Discord Rich Presence ↗`](/settings/6-extras-settings/#integrations)
 
 ### Home Screen Widget {#home-widget}
 
