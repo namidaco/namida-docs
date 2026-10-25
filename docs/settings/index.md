@@ -9,6 +9,7 @@ Everything you can configure in Namida, in the same order as the in-app settings
 
 ::: callout info
 Some settings only work on specific platforms or Android versions. They are labeled like `💻 Android 12+ only`.
+What iOS and macOS don't have yet is listed in [Installation](/installation/#ios-macos) instead.
 :::
 
 ::: callout tip

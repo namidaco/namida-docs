@@ -51,7 +51,7 @@ Content...
 
 Two kinds of inline code chips are used:
 
-- **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `availability:` (`NamidaFeaturesAvailablity`) of the setting's entry in `lib/ui/widgets/settings/`.
+- **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `availability:` (`NamidaFeaturesAvailablity`) of the setting's entry in `lib/ui/widgets/settings/`. A feature missing only on iOS or macOS gets no chip, list it in the iOS & macOS section of `docs/installation.md` instead.
 - **Related link chip**: sections link their related setting/feature/page/guide with a clickable chip placed at the END of the line or the end of the section, never right under the header: ``[`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)``. More than one chip is fine when applicable. Keep a "Related Settings" list at the bottom of feature pages too.
 
 Link icons, always include the type in the name:

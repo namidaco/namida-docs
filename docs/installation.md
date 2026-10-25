@@ -5,7 +5,9 @@ description: "How to install Namida on Android, Windows and Linux"
 
 # Installation
 
-Namida runs on Android, Windows and Linux. There are two channels:
+Namida runs on Android, Windows and Linux. iOS and macOS are in beta, see [iOS & macOS](#ios-macos) for what they don't have yet.
+
+There are two channels:
 
 - [Stable releases](https://github.com/namidaco/namida/releases), for everyone.
 - [Beta releases](https://github.com/namidaco/namida-snapshots/releases), new features and fixes are released here first. If YouTube or anything else stops working, try the latest beta.
@@ -145,6 +147,34 @@ flatpak uninstall --user com.msob7y.namida
 ```
 
 Nix (Home Manager) is available at [namida-nix](https://codeberg.org/iWisp360/namida-nix).
+
+## iOS & macOS {#ios-macos}
+
+iOS and macOS are new and only have beta builds for now.
+
+Features that only work on some platforms are labeled like `💻 Android only`. Features that work everywhere except iOS or macOS have no label, so they are listed here instead.
+
+#### iOS {#ios-differences}
+
+Not available on iOS:
+
+- The [output device](/features/playback/#output-device) picker. Pick the output from the iOS Control Center instead.
+- [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player).
+- Sharing to Namida from other apps. Opening files with Namida still works.
+- CarPlay. It needs a permission that only Apple can grant.
+
+Works differently on iOS:
+
+- [Sync](/features/sync/) and [Listening Party](/features/party/) pause while Namida is in the background and not playing, because iOS suspends the app.
+- [Downloads](/features/youtube/#downloads) keep going for a short time after you leave the app. On iOS 26+ they continue until they finish, and iOS shows their progress.
+- Music in Namida's folder in the Files app (under On My iPhone) is scanned by default. Other folders are added through the system folder picker. [`⚙️ Configure Add Folder ↗`](/settings/2-indexer-settings/#add-folder)
+
+#### macOS {#macos-differences}
+
+Works differently on macOS:
+
+- Every shortcut that uses `Ctrl` on Windows and Linux uses `Cmd` instead. [`🎉 Shortcuts feature ↗`](/features/shortcuts/)
+- The [tray](/features/system-integration/#tray) icon is in the menu bar, and clicking it opens its menu.
 
 ---
 
