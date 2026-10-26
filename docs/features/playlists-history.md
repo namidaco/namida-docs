@@ -94,9 +94,13 @@ Meet the tracks you listened to around this time, but N years ago.
 
 ### Smort Tracks Generation {#generation}
 
-Generate tracks related to the current one (typically the ones you often listened to in the same period), based on your history. You can also generate from a time range, moods, ratings, similar release date, or randomly.
+Generate tracks for your queue:
 
-Similar Tracks matches the current track by genre, style, mood, artist, tempo, key and more, pick what to match by from its filter button. `🆕 v8.2.0`
+- From your history (the tracks you usually play with the current one, discovered around the same time, etc).
+- Similar Tracks, matching the current one by tags (genre, mood, artist, tempo, key, etc). Pick what to match by from its filter button. `🆕 v8.2.0`
+- By time range, release date, moods, ratings, random picks, etc.
+
+The Home page has ready made mixes from your history too. [`📄 Home Mixes ↗`](/pages/library/#home)
 
 ### History Import {#import}
 

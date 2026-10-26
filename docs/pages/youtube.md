@@ -26,6 +26,7 @@ Navigating:
 ### Home {#home}
 
 Your YouTube feed, with notifications and subscriptions when [signed in](/settings/5-youtube-settings/#accounts). Your account's home feed needs a membership. [`📄 Membership ↗`](/membership/#benefits)
+The Namida home is built from your Namida history instead, with the same [mixes](/pages/library/#home) as the library Home.
 In notifications, you can play all unread videos at once, and comment notifications open the comment with its replies. If new notifications don't show up, switch the extractor from the button at the top.
 Open a notification's menu and press "More" to hide it, or to turn off notifications from that channel (this one needs a membership). `🆕 v7.4.0`
 

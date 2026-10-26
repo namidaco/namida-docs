@@ -22,7 +22,7 @@ A persistent and reliable queue system, your sessions are saved for later usage.
 - Search inside the queue with the search icon at its top, tapping a result jumps to it. `🆕 v8.4.0`
 - With the `ASK_BEFORE_REPLACING_QUEUE` [flag](/settings/6-extras-settings/#flags), playing something new asks whether to replace the queue, keep it, or add the new tracks next, after or last. The "Play (Choose)" gesture action always asks. `🆕 v8.2.0`
 - Play modes when playing from search: selected track only, search results, album, first artist or first genre.
-- Recommended & Similar Release Date, add tracks you usually listen to with the current one, or released around the same time.
+- Recommended & Similar Release Date, add tracks you usually listen to with the current one, or released around the same time. [`🎉 Tracks Generation ↗`](/features/playlists-history/#generation)
 
 The queue's bottom row packs more than it looks:
 
