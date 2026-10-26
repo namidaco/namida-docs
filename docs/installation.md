@@ -34,6 +34,8 @@ Every release has an APK per architecture, beta adds a clone variant on top.
 You can install beta on top of stable and vice versa, your data stays as is. The clone builds are the only separate app.
 :::
 
+See [App Size](/app-size/) for a breakdown of what the APK contains.
+
 #### Installing {#android-install}
 
 1. Download the APK from the release page.

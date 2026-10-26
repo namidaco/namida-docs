@@ -278,6 +278,7 @@
     { "title": "Not Planned", "path": "/not-planned/", "icon": "ban" },
     { "title": "Permissions", "path": "/permissions/", "icon": "shield-check" },
     { "title": "Storage Paths", "path": "/storage-paths/", "icon": "folder-tree" },
+    { "title": "App Size", "path": "/app-size/", "icon": "hard-drive" },
     {
       "title": "GitHub",
       "path": "https://github.com/namidaco/namida",
