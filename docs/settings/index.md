@@ -43,9 +43,9 @@ The settings icon at the top of the app can show a few small signs:
 - **Radar icon**, this device is running a Sync server, so other devices can find it. Keeping it running might use more battery.
 - **Green dot** (top right), a device is connected through Sync.
 - **Ring around the icon**, Sync is sending or receiving data. It fills up as the transfer goes. `🆕 v8.5.0`
-- **Purple dot** (bottom right), your Discord status is showing what you're listening to.
+- **Purple dot** (bottom left), your Discord status is showing what you're listening to.
 
-The Sync quick tile shows the same Sync signs, plus a gray dot when a device that connected earlier got disconnected. [`🎉 Sync feature ↗`](/features/sync/) [`🎉 Discord Rich Presence ↗`](/features/system-integration/#discord)
+The settings tiles show the same signs, so you can find where each one comes from. The Extras tile shows the purple dot, and the Backup & Restore tile shows the Sync signs. The Sync quick tile and the Sync tile (inside Backup & Restore) also show a gray dot when a device that connected earlier got disconnected. [`🎉 Sync feature ↗`](/features/sync/) [`🎉 Discord Rich Presence ↗`](/features/system-integration/#discord)
 
 ---
 
