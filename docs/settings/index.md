@@ -34,7 +34,7 @@ Moving some sliders to the very start or end turns the option always on or alway
 
 ### Quick Tiles {#quick-tiles}
 
-The tiles at the top of the settings page are shortcuts: Add Folder, Refresh Library, [Sync](/features/sync/), [Listening party](/features/party/), [Sleep timer](/features/playback/#sleep-timer) and [Sound Control](/features/playback/#sound-control). The sleep timer tile shows what's left while it runs. `🆕 v7.4.0`
+The tiles at the top of the settings page are shortcuts (Add Folder / Refresh Library / [Sync](/features/sync/) / [Listening party](/features/party/) / [Sleep timer](/features/playback/#sleep-timer) / [Sound Control](/features/playback/#sound-control)). The sleep timer tile shows what's left while it runs. `🆕 v7.4.0`
 
 ### Settings Icon {#settings-icon}
 

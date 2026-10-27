@@ -91,7 +91,7 @@ Example, tracks you played at least 10 times last summer:
 
 Number rules have a **Per** option (Track by default). Set it to Album, Artist, Genre, Folder and more, and the rule checks the whole album or artist instead (like "Total Listens per Artist"). Every track of a matching one gets in.
 
-The **Calculation** turns their values into one number: Sum, Average, Minimum or Maximum. Unknown values (like a missing rating) are skipped.
+The **Calculation** turns their values into one number (Sum / Average / Minimum / Maximum). Unknown values (like a missing rating) are skipped.
 
 Examples:
 
@@ -145,7 +145,8 @@ Random (Daily) keeps the same random order for the whole day, it's in every trac
 
 ### Smart Search {#smart-search}
 
-The same rules work as a one time search, press the Smart Search button (magic pen icon) at the end of the chips row in the search page. Long press it to edit the rules, the add icon there `🆕 v8.2.0` saves them as a new smart playlist.
+The same rules work as a one time search, press the Smart Search button (magic pen icon) at the end of the chips row in the search page.
+Long press it to edit the rules, the add icon there `🆕 v8.2.0` saves them as a new smart playlist.
 
 In album, artist and other media pages, long press the filter icon to start one filled with that media.
 

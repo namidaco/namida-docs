@@ -16,7 +16,8 @@ Long press the lyrics button in the player (right click on desktop) to open the 
 - Press the edit icon on any lyrics to edit them (synced or plain, local, online or embedded).
 - Press Add to write new lyrics from scratch.
 
-The editor syncs against the track it was opened for. If something else is playing, the Sync button shows Play instead, which plays the track next in your queue. On a wide window, the controls sit next to the lines instead of under them. [`🎉 Lyrics Picker ↗`](/features/playback/#lyrics-picker)
+The editor syncs against the track it was opened for. If something else is playing, the Sync button shows Play instead, which plays the track next in your queue.
+On a wide window, the controls sit next to the lines instead of under them. [`🎉 Lyrics Picker ↗`](/features/playback/#lyrics-picker)
 
 ### Getting the Text In {#text}
 
@@ -31,7 +32,8 @@ Pasting synced lyrics (LRC, or subtitles like SRT) replaces everything instead, 
 2. Play the track and press Sync when the line starts. The line gets the current time and the next line gets selected.
 3. Keep going until the end, then press Save.
 
-Tapping a line also jumps to its start. The line being played is highlighted, and the list follows it (after you scroll it yourself, it waits a few seconds before following again).
+Tapping a line also jumps to its start.
+The line being played is highlighted, and the list follows it (after you scroll it yourself, it waits a few seconds before following again).
 Instrumental breaks are empty lines (shown as ♪). Sync them where the singing stops, so the lyrics hide during the break. To add one, long press a line and press Add.
 
 ::: callout tip
@@ -70,9 +72,10 @@ The line dialog has:
 - Start, the time as `mm:ss.xx`. Leave it empty to remove the timing. A new time moves the line to its place in time order.
 - Text.
 - Translation, shown under the line in the lyrics view.
-- Singer, none, `v1` and `v2` for duets, or `bg` for background vocals. Background vocals are only saved as such when the lyrics have word by word sync, otherwise they are saved as normal lines.
+- Singer (none / `v1` and `v2` for duets / `bg` for background vocals). Background vocals are only saved as such when the lyrics have word by word sync, otherwise they are saved as normal lines.
 
-Long press a line for Play, Edit, Add (a new line under it), Clear (removes its timing) and Delete. Drag the handle next to the line number to reorder lines.
+Long press a line for more options (play / edit / add a line under it / clear its timing / delete).
+Drag the handle next to the line number to reorder lines.
 
 ### Timeline {#timeline}
 
@@ -90,7 +93,7 @@ The thin lane at the very bottom shows where the vocal range gets louder, new sy
 - Word by word, see [above](#sync-words).
 - -2s / +2s.
 - Play / Pause, pausing is instant here (no fade).
-- Speed, cycles 1x, 0.75x and 0.5x. Slower helps with fast lyrics, and your normal speed comes back when you leave the editor.
+- Speed, cycles 1x / 0.75x / 0.5x. Slower helps with fast lyrics, and your normal speed comes back when you leave the editor.
 
 ### Warnings {#warnings}
 
@@ -126,7 +129,8 @@ Discard (from the ⋮ menu) goes back to the lyrics you opened, after asking. Sa
 
 ### Saving {#saving}
 
-Press Save to save the lyrics in your [lyrics save location](/settings/6-extras-settings/#lyrics-save-location), they show in the player right away. For local tracks, Save also offers Embed, which writes them into the track's lyrics tag.
+Press Save to save the lyrics in your [lyrics save location](/settings/6-extras-settings/#lyrics-save-location), they show in the player right away.
+For local tracks, Save also offers Embed, which writes them into the track's lyrics tag.
 
 - Lines without timing are listed first, and left out of the saved lyrics.
 - If no line has a timing, the lyrics are saved as plain lyrics.

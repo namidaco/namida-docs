@@ -23,27 +23,27 @@ Opening it from inside Namida applies your changes to every widget you already p
 
 #### Appearance {#appearance}
 
-- Theme, System, Light or Dark.
+- Theme (System / Light / Dark).
 - Colors from artwork, the widget follows the current track colors.
-- Background, Solid, Gradient or Blurred art.
-- Artwork effect, None, Glow or Shadow.
+- Background (Solid / Gradient / Blurred art).
+- Artwork effect (None / Glow / Shadow).
 - Background opacity, corner radius and artwork rounding.
 
 #### Layout {#layout}
 
-- Arrangement, Auto, Row, Card or Compact. Auto picks the one that fits the current size.
+- Arrangement (Auto / Row / Card / Compact). Auto picks the one that fits the current size.
 - Content size and artwork size.
 - Show or hide the artwork, the title and the subtitle.
 
 #### Controls {#controls}
 
-Choose which buttons appear: Favourite, Shuffle, Previous, Play / Pause, Next, Repeat mode and Stop.
+Choose which buttons appear (Favourite / Shuffle / Previous / Play/Pause / Next / Repeat mode / Stop).
 
 Shuffle and Repeat mode show their current state, they look dimmed while they are off. [`🎉 Queue System ↗`](/features/playback/#queue)
 
 #### Tap Actions {#tap-actions}
 
-Set what tapping the widget does, and what tapping the artwork does. Both can Open app, Play / Pause, or do nothing.
+Set what tapping the widget does, and what tapping the artwork does (Open app / Play/Pause / nothing).
 
 ::: callout info
 Press Reset at the bottom to go back to the default look.

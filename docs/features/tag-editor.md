@@ -13,7 +13,7 @@ Edit title, artist, album, genre, year, lyrics, comment, rating, moods and more,
 
 Fields the file holds as separate values (like several artists) show joined with `; `, and stay separate values when saved. `🆕 v8.2.0`
 
-BPM and Key fields can be added from the pencil icon (Tag Fields). BPM has ×2 and ÷2 buttons, and both can be filled by analyzing the track with the magic pen button. `🆕 v8.4.0`
+Add BPM and Key fields from the pencil icon (Tag Fields). BPM has ×2 and ÷2 buttons, and the magic pen button fills both by analyzing the track. `🆕 v8.4.0`
 
 ### Multiple Tracks Editing {#multiple}
 
@@ -24,12 +24,12 @@ Select multiple tracks and edit them at once (unchanged fields remain untouched)
 `🆕 v7.4.0`
 
 - Values shared by all tracks are filled in already. When tracks have different values, the field shows `<Multiple values>` and stays untouched unless you type something.
-- Each field has a menu on its right: Undo, Clear, Find & replace, and the list of existing values with their track counts (tap one to set it for all tracks).
+- Each field has a menu on its right (Undo / Clear / Find & replace / existing values with their track counts). Tap a value to set it for all tracks.
   - Fill empty only, writes the new value only to tracks where that field is empty. `🆕 v8.4.0`
-- Find & replace uses the same text filters as [smart playlists](/features/smart-playlists/#text-rules) (contains, starts with, regex and more), with a Match case switch and a live preview of what changes.
+- Find & replace uses the same text filters as [smart playlists](/features/smart-playlists/#text-rules) (contains / starts with / regex, etc), with a Match case switch and a live preview of what changes.
 - Some fields that are empty in all tracks (like Lyricist or Record Label) are grouped under "More".
 - Editing from an album gives an "Auto track numbers" switch, it numbers tracks by their current order, per disc.
-- Moods, tags and rating are edited at the bottom. Values that only some tracks have show how many tracks have them, tap to add them to all tracks, remove them, or keep them as they are.
+- Moods, tags and rating are edited at the bottom. Values that only some tracks have show how many tracks have them, tap one for more options (add to all tracks / remove / keep as is).
 - Before saving, a summary lists every change and how many tracks it affects.
 
 Moods, tags and rating can also be set for many tracks without opening the tag editor, press the "Set Rating" icon at the end of the Edit Tags row in the tracks menu.
@@ -38,7 +38,8 @@ Moods, tags and rating can also be set for many tracks without opening the tag e
 
 `🆕 v7.0.0`
 
-Fields like album, artist, album artist, composer, genre, style, moods and tags suggest values from your library as you type (so names stay consistent). Fields that hold multiple values keep suggesting after each separator. The same suggestions show up while building [`🎉 Smart Playlists ↗`](/features/smart-playlists/) rules.
+Fields like album, artist, album artist, composer, genre, style, moods and tags suggest values from your library as you type (so names stay consistent). Fields that hold multiple values keep suggesting after each separator.
+The same suggestions show up while building [`🎉 Smart Playlists ↗`](/features/smart-playlists/) rules.
 
 Language suggests every language, the ones written in the script of the lyrics or title first. `🆕 v8.2.0`
 

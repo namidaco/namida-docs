@@ -13,7 +13,8 @@ Sync is a new feature and still evolving, both devices must run the same Namida 
 
 ### How It Works {#how}
 
-One device starts a server, other devices on the same network discover it and request to connect. The server accepts, rejects or blocks each device. Once connected, you can send and receive data with that device, or all devices at once. [`⚙️ Open Sync ↗`](/settings/7-backup-restore-settings/#sync) [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
+One device starts a server, other devices on the same network discover it and request to connect. The server accepts, rejects or blocks each device.
+Once connected, you can send and receive data with that device, or all devices at once. [`⚙️ Open Sync ↗`](/settings/7-backup-restore-settings/#sync) [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
 
 Accepted devices are paired and verify each other on every connection, so another device can't pretend to be one of yours (devices accepted on older versions need accepting once again). `🆕 v8.2.0`
 
@@ -73,7 +74,7 @@ Set an auto sync interval and let devices sync on their own whenever they see ea
 
 ### Devices {#devices}
 
-Devices show up by the name they broadcast. Rename yours while the server is running, press the edit icon beside it and the new name is broadcast right away.
+Devices show up by the name they broadcast. To rename yours, press the edit icon beside it while the server is running, the new name is broadcast right away.
 
 Blocking a device (instead of just rejecting it) stops it from reaching you or asking again. Blocked devices are listed in their own section, with an unblock button.
 

@@ -9,7 +9,7 @@ Caches, fixes and performance.
 
 ### Performance Mode {#performance-mode}
 
-One switch for the heavy visual settings: High performance, Balanced, Good looking, or Custom.
+One switch for the heavy visual settings (High performance / Balanced / Good looking / Custom).
 It controls things like auto coloring, blur, glow and parallax at once.
 
 It also holds the [effects and visualizer](/features/effects/) settings, High performance turns them off. `🆕 v7.8.0`
@@ -32,7 +32,8 @@ The files in the selected folder are replaced.
 
 ### Compress Images {#compress-images}
 
-Compress artworks and cached images to save storage, you choose the compression percentage. Moderate values save a lot with little visible loss. The audio files are untouched. "Keep file dates" keeps the original dates on the compressed images.
+Compress artworks and cached images to save storage, you choose the compression percentage. Moderate values save a lot with little visible loss. The audio files are untouched.
+"Keep file dates" keeps the original dates on the compressed images.
 Animated images are skipped and transparency is kept. `🆕 v8.2.0`
 
 ::: callout info
@@ -52,7 +53,8 @@ Each limit is set from the wheel on its [Clear](#clear-caches) tile. `🆕 v8.2.
 | Audio | 4 GB | 12 GB |
 | Video | 8 GB | 24 GB |
 
-Each cached video has a priority: VIP, High, Normal, Low or Disable. Cleaning starts from the bottom and never touches VIP items. Change it from the video's menu, see [Caching & Offline Playback](/features/youtube/#caching).
+Each cached video has a priority (VIP / High / Normal / Low / Disable). Cleaning starts from the bottom and never touches VIP items.
+Change it from the video's menu, see [Caching & Offline Playback](/features/youtube/#caching).
 
 Server tracks you cached yourself are never deleted automatically either, but they still count towards the limit. [`🎉 Offline Caching ↗`](/features/media-servers/#offline-caching)
 
@@ -64,7 +66,7 @@ Clear server, image, audio or video cache. Each tile shows the current size, and
 | --- | --- |
 | Server `🆕 v7.4.0` | The tracks you cached yourself (not selected by default), the other streamed files, and unfinished downloads. |
 | Image | Each image folder: track artworks, video thumbnails, artist and album images, YouTube thumbnails and channel images. |
-| Audio | Everything, or press Choose to pick single items, which can be sorted by size, oldest watch or total listens. |
+| Audio | Everything, or press Choose to pick single items, which can be sorted by size / oldest watch / total listens. |
 | Video | Same as audio. |
 
 When choosing audio or video items, you can also select everything of a priority at once `🆕 v7.4.0`, unfinished downloads, or files already in your local library.

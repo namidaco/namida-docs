@@ -10,7 +10,8 @@ description: "Listen to the same queue with other people, in sync"
 Start a room, share the code, and everyone hears the same track at the same moment. Works over the internet or on your local network.
 
 ::: callout info
-Listening parties are new and still evolving. If joining fails with a version mismatch, update Namida on both devices.
+Listening parties are new and still evolving.
+If joining fails with a version mismatch, update Namida on both devices.
 :::
 
 ### How It Works {#how}
@@ -25,7 +26,8 @@ While you are in a party, a people icon shows in the app bar and in the queue, p
 
 ### Starting a Party {#create}
 
-Pick a name, or leave it empty to use yours, then create. You get an 8 character code, an invite link and a QR code to share. The share button sends the link along with what you are listening to.
+Pick a name, or leave it empty to use yours, then create.
+You get an 8 character code, an invite link and a QR code to share. The share button sends the link along with what you are listening to.
 
 Options while creating:
 
@@ -43,7 +45,8 @@ Joining is always free, and hosting on your own device or your own server needs 
 
 ### Joining {#join}
 
-Paste an invite link or type the code, with the password if the room has one. On Android, opening an invite link opens the app and joins the room right away.
+Paste an invite link or type the code, with the password if the room has one.
+On Android, opening an invite link opens the app and joins the room right away.
 
 ::: callout info
 A code alone only works for rooms on the Namida server. Rooms on your local network or on a custom server need the invite link (since it carries the address), unless a local room is public and shows in the list.
@@ -62,10 +65,11 @@ A code alone only works for rooms on the Namida server. Rooms on your local netw
 
 Only the host changes the room options, accepts join requests, makes admins and unbans people.
 
-The host picks what guests are allowed to do: control playback, add to queue, edit queue and chat. Each one is a separate switch, by default guests can add to the queue and chat. Guests can always remove or move the tracks they added themselves.
+The host picks what guests are allowed to do (control playback / add to queue / edit queue / chat). Each one is a separate switch, by default guests can add to the queue and chat. Guests can always remove or move the tracks they added themselves.
 
-Leaving as the host gives two choices, leave or close the party for everyone.
-If the host leaves or loses connection, everyone sees that the host is offline, and after a minute an admin (or the member who has been there the longest) becomes the host and the party continues. A party hosted on your own device closes once you leave.
+Leaving as the host gives two choices (leave / close the party for everyone).
+If the host leaves or loses connection, everyone sees that the host is offline, and after a minute an admin (or the member who has been there the longest) becomes the host and the party continues.
+A party hosted on your own device closes once you leave.
 
 ### Managing the Room {#host}
 
@@ -78,7 +82,7 @@ The host has a Host settings card in the Party tab:
 - Set or remove the password
 - Banned members, with an unban button
 
-Press a member to make them admin, transfer host, kick or ban them. A ban blocks both the device and its network.
+Press a member for more options (make admin / transfer host / kick / ban). A ban blocks both the device and its network.
 
 ### The Queue {#queue}
 
@@ -109,7 +113,8 @@ Turn off "Listen on this device" and the device stops playing, but still shows t
 
 ### Chat & Reactions {#chat}
 
-Every room has a chat, people who join later can read the recent messages. Reactions float up with the sender's name, press the pencil icon beside them to pick your own emojis.
+Every room has a chat, people who join later can read the recent messages.
+Reactions float up with the sender's name, press the pencil icon beside them to pick your own emojis.
 
 The host can turn chat and reactions off for guests, and anyone misbehaving can be kicked or banned.
 

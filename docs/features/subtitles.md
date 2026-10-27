@@ -11,7 +11,8 @@ Namida can show subtitles for anything it plays as a video (YouTube videos and l
 
 ### Turning Them On {#enable}
 
-Press the subtitle icon in the video controls (at the top of the player). The list shows every subtitle Namida found for what is playing, pick one and it starts right away. Pick "Disable" to turn them off again.
+Press the subtitle icon in the video controls (at the top of the player).
+The list shows every subtitle Namida found for what is playing, pick one and it starts right away. Pick "Disable" to turn them off again.
 
 The icon only appears when the current video has subtitles.
 
@@ -40,7 +41,8 @@ Interstellar (2014).srt
 
 Namida picks a subtitle for you when it can. It follows your app language first, then English.
 
-Picking a language yourself moves it to the top of that list for the next videos. A normal track always wins over an auto generated one in the same language.
+Picking a language yourself moves it to the top of that list for the next videos.
+A normal track always wins over an auto generated one in the same language.
 
 ### Styling {#styling}
 

@@ -32,7 +32,8 @@ They are where a section's data comes from, tap the selected section again to sw
 - Local is your Namida data, kept on your device and available without signing in (not related to your local music library).
 - YouTube is your signed-in account's live data.
 
-The two are separate, a playlist made in Namida doesn't show in your account and the other way around. "Import playlist" copies an account playlist into Namida. [`🎉 Namida & Account ↗`](/features/youtube/#namida-account)
+The two are separate, a playlist made in Namida doesn't show in your account and the other way around.
+"Import playlist" copies an account playlist into Namida. [`🎉 Namida & Account ↗`](/features/youtube/#namida-account)
 
 ### Sync devices can't find or connect {#sync-troubleshooting}
 
@@ -69,7 +70,7 @@ Namida caches the lyrics it finds for a track, and the cached copy wins over any
 Setting the [Lyrics Save Location](/settings/6-extras-settings/#lyrics-save-location) to Track folder or Lyrics folders avoids this (files there are checked before the cache). Otherwise, delete the cached copy:
 
 1. Long press the lyrics icon in the player.
-2. All lyrics found for this track are listed, labeled with its source: `Cache`, `Local`, the provider name, or the embedded tag. The ones in use are marked Active.
+2. All lyrics found for this track are listed, labeled with its source (`Cache` / `Local` / the provider name / the embedded tag). The ones in use are marked Active.
 3. Open the ⋮ menu on the cached one and press Delete.
 4. Press done, the new lyrics get picked up.
 
@@ -151,7 +152,8 @@ No, and not planned. Split the album into separate tracks once, it doesn't lose 
 
 ### Some FLAC files go silent at some point {#flac-silent}
 
-The file has a damaged spot, usually from a bad download or rip. Try the latest [beta release](https://github.com/namidaco/namida-snapshots/releases) first, it plays past damaged spots with a short gap instead of going silent.
+The file has a damaged spot, usually from a bad download or rip.
+Try the latest [beta release](https://github.com/namidaco/namida-snapshots/releases) first, it plays past damaged spots with a short gap instead of going silent.
 
 To repair the file itself, re-encode it with ffmpeg, which skips the damaged spot and writes a clean copy:
 

@@ -19,17 +19,17 @@ A persistent and reliable queue system, your sessions are saved for later usage.
 - Stop after any track, open a queued track's menu and choose "Stop after this track". `🆕 v7.0.0`
   - For the playing track, there's also a notification button, an artwork gesture action and `Ctrl` + `Space`. `🆕 v8.2.0`
 - Insert after latest inserted, for stacking several tracks in order.
-- Search inside the queue with the search icon at its top, tapping a result jumps to it. `🆕 v8.4.0`
-- With the `ASK_BEFORE_REPLACING_QUEUE` [flag](/settings/6-extras-settings/#flags), playing something new asks whether to replace the queue, keep it, or add the new tracks next, after or last. The "Play (Choose)" gesture action always asks. `🆕 v8.2.0`
-- Play modes when playing from search: selected track only, search results, album, first artist or first genre.
+- Search inside the queue with the search icon at its top, tap a result to jump to it. `🆕 v8.4.0`
+- With the `ASK_BEFORE_REPLACING_QUEUE` [flag](/settings/6-extras-settings/#flags), playing something new asks what to do with the queue (replace / keep / add the new tracks next, after or last). The "Play (Choose)" gesture action always asks. `🆕 v8.2.0`
+- Play modes when playing from search (selected track only / search results / album / first artist / first genre).
 - Recommended & Similar Release Date, add tracks you usually listen to with the current one, or released around the same time. [`🎉 Tracks Generation ↗`](/features/playlists-history/#generation)
 
 The queue's bottom row packs more than it looks:
 
-- The clear button removes duplicates, everything before, everything after, or all except the current track.
+- The clear button removes what you pick (duplicates / everything before / everything after / all except the current track).
 - The add button generates and adds tracks:
-  - Local: Random, Time Range, Moods, Ratings, Similar Release Date, Similar Discover Date, Similar Time Range, Similar Tracks and Recommended
-  - YouTube: Random, Time Range, Mix, Similar Release Date, Similar Discover Date, Similar Time Range and Recommended.
+  - Local (Random / Time Range / Moods / Ratings / Similar Release Date / Similar Discover Date / Similar Time Range / Similar Tracks / Recommended).
+  - YouTube (Random / Time Range / Mix / Similar Release Date / Similar Discover Date / Similar Time Range / Recommended).
 - A jump button scrolls right to the current track.
   - Queues open at the playing track and follow it as it changes, until you scroll away (the jump button starts following again). `🆕 v8.2.0`
 - In a queue mixing tracks and videos, the add to playlist button asks whether to add the tracks or the videos.
@@ -54,7 +54,8 @@ In a [listening party](/features/party/#queue), the room has its own repeat mode
 
 ### Audio Effects {#effects}
 
-Crossfade (with [smart & beat matched](#beat-matching) styles), Play/Pause fade effect, Gapless playback, Skip silence, a parametric [Equalizer](#equalizer), [Sound effects](#sound-effects) and Loudness Enhancer. Crossfade is part of the membership, or unlock it with an [egg](/membership/#eggs). [`⚙️ Configure Effects ↗`](/settings/3-playback-settings/#crossfade) [`📄 Membership ↗`](/membership/#benefits)
+Crossfade (with [smart & beat matched](#beat-matching) styles), Play/Pause fade effect, Gapless playback, Skip silence, a parametric [Equalizer](#equalizer), [Sound effects](#sound-effects) and Loudness Enhancer. [`⚙️ Configure Effects ↗`](/settings/3-playback-settings/#crossfade)
+Crossfade is part of the membership, or unlock it with an [egg](/membership/#eggs). [`📄 Membership ↗`](/membership/#benefits)
 
 Looking for visual effects and visualizers instead? See [`🎉 Effects & Visualizers ↗`](/features/effects/)
 
@@ -70,13 +71,15 @@ Crossfade's Style option changes how automatic crossfades happen:
 
 [Skip Silence](/settings/3-playback-settings/#skip-silence) is not part of these styles, it skips silent parts anywhere in a track, with or without crossfade.
 
-Upcoming tracks are analyzed in the background (BPM and key tags are used when present). To analyze the whole library at once, or write the analyzed BPM into tracks missing it, use the `ANALYZE_RHYTHM` flag in [Advanced settings](/settings/8-advanced-settings/#flags). [`⚙️ Configure Crossfade ↗`](/settings/3-playback-settings/#crossfade)
+Upcoming tracks are analyzed in the background (BPM and key tags are used when present).
+To analyze the whole library at once, or write the analyzed BPM into tracks missing it, use the `ANALYZE_RHYTHM` flag in [Advanced settings](/settings/8-advanced-settings/#flags). [`⚙️ Configure Crossfade ↗`](/settings/3-playback-settings/#crossfade)
 
 Track info shows the analyzed BPM and key of tracks whose tags have none. The analyzed BPM follows the usual tempo of the track's genre, like 172 instead of 86 for drum & bass. `🆕 v8.4.0`
 
 ### Sound Control {#sound-control}
 
-Press the audio effects icon in the player, the Sound Control tile at the top of settings, or [Sound Control](/settings/3-playback-settings/#sound-control) in playback settings. From top to bottom:
+Press the audio effects icon in the player, the Sound Control tile at the top of settings, or [Sound Control](/settings/3-playback-settings/#sound-control) in playback settings.
+From top to bottom:
 
 - [Output device](#output-device), [Bit-perfect](#bit-perfect) and [USB direct access](#usb-direct) (or [Exclusive mode](#exclusive-mode) on Windows & Linux). `🆕 v7.8.0`
 - [Audio path](#audio-path), and what Bit-perfect and USB direct access turn off. `🆕 v7.8.0`
@@ -84,7 +87,7 @@ Press the audio effects icon in the player, the Sound Control tile at the top of
 - Two tabs:
   - **Global**, applies to everything you play.
   - **Item**, applies to the current track or video only, anything you don't change there follows Global (a small icon shows when it has its own settings). Press reset to fall back to global, or turn on "Force use Global Config" to ignore per item settings.
-  - Save the current settings as a preset with the save icon on each tab, tap a preset to apply it to the open tab, or long press it to save over, rename or delete it. `🆕 v8.2.0`
+  - Press the save icon on a tab to save its settings as a preset, tap a preset to apply it to the open tab, or long press it for more options (save over / rename / delete). `🆕 v8.2.0`
 - **Mono audio**, both sides play the same sound. `🆕 v7.8.0`
 - [Sound effects](#sound-effects). `🆕 v8.2.0`
 
@@ -101,9 +104,9 @@ Tap a value icon to type it precisely instead of dragging the slider.
 A parametric equalizer with as many bands as you want, on every platform. Old settings and presets carry over.
 
 - Drag a band on the curve to tune it, or long press an empty spot to add one. A Sliders view is there too.
-- Any band type (peak, shelf, low/high pass, notch...), on both channels or just one.
+- Any band type (peak / shelf / low pass / high pass / notch, etc), on both channels or just one.
 - Auto preamp and a limiter keep boosts from distorting.
-- Built-in or your own presets, each can follow an [output device](#output-device). Long press a preset to use it for the current device, save the current bands into it, rename or delete it.
+- Built-in or your own presets, each can follow an [output device](#output-device). Long press a preset for more options (use for current device / save current bands / rename / delete).
 - Import from [AutoEq](https://autoeq.app) or Equalizer APO, or export as Equalizer APO text.
 
 ::: callout info
@@ -135,13 +138,13 @@ The file reaches your output device exactly as it's stored, nothing changes it o
 - **Android**: needs Android 14+ and an output that supports it (usually a USB DAC), or [USB direct access](#usb-direct) on any version.
 - **Windows & Linux**: every effect is skipped, and only Namida uses the output device while playing.
 
-Anything that changes the audio (like the equalizer or speed) is turned off meanwhile.
+Anything that changes the audio (like the equalizer or speed) is turned off while Bit-perfect is on.
 
 ::: callout warning
 With USB direct access and a DAC without its own volume control, bit-perfect tracks play at full volume. Lower the volume on your headphones or amp first.
 :::
 
-Not using it? Playback still got better for everyone, see [Audio Quality](#audio-quality).
+Not using Bit-perfect? Playback still got better for everyone, see [Audio Quality](#audio-quality).
 
 #### USB Direct Access {#usb-direct}
 
@@ -156,7 +159,7 @@ Namida drives your USB DAC itself instead of going through Android, so bit-perfe
 - Unplugging the DAC pauses playback, like unplugging headphones.
 - Crossfade, Loudness Enhancer and other apps' sounds are off while the DAC is in use.
 
-It works with or without Bit-perfect:
+USB direct access works with or without Bit-perfect:
 
 - **With Bit-perfect**, the audio reaches the DAC untouched.
 - **Without Bit-perfect**, effects like the equalizer still work, and the audio still bypasses Android's audio system (playing at the track's own sample rate when the DAC supports it).
@@ -174,7 +177,8 @@ Namida takes the output device for itself (like [Bit-perfect](#bit-perfect) does
 
 #### Audio Path {#audio-path}
 
-Every step the audio goes through (from the file to your device), with the ones that change it highlighted. Open it from Sound Control, or by long pressing the audio/video button in the player.
+Every step the audio goes through (from the file to your device), with the ones that change it highlighted.
+Open it from Sound Control, or long press the audio/video button in the player.
 
 ### Audio Quality {#audio-quality}
 
@@ -198,14 +202,16 @@ Control exactly what happens on calls, notifications, volume 0 and device discon
 
 ### Video Integration {#video}
 
-Namida can play videos related to your music. Videos are found locally by filename matching, or fetched from YouTube using the link in the track's comment tag or filename. [`⚙️ Configure Video Playback ↗`](/settings/3-playback-settings/#video-playback) [`📒 Link a YouTube Video Guide ↗`](/guides/medium/#link-yt-video) [`📒 Link a Local Video Guide ↗`](/guides/medium/#link-local-video)
+Namida can play videos related to your music.
+Videos are found locally by filename matching, or fetched from YouTube using the link in the track's comment tag or filename. [`⚙️ Configure Video Playback ↗`](/settings/3-playback-settings/#video-playback) [`📒 Link a YouTube Video Guide ↗`](/guides/medium/#link-yt-video) [`📒 Link a Local Video Guide ↗`](/guides/medium/#link-local-video)
 
 A linked YouTube video can start from a later point to line up with the track, Namida can find that point for you. `🆕 v8.4.0` [`📒 Video Offset ↗`](/guides/medium/#link-yt-video)
 
 ### Lyrics {#lyrics}
 
 Lyrics are fetched and shown automatically (synced or plain), with support for displaying word synced lrc/ttml files. Subtitle files next to the track (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`) work as lyrics too.
-Online lyrics come from LRCLIB and KuGou, and the best matching result is picked using the track duration. Long press the lyrics to enter fullscreen. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
+Online lyrics come from LRCLIB and KuGou, and the best matching result is picked using the track duration. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
+Long press the lyrics to enter fullscreen.
 
 Synced lyrics in Japanese, Chinese, Korean, Greek, Cyrillic and a few more scripts can show a romanized line under each line. `🆕 v7.4.0` [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
 
@@ -217,7 +223,8 @@ The `LYRICS_ANIMATIONS` [flag](/settings/6-extras-settings/#flags) turns each ly
 
 #### Lyrics Picker {#lyrics-picker}
 
-Long press the lyrics button in the player (right click on desktop) to see every lyrics found for the track. Search, shift or edit them from there, and: `🆕 v7.8.0`
+Long press the lyrics button in the player (right click on desktop) to see every lyrics found for the track.
+Search, shift or edit them from there, and: `🆕 v7.8.0`
 
 - The edit icon opens the lyrics in the lyrics editor, and Add starts new ones there. `🆕 v8.2.0` [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/)
 - The ones in use are marked Active, tap others and press Save to use them instead.
@@ -247,7 +254,7 @@ Lines with word by word timing only support the same time way.
 
 `🆕 v7.0.0`
 
-On a wide window, the expanded player shows a maximize icon at its top left. It opens a two pane layout (artwork/video and controls on the left, lyrics or the queue on the right). Press the exit icon or `Esc` to go back.
+On a wide window, press the maximize icon at the top left of the expanded player to open a two pane layout (artwork/video and controls on the left, lyrics or the queue on the right). Press the exit icon or `Esc` to go back.
 
 Scroll away from the current track or lyrics line, and a Jump button shows up to bring you back. `🆕 v7.4.0`
 
@@ -261,7 +268,7 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 
 - Swipe the miniplayer left or right to change tracks, up and down to expand or minimize, and swipe down to dismiss when [Dismissible Miniplayer](/settings/3-playback-settings/#dismissible-miniplayer) is on.
 - Artwork tap and long press actions are configurable, and double tap can toggle lyrics. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization)
-- Swipe left or right on a track or video to execute an action (play next, open info, go to album, edit tags and more). [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile)
+- Swipe left or right on a track or video to execute an action (play next / open info / go to album / edit tags, etc). [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile)
 - Tap or long press the thumbnail of a track or video to execute an action too, off by default. `🆕 v7.5.0` [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#track-tile)
 - Tap the current position to seek backwards and the total duration to seek forwards, by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Holding either one keeps seeking.
 - Long press the previous button to jump to the start of the track, long press the next button to speed up playback while holding it.
@@ -275,13 +282,14 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 
 ### Track Menu {#track-menu}
 
-Long press any track for queue control: Play Next, Play Last, Play After latest inserted, repeat for N times, stop after this track, and adding more from the same album, artist or folder (long press its + to pick the sorting, filters and how many). See [`📄 Tips & Tricks ↗`](/tips/#track-menu) for the full list.
+Long press any track for queue control (Play Next / Play Last / Play After latest inserted / repeat for N times / stop after this track / add more from the same album, artist or folder). For add more, long press its + to pick the sorting, filters and how many. See [`📄 Tips & Tricks ↗`](/tips/#track-menu) for the full list.
 
-The menu also has an Advanced section for the heavier stuff (copying and moving files, setting a track as a ringtone, replacing listens and more). [`📄 Advanced Dialog Tips ↗`](/tips/#advanced-dialog)
+The menu also has an Advanced section for the heavier stuff (copying and moving files / setting a track as a ringtone / replacing listens, etc). [`📄 Advanced Dialog Tips ↗`](/tips/#advanced-dialog)
 
 ### Sleep Timer {#sleep-timer}
 
-Stop playback after a number of tracks or minutes. Find it in the side menu, or in the quick tiles at the top of settings (where it also shows what's left while it runs).
+Stop playback after a number of tracks or minutes.
+Find it in the side menu, or in the quick tiles at the top of settings (where it also shows what's left while it runs).
 
 Presets set it in one tap, press + to add your own, or long press one to remove it. `🆕 v7.8.0`
 
@@ -295,7 +303,7 @@ The seekbar is the actual waveform of the track. [`⚙️ Configure Waveform Bar
 
 Mark spots in a track or video to come back to them.
 
-- Add one by long pressing the seekbar, from the notification button, an artwork gesture action, or with `Ctrl` + `B`.
+- Long press the seekbar to add one, or use the notification button, an artwork gesture action or `Ctrl` + `B`.
 - They show as ticks on the seekbar, tap near one to jump there. Long press a tick to see all of them.
 - Track info and the track menu list them too, with rename and remove.
 

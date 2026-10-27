@@ -23,7 +23,7 @@ Android only:
 
 All platforms:
 
-- `WEBHOOK`, posts playback events (track changed, play, pause) to a URL of your choice. [`🎉 Webhook ↗`](/features/automation/#broadcasts)
+- `WEBHOOK`, posts playback events (track changed / play / pause) to a URL of your choice. [`🎉 Webhook ↗`](/features/automation/#broadcasts)
 - `SERVER_PLAYBACK_REPORTS`, tells Subsonic and Jellyfin servers what you play, on by default. [`🎉 Playback Reports ↗`](/features/media-servers/#playback-reports)
 
 ### Enable Bottom Navigation Bar {#bottom-nav-bar}
@@ -38,7 +38,7 @@ Keep the video playing in a small floating window when leaving the app.
 
 ### Floating Action Button {#fab}
 
-Choose what the floating button does (like search, play or shuffle), or hide it.
+Choose what the floating button does (like search / play / shuffle), or hide it.
 
 ### Default Library Tab {#default-library-tab}
 
@@ -46,16 +46,16 @@ The tab the app opens on.
 
 ### Library Tabs {#library-tabs}
 
-Choose which tabs are enabled (tracks, albums, artists, genres, languages, playlists, smart playlists, folders, the current queue, stats, listening party and more), you can reorder them too. [`📄 Library Pages ↗`](/pages/library/)
+Choose which tabs are enabled (tracks / albums / artists / genres / languages / playlists / smart playlists / folders / the current queue / stats / listening party, etc), you can reorder them too. [`📄 Library Pages ↗`](/pages/library/)
 
 Tracks and Folders have variants (audio only or videos only for Tracks, music or videos for Folders). Tracks variants show only when [Include Videos](/settings/2-indexer-settings/#include-videos) is on.
 Variants of the same tab share a single slot in the navigation bar, long press it to switch between them, or press the arrow beside it in the side menu. `🆕 v7.4.0`
 
-YouTube sections (home, music `🆕 v8.4.0`, notifications, channels, playlists and downloads) can be tabs of their own too, and long pressing the YouTube tab jumps to any section. `🆕 v8.2.0`
+YouTube sections (home / music `🆕 v8.4.0` / notifications / channels / playlists / downloads) can be tabs of their own too, and long pressing the YouTube tab jumps to any section. `🆕 v8.2.0`
 
 ### Filter Tracks in Search Lists By {#filter-tracks-by}
 
-Which fields search looks into: title, artist, album, filename, comment, even lyrics and more.
+Which fields search looks into (title / artist / album / filename / comment, even lyrics, etc).
 The same list opens from the filter icon in the search page, where you can also save presets for the search page only. `🆕 v8.4.0` [`📄 Search Page ↗`](/pages/library/#search)
 
 ### Ignore Common Prefixes While Sorting {#ignore-prefixes}
@@ -87,8 +87,8 @@ Lyrics that contain any Japanese kana are read as Japanese, otherwise Chinese ch
 
 ### Lyrics {#lyrics}
 
-- Lyrics source, auto, local only or internet only.
-- Prefer embedded lyrics, the lyrics tag wins over lyrics files and online lyrics: Always, Never, or Synced `🆕 v8.2.0` (default, only when the tag has synced lyrics).
+- Lyrics source (auto / local only / internet only).
+- Prefer embedded lyrics, the lyrics tag wins over lyrics files and online lyrics (Always / Never / Synced `🆕 v8.2.0`, the default, only when the tag has synced lyrics).
 - Stretch lyrics duration, adapts the timing for sped up, slowed or nightcore versions.
 - Simple Lyrics Line, display the current lyrics line under the artwork. `🆕 v7.0.0`
   - Shows translations and romanizations under each line, and word synced lyrics light up word by word like in the lyrics view. `🆕 v7.5.0`
@@ -104,7 +104,8 @@ Online databases are LRCLIB and KuGou. When both find lyrics, the one closest to
 Start the embedded lyrics tag with `IGNORE` to explicitly show no lyrics for that track. For fetched lyrics, pick Ignore `🆕 v8.2.0` from their menu in the [lyrics picker](/features/playback/#lyrics-picker).
 :::
 
-Once lyrics are found they get saved (in the cache by default), and the saved copy is used first from then on. If lyrics you added later don't show up, pick them in the [lyrics picker](/features/playback/#lyrics-picker) and press Save, or delete the saved one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
+Once lyrics are found they get saved (in the cache by default), and the saved copy is used first from then on.
+If lyrics you added later don't show up, pick them in the [lyrics picker](/features/playback/#lyrics-picker) and press Save, or delete the saved one, see [`📄 I added lyrics but they don't show ↗`](/faq/#lyrics-not-showing).
 
 ### Lyrics Folders {#lyrics-folders}
 
@@ -119,7 +120,7 @@ When Lyrics folders is the save location, lyrics are saved in the first folder, 
 
 `🆕 v7.5.0`
 
-Where lyrics you add or that get fetched are saved: Cache (default), Track folder, or Lyrics folders. They are saved as `.lrc` for synced lyrics or `.txt` for plain ones, named like the track. If the location can't be written to, the cache is used.
+Where lyrics you add or that get fetched are saved (Cache by default / Track folder / Lyrics folders). They are saved as `.lrc` for synced lyrics or `.txt` for plain ones, named like the track. If the location can't be written to, the cache is used.
 
 The saved location is checked first when looking for lyrics, so your edits always win.
 
@@ -137,7 +138,7 @@ Hide status & navigation bars while the miniplayer is expanded.
 
 ### Swipe to Open Drawer {#swipe-drawer}
 
-Open the side menu by swiping anywhere on the screen (like the app bar and navigation bar).
+Swipe anywhere on the screen (like the app bar and navigation bar) to open the side menu.
 
 ### Always Expanded Searchbar {#expanded-searchbar}
 
@@ -193,7 +194,7 @@ Misc:
 - `PREFERRED_SEARCH_TAB`, the tab search opens on.
 - `YT_STYLE_PLAYER_BUTTON_SWITCHER`, shows a button to switch between the local style and YouTube style player.
 - `KEEP_VIDEO_FRAME_ON_SWITCH`, when switching to an item whose video is already downloaded, keep the last video frame until the next one shows (instead of flashing the artwork in between). `🆕 v7.4.0`
-- `ASK_BEFORE_REPLACING_QUEUE`, asks before playing something that would replace the current queue: replace it, keep it, or add the new tracks to it. `🆕 v8.2.0`
+- `ASK_BEFORE_REPLACING_QUEUE`, asks before playing something that would replace the current queue (replace it / keep it / add the new tracks to it). `🆕 v8.2.0`
 - `ON_EXTERNAL_MEDIA_FILE_OPEN`, what opening a file from another app does: Play (Replace queue) by default, Play (Keep queue), Play Next, Play Last, Always ask or More. `🆕 v8.4.0` [`🎉 Open With & Share ↗`](/features/system-integration/#open-with)
 - `TIME_CAPSULE_YEARS`, travel back in time, or into the future.
 

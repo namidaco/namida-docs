@@ -9,7 +9,8 @@ Namida builds your library from the folders you choose, with a powerful indexer 
 
 ### Folder Based Library {#folders}
 
-Add the folders you want, exclude the ones you don't. The Folders tab browses your library like a file manager, with support for `cover.jpg` style images and `.info.txt` files for small notes. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
+Add the folders you want, exclude the ones you don't. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
+The Folders tab browses your library like a file manager, with support for `cover.jpg` style images and `.info.txt` files for small notes.
 
 A `back.jpg` (or `rear.jpg`) image is the back cover for the Flip Artwork gesture, when the track has none embedded. `🆕 v8.2.0` [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization)
 
@@ -37,7 +38,8 @@ Videos are indexed and playable on their own, with a dedicated videos folder vie
 
 ### Missing Tracks {#missing-tracks}
 
-If you moved or renamed files outside Namida, the missing tracks page helps you relink them without losing stats and listens. Whole directories can be updated at once with [`⚙️ Open Update Directory Path ↗`](/settings/8-advanced-settings/#update-directory-path). [`⚙️ Configure Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
+If you moved or renamed files outside Namida, the missing tracks page helps you relink them without losing stats and listens. [`⚙️ Configure Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
+Whole directories can be updated at once with [`⚙️ Open Update Directory Path ↗`](/settings/8-advanced-settings/#update-directory-path).
 
 ### Sorting & Grouping {#sorting}
 

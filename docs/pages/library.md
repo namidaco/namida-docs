@@ -36,7 +36,8 @@ With [Include Videos](/settings/2-indexer-settings/#include-videos) on, the tab 
 
 ### Albums {#albums}
 
-Your albums as a list or grid. What counts as one album is controlled by [`⚙️ Configure Album Identifiers ↗`](/settings/2-indexer-settings/#album-identifiers). [`⚙️ Configure Album Tiles ↗`](/settings/4-customization-settings/#album-tile)
+Your albums as a list or grid. [`⚙️ Configure Album Tiles ↗`](/settings/4-customization-settings/#album-tile)
+What counts as one album is controlled by [`⚙️ Configure Album Identifiers ↗`](/settings/2-indexer-settings/#album-identifiers).
 
 An album shows the year of its oldest track.
 
@@ -44,7 +45,8 @@ Tap the albums count at the top left to show or hide singles, EPs and albums. Th
 
 ### Artists {#artists}
 
-Browse by Artists, Album Artists or Composers, press the type at the top left to switch. Multiple artists and composers in one tag get split by separators, and featured artists from titles can get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators)
+Browse by Artists, Album Artists or Composers, press the type at the top left to switch.
+Multiple artists and composers in one tag get split by separators, and featured artists from titles can get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators)
 
 An artist page shows the years range of the artist's tracks, and a map icon that opens the [Artists Map](#artists-map) centered on that artist. `🆕 v7.4.0`
 EPs get their own row beside albums and singles, long press a row icon to sort them. `🆕 v8.2.0`
@@ -53,7 +55,8 @@ EPs get their own row beside albums and singles, long press a row icon to sort t
 
 `🆕 v7.0.0`
 
-Your artists laid out as a constellation, each one connected to related artists through shared albums, features on the same track and shared genres. Press an artist to open it, or shuffle for a fresh set. Open it from the Artists page.
+Your artists laid out as a constellation, each one connected to related artists through shared albums, features on the same track and shared genres. Open it from the Artists page.
+Press an artist to open it, or shuffle for a fresh set.
 
 ### Artists Map {#artists-map}
 
@@ -62,17 +65,20 @@ Your artists laid out as a constellation, each one connected to related artists 
 Your whole library of artists on one map. Related artists sit next to each other, and each group gets its own color.
 Zoomed out you see colored dots (bigger for artists with more tracks), with the names of the biggest ones. Zoom in and the dots turn into artist tiles, tap one to open it, or long press for its dialog.
 
-Open it with the map icon in the Discover page, or from an artist page to start centered on that artist. The buttons at the top switch between the graph and a grid layout, and fit everything back on screen.
+Open it with the map icon in the Discover page, or from an artist page to start centered on that artist.
+The buttons at the top switch between the graph and a grid layout, and fit everything back on screen.
 
 ### Genres {#genres}
 
-Your genres, split from tags using the genre separators. Press the type at the top left to switch between Genres and Styles.
+Your genres, split from tags using the genre separators.
+Press the type at the top left to switch between Genres and Styles.
 
 ### Languages {#languages}
 
 `🆕 v8.2.0`
 
-Your tracks grouped by their language tag, a track can have more than one. Codes and names of the same language (`en`, `eng`, English) count as one. Search, sorting and smart playlists support languages too. Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs).
+Your tracks grouped by their language tag, a track can have more than one. Codes and names of the same language (`en`, `eng`, English) count as one. Enable it in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs).
+Search, sorting and smart playlists support languages too.
 
 ### Playlists {#playlists}
 
@@ -96,7 +102,8 @@ Browse your library exactly like your file manager, with separate views for musi
 
 ### Queues {#queues}
 
-Every listening session is saved automatically, so you can jump back to any previous queue. Press the delete icon at the top to clear unimportant queues, or swipe one left to quickly remove it. Inside a queue, the resume button continues from the track you last played in it, and the search box filters its tracks. `🆕 v8.4.0`
+Every listening session is saved automatically, so you can jump back to any previous queue. Press the delete icon at the top to clear unimportant queues, or swipe one left to quickly remove it.
+Inside a queue, the resume button continues from the track you last played in it, and the search box filters its tracks. `🆕 v8.4.0`
 
 Only the newest 20 queues load at first, press "Load all" at the bottom for the rest. `🆕 v7.4.0`
 
@@ -126,13 +133,15 @@ The listening party page as a library tab, to create or join a room and follow i
 
 ### Moods, Tags & Rating {#moods-tags-rating}
 
-Browse tracks grouped by the moods, tags and ratings you assign. Assign them from the track menu (for many tracks at once too), they also power mood based [track generation](/features/playlists-history/#generation). On desktop you can rate the current track with a key press, see [`🎉 Shortcuts feature ↗`](/features/shortcuts/).
+Browse tracks grouped by the moods, tags and ratings you assign.
+Assign them from the track menu (for many tracks at once too), they also power mood based [track generation](/features/playlists-history/#generation). On desktop you can rate the current track with a key press, see [`🎉 Shortcuts feature ↗`](/features/shortcuts/).
 
 The moods and tags pages can be searched and sorted, and so can the tracks inside a mood, tag or rating. `🆕 v8.2.0`
 
 ### Search {#search}
 
-Global search across your library. You choose which fields it looks into: title, artist, album, filename, even lyrics. Playing from search supports play modes: selected track only, search results, album, first artist or first genre. [`⚙️ Configure Search ↗`](/settings/6-extras-settings/#filter-tracks-by)
+Global search across your library. You choose which fields it looks into (title / artist / album / filename, even lyrics). [`⚙️ Configure Search ↗`](/settings/6-extras-settings/#filter-tracks-by)
+Playing from search supports play modes (selected track only / search results / album / first artist / first genre).
 The filter icon in the search page picks the fields right there, and can save them as presets (like lyrics only) for the search page only. `🆕 v8.4.0`
 
 Results are ranked by a match score:
@@ -143,7 +152,8 @@ Results are ranked by a match score:
 - Tracks you listen to more get a small boost.
 - Results that score far below the best match are hidden behind a Show more button. `🆕 v8.2.0`
 
-This ranking is the "Auto" sort in the search sort menu, pick any other sort to order the results by it instead. Filtering the albums, artists, genres or playlists pages uses the same ranking `🆕 v8.2.0`, and so does searching inside an album, artist, playlist or any other media page.
+This ranking is the "Auto" sort in the search sort menu, pick any other sort to order the results by it instead.
+Filtering the albums, artists, genres or playlists pages uses the same ranking `🆕 v8.2.0`, and so does searching inside an album, artist, playlist or any other media page.
 
 ---
 

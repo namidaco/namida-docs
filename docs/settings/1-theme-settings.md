@@ -9,7 +9,7 @@ Control how Namida looks: colors, dark mode and language.
 
 ### Theme Mode {#theme-mode}
 
-Switch between System, Light and Dark mode. System follows your device theme.
+Switch the theme mode (System / Light / Dark). System follows your device theme.
 
 ### Auto Coloring {#auto-coloring}
 
@@ -39,7 +39,8 @@ The color the player uses when [Auto Coloring](#auto-coloring) is off, or when t
 
 ### Language {#language}
 
-Change the app language. Translations are made by the community, you can help translate Namida at the [translation repo](https://github.com/namidaco/namida-translations).
+Change the app language.
+Translations are made by the community, you can help translate Namida at the [translation repo](https://github.com/namidaco/namida-translations).
 
 ---
 

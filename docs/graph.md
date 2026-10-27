@@ -7,7 +7,8 @@ graph: false
 
 # Docs Graph
 
-Every page and section of these docs, and the links between them. Kasane lines up features, pages and settings above the versions that added them, Overview shows pages only, and Brain shows every section. Click a dot to see what it links to and what links to it.
+Every page and section of these docs, and the links between them.
+Switch views at the top, and click a dot to see its links.
 
 <div class="docs-graph" data-docs-graph></div>
 

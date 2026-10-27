@@ -14,7 +14,10 @@ Rules for writing and editing these docs. They apply to humans and AI assistants
 - Human readable, prefer prose and short bullets over walls of specs.
 - No em dash or en dash (—, –), use a comma instead.
 - Put a side note in parentheses instead of chaining commas: `sometimes blocks them (the dialog says the app was blocked)`. Two main clauses joined by a comma are fine as is.
-- A single newline renders as a line break, so never hard wrap lines, and only add a break where it fits: in a long paragraph, at the point where it moves to a new topic (local vs online, single video vs playlists). Usually one per paragraph. Never one sentence per line, never inside list items, and keep a short closing sentence on the same line.
+- Say the action first, then what it does: `tap the title area to open it`, not `open it by tapping the title area`. A line that starts with the goal is fine (`To add one, long press a line and press Add`), since readers scan for the goal.
+- On the docs' own interactive pages (the tour, Screens Map and Docs Graph), give a general hint about the controls instead of explaining what each one does.
+- For the app itself, list every option, but keep it light: give the action, then its options in parentheses, with spaced slashes when they're more than one word (`Long press a preset for more options (use for current device / save current bands / rename / delete)`). Fold small visual details into one short parenthesis instead of a sentence each.
+- A single newline renders as a line break, so never hard wrap lines. Break at each topic shift (local vs online, single video vs playlists), short paragraphs included. Sentences on the same topic stay on one line, so never break per sentence or inside list items, and keep a short closing sentence on the same line.
 - Don't pack unrelated points into one paragraph, list them as bullets under a short lead in (`In fullscreen:`). A paragraph is for one topic.
 - No emojis (except in major headings if really needed). `docs/whats-new.md` is the exception, its emojis are intended, keep them.
 - Use setting/feature titles exactly as they appear in the app (source: `external/language/translations/en.arb` in the namida repo). Descriptions can be extended beyond the in-app subtitle when helpful.
@@ -52,7 +55,7 @@ Content...
 Two kinds of inline code chips are used:
 
 - **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `availability:` (`NamidaFeaturesAvailablity`) of the setting's entry in `lib/ui/widgets/settings/`. A feature missing only on iOS or macOS gets no chip, list it in the iOS & macOS section of `docs/installation.md` instead.
-- **Related link chip**: sections link their related setting/feature/page/guide with a clickable chip placed at the END of the line or the end of the section, never right under the header: ``[`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)``. More than one chip is fine when applicable. Keep a "Related Settings" list at the bottom of feature pages too.
+- **Related link chip**: sections link their related setting/feature/page/guide with a clickable chip placed at the END of the line or the end of the section, never right under the header: ``[`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)``. More than one chip is fine when applicable. An end of line chip is only for a reference that directly relates to that line (a feature, then the setting for it). A link to something the line isn't about gets its own line saying what it's for: ``See [`📄 Screens Map ↗`](/screens/) for all screens and where they open from.`` Keep a "Related Settings" list at the bottom of feature pages too.
 
 Link icons, always include the type in the name:
 

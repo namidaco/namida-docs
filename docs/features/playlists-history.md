@@ -11,7 +11,7 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
 
 - M3U playlists, import them or keep them synced with the original file, so changes made in Namida show up in other apps too. Any playlist can be converted to M3U and back, or exported once. New M3U files only show up if their folder is in the indexer folders (except [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists` which always loads `🆕 v7.5.0`). Files already linked to a playlist (synced imports and conversions) load from any folder. `🆕 v8.4.0`
   - Sharing a playlist as a file isn't possible, send its M3U file with apps like [Syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or [LocalSend](https://localsend.org) instead. Converted playlists are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-playlists)
-  - Long press Convert to M3U in the playlist menu to save it in the folder holding its tracks, or any folder you pick. When creating a new playlist as M3U, the folder button next to the switch picks its folder. `🆕 v8.4.0`
+  - Long press Convert to M3U in the playlist menu to pick where it's saved (folder holding its tracks / any folder). When creating a new playlist as M3U, the folder button next to the switch picks its folder. `🆕 v8.4.0`
   - Exporting selected playlists converts them all at once, or saves unlinked copies to any folder you pick. `🆕 v8.2.0`
   - Between Namida devices, Sync can send your playlists too. [`🎉 Sync feature ↗`](/features/sync/#data)
     - M3U playlists arrive as M3U files in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`, the rest as normal playlists. `🆕 v7.5.0`
@@ -22,7 +22,7 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
 - Playlists can be searched, and can have moods (which the queue uses when adding tracks by mood). Search matches [tags](#playlist-tags) too.
 - Pin a playlist from its menu to keep it at the top. `🆕 v7.8.0`
 - Pinned playlists can show on the Home page too, enable Pinned Playlists from its configure button. `🆕 v8.2.0`
-- Select many playlists with the checklist icon at the top, to tag, pin, play, merge, export or delete them at once. `🆕 v7.8.0`
+- Select many playlists with the checklist icon at the top, to act on them at once (tag / pin / play / merge / export / delete). `🆕 v7.8.0`
 - M3U playlists keep their comment, moods, tags and sorting. `🆕 v7.8.0`
   - The name, description, moods and tags are also read from and written to the M3U file (`#PLAYLIST`, `#DESCRIPTION`, `#TAGS` for moods and `#CATEGORY` for tags), so other apps can use them. Edits made in Namida and in other apps are both kept. `🆕 v8.4.0`
   - `#PLAYLIST` names the playlist only when Namida first finds the file, names with characters like `/` use the file name instead.
@@ -45,7 +45,7 @@ Organize your playlists with tags, like `gym`, `chill` or `anime/openings`.
 - Add tags from a playlist's menu -> Tags/Moods. Select many playlists to tag them all at once.
 - Use a slash to put a tag inside another, like `gym/cardio`. Filtering by `gym` shows those too.
 - Tap a tag in the tags row to show only its playlists, or hold it to hide them instead.
-- The ⋯ chip can play the shown playlists, save the filter, group the page by tags, or manage your tags.
+- The ⋯ chip has more options (play the shown playlists / save the filter / group the page by tags / manage your tags).
   - When grouped, long press a tag's header to select all its playlists. `🆕 v8.2.0`
 - Importing a folder of M3U files tags each playlist with its folder name. [`📄 Playlists Page ↗`](/pages/library/#playlists)
 
@@ -63,7 +63,8 @@ All rules, how to combine them, and examples from easy to complex: [`🎉 Smart 
 
 ### History {#history}
 
-A reliable and flexible history system. You choose the minimum seconds or percentage that counts as a listen. History can be imported from other services, and listens can be replaced, never deleted. [`⚙️ Configure Listen Counting ↗`](/settings/3-playback-settings/#count-listen-after)
+A reliable and flexible history system. You choose the minimum seconds or percentage that counts as a listen. [`⚙️ Configure Listen Counting ↗`](/settings/3-playback-settings/#count-listen-after)
+History can be imported from other services, and listens can be replaced, never deleted.
 
 Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range.
 After jumping, arrows at the bottom move between that track's other listens. `🆕 v8.2.0`
@@ -84,9 +85,10 @@ Find your top tracks based on your history record, with a custom time range to s
 
 `🆕 v7.0.0`
 
-Charts built from your history, and a yearly wrap up. See [`📄 Stats Page ↗`](/pages/other/#stats) and [`📄 Your Year Page ↗`](/pages/other/#your-year). Any album, artist, playlist or folder dialog also has a Stats entry with listen stats for just those tracks.
+Charts built from your history, and a yearly wrap up. See [`📄 Stats Page ↗`](/pages/other/#stats) and [`📄 Your Year Page ↗`](/pages/other/#your-year).
+Any album, artist, playlist or folder dialog also has a Stats entry with listen stats for just those tracks.
 
-Top tracks and discoveries can be played, shuffled or saved as a playlist from their menu. `🆕 v8.2.0` [`📄 Stats Charts ↗`](/pages/other/#charts)
+Top tracks and discoveries have a menu (play / shuffle / save as a playlist). `🆕 v8.2.0` [`📄 Stats Charts ↗`](/pages/other/#charts)
 
 ### Lost Memories {#lost-memories}
 

@@ -47,9 +47,9 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 
 - Force squared track thumbnail.
 - Size of track thumbnail & height of track tile.
-- Swipe actions, set a left and right swipe action for tracks (like play next, add to playlist).
+- Swipe actions, set a left and right swipe action for tracks (like play next / add to playlist).
 - Artwork Gestures, a tap and a long press action for the thumbnail of tracks and videos in lists (separate from the player artwork). `🆕 v7.5.0` [`⚙️ Track Actions ↗`](/settings/4-customization-settings/#track-actions)
-- Every slot in the tile is customizable, choose what appears in each row: title, artist, album, year, duration, bitrate and more.
+- Every slot in the tile is customizable, choose what appears in each row (title / artist / album / year / duration / bitrate, etc).
 - Display third row & third item in each row, control how much info a track tile shows.
 - Display favourite button.
 - Items separator.
@@ -60,10 +60,10 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 - Party Mode, a breathing glow around the edges, with a static color or switching through the artwork palette. Part of the membership, or unlock it with an egg. [`📄 Membership ↗`](/membership/#benefits) [`📄 Eggs ↗`](/membership/#eggs)
 - Visualizer, visuals in the expanded player that move with the music. Particles (formerly "Enable moving particles") is one of them. `🆕 v7.8.0` [`🎉 Visualizers ↗`](/features/effects/#visualizers)
 - Player background, the artwork or your own image behind the expanded player. `🆕 v7.8.0` [`🎉 Player Background ↗`](/features/effects/#player-background)
-  - Or an animated one: mesh gradient, ambient lights & bokeh. `🆕 v8.4.0`
+  - Or an animated one (mesh gradient / ambient lights / bokeh). `🆕 v8.4.0`
 - Lyrics (Fullscreen), the background behind fullscreen lyrics, and a visualizer for tracks without lyrics. `🆕 v8.4.0` [`🎉 Lyrics Background ↗`](/features/effects/#lyrics-background)
 - Thumbnail animation intensity, the artwork animates with the audio peak. Separate values for expanded, minimized and lyrics view, plus an inverse option where high peaks make the thumbnail smaller.
-- Artwork gestures, scale multiplier, tap action, long press action and double tap to toggle lyrics. [`⚙️ Track Actions ↗`](/settings/4-customization-settings/#track-actions)
+- Artwork gestures (scale multiplier / tap action / long press action / double tap to toggle lyrics). [`⚙️ Track Actions ↗`](/settings/4-customization-settings/#track-actions)
 - Waveform bars count.
 - Display audio info in miniplayer.
 - Display artist before title.
@@ -72,7 +72,8 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 
 `💻 Android only`
 
-Choose a different icon for the app. New icons can be submitted on [our Discord](https://discord.com/channels/1156253663803740271/1423484977693327430/1423671224520671362).
+Choose a different icon for the app.
+New icons can be submitted on [our Discord](https://discord.com/channels/1156253663803740271/1423484977693327430/1423671224520671362).
 
 ::: callout info
 Fully custom icons are not possible (Android only allows icons that are already built into the app). Use a launcher that supports icon packs, or patch the app.
@@ -83,7 +84,7 @@ Fully custom icons are not possible (Android only allows icons that are already 
 What track swipes and artwork gestures can do.
 
 - Play (Single), plays only that track, replacing the queue.
-- Play (Choose), asks how to play the list starting from that track: replace the queue, keep it, or add it next, after or last. `🆕 v8.2.0`
+- Play (Choose), asks how to play the list starting from that track (replace the queue / keep it / add it next, after or last). `🆕 v8.2.0`
   - Play (Keep queue) can also take that track alone, it plays now and the current queue continues after it. `🆕 v8.4.0`
 - Play Next, Play Last & Play After (after the latest inserted track).
 - Add to Playlist, Info, Total Listens, Edit Tags, Edit Artwork, Set Rating & Rating/Moods/Tags.

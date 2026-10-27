@@ -48,7 +48,7 @@ Playlists from your servers can be auto imported on library refresh, see the [`�
 Keep server tracks on your device to play them offline. Open the menu of a track, an album, a playlist or a selection, and press "Cache". The original file is saved, even when the server streams a transcoded version (like Subsonic can).
 
 - Server tracks that aren't cached yet show a small download icon on their artwork.
-- While caching, the artwork shows a progress ring, and an icon appears in the app bar. Press it for the list of tasks, where you can pause, resume, retry or cancel them.
+- While caching, the artwork shows a progress ring, and an icon appears in the app bar. Press it for the list of tasks (pause / resume / retry / cancel).
 - On Android, a notification shows the progress. 
 - On Windows and Linux, the notification when it's done follows [`⚙️ Download notifications ↗`](/settings/5-youtube-settings/#downloads).
 - Tasks without a connection wait and continue once it's back.
@@ -56,7 +56,8 @@ Keep server tracks on your device to play them offline. Open the menu of a track
 Cached tracks play from the device, even offline. Most streamed tracks are kept too (they get cleaned up once the server cache is full), but the ones you cached yourself are never deleted automatically. [`⚙️ Configure Server Cache ↗`](/settings/8-advanced-settings/#cache-limits)
 
 ::: callout info
-The server cache sits in [User Data](/storage-paths/#user-data)`/Servers Cache`. To remove a single track from it, open its menu, then Advanced, then Clear.
+The server cache sits in [User Data](/storage-paths/#user-data)`/Servers Cache`.
+To remove a single track from it, open its menu, then Advanced, then Clear.
 :::
 
 ---

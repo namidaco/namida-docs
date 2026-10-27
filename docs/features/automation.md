@@ -11,7 +11,7 @@ The everyday side of this is in [`🎉 System Integration ↗`](/features/system
 ### What Other Apps Can Do {#what-apps-can-do}
 
 - Start playback with anything Namida accepts through "Open with" or share (files, folders, playlists, YouTube links, text with links and party invites). [`🎉 Open With & Share ↗`](/features/system-integration/#open-with)
-- Control playback through the media session (play, pause, stop, next, previous and seek, plus repeat and shuffle where the app offers them). [`🎉 Media Controls ↗`](/features/system-integration/#media-controls)
+- Control playback through the media session (play / pause / stop / next / previous / seek, plus repeat and shuffle where the app offers them). [`🎉 Media Controls ↗`](/features/system-integration/#media-controls)
 - Read the current track (title, artist, album, duration and position) with media or notification access. Tasker, scrobblers (Pano Scrobbler, Last.fm apps, etc) and watch companions all use this.
 - Read the ids from the file tags (MusicBrainz, ISRC, AcoustID, etc) in the media session, under keys like `org.musicbrainz.MUSICBRAINZ_TRACKID`, so scrobblers can match the exact recording (although none read them yet). `💻 Android only` `🆕 v8.2.0`
 - Get every track change, play and pause with the full track info (file path, queue position, MusicBrainz ids), through broadcasts or a webhook. `🆕 v8.2.0` [See below](#broadcasts)
@@ -23,9 +23,10 @@ The everyday side of this is in [`🎉 System Integration ↗`](/features/system
 Turn them on from the flag icon of the Integrations card in Extras settings:
 
 - `NOW_PLAYING_BROADCAST`, an Android broadcast on every track change, play and pause, for Tasker and other automation apps. `💻 Android only`
-- `WEBHOOK`, posts the same events as JSON to a url, you pick which events (track changed, play, pause).
+- `WEBHOOK`, posts the same events as JSON to a url, you pick which events (track changed / play / pause).
 
-Each event has the full track info, including the file path (or video id for YouTube) and ids from the file tags (MusicBrainz, ISRC, AcoustID, etc), see the [event format](#event-format). Broadcast actions are in the [cheat sheet](#cheat-sheet). [`⚙️ Configure Integrations ↗`](/settings/6-extras-settings/#integrations)
+Each event has the full track info, including the file path (or video id for YouTube) and ids from the file tags (MusicBrainz, ISRC, AcoustID, etc), see the [event format](#event-format).
+Broadcast actions are in the [cheat sheet](#cheat-sheet). [`⚙️ Configure Integrations ↗`](/settings/6-extras-settings/#integrations)
 
 ### Event Format {#event-format}
 
@@ -85,12 +86,14 @@ adb shell am start -a android.intent.action.SEND -t text/plain --es android.inte
 
 **Android, controlling playback**
 
-No intent needed, use your automation app's media control action and pick Namida as the app (Tasker: "Media Control", MacroDroid: "Media Control"). Commands are play, pause, toggle, stop, next and previous. Reading the current track works through the same apps' media session or notification triggers, title and artist arrive as variables. With `adb`:
+No intent needed, use your automation app's media control action and pick Namida as the app (Tasker: "Media Control", MacroDroid: "Media Control"). Commands are play / pause / toggle / stop / next / previous. With `adb`:
 
 ```sh
 adb shell cmd media_session dispatch play-pause
 adb shell cmd media_session dispatch next
 ```
+
+Reading the current track works through the same apps' media session or notification triggers, title and artist arrive as variables.
 
 **Android, reading broadcasts** `🆕 v8.2.0`
 

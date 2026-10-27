@@ -9,7 +9,8 @@ Settings for the [YouTube](/features/youtube/) section.
 
 ### Manage Your Accounts {#accounts}
 
-Sign in to your account (or multiple accounts) to interact with videos and get personalized content. The membership page is here too, multiple accounts need a `pookie` membership. [`📄 Membership ↗`](/membership/)
+Sign in to your account (or multiple accounts) to interact with videos and get personalized content.
+The membership page is here too, multiple accounts need a `pookie` membership. [`📄 Membership ↗`](/membership/)
 
 ### SponsorBlock {#sponsorblock}
 
@@ -19,8 +20,8 @@ Skip sponsor segments in videos, powered by [SponsorBlock](https://sponsor.ajay.
 - Remove Sponsor Segments from Downloads, cut out the chosen categories from the downloaded files. `🆕 v7.4.0` [`🎉 Removing Sponsor Segments ↗`](/features/youtube/#sponsorblock-downloads)
 - Hide skip button after a set time.
 - Minimum segment duration, segments shorter than this are ignored.
-- Categories: Sponsor, Self Promotion, Intro, Outro, Filler, Preview, Hook, Music Offtopic, Highlight and Interaction Reminder.
-- Per category behavior: Auto Skip, Auto Skip Once, Show Skip button, Show in Seekbar, or disabled.
+- Categories (Sponsor / Self Promotion / Intro / Outro / Filler / Preview / Hook / Music Offtopic / Highlight / Interaction Reminder).
+- Per category behavior (Auto Skip / Auto Skip Once / Show Skip button / Show in Seekbar / disabled).
 - Per category "Remove from downloads" switch, on by default for Sponsor, Self Promotion and Interaction Reminder. Highlight can't be removed (it's a single moment instead of a segment). `🆕 v7.4.0`
 
 ### Return Youtube Dislike {#return-youtube-dislike}
@@ -33,7 +34,7 @@ Show the dislike count on videos, using data from [returnyoutubedislike.com](htt
 - Remember audio only mode.
 - Dim the miniplayer after a set number of seconds of inactivity, and choose how dark it gets.
 - Seekbar behavior, tap to seek and drag to seek.
-- Drag to seek (Video), when swiping horizontally on the video itself: Never, Expanded Miniplayer, Fullscreen or Always. `🆕 v7.0.0`
+- Drag to seek (Video), when swiping horizontally on the video itself (Never / Expanded Miniplayer / Fullscreen / Always). `🆕 v7.0.0`
 
 ### Comments {#comments}
 
@@ -55,8 +56,8 @@ Show the dislike count on videos, using data from [returnyoutubedislike.com](htt
 ### Downloads {#downloads}
 
 - Downloads Metadata tags, how tags are filled by default:
-  - Off: channel name as artist, video title as title.
-  - On: the video title is split into "Artist - Title" (artist falls back to the channel name), the channel becomes the album, and genre is set to "Nightcore" when the title contains it.
+  - Off, channel name as artist, video title as title.
+  - On, the video title is split into "Artist - Title" (artist falls back to the channel name), the channel becomes the album, and genre is set to "Nightcore" when the title contains it.
 - Default Download Location.
 - Download notifications `💻 Windows+Linux only`.
 
@@ -64,7 +65,7 @@ Other download options live in the download sheet itself (like Split by Chapters
 
 ### On Opening Youtube Link {#on-opening-youtube-link}
 
-Choose what happens when opening a YouTube link with Namida: Play, Add to Queue, Add to Playlist, Download, Always Ask and more.
+Choose what happens when opening a YouTube link with Namida (Play / Add to Queue / Add to Playlist / Download / Always Ask, etc).
 
 ### Flags {#flags}
 

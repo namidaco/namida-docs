@@ -9,12 +9,13 @@ Controls how Namida finds and reads your music files. The library is folder base
 
 ### Add Folder {#add-folder}
 
-Add a local folder, or a media server (Subsonic, Jellyfin, WebDAV, SMB) to index it like a normal folder, see [Media Servers](/features/media-servers/).
+Add a local folder, or a media server (Subsonic / Jellyfin / WebDAV / SMB) to index it like a normal folder, see [Media Servers](/features/media-servers/).
 FTP & SFTP servers work too, and on Android, Storage Access Framework adds folders from other apps (RSAF, Google Drive, Nextcloud, file managers, etc). `🆕 v8.2.0`
 
 ### Refresh Library & Re-index {#refresh-reindex}
 
-Refresh checks for newly added or deleted music. Re-index rebuilds the whole library from scratch (artworks are kept as long as they still exist).
+Refresh checks for newly added or deleted music.
+Re-index rebuilds the whole library from scratch (artworks are kept as long as they still exist).
 
 Files changed outside Namida (like tags edited in another app) are read again on refresh too. `🆕 v7.5.0`
 
@@ -40,7 +41,8 @@ Artists written as (feat. X) or (ft. X) in the title are added as separate artis
 
 ### Separators {#separators}
 
-Symbols and words used to split multiple artists, genres or albums from a single tag (like `,` `;` `&` `ft.`). Each one has a blacklist too, for names that should never get split (letter case does not matter). Type any text to preview how it gets split before adding anything.
+Symbols and words used to split multiple artists, genres or albums from a single tag (like `,` `;` `&` `ft.`). Each one has a blacklist too, for names that should never get split (letter case does not matter).
+Type any text to preview how it gets split before adding anything.
 Artists separators also split composers `🆕 v7.4.0` and album artists `🆕 v8.2.0` (albums still group the same).
 Albums only split on the non-breaking space (NBSP) by default, type `NBSP` to add it back. `🆕 v8.2.0`
 
@@ -50,11 +52,12 @@ No need to add spaces, unless the separator can also appear inside a word (like 
 
 ### Album Identifiers {#album-identifiers}
 
-Which fields identify an album. "Album" name + "Album Artist" name by default, add Year, MusicBrainz Album ID or MusicBrainz Album Artist ID to separate albums that share the same name.
+Which fields identify an album. "Album" name + "Album Artist" name by default, add more (Year / MusicBrainz Album ID / MusicBrainz Album Artist ID) to separate albums that share the same name.
 
 ### Include Videos {#include-videos}
 
-Index video files too. Videos get their own folders view and can be played on their own. The refresh icon `🆕 v8.2.0` beside the switch re-scans local videos.
+Index video files too. Videos get their own folders view and can be played on their own.
+The refresh icon `🆕 v8.2.0` beside the switch re-scans local videos.
 
 ### Respect .nomedia {#respect-nomedia}
 
@@ -96,7 +99,8 @@ Identifies artworks by the track's full path instead of just the filename. Enabl
 
 ### List of Folders {#folders-to-scan}
 
-The folders that Namida scans for music, local ones and servers. Press Add to add more (see [Add Folder](#add-folder)), the lock icon on a server changes its login.
+The folders that Namida scans for music, local ones and servers.
+Press Add to add more (see [Add Folder](#add-folder)), the lock icon on a server changes its login.
 
 ### Excluded Folders {#excluded-folders}
 

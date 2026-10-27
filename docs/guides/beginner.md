@@ -9,7 +9,7 @@ description: "Quick fixes and everyday tasks"
 
 An artist like "Tyler, The Creator" showing as two artists? The comma separator is splitting it.
 
-1. Open [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) and pick Artists, Genres or Albums.
+1. Open [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators) and pick a type (Artists / Genres / Albums).
 2. Type the full name (the preview shows how it gets split) and tap Blacklist.
 
 ### Some artworks are wrong {#wrong-artworks}
@@ -27,10 +27,10 @@ No artwork in the files at all? Put a `cover.jpg` (or `folder.jpg`) in the album
 
 ### Stop after the current track {#stop-after-track}
 
-1. Open the current track's dialog (tap the player info text, or tap the menu in a track tile, or long press the video card).
+1. Open the current track's dialog (tap the player info text / tap the menu in a track tile / long press the video card).
 2. Choose "Stop after this track".
 
-It can also be an artwork gesture, a notification button on Android, or `Ctrl` + `Space` on desktop. `🆕 v8.2.0` [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization) [`🎉 Shortcuts feature ↗`](/features/shortcuts/#playback)
+Stop after this track can also be an artwork gesture, a notification button on Android, or `Ctrl` + `Space` on desktop. `🆕 v8.2.0` [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#miniplayer-customization) [`🎉 Shortcuts feature ↗`](/features/shortcuts/#playback)
 
 ### Change or fix lyrics {#change-lyrics}
 

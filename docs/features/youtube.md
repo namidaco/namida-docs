@@ -20,7 +20,8 @@ Namida comes with a full YouTube section, powered by a custom client. Stream, wa
 
 `🆕 v8.4.0`
 
-Browse YouTube Music from the Music section of the YouTube tab: moods, charts, new releases, albums and artists. YouTube search can switch to YouTube Music too. [`📄 Music Page ↗`](/pages/youtube/#music)
+Browse YouTube Music from the Music section of the YouTube tab (moods / charts / new releases / albums / artists). [`📄 Music Page ↗`](/pages/youtube/#music)
+YouTube search can switch to YouTube Music too.
 
 ### Data Saver {#data-saver}
 
@@ -32,7 +33,7 @@ Namida keeps two Data Saver values (one for Wi-Fi and one for mobile data), so y
 
 Cached videos still play as videos, no matter the level.
 
-It is available in the player, not in settings: press the video quality button, Data Saver sits at the top of the list and shows the current level.
+Data Saver is available in the player, not in settings: press the video quality button, it sits at the top of the list and shows the current level.
 
 ### Subtitles {#subtitles}
 
@@ -50,7 +51,7 @@ Watching videos supports gestures:
 - While seeking, swipe upwards to cancel
 - Long press for 1.5x speed [`⚙️ Configure Long Press Speed ↗`](/settings/3-playback-settings/#long-press-speed)
 
-Horizontal seeking on the video can be limited to fullscreen, the expanded miniplayer, always or never. [`⚙️ Configure Drag to seek (Video) ↗`](/settings/5-youtube-settings/#miniplayer)
+Choose when horizontal seeking works on the video (fullscreen / expanded miniplayer / always / never). [`⚙️ Configure Drag to seek (Video) ↗`](/settings/5-youtube-settings/#miniplayer)
 
 ### Fullscreen {#fullscreen}
 
@@ -59,14 +60,14 @@ Ways to enter fullscreen:
 - Swipe up on the video for landscape, works on the minimized player too
 - Swipe down on the right side of the expanded player to enter fullscreen portrait
 - The fullscreen button in the video controls
-- Tapping a short opens it in fullscreen directly
+- Tap a short to open it in fullscreen directly
 - Double tap the video in the local player [`🎉 Video Integration ↗`](/features/playback/#video)
 
 In fullscreen:
 
 - Swipe vertically on the right side for volume, and on the left side for brightness (on Android, going past 100% raises the screen brightness too)
 - The lock button blocks all gestures and controls until you unlock it
-- You can enable glow to show an ambient effect behind the video (might affect performance & battery)
+- Enable glow for an ambient effect behind the video (might affect performance & battery)
 - On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video matches how you are actually holding the device
 
 #### Other Fullscreens {#other-fullscreens}
@@ -77,7 +78,8 @@ In fullscreen:
 
 ### Miniplayer {#miniplayer}
 
-A YouTube style miniplayer with comments, related videos and video description. It dims automatically after a few seconds to help focus & reduce eye strain. Both the delay and the dim intensity can be changed. [`⚙️ Configure Miniplayer ↗`](/settings/5-youtube-settings/#miniplayer)
+A YouTube style miniplayer with comments, related videos and video description.
+The miniplayer dims automatically after a few seconds to help focus & reduce eye strain. Both the delay and the dim intensity can be changed. [`⚙️ Configure Miniplayer ↗`](/settings/5-youtube-settings/#miniplayer)
 
 More related videos load as you scroll to the end, or with the "Show more" button when comments are at the bottom. `🆕 v7.4.0` [`⚙️ Configure Top Comments ↗`](/settings/5-youtube-settings/#comments)
 
@@ -87,9 +89,9 @@ Links in the description that point to another video at a timestamp play it next
 
 `🆕 v7.4.0`
 
-Videos with chapters show a chapters row above the description, open it by tapping the title area. Each chapter shows its length, the current one shows its progress, and played ones are dimmed. Tap a chapter to seek to it, or press "Show All" to list all of them in a sheet.
+Videos with chapters show a chapters row above the description, tap the title area to open it. Each chapter shows its length (progress on the current one, played ones dimmed). Tap one to seek to it, or press "Show All" to list them in a sheet.
 
-Long press a chapter to copy a link to its timestamp, or to download only that chapter. [`🎉 Chapter Downloads ↗`](#chapters-downloads)
+Long press a chapter for more options (copy a link to its timestamp / download only that chapter). [`🎉 Chapter Downloads ↗`](#chapters-downloads)
 
 ### Downloads {#downloads}
 
@@ -110,17 +112,18 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Playlist downloads can be added to a library playlist, see [below](#playlist-downloads). `🆕 v7.4.0`
 - Set file last modified as video upload date, files get the video's date instead of the download time. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
 
-The extra file options (Split by Chapters, Remove Sponsor Segments, Keep cached versions and more) are in the Edit Tags sheet, press the pencil icon beside the video title in the download sheet.
+The extra file options (Split by Chapters / Remove Sponsor Segments / Keep cached versions, etc) are in the Edit Tags sheet, press the pencil icon beside the video title in the download sheet.
 For playlists, press the gear button in the playlist download page.
 
 #### Downloaded Videos {#downloaded-videos}
 
-A downloaded video shows a tick on the [miniplayer](#miniplayer) download button, pressing it still opens the download sheet if you want another copy. In a playlist download page, the header counts the videos already in the chosen folder, and the rest get selected for you. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
+A downloaded video shows a tick on the [miniplayer](#miniplayer) download button, you can still press it to open the download sheet for another copy.
+In a playlist download page, the header counts the videos already in the chosen folder, and the rest get selected for you. [`📄 Downloads Page ↗`](/pages/youtube/#downloads)
 
 - Files deleted outside Namida show as not downloaded again, checked when you come back to the app or open the downloads page. `🆕 v8.4.0`
 - Removing a task without deleting its file keeps the video marked as downloaded, as long as the file is in your library ("Add audio to local library"). `🆕 v8.4.0`
 - A file with the same name in the folder is skipped, or replaced if "Override old files in the same folder" is on (the gear button of a playlist download page). The download sheet warns about it before you start.
-- In the downloads page, a downloaded task can be renamed (the file too), edited and downloaded again, or removed with or without its file.
+- In the downloads page, a downloaded task has more options (rename with its file / edit and download again / remove with or without its file).
 
 With the [cache](#caching):
 
@@ -209,9 +212,10 @@ Examples:
 
 ### Caching & Offline Playback {#caching}
 
-Streamed videos and audios are cached, so they play offline later without downloading. A cache priority system decides what to keep when cleaning up, so your important stuff stays.
+Streamed videos and audios are cached, so they play offline later without downloading.
+A cache priority system decides what to keep when cleaning up, so your important stuff stays.
 
-- Every cached video has a priority: VIP, High, Normal, Low or Disable. Cleaning starts from the bottom, and VIP items are never deleted automatically.
+- Every cached video has a priority (VIP / High / Normal / Low / Disable). Cleaning starts from the bottom, and VIP items are never deleted automatically.
 - Private and deleted YouTube videos are automatically set to VIP, so you never lose them.
 - Info of private and deleted videos can still be shown, thanks to [Filmot](https://filmot.com/).
 
@@ -265,7 +269,8 @@ Shows the dislike count on videos using [Return YouTube Dislike](https://returny
 
 ### Accounts {#accounts}
 
-Sign in to your account to get personalized related videos and mixes, and to interact with videos. It can also improve download speed and fix some playback issues. Brand accounts under the same Google account can each be signed in separately. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
+Sign in to your account to get personalized related videos and mixes, and to interact with videos. It can also improve download speed and fix some playback issues.
+Brand accounts under the same Google account can each be signed in separately. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
 
 Likes, your playlists, subscriptions and notifications are free once signed in, some other account features need a membership. [`📄 Membership ↗`](/membership/#benefits)
 

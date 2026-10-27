@@ -56,11 +56,13 @@ With Auto, these show up on their own, and switch right on time:
 - **Sakura**, March 25 to April 10.
 - **Tanabata**, July 7, galaxy.
 
-When two overlap, the higher one wins. A small message announces each season, with a Disable button.
+When two overlap, the higher one wins.
+A small message announces each season, with a Disable button.
 
 ### Visualizers {#visualizers}
 
-Shown in the expanded player, they move with the music and fade out when paused. Pick them from Visualizer in Miniplayer Customization.
+Shown in the expanded player, they move with the music and fade out when paused.
+Pick them from Visualizer in Miniplayer Customization.
 
 Main styles, one at a time:
 
@@ -105,12 +107,11 @@ The background of fullscreen lyrics, set from Lyrics (Fullscreen) in Miniplayer 
   - **Always** on: show the effect all the time.
   - **Always** off: show the effect only when a track has no lyrics, tracks with lyrics show the **Artwork** background (to reduce distraction).
 
-Tracks without lyrics can show a visualizer there too: Bars, Waves or Mirrored bars.
+Tracks without lyrics can show a visualizer there too (Bars / Waves / Mirrored bars).
 
 ### Wallpaper {#wallpaper}
 
-An image of your choice behind all the pages, under the background effect, with Blur and Dim Intensity.
-(needs the `BACKGROUND_IMAGES` [flag](/settings/6-extras-settings/#flags))
+An image of your choice behind all the pages, under the background effect, with Blur and Dim Intensity (needs the `BACKGROUND_IMAGES` [flag](/settings/6-extras-settings/#flags)).
 
 ### Membership {#membership}
 

@@ -10,7 +10,7 @@ description: "Linking videos, syncing and smart playlists"
 1. Open the track's dialog and choose "Set Youtube Link".
 2. Paste the video link, done. The video plays with the track when [`⚙️ Configure Video Playback ↗`](/settings/3-playback-settings/#video-playback) is on.
 
-It also works automatically, Namida looks up the track's comment tag (usually filled by yt-dlp) or its filename for a YouTube link. If found, the video is downloaded and cached, then plays once ready. Streaming is not used here since the priority goes to the music file itself.
+Linking also works automatically, Namida looks up the track's comment tag (usually filled by yt-dlp) or its filename for a YouTube link. If found, the video is downloaded and cached, then plays once ready. Streaming is not used here since the priority goes to the music file itself.
 
 - In the comment tag, any url format gets matched, example: `https://youtu.be/video_id`
 - In filenames, it should contain `v=video_id` or `id=video_id` to get matched.
@@ -79,7 +79,7 @@ For M3U files:
 
 1. Convert your playlists to M3U, they are saved in [Namida Folder](/storage-paths/#namida-folder)`/M3U Playlists`.
    - Exporting selected playlists converts them all at once, or saves unlinked copies to any folder you pick. `🆕 v8.2.0`
-   - Long press Convert to M3U in a playlist's menu to save it right in your music folder (next to its tracks or any folder), then skip steps 2 and 3. `🆕 v8.4.0`
+   - Long press Convert to M3U in a playlist's menu to save it right in your music folder (next to its tracks / any folder), then skip steps 2 and 3. `🆕 v8.4.0`
 2. Move the M3U files somewhere inside your music folder.
 3. Refresh the playlists in Namida (pull down in the playlists page), they turn into relative playlists.
 4. Sync them together with the music using [syncthing](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) or similar apps. [`📒 Syncing Music Files Guide ↗`](/guides/medium/#sync-music-files)

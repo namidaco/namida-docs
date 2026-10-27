@@ -5,7 +5,8 @@ description: "What the Namida APK contains and why it is this big"
 
 # App Size
 
-What the Android APK contains, and why Namida doesn't drop features or speed to make it smaller. The sizes come from the `arm64-v8a` APK of v8.5.0 beta, which is 55.5 MB.
+What the Android APK contains, and why Namida doesn't drop features or speed to make it smaller.
+The sizes come from the `arm64-v8a` APK of v8.5.0 beta, which is 55.5 MB.
 
 ### What's Inside {#whats-inside}
 

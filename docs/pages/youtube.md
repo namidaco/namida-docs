@@ -12,7 +12,7 @@ Most pages have a Namida variant, and an account one for when you are signed in.
 
 `🆕 v8.2.0`
 
-The header at the top of the YouTube tab switches between Home, Music `🆕 v8.4.0`, Notifications, Channels, Playlists and Downloads. A small badge shows each one's source:
+The header at the top of the YouTube tab switches sections (Home / Music `🆕 v8.4.0` / Notifications / Channels / Playlists / Downloads). A small badge shows each one's source:
 
 - Local: what Namida keeps on your device (its own watch history, playlists and subscribed channels).
 - YouTube: your signed-in account's live data, the default once you are signed in. [`🎉 Namida & Account ↗`](/features/youtube/#namida-account)
@@ -25,10 +25,13 @@ Navigating:
 
 ### Home {#home}
 
-Your YouTube feed, with notifications and subscriptions when [signed in](/settings/5-youtube-settings/#accounts). Your account's home feed needs a membership. [`📄 Membership ↗`](/membership/#benefits)
+Your YouTube feed, with notifications and subscriptions when [signed in](/settings/5-youtube-settings/#accounts).
+Your account's home feed needs a membership. [`📄 Membership ↗`](/membership/#benefits)
 The Namida home is built from your Namida history instead, with the same [mixes](/pages/library/#home) as the library Home.
-In notifications, you can play all unread videos at once, and comment notifications open the comment with its replies. If new notifications don't show up, switch the extractor from the button at the top.
-Open a notification's menu and press "More" to hide it, or to turn off notifications from that channel (this one needs a membership). `🆕 v7.4.0`
+
+In notifications, you can play all unread videos at once, and comment notifications open the comment with its replies.
+If new notifications don't show up, switch the extractor from the button at the top.
+Open a notification's menu and press "More" for more options (hide it / turn off notifications from that channel, which needs a membership). `🆕 v7.4.0`
 
 ### Music {#music}
 
@@ -36,7 +39,7 @@ Open a notification's menu and press "More" to hide it, or to turn off notificat
 
 YouTube Music, right inside the YouTube tab, no account needed.
 
-- The home has mood chips (like Relax or Workout) to filter it, and buttons for Explore, Charts, Moods and New releases. Charts can be picked by country.
+- The home has mood chips (like Relax or Workout) to filter it, and buttons (Explore / Charts / Moods / New releases). Charts can be picked by country.
 - Tap a song to play it, the rest of its row becomes the queue. Long press anything for its menu.
 - Album pages show the album with its tracks, tap the artist name to open the artist.
 - Artist pages have Play and Shuffle for the artist's songs, a Channel button for the YouTube channel, and the artist's sections.
@@ -52,7 +55,7 @@ Namida YouTube playlists can be tagged, pinned and filtered too. `🆕 v7.8.0` [
 ### Channels {#channels}
 
 Your subscribed channels, they can be organized into groups. Each channel page shows its videos and info.
-Long press a Subscribe button (on a channel page, a channel card or under a video) to manage its groups: search, create, rename or remove them, and favourite the channel. Pick a group from the filter button at the top to see only its channels and videos. `🆕 v8.4.0`
+Long press a Subscribe button (on a channel page, a channel card or under a video) to manage its groups (search / create / rename / remove) or favourite the channel. Pick a group from the filter button at the top to see only its channels and videos. `🆕 v8.4.0`
 Press the time range icon in a channel page to list only videos uploaded after or before a date. `🆕 v7.0.0`
 Tap the channel picture or banner to view it fullscreen, with a save button. `🆕 v8.2.0`
 
@@ -65,7 +68,7 @@ There are two YouTube histories:
 
 ### Downloads {#downloads}
 
-Manage all download tasks (pause, resume, retry or cancel), with a failed only filter. Playlists get their own batch download page. [`🎉 Downloads feature ↗`](/features/youtube/#downloads)
+Manage all download tasks (pause / resume / retry / cancel), with a failed only filter. Playlists get their own batch download page. [`🎉 Downloads feature ↗`](/features/youtube/#downloads)
 
 The flash icon at the top sets how many downloads run at the same time (4 by default and up to 10), the icon shows the current value. The rest wait until a slot is free. `🆕 v7.1.0`
 The same dialog has "Threads per download", how many connections each big file downloads over (3 by default and up to 8). `🆕 v7.4.0`
@@ -85,11 +88,11 @@ Offline search is available for browsing what you already have, turn on the "Cac
 
 A filters row sits above the results:
 
-- YouTube Music: searches YouTube Music instead, with its own categories (songs, videos, albums, artists, playlists). `🆕 v8.4.0`
-- Type: All, Videos, Channels, Playlists or Movies.
-- Sort by: Relevance, Rating, Upload date or Views.
-- Date: Last hour, Today, This week, This month, This year, or pick an exact "is After" / "is Before" date.
-- Match: Exact phrase or In title, plus words to exclude. `🆕 v8.2.0`
+- YouTube Music, searches YouTube Music instead, with its own categories (songs / videos / albums / artists / playlists). `🆕 v8.4.0`
+- Type (All / Videos / Channels / Playlists / Movies).
+- Sort by (Relevance / Rating / Upload date / Views).
+- Date (Last hour / Today / This week / This month / This year), or pick an exact "is After" / "is Before" date.
+- Match (Exact phrase / In title), plus words to exclude. `🆕 v8.2.0`
 
 You can also type the date right in the search text (like `after:2024-01-01` or `before:2023-06`). The date range applies to offline search too.
 Same for match filters (`"exact phrase"`, `intitle:word`, `-word`), offline search included. Exact searches also skip autocorrect. `🆕 v8.2.0`

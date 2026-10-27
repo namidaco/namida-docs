@@ -22,7 +22,8 @@ Control Namida from the keyboard on desktop.
 | `Ctrl` + `Tab` | Change repeat mode |
 | `Ctrl` + `Shift` + `S` | Shuffle, following the shuffle button mode `🆕 v8.4.0` |
 
-Seeking jumps by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Shuffle follows the mode of the shuffle button: a toggle, Shuffle Next or Shuffle All. [`🎉 Queue System ↗`](/features/playback/#queue)
+Seeking jumps by your [Seek Duration](/settings/3-playback-settings/#seek-duration).
+Shuffle follows the mode of the shuffle button (toggle / Shuffle Next / Shuffle All). [`🎉 Queue System ↗`](/features/playback/#queue)
 
 ### Zoom {#zoom}
 

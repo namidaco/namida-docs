@@ -17,9 +17,9 @@ Play videos related to the music. Videos can be found locally or fetched from Yo
 
 ### Video Source {#video-source}
 
-- Auto: uses local videos first, if none is found it fetches from YouTube.
-- Local Videos: checks if any video file inside your folders has a filename that matches the track.
-- From Youtube: checks the track filename & comment tag for a matching YouTube link, videos are cached for later use.
+- Auto, uses local videos first, if none is found it fetches from YouTube.
+- Local Videos, checks if any video file inside your folders has a filename that matches the track.
+- From Youtube, checks the track filename & comment tag for a matching YouTube link, videos are cached for later use.
 
 ### Video Quality {#video-quality}
 
@@ -27,17 +27,17 @@ Your preferred qualities, in order. Keep a few alternatives (if none of them is 
 
 ### Local Video Matching {#local-video-matching}
 
-How local videos are matched with tracks (by title or filename), with an option to match inside the same directory only.
+How local videos are matched with tracks (title / filename), with an option to match inside the same directory only.
 
 ### Keep Screen Awake When {#keep-screen-awake}
 
-Never, when the miniplayer is expanded, or when the miniplayer is expanded and a video is playing.
+Three modes (Never / when the miniplayer is expanded / when the miniplayer is expanded and a video is playing).
 
 ### Notification Buttons {#notification-buttons}
 
 `🆕 v8.2.0` `💻 Android only`
 
-Pick and reorder the media notification buttons: favourite, stop, shuffle, repeat, seek, chapters, sleep timer, stop after this track, add to playlist and bookmark. For add to playlist, you pick the playlist it adds to.
+Pick and reorder the media notification buttons (favourite / stop / shuffle / repeat / seek / chapters / sleep timer / stop after this track / add to playlist / bookmark). For add to playlist, you pick the playlist it adds to.
 On Android 11 and below, the thumbnail might move out of place with 5 buttons.
 
 ### Display Artwork on Lockscreen {#artwork-lockscreen}
@@ -48,15 +48,15 @@ Shows the current track's artwork on the lockscreen.
 
 ### Kill Player After Dismissing App {#kill-player}
 
-Stops playback completely when you swipe the app away. Three modes: Always, If not playing, or Never.
+Stops playback completely when you swipe the app away. Three modes (Always / If not playing / Never).
 
-On Windows & Linux this decides what closing the window does (quit the app or minimize to the tray). [`🎉 System Tray ↗`](/features/system-integration/#tray)
+On Windows & Linux this decides what closing the window does (quit the app / minimize to the tray). [`🎉 System Tray ↗`](/features/system-integration/#tray)
 
 ### On Notification Tap {#on-notification-tap}
 
 `💻 Android only`
 
-Choose what opens: the app, the miniplayer or the queue.
+Choose what opens (the app / the miniplayer / the queue).
 
 ### Dismissible Miniplayer {#dismissible-miniplayer}
 
@@ -66,7 +66,7 @@ Swipe the miniplayer away to stop playback and clear the queue.
 
 `🆕 v7.8.0`
 
-Opens the Sound Control page: output device, bit-perfect, the equalizer, speed, pitch and more. [`🎉 Sound Control ↗`](/features/playback/#sound-control)
+Opens the Sound Control page (output device / bit-perfect / equalizer / speed / pitch, etc). [`🎉 Sound Control ↗`](/features/playback/#sound-control)
 
 ### Normalize Audio {#normalize-audio}
 
@@ -117,7 +117,7 @@ Pressing next on the last item jumps to the first one, and vice versa.
 
 ### On Volume 0 {#on-volume-zero}
 
-Pause playback or do nothing when volume reaches zero, with an option to resume if it was paused for less than a set number of minutes.
+Choose what happens when volume reaches zero (pause playback / do nothing), with an option to resume if it was paused for less than a set number of minutes.
 
 ### Long-Press Action: Speed {#long-press-speed}
 
@@ -127,7 +127,7 @@ The playback speed used while long pressing the next button or the video (1.5x b
 
 `💻 Android only`
 
-Control what happens on calls and notifications: pause, duck (lower the volume) or do nothing, and whether to resume after the interruption ends.
+Control what happens on calls and notifications (pause / duck, which lowers the volume / do nothing), and whether to resume after the interruption ends.
 
 ### On Device Connect {#on-device-connect}
 

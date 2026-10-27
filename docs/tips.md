@@ -18,7 +18,7 @@ Not so obvious features you might have missed.
 
 - Swipe up on the search button to open the keyboard, swipe down to close it.
 - Pasting a YouTube link or a playlist link in the searchbar automatically opens it.
-- When playing from search, you can choose the [Play Mode](/pages/library/#search): selected track only, search results, album, first artist or first genre.
+- When playing from search, you can choose the [Play Mode](/pages/library/#search) (selected track only / search results / album / first artist / first genre).
 - Links and texts you copy can appear right in the searchbar, enable [Clipboard Monitoring](/settings/6-extras-settings/#clipboard-monitoring).
 - Settings has its own search, press the Search button in settings.
   - It finds options inside settings too, like "Sakura". `🆕 v7.8.0`
@@ -39,7 +39,7 @@ Not so obvious features you might have missed.
 - Long press the lyrics to enter fullscreen, and pinch the lyrics to change the font size. On desktop it's `Ctrl` + mouse wheel or `Ctrl` + `+` / `-`, and `Ctrl` + `0` resets it.
   - In fullscreen, hold a line for a second to copy it. `🆕 v8.4.0`
 - Long press the audio button in the player for a quick menu with the [Audio path](/features/playback/#audio-path) and [Playback Settings](/settings/3-playback-settings/).
-- Long press the video button in the player to control quality or change the audio track for videos.
+- Long press the video button in the player for video options (quality / audio track).
 - Press the subtitle icon in the video controls to pick a subtitle, the language you pick is remembered for next videos. [`🎉 Subtitles feature ↗`](/features/subtitles/)
 - Long press the lyrics button (right click on desktop) to configure lyrics for the current track, or embed them into the file. [`🎉 Lyrics Picker ↗`](/features/playback/#lyrics-picker)
 - Long press a sleep timer preset to remove it. [`🎉 Sleep Timer ↗`](/features/playback/#sleep-timer)
@@ -83,11 +83,11 @@ Long press a track (or tap its menu) for more than you might expect:
 The track menu has an Advanced section:
 
 - Copy or move the files to another folder.
-- Clear specific things for that track: artwork, thumbnail, plain or synced lyrics, video cache, audio cache and server cache.
+- Clear specific things for that track (artwork / thumbnail / plain or synced lyrics / video cache / audio cache / server cache).
 - Delete the files from storage, deleted paths are saved to a file in the app data folder just in case.
 - Share the files.
 - See which sources the listens came from, useful after importing a history.
-- Set the track as a ringtone, a notification sound or an alarm.
+- Set the track as a system sound (ringtone / notification sound / alarm).
 - Re-index the track, good after editing it outside Namida.
 - Replace all listens of a track with another track.
 - Edit the [color palette](/settings/1-theme-settings/#auto-coloring) of the track, add or remove colors and pick a mix.
@@ -114,7 +114,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
   - Shuffle can pick a number of tracks (with a minimum too) and exclude your most recent listens. `🆕 v7.8.0`
 - In an album, artist, playlist or folder dialog, the options button beside Play All or Shuffle opens the same options. `🆕 v7.8.0`
 - Tap the resume button in media subpages to resume from the last played track, and long press it to jump to that track.
-- In the Home page, tapping a Recent Queues card that was played from a playlist or folder opens that playlist or folder, long press it to open its dialog. [`📄 Home Page ↗`](/pages/library/#home)
+- In the Home page, tap a Recent Queues card that was played from a playlist or folder to open that playlist or folder, or long press it to open its dialog. [`📄 Home Page ↗`](/pages/library/#home)
 - With a network image source enabled, open an album or artist dialog and press the edit icon at the top right to change its display image. Playlist artworks can always be edited.
   - This only changes the display image, the audio files and their tags are untouched.
 - Open the dialog of an album, artist, playlist or folder and press Stats to see listen stats for just those tracks.
@@ -122,7 +122,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 - Tabs with variants (like Tracks: Audio or Folders: Videos) share one slot in the navigation bar, long press it to switch. [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
   - Long pressing the YouTube tab jumps to one of its sections. `🆕 v8.2.0`
 - In the playlists page grouped by tags, long press a tag header to select all its playlists. `🆕 v8.2.0`
-- In a playlist's menu, long press Convert to M3U to pick where the file is saved: the default folder, the folder holding its tracks or any folder. `🆕 v8.4.0`
+- In a playlist's menu, long press Convert to M3U to pick where the file is saved (default folder / folder holding its tracks / any folder). `🆕 v8.4.0`
 - In an artist page, long press the icon of the albums, EPs or singles row to sort them. `🆕 v8.2.0`
 - Press the map icon in an artist page to see where that artist sits among the rest of your library. [`📄 Artists Map ↗`](/pages/library/#artists-map)
 - Tapping or long pressing a track's thumbnail can run an action of your choice, like play next or open its info. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#track-tile)
@@ -145,7 +145,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 - You can import your history, playlists and subscriptions from a [YouTube takeout](/features/youtube/#history-import).
 - Set a cached video's priority to VIP so it never gets auto deleted. Private and deleted videos become VIP automatically.
 - Namida can show info of private and deleted videos, thanks to [Filmot](https://filmot.com/).
-- In the YouTube search tab, offline search is very useful to find videos you watched previously. You can sort results by most played, recent listen or first listen, or turn on the "Cache" chip to see only what plays offline. Import your YouTube history for better results.
+- In the YouTube search tab, offline search is very useful to find videos you watched previously. You can sort results (most played / recent listen / first listen), or turn on the "Cache" chip to see only what plays offline. Import your YouTube history for better results.
 - Long press a chapter in the miniplayer to copy a link to its timestamp.
 - Take a snapshot of a channel or playlist: open the videos tab, press "load all", wait, then open the menu and add to a playlist.
 - Type `after:2024-01-01` or `before:2023-06` in the search text to filter by upload date, or use the filters row. [`📄 Search Filters ↗`](/pages/youtube/#search-filters)
@@ -165,7 +165,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 - Imported a wrong source? [Remove it from history](/settings/8-advanced-settings/#remove-source-history) in one go.
 - The Stats page has charts for any time range, and a Your Year wrap up shows up on the Home page every December and January. [`📄 Stats Page ↗`](/pages/other/#stats)
 - Long press any chart card to copy its values as text, press its share icon to save it as an image, or use the share icon in the app bar to export all of them at once.
-- The Total Listens donut can be split by genres, styles, moods, tags, artists, album artists, composers or albums, press the category icon on the card.
+- Press the category icon on the Total Listens donut card to split it differently (genres / styles / moods / tags / artists / album artists / composers / albums).
 
 ### Info & Sorting {#info-sorting}
 
@@ -221,7 +221,7 @@ Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-setting
 - On a wide window, the maximize icon at the top left of the expanded player opens a two pane layout with lyrics/queue beside the artwork/video. [`🎉 Widescreen Player ↗`](/features/playback/#widescreen-player)
 - Closing the window keeps Namida in the tray, click the tray icon to bring it back. Change this in [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player).
 - `Ctrl` + mouse wheel zooms, works on the lyrics font size and on the cards of a playlist download page. `Ctrl` + `0` resets it. [`🎉 Zoom Shortcuts ↗`](/features/shortcuts/#zoom)
-- Drag files onto the window and drop them on Play, Play (Choose) or More. `🆕 v8.2.0`
+- Drag files onto the window and drop them on a zone (Play / Play (Choose) / More). `🆕 v8.2.0`
 
 ### Android {#android-tips}
 
