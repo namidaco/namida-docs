@@ -27,9 +27,10 @@
     { id: 'mindmap', label: 'Mind map' },
   ];
 
-  // -- every thumbnail fills the same box (cut from the top), so nothing moves when images load
+  // -- every screen gets the same phone sized box so nothing moves when images load, a shot shows whole inside it
+  // -- (tall full page shots are cut at its bottom)
   var NODE_WIDTH = 30;
-  var NODE_HEIGHT = 65;
+  var NODE_HEIGHT = (NODE_WIDTH * 20) / 9;
   var NODE_RADIUS = 1.2;
   var APP_NODE_SIZE = 40;
   var LABEL_FONT_SIZE = 4.2;
@@ -330,18 +331,21 @@
         return;
       }
       var image = imageOf(variantOf(node).thumb);
+      var isLoaded = image.complete && image.naturalWidth > 0;
+      var fittedHeight = isLoaded ? (box.width * image.naturalHeight) / image.naturalWidth : box.height;
+      var shotHeight = Math.min(fittedHeight, box.height);
       ctx.save();
-      roundedRect(ctx, box.left, box.top, box.width, box.height, NODE_RADIUS);
+      roundedRect(ctx, box.left, box.top, box.width, shotHeight, NODE_RADIUS);
       ctx.fillStyle = state.colors.strip;
       ctx.fill();
-      if (image.complete && image.naturalWidth > 0) {
+      if (isLoaded) {
         ctx.clip();
-        var sourceHeight = Math.min(image.naturalHeight, (image.naturalWidth * NODE_HEIGHT) / NODE_WIDTH);
-        ctx.drawImage(image, 0, 0, image.naturalWidth, sourceHeight, box.left, box.top, box.width, box.height);
+        var sourceHeight = (image.naturalWidth * shotHeight) / box.width;
+        ctx.drawImage(image, 0, 0, image.naturalWidth, sourceHeight, box.left, box.top, box.width, shotHeight);
       }
       ctx.restore();
       var isHovered = state.hovered === node;
-      roundedRect(ctx, box.left, box.top, box.width, box.height, NODE_RADIUS);
+      roundedRect(ctx, box.left, box.top, box.width, shotHeight, NODE_RADIUS);
       ctx.lineWidth = (isHovered ? 2 : 1) / scale;
       ctx.strokeStyle = isHovered ? state.colors.accent : state.colors.border;
       ctx.stroke();

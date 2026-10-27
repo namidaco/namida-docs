@@ -5,7 +5,7 @@ description: "Features in Namida"
 
 # Features
 
-What Namida can do, each feature explained in its own page.
+What Namida can do, each feature explained in its own page. [`📄 Tour ↗`](/tour/)
 
 - [Library & Indexing](/features/library-indexing/), a powerful folder based music library
 - [Playback](/features/playback/), queues, effects, videos and lyrics

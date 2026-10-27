@@ -242,8 +242,10 @@ function readNav() {
   for (const item of config.navigation) {
     if (item.external) continue;
     const group = item.children ? item.title : ungroupedTitle;
-    const itemPath = normalizeNavPath(item.path);
-    result.set(itemPath, { order: result.size, group });
+    if (item.path !== undefined) {
+      const itemPath = normalizeNavPath(item.path);
+      result.set(itemPath, { order: result.size, group });
+    }
     for (const child of item.children ?? []) {
       if (child.external) continue;
       const childPath = normalizeNavPath(child.path);

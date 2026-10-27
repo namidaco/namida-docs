@@ -1,0 +1,54 @@
+{
+  "chapters": [
+    {
+      "title": "Library",
+      "color": "accent",
+      "stops": [
+        { "shot": "home", "wide": "wide_home", "title": "Home", "text": "Mixes made from your taste, and memories from years back." },
+        { "shot": "playlists", "wide": "wide_playlists", "title": "Playlists", "text": "Every kind of playlist, in one place." },
+        { "shot": "smart_playlist_editor_filled", "title": "Smart Playlists", "text": "Playlists that build themselves." },
+        { "shot": "history", "title": "History", "text": "Every listen kept forever, jump back to any day or listen." },
+        { "shot": "most_played", "title": "Most Played", "text": "Your top tracks from any moment in time." },
+        { "shot": "search", "title": "Search", "text": "Search the whole library at once, even inside lyrics." },
+        { "shot": "album_page", "wide": "wide_album", "title": "Albums", "text": "Every album, single and EP in its place." },
+        { "shot": "artist_page", "wide": "wide_artist", "title": "Artists", "text": "Every artist, composer and feature, sorted out." }
+      ]
+    },
+    {
+      "title": "Player",
+      "color": "purple",
+      "stops": [
+        { "shot": "player_background_artwork", "wide": "wide_player", "href": "/features/playback/", "title": "Player", "text": "A clean player built around your music, with cool yet calm effects." },
+        { "shot": "player_queue", "title": "Queue", "text": "All your queues saved, pick up any of them where you left off." },
+        { "shot": "player_lyrics", "title": "Lyrics", "text": "Lyrics that light up line by line or word by word." },
+        { "shot": "sound_control", "title": "Sound Effects", "text": "Shape every track with a parametric EQ and sound effects." },
+        { "shot": "visualizer_bars", "title": "Visualizers", "text": "Bars, waves, particles and more, moving with your music." }
+      ]
+    },
+    {
+      "title": "YouTube",
+      "color": "red",
+      "stops": [
+        { "shot": "yt_home_feed", "title": "YouTube", "text": "YouTube inside Namida, with your feed, channels and notifications." },
+        { "shot": "yt_player", "title": "Miniplayer", "text": "Comments and related videos, without leaving the video." },
+        { "shot": "yt_playlists", "title": "YouTube Playlists", "text": "Your YouTube playlists, safe from videos randomly going missing." },
+        { "shot": "yt_download_sheet", "title": "Downloads", "text": "Download anything, properly tagged." }
+      ]
+    },
+    {
+      "title": "More",
+      "color": "neutral",
+      "stops": [
+        { "shot": "stats", "wide": "wide_stats", "title": "Stats", "text": "Charts of your listening, from top tracks to your longest streak." },
+        { "shot": "party_room", "title": "Listening Party", "text": "Listen together with friends, in sync." },
+        { "shot": "sync_manager", "title": "Sync", "text": "Sync your data between all your devices." },
+        { "shot": "your_year", "title": "Your Year", "text": "Look back at your year in music." },
+        { "shot": "tag_editor", "title": "Tag Editor", "text": "A powerful tag editor, from a single track to your whole library." },
+        { "shot": "lyrics_editor", "wide": "wide_lyrics_editor", "title": "Lyrics Editor", "text": "Make your own synced lyrics." },
+        { "shot": "artists_map", "title": "Artists Map", "text": "See how all your artists connect." },
+        { "shot": "shortcuts", "platforms": ["windows"], "title": "Shortcuts", "text": "Control playback and navigation from the keyboard." },
+        { "shot": "settings", "wide": "wide_settings_main", "title": "Settings", "text": "Tune every detail: themes, playback, the player, YouTube and more." }
+      ]
+    }
+  ]
+}

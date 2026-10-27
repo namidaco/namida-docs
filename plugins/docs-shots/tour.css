@@ -1,0 +1,445 @@
+.docs-tour {
+  --tour-color-accent: color-mix(in oklab, var(--summer-accent) 62%, var(--summer-fg-muted));
+  --tour-color-purple: color-mix(in oklab, #8b5cf6 60%, var(--summer-fg-muted));
+  --tour-color-red: color-mix(in oklab, #e5383b 65%, var(--summer-fg-muted));
+  --tour-color-neutral: color-mix(in oklab, var(--summer-fg) 80%, var(--summer-fg-muted));
+  margin: 16px 0 24px;
+}
+
+.docs-tour__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.docs-tour__chapters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.docs-tour__chapter {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+  font-size: 0.85rem;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--summer-border);
+  border-radius: 999px;
+  padding: 3px 12px 3px 9px;
+  cursor: pointer;
+}
+
+.docs-tour__chapter::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tour-color);
+}
+
+.docs-tour__chapter[aria-pressed='true'] {
+  border-color: color-mix(in srgb, var(--tour-color) 60%, transparent);
+  background: color-mix(in srgb, var(--tour-color) 8%, transparent);
+}
+
+.docs-tour__stage {
+  position: relative;
+  height: 72vh;
+  min-height: 480px;
+  max-height: 760px;
+  border: 1px solid var(--summer-border);
+  border-radius: var(--summer-radius-lg);
+  background: var(--summer-bg);
+  overflow: hidden;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@media (max-width: 640px) {
+  .docs-tour__stage {
+    height: 80vh;
+    min-height: 540px;
+  }
+}
+
+.docs-tour__stage:focus-visible {
+  box-shadow: 0 0 0 3px var(--summer-ring);
+}
+
+.docs-tour__stage:fullscreen {
+  height: 100%;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.docs-tour__world {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+
+.docs-tour__stage.is-moving .docs-tour__world {
+  will-change: transform;
+}
+
+/* -- the theme styles every content image (after this file loads), and its max-width would shrink the sizeless
+   world's svg to nothing */
+.docs-tour .docs-tour__world > svg,
+.docs-tour .docs-tour__world img {
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.docs-tour__lines {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: visible;
+}
+
+.docs-tour__track {
+  fill: none;
+  stroke: var(--summer-fg-faint);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 0.1 12;
+  opacity: 0.48;
+}
+
+.docs-tour__segment {
+  fill: none;
+  stroke: var(--tour-color);
+  stroke-width: 3.5;
+  stroke-opacity: 0.64;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.docs-tour__segment.is-empty {
+  visibility: hidden;
+}
+
+.docs-tour__station {
+  fill: var(--summer-bg);
+  stroke: var(--summer-fg-faint);
+  stroke-width: 2.5;
+  opacity: 0.9;
+  transition: fill 0.3s, stroke 0.3s;
+}
+
+.docs-tour__station.is-reached {
+  stroke: var(--tour-color);
+}
+
+.docs-tour__station.is-current {
+  fill: var(--tour-color);
+}
+
+.docs-tour__pulse {
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid var(--tour-color);
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: docs-tour-pulse 1.6s cubic-bezier(0.3, 0.6, 0.6, 1) infinite;
+}
+
+.docs-tour__pulse.is-hidden,
+.docs-tour__stage.is-map .docs-tour__pulse {
+  display: none;
+}
+
+@keyframes docs-tour-pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.docs-tour__origin {
+  position: absolute;
+}
+
+.docs-tour__origin img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.docs-tour__card {
+  position: absolute;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--summer-bg-subtle);
+  box-shadow: 0 0 0 1px var(--summer-border), var(--summer-shadow);
+  opacity: 0;
+  transform: translateY(24px) scale(0.95);
+  transform-origin: 50% 100%;
+  transition: opacity 0.35s, transform 0.45s cubic-bezier(0.2, 0.9, 0.25, 1), box-shadow 0.35s;
+  cursor: pointer;
+}
+
+.docs-tour__card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.docs-tour__card.is-visited {
+  opacity: 0.4;
+  transform: none;
+}
+
+.docs-tour__card.is-current {
+  --tour-ring-color: color-mix(in oklab, var(--tour-color) 55%, var(--summer-fg-muted));
+  opacity: 1;
+  transform: none;
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--tour-ring-color) 45%, var(--summer-bg)), 0 22px 60px -28px color-mix(in srgb, var(--tour-ring-color) 35%, transparent);
+  cursor: default;
+}
+
+.docs-tour__stage.is-map .docs-tour__card {
+  opacity: 1;
+  transform: none;
+  cursor: pointer;
+}
+
+.docs-tour__label {
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  white-space: nowrap;
+  color: var(--summer-fg-soft);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.docs-tour__label.is-reached {
+  opacity: 0.55;
+}
+
+.docs-tour__label.is-current,
+.docs-tour__stage.is-map .docs-tour__label {
+  opacity: 1;
+}
+
+.docs-tour__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 56px;
+  padding: 18px 16px 10px;
+  font-size: 0.9rem;
+  pointer-events: none;
+  background: linear-gradient(to top, var(--summer-bg) 80%, transparent);
+}
+
+.docs-tour__stage--wide .docs-tour__caption {
+  top: 0;
+  right: auto;
+  width: var(--tour-side);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 28px 40px 28px 28px;
+  font-size: 1rem;
+  background: linear-gradient(to right, var(--summer-bg) 72%, transparent);
+}
+
+.docs-tour__stage--wide .docs-tour__title {
+  margin: 4px 0 8px;
+  font-size: 1.55rem;
+}
+
+.docs-tour__stage--wide .docs-tour__links {
+  margin-top: 14px;
+}
+
+.docs-tour__caption-content {
+  animation: docs-tour-caption-in 0.5s both;
+}
+
+.docs-tour__caption-content.is-leaving {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+@keyframes docs-tour-caption-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.docs-tour__kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tour-color, var(--summer-accent));
+}
+
+.docs-tour__title {
+  margin: 2px 0 4px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--summer-fg);
+}
+
+.docs-tour__text {
+  margin: 0;
+  line-height: 1.45;
+  color: var(--summer-fg-soft);
+}
+
+.docs-tour__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.docs-tour__link {
+  pointer-events: auto;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border: 1px solid var(--summer-border);
+  border-radius: 999px;
+  background: var(--summer-bg);
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.docs-tour__link:hover {
+  border-color: var(--summer-fg-faint);
+}
+
+.docs-tour__controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 10px;
+  background: var(--summer-bg);
+  border-top: 1px solid var(--summer-border);
+}
+
+.docs-tour__button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--summer-fg);
+  cursor: pointer;
+}
+
+.docs-tour__button:hover,
+.docs-tour__button[aria-pressed='true'] {
+  background: var(--summer-bg-subtle);
+}
+
+.docs-tour__button svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.docs-tour__button--play,
+.docs-tour__button--play:hover {
+  background: var(--summer-fg);
+  color: var(--summer-bg);
+}
+
+.docs-tour__progress {
+  flex: 1;
+  display: flex;
+  gap: 3px;
+  margin: 0 10px;
+}
+
+.docs-tour__step {
+  flex: 1;
+  position: relative;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.docs-tour__step::before,
+.docs-tour__step-fill {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.docs-tour__step::before {
+  background: var(--summer-border);
+}
+
+.docs-tour__step-fill {
+  background: var(--tour-color);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .docs-tour__card,
+  .docs-tour__label,
+  .docs-tour__station {
+    transition: none;
+  }
+
+  .docs-tour__pulse,
+  .docs-tour__caption-content {
+    animation: none;
+  }
+}

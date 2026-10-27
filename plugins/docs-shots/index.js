@@ -4,7 +4,8 @@
 // (tiles.json, recorded by the namida screenshots driver) become hotspots linking to the section with the same title,
 // or the one `tileAliases` names, and every such tile is a preview for links to that section (docs-shots-previews.json).
 // links to other sections or pages with shots preview their first shot. screens.json (which screen opens which)
-// becomes the screens map data (docs-shots-screens.json, see screens.js).
+// becomes the screens map data (docs-shots-screens.json, see screens.js), and tour.json's stops become the tour page
+// data (docs-shots-tour.json) with their shots and the docs section showing each.
 // the manifest's `base` names `{commit}`: package.json's `namida.screenshotsCommit`, where `latest` (the default) is
 // namida-assets' main at build time, so links never sit behind jsdelivr's @main cache and need no manual bump.
 // DOCS_SHOTS_BASE=<url> replaces the manifest's `base`, to preview shots that aren't published yet.
@@ -25,6 +26,7 @@ export const plugin = {
 const PLUGIN_DIR = path.dirname(fileURLToPath(import.meta.url));
 const DOCS_REPO_DIR = path.resolve(PLUGIN_DIR, '..', '..');
 const MANIFEST_PATH = path.join(DOCS_REPO_DIR, 'screenshots.json');
+const TOUR_PATH = path.join(DOCS_REPO_DIR, 'tour.json');
 const PACKAGE_PATH = path.join(DOCS_REPO_DIR, 'package.json');
 const ASSETS_REMOTE = 'https://github.com/namidaco/namida-assets';
 const LATEST_COMMIT = 'latest';
@@ -35,6 +37,10 @@ const COMMIT_SHA = /^[0-9a-f]{40}$/;
 const LOCAL_ASSETS_DIR = path.resolve(DOCS_REPO_DIR, '..', 'namida', 'external', 'namida-assets', 'screenshots', 'docs');
 const PREVIEWS_FILE = 'docs-shots-previews.json';
 const SCREENS_FILE = 'docs-shots-screens.json';
+const TOUR_FILE = 'docs-shots-tour.json';
+const TOUR_WIDE_PLATFORM = 'wide';
+const TOUR_WIDE_LABEL = 'Wide';
+const WIDE_SHOTS_PLATFORM = 'windows';
 const THEMES = ['light', 'dark'];
 // -- a pitch black shot stands in for both themes when it is the only one
 const FALLBACK_THEMES = ['light', 'dark', 'black'];
@@ -56,6 +62,7 @@ let tilesByShot = {};
 let headingsByPage = new Map();
 let previews = {};
 let screensMap = [];
+let tourChapters = [];
 const problems = [];
 let figuresCount = 0;
 let spotsCount = 0;
@@ -73,7 +80,10 @@ export async function onBeforeBuild({ pages, options }) {
   headingsByPage = new Map(pages.map((page) => [outputPathToPathname(page.outputPath), readHeadings(page.rawMarkdown)]));
   addTileAliases(manifest.tileAliases ?? {});
   previews = buildPreviews();
-  screensMap = buildScreensMap((await loadAssetJson('screens.json')) ?? [], findPlacements(), screenVariantsOf);
+  const placements = findPlacements();
+  screensMap = buildScreensMap((await loadAssetJson('screens.json')) ?? [], placements, screenVariantsOf);
+  const tour = JSON.parse(await fs.readFile(TOUR_PATH, 'utf8'));
+  tourChapters = buildTour(tour, placements);
   if (available === null) return;
   for (const [pageUrl, sections] of Object.entries(manifest.pages)) {
     for (const [anchor, entry] of Object.entries(sections)) {
@@ -111,10 +121,13 @@ export async function onPostBuild({ outputDir, log }) {
   if (manifest === null) return;
   await fs.writeFile(path.join(outputDir, PREVIEWS_FILE), JSON.stringify(previews));
   await fs.writeFile(path.join(outputDir, SCREENS_FILE), JSON.stringify({ platforms: manifest.platforms, nodes: screensMap }));
+  const tourPlatforms = { ...manifest.platforms, [TOUR_WIDE_PLATFORM]: TOUR_WIDE_LABEL };
+  await fs.writeFile(path.join(outputDir, TOUR_FILE), JSON.stringify({ platforms: tourPlatforms, chapters: tourChapters }));
   for (const problem of problems) log(problem, 'WARN');
   const source = available === null ? 'no index, every variant assumed' : 'index found';
   const previewsCount = Object.keys(previews).length;
-  const summary = `${figuresCount} figures, ${spotsCount} hotspots, ${previewsCount} previews, ${screensMap.length} screens`;
+  const tourStopsCount = tourChapters.reduce((count, chapter) => count + chapter.stops.length, 0);
+  const summary = `${figuresCount} figures, ${spotsCount} hotspots, ${previewsCount} previews, ${screensMap.length} screens, ${tourStopsCount} tour stops`;
   log(`docs-shots: ${summary}, ${problems.length} problems (${source}, assets @${assetsRef})`);
 }
 
@@ -143,6 +156,8 @@ export function getAssets() {
     { src: path.join(PLUGIN_DIR, 'client.js'), dest: 'assets/js/docs-shots.js', type: 'js', location: 'body' },
     { src: path.join(PLUGIN_DIR, 'client.css'), dest: 'assets/css/docs-shots.css', type: 'css', location: 'head' },
     { src: path.join(PLUGIN_DIR, 'screens-client.js'), dest: 'assets/js/docs-shots-screens.js', type: 'js', location: 'body' },
+    { src: path.join(PLUGIN_DIR, 'tour-client.js'), dest: 'assets/js/docs-shots-tour.js', type: 'js', location: 'body' },
+    { src: path.join(PLUGIN_DIR, 'tour.css'), dest: 'assets/css/docs-shots-tour.css', type: 'css', location: 'head' },
   ];
 }
 
@@ -271,6 +286,38 @@ function findPlacements() {
     }
   }
   return hrefById;
+}
+
+function buildTour(tour, placements) {
+  return tour.chapters.map((chapter) => {
+    const stops = [];
+    for (const stop of chapter.stops) {
+      const variants = tourVariantsOf(stop);
+      if (variants === null) continue;
+      const href = stop.href ?? placements.get(stop.shot) ?? null;
+      stops.push({ id: stop.shot, title: stop.title, text: stop.text, href, variants });
+    }
+    return { title: chapter.title, color: chapter.color, stops };
+  });
+}
+
+// -- a platform without its own shot borrows another one's, unless the stop's `platforms` leaves it out (a desktop
+// -- only feature). only stops with a `wide` shot are in the Wide view
+function tourVariantsOf(stop) {
+  const ownVariants = screenVariantsOf(stop.shot);
+  if (ownVariants === null) {
+    problems.push(`tour.json ${stop.shot} (no such shot)`);
+    return null;
+  }
+  const borrowedVariant = Object.values(ownVariants)[0];
+  const platforms = stop.platforms ?? Object.keys(manifest.platforms);
+  const variants = {};
+  for (const platform of platforms) variants[platform] = ownVariants[platform] ?? borrowedVariant;
+  if (stop.wide === undefined) return variants;
+  const wideVariants = screenVariantsOf(stop.wide);
+  if (wideVariants === null) problems.push(`tour.json ${stop.wide} (no such shot)`);
+  else variants[TOUR_WIDE_PLATFORM] = wideVariants[WIDE_SHOTS_PLATFORM];
+  return variants;
 }
 
 function tilesOf(platform, theme, id) {
