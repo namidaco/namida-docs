@@ -247,7 +247,7 @@ How actions map to them:
 - While browsing a YouTube playlist or your account playlists, open the menu and use "Import playlist", this adds it as a Namida YouTube playlist (2).
 - A local track's "Add to Playlist" adds to local playlists (1).
 - A YouTube video's "Add to Playlist" adds to Namida YouTube playlists (2) if the Local tab is selected, or to your account playlists (3) if the YouTube tab is selected.
-- A local track that has a YouTube link can be added to YouTube playlists too, open its dialog and press the menu button beside "Open in Youtube view", this gives the YouTube video menu for it. `🆕 v7.4.0`
+- A local track that has a YouTube link can be added to YouTube playlists too, open its dialog and press the menu button beside "Open in Youtube view", this gives the [video menu](/tips/#video-menu) for it. `🆕 v7.4.0`
 
 Editing one of your own account playlists from its menu also lets you choose "Add new videos to the top", press the settings icon beside the privacy chips. `🆕 v7.4.0`
 

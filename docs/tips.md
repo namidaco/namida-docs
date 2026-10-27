@@ -61,16 +61,22 @@ Not so obvious features you might have missed.
 
 Long press a track (or tap its menu) for more than you might expect:
 
-- Play Next, Play Last, and Play After (pick an exact position in the queue).
+- Tap the top part to open the track info, or the chips beside it open its bookmarks/chapters if available.
+- Play Next, Play After and Play Last. Play After adds it after the latest track you inserted, for stacking multiple tracks one after another.
   - For a track or video that's already in the queue, long press them to move it there instead of adding it again.
 - Repeat for N times before playing the next track.
 - Stop after this track, works on any upcoming track in the queue, not only the playing one.
-- Insert after latest inserted, for stacking multiple tracks one after another.
 - Set Rating, Moods and Tags, they get their own [library pages](/pages/library/#moods-tags-rating). For many tracks at once, use the "Set Rating" icon beside Edit Tags.
-- Set Youtube Link, attach a video to any local track.
+- The lyrics icon beside Edit Tags opens the [lyrics picker](/features/playback/#lyrics-picker) of the track.
+- Set YouTube Link, attach a video to any local track.
+- Open in Youtube view plays the linked video in the YouTube player, with buttons beside it for the channel and the [video menu](#video-menu).
 - In Add to Playlist, open a playlist's menu (menu button or long press), then tap its artwork or name at the top to open it, scrolled to the track and highlighted. For YouTube videos, the same menu has "Go to Playlist" option. `🆕 v8.4.0`
+- Go to the album, artist or folder. With several albums or artists, tap a name to open it, or long press it to add more from it to the queue. The folder row also has a button to show the file in the file explorer (not on Android).
 - Add more from this Album, Artist or Folder to queue.
   - Long press the + to configure what gets added. `🆕 v8.2.0`
+- For many tracks: Play All (also in reverse order) and Shuffle, with a config icon to customize how they are added to the queue, and Statistics for a card with their listens and top tracks.
+- Cache keeps server tracks on your device for offline playback. [`🎉 Offline Caching ↗`](/features/media-servers/#offline-caching)
+- If a track is missing or fails to play, Update points it to its new file (matching files from your library are suggested first), and Skip moves to the next track if it's from the queue.
 
 ### Advanced Dialog {#advanced-dialog}
 
@@ -86,6 +92,17 @@ The track menu has an Advanced section:
 - Replace all listens of a track with another track.
 - Edit the [color palette](/settings/1-theme-settings/#auto-coloring) of the track, add or remove colors and pick a mix.
 - Selecting many tracks from the same folder also shows Update Directory Path right there.
+
+### Video Menu {#video-menu}
+
+Long press a video (or tap its menu) for:
+
+- Info, Add to Playlist, Download, Copy and Go to Channel. The share icon beside Copy shares the link.
+- Play Next, Play After and Play Last, like in the [track menu](#track-menu). For the playing video and the ones in the queue, Stop after this video shows instead of Play.
+- Cache to keep it for offline playback, and Clear to remove its cached video or audio. The chip beside Clear sets its [cache priority](/features/youtube/#caching).
+- In the player, the menu also has Favourites, Repeat for N times and the video's bookmarks.
+
+For many videos (a selection or a playlist's menu): Play All (also in reverse order), Shuffle, Share, Cache (pick which videos on the cache page) and Priority for all of them at once.
 
 ### Library Pages {#library-pages}
 
