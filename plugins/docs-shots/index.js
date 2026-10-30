@@ -5,7 +5,8 @@
 // or the one `tileAliases` names, and every such tile is a preview for links to that section (docs-shots-previews.json).
 // links to other sections or pages with shots preview their first shot. screens.json (which screen opens which)
 // becomes the screens map data (docs-shots-screens.json, see screens.js), and tour.json's stops become the tour page
-// data (docs-shots-tour.json) with their shots and the docs section showing each.
+// data (embed/tour.json) with their shots and the docs section showing each.
+// embed/ (tour.js, tour.css, tour.json) is a public api that other sites load (namida.app), so its paths never change.
 // the manifest's `base` names `{commit}`: package.json's `namida.screenshotsCommit`, where `latest` (the default) is
 // namida-assets' main at build time, so links never sit behind jsdelivr's @main cache and need no manual bump.
 // DOCS_SHOTS_BASE=<url> replaces the manifest's `base`, to preview shots that aren't published yet.
@@ -37,7 +38,7 @@ const COMMIT_SHA = /^[0-9a-f]{40}$/;
 const LOCAL_ASSETS_DIR = path.resolve(DOCS_REPO_DIR, '..', 'namida', 'external', 'namida-assets', 'screenshots', 'docs');
 const PREVIEWS_FILE = 'docs-shots-previews.json';
 const SCREENS_FILE = 'docs-shots-screens.json';
-const TOUR_FILE = 'docs-shots-tour.json';
+const TOUR_FILE = 'embed/tour.json';
 const TOUR_WIDE_PLATFORM = 'wide';
 const TOUR_WIDE_LABEL = 'Wide';
 const WIDE_SHOTS_PLATFORM = 'windows';
@@ -122,7 +123,11 @@ export async function onPostBuild({ outputDir, log }) {
   await fs.writeFile(path.join(outputDir, PREVIEWS_FILE), JSON.stringify(previews));
   await fs.writeFile(path.join(outputDir, SCREENS_FILE), JSON.stringify({ platforms: manifest.platforms, nodes: screensMap }));
   const tourPlatforms = { ...manifest.platforms, [TOUR_WIDE_PLATFORM]: TOUR_WIDE_LABEL };
-  await fs.writeFile(path.join(outputDir, TOUR_FILE), JSON.stringify({ platforms: tourPlatforms, chapters: tourChapters }));
+  const tourPath = path.join(outputDir, TOUR_FILE);
+  const tourDirectory = path.dirname(tourPath);
+  const tourJson = JSON.stringify({ platforms: tourPlatforms, chapters: tourChapters });
+  await fs.mkdir(tourDirectory, { recursive: true });
+  await fs.writeFile(tourPath, tourJson);
   for (const problem of problems) log(problem, 'WARN');
   const source = available === null ? 'no index, every variant assumed' : 'index found';
   const previewsCount = Object.keys(previews).length;
@@ -156,8 +161,8 @@ export function getAssets() {
     { src: path.join(PLUGIN_DIR, 'client.js'), dest: 'assets/js/docs-shots.js', type: 'js', location: 'body' },
     { src: path.join(PLUGIN_DIR, 'client.css'), dest: 'assets/css/docs-shots.css', type: 'css', location: 'head' },
     { src: path.join(PLUGIN_DIR, 'screens-client.js'), dest: 'assets/js/docs-shots-screens.js', type: 'js', location: 'body' },
-    { src: path.join(PLUGIN_DIR, 'tour-client.js'), dest: 'assets/js/docs-shots-tour.js', type: 'js', location: 'body' },
-    { src: path.join(PLUGIN_DIR, 'tour.css'), dest: 'assets/css/docs-shots-tour.css', type: 'css', location: 'head' },
+    { src: path.join(PLUGIN_DIR, 'tour-client.js'), dest: 'embed/tour.js', type: 'js', location: 'body' },
+    { src: path.join(PLUGIN_DIR, 'tour.css'), dest: 'embed/tour.css', type: 'css', location: 'head' },
   ];
 }
 

@@ -4,12 +4,14 @@
 // follows the line while it draws, and every stop reveals its screenshot with a caption. It plays by itself once in
 // view and ends on the whole route.
 // Only does work on pages that have a [data-docs-tour] container.
+// Other sites embed it (namida.app): served as embed/tour.js next to tour.css and tour.json, a public api whose paths,
+// [data-docs-tour] container and --docs-tour-* colors (tour.css) must stay as they are.
 (function () {
   'use strict';
 
   var SCRIPT_URL = new URL(document.currentScript.src);
-  var SITE_ROOT = new URL('../../', SCRIPT_URL);
-  var DATA_URL = new URL('docs-shots-tour.json' + SCRIPT_URL.search, SITE_ROOT).href;
+  var SITE_ROOT = new URL('../', SCRIPT_URL);
+  var DATA_URL = new URL('tour.json' + SCRIPT_URL.search, SCRIPT_URL).href;
   var APP_ICON_URL = new URL('assets/images/namida_icon.png', SITE_ROOT).href;
   var CONTAINER_SELECTOR = '[data-docs-tour]';
   // -- android/desktop is the same choice as the screenshot tabs in the pages, wide is the tour's own
@@ -20,6 +22,7 @@
   var WIDE_PLATFORM = 'wide';
   var IS_DESKTOP_AGENT = /Windows NT|Macintosh|Linux x86_64|X11/.test(navigator.userAgent) && !/Android/.test(navigator.userAgent);
   var REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var DARK_SCHEME = window.matchMedia('(prefers-color-scheme: dark)');
   var SVG_NS = 'http://www.w3.org/2000/svg';
   var CAPTIONS = {
     start: { chapter: 'Tour', title: 'A quick look at Namida', text: 'Press play to follow the line through the main features.' },
@@ -125,6 +128,7 @@
     var container = document.querySelector(CONTAINER_SELECTOR);
     if (!container || container.dataset.mounted) return;
     container.dataset.mounted = '1';
+    container.classList.add('docs-tour');
     container.textContent = 'Loading the tour…';
     loadData().then(
       function (data) {
@@ -231,6 +235,7 @@
     resizeObserver.observe(stage);
     var themeObserver = new MutationObserver(onThemeChange);
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    DARK_SCHEME.addEventListener('change', onThemeChange);
     var visibilityObserver = new IntersectionObserver(onVisibility, { threshold: VISIBLE_RATIO });
     visibilityObserver.observe(stage);
 
@@ -243,6 +248,7 @@
         stopHoldCountdown();
         resizeObserver.disconnect();
         themeObserver.disconnect();
+        DARK_SCHEME.removeEventListener('change', onThemeChange);
         visibilityObserver.disconnect();
       },
     };
@@ -453,6 +459,10 @@
       var link = el('a', 'docs-tour__link', text);
       var relativeHref = href.replace(/^\//, '');
       link.href = new URL(relativeHref, SITE_ROOT).href;
+      if (link.hostname !== window.location.hostname) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
       return link;
     }
 
@@ -784,7 +794,8 @@
         var image = card.firstChild;
         if (!image.hasAttribute('src')) return;
         var stop = state.stops[index];
-        image.src = shotOf(stop);
+        var shot = shotOf(stop);
+        if (image.getAttribute('src') !== shot) image.src = shot;
       });
     }
 
@@ -883,10 +894,17 @@
     }
 
     function shotOf(stop) {
-      var theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      var theme = themeOf();
       var variant = stop.themes[theme] || stop.themes.light || stop.themes.dark;
       return variant.shot;
     }
+  }
+
+  // -- the docs always set data-theme, a page embedding the tour without it follows the system scheme
+  function themeOf() {
+    var pageTheme = document.documentElement.getAttribute('data-theme');
+    if (pageTheme === 'dark' || pageTheme === 'light') return pageTheme;
+    return DARK_SCHEME.matches ? 'dark' : 'light';
   }
 
   // -- every chapter gets a row of its own, a chapter with no stop on this platform gets none
@@ -1035,11 +1053,11 @@
   }
 
   function switchOf(options, onPick) {
-    var element = el('div', 'docs-screens__switch');
+    var element = el('div', 'docs-tour__switch');
     element.setAttribute('role', 'group');
     var buttons = {};
     options.forEach(function (option) {
-      var button = el('button', 'docs-screens__switch-button', option.label);
+      var button = el('button', 'docs-tour__switch-button', option.label);
       button.type = 'button';
       button.addEventListener('click', function () {
         onPick(option.id);

@@ -27,6 +27,44 @@ docmd.config.json     # site config + sidebar navigation
 RULES.md              # writing & style rules
 ```
 
+## Embedding the tour
+
+The [tour](https://docs.namida.app/tour/) can be shown on other sites (namida.app uses it). Its files are served from `embed/`, and these paths stay the same so embedding pages don't break.
+
+```html
+<link rel="stylesheet" href="https://docs.namida.app/embed/tour.css">
+
+<div data-docs-tour>
+  <a href="https://docs.namida.app/tour/">Open the tour</a>
+</div>
+
+<script defer src="https://docs.namida.app/embed/tour.js"></script>
+```
+
+The script replaces what is inside the `data-docs-tour` element. So the link inside it only stays when the script can't load.
+
+### Colors
+
+The tour takes its colors from CSS variables that the embedding page sets (on `:root` for example):
+
+| Variable | Used for |
+| --- | --- |
+| `--docs-tour-bg` | stage and controls background |
+| `--docs-tour-bg-subtle` | screenshot cards and hovered buttons |
+| `--docs-tour-border` | borders and empty progress bars |
+| `--docs-tour-fg` | titles and the play button |
+| `--docs-tour-fg-soft` | captions and screen titles |
+| `--docs-tour-fg-muted` | mixed into the chapter colors |
+| `--docs-tour-fg-faint` | the dotted route and unvisited stops |
+| `--docs-tour-accent` | the first chapter's color |
+| `--docs-tour-accent-soft` | the selected platform button |
+| `--docs-tour-ring` | focus ring of the stage (a full `box-shadow` value) |
+| `--docs-tour-shadow` | screenshot cards shadow (a full `box-shadow` value) |
+| `--docs-tour-radius` | stage corners |
+| `--docs-tour-radius-sm` | platform switch corners |
+
+The screenshots follow `data-theme="light"` or `data-theme="dark"` on `<html>`. Without that attribute, they follow the system color scheme.
+
 ## How to contribute
 
 1. Edit an existing file in `docs/`, or add a new one.

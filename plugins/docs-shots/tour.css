@@ -1,9 +1,24 @@
+/* -- --docs-tour-* are the public colors a page embedding the tour sets, the docs fall back to their theme's */
 .docs-tour {
-  --tour-color-accent: color-mix(in oklab, var(--summer-accent) 62%, var(--summer-fg-muted));
-  --tour-color-purple: color-mix(in oklab, #8b5cf6 60%, var(--summer-fg-muted));
-  --tour-color-red: color-mix(in oklab, #e5383b 65%, var(--summer-fg-muted));
-  --tour-color-neutral: color-mix(in oklab, var(--summer-fg) 80%, var(--summer-fg-muted));
+  --tour-bg: var(--docs-tour-bg, var(--summer-bg));
+  --tour-bg-subtle: var(--docs-tour-bg-subtle, var(--summer-bg-subtle));
+  --tour-border: var(--docs-tour-border, var(--summer-border));
+  --tour-fg: var(--docs-tour-fg, var(--summer-fg));
+  --tour-fg-soft: var(--docs-tour-fg-soft, var(--summer-fg-soft));
+  --tour-fg-muted: var(--docs-tour-fg-muted, var(--summer-fg-muted));
+  --tour-fg-faint: var(--docs-tour-fg-faint, var(--summer-fg-faint));
+  --tour-accent: var(--docs-tour-accent, var(--summer-accent));
+  --tour-accent-soft: var(--docs-tour-accent-soft, var(--summer-accent-soft));
+  --tour-ring: var(--docs-tour-ring, var(--summer-ring));
+  --tour-shadow: var(--docs-tour-shadow, var(--summer-shadow));
+  --tour-radius: var(--docs-tour-radius, var(--summer-radius-lg));
+  --tour-radius-sm: var(--docs-tour-radius-sm, var(--summer-radius-sm));
+  --tour-color-accent: color-mix(in oklab, var(--tour-accent) 62%, var(--tour-fg-muted));
+  --tour-color-purple: color-mix(in oklab, #8b5cf6 60%, var(--tour-fg-muted));
+  --tour-color-red: color-mix(in oklab, #e5383b 65%, var(--tour-fg-muted));
+  --tour-color-neutral: color-mix(in oklab, var(--tour-fg) 80%, var(--tour-fg-muted));
   margin: 16px 0 24px;
+  text-align: start;
 }
 
 .docs-tour__toolbar {
@@ -29,7 +44,7 @@
   font-size: 0.85rem;
   color: inherit;
   background: transparent;
-  border: 1px solid var(--summer-border);
+  border: 1px solid var(--tour-border);
   border-radius: 999px;
   padding: 3px 12px 3px 9px;
   cursor: pointer;
@@ -48,14 +63,35 @@
   background: color-mix(in srgb, var(--tour-color) 8%, transparent);
 }
 
+.docs-tour__switch {
+  display: inline-flex;
+  border: 1px solid var(--tour-border);
+  border-radius: var(--tour-radius-sm);
+  overflow: hidden;
+}
+
+.docs-tour__switch-button {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.docs-tour__switch-button[aria-pressed='true'] {
+  background: var(--tour-accent-soft);
+  color: var(--tour-fg);
+}
+
 .docs-tour__stage {
   position: relative;
   height: 72vh;
   min-height: 480px;
   max-height: 760px;
-  border: 1px solid var(--summer-border);
-  border-radius: var(--summer-radius-lg);
-  background: var(--summer-bg);
+  border: 1px solid var(--tour-border);
+  border-radius: var(--tour-radius);
+  background: var(--tour-bg);
   overflow: hidden;
   outline: none;
   user-select: none;
@@ -70,7 +106,7 @@
 }
 
 .docs-tour__stage:focus-visible {
-  box-shadow: 0 0 0 3px var(--summer-ring);
+  box-shadow: var(--tour-ring);
 }
 
 .docs-tour__stage:fullscreen {
@@ -112,7 +148,7 @@
 
 .docs-tour__track {
   fill: none;
-  stroke: var(--summer-fg-faint);
+  stroke: var(--tour-fg-faint);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-dasharray: 0.1 12;
@@ -133,8 +169,8 @@
 }
 
 .docs-tour__station {
-  fill: var(--summer-bg);
-  stroke: var(--summer-fg-faint);
+  fill: var(--tour-bg);
+  stroke: var(--tour-fg-faint);
   stroke-width: 2.5;
   opacity: 0.9;
   transition: fill 0.3s, stroke 0.3s;
@@ -188,8 +224,8 @@
   position: absolute;
   border-radius: 12px;
   overflow: hidden;
-  background: var(--summer-bg-subtle);
-  box-shadow: 0 0 0 1px var(--summer-border), var(--summer-shadow);
+  background: var(--tour-bg-subtle);
+  box-shadow: 0 0 0 1px var(--tour-border), var(--tour-shadow);
   opacity: 0;
   transform: translateY(24px) scale(0.95);
   transform-origin: 50% 100%;
@@ -209,10 +245,10 @@
 }
 
 .docs-tour__card.is-current {
-  --tour-ring-color: color-mix(in oklab, var(--tour-color) 55%, var(--summer-fg-muted));
+  --tour-ring-color: color-mix(in oklab, var(--tour-color) 55%, var(--tour-fg-muted));
   opacity: 1;
   transform: none;
-  box-shadow: 0 0 0 2px color-mix(in oklab, var(--tour-ring-color) 45%, var(--summer-bg)), 0 22px 60px -28px color-mix(in srgb, var(--tour-ring-color) 35%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--tour-ring-color) 45%, var(--tour-bg)), 0 22px 60px -28px color-mix(in srgb, var(--tour-ring-color) 35%, transparent);
   cursor: default;
 }
 
@@ -229,7 +265,7 @@
   font-weight: 600;
   line-height: 28px;
   white-space: nowrap;
-  color: var(--summer-fg-soft);
+  color: var(--tour-fg-soft);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -251,7 +287,7 @@
   padding: 18px 16px 10px;
   font-size: 0.9rem;
   pointer-events: none;
-  background: linear-gradient(to top, var(--summer-bg) 80%, transparent);
+  background: linear-gradient(to top, var(--tour-bg) 80%, transparent);
 }
 
 .docs-tour__stage--wide .docs-tour__caption {
@@ -263,7 +299,7 @@
   box-sizing: border-box;
   padding: 28px 40px 28px 28px;
   font-size: 1rem;
-  background: linear-gradient(to right, var(--summer-bg) 72%, transparent);
+  background: linear-gradient(to right, var(--tour-bg) 72%, transparent);
 }
 
 .docs-tour__stage--wide .docs-tour__title {
@@ -301,7 +337,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--tour-color, var(--summer-accent));
+  color: var(--tour-color, var(--tour-accent));
 }
 
 .docs-tour__title {
@@ -309,13 +345,13 @@
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--summer-fg);
+  color: var(--tour-fg);
 }
 
 .docs-tour__text {
   margin: 0;
   line-height: 1.45;
-  color: var(--summer-fg-soft);
+  color: var(--tour-fg-soft);
 }
 
 .docs-tour__links {
@@ -330,16 +366,16 @@
   font: inherit;
   font-size: 0.85rem;
   padding: 4px 12px;
-  border: 1px solid var(--summer-border);
+  border: 1px solid var(--tour-border);
   border-radius: 999px;
-  background: var(--summer-bg);
+  background: var(--tour-bg);
   color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
 
 .docs-tour__link:hover {
-  border-color: var(--summer-fg-faint);
+  border-color: var(--tour-fg-faint);
 }
 
 .docs-tour__controls {
@@ -353,8 +389,8 @@
   align-items: center;
   gap: 2px;
   padding: 0 10px;
-  background: var(--summer-bg);
-  border-top: 1px solid var(--summer-border);
+  background: var(--tour-bg);
+  border-top: 1px solid var(--tour-border);
 }
 
 .docs-tour__button {
@@ -368,13 +404,13 @@
   border: 0;
   border-radius: 50%;
   background: transparent;
-  color: var(--summer-fg);
+  color: var(--tour-fg);
   cursor: pointer;
 }
 
 .docs-tour__button:hover,
 .docs-tour__button[aria-pressed='true'] {
-  background: var(--summer-bg-subtle);
+  background: var(--tour-bg-subtle);
 }
 
 .docs-tour__button svg {
@@ -389,8 +425,8 @@
 
 .docs-tour__button--play,
 .docs-tour__button--play:hover {
-  background: var(--summer-fg);
-  color: var(--summer-bg);
+  background: var(--tour-fg);
+  color: var(--tour-bg);
 }
 
 .docs-tour__progress {
@@ -422,7 +458,7 @@
 }
 
 .docs-tour__step::before {
-  background: var(--summer-border);
+  background: var(--tour-border);
 }
 
 .docs-tour__step-fill {
