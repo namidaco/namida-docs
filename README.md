@@ -34,14 +34,12 @@ The [tour](https://docs.namida.app/tour/) can be shown on other sites (namida.ap
 ```html
 <link rel="stylesheet" href="https://docs.namida.app/embed/tour.css">
 
-<div data-docs-tour>
-  <a href="https://docs.namida.app/tour/">Open the tour</a>
-</div>
+<div data-docs-tour></div>
 
 <script defer src="https://docs.namida.app/embed/tour.js"></script>
 ```
 
-The script replaces what is inside the `data-docs-tour` element. So the link inside it only stays when the script can't load.
+The script fills the `data-docs-tour` element. If the script can't load, the element stays empty and takes no space.
 
 ### Colors
 
