@@ -335,6 +335,7 @@
     },
     "./plugins/docs-graph": {},
     "./plugins/docs-shots": {},
-    "./plugins/ask-ai": {}
+    "./plugins/ask-ai": {},
+    "./plugins/faq": {}
   }
 }

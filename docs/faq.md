@@ -1,6 +1,8 @@
 ---
 title: "FAQ"
 description: "Frequently Asked Questions"
+faq: true
+toc: false
 ---
 
 # Frequently Asked Questions

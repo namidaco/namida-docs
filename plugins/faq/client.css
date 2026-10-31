@@ -1,0 +1,181 @@
+.summer-template.toc-disabled .summer-content:has(> .faq-bar) {
+  max-width: var(--summer-content-max);
+}
+
+.faq-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: var(--summer-text-sm);
+  color: var(--summer-fg-muted);
+}
+
+.faq-bar[hidden] {
+  display: none;
+}
+
+.faq-bar__toggle {
+  appearance: none;
+  padding: 4px 12px;
+  border: 1px solid var(--summer-border);
+  border-radius: 999px;
+  background: var(--summer-bg);
+  color: var(--summer-fg-soft);
+  font: inherit;
+  cursor: pointer;
+  transition: border-color var(--summer-fast) var(--summer-ease), color var(--summer-fast) var(--summer-ease);
+}
+
+.faq-bar__toggle:hover {
+  border-color: var(--summer-border-strong);
+  color: var(--summer-fg);
+}
+
+.summer-content > .faq-item {
+  margin: 0;
+}
+
+.summer-content > .faq-item + .faq-item {
+  margin-top: 10px;
+}
+
+.faq-item {
+  --faq-accent: color-mix(in srgb, var(--summer-accent) 65%, var(--summer-fg-muted));
+  border: 1px solid var(--summer-border);
+  border-radius: var(--summer-radius-lg);
+  background: var(--summer-bg);
+  transition: border-color 250ms var(--summer-ease), background-color 250ms var(--summer-ease);
+}
+
+.faq-item:hover {
+  border-color: var(--summer-border-strong);
+}
+
+.faq-item[open]:not(.faq-item--closing) {
+  border-color: color-mix(in srgb, var(--summer-accent) 22%, var(--summer-border));
+  background: var(--summer-bg-subtle);
+}
+
+.faq-item__question {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  list-style: none;
+  cursor: pointer;
+  border-radius: inherit;
+}
+
+.faq-item__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__question:focus-visible {
+  outline: 2px solid var(--faq-accent);
+  outline-offset: 2px;
+}
+
+.summer-content .faq-item__question h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+/* -- after the question, instead of hanging left outside the card */
+.summer-content .faq-item__question .heading-anchor {
+  position: static;
+  order: 1;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
+}
+
+.faq-item__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--summer-border);
+  border-radius: 50%;
+  background: var(--summer-bg-subtle);
+  transition: background-color 250ms var(--summer-ease), border-color 250ms var(--summer-ease), transform 300ms var(--summer-ease-out);
+}
+
+.faq-item__icon::before,
+.faq-item__icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 1.5px;
+  border-radius: 1px;
+  background: var(--summer-fg-muted);
+  transform: translate(-50%, -50%);
+  transition: transform 300ms var(--summer-ease-out), background-color 250ms var(--summer-ease);
+}
+
+.faq-item__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item[open]:not(.faq-item--closing) .faq-item__icon {
+  border-color: color-mix(in srgb, var(--summer-accent) 35%, var(--summer-border));
+  background: var(--summer-accent-soft);
+  transform: rotate(180deg);
+}
+
+.faq-item[open]:not(.faq-item--closing) .faq-item__icon::before,
+.faq-item[open]:not(.faq-item--closing) .faq-item__icon::after {
+  background: var(--faq-accent);
+}
+
+.faq-item[open]:not(.faq-item--closing) .faq-item__icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.faq-item--animating .faq-item__answer {
+  overflow: hidden;
+}
+
+.faq-item__body {
+  margin: 0 16px;
+  padding: 12px 0 14px;
+  border-top: 1px dashed var(--summer-border);
+}
+
+.faq-item__body > :first-child {
+  margin-top: 0;
+}
+
+.faq-item__body > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .faq-item__question {
+    padding: 12px 14px;
+  }
+
+  .faq-item__body {
+    margin: 0 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-item,
+  .faq-item__icon,
+  .faq-item__icon::before,
+  .faq-item__icon::after {
+    transition: none;
+  }
+}

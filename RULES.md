@@ -94,6 +94,7 @@ Types used: `info`, `tip`, `warning`.
 - `docs/guides/`: step by step guides, grouped by level (beginner / medium / namider).
 - `docs/tips.md`: not so obvious features, grouped by topic.
 - `docs/permissions.md`: the permissions the app uses and why.
+- `docs/faq.md`: one H3 per question. Its `faq: true` frontmatter shows every H3 section as a collapsible card (`plugins/faq`).
 - `docs/not-planned.md`: features that will not be added and why. The FAQ keeps short answers and links here.
 - `docs/whats-new.md`: generated from the `🆕` markers by `npm run whats-new` (also runs on `npm run build`). Never edit inside its `<!-- generated -->` blocks, a short note written under a version heading is kept.
 - `docs/graph.md`: the interactive docs graph, built by `plugins/docs-graph` from the links, section ids and `🆕` markers of every page. Add `graph: false` to a page's frontmatter to leave it out of the graph and of Page Connections.
