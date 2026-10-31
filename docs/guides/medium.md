@@ -41,6 +41,17 @@ video alAn WaLkER - faDed (480p).mp4
 Matching ignores casing, symbols and whitespace, and extra words around the name are fine.
 :::
 
+### Use one local video for a whole album {#album-local-video}
+
+Match the video by a youtube id. Any 11 letters or numbers work, so the video doesn't need to be on YouTube.
+
+1. Add the id to the video filename, like `My Album [abcdefghijk].mp4`.
+2. Give every track the same id, either:
+   - Edit all the album's tracks at once and put `https://youtu.be/abcdefghijk` in the Comment field. [`🎉 Multiple Tracks Editing ↗`](/features/tag-editor/#multiple)
+   - Or add `[abcdefghijk]` at the end of each track filename, then relink the renamed tracks in Missing Tracks (so they keep their stats). [`⚙️ Open Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
+3. (Optional) Add `t=` to each track's link for where it starts in the video, like `https://youtu.be/abcdefghijk?t=754` (with "Set Youtube Link" in the track's dialog). This only works with links in the comment tag.
+4. Make sure [`⚙️ Configure Video Source ↗`](/settings/3-playback-settings/#video-source) is set to Local or Auto.
+
 ### Play specific tracks quickly {#play-specific-quickly}
 
 1. Set the left swipe action to "Play After" in [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile).
