@@ -86,10 +86,28 @@ If they still don't show, check [Prefer embedded lyrics](/settings/6-extras-sett
 Also make sure the `.lrc` file sits next to the track and has the same filename, and that the [Lyrics Source](/settings/6-extras-settings/#lyrics) is not set to Internet only.
 :::
 
+### Can I quickly switch between embedded lyrics and lyrics files? {#switch-lyrics}
+
+Not per track. [Prefer embedded lyrics](/settings/6-extras-settings/#lyrics) is a global option, so the lyrics you get stay predictable. Instead:
+
+- If you switch to see the romanization or the translation, put them all in one file. Lines with the same time show together, each extra line under the original one. [`🎉 Translations ↗`](/features/playback/#lyrics-translations)
+- Romanization can also be added automatically. [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
+- To change the global option quickly, long press the lyrics button in the player (right click on desktop). It shows there when the track has embedded lyrics. [`🎉 Lyrics Picker ↗`](/features/playback/#lyrics-picker)
+
 ### Can I use a custom app icon? {#custom-app-icon}
 
 You can pick from the icons that ship with Namida, but a fully custom one is not possible (Android only allows icons that are already built into the app).
 See [App Icon](/settings/4-customization-settings/#app-icon), where you can also submit an icon, or use a launcher that supports icon packs.
+
+### Why does an album show up more than once? {#duplicated-albums}
+
+Its tracks don't all have the same Album Artist tag (one track with a different or empty album artist is enough to split it).
+Albums are grouped by their name and album artist by default, plus any other field added in Album Identifiers (like Year).
+
+To fix it, either:
+
+- Select all the album's tracks and set the same Album Artist in the tag editor. [`🎉 Multiple Tracks Editing ↗`](/features/tag-editor/#multiple)
+- Or remove Album Artist from the Album Identifiers and re-index when asked, so albums group by name only (but different albums with the same name get merged). [`⚙️ Album Identifiers ↗`](/settings/2-indexer-settings/#album-identifiers)
 
 ### Why aren't smart playlists treated as normal playlists? {#smart-playlists}
 
