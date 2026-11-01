@@ -28,6 +28,8 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
   - `#PLAYLIST` names the playlist only when Namida first finds the file, names with characters like `/` use the file name instead.
   - Lines written by other apps (like `#UUID` or `#AUTHOR`) stay as they are, `#PLAYLISTSIZE` and `#DURATION` get updated. `🆕 v8.4.0`
 - Remove Duplicates is in the playlist menu, under Advanced. `🆕 v7.8.0`
+- Adding tracks that are already in a playlist asks what to do (Add all / Add all and remove old ones / Add only missing / Merge + Sort by: Date Added).
+- Turn on "Add tracks at the beginning" in the Add to Playlist dialog to add new tracks at the top.
 - Add a description from the playlist menu -> Edit (YouTube playlists too), it shows on the playlist page. `🆕 v8.2.0`
 
 ::: callout info
@@ -68,6 +70,7 @@ History can be imported from other services, and listens can be replaced, never 
 
 Open a track's listens dialog to see every single listen. Tap a listen to jump to that exact day in history, or use the button beside it to open Most Played for that time range.
 After jumping, arrows at the bottom move between that track's other listens. `🆕 v8.2.0`
+Press the calendar icon in the listens dialog to see them on a calendar (listens per day and per month), tap a day to jump to it in history.
 
 Search the history with the icon at the end of the years row, only the listens of matching tracks are shown. `🆕 v8.2.0`
 

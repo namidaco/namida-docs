@@ -23,6 +23,8 @@ Skip sponsor segments in videos, powered by [SponsorBlock](https://sponsor.ajay.
 - Categories (Sponsor / Self Promotion / Intro / Outro / Filler / Preview / Hook / Music Offtopic / Highlight / Interaction Reminder).
 - Per category behavior (Auto Skip / Auto Skip Once / Show Skip button / Show in Seekbar / disabled).
 - Per category "Remove from downloads" switch, on by default for Sponsor, Self Promotion and Interaction Reminder. Highlight can't be removed (it's a single moment instead of a segment). `🆕 v7.4.0`
+- Skip Count Tracking, tells SponsorBlock when you skip a segment, which counts for the people who submitted it on the SponsorBlock Leaderboard (on by default).
+- Server Address, use a different SponsorBlock server.
 
 ### Return Youtube Dislike {#return-youtube-dislike}
 

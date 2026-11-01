@@ -66,7 +66,9 @@ Ways to enter fullscreen:
 In fullscreen:
 
 - Swipe vertically on the right side for volume, and on the left side for brightness (on Android, going past 100% raises the screen brightness too)
+  - Going below 100% dims the video more than the lowest screen brightness, press the sun button at the top to undo it
 - The lock button blocks all gestures and controls until you unlock it
+- A chip at the bottom shows where the video is in the queue (like 3/10)
 - Enable glow for an ambient effect behind the video (might affect performance & battery)
 - On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video matches how you are actually holding the device
 
@@ -93,6 +95,8 @@ Videos with chapters show a chapters row above the description, tap the title ar
 
 Long press a chapter for more options (copy a link to its timestamp / download only that chapter). [`🎉 Chapter Downloads ↗`](#chapters-downloads)
 
+While seeking, the bubble shows the chapter you'll land in.
+
 ### Downloads {#downloads}
 
 Download any video or audio, with full control over the result: [`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)
@@ -103,6 +107,7 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Default download folder, changeable per download.
   - Pick a subfolder right in the download sheet, next to the output type. `🆕 v8.4.0`
 - Download notifications `💻 Windows+Linux only`.
+- The download button in the [miniplayer](#miniplayer) shows the progress while downloading, tap it to pause or resume.
 - Downloads that fail because there is no connection resume on their own once it is back, thumbnails retry the same way. `🆕 v7.0.0`
 - Parallel downloads, up to 10 videos at a time (4 by default). Set it with the flash icon in the [`📄 Downloads page ↗`](/pages/youtube/#downloads). `🆕 v7.1.0`
 - Big files download over multiple connections at once (3 by default and up to 8), set from the same flash icon as "Threads per download". Servers that don't support it fall back to a single connection. `🆕 v7.4.0`
@@ -212,7 +217,7 @@ Examples:
 
 ### Caching & Offline Playback {#caching}
 
-Streamed videos and audios are cached, so they play offline later without downloading.
+Streamed videos and audios are cached, so they play offline later without downloading. Cached videos start right away even when you're online.
 A cache priority system decides what to keep when cleaning up, so your important stuff stays.
 
 - Every cached video has a priority (VIP / High / Normal / Low / Disable). Cleaning starts from the bottom, and VIP items are never deleted automatically.
@@ -250,7 +255,7 @@ How actions map to them:
 - While browsing a public/unlisted YouTube playlist, open the menu and use "Save to library", this adds it to your account playlists (3).
 - While browsing a YouTube playlist or your account playlists, open the menu and use "Import playlist", this adds it as a Namida YouTube playlist (2).
 - A local track's "Add to Playlist" adds to local playlists (1).
-- A YouTube video's "Add to Playlist" adds to Namida YouTube playlists (2) if the Local tab is selected, or to your account playlists (3) if the YouTube tab is selected.
+- A YouTube video's "Add to Playlist" adds to Namida YouTube playlists (2) if the Local tab is selected, or to your account playlists (3) if the YouTube tab is selected. The Local tab has its own "Add tracks at the beginning" switch.
 - A local track that has a YouTube link can be added to YouTube playlists too, open its dialog and press the menu button beside "Open in Youtube view", this gives the [video menu](/tips/#video-menu) for it. `🆕 v7.4.0`
 
 Editing one of your own account playlists from its menu also lets you choose "Add new videos to the top", press the settings icon beside the privacy chips. `🆕 v7.4.0`

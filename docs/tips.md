@@ -38,9 +38,11 @@ Not so obvious features you might have missed.
 - Artwork gestures are configurable, tap and long press can do different actions, and double tap can toggle lyrics, see [Artwork Gestures](/settings/4-customization-settings/#miniplayer-customization).
 - Long press the lyrics to enter fullscreen, and pinch the lyrics to change the font size. On desktop it's `Ctrl` + mouse wheel or `Ctrl` + `+` / `-`, and `Ctrl` + `0` resets it.
   - In fullscreen, hold a line for a second to copy it. `🆕 v8.4.0`
+  - In fullscreen, tap the title at the top to open the track menu.
 - Long press the audio button in the player for a quick menu with the [Audio path](/features/playback/#audio-path) and [Playback Settings](/settings/3-playback-settings/).
 - Long press the video button in the player for video options (quality / audio track).
 - Press the subtitle icon in the video controls to pick a subtitle, the language you pick is remembered for next videos. [`🎉 Subtitles feature ↗`](/features/subtitles/)
+- Tap the time in the video controls to switch between the total and the remaining duration.
 - Long press the lyrics button (right click on desktop) to configure lyrics for the current track, or embed them into the file. [`🎉 Lyrics Picker ↗`](/features/playback/#lyrics-picker)
 - Long press a sleep timer preset to remove it. [`🎉 Sleep Timer ↗`](/features/playback/#sleep-timer)
 - Press the info text in the player to open the track menu, and press the album name at the top to open the album.
@@ -148,6 +150,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 - In the YouTube search tab, offline search is very useful to find videos you watched previously. You can sort results (most played / recent listen / first listen), or turn on the "Cache" chip to see only what plays offline. Import your YouTube history for better results.
 - Long press a chapter in the miniplayer to copy a link to its timestamp.
 - Take a snapshot of a channel or playlist: open the videos tab, press "load all", wait, then open the menu and add to a playlist.
+- Tap a video in a YouTube playlist to play it right away, the rest of the playlist gets added to the queue as it loads.
 - Type `after:2024-01-01` or `before:2023-06` in the search text to filter by upload date, or use the filters row. [`📄 Search Filters ↗`](/pages/youtube/#search-filters)
 - In a channel page, the time range icon lists only videos uploaded after or before a date.
 - In the YouTube page, tap the selected section again (like Home or Playlists) to switch it between Namida and your account. `🆕 v8.2.0`
@@ -170,6 +173,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 ### Info & Sorting {#info-sorting}
 
 - Tap any item in the track info dialog to copy it.
+  - Press the eye icon at the top to show empty fields too, or the play icon to preview the track without touching the queue.
 - In a track or video info dialog, or at the top of an album, artist or playlist page, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop. You can zoom in until single pixels show, and they stay sharp.
 - Covers made from several tracks (like in a playlist page) open in a swipeable viewer when you tap one of their images, use the arrow keys on desktop. The viewer can save the whole collage too. `🆕 v8.2.0`
 - Sort by more than one property (like artist, then year, then title). Press Advanced in any sort menu to pick and reorder them.
@@ -208,6 +212,7 @@ Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-setting
 ### Misc {#misc-tips}
 
 - Long press or hover on any icon to see a tooltip explaining what it does.
+- Removed something by mistake? Press Undo on the message that shows. Removals that can't be undone ask you to confirm first (for example unliking a YouTube video, since liking it again puts it at the top of your liked videos).
 - Pages that have a docs page show a guide icon in the app bar, it opens the matching page here (even offline `🆕 v8.2.0`).
 - Tag editor and smart playlist fields suggest values from your library as you type.
 - In lists you can reorder (like library tabs, sorters or home sections), the active items stay on top. Tap an item or drag it across them to turn it on or off. `🆕 v8.4.0`

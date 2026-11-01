@@ -92,6 +92,7 @@ From top to bottom:
 - [Sound effects](#sound-effects). `🆕 v8.2.0`
 
 Both tabs carry Skip Silence `💻 Android+Linux only`, Pitch (as a percentage or in semitones), Speed, Volume, Loudness Enhancer and the [Equalizer](#equalizer) with its presets.
+Press 432Hz beside Pitch to tune playback to 432Hz, and press Pitch beside Speed to make the pitch follow the speed.
 
 ::: callout tip
 Tap a value icon to type it precisely instead of dragging the slider.
@@ -213,6 +214,9 @@ Lyrics are fetched and shown automatically (synced or plain), with support for d
 Online lyrics come from LRCLIB and KuGou, and the best matching result is picked using the track duration. [`⚙️ Configure Lyrics ↗`](/settings/6-extras-settings/#lyrics)
 Long press the lyrics to enter fullscreen.
 
+On long instrumental breaks, the lyrics fade out to show the artwork or video in full, then fade back in as the next line starts (touch them to bring them back sooner). Short breaks show three dots that fill up until the next line.
+Duets show each singer on their own side, and lines sung at the same time stay lit together. [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/#edit-line)
+
 Synced lyrics in Japanese, Chinese, Korean, Greek, Cyrillic and a few more scripts can show a romanized line under each line. `🆕 v7.4.0` [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
 
 The simple lyrics line under the artwork shows translations and romanizations too, and word synced lyrics light up word by word there (like in the lyrics view). `🆕 v7.5.0` [`⚙️ Configure Simple Lyrics Line ↗`](/settings/6-extras-settings/#lyrics)
@@ -273,9 +277,10 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 - Tap the current position to seek backwards and the total duration to seek forwards, by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Holding either one keeps seeking.
 - Long press the previous button to jump to the start of the track, long press the next button to speed up playback while holding it.
 - While seeking with the seekbar, swipe upwards to cancel the seek.
-- Seeking very close to the starting edge snaps to the very start.
+- Seeking very close to the starting edge snaps to the very start (a glow at the start of the seekbar shows when you're close).
 - Swipe the lyrics left or right in fullscreen or in the widescreen player to skip tracks. `🆕 v8.2.0`
 - Hold a lyrics line for a second (right click on desktop) in fullscreen or in the widescreen player to copy it. `🆕 v8.4.0`
+- Tap a synced lyrics line to jump to it. Scrolling the lyrics pauses the auto scroll for a few seconds, and in fullscreen a Jump button brings you back.
 - Pinch the lyrics to change the font size, separately for normal, fullscreen and the widescreen player `🆕 v8.4.0`. On desktop use `Ctrl` + mouse wheel, `Ctrl` + `+` / `-`, or `Ctrl` + `0` to reset. [`🎉 Shortcuts feature ↗`](/features/shortcuts/#zoom)
 - Double tap the video to enter fullscreen, or see more ways here: [`🎉 Video Fullscreen ↗`](/features/youtube/#fullscreen)
 - More hidden gestures in [`📄 Tips & Tricks ↗`](/tips/).

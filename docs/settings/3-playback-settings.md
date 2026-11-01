@@ -31,7 +31,8 @@ How local videos are matched with tracks (title / filename), with an option to m
 
 ### Keep Screen Awake When {#keep-screen-awake}
 
-Three modes (Never / when the miniplayer is expanded / when the miniplayer is expanded and a video is playing).
+Three modes (Never / when the miniplayer is expanded / when the miniplayer is expanded and a video is playing, synced lyrics count as a video too).
+In video fullscreen, the screen stays awake while the video plays.
 
 ### Notification Buttons {#notification-buttons}
 
@@ -87,6 +88,7 @@ The Smart [crossfade](#crossfade) style is a different thing, it only changes wh
 ### Gapless Playback {#gapless-playback}
 
 Removes the small delay between tracks by loading the next one early. Useful for some albums, or for those who can't wait 0.067 seconds between tracks. `Beta feature`.
+While it's on, the crossfade trigger seconds are turned off.
 
 ### Crossfade {#crossfade}
 
@@ -101,7 +103,7 @@ The Style option changes how automatic crossfades happen. `🆕 v8.2.0` [`🎉 S
 
 Smart and Beat matching analyze upcoming tracks in the background, the `ANALYZE_RHYTHM` flag analyzes the whole library ahead of time. [`⚙️ Analyze Rhythm Flag ↗`](/settings/8-advanced-settings/#flags)
 
-Turned off while [Bit-perfect](/features/playback/#bit-perfect), [USB direct access](/features/playback/#usb-direct) or [Exclusive mode](/features/playback/#exclusive-mode) is on. `🆕 v7.8.0`
+Turned off while [Bit-perfect](/features/playback/#bit-perfect), [USB direct access](/features/playback/#usb-direct) or [Exclusive mode](/features/playback/#exclusive-mode) is on (the tile shows which one). `🆕 v7.8.0`
 
 ### Fade Effect on Play/Pause {#fade-play-pause}
 
@@ -151,7 +153,7 @@ In a track or video with chapters, next and previous jump between its chapters i
 
 ### Seek Duration {#seek-duration}
 
-How many seconds the seek buttons jump.
+How far the seek buttons jump, in seconds or as a percentage of the track (tap the tile to switch).
 
 ::: callout tip
 Tap the current position to seek backwards, and the total duration to seek forwards. Hold either one to keep seeking in that direction.
@@ -160,6 +162,7 @@ Tap the current position to seek backwards, and the total duration to seek forwa
 ### Minimum Track Duration to Restore Last Position {#restore-last-position}
 
 Tracks longer than this resume from where you left off, useful for podcasts and long mixes.
+Tracks that were almost over will start from the beginning.
 
 ### Count a Listen After {#count-listen-after}
 
