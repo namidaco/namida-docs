@@ -52,9 +52,13 @@ Content...
 
 ## Chips & Links
 
-Two kinds of inline code chips are used:
+Three kinds of inline code chips are used:
 
 - **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `availability:` (`NamidaFeaturesAvailablity`) of the setting's entry in `lib/ui/widgets/settings/`. A feature missing only on iOS or macOS gets no chip, list it in the iOS & macOS section of `docs/installation.md` instead.
+  - Platforms are written exactly as Android, iOS, Windows, Linux and macOS, joined with `+`. A version can follow a name (`Android 12+`, `Android <= 12`).
+  - The build (`plugins/chips`) turns the chip into a strip of platform icons, and its `chips:` log line must say `0 problems`.
+  - A flag gets its own chip right after its name: `` `MEDIA_WAVE_HAPTIC` `💻 Android+iOS only` ``.
+- **Upgrade label**: a line that needs a newer system version starts with `` `⬆️ iOS 16.2+` `` (one platform and its version) instead of saying "On iOS 16.2+" in the sentence. It covers its whole line, so in lists move that part to a sub-bullet. A version mentioned in passing (like a limitation on older versions) stays plain text.
 - **Related link chip**: sections link their related setting/feature/page/guide with a clickable chip placed at the END of the line or the end of the section, never right under the header: ``[`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)``. More than one chip is fine when applicable. An end of line chip is only for a reference that directly relates to that line (a feature, then the setting for it). A link to something the line isn't about gets its own line saying what it's for: ``See [`📄 Screens Map ↗`](/screens/) for all screens and where they open from.`` Keep a "Related Settings" list at the bottom of feature pages too.
 
 Link icons, always include the type in the name:
@@ -66,6 +70,7 @@ Link icons, always include the type in the name:
 | Page | 📄 | `📄 Tracks Page ↗` |
 | Guide | 📒 | `📒 Sync Guide ↗` |
 | Platform only | 💻 | used for availability context |
+| Newer system version | ⬆️ | used for upgrade labels |
 
 ## Callouts
 
@@ -125,7 +130,7 @@ The namida commit the docs are based on is stored in `package.json` under `namid
 
 1. In the namida repo, list what changed since then: `git log --reverse <commit>..HEAD`.
 2. Inspect each commit's actual diff (`git show <hash>`), not only its message, and check the final code at HEAD since later commits can change things. New UI strings show up in `en.arb`, the translations submodule isn't pinned by namida commits, so compare it by date.
-3. Update the docs. Mark new features, settings and sections with `` `🆕 vX.Y.Z` ``, on its own line under the header or at the end of the line. A marker reads as covering its whole line, so when only part of a line is new, move that part to a sub-bullet in lists, otherwise put the marker right after the new part (``turn on the "Cache" chip `🆕 v7.4.0` to see...``), or the new sentence on its own line as a last resort. Minor details (like a restriction) need no marker.
+3. Update the docs. Mark new features, settings and sections with `` `🆕 vX.Y.Z` ``, on its own line under the header or at the end of the line. A marker reads as covering its whole line, so when only part of a line is new, move that part to a sub-bullet in lists, otherwise put the marker right after the new part (``turn on the "Cache" chip `🆕 v7.4.0` to see...``), or the new sentence on its own line as a last resort. Minor details (like a restriction) need no marker. The build (`plugins/chips`) shows markers of the last 2 versions as `NEW` tags and older ones as `SINCE` tags, both linking to What's New.
 4. Set `namida.commit` and `namida.version` in `package.json` to the new HEAD, and bump `version` there and `versions` in `docmd.config.json`.
 5. Run `npm run whats-new` to list the new markers in [What's New](docs/whats-new.md).
 

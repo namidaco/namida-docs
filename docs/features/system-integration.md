@@ -63,7 +63,8 @@ Add "Namida play/pause" to Control Center to play and pause without opening anyt
 `🆕 v8.2.0` `💻 Android+iOS+macOS only`
 
 Shows the current lyrics line in the status bar, on systems and modules that support it (ColorOS, HyperLyric, SuperLyric, Flyme and Lyricon).
-On iOS 16.2+, a Live Activity shows the title, artist and current line on the lock screen and the Dynamic Island. On macOS, the line shows next to the menu bar icon. `🆕 v8.5.0`
+`⬆️ iOS 16.2+` A Live Activity shows the title, artist and current line on the lock screen and the Dynamic Island. `🆕 v8.5.0`
+On macOS, the line shows next to the menu bar icon. `🆕 v8.5.0`
 Pick the ones you use from `STATUS_BAR_LYRICS`, in the flags of the Integrations card in Extras settings. [`⚙️ Configure Integrations ↗`](/settings/6-extras-settings/#integrations)
 
 ### Discord Rich Presence {#discord}
@@ -83,7 +84,7 @@ A small purple dot on the [settings icon](/settings/#settings-icon) and the Extr
 `💻 Android+iOS only`
 
 A resizable player widget with its own settings screen, see the [`🎉 Home Screen Widget feature ↗`](/features/home-widget/).
-On iOS 17+, a simpler Now Playing widget. `🆕 v8.5.0` [`🎉 iOS Widget ↗`](/features/home-widget/#ios)
+`⬆️ iOS 17+` iOS has a simpler Now Playing widget. `🆕 v8.5.0` [`🎉 iOS Widget ↗`](/features/home-widget/#ios)
 
 ### System Tray {#tray}
 

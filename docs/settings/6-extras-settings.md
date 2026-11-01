@@ -175,20 +175,20 @@ Visual:
 - `JELLYS_INVASION` & `JELLYS_COLOR_PALETTE`, lets jellyfishes drift around the app, with a matching color palette. Tap the jellyfish button in the theme settings to toggle them, long press it for both options.
 - `GRADIENT_TILES_AND_CARDS`, gradient backgrounds for tiles and cards.
 - `BACKGROUND_IMAGES`, custom images for the [wallpaper](/features/effects/#wallpaper) and [player background](/features/effects/#player-background). `🆕 v7.8.0`
-- `FLOATING_ARTWORK_EFFECT (💻 Android+iOS only)` & `TILTING_CARDS_EFFECT (💻 Windows+Linux+macOS only)`, extra visual effects.
+- `FLOATING_ARTWORK_EFFECT` `💻 Android+iOS only` & `TILTING_CARDS_EFFECT` `💻 Windows+Linux+macOS only`, extra visual effects.
 - `SUBPAGE_HEADER_STYLE` & `ARTWORK_COLLAGE_STYLE`, the header style of album, artist, genre and playlist pages (set per page type), and the look of covers made from several tracks. `🆕 v8.2.0`
 - `LYRICS_ANIMATIONS`, choose the lyrics effects for the simple line, normal and expanded views, with presets from off to full. `🆕 v8.2.0`
-- `MEDIA_WAVE_HAPTIC (💻 Android+iOS only)`, haptics that follow the audio.
+- `MEDIA_WAVE_HAPTIC` `💻 Android+iOS only`, haptics that follow the audio.
 
 Scrolling:
 
-- `SMOOTH_SCROLLING (💻 Windows+Linux+macOS only)`, `ENHANCED_DRAG_TO_SCROLL` & `TAP_TO_SCROLL`, scrolling behavior tweaks.
+- `SMOOTH_SCROLLING` `💻 Windows+Linux+macOS only`, `ENHANCED_DRAG_TO_SCROLL` & `TAP_TO_SCROLL`, scrolling behavior tweaks.
 - `SCROLLBAR_THUMB_LABEL`, shows where you are while dragging the scrollbar (like the letter, year or date, depending on the sort). `🆕 v7.8.0`
 - `EASY_SCROLLBAR_GRAB`, drag the scrollbar instantly (without the short hold), and from a wider area. `🆕 v8.4.0`
 
 Desktop:
 
-- `SHOW_DESKTOP_TITLE_BAR` & `DESKTOP_TITLE_BAR_ICONS_TYPE (💻 Linux only)`, title bar look on desktop.
+- `SHOW_DESKTOP_TITLE_BAR` & `DESKTOP_TITLE_BAR_ICONS_TYPE` `💻 Linux only`, title bar look on desktop.
 
 Misc:
 

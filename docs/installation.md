@@ -196,7 +196,8 @@ Not available on iOS:
 Works differently on iOS:
 
 - [Sync](/features/sync/) and [Listening Party](/features/party/) pause while Namida is in the background and not playing, because iOS suspends the app.
-- [Downloads](/features/youtube/#downloads) keep going for a short time after you leave the app. On iOS 26+ they continue until they finish, and iOS shows their progress.
+- [Downloads](/features/youtube/#downloads) keep going for a short time after you leave the app.
+  - `⬆️ iOS 26+` They continue until they finish, and iOS shows their progress.
 - Music in Namida's folder in the Files app (under On My iPhone) is scanned by default. Other folders are added through the system folder picker. [`⚙️ Configure Add Folder ↗`](/settings/2-indexer-settings/#add-folder)
 
 #### macOS {#macos-differences}
