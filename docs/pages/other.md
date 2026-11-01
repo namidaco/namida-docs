@@ -60,7 +60,7 @@ Where device sync happens (start the server / discover and connect devices / cho
 App version & changelog, socials, licenses, share logs, and links for translating, donating and reporting issues. [`🎉 Shortcuts feature ↗`](/features/shortcuts/) [`📄 About Tips ↗`](/tips/#about-tips)
 
 "Report an issue" lets you pick a type (bug report / YouTube problem / feature request / question), then opens the GitHub form with your version and device info filled in.
-For bugs and YouTube problems, the logs zip is ready too, attach it to the issue. On desktop its folder opens, on Android it's saved in [Namida Folder](/storage-paths/#namida-folder)`/Logs`. `🆕 v7.5.0`
+For bugs and YouTube problems, the logs zip is ready too, attach it to the issue. On desktop its folder opens, on Android and iOS it's saved in [Namida Folder](/storage-paths/#namida-folder)`/Logs` (iOS opens it in the Files app too). `🆕 v7.5.0`
 
 Shared logs leave out personal info (like device names and folder paths).
 

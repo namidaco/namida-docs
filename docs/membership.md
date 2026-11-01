@@ -22,7 +22,7 @@ A membership is how you support the project and keep it growing. As a thank you,
 | Hide or turn off notifications | `cutie` |
 | Create a listening party on the Namida server | `cutie` |
 | Party Mode & Crossfade | `cutie`, or 3 [eggs](#eggs) each |
-| Extra effects: starfield, galaxy, aurora, fireworks & deep ocean `🆕 v7.8.0` | `cutie`, or 2 [eggs](#eggs) each |
+| Extra effects: starfield, galaxy, aurora, fireworks & deep ocean `🆕 v7.8.0` | `cutie`, or 2 [eggs](#eggs) each (3 for galaxy) |
 | Extra visualizers: mirrored bars, outline, glow & edge lights `🆕 v7.8.0` | `cutie`, or 2 [eggs](#eggs) each |
 | Custom image for wallpaper & player background `🆕 v7.8.0` | `cutie`, or 3 [eggs](#eggs) each |
 | Multiple YouTube accounts | `pookie` |

@@ -115,7 +115,7 @@ An image of your choice behind all the pages, under the background effect, with 
 
 ### Membership {#membership}
 
-Supporter extras are marked with a crown, they need a membership or 1 [egg](/membership/#eggs) each:
+Supporter extras are marked with a crown, they need a membership or 2 to 3 [eggs](/membership/#eggs) each:
 
 - Extra effects: starfield, galaxy, aurora, fireworks & deep ocean. Auto still shows fireworks and galaxy for free in their seasons.
 - Extra visualizers: mirrored bars, outline, glow & edge lights.

@@ -39,7 +39,7 @@ The user facing folder, everything Namida writes out for you to keep or move aro
 | macOS | `~/Namida` |
 | iOS | Files app -> On My iPhone -> Namida -> `Namida` |
 
-Subfolders: `Backups`, `Compressed`, `M3U Playlists`, `Artworks`, `Downloads`, and on Android `Logs` for the logs zip made by [Report an issue](/pages/other/#about).
+Subfolders: `Backups`, `Compressed`, `M3U Playlists`, `Artworks`, `Downloads`, and on Android and iOS `Logs` for the logs zip made by [Report an issue](/pages/other/#about).
 
 On Windows and Linux this sits on the first drive Namida detects, usually the one above.
 
