@@ -17,6 +17,8 @@
   --tour-color-purple: color-mix(in oklab, #8b5cf6 60%, var(--tour-fg-muted));
   --tour-color-red: color-mix(in oklab, #e5383b 65%, var(--tour-fg-muted));
   --tour-color-neutral: color-mix(in oklab, var(--tour-fg) 80%, var(--tour-fg-muted));
+  --tour-color-green: color-mix(in oklab, #4f9d69 60%, var(--tour-fg-muted));
+  --tour-color-amber: color-mix(in oklab, #d49a2a 62%, var(--tour-fg-muted));
   margin: 16px 0 24px;
   text-align: start;
 }
@@ -61,6 +63,12 @@
 .docs-tour__chapter[aria-pressed='true'] {
   border-color: color-mix(in srgb, var(--tour-color) 60%, transparent);
   background: color-mix(in srgb, var(--tour-color) 8%, transparent);
+}
+
+.docs-tour__switches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .docs-tour__switch {
@@ -121,6 +129,11 @@
   left: 0;
   top: 0;
   transform-origin: 0 0;
+  transition: opacity 0.8s;
+}
+
+.docs-tour__stage.is-credits .docs-tour__world {
+  opacity: 0.14;
 }
 
 .docs-tour__stage.is-moving .docs-tour__world {
@@ -162,6 +175,10 @@
   stroke-opacity: 0.64;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.docs-tour__segment--branch {
+  stroke-width: 2.5;
 }
 
 .docs-tour__segment.is-empty {
@@ -258,6 +275,76 @@
   cursor: pointer;
 }
 
+/* -- hangs under its branch line, so it comes in from above */
+.docs-tour__card--branch {
+  border-radius: 9px;
+  transform: translateY(-18px) scale(0.95);
+  transform-origin: 50% 0;
+}
+
+.docs-tour__tile {
+  position: absolute;
+  border-radius: 7px;
+  overflow: hidden;
+  background: var(--tour-bg);
+  box-shadow: 0 0 0 1px var(--tour-border);
+  transition: opacity 0.35s, box-shadow 0.35s;
+  cursor: pointer;
+}
+
+.docs-tour .docs-tour__tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.docs-tour__card.is-detail .docs-tour__tile:not(.is-current) {
+  opacity: 0.4;
+}
+
+.docs-tour__tile.is-current {
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--tour-color) 55%, var(--tour-bg));
+}
+
+.docs-tour__pin {
+  position: absolute;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  padding: 0;
+  border: 2px solid var(--tour-color);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--tour-color) 14%, transparent);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s, transform 0.4s cubic-bezier(0.2, 0.9, 0.25, 1);
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.docs-tour__pin.is-shown,
+.docs-tour__stage.is-map .docs-tour__pin {
+  opacity: 0.5;
+  transform: scale(0.8);
+  pointer-events: auto;
+}
+
+.docs-tour__pin.is-current {
+  opacity: 1;
+  transform: none;
+}
+
+.docs-tour__pin.is-current::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--tour-color);
+  border-radius: 50%;
+  animation: docs-tour-pulse 1.6s cubic-bezier(0.3, 0.6, 0.6, 1) infinite;
+}
+
 .docs-tour__label {
   position: absolute;
   text-align: center;
@@ -277,6 +364,79 @@
 .docs-tour__label.is-current,
 .docs-tour__stage.is-map .docs-tour__label {
   opacity: 1;
+}
+
+.docs-tour__label--branch {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+/* -- rolls over the route's part of the stage, the caption keeps its own */
+.docs-tour__credits {
+  position: absolute;
+  left: var(--tour-side, 0px);
+  right: 0;
+  top: 0;
+  height: var(--tour-route-height, 100%);
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s, visibility 0.6s;
+  -webkit-mask-image: linear-gradient(transparent, #000 14%, #000 86%, transparent);
+  mask-image: linear-gradient(transparent, #000 14%, #000 86%, transparent);
+}
+
+.docs-tour__stage.is-credits .docs-tour__credits {
+  visibility: visible;
+  opacity: 1;
+}
+
+.docs-tour__credits.is-static {
+  overflow-y: auto;
+}
+
+.docs-tour__credits-roll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 0 16px;
+  text-align: center;
+  transform: translateY(100vh);
+}
+
+.docs-tour__credits.is-static .docs-tour__credits-roll {
+  padding: 48px 16px;
+  transform: none;
+}
+
+.docs-tour__credits-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.docs-tour__credits-title {
+  margin-bottom: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tour-fg-muted);
+}
+
+.docs-tour__credits-item {
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--tour-fg-soft);
+  text-decoration: none;
+}
+
+.docs-tour__credits-item:hover {
+  color: var(--tour-fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .docs-tour__caption {
@@ -352,6 +512,7 @@
   margin: 0;
   line-height: 1.45;
   color: var(--tour-fg-soft);
+  white-space: pre-line;
 }
 
 .docs-tour__links {
@@ -432,12 +593,13 @@
 .docs-tour__progress {
   flex: 1;
   display: flex;
-  gap: 3px;
+  gap: 1px;
   margin: 0 10px;
 }
 
 .docs-tour__step {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   position: relative;
   height: 20px;
   padding: 0;
@@ -457,6 +619,10 @@
   border-radius: 2px;
 }
 
+.docs-tour__step--chapter {
+  margin-left: 4px;
+}
+
 .docs-tour__step::before {
   background: var(--tour-border);
 }
@@ -470,11 +636,15 @@
 @media (prefers-reduced-motion: reduce) {
   .docs-tour__card,
   .docs-tour__label,
-  .docs-tour__station {
+  .docs-tour__station,
+  .docs-tour__world,
+  .docs-tour__tile,
+  .docs-tour__pin {
     transition: none;
   }
 
   .docs-tour__pulse,
+  .docs-tour__pin::after,
   .docs-tour__caption-content {
     animation: none;
   }

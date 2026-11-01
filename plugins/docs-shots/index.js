@@ -5,7 +5,7 @@
 // or the one `tileAliases` names, and every such tile is a preview for links to that section (docs-shots-previews.json).
 // links to other sections or pages with shots preview their first shot. screens.json (which screen opens which)
 // becomes the screens map data (docs-shots-screens.json, see screens.js), and tour.json's stops become the tour page
-// data (embed/tour.json) with their shots and the docs section showing each.
+// data (embed/tour.json) with their shots and the docs section showing each, every tour link checked.
 // embed/ (tour.js, tour.css, tour.json) is a public api that other sites load (namida.app), so its paths never change.
 // the manifest's `base` names `{commit}`: package.json's `namida.screenshotsCommit`, where `latest` (the default) is
 // namida-assets' main at build time, so links never sit behind jsdelivr's @main cache and need no manual bump.
@@ -40,6 +40,9 @@ const PREVIEWS_FILE = 'docs-shots-previews.json';
 const SCREENS_FILE = 'docs-shots-screens.json';
 const TOUR_FILE = 'embed/tour.json';
 const TOUR_WIDE_PLATFORM = 'wide';
+const TOUR_LEVELS = ['simple', 'medium', 'advanced'];
+const SIMPLE_LEVEL = 0;
+const MEDIUM_LEVEL = 1;
 const TOUR_WIDE_LABEL = 'Wide';
 const WIDE_SHOTS_PLATFORM = 'windows';
 const THEMES = ['light', 'dark'];
@@ -63,7 +66,7 @@ let tilesByShot = {};
 let headingsByPage = new Map();
 let previews = {};
 let screensMap = [];
-let tourChapters = [];
+let tour = { chapters: [], credits: [], waitingShots: [] };
 const problems = [];
 let figuresCount = 0;
 let spotsCount = 0;
@@ -83,8 +86,8 @@ export async function onBeforeBuild({ pages, options }) {
   previews = buildPreviews();
   const placements = findPlacements();
   screensMap = buildScreensMap((await loadAssetJson('screens.json')) ?? [], placements, screenVariantsOf);
-  const tour = JSON.parse(await fs.readFile(TOUR_PATH, 'utf8'));
-  tourChapters = buildTour(tour, placements);
+  const tourSource = JSON.parse(await fs.readFile(TOUR_PATH, 'utf8'));
+  tour = buildTour(tourSource, placements);
   if (available === null) return;
   for (const [pageUrl, sections] of Object.entries(manifest.pages)) {
     for (const [anchor, entry] of Object.entries(sections)) {
@@ -125,15 +128,16 @@ export async function onPostBuild({ outputDir, log }) {
   const tourPlatforms = { ...manifest.platforms, [TOUR_WIDE_PLATFORM]: TOUR_WIDE_LABEL };
   const tourPath = path.join(outputDir, TOUR_FILE);
   const tourDirectory = path.dirname(tourPath);
-  const tourJson = JSON.stringify({ platforms: tourPlatforms, chapters: tourChapters });
+  const tourJson = JSON.stringify({ platforms: tourPlatforms, chapters: tour.chapters, credits: tour.credits });
   await fs.mkdir(tourDirectory, { recursive: true });
   await fs.writeFile(tourPath, tourJson);
   for (const problem of problems) log(problem, 'WARN');
   const source = available === null ? 'no index, every variant assumed' : 'index found';
   const previewsCount = Object.keys(previews).length;
-  const tourStopsCount = tourChapters.reduce((count, chapter) => count + chapter.stops.length, 0);
+  const tourStopsCount = tour.chapters.reduce((count, chapter) => count + chapter.stops.length, 0);
   const summary = `${figuresCount} figures, ${spotsCount} hotspots, ${previewsCount} previews, ${screensMap.length} screens, ${tourStopsCount} tour stops`;
   log(`docs-shots: ${summary}, ${problems.length} problems (${source}, assets @${assetsRef})`);
+  if (tour.waitingShots.length > 0) log(`docs-shots: tour waits for shots ${tour.waitingShots.join(', ')}`);
 }
 
 async function resolveAssetsRef() {
@@ -293,17 +297,106 @@ function findPlacements() {
   return hrefById;
 }
 
-function buildTour(tour, placements) {
-  return tour.chapters.map((chapter) => {
+// -- a stop is a shot (with gesture `pins` per platform, and a `branch` of smaller stops after it) or a mosaic of
+// -- `tiles`. ids are positions, so the same stop keeps its id on every platform. a `pendingShot` stop waits quietly
+// -- until the next screenshots session publishes its shot. `level` is the first tour depth an item shows at: stops
+// -- default to simple, branch stops, pins and credits to medium, tiles and credit items to their parent's, and nothing
+// -- shows before its parent
+function buildTour(source, placements) {
+  const waitingShots = [];
+  const levelOf = (item, fallbackLevel, parentLevel, owner) => {
+    const levelId = item.level ?? TOUR_LEVELS[fallbackLevel];
+    const level = TOUR_LEVELS.indexOf(levelId);
+    if (level === -1) problems.push(`tour.json ${owner} level "${levelId}" (one of ${TOUR_LEVELS.join(' / ')})`);
+    const ownLevel = level === -1 ? fallbackLevel : level;
+    return Math.max(ownLevel, parentLevel);
+  };
+  const anchorsByPage = new Map();
+  for (const [pageUrl, headings] of headingsByPage) {
+    const anchors = new Set();
+    for (const heading of headings.values()) anchors.add(heading.anchor);
+    anchorsByPage.set(pageUrl, anchors);
+  }
+  const checkHref = (href, owner) => {
+    if (href === null || !href.startsWith('/')) return href;
+    const [pageUrl, anchor] = href.split('#');
+    const anchors = anchorsByPage.get(pageUrl);
+    if (anchors === undefined) problems.push(`tour.json ${owner} links ${href} (no such page)`);
+    else if (anchor !== undefined && !anchors.has(anchor)) problems.push(`tour.json ${owner} links ${href} (no such section)`);
+    return href;
+  };
+  const shotStopOf = (stop, id, level) => {
+    if (stop.pendingShot === true) {
+      const isPublished = available !== null && screenVariantsOf(stop.shot) !== null;
+      if (!isPublished) {
+        waitingShots.push(stop.shot);
+        return null;
+      }
+      problems.push(`tour.json ${stop.shot} (shot is published, drop pendingShot)`);
+    }
+    const variants = tourVariantsOf(stop);
+    if (variants === null) return null;
+    const wantedHref = stop.href ?? placements.get(stop.shot) ?? null;
+    const href = checkHref(wantedHref, stop.shot);
+    const built = { id, title: stop.title, text: stop.text, href, level, variants };
+    if (stop.pins !== undefined) built.pins = checkedPins(stop, level, checkHref, levelOf);
+    return built;
+  };
+  const chapters = source.chapters.map((chapter, chapterIndex) => {
     const stops = [];
-    for (const stop of chapter.stops) {
-      const variants = tourVariantsOf(stop);
-      if (variants === null) continue;
-      const href = stop.href ?? placements.get(stop.shot) ?? null;
-      stops.push({ id: stop.shot, title: stop.title, text: stop.text, href, variants });
+    for (const [stopIndex, stop] of chapter.stops.entries()) {
+      const id = `${chapterIndex}.${stopIndex}`;
+      const stopLevel = levelOf(stop, SIMPLE_LEVEL, SIMPLE_LEVEL, stop.title);
+      if (stop.tiles !== undefined) {
+        const tiles = [];
+        for (const [tileIndex, tile] of stop.tiles.entries()) {
+          const tileLevel = levelOf(tile, stopLevel, stopLevel, tile.title);
+          const builtTile = shotStopOf(tile, `${id}.${tileIndex}`, tileLevel);
+          if (builtTile !== null) tiles.push(builtTile);
+        }
+        if (tiles.length === 0) continue;
+        const mosaicHref = checkHref(stop.href ?? null, stop.title);
+        stops.push({ id, title: stop.title, text: stop.text, href: mosaicHref, level: stopLevel, tiles });
+        continue;
+      }
+      const built = shotStopOf(stop, id, stopLevel);
+      if (built === null) continue;
+      stops.push(built);
+      const branch = stop.branch ?? [];
+      for (const [branchIndex, branchStop] of branch.entries()) {
+        const inheritingBranchStop = { platforms: stop.platforms, ...branchStop };
+        const branchLevel = levelOf(branchStop, MEDIUM_LEVEL, stopLevel, branchStop.title);
+        const builtBranch = shotStopOf(inheritingBranchStop, `${id}.${branchIndex}`, branchLevel);
+        if (builtBranch !== null) stops.push({ ...builtBranch, isBranch: true });
+      }
     }
     return { title: chapter.title, color: chapter.color, stops };
   });
+  const creditGroups = source.credits ?? [];
+  const credits = creditGroups.map((group) => {
+    const groupLevel = levelOf(group, MEDIUM_LEVEL, MEDIUM_LEVEL, `credits ${group.title}`);
+    const items = group.items.map((item) => {
+      const href = checkHref(item.href, `credits ${item.title}`);
+      const itemLevel = levelOf(item, groupLevel, groupLevel, `credits ${item.title}`);
+      return { title: item.title, href, level: itemLevel };
+    });
+    return { title: group.title, platforms: group.platforms ?? null, level: groupLevel, items };
+  });
+  return { chapters, credits, waitingShots };
+}
+
+function checkedPins(stop, stopLevel, checkHref, levelOf) {
+  const pinsByPlatform = {};
+  for (const [platform, pins] of Object.entries(stop.pins)) {
+    pinsByPlatform[platform] = pins.map((pin) => {
+      const isInside = pin.x >= 0 && pin.x <= 1 && pin.y >= 0 && pin.y <= 1;
+      if (!isInside) problems.push(`tour.json ${stop.shot} ${platform} pin "${pin.title}" (x/y must be fractions of the shot)`);
+      if (pin.href !== undefined) checkHref(pin.href, `${stop.shot} pin "${pin.title}"`);
+      const pinLevel = levelOf(pin, MEDIUM_LEVEL, stopLevel, `${stop.shot} pin "${pin.title}"`);
+      return { ...pin, level: pinLevel };
+    });
+  }
+  return pinsByPlatform;
 }
 
 // -- a platform without its own shot borrows another one's, unless the stop's `platforms` leaves it out (a desktop

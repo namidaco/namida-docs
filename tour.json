@@ -4,50 +4,445 @@
       "title": "Library",
       "color": "accent",
       "stops": [
-        { "shot": "home", "wide": "wide_home", "title": "Home", "text": "Mixes made from your taste, and memories from years back." },
-        { "shot": "playlists", "wide": "wide_playlists", "title": "Playlists", "text": "Every kind of playlist, in one place." },
-        { "shot": "smart_playlist_editor_filled", "title": "Smart Playlists", "text": "Playlists that build themselves." },
-        { "shot": "history", "title": "History", "text": "Every listen kept forever, jump back to any day or listen." },
-        { "shot": "most_played", "title": "Most Played", "text": "Your top tracks from any moment in time." },
-        { "shot": "search", "title": "Search", "text": "Search the whole library at once, even inside lyrics." },
-        { "shot": "album_page", "wide": "wide_album", "title": "Albums", "text": "Every album, single and EP in its place." },
-        { "shot": "artist_page", "wide": "wide_artist", "title": "Artists", "text": "Every artist, composer and feature, sorted out." }
+        {
+          "shot": "home", "wide": "wide_home", "title": "Home", "text": "Mixes made from your taste, and memories from years back.",
+          "branch": [
+            { "shot": "home_scrolled", "title": "Lost Memories", "text": "Rediscover what you were listening to years ago." }
+          ]
+        },
+        {
+          "title": "Mixes", "level": "medium", "href": "/pages/library/#home", "text": "Mixes from how you listen, from old favorites to tracks you never played, and lots in between.",
+          "tiles": [
+            { "shot": "home_mix_dialog", "title": "Recommended", "text": "What you're into lately, and what you played around this time last year." },
+            { "shot": "home_mix_supremacy", "pendingShot": true, "href": "/pages/library/#home", "title": "Supremacy", "text": "The playing track, and the tracks you usually play with it." },
+            { "shot": "home_mix_underrated", "pendingShot": true, "href": "/pages/library/#home", "title": "Underrated", "text": "Tracks you played only a few times and haven't heard in a while." },
+            { "shot": "home_mix_lost_partners", "pendingShot": true, "href": "/pages/library/#home", "title": "Lost Partners", "text": "Tracks you used to play a lot but haven't heard in a long time." },
+            { "shot": "home_mix_discover", "pendingShot": true, "href": "/pages/library/#home", "title": "Discover", "text": "Tracks you never played, or barely played." }
+          ]
+        },
+        {
+          "shot": "playlists", "wide": "wide_playlists", "title": "Playlists", "text": "Every kind of playlist, in one place.",
+          "branch": [
+            { "shot": "playlists_grouped", "level": "advanced", "href": "/features/playlists-history/#playlist-tags", "title": "Playlist Tags", "text": "Group playlists by tags, and sorting never loses your own order." }
+          ]
+        },
+        {
+          "shot": "history", "title": "History", "text": "Every listen kept forever, jump back to any day or listen.",
+          "branch": [
+            { "shot": "history_jump_to_day", "title": "Jump to Day", "text": "Go back to any day of your history, or the same day in another year." },
+            { "shot": "track_listens", "title": "Track Listens", "text": "See every time you played a track, in a list or a calendar." },
+            { "shot": "settings_backup", "href": "/features/playlists-history/#import", "title": "History Import", "text": "Bring your history from YouTube, Last.fm, Spotify and ListenBrainz." }
+          ]
+        },
+        {
+          "shot": "most_played", "title": "Most Played", "text": "Your top tracks from any moment in time.",
+          "branch": [
+            { "shot": "most_played_range_menu", "href": "/features/playlists-history/#most-played", "title": "Time Ranges", "text": "Slide through periods, or pick a day with the days around it." }
+          ]
+        },
+        {
+          "shot": "smart_playlist_editor_filled", "title": "Smart Playlists", "text": "Playlists that build themselves.",
+          "branch": [
+            { "shot": "smart_playlist_rule", "href": "/features/smart-playlists/#rules", "title": "Rules", "text": "Rules for almost anything, from listens between two dates to late night plays." },
+            { "shot": "smart_playlist_limit", "href": "/features/smart-playlists/#limit", "title": "Limits", "text": "Keep it to 25 tracks, an hour or a few GB, picked by any sort." }
+          ]
+        },
+        {
+          "shot": "search", "title": "Search", "text": "Search the whole library at once, even inside lyrics.",
+          "pins": {
+            "android": [
+              { "x": 0.93, "y": 0.79, "level": "advanced", "title": "Search Button", "text": "Swipe up on it to open the keyboard, and down to close it.", "href": "/tips/#search" }
+            ]
+          }
+        },
+        { "shot": "settings_add_folder", "href": "/features/media-servers/", "title": "Cloud & Servers", "text": "Play from Jellyfin, Subsonic, a NAS or the cloud, and keep tracks for offline." },
+        {
+          "title": "Sorting", "level": "medium", "href": "/features/library-indexing/#sorting", "text": "Sort by anything, in any order, and save it for later.",
+          "tiles": [
+            { "shot": "tracks_sort", "title": "Multi Sort", "text": "Sort by more than one thing, like artist, then year, then title." },
+            { "shot": "albums_sort", "title": "Smart Order", "text": "Ignore \"The\", and sort non-Latin titles by their Latin reading." },
+            { "shot": "sort_preset_name", "title": "Sort Presets", "text": "Save the sorts you use most, by name." },
+            { "shot": "tracks_sort_menu", "title": "Random (Daily)", "text": "A random order that stays the same all day." }
+          ]
+        },
+        { "shot": "album_page", "wide": "wide_album", "level": "medium", "title": "Albums", "text": "Every album, single and EP in its place." },
+        { "shot": "artist_page", "wide": "wide_artist", "level": "medium", "title": "Artists", "text": "Every artist, composer and feature, sorted out." }
       ]
     },
     {
       "title": "Player",
       "color": "purple",
       "stops": [
-        { "shot": "player_background_artwork", "wide": "wide_player", "href": "/features/playback/", "title": "Player", "text": "A clean player built around your music, with cool yet calm effects." },
-        { "shot": "player_queue", "title": "Queue", "text": "All your queues saved, pick up any of them where you left off." },
-        { "shot": "player_lyrics", "title": "Lyrics", "text": "Lyrics that light up line by line or word by word." },
-        { "shot": "sound_control", "title": "Sound Effects", "text": "Shape every track with a parametric EQ and sound effects." },
-        { "shot": "visualizer_bars", "title": "Visualizers", "text": "Bars, waves, particles and more, moving with your music." }
+        {
+          "shot": "player_background_artwork", "wide": "wide_player", "href": "/features/playback/", "title": "Player", "text": "A clean player built around your music, with cool yet calm effects.",
+          "pins": {
+            "android": [
+              { "x": 0.5, "y": 0.34, "title": "Artwork Gestures", "text": "Tap, hold or double tap the artwork for actions you choose.", "href": "/settings/4-customization-settings/#miniplayer-customization" },
+              { "x": 0.14, "y": 0.657, "title": "Track Menu", "text": "Tap the track info to open its menu." },
+              { "x": 0.9, "y": 0.655, "title": "Add to Playlist", "text": "Hold the heart to add the track to a playlist." },
+              { "x": 0.06, "y": 0.775, "title": "Seek Magnet", "text": "Let go near the start and it snaps right to 0:00.", "href": "/tips/#player" },
+              { "x": 0.5, "y": 0.773, "title": "Cancel Seeking", "text": "While seeking, swipe up to cancel." },
+              { "x": 0.12, "y": 0.866, "title": "Seek", "text": "Tap the position to seek back, or the duration to seek forward." },
+              { "x": 0.335, "y": 0.866, "title": "Back to Start", "text": "Hold previous to jump to the very start." },
+              { "x": 0.665, "y": 0.866, "title": "Speed Up", "text": "Hold next to speed up while you hold it." }
+            ],
+            "windows": [
+              { "x": 0.5, "y": 0.35, "title": "Artwork Gestures", "text": "Click, hold or double click the artwork for actions you choose.", "href": "/settings/4-customization-settings/#miniplayer-customization" },
+              { "x": 0.125, "y": 0.668, "title": "Track Menu", "text": "Click the track info to open its menu." },
+              { "x": 0.905, "y": 0.665, "title": "Add to Playlist", "text": "Hold the heart to add the track to a playlist." },
+              { "x": 0.06, "y": 0.781, "title": "Seek Magnet", "text": "Let go near the start and it snaps right to 0:00.", "href": "/tips/#player" },
+              { "x": 0.5, "y": 0.781, "title": "Cancel Seeking", "text": "While seeking, drag up to cancel." },
+              { "x": 0.114, "y": 0.871, "title": "Seek", "text": "Click the position to seek back, or the duration to seek forward." },
+              { "x": 0.34, "y": 0.871, "title": "Back to Start", "text": "Hold previous to jump to the very start." },
+              { "x": 0.657, "y": 0.871, "title": "Speed Up", "text": "Hold next to speed up while you hold it." }
+            ]
+          }
+        },
+        {
+          "shot": "player_queue", "title": "Queue", "text": "All your queues saved, pick up any of them where you left off.",
+          "branch": [
+            { "shot": "track_menu_play_after", "pendingShot": true, "href": "/features/playback/#queue", "title": "Play After", "text": "Queue tracks up in the order you pick them." },
+            { "shot": "track_swipe", "pendingShot": true, "href": "/settings/4-customization-settings/#track-tile", "title": "Swipe Actions", "text": "Quick actions with a swipe, and you pick which ones." },
+            { "shot": "player_queue_shuffle_menu", "href": "/features/playback/#queue", "title": "Shuffle Modes", "text": "Shuffle and get the original order back, or shuffle just once." },
+            { "shot": "player_queue_configure", "title": "Queue Options", "text": "Decide what happens when the queue ends." }
+          ]
+        },
+        {
+          "shot": "player_lyrics", "title": "Lyrics", "text": "Lyrics that light up line by line or word by word.",
+          "branch": [
+            { "shot": "player_lyrics_break", "pendingShot": true, "level": "simple", "href": "/features/playback/#lyrics", "title": "Instrumental Breaks", "text": "Lyrics step aside during instrumental breaks, so the artwork or video shows." },
+            { "shot": "lyrics_fullscreen", "title": "Fullscreen Lyrics", "text": "Sing along with lyrics on the whole screen." },
+            { "shot": "lyrics_picker", "title": "Lyrics Picker", "text": "Pick the right lyrics and fix their timing." },
+            { "shot": "lyrics_romanization", "pendingShot": true, "href": "/features/playback/#lyrics", "title": "Romanization", "text": "Sing along in languages you can't read." },
+            { "shot": "settings_extras_lyrics_effects", "href": "/features/playback/#lyrics", "title": "Lyrics Effects", "text": "Lyrics animations as calm or lively as you like." }
+          ]
+        },
+        {
+          "shot": "sound_control", "title": "Sound Effects", "text": "Shape every track with a parametric EQ and sound effects, or switch to mono.",
+          "branch": [
+            { "shot": "sound_control_output", "title": "Output Device", "text": "Pick where Namida plays, bit-perfect when your device supports it." },
+            { "shot": "audio_path", "title": "Audio Path", "text": "See everything that happens to the sound on its way to you." },
+            { "shot": "sound_control_item", "title": "Per Track Sound", "text": "Give any track its own speed, pitch, volume and EQ." },
+            { "shot": "sound_control_templates", "title": "Presets", "text": "Save your favorite sound and switch to it in one tap." }
+          ]
+        },
+        {
+          "shot": "settings_playback_crossfade", "level": "medium", "href": "/features/playback/#effects", "title": "Smooth Playback", "text": "Crossfade, gapless playback and soft fades on play and pause.",
+          "pins": {
+            "android": [
+              { "x": 0.87, "y": 0.088, "title": "Skip Silence", "text": "Skip the silent parts anywhere in a track.", "href": "/settings/3-playback-settings/#skip-silence" },
+              { "x": 0.87, "y": 0.143, "title": "Gapless Playback", "text": "No delay between tracks, the next one loads early.", "href": "/settings/3-playback-settings/#gapless-playback" },
+              { "x": 0.87, "y": 0.197, "title": "Crossfade", "text": "Blend in where the track really fades out, smart styles even match the beats.", "href": "/features/playback/#beat-matching" },
+              { "x": 0.87, "y": 0.252, "title": "Play & Pause Fade", "text": "The sound fades in and out when you play or pause.", "href": "/settings/3-playback-settings/#fade-play-pause" }
+            ],
+            "windows": [
+              { "x": 0.879, "y": 0.172, "title": "Gapless Playback", "text": "No delay between tracks, the next one loads early.", "href": "/settings/3-playback-settings/#gapless-playback" },
+              { "x": 0.879, "y": 0.225, "title": "Crossfade", "text": "Blend in where the track really fades out, smart styles even match the beats.", "href": "/features/playback/#beat-matching" },
+              { "x": 0.879, "y": 0.28, "title": "Play & Pause Fade", "text": "The sound fades in and out when you play or pause.", "href": "/settings/3-playback-settings/#fade-play-pause" }
+            ]
+          }
+        },
+        {
+          "title": "Moving with Music", "level": "medium", "href": "/features/effects/#visualizers", "text": "Effects in the player that move with what's playing.",
+          "tiles": [
+            { "shot": "visualizer_bars", "title": "Visualizers", "text": "Bars, waves and other styles that move with the music." },
+            { "shot": "visualizer_particles", "title": "Particles", "text": "Particles bursting out with the beat." },
+            { "shot": "visualizer_beat_rings", "title": "Beat Rings", "text": "Rings grow out of the artwork on each beat." },
+            { "shot": "visualizer_mirrored_bars", "pendingShot": true, "level": "advanced", "href": "/features/effects/#visualizers", "title": "Mirrored Bars", "text": "Bars mirrored around the waveform seekbar." },
+            { "shot": "visualizer_outline", "pendingShot": true, "level": "advanced", "href": "/features/effects/#visualizers", "title": "Outline", "text": "Bars running along the artwork's edges." },
+            { "shot": "readme_player_dark", "href": "/settings/4-customization-settings/#miniplayer-customization", "title": "Animated Artwork", "text": "The artwork pulses with the music." },
+            { "shot": "miniplayer_party_mode", "pendingShot": true, "href": "/settings/4-customization-settings/#miniplayer-customization", "title": "Party Mode", "text": "A soft glow around the edges, in the artwork's colors." }
+          ]
+        },
+        {
+          "shot": "player", "level": "medium", "href": "/features/playback/#video", "title": "Music Videos", "text": "Namida finds the video of a track (on your device or on YouTube) and plays it with the music.",
+          "branch": [
+            { "shot": "settings_playback_video_source", "title": "Video Source", "text": "Pick local videos or YouTube, or let Namida try local ones first." },
+            { "shot": "player_loop_animation", "pendingShot": true, "href": "/guides/namider/#loop-animation", "title": "Loop Animations", "text": "Turn a short clip into an animated artwork." }
+          ]
+        }
       ]
     },
     {
       "title": "YouTube",
       "color": "red",
       "stops": [
-        { "shot": "yt_home_feed", "title": "YouTube", "text": "YouTube inside Namida, with your feed, channels and notifications." },
-        { "shot": "yt_player", "title": "Miniplayer", "text": "Comments and related videos, without leaving the video." },
-        { "shot": "yt_playlists", "title": "YouTube Playlists", "text": "Your YouTube playlists, safe from videos randomly going missing." },
-        { "shot": "yt_download_sheet", "title": "Downloads", "text": "Download anything, properly tagged." }
+        {
+          "shot": "yt_home_feed", "title": "YouTube", "text": "YouTube inside Namida, with your feed, channels and notifications.",
+          "branch": [
+            { "shot": "yt_home_local", "href": "/features/youtube/#namida-account", "title": "Without an Account", "text": "History, playlists and subscriptions kept in Namida, no account needed." },
+            { "shot": "yt_history", "href": "/pages/youtube/#history", "title": "YouTube History", "text": "Its own history and most played, apart from your music." },
+            { "shot": "yt_notifications", "href": "/pages/youtube/#home", "title": "Notifications", "text": "Play every unread video in one go." }
+          ]
+        },
+        {
+          "shot": "yt_player", "title": "Miniplayer", "text": "Comments and related videos, without leaving the video.",
+          "pins": {
+            "android": [
+              { "x": 0.9, "y": 0.165, "title": "Seek & Speed", "text": "Double tap a side of the video to seek, or hold it to speed up.", "href": "/features/youtube/#video-view" },
+              { "x": 0.944, "y": 0.27, "title": "Fullscreen", "text": "Swipe up on the video for fullscreen, or down on its right side for portrait.", "href": "/features/youtube/#fullscreen" },
+              { "x": 0.31, "y": 0.298, "title": "Segments & Heatmap", "text": "SponsorBlock segments and the most replayed parts show on the seekbar. Sponsors can be skipped, or cut out of downloads.", "href": "/features/youtube/#sponsorblock" },
+              { "x": 0.267, "y": 0.408, "title": "Dislikes", "text": "Dislike counts are back, thanks to Return YouTube Dislike.", "href": "/features/youtube/#return-youtube-dislike" }
+            ],
+            "windows": [
+              { "x": 0.31, "y": 0.298, "title": "Segments & Heatmap", "text": "SponsorBlock segments and the most replayed parts show on the seekbar. Sponsors can be skipped, or cut out of downloads.", "href": "/features/youtube/#sponsorblock" },
+              { "x": 0.267, "y": 0.408, "title": "Dislikes", "text": "Dislike counts are back, thanks to Return YouTube Dislike.", "href": "/features/youtube/#return-youtube-dislike" }
+            ]
+          },
+          "branch": [
+            { "shot": "video_fullscreen", "href": "/features/youtube/#fullscreen", "title": "Fullscreen", "text": "Swipe for brightness and volume, lock the controls, or add a soft glow." },
+            { "shot": "yt_player_dimmed", "pendingShot": true, "href": "/features/youtube/#miniplayer", "title": "Auto Dim", "text": "The player dims itself after a few idle seconds." }
+          ]
+        },
+        {
+          "shot": "yt_download_sheet", "title": "Downloads", "text": "Download anything, properly tagged.",
+          "branch": [
+            { "shot": "yt_download_tags", "pendingShot": true, "href": "/features/youtube/#filename-formats", "title": "Tags & Filenames", "text": "Tags filled from the video title, and filenames built your way." },
+            { "shot": "yt_parallel_downloads", "title": "Parallel Downloads", "text": "Many downloads at once, and each one goes faster." },
+            { "shot": "yt_playlist_download_configure", "title": "Playlist Downloads", "text": "Download a whole playlist at once, tagged and numbered." }
+          ]
+        },
+        {
+          "title": "Streaming", "level": "medium", "href": "/features/youtube/#streaming", "text": "Watch, or just listen, the way you like.",
+          "tiles": [
+            { "shot": "settings_youtube", "href": "/features/youtube/#streaming", "title": "Audio Only & Radio", "text": "Audio only, a radio after a single video, and suggestions without your account." },
+            { "shot": "data_saver", "title": "Data Saver", "text": "Set one level for Wi-Fi and another for mobile data." }
+          ]
+        },
+        { "shot": "yt_playlists", "level": "medium", "title": "YouTube Playlists", "text": "Your YouTube playlists, safe from videos randomly going missing." },
+        { "shot": "yt_search_offline", "pendingShot": true, "level": "medium", "href": "/pages/youtube/#search", "title": "YouTube Search", "text": "Search everything you watched, even offline." }
       ]
     },
     {
       "title": "More",
       "color": "neutral",
       "stops": [
-        { "shot": "stats", "wide": "wide_stats", "title": "Stats", "text": "Charts of your listening, from top tracks to your longest streak." },
-        { "shot": "party_room", "title": "Listening Party", "text": "Listen together with friends, in sync." },
-        { "shot": "sync_manager", "title": "Sync", "text": "Sync your data between all your devices." },
-        { "shot": "your_year", "title": "Your Year", "text": "Look back at your year in music." },
-        { "shot": "tag_editor", "title": "Tag Editor", "text": "A powerful tag editor, from a single track to your whole library." },
-        { "shot": "lyrics_editor", "wide": "wide_lyrics_editor", "title": "Lyrics Editor", "text": "Make your own synced lyrics." },
-        { "shot": "artists_map", "title": "Artists Map", "text": "See how all your artists connect." },
-        { "shot": "shortcuts", "platforms": ["windows"], "title": "Shortcuts", "text": "Control playback and navigation from the keyboard." },
+        {
+          "shot": "stats", "wide": "wide_stats", "title": "Stats", "text": "Charts of your listening, from top tracks to your longest streak.",
+          "branch": [
+            { "shot": "stats_year", "level": "advanced", "href": "/pages/other/#charts", "title": "Charts", "text": "Compared with the period before, with rediscoveries, habits and completed albums." }
+          ]
+        },
+        {
+          "shot": "party_room", "title": "Listening Party", "text": "Listen together with friends, in sync.",
+          "branch": [
+            { "shot": "party_lobby", "href": "/features/party/#create", "title": "On Your Network", "text": "Host on your own network with no server, and invite with a code or QR." },
+            { "shot": "party_room_queue", "href": "/features/party/#queue", "title": "Shared Queue", "text": "The same tracks found on every device, with YouTube to fill the gaps." },
+            { "shot": "party_room_chat", "title": "Chat", "text": "Chat with everyone in the room." },
+            { "shot": "party_reactions", "title": "Reactions", "text": "React to what's playing, with your own emojis." }
+          ]
+        },
+        {
+          "shot": "sync_manager", "title": "Sync", "text": "Sync your data between all your devices.",
+          "branch": [
+            { "shot": "sync_connect_ip", "href": "/features/sync/#connect-by-ip", "title": "Connect by IP", "text": "Connect by address when devices can't find each other." },
+            { "shot": "sync_diagnostics", "href": "/features/sync/#diagnostics", "title": "Diagnostics", "text": "A shareable report when something won't connect." }
+          ]
+        },
+        { "shot": "your_year", "level": "medium", "title": "Your Year", "text": "Look back at your year in music." },
+        {
+          "shot": "tag_editor", "level": "medium", "title": "Tag Editor", "text": "A powerful tag editor, from a single track to your whole library.",
+          "branch": [
+            { "shot": "tag_editor_multi", "href": "/features/tag-editor/#multiple", "title": "Many Tracks", "text": "Edit many tracks at once, mixed values stay as they are." },
+            { "shot": "tag_editor_find_replace", "href": "/features/tag-editor/#multiple", "title": "Find & Replace", "text": "Find and replace across tags, with a live preview." }
+          ]
+        },
+        { "shot": "lyrics_editor", "wide": "wide_lyrics_editor", "level": "medium", "title": "Lyrics Editor", "text": "Make your own synced lyrics." },
+        { "shot": "artists_map", "level": "medium", "title": "Artists Map", "text": "See how all your artists connect." },
         { "shot": "settings", "wide": "wide_settings_main", "title": "Settings", "text": "Tune every detail: themes, playback, the player, YouTube and more." }
+      ]
+    },
+    {
+      "title": "Little Things",
+      "color": "green",
+      "stops": [
+        {
+          "title": "Around the Player", "level": "medium", "text": "Small tools for the way you listen.",
+          "tiles": [
+            { "shot": "sleep_timer", "title": "Sleep Timer", "text": "Stop playback after a number of tracks or minutes." },
+            { "shot": "bookmarks", "title": "Bookmarks", "text": "Mark spots in a track or video to come back to them." },
+            { "shot": "track_menu", "title": "Track Menu", "text": "Repeat a track a few times, or stop after any track in the queue." },
+            { "shot": "queue_insertion", "title": "Add More", "text": "Add more from the same album, artist or folder, and hold + to pick how." },
+            { "shot": "advanced_shuffle", "title": "Shuffle", "text": "Shuffle a number of tracks, and leave out your recent listens." },
+            { "shot": "player_video_menu", "title": "Video Options", "text": "Hold the video button to pick the quality or audio track." }
+          ]
+        },
+        {
+          "title": "Around the Library", "level": "medium", "text": "Small things that keep a big library in order.",
+          "tiles": [
+            { "shot": "selection_expanded", "title": "Selection", "text": "Select tracks from different pages, then act on all of them at once." },
+            { "shot": "track_info", "href": "/tips/#info-sorting", "title": "Track Info", "text": "Tap any field to copy it." },
+            { "shot": "track_stats", "title": "Moods, Tags & Rating", "text": "Give tracks moods, tags and a rating, each one gets its own page." },
+            { "shot": "stats_card", "title": "Statistics", "text": "Listens and top tracks of any album, artist or selection." },
+            { "shot": "track_color_palette", "title": "Track Colors", "text": "Edit the colors of any track, and pick a mix." },
+            { "shot": "home_configure", "title": "Home Sections", "text": "Turn Home sections on or off, and reorder them." }
+          ]
+        },
+        {
+          "title": "Around YouTube", "level": "medium", "text": "Small things that make YouTube nicer to use.",
+          "tiles": [
+            { "shot": "yt_cache_priority", "pendingShot": true, "href": "/features/youtube/#caching", "title": "Cache Priority", "text": "Keep the videos you care about, even after they're gone from YouTube." },
+            { "shot": "yt_channel_groups", "title": "Channel Groups", "text": "Sort your channels into groups, then see only one group's videos." },
+            { "shot": "yt_stats", "title": "YouTube Stats", "text": "Charts of what you watch, like the ones for your music." },
+            { "shot": "yt_add_to_playlist", "title": "Add to Playlist", "text": "Save videos to Namida playlists, or to your account." },
+            { "shot": "yt_video_info", "title": "Video Info", "text": "Info of any video, even private and deleted ones." }
+          ]
+        },
+        {
+          "title": "Effects", "level": "medium", "text": "Plenty of calm effects behind the app, and some show up on their own each season.",
+          "tiles": [
+            { "shot": "effect_sakura", "title": "Sakura", "text": "Falling petals, it shows up on its own in spring." },
+            { "shot": "effect_rain", "title": "Rain", "text": "Soft falling streaks behind the pages." },
+            { "shot": "effect_aurora", "title": "Aurora", "text": "Aurora curtains colored by the current artwork." },
+            { "shot": "effect_overlay_fireflies", "title": "Fireflies", "text": "Flickering glows over the whole app." },
+            { "shot": "effect_fireworks", "pendingShot": true, "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Fireworks", "text": "Fireworks bursting on the beat." },
+            { "shot": "effect_deep_ocean", "pendingShot": true, "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Deep Ocean", "text": "Glowing plankton, fish and jellyfish drifting by." },
+            { "shot": "effect_starfield", "pendingShot": true, "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Starfield", "text": "Stars, sparkles and shooting stars." },
+            { "shot": "effect_galaxy", "pendingShot": true, "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Galaxy", "text": "A galaxy slowly spinning behind the app." }
+          ]
+        },
+        {
+          "title": "Look & Feel", "level": "advanced", "href": "/settings/4-customization-settings/", "text": "Make the app look and feel the way you want.",
+          "tiles": [
+            { "shot": "settings_advanced_performance", "title": "Performance Mode", "text": "One switch between the best looks and the smoothest app." },
+            { "shot": "settings_app_icon", "pendingShot": true, "href": "/settings/4-customization-settings/#app-icon", "title": "App Icons", "text": "Pick the app icon you like." },
+            { "shot": "jellys_invasion", "pendingShot": true, "href": "/settings/6-extras-settings/#flags", "title": "Jellyfish", "text": "Let a few jellyfish drift around the app." }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Desktop",
+      "color": "amber",
+      "stops": [
+        { "shot": "shortcuts", "platforms": ["windows"], "level": "medium", "title": "Shortcuts", "text": "Control playback and navigation from the keyboard." },
+        {
+          "shot": "home", "platforms": ["windows"], "level": "medium", "href": "/features/system-integration/", "title": "On Your Desktop", "text": "Namida stays close while you use other apps.",
+          "pins": {
+            "windows": [
+              { "x": 0.95, "y": 0.016, "title": "Tray", "text": "Closing the window keeps Namida in the tray.", "href": "/features/system-integration/#tray" },
+              { "x": 0.5, "y": 0.5, "title": "Drag & Drop", "text": "Drop files on the window to play them.", "href": "/tips/#desktop-tips" },
+              { "x": 0.45, "y": 0.872, "title": "Quick Rating", "text": "Press Ctrl + Alt + 1..9 to rate the playing track.", "href": "/features/shortcuts/" },
+              { "x": 0.6, "y": 0.872, "title": "Mini Lyrics", "text": "Press Ctrl + Alt + L to shrink Namida into a small lyrics window.", "href": "/features/system-integration/#mini-lyrics" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Android",
+      "color": "amber",
+      "stops": [
+        { "shot": "track_set_as", "platforms": ["android"], "level": "medium", "title": "Set As", "text": "Use any track as your ringtone, notification sound or alarm." },
+        { "shot": "settings_playback_notification_buttons", "platforms": ["android"], "level": "medium", "title": "Notification Buttons", "text": "Pick and reorder the buttons in the media notification." }
+      ]
+    }
+  ],
+  "credits": [
+    {
+      "title": "Playback",
+      "items": [
+        { "title": "Replay Gain", "href": "/features/playback/#replay-gain" },
+        { "title": "Beat Matching", "href": "/features/playback/#beat-matching" },
+        { "title": "Repeat Modes", "href": "/features/playback/#repeat-modes" },
+        { "title": "Waveform Seekbar", "href": "/features/playback/#waveform" },
+        { "title": "Chapters", "href": "/features/playback/#chapters" },
+        { "title": "Pausing Scenarios", "href": "/features/playback/#pausing" },
+        { "title": "Lyrics Translations", "href": "/features/playback/#lyrics-translations" },
+        { "title": "Subtitles", "href": "/features/subtitles/" },
+        { "title": "Duet Lyrics", "level": "advanced", "href": "/features/playback/#lyrics" },
+        { "title": "Simple Lyrics Line", "level": "advanced", "href": "/settings/6-extras-settings/#lyrics" },
+        { "title": "Lyrics for Sped Up Versions", "level": "advanced", "href": "/settings/6-extras-settings/#lyrics" },
+        { "title": "Word by Word Syncing", "level": "advanced", "href": "/features/lyrics-editor/#sync-words" },
+        { "title": "Queue Search", "level": "advanced", "href": "/features/playback/#queue" },
+        { "title": "Fill the Queue by Mood", "level": "advanced", "href": "/features/playback/#queue" },
+        { "title": "432Hz & Linked Pitch", "level": "advanced", "href": "/features/playback/#sound-control" },
+        { "title": "Left & Right EQ Bands", "level": "advanced", "href": "/features/playback/#equalizer" },
+        { "title": "8D & Vocal Remover", "level": "advanced", "href": "/features/playback/#sound-effects" },
+        { "title": "BPM & Key Detection", "level": "advanced", "href": "/features/playback/#beat-matching" },
+        { "title": "Animated Backgrounds", "level": "advanced", "href": "/features/effects/#player-background" },
+        { "title": "Flip Artwork", "level": "advanced", "href": "/settings/4-customization-settings/#track-actions" }
+      ]
+    },
+    {
+      "title": "Library",
+      "items": [
+        { "title": "Folder Based Library", "href": "/features/library-indexing/#folders" },
+        { "title": "Artist Separators", "href": "/features/library-indexing/#separators" },
+        { "title": "Missing Tracks", "href": "/features/library-indexing/#missing-tracks" },
+        { "title": "File Dates", "href": "/features/library-indexing/#file-dates" },
+        { "title": "Offline Caching", "href": "/features/media-servers/#offline-caching" },
+        { "title": "Smart Search", "href": "/features/smart-playlists/#smart-search" },
+        { "title": "Track Generation", "href": "/features/playlists-history/#generation" },
+        { "title": "Discover", "href": "/pages/library/#discover" },
+        { "title": "Typo Friendly Search", "level": "advanced", "href": "/pages/library/#search" },
+        { "title": "Two Way M3U Sync", "level": "advanced", "href": "/features/playlists-history/#playlists" },
+        { "title": "Languages", "level": "advanced", "href": "/pages/library/#languages" },
+        { "title": "Separator Blacklist", "level": "advanced", "href": "/settings/2-indexer-settings/#separators" },
+        { "title": "Pixel Sharp Artwork Viewer", "level": "advanced", "href": "/tips/#info-sorting" },
+        { "title": "Staggered Album Grid", "level": "advanced", "href": "/settings/4-customization-settings/#album-tile" },
+        { "title": "Custom Track Tiles", "level": "advanced", "href": "/settings/4-customization-settings/#track-tile" },
+        { "title": "Fake Lossless Detector", "level": "advanced", "href": "/settings/8-advanced-settings/#flags" }
+      ]
+    },
+    {
+      "title": "YouTube",
+      "items": [
+        { "title": "YouTube Music", "href": "/features/youtube/#youtube-music" },
+        { "title": "Chapter Downloads", "href": "/features/youtube/#chapters-downloads" },
+        { "title": "Offline Playback", "href": "/features/youtube/#caching" },
+        { "title": "Comments", "href": "/features/youtube/#comments" },
+        { "title": "Accounts", "href": "/features/youtube/#accounts" },
+        { "title": "Picture in Picture", "level": "advanced", "href": "/settings/6-extras-settings/#pip" },
+        { "title": "SponsorBlock per Category", "level": "advanced", "href": "/settings/5-youtube-settings/#sponsorblock" },
+        { "title": "Hashtag Pages", "level": "advanced", "href": "/pages/youtube/#hashtag" },
+        { "title": "Save Deleted Videos", "level": "advanced", "href": "/features/youtube/#downloaded-videos" },
+        { "title": "Downloads Resume Themselves", "level": "advanced", "href": "/features/youtube/#downloads" }
+      ]
+    },
+    {
+      "title": "Around the App",
+      "items": [
+        { "title": "Auto Coloring", "href": "/settings/1-theme-settings/#auto-coloring" },
+        { "title": "Seasons", "href": "/features/effects/#seasons" },
+        { "title": "Wallpaper", "href": "/features/effects/#wallpaper" },
+        { "title": "Discord Rich Presence", "href": "/features/system-integration/#discord" },
+        { "title": "Automation", "href": "/features/automation/" },
+        { "title": "Backup & Restore", "href": "/settings/7-backup-restore-settings/" },
+        { "title": "Settings Search", "href": "/tips/#search" },
+        { "title": "Hidden Eggs", "href": "/membership/#eggs" },
+        { "title": "Party Remote Control", "level": "advanced", "href": "/features/party/#remote" },
+        { "title": "Playback Handoff", "level": "advanced", "href": "/features/sync/#data" },
+        { "title": "Karaoke Captions", "level": "advanced", "href": "/features/subtitles/#styling" },
+        { "title": "Smart Cache Cleaner", "level": "advanced", "href": "/settings/8-advanced-settings/#clear-caches" },
+        { "title": "Image Compression", "level": "advanced", "href": "/settings/8-advanced-settings/#compress-images" },
+        { "title": "Docs Inside the App", "level": "advanced", "href": "/tips/#misc-tips" },
+        { "title": "Issue Reports", "level": "advanced", "href": "/pages/other/#about" }
+      ]
+    },
+    {
+      "title": "On Desktop",
+      "platforms": ["windows"],
+      "items": [
+        { "title": "System Wide Hotkeys", "href": "/features/system-integration/#hotkeys" },
+        { "title": "Widescreen Player", "href": "/features/playback/#widescreen-player" },
+        { "title": "Exclusive Mode", "href": "/features/playback/#exclusive-mode" },
+        { "title": "Zoom", "href": "/features/shortcuts/#zoom" },
+        { "title": "Keyboard Navigation", "level": "advanced", "href": "/features/shortcuts/#navigation" },
+        { "title": "Portable Mode", "level": "advanced", "href": "/storage-paths/#user-data" }
+      ]
+    },
+    {
+      "title": "On Android",
+      "platforms": ["android"],
+      "items": [
+        { "title": "Home Screen Widget", "href": "/features/home-widget/" },
+        { "title": "Quick Settings Tile", "href": "/features/system-integration/#quick-settings-tile" },
+        { "title": "Status Bar Lyrics", "href": "/features/system-integration/#status-bar-lyrics" },
+        { "title": "Open With & Share", "href": "/features/system-integration/#open-with" },
+        { "title": "USB Direct Access", "href": "/features/playback/#usb-direct" },
+        { "title": "Android Auto & Wear OS", "level": "advanced", "href": "/features/system-integration/#media-controls" },
+        { "title": "NFC Tags", "level": "advanced", "href": "/features/system-integration/#open-with" }
       ]
     }
   ]

@@ -45,3 +45,32 @@
   height: 14px;
   color: var(--summer-fg-faint);
 }
+
+.ai-timeline {
+  margin: 12px 0 20px;
+}
+
+.ai-timeline__bar {
+  display: flex;
+  height: 10px;
+  border-radius: var(--summer-radius-sm);
+  overflow: hidden;
+}
+
+.ai-timeline__hand {
+  flex: 43;
+  background: var(--summer-accent);
+}
+
+.ai-timeline__ai {
+  flex: 3;
+  background: var(--summer-border-strong);
+}
+
+.ai-timeline__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--summer-fg-muted);
+}

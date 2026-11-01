@@ -1,8 +1,10 @@
 // by claude
-// Tour page (data from plugins/docs-shots, stops written in tour.json): a short trailer of the app's main features.
+// Tour page (data from plugins/docs-shots, stops written in tour.json): a short trailer of the app's features.
 // A line runs from stop to stop like a route on a map, snaking down the rows, each chapter in its own color. The camera
-// follows the line while it draws, and every stop reveals its screenshot with a caption. It plays by itself once in
-// view and ends on the whole route.
+// follows the line while it draws, and every stop reveals its screenshot with a caption. Smaller stops branch off under
+// the line and rejoin it, a mosaic stop glides over its tiles, and pins on a shot point at its gestures one by one. It
+// plays by itself once in view, and ends with credits of even smaller features rolling over the whole route. A depth
+// switch (simple / medium / advanced) picks how much of it shows.
 // Only does work on pages that have a [data-docs-tour] container.
 // Other sites embed it (namida.app): served as embed/tour.js next to tour.css and tour.json, a public api whose paths,
 // [data-docs-tour] container and --docs-tour-* colors (tour.css) must stay as they are.
@@ -20,19 +22,28 @@
   var DESKTOP_PLATFORM = 'windows';
   var ANDROID_PLATFORM = 'android';
   var WIDE_PLATFORM = 'wide';
+  // -- how deep the tour goes, every stop, pin, tile and credit has the first level it shows at (tour.json `level`)
+  var LEVELS = [
+    { id: 'simple', label: 'Simple' },
+    { id: 'medium', label: 'Medium' },
+    { id: 'advanced', label: 'Advanced' },
+  ];
+  var DEFAULT_LEVEL_ID = 'medium';
+  var TOUR_LEVEL_STORAGE_KEY = 'docs-tour-level';
   var IS_DESKTOP_AGENT = /Windows NT|Macintosh|Linux x86_64|X11/.test(navigator.userAgent) && !/Android/.test(navigator.userAgent);
   var REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)');
   var DARK_SCHEME = window.matchMedia('(prefers-color-scheme: dark)');
   var SVG_NS = 'http://www.w3.org/2000/svg';
   var CAPTIONS = {
-    start: { chapter: 'Tour', title: 'A quick look at Namida', text: 'Press play to follow the line through the main features.' },
-    map: { chapter: 'Tour', title: 'The whole route', text: 'Pick a screen to jump to it, or press play to go on.' },
-    end: { chapter: 'Tour', title: 'That was a quick look', text: 'Every feature has more to it, and these docs cover it all.' },
+    start: { kicker: 'Tour', title: 'A quick look at Namida', text: 'Press play to follow the line through the main features.' },
+    map: { kicker: 'Tour', title: 'The whole route', text: 'Pick a screen to jump to it, or press play to go on.' },
+    credits: { kicker: 'Tour', title: 'Also in Namida', text: 'Smaller features from all over the app, pick one to read about it.' },
+    end: { kicker: 'Tour', title: 'That was a quick look', text: 'Free, no ads and no tracking. Made to keep what you love.\nEvery feature has more to it, and these docs cover it all.' },
   };
 
-  // -- world pixels: every shot is a card above its stop at the shot's own ratio, its title under it
-  var PHONE_CARD = { width: 230, maxHeight: 520, placeholderRatio: '9 / 20' };
-  var WIDE_CARD = { width: 520, maxHeight: 380, placeholderRatio: '10 / 7' };
+  // -- world pixels: every shot is a card above its stop at the shot's own ratio (height / width), its title under it
+  var PHONE_CARD = { width: 230, maxHeight: 520, ratio: 20 / 9 };
+  var WIDE_CARD = { width: 520, maxHeight: 380, ratio: 7 / 10 };
   var CARD_GAP = 34;
   var CARD_SPACING = 130;
   var LABEL_GAP = 24;
@@ -46,10 +57,29 @@
   var ORIGIN_SIZE = 96;
   var STOP_RADIUS = 6;
   var CHAPTER_STOP_RADIUS = 8;
+  var BRANCH_CARD_SHARE = 0.62;
+  var BRANCH_DROP = 130;
+  var BRANCH_RUN = 230;
+  var BRANCH_SPACING = 70;
+  var BRANCH_STRAIGHT = 36;
+  var BRANCH_CARD_GAP = 22;
+  var BRANCH_LABEL_GAP = 14;
+  var BRANCH_LABEL_HEIGHT = 22;
+  var BRANCH_STOP_RADIUS = 4.5;
+  var BRANCH_ROW_LINE_MARGIN = 24;
+  var MOSAIC_MAX_ROWS = 2;
+  var MOSAIC_GAP = 10;
+  var MOSAIC_PADDING = 10;
+  var PIN_FRAME_WIDTH_SHARE = 0.9;
+  var PIN_FRAME_HEIGHT_SHARE = 0.6;
+
   var FOCUS_FILL = 0.88;
   var FOCUS_MAX_CARD_SHARE = 0.7;
+  var MOSAIC_MAX_WIDTH_SHARE = 0.92;
+  var DETAIL_MAX_WIDTH_SHARE = 0.9;
   var MIN_SCALE = 0.3;
   var MAX_SCALE = 1.15;
+  var DETAIL_MAX_SCALE = 2.6;
   var OVERVIEW_PADDING = 36;
   var OVERVIEW_MIN_SCALE = 0.01;
 
@@ -65,11 +95,17 @@
   var TRAVEL_CAMERA_CATCH_UP_SHARE = 0.45;
   var TRAVEL_REVEAL_SHARE = 0.4;
   var FLY_MS = 800;
+  var DETAIL_FLY_MS = 700;
   var OUTRO_MS = 1800;
   var HOLD_BASE_MS = 2200;
+  var DETAIL_HOLD_BASE_MS = 1400;
   var HOLD_MS_PER_CHAR = 32;
   var HOLD_MAX_MS = 6500;
-  var HOLD_FILL_KEYFRAMES = [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }];
+  var DETAIL_HOLD_MAX_MS = 4500;
+  var CREDITS_PX_PER_MS = 0.075;
+  var CREDITS_START_SHARE = 0.45;
+  var BRANCH_STEP_WEIGHT = 0.6;
+  var DETAIL_STEP_WEIGHT = 0.3;
   var FIRST_FRAME_MS = 16;
   var FRAME_MAX_MS = 64;
   var PRELOAD_AHEAD = 2;
@@ -102,7 +138,7 @@
   function store(key, value) {
     try {
       sessionStorage.setItem(key, value);
-    } catch (e) {}
+    } catch (e) { }
   }
 
   function loadData() {
@@ -146,7 +182,7 @@
     var platforms = Object.keys(data.platforms).filter(function (platform) {
       return data.chapters.some(function (chapter) {
         return chapter.stops.some(function (stop) {
-          return stop.variants[platform] !== undefined;
+          return isOnPlatform(stop, platform);
         });
       });
     });
@@ -156,20 +192,27 @@
     var hasStoredPlatform = platforms.indexOf(storedPlatform) !== -1;
     var initialPlatform = hasStoredPlatform ? storedPlatform : platforms[0];
     var initialGeometry = geometryOf(initialPlatform);
+    var storedLevelId = readStored(TOUR_LEVEL_STORAGE_KEY, DEFAULT_LEVEL_ID);
+    var initialLevel = levelIndexOf(storedLevelId);
     var state = {
       platform: initialPlatform,
+      level: initialLevel,
       geometry: initialGeometry,
       stops: [],
       points: [],
       lengths: [],
+      expressLengths: [],
       bounds: null,
       area: null,
       focusScale: 1,
       // -- the last stop the line got to, -1 while still at the start
       reached: -1,
-      // -- start, travel (the line draws to the next stop), fly (the camera moves), hold (on a stop) or map
+      // -- 0 is the stop itself, then one for each tile or pin it has
+      beat: 0,
+      // -- start, travel (the line draws to the next stop), fly (the camera moves), hold (on a stop), map or credits
       phase: 'start',
       isMap: false,
+      isCredits: false,
       isPlaying: false,
       hasAutoStarted: false,
       isPausedByScroll: false,
@@ -180,23 +223,31 @@
       holdElapsed: 0,
       holdDuration: 1,
       holdCountdown: null,
+      creditsRoll: null,
+      creditsCount: 0,
       frameId: 0,
       lastFrameTime: 0,
       captionKey: null,
     };
-    var views = { segments: [], stations: [], cards: [], labels: [], steps: [], chips: [], pulse: null };
+    var views = { segments: [], expresses: [], stations: [], cards: [], images: [], details: [], labels: [], steps: [], chips: [], pulse: null };
 
     var toolbar = el('div', 'docs-tour__toolbar');
     var chaptersElement = el('div', 'docs-tour__chapters');
-    toolbar.appendChild(chaptersElement);
+    var switchesElement = el('div', 'docs-tour__switches');
+    toolbar.append(chaptersElement, switchesElement);
+    var levelButtons = switchOf(LEVELS, switchLevel);
+    levelButtons.element.setAttribute('aria-label', 'Tour depth');
+    levelButtons.press(LEVELS[state.level].id);
+    switchesElement.appendChild(levelButtons.element);
     var platformButtons = null;
     if (platforms.length > 1) {
       var platformOptions = platforms.map(function (platform) {
         return { id: platform, label: data.platforms[platform] };
       });
       platformButtons = switchOf(platformOptions, switchPlatform);
+      platformButtons.element.setAttribute('aria-label', 'Platform');
       platformButtons.press(state.platform);
-      toolbar.appendChild(platformButtons.element);
+      switchesElement.appendChild(platformButtons.element);
     }
 
     var stage = el('div', 'docs-tour__stage');
@@ -204,6 +255,11 @@
     stage.setAttribute('role', 'region');
     stage.setAttribute('aria-label', 'Namida tour, space plays or pauses, arrows step');
     var world = el('div', 'docs-tour__world');
+    var credits = el('div', 'docs-tour__credits');
+    var creditsRoll = el('div', 'docs-tour__credits-roll');
+    credits.appendChild(creditsRoll);
+    creditsRoll.addEventListener('pointerenter', pauseCreditsRoll);
+    creditsRoll.addEventListener('pointerleave', resumeCreditsRoll);
     var caption = el('div', 'docs-tour__caption');
     caption.setAttribute('aria-live', 'polite');
     var controls = el('div', 'docs-tour__controls');
@@ -219,7 +275,7 @@
       fullscreenButton = iconButton('expand', 'Fullscreen', toggleFullscreen);
       controls.appendChild(fullscreenButton);
     }
-    stage.append(world, caption, controls);
+    stage.append(world, credits, caption, controls);
     container.replaceChildren(toolbar, stage);
 
     measureStage();
@@ -246,6 +302,7 @@
         document.removeEventListener('keydown', onKeyDown);
         document.removeEventListener('fullscreenchange', onFullscreenChange);
         stopHoldCountdown();
+        stopCredits();
         resizeObserver.disconnect();
         themeObserver.disconnect();
         DARK_SCHEME.removeEventListener('change', onThemeChange);
@@ -256,35 +313,45 @@
     function buildRoute() {
       var geometry = state.geometry;
       var origin = geometry.origin;
-      var stops = stopsOf(data, state.platform);
+      var stops = stopsOf(data, state.platform, state.level, geometry);
       var points = layoutPoints(stops, geometry);
       state.stops = stops;
       state.points = points;
-      state.bounds = boundsOf(points, geometry);
+      state.bounds = boundsOf(stops, points, geometry);
 
       var svg = svgEl('svg', 'docs-tour__lines');
       var track = svgEl('path', 'docs-tour__track');
       var trackData = '';
       views.segments = stops.map(function (stop, index) {
-        var from = index === 0 ? origin : state.points[index - 1];
-        var segmentData = segmentPath(from, state.points[index], geometry);
+        var from = index === 0 ? origin : points[index - 1];
+        var to = points[index];
+        var segmentData = segmentPath(from, to);
         trackData += segmentData;
-        var segment = svgEl('path', 'docs-tour__segment');
-        segment.setAttribute('d', segmentData);
-        segment.style.setProperty('--tour-color', stop.color);
-        return segment;
+        var isBranchSegment = from.row === to.row && (from.isBranch || to.isBranch);
+        return routePath(segmentData, stop, isBranchSegment);
+      });
+      views.expresses = stops.map(function (stop, index) {
+        var from = points[index].expressFrom;
+        if (from === null) return null;
+        var expressData = 'M' + from.x + ' ' + from.y + 'H' + points[index].x;
+        trackData += expressData;
+        return routePath(expressData, stop, false);
       });
       track.setAttribute('d', trackData);
       views.stations = stops.map(function (stop, index) {
-        var point = state.points[index];
+        var point = points[index];
         var station = svgEl('circle', 'docs-tour__station');
         station.setAttribute('cx', point.x);
         station.setAttribute('cy', point.y);
-        station.setAttribute('r', stop.isChapterStart ? CHAPTER_STOP_RADIUS : STOP_RADIUS);
+        var radius = stationRadiusOf(stop);
+        station.setAttribute('r', radius);
         station.style.setProperty('--tour-color', stop.color);
         return station;
       });
-      var svgChildren = [track].concat(views.segments, views.stations);
+      var expresses = views.expresses.filter(function (express) {
+        return express !== null;
+      });
+      var svgChildren = [track].concat(expresses, views.segments, views.stations);
       svg.append.apply(svg, svgChildren);
 
       // -- an html ring the gpu can animate on its own, an animated svg circle repaints the whole route every frame
@@ -297,48 +364,48 @@
       originIcon.alt = '';
       originElement.appendChild(originIcon);
 
-      var cardSpec = geometry.card;
-      var placeholderRatio = 'auto ' + cardSpec.placeholderRatio;
-      views.cards = stops.map(function (stop, index) {
-        var point = state.points[index];
-        var card = el('div', 'docs-tour__card');
-        card.style.cssText = cardPlacement(point, cardSpec);
-        card.style.setProperty('--tour-color', stop.color);
-        card.title = stop.title;
-        var image = document.createElement('img');
-        image.alt = stop.title;
-        image.decoding = 'async';
-        image.style.aspectRatio = placeholderRatio;
-        card.appendChild(image);
-        card.addEventListener('click', function () {
-          if (state.isMap || index !== state.reached) jumpTo(index);
+      views.cards = [];
+      views.images = [];
+      views.details = [];
+      stops.forEach(function (stop, index) {
+        var built = stop.kind === 'mosaic' ? mosaicCardOf(stop, index) : shotCardOf(stop, index);
+        built.card.style.setProperty('--tour-color', stop.color);
+        built.card.title = stop.title;
+        built.card.addEventListener('click', function () {
+          if (state.isMap || index !== state.reached) jumpTo(index, 0);
         });
-        return card;
+        views.cards.push(built.card);
+        views.images.push(built.images);
+        views.details.push(built.details);
       });
       views.labels = stops.map(function (stop, index) {
-        var point = state.points[index];
-        var label = el('div', 'docs-tour__label', stop.title);
-        label.style.cssText = placement(point.x - LABEL_WIDTH / 2, point.y + LABEL_GAP, LABEL_WIDTH, LABEL_HEIGHT);
+        var point = points[index];
+        var label = el('div', stop.isBranch ? 'docs-tour__label docs-tour__label--branch' : 'docs-tour__label', stop.title);
+        var labelLeft = point.x - LABEL_WIDTH / 2;
+        var labelTop = stop.isBranch ? point.y - BRANCH_LABEL_GAP - BRANCH_LABEL_HEIGHT : point.y + LABEL_GAP;
+        var labelHeight = stop.isBranch ? BRANCH_LABEL_HEIGHT : LABEL_HEIGHT;
+        label.style.cssText = placement(labelLeft, labelTop, LABEL_WIDTH, labelHeight);
         return label;
       });
       var worldChildren = [svg, views.pulse, originElement].concat(views.cards, views.labels);
       world.replaceChildren.apply(world, worldChildren);
 
       // -- lengths need the paths in the page
-      state.lengths = views.segments.map(function (segment) {
-        var length = segment.getTotalLength();
-        segment.style.strokeDasharray = length + ' ' + length;
-        return length;
+      state.lengths = views.segments.map(prepareDash);
+      state.expressLengths = views.expresses.map(function (express) {
+        return express === null ? 0 : prepareDash(express);
       });
 
       views.steps = stops.map(function (stop, index) {
-        var step = el('button', 'docs-tour__step');
+        var isNewChapter = stop.isChapterStart && index > 0;
+        var step = el('button', isNewChapter ? 'docs-tour__step docs-tour__step--chapter' : 'docs-tour__step');
         step.type = 'button';
-        step.setAttribute('aria-label', stop.chapter + ': ' + stop.title);
+        step.setAttribute('aria-label', stop.beats[0].kicker + ': ' + stop.title);
         step.style.setProperty('--tour-color', stop.color);
+        step.style.flexGrow = String(stop.weight);
         step.appendChild(el('span', 'docs-tour__step-fill'));
         step.addEventListener('click', function () {
-          jumpTo(index);
+          jumpTo(index, 0);
         });
         return step;
       });
@@ -352,18 +419,102 @@
         chip.type = 'button';
         chip.style.setProperty('--tour-color', stop.color);
         chip.addEventListener('click', function () {
-          jumpTo(index);
+          jumpTo(index, 0);
         });
         chips.push(chip);
         views.chips.push({ chip: chip, chapterIndex: stop.chapterIndex });
       });
       chaptersElement.replaceChildren.apply(chaptersElement, chips);
+
+      buildCredits();
+    }
+
+    function shotCardOf(stop, index) {
+      var point = state.points[index];
+      var card = el('div', stop.isBranch ? 'docs-tour__card docs-tour__card--branch' : 'docs-tour__card');
+      var left = point.x - stop.size.width / 2;
+      // -- held by its top under a branch line, else by its bottom above the row's line, so its height can follow the shot
+      var anchor = stop.isBranch ? 'top: ' + (point.y + BRANCH_CARD_GAP) : 'bottom: ' + (CARD_GAP - point.y);
+      card.style.cssText = 'left: ' + left + 'px; ' + anchor + 'px; width: ' + stop.size.width + 'px; max-height: ' + stop.size.height + 'px;';
+      var image = imageOf(stop.title);
+      image.style.aspectRatio = 'auto 1 / ' + state.geometry.card.ratio;
+      card.appendChild(image);
+      var details = stop.pins.map(function (pin, pinIndex) {
+        var pinElement = el('button', 'docs-tour__pin');
+        pinElement.type = 'button';
+        pinElement.setAttribute('aria-label', pin.title);
+        pinElement.style.cssText = 'left: ' + pin.x * 100 + '%; top: ' + pin.y * 100 + '%;';
+        pinElement.addEventListener('click', function (event) {
+          event.stopPropagation();
+          showDetail(index, pinIndex + 1);
+        });
+        card.appendChild(pinElement);
+        return pinElement;
+      });
+      return { card: card, images: [{ image: image, themes: stop.themes }], details: details };
+    }
+
+    // -- every tile keeps the platform's shot ratio, so the grid and the camera never wait on the images
+    function mosaicCardOf(stop, index) {
+      var point = state.points[index];
+      var tileSize = state.geometry.tile;
+      var card = el('div', 'docs-tour__card docs-tour__card--mosaic');
+      var left = point.x - stop.size.width / 2;
+      var top = point.y - CARD_GAP - stop.size.height;
+      card.style.cssText = placement(left, top, stop.size.width, stop.size.height);
+      var images = [];
+      var details = stop.tiles.map(function (tile, tileIndex) {
+        var offset = tileOffsetOf(stop, tileIndex, tileSize);
+        var tileElement = el('div', 'docs-tour__tile');
+        tileElement.style.cssText = placement(offset.left, offset.top, tileSize.width, tileSize.height);
+        var image = imageOf(tile.title);
+        tileElement.appendChild(image);
+        tileElement.addEventListener('click', function (event) {
+          event.stopPropagation();
+          showDetail(index, tileIndex + 1);
+        });
+        card.appendChild(tileElement);
+        images.push({ image: image, themes: tile.themes });
+        return tileElement;
+      });
+      return { card: card, images: images, details: details };
+    }
+
+    function routePath(pathData, stop, isBranch) {
+      var path = svgEl('path', isBranch ? 'docs-tour__segment docs-tour__segment--branch' : 'docs-tour__segment');
+      path.setAttribute('d', pathData);
+      path.style.setProperty('--tour-color', stop.color);
+      return path;
+    }
+
+    function buildCredits() {
+      var allGroups = data.credits || [];
+      var groups = [];
+      allGroups.forEach(function (group) {
+        if (!isCreditsGroupOn(group, state.platform) || group.level > state.level) return;
+        var items = group.items.filter(function (item) {
+          return item.level <= state.level;
+        });
+        if (items.length > 0) groups.push({ title: group.title, items: items });
+      });
+      var groupElements = groups.map(function (group) {
+        var groupElement = el('div', 'docs-tour__credits-group');
+        var title = el('div', 'docs-tour__credits-title', group.title);
+        groupElement.appendChild(title);
+        group.items.forEach(function (item) {
+          var link = linkOf(item.title, item.href, 'docs-tour__credits-item');
+          groupElement.appendChild(link);
+        });
+        return groupElement;
+      });
+      creditsRoll.replaceChildren.apply(creditsRoll, groupElements);
+      state.creditsCount = groups.length;
     }
 
     function renderReached() {
       var reached = state.reached;
-      var isFinished = isFinishedNow();
-      var currentFill = state.holdElapsed / state.holdDuration;
+      var lastIndex = state.stops.length - 1;
+      var isAtEnd = state.isMap && reached === lastIndex;
       state.stops.forEach(function (stop, index) {
         var isReached = index <= reached;
         var isCurrent = index === reached;
@@ -371,20 +522,29 @@
         var dashOffset = isReached ? 0 : state.lengths[index];
         segment.classList.toggle('is-empty', !isReached);
         segment.style.strokeDashoffset = String(dashOffset);
+        var express = views.expresses[index];
+        if (express !== null) {
+          var expressDashOffset = isReached ? 0 : state.expressLengths[index];
+          express.classList.toggle('is-empty', !isReached);
+          express.style.strokeDashoffset = String(expressDashOffset);
+        }
         views.stations[index].classList.toggle('is-reached', isReached);
         views.stations[index].classList.toggle('is-current', isCurrent);
         views.cards[index].classList.toggle('is-visited', index < reached);
         views.cards[index].classList.toggle('is-current', isCurrent);
         views.labels[index].classList.toggle('is-reached', isReached);
         views.labels[index].classList.toggle('is-current', isCurrent);
-        var fill = isFinished || index < reached ? 1 : isCurrent ? currentFill : 0;
+        renderDetails(index);
+        var fill = 0;
+        if (isAtEnd || index < reached) fill = 1;
+        else if (isCurrent) fill = currentFill();
         setStepFill(index, fill);
       });
       var current = reached === -1 ? null : state.stops[reached];
       views.pulse.classList.toggle('is-hidden', current === null);
       if (current !== null) {
         var point = state.points[reached];
-        var radius = current.isChapterStart ? CHAPTER_STOP_RADIUS : STOP_RADIUS;
+        var radius = stationRadiusOf(current);
         var size = radius * 2;
         views.pulse.style.cssText = placement(point.x - radius, point.y - radius, size, size);
         views.pulse.style.setProperty('--tour-color', current.color);
@@ -395,8 +555,26 @@
         entry.chip.setAttribute('aria-pressed', String(isCurrentChapter));
       });
       stage.classList.toggle('is-map', state.isMap);
+      stage.classList.toggle('is-credits', state.isCredits);
       mapButton.setAttribute('aria-pressed', String(state.isMap));
       renderPlayButton();
+    }
+
+    function renderDetails(index) {
+      var isCurrent = index === state.reached && !state.isMap;
+      var beat = isCurrent ? state.beat : 0;
+      views.cards[index].classList.toggle('is-detail', beat > 0);
+      views.details[index].forEach(function (detail, detailIndex) {
+        var detailBeat = detailIndex + 1;
+        detail.classList.toggle('is-shown', beat >= detailBeat);
+        detail.classList.toggle('is-current', beat === detailBeat);
+      });
+    }
+
+    function currentFill() {
+      var beatsCount = state.stops[state.reached].beats.length;
+      var beatFraction = state.holdElapsed / state.holdDuration;
+      return (state.beat + beatFraction) / beatsCount;
     }
 
     function setStepFill(index, fraction) {
@@ -414,36 +592,38 @@
     }
 
     function isFinishedNow() {
-      return state.isMap && state.reached === state.stops.length - 1;
+      return state.isMap && !state.isCredits && state.reached === state.stops.length - 1;
     }
 
     function showCaption(mode) {
       var stop = mode === 'stop' ? state.stops[state.reached] : null;
-      var key = stop === null ? mode : 'stop:' + stop.id;
+      var key = stop === null ? mode : 'stop:' + stop.id + ':' + state.beat;
       if (key === state.captionKey) return;
       state.captionKey = key;
-      var texts = stop === null ? CAPTIONS[mode] : stop;
+      var texts = stop === null ? CAPTIONS[mode] : stop.beats[state.beat];
       var content = el('div', 'docs-tour__caption-content');
-      var kicker = el('div', 'docs-tour__kicker', texts.chapter);
+      var kicker = el('div', 'docs-tour__kicker', texts.kicker);
       var title = el('div', 'docs-tour__title', texts.title);
       var text = el('p', 'docs-tour__text', texts.text);
       content.append(kicker, title, text);
       var links = el('div', 'docs-tour__links');
       if (stop !== null) {
         content.style.setProperty('--tour-color', stop.color);
-        if (stop.href !== null) {
-          var readMore = linkOf('Read more', stop.href);
+        if (texts.href !== null) {
+          var readMore = linkOf('Read more', texts.href, 'docs-tour__link');
           links.appendChild(readMore);
         }
+      } else if (mode === 'credits') {
+        var skip = captionButtonOf('Skip', endCredits);
+        links.appendChild(skip);
       } else if (mode === 'end') {
-        var replay = el('button', 'docs-tour__link', 'Replay');
-        replay.type = 'button';
-        replay.addEventListener('click', restart);
-        var installation = linkOf('Installation', '/installation/');
-        var features = linkOf('All features', '/features/');
-        var screensMap = linkOf('Screens Map', '/screens/');
-        var docsGraph = linkOf('Docs Graph', '/graph/');
-        links.append(replay, installation, features, screensMap, docsGraph);
+        var replay = captionButtonOf('Replay', restart);
+        var philosophy = linkOf('Philosophy', '/#philosophy', 'docs-tour__link');
+        var installation = linkOf('Installation', '/installation/', 'docs-tour__link');
+        var features = linkOf('All features', '/features/', 'docs-tour__link');
+        var screensMap = linkOf('Screens Map', '/screens/', 'docs-tour__link');
+        var docsGraph = linkOf('Docs Graph', '/graph/', 'docs-tour__link');
+        links.append(replay, philosophy, installation, features, screensMap, docsGraph);
       }
       if (links.childNodes.length > 0) content.appendChild(links);
       caption.replaceChildren(content);
@@ -455,15 +635,11 @@
       if (content) content.classList.add('is-leaving');
     }
 
-    function linkOf(text, href) {
-      var link = el('a', 'docs-tour__link', text);
-      var relativeHref = href.replace(/^\//, '');
-      link.href = new URL(relativeHref, SITE_ROOT).href;
-      if (link.hostname !== window.location.hostname) {
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-      }
-      return link;
+    function captionButtonOf(text, onClick) {
+      var button = el('button', 'docs-tour__link', text);
+      button.type = 'button';
+      button.addEventListener('click', onClick);
+      return button;
     }
 
     function togglePlay() {
@@ -475,9 +651,10 @@
       state.isPausedByScroll = false;
       setPlaying(true);
       if (state.phase === 'start') advance();
+      else if (state.isCredits) wake();
       else if (state.isMap) {
         if (state.reached === -1 || isFinishedNow()) restart();
-        else jumpTo(state.reached);
+        else jumpTo(state.reached, 0);
       } else wake();
     }
 
@@ -486,17 +663,37 @@
       else startTravel(state.reached + 1);
     }
 
+    function nextBeatOrStop() {
+      var hasNextBeat = state.reached !== -1 && state.beat < state.stops[state.reached].beats.length - 1;
+      if (hasNextBeat) enterBeat(state.beat + 1);
+      else advance();
+    }
+
+    // -- pressed while moving to a stop, it lands that move where the camera is and goes on from there, so every press
+    // -- is one smooth step forward instead of a cut. a move to the overview or the start keeps going (nothing would
+    // -- carry the camera the rest of the way), the press acts on where it's heading
     function next() {
-      if (state.phase === 'travel') finishTravel();
-      else if (state.phase === 'fly') finishFly();
+      var isFlyingToBeat = state.phase === 'fly' && state.fly.onDone === startBeat;
+      if (state.phase === 'travel') landTravel();
+      else if (isFlyingToBeat) landFly();
+      if (state.isCredits) endCredits();
       else if (state.isMap) {
-        if (state.reached < state.stops.length - 1) jumpTo(state.reached + 1);
-      } else advance();
+        if (state.reached < state.stops.length - 1) jumpTo(state.reached + 1, 0);
+      } else nextBeatOrStop();
     }
 
     function prev() {
+      if (state.isCredits) {
+        jumpTo(state.stops.length - 1, 0);
+        return;
+      }
+      var isOnDetail = state.phase !== 'travel' && !state.isMap && state.beat > 0;
+      if (isOnDetail) {
+        enterBeat(state.beat - 1);
+        return;
+      }
       var target = state.phase === 'travel' ? state.reached : state.reached - 1;
-      if (target >= 0) jumpTo(target);
+      if (target >= 0) jumpTo(target, 0);
       else goToStart();
     }
 
@@ -507,6 +704,8 @@
         if (isPlaying) countdown.play();
         else countdown.pause();
       }
+      if (isPlaying) resumeCreditsRoll();
+      else pauseCreditsRoll();
       renderPlayButton();
     }
 
@@ -517,9 +716,11 @@
 
     function goToStart() {
       stopHoldCountdown();
+      stopCredits();
       state.travel = null;
       state.isMap = false;
       state.reached = -1;
+      state.beat = 0;
       renderReached();
       showCaption('start');
       flyTo(startCamera(), FLY_MS, function () {
@@ -528,25 +729,43 @@
       });
     }
 
-    function jumpTo(index) {
+    function jumpTo(index, beat) {
       stopHoldCountdown();
+      stopCredits();
       state.travel = null;
       state.isMap = false;
       state.reached = index;
+      state.beat = beat;
       state.holdElapsed = 0;
       renderReached();
       showCaption('stop');
       loadImagesAround(index);
-      var target = focusCamera(state.points[index]);
-      flyTo(target, FLY_MS, function () {
-        arrive(index);
-      });
+      flyTo(beatCamera(index, beat), FLY_MS, startBeat);
+    }
+
+    function showDetail(index, beat) {
+      var isOnStop = index === state.reached && !state.isMap && state.phase !== 'travel';
+      if (isOnStop) enterBeat(beat);
+      else jumpTo(index, beat);
+    }
+
+    function enterBeat(beat) {
+      stopHoldCountdown();
+      state.beat = beat;
+      state.holdElapsed = 0;
+      renderReached();
+      showCaption('stop');
+      flyTo(beatCamera(state.reached, beat), DETAIL_FLY_MS, startBeat);
     }
 
     function toggleMap() {
+      if (state.isCredits) {
+        endCredits();
+        return;
+      }
       if (state.isMap) {
         if (state.reached === -1) goToStart();
-        else jumpTo(state.reached);
+        else jumpTo(state.reached, 0);
         return;
       }
       stopHoldCountdown();
@@ -558,18 +777,79 @@
     }
 
     function startOutro() {
-      setPlaying(false);
-      openMap('end');
+      if (state.creditsCount === 0) {
+        setPlaying(false);
+        openMap('end');
+        return;
+      }
+      // -- credits only make sense rolling, reaching them while paused starts them. the last stop's countdown goes
+      // -- first, playing would resume it and start the outro twice
+      stopHoldCountdown();
+      state.isCredits = true;
+      setPlaying(true);
+      openMap('credits');
     }
 
+    // -- credits start rolling with the camera's move, so the screen is never empty while they fade in
     function openMap(captionMode) {
       state.isMap = true;
       renderReached();
       showCaption(captionMode);
       for (var index = 0; index < state.stops.length; index++) loadImage(index);
+      if (state.isCredits) startCreditsRoll();
       flyTo(overviewCamera(), OUTRO_MS, function () {
-        state.phase = 'map';
+        state.phase = state.isCredits ? 'credits' : 'map';
       });
+    }
+
+    function startCreditsRoll() {
+      if (REDUCED_MOTION.matches) {
+        credits.classList.add('is-static');
+        return;
+      }
+      // -- read once when the roll starts, the roll itself runs without layout. it starts partway up, so the first
+      // -- names show as the credits fade in
+      var areaHeight = credits.clientHeight;
+      var rollHeight = creditsRoll.offsetHeight;
+      var startY = areaHeight * CREDITS_START_SHARE;
+      var keyframes = [{ transform: 'translateY(' + startY + 'px)' }, { transform: 'translateY(' + -rollHeight + 'px)' }];
+      var duration = (startY + rollHeight) / CREDITS_PX_PER_MS;
+      var roll = creditsRoll.animate(keyframes, { duration: duration, easing: 'linear', fill: 'forwards' });
+      if (!state.isPlaying) roll.pause();
+      roll.onfinish = function () {
+        if (state.creditsRoll === roll) endCredits();
+      };
+      state.creditsRoll = roll;
+    }
+
+    function pauseCreditsRoll() {
+      if (state.creditsRoll !== null) state.creditsRoll.pause();
+    }
+
+    function resumeCreditsRoll() {
+      if (state.creditsRoll !== null && state.isPlaying) state.creditsRoll.play();
+    }
+
+    // -- ended while the camera still moves out to the overview, the move finishes on its own and lands on the map
+    function endCredits() {
+      var isFlying = state.phase === 'fly';
+      stopCredits();
+      setPlaying(false);
+      renderReached();
+      showCaption('end');
+      if (!isFlying) state.phase = 'map';
+    }
+
+    function stopCredits() {
+      if (!state.isCredits) return;
+      state.isCredits = false;
+      var roll = state.creditsRoll;
+      state.creditsRoll = null;
+      if (roll !== null) {
+        roll.onfinish = null;
+        roll.cancel();
+      }
+      credits.classList.remove('is-static');
     }
 
     // -- the stop the tour is on, or heading to while the line draws
@@ -580,11 +860,24 @@
     function startTravel(index) {
       var length = state.lengths[index];
       var duration = clamp(length * TRAVEL_MS_PER_PX, TRAVEL_MIN_MS, TRAVEL_MAX_MS);
-      state.travel = { index: index, length: length, duration: duration, elapsed: 0, from: state.camera, isRevealed: false };
+      state.travel = {
+        index: index,
+        length: length,
+        expressLength: state.expressLengths[index],
+        duration: duration,
+        elapsed: 0,
+        from: state.camera,
+        target: beatCamera(index, 0),
+        isRevealed: false,
+      };
+      // -- a travel can start during a fly (next pressed on the way back to the start), only one move runs at a time
+      state.fly = null;
       state.phase = 'travel';
       stopHoldCountdown();
       if (state.reached !== -1) setStepFill(state.reached, 1);
       views.segments[index].classList.remove('is-empty');
+      var express = views.expresses[index];
+      if (express !== null) express.classList.remove('is-empty');
       hideCaption();
       loadImagesAround(index);
       setMoving(true);
@@ -609,6 +902,7 @@
       views.labels[index].classList.add('is-current');
       if (index === 0) return;
       views.cards[index - 1].classList.replace('is-current', 'is-visited');
+      views.cards[index - 1].classList.remove('is-detail');
       views.labels[index - 1].classList.remove('is-current');
     }
 
@@ -616,51 +910,84 @@
       return Math.min(state.travel.elapsed / state.travel.duration, 1);
     }
 
+    // -- the camera keeps its offset from the stop around the line's head, so it lands right on it
     function drawTravel(progress) {
       var travel = state.travel;
-      var lineProgress = easeInOut(progress);
-      var drawn = travel.length * lineProgress;
+      var drawn = drawTravelLine(progress);
       var segment = views.segments[travel.index];
-      segment.style.strokeDashoffset = String(travel.length - drawn);
       var head = segment.getPointAtLength(drawn);
-      var follow = focusCamera(head);
+      var point = state.points[travel.index];
+      var target = travel.target;
+      var follow = { x: head.x + target.x - point.x, y: head.y + target.y - point.y, scale: target.scale };
       var catchUpProgress = Math.min(progress / TRAVEL_CAMERA_CATCH_UP_SHARE, 1);
       var catchUp = easeInOut(catchUpProgress);
       state.camera = mixCameras(travel.from, follow, catchUp);
       applyCamera(state.camera);
     }
 
-    function finishTravel() {
-      var index = state.travel.index;
-      drawTravel(1);
-      state.travel = null;
-      arrive(index);
+    function drawTravelLine(progress) {
+      var travel = state.travel;
+      var lineProgress = easeInOut(progress);
+      var drawn = travel.length * lineProgress;
+      var segment = views.segments[travel.index];
+      segment.style.strokeDashoffset = String(travel.length - drawn);
+      var express = views.expresses[travel.index];
+      if (express !== null) {
+        var expressDashOffset = travel.expressLength * (1 - lineProgress);
+        express.style.strokeDashoffset = String(expressDashOffset);
+      }
+      return drawn;
     }
 
-    function arrive(index) {
-      var stop = state.stops[index];
-      var readingMS = HOLD_BASE_MS + stop.text.length * HOLD_MS_PER_CHAR;
+    function finishTravel() {
+      drawTravel(1);
+      arriveFromTravel();
+    }
+
+    function landTravel() {
+      drawTravelLine(1);
+      arriveFromTravel();
+    }
+
+    function arriveFromTravel() {
+      var index = state.travel.index;
+      state.travel = null;
       state.reached = index;
+      state.beat = 0;
+      setMoving(false);
+      startBeat();
+    }
+
+    function startBeat() {
+      var stop = state.stops[state.reached];
+      var beat = stop.beats[state.beat];
+      var isQuick = beat.isDetail || stop.isBranch;
+      var baseMS = isQuick ? DETAIL_HOLD_BASE_MS : HOLD_BASE_MS;
+      var maxMS = isQuick ? DETAIL_HOLD_MAX_MS : HOLD_MAX_MS;
       state.phase = 'hold';
       state.holdElapsed = 0;
-      state.holdDuration = Math.min(readingMS, HOLD_MAX_MS);
-      setMoving(false);
+      var readingMS = baseMS + beat.text.length * HOLD_MS_PER_CHAR;
+      state.holdDuration = Math.min(readingMS, maxMS);
       renderReached();
       showCaption('stop');
-      loadImagesAround(index);
+      loadImagesAround(state.reached);
       startHoldCountdown();
     }
 
     // -- the browser runs the countdown on its own, so holding on a stop takes no frames from the page
     function startHoldCountdown() {
-      setStepFill(state.reached, 1);
+      var beatsCount = state.stops[state.reached].beats.length;
+      var fromFill = state.beat / beatsCount;
+      var toFill = (state.beat + 1) / beatsCount;
+      setStepFill(state.reached, toFill);
       var fill = views.steps[state.reached].firstChild;
-      var countdown = fill.animate(HOLD_FILL_KEYFRAMES, { duration: state.holdDuration, easing: 'linear' });
+      var keyframes = [{ transform: 'scaleX(' + fromFill + ')' }, { transform: 'scaleX(' + toFill + ')' }];
+      var countdown = fill.animate(keyframes, { duration: state.holdDuration, easing: 'linear' });
       if (!state.isPlaying) countdown.pause();
       countdown.onfinish = function () {
         if (state.holdCountdown !== countdown) return;
         state.holdCountdown = null;
-        advance();
+        nextBeatOrStop();
       };
       state.holdCountdown = countdown;
     }
@@ -695,9 +1022,14 @@
 
     function finishFly() {
       var fly = state.fly;
-      state.fly = null;
       state.camera = fly.to;
       applyCamera(fly.to);
+      landFly();
+    }
+
+    function landFly() {
+      var fly = state.fly;
+      state.fly = null;
       setMoving(false);
       fly.onDone();
     }
@@ -742,10 +1074,72 @@
       state.focusScale = clamp(focusScale, MIN_SCALE, MAX_SCALE);
       stage.classList.toggle('docs-tour__stage--wide', isWide);
       stage.style.setProperty('--tour-side', side + 'px');
+      stage.style.setProperty('--tour-route-height', routeHeight + 'px');
     }
 
-    function focusCamera(point) {
-      return { x: point.x, y: point.y - state.geometry.focusCenterAboveLine, scale: state.focusScale };
+    function beatCamera(index, beat) {
+      if (beat === 0) return stopCamera(index);
+      var stop = state.stops[index];
+      if (stop.kind === 'mosaic') return tileCamera(index, beat - 1);
+      return pinCamera(index, beat - 1);
+    }
+
+    // -- a branch stop frames the row's line above it too, so the fork stays in view
+    function stopCamera(index) {
+      var stop = state.stops[index];
+      var point = state.points[index];
+      if (stop.isBranch) {
+        var top = point.y - BRANCH_DROP - BRANCH_ROW_LINE_MARGIN;
+        var bottom = point.y + BRANCH_CARD_GAP + stop.size.height;
+        var branchHeightScale = (state.area.height * FOCUS_FILL) / (bottom - top);
+        var branchWidthScale = (state.area.width * FOCUS_MAX_CARD_SHARE) / stop.size.width;
+        var branchFitScale = Math.min(branchHeightScale, branchWidthScale);
+        var branchScale = clamp(branchFitScale, MIN_SCALE, DETAIL_MAX_SCALE);
+        return { x: point.x, y: (top + bottom) / 2, scale: branchScale };
+      }
+      var widthScale = (state.area.width * MOSAIC_MAX_WIDTH_SHARE) / stop.size.width;
+      var fitScale = Math.min(state.focusScale, widthScale);
+      var scale = Math.max(fitScale, MIN_SCALE);
+      return { x: point.x, y: point.y - state.geometry.focusCenterAboveLine, scale: scale };
+    }
+
+    function tileCamera(index, tileIndex) {
+      var stop = state.stops[index];
+      var point = state.points[index];
+      var tileSize = state.geometry.tile;
+      var offset = tileOffsetOf(stop, tileIndex, tileSize);
+      var left = point.x - stop.size.width / 2 + offset.left;
+      var top = point.y - CARD_GAP - stop.size.height + offset.top;
+      var centerX = left + tileSize.width / 2;
+      var centerY = top + tileSize.height / 2;
+      return detailCamera(centerX, centerY, tileSize.width, tileSize.height);
+    }
+
+    function pinCamera(index, pinIndex) {
+      var stop = state.stops[index];
+      var point = state.points[index];
+      var pin = stop.pins[pinIndex];
+      var image = views.images[index][0].image;
+      var ratio = image.naturalWidth > 0 ? image.naturalHeight / image.naturalWidth : state.geometry.card.ratio;
+      var width = stop.size.width;
+      var height = Math.min(width * ratio, stop.size.height);
+      var left = point.x - width / 2;
+      var top = stop.isBranch ? point.y + BRANCH_CARD_GAP : point.y - CARD_GAP - height;
+      var frameWidth = width * PIN_FRAME_WIDTH_SHARE;
+      var frameHeight = height * PIN_FRAME_HEIGHT_SHARE;
+      var pinX = left + pin.x * width;
+      var pinY = top + pin.y * height;
+      var centerX = clamp(pinX, left + frameWidth / 2, left + width - frameWidth / 2);
+      var centerY = clamp(pinY, top + frameHeight / 2, top + height - frameHeight / 2);
+      return detailCamera(centerX, centerY, frameWidth, frameHeight);
+    }
+
+    function detailCamera(centerX, centerY, width, height) {
+      var area = state.area;
+      var heightScale = (area.height * FOCUS_FILL) / height;
+      var widthScale = (area.width * DETAIL_MAX_WIDTH_SHARE) / width;
+      var scale = Math.min(heightScale, widthScale);
+      return { x: centerX, y: centerY, scale: clamp(scale, MIN_SCALE, DETAIL_MAX_SCALE) };
     }
 
     function startCamera() {
@@ -767,7 +1161,7 @@
     function restingCamera() {
       if (state.isMap) return overviewCamera();
       if (state.reached === -1) return startCamera();
-      return focusCamera(state.points[state.reached]);
+      return beatCamera(state.reached, state.beat);
     }
 
     function applyCamera(camera) {
@@ -783,19 +1177,18 @@
 
     function loadImage(index) {
       if (index < 0 || index >= state.stops.length) return;
-      var image = views.cards[index].firstChild;
-      if (image.hasAttribute('src')) return;
-      var stop = state.stops[index];
-      image.src = shotOf(stop);
+      views.images[index].forEach(function (entry) {
+        if (!entry.image.hasAttribute('src')) entry.image.src = shotOf(entry.themes);
+      });
     }
 
     function onThemeChange() {
-      views.cards.forEach(function (card, index) {
-        var image = card.firstChild;
-        if (!image.hasAttribute('src')) return;
-        var stop = state.stops[index];
-        var shot = shotOf(stop);
-        if (image.getAttribute('src') !== shot) image.src = shot;
+      views.images.forEach(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.image.hasAttribute('src')) return;
+          var shot = shotOf(entry.themes);
+          if (entry.image.getAttribute('src') !== shot) entry.image.src = shot;
+        });
       });
     }
 
@@ -812,9 +1205,19 @@
       rebuildRouteKeepingStop(oldStops, oldIndex);
     }
 
+    function switchLevel(levelId) {
+      var oldStops = state.stops;
+      var oldIndex = currentStopIndex();
+      state.level = levelIndexOf(levelId);
+      store(TOUR_LEVEL_STORAGE_KEY, levelId);
+      levelButtons.press(levelId);
+      rebuildRouteKeepingStop(oldStops, oldIndex);
+    }
+
     // -- stays on the same stop, or the closest one before it when this platform has no shot for it
     function rebuildRouteKeepingStop(oldStops, oldIndex) {
       stopHoldCountdown();
+      stopCredits();
       if (state.frameId !== 0) cancelAnimationFrame(state.frameId);
       state.frameId = 0;
       state.travel = null;
@@ -824,6 +1227,7 @@
       var reached = -1;
       for (var index = oldIndex; index >= 0 && reached === -1; index--) reached = indexOfStop(state.stops, oldStops[index].id);
       state.reached = reached;
+      state.beat = 0;
       state.captionKey = null;
       if (state.isMap) {
         state.phase = 'map';
@@ -835,7 +1239,7 @@
         renderReached();
         showCaption('start');
       } else {
-        arrive(reached);
+        startBeat();
       }
       state.camera = restingCamera();
       applyCamera(state.camera);
@@ -846,6 +1250,7 @@
       if (state.fly !== null) finishFly();
       if (state.travel !== null) {
         state.travel.from = restingCamera();
+        state.travel.target = beatCamera(state.travel.index, 0);
         drawTravel(travelProgress());
         return;
       }
@@ -892,12 +1297,6 @@
       setIcon(fullscreenButton, isFullscreen ? 'shrink' : 'expand');
       fullscreenButton.setAttribute('aria-label', isFullscreen ? 'Exit fullscreen' : 'Fullscreen');
     }
-
-    function shotOf(stop) {
-      var theme = themeOf();
-      var variant = stop.themes[theme] || stop.themes.light || stop.themes.dark;
-      return variant.shot;
-    }
   }
 
   // -- the docs always set data-theme, a page embedding the tour without it follows the system scheme
@@ -907,89 +1306,239 @@
     return DARK_SCHEME.matches ? 'dark' : 'light';
   }
 
-  // -- every chapter gets a row of its own, a chapter with no stop on this platform gets none
-  function stopsOf(data, platform) {
+  function shotOf(themes) {
+    var theme = themeOf();
+    var variant = themes[theme] || themes.light || themes.dark;
+    return variant.shot;
+  }
+
+  function isOnPlatform(stop, platform) {
+    if (stop.tiles === undefined) return stop.variants[platform] !== undefined;
+    return stop.tiles.some(function (tile) {
+      return tile.variants[platform] !== undefined;
+    });
+  }
+
+  // -- the wide view is the desktop app in a wide window
+  function isCreditsGroupOn(group, platform) {
+    if (group.platforms === null) return true;
+    var groupPlatform = platform === WIDE_PLATFORM ? DESKTOP_PLATFORM : platform;
+    return group.platforms.indexOf(groupPlatform) !== -1;
+  }
+
+  function levelIndexOf(levelId) {
+    var index = LEVELS.findIndex(function (level) {
+      return level.id === levelId;
+    });
+    return index === -1 ? levelIndexOf(DEFAULT_LEVEL_ID) : index;
+  }
+
+  // -- every chapter gets a row of its own, a chapter with no stop on this platform and level gets none. a branch stop
+  // -- is left out with the stop it branches from
+  function stopsOf(data, platform, level, geometry) {
     var stops = [];
     var row = -1;
     data.chapters.forEach(function (chapter, chapterIndex) {
       var color = 'var(--tour-color-' + chapter.color + ')';
       var isChapterStart = true;
-      chapter.stops.forEach(function (stop) {
-        var themes = stop.variants[platform];
-        if (themes === undefined) return;
+      var parent = null;
+      chapter.stops.forEach(function (raw) {
+        var isBranch = raw.isBranch === true;
+        var hasParent = !isBranch || parent !== null;
+        var isInLevel = raw.level <= level;
+        var stop = null;
+        if (isInLevel && raw.tiles !== undefined) stop = mosaicStopOf(raw, platform, level, geometry);
+        else if (isInLevel && hasParent) stop = shotStopOf(raw, platform, level, geometry);
+        if (!isBranch) parent = stop;
+        if (stop === null) return;
         if (isChapterStart) row++;
-        stops.push({
-          row: row,
-          id: stop.id,
-          title: stop.title,
-          text: stop.text,
-          href: stop.href,
-          themes: themes,
-          chapter: chapter.title,
-          chapterIndex: chapterIndex,
-          color: color,
-          isChapterStart: isChapterStart,
-        });
+        stop.beats[0].kicker = isBranch ? parent.title : chapter.title;
+        stop.row = row;
+        stop.chapter = chapter.title;
+        stop.chapterIndex = chapterIndex;
+        stop.color = color;
+        stop.isChapterStart = isChapterStart;
+        stops.push(stop);
         isChapterStart = false;
       });
     });
     return stops;
   }
 
-  // -- the turn down to the next row passes clear of the card at the row's end, the start icon clear of the first card
+  function shotStopOf(raw, platform, level, geometry) {
+    var themes = raw.variants[platform];
+    if (themes === undefined) return null;
+    var isBranch = raw.isBranch === true;
+    var card = isBranch ? geometry.branchCard : geometry.card;
+    var platformPins = (raw.pins && raw.pins[platform]) || [];
+    var pins = platformPins.filter(function (pin) {
+      return pin.level <= level;
+    });
+    var detailBeats = pins.map(function (pin) {
+      return { kicker: raw.title, title: pin.title, text: pin.text, href: pin.href || raw.href, isDetail: true };
+    });
+    var beats = [{ kicker: '', title: raw.title, text: raw.text, href: raw.href, isDetail: false }].concat(detailBeats);
+    return {
+      id: raw.id,
+      kind: 'shot',
+      isBranch: isBranch,
+      title: raw.title,
+      text: raw.text,
+      themes: themes,
+      pins: pins,
+      beats: beats,
+      size: { width: card.width, height: card.maxHeight },
+      weight: isBranch ? BRANCH_STEP_WEIGHT : 1 + pins.length * DETAIL_STEP_WEIGHT,
+    };
+  }
+
+  // -- a mosaic left with one tile (the rest on another platform or level, or still waiting for shots) is a plain stop
+  function mosaicStopOf(raw, platform, level, geometry) {
+    var shownTiles = raw.tiles.filter(function (tile) {
+      return tile.variants[platform] !== undefined && tile.level <= level;
+    });
+    if (shownTiles.length === 0) return null;
+    if (shownTiles.length === 1) {
+      var onlyTile = shownTiles[0];
+      var plainHref = raw.href || onlyTile.href;
+      var plainStop = { id: raw.id, title: raw.title, text: raw.text, href: plainHref, variants: onlyTile.variants };
+      return shotStopOf(plainStop, platform, level, geometry);
+    }
+    var tiles = shownTiles.map(function (tile) {
+      return { title: tile.title, text: tile.text, href: tile.href, themes: tile.variants[platform] };
+    });
+    var rows = Math.min(tiles.length, MOSAIC_MAX_ROWS);
+    var columns = Math.ceil(tiles.length / rows);
+    var tile = geometry.tile;
+    var detailBeats = tiles.map(function (entry) {
+      return { kicker: raw.title, title: entry.title, text: entry.text, href: entry.href, isDetail: true };
+    });
+    var beats = [{ kicker: '', title: raw.title, text: raw.text, href: raw.href, isDetail: false }].concat(detailBeats);
+    var width = MOSAIC_PADDING * 2 + columns * tile.width + (columns - 1) * MOSAIC_GAP;
+    var height = MOSAIC_PADDING * 2 + rows * tile.height + (rows - 1) * MOSAIC_GAP;
+    return {
+      id: raw.id,
+      kind: 'mosaic',
+      isBranch: false,
+      title: raw.title,
+      text: raw.text,
+      tiles: tiles,
+      columns: columns,
+      beats: beats,
+      size: { width: width, height: height },
+      weight: 1 + tiles.length * DETAIL_STEP_WEIGHT,
+    };
+  }
+
+  function tileOffsetOf(stop, tileIndex, tileSize) {
+    var column = tileIndex % stop.columns;
+    var row = Math.floor(tileIndex / stop.columns);
+    return {
+      left: MOSAIC_PADDING + column * (tileSize.width + MOSAIC_GAP),
+      top: MOSAIC_PADDING + row * (tileSize.height + MOSAIC_GAP),
+    };
+  }
+
+  function stationRadiusOf(stop) {
+    if (stop.isChapterStart) return CHAPTER_STOP_RADIUS;
+    return stop.isBranch ? BRANCH_STOP_RADIUS : STOP_RADIUS;
+  }
+
+  // -- the start icon sits clear of the first card
   function geometryOf(platform) {
     var card = platform === WIDE_PLATFORM ? WIDE_CARD : PHONE_CARD;
-    var halfCard = card.width / 2;
+    var branchCard = { width: card.width * BRANCH_CARD_SHARE, maxHeight: card.maxHeight * BRANCH_CARD_SHARE };
+    var tileHeight = (card.maxHeight - MOSAIC_PADDING * 2 - MOSAIC_GAP * (MOSAIC_MAX_ROWS - 1)) / MOSAIC_MAX_ROWS;
     var aboveLine = card.maxHeight + CARD_GAP;
-    var originX = -(halfCard + ORIGIN_CLEARANCE);
     return {
       card: card,
-      stopGap: card.width + CARD_SPACING,
+      branchCard: branchCard,
+      tile: { width: tileHeight / card.ratio, height: tileHeight },
       aboveLine: aboveLine,
       rowHeight: aboveLine + BELOW_LINE + ROW_GAP,
-      turnReach: halfCard + TURN_CLEARANCE,
-      origin: { x: originX, y: 0, row: 0 },
+      branchRowExtra: BRANCH_DROP + BRANCH_CARD_GAP + branchCard.maxHeight - BELOW_LINE,
+      origin: { x: -(card.width / 2 + ORIGIN_CLEARANCE), y: 0, row: 0, isBranch: false },
       focusHeight: aboveLine + BELOW_LINE,
       focusCenterAboveLine: (aboveLine - BELOW_LINE) / 2,
     };
   }
 
-  // -- rows run right then left, each one starting right under where the last one ended, so the line snakes down
+  // -- rows run right then left, each one starting right under where the last one ended, so the line snakes down. a
+  // -- branch leaves its stop for a line of its own under the row, and the next stop waits for it at its end, joined to
+  // -- the branch's stop by a straight express line
   function layoutPoints(stops, geometry) {
+    var branchRows = {};
+    stops.forEach(function (stop) {
+      if (stop.isBranch) branchRows[stop.row] = true;
+    });
     var points = [];
     var x = 0;
+    var lineY = 0;
+    var mainStop = null;
+    var mainPoint = null;
     stops.forEach(function (stop, index) {
+      var previous = index === 0 ? null : stops[index - 1];
       var direction = stop.row % 2 === 0 ? 1 : -1;
-      var isSameRow = index > 0 && stops[index - 1].row === stop.row;
-      if (isSameRow) x += direction * geometry.stopGap;
-      points.push({ x: x, y: stop.row * geometry.rowHeight, row: stop.row });
+      var isSameRow = previous !== null && previous.row === stop.row;
+      var isRejoining = isSameRow && previous.isBranch && !stop.isBranch;
+      if (previous !== null && !isSameRow) {
+        var branchExtra = branchRows[previous.row] ? geometry.branchRowExtra : 0;
+        lineY += geometry.rowHeight + branchExtra;
+      } else if (isSameRow) {
+        var distance = distanceBetween(previous, stop);
+        x += direction * distance;
+        if (isRejoining) {
+          var clearDistance = distanceBetween(mainStop, stop);
+          var clearX = mainPoint.x + direction * clearDistance;
+          x = direction > 0 ? Math.max(x, clearX) : Math.min(x, clearX);
+        }
+      }
+      var point = {
+        x: x,
+        y: stop.isBranch ? lineY + BRANCH_DROP : lineY,
+        row: stop.row,
+        reach: stop.size.width / 2 + TURN_CLEARANCE,
+        isBranch: stop.isBranch,
+        expressFrom: isRejoining ? mainPoint : null,
+      };
+      if (!stop.isBranch) {
+        mainStop = stop;
+        mainPoint = point;
+      }
+      points.push(point);
     });
     return points;
   }
 
-  function boundsOf(points, geometry) {
-    var minX = 0;
-    var maxX = 0;
-    var lastRow = 0;
-    points.forEach(function (point) {
-      minX = Math.min(minX, point.x);
-      maxX = Math.max(maxX, point.x);
-      lastRow = point.row;
-    });
-    var originLeft = geometry.origin.x - ORIGIN_SIZE / 2;
-    return {
-      left: Math.min(originLeft, minX - geometry.turnReach),
-      right: maxX + geometry.turnReach,
-      top: -geometry.aboveLine,
-      bottom: lastRow * geometry.rowHeight + BELOW_LINE,
-    };
+  function distanceBetween(from, to) {
+    if (from.isBranch !== to.isBranch) return BRANCH_RUN;
+    var spacing = from.isBranch ? BRANCH_SPACING : CARD_SPACING;
+    return from.size.width / 2 + spacing + to.size.width / 2;
   }
 
-  // -- straight along a row, or out past the row's end, down with rounded corners and back in
-  function segmentPath(from, to, geometry) {
-    if (from.row === to.row) return 'M' + from.x + ' ' + from.y + 'H' + to.x;
+  function boundsOf(stops, points, geometry) {
+    var left = geometry.origin.x - ORIGIN_SIZE / 2;
+    var right = 0;
+    var bottom = 0;
+    points.forEach(function (point, index) {
+      left = Math.min(left, point.x - point.reach);
+      right = Math.max(right, point.x + point.reach);
+      var below = point.isBranch ? BRANCH_CARD_GAP + stops[index].size.height : BELOW_LINE;
+      bottom = Math.max(bottom, point.y + below);
+    });
+    return { left: left, right: right, top: -geometry.aboveLine, bottom: bottom };
+  }
+
+  function segmentPath(from, to) {
+    if (from.row !== to.row) return turnPath(from, to);
+    if (from.y !== to.y) return branchCurvePath(from, to);
+    return 'M' + from.x + ' ' + from.y + 'H' + to.x;
+  }
+
+  // -- out past the row's end, down with rounded corners and back in
+  function turnPath(from, to) {
     var direction = from.row % 2 === 0 ? 1 : -1;
-    var turnX = from.x + direction * geometry.turnReach;
+    var turnX = from.x + direction * from.reach;
     var cornerX = turnX - direction * TURN_RADIUS;
     var sweep = direction > 0 ? 1 : 0;
     var arc = 'A' + TURN_RADIUS + ' ' + TURN_RADIUS + ' 0 0 ' + sweep + ' ';
@@ -1001,6 +1550,26 @@
       arc + cornerX + ' ' + to.y +
       'H' + to.x
     );
+  }
+
+  // -- a short straight, a smooth s-curve down to the branch (or back up) and another short straight
+  function branchCurvePath(from, to) {
+    var direction = to.x > from.x ? 1 : -1;
+    var startX = from.x + direction * BRANCH_STRAIGHT;
+    var endX = to.x - direction * BRANCH_STRAIGHT;
+    var middleX = (startX + endX) / 2;
+    return (
+      'M' + from.x + ' ' + from.y +
+      'H' + startX +
+      'C' + middleX + ' ' + from.y + ' ' + middleX + ' ' + to.y + ' ' + endX + ' ' + to.y +
+      'H' + to.x
+    );
+  }
+
+  function prepareDash(path) {
+    var length = path.getTotalLength();
+    path.style.strokeDasharray = length + ' ' + length;
+    return length;
   }
 
   function indexOfStop(stops, id) {
@@ -1031,11 +1600,22 @@
     return 'left: ' + left + 'px; top: ' + top + 'px; width: ' + width + 'px; height: ' + height + 'px;';
   }
 
-  // -- held by its bottom just above the line, so its height can follow the shot's own ratio
-  function cardPlacement(point, cardSpec) {
-    var left = point.x - cardSpec.width / 2;
-    var bottom = CARD_GAP - point.y;
-    return 'left: ' + left + 'px; bottom: ' + bottom + 'px; width: ' + cardSpec.width + 'px; max-height: ' + cardSpec.maxHeight + 'px;';
+  function imageOf(alt) {
+    var image = document.createElement('img');
+    image.alt = alt;
+    image.decoding = 'async';
+    return image;
+  }
+
+  function linkOf(text, href, className) {
+    var link = el('a', className, text);
+    var relativeHref = href.replace(/^\//, '');
+    link.href = new URL(relativeHref, SITE_ROOT).href;
+    if (link.hostname !== window.location.hostname) {
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    }
+    return link;
   }
 
   function iconButton(icon, label, onClick) {
