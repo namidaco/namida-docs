@@ -14,7 +14,7 @@ What each version added or changed, linked to where these docs explain it. Newes
 ## 🏷️ v8.5.0 {#v8-5-0}
 
 <!-- generated -->
-`🆕 3 new sections` `🔄 30 updated sections`
+`🆕 3 new sections` `🔄 28 updated sections`
 
 **🎉 Features**
 
@@ -36,12 +36,12 @@ What each version added or changed, linked to where these docs explain it. Newes
 - [Settings](/settings/): 🔄 [Settings Icon](/settings/#settings-icon)
 - [Theme](/settings/1-theme-settings/): 🔄 [Default Color](/settings/1-theme-settings/#default-color)
 - [Playback](/settings/3-playback-settings/): 🔄 [Notification Buttons](/settings/3-playback-settings/#notification-buttons)
-- [Extras](/settings/6-extras-settings/): 🔄 [Integrations](/settings/6-extras-settings/#integrations), [Enable Picture-in-Picture](/settings/6-extras-settings/#pip), [Filter Tracks in Search Lists By](/settings/6-extras-settings/#filter-tracks-by), [Lyrics](/settings/6-extras-settings/#lyrics)
+- [Extras](/settings/6-extras-settings/): 🔄 [Integrations](/settings/6-extras-settings/#integrations), [Enable Picture-in-Picture](/settings/6-extras-settings/#pip), [Filter Tracks in Search Lists By](/settings/6-extras-settings/#filter-tracks-by)
 
 **📌 More**
 
 - [Installation](/installation/): 🔄 [iOS & macOS](/installation/#ios-macos)
-- [Tips & Tricks](/tips/): 🔄 [Library Pages](/tips/#library-pages), [Info & Sorting](/tips/#info-sorting), [About Page](/tips/#about-tips)
+- [Tips & Tricks](/tips/): 🔄 [Info & Sorting](/tips/#info-sorting), [About Page](/tips/#about-tips)
 - [FAQ](/faq/): 🔄 [Sync devices can't find or connect](/faq/#sync-troubleshooting)
 - [Membership](/membership/): 🔄 [Getting One](/membership/#get)
 - [Permissions](/permissions/): 🆕 [iOS & macOS](/permissions/#ios-macos)

@@ -62,6 +62,8 @@ let assetsRef = null;
 let available = null;
 // -- platform -> theme -> id -> { ratio, tiles: [{ title, x, y, w, h }] } in fractions of the shot
 let tilesByShot = {};
+// -- platform -> theme -> id -> [width, height], reserves each shot's box before it loads
+let sizesByShot = {};
 // -- page url -> normalized title -> { anchor, title }
 let headingsByPage = new Map();
 let previews = {};
@@ -81,6 +83,7 @@ export async function onBeforeBuild({ pages, options }) {
   base = process.env.DOCS_SHOTS_BASE ?? manifest.base.replace('{commit}', assetsRef);
   available = toSets(await loadAssetJson('index.json'));
   tilesByShot = (await loadAssetJson('tiles.json')) ?? {};
+  sizesByShot = (await loadAssetJson('sizes.json')) ?? {};
   headingsByPage = new Map(pages.map((page) => [outputPathToPathname(page.outputPath), readHeadings(page.rawMarkdown)]));
   addTileAliases(manifest.tileAliases ?? {});
   previews = buildPreviews();
@@ -493,7 +496,10 @@ function renderShot(platform, id, headings) {
   const themes = sourceThemes(platform, id);
   const alt = escapeHtml(id.replaceAll('_', ' '));
   const images = THEMES.map((theme, index) => {
-    return `<img class="docs-shot__${theme}" src="${shotUrl(platform, themes[index], id)}" alt="${alt}" loading="lazy" decoding="async">`;
+    const sourceTheme = themes[index];
+    const size = sizesByShot[platform]?.[sourceTheme]?.[id];
+    const sizeAttributes = size === undefined ? '' : ` width="${size[0]}" height="${size[1]}"`;
+    return `<img class="docs-shot__${theme}" src="${shotUrl(platform, sourceTheme, id)}" alt="${alt}"${sizeAttributes} loading="lazy" decoding="async">`;
   });
   // -- both themes share one layout, so the first theme's tiles place the spots. bigger ones first, a group's own
   // -- tiles then sit on top of it
