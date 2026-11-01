@@ -71,7 +71,7 @@ Everything else is free, here is a taste of it.
 - Charts and insights from your history, [most played](/features/playlists-history/#most-played) for any time range, [stats](/features/playlists-history/#stats) and your year, [lost memories](/features/playlists-history/#lost-memories) from years ago and [smort tracks generation](/features/playlists-history/#generation) based on what you listen to.
 - A full [tag editor](/features/tag-editor/), for single and multiple tracks.
 - [Sync](/features/sync/) between your devices, and [listening parties](/features/party/), joining them or hosting on your own device or server.
-- Desktop apps for Windows and Linux, with a [widescreen player](/features/playback/#widescreen-player), system tray, [shortcuts](/features/shortcuts/) and a [mini lyrics window](/features/system-integration/#mini-lyrics).
+- Desktop apps for Windows, Linux and macOS, with a [widescreen player](/features/playback/#widescreen-player), system tray, [shortcuts](/features/shortcuts/) and a [mini lyrics window](/features/system-integration/#mini-lyrics).
 - [Home screen widget](/features/home-widget/) and [system integration](/features/system-integration/).
 - [Themes](/settings/1-theme-settings/), [customizations](/settings/4-customization-settings/) for almost every part of the app, and [effects & visualizers](/features/effects/).
 
@@ -105,6 +105,7 @@ There are two ways to get one:
 
 - **Patreon**, subscribe on [Patreon](https://patreon.com/namidaco), then press "Sign in to your patreon account" in the membership page. If the browser doesn't bring you back to Namida, press "Issues?" and paste the link it ended on.
 - **Coupon**, donate through [kofi](https://ko-fi.com/namidaco) or [buymeacoffee](https://buymeacoffee.com/namidaco) and you get a coupon code by email (which can take a few days). Enter the code and your email in the Coupon section, then press Claim. The page shows when it expires.
+  - A coupon works on one device at a time. To move it to a new device, claim it there, press Reset and enter the code sent to the coupon email. `🆕 v8.5.0`
 
 ::: callout info
 YouTube features still need you to sign in to your YouTube account, the membership only unlocks them. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)

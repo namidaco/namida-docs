@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "How to install Namida on Android, Windows and Linux"
+description: "How to install Namida on Android, Windows, Linux, iOS and macOS"
 ---
 
 # Installation
@@ -19,6 +19,8 @@ We are not responsible for downloads from other sources.
 
 ## Android {#android}
 
+Namida needs Android 8.0 or newer (Android 7 can stay on v8.4.0).
+
 #### Which file {#android-files}
 
 Every release has an APK per architecture, beta adds a clone variant on top.
@@ -27,7 +29,7 @@ Every release has an APK per architecture, beta adds a clone variant on top.
 | --- | --- | --- |
 | `namida-vX.X.X-arm64-v8a.apk` | stable & beta | Default choice, works on any modern 64 bit device. |
 | `namida-vX.X.X-armeabi-v7a.apk` | stable & beta | Old 32 bit device, or the arm64 one refuses to install. |
-| `namida-vX.X.X-clone-arm64-v8a.apk` | beta only | You want the beta beside your stable Namida. Different app id, so it's a separate app with separate data. |
+| `namida-vX.X.X-clone-arm64-v8a.apk` | beta only | You want the beta beside your stable Namida. Different app id, so it's a separate app with separate data (its icon has a BETA badge). |
 | `namida-vX.X.X-clone-armeabi-v7a.apk` | beta only | Same clone, for 32 bit devices. |
 
 ::: callout info
@@ -152,9 +154,36 @@ Nix (Home Manager) is available at [namida-nix](https://codeberg.org/iWisp360/na
 
 ## iOS & macOS {#ios-macos}
 
-iOS and macOS are new and only have beta builds for now.
+iOS and macOS are new and only have beta builds for now, in the [beta releases](https://github.com/namidaco/namida-snapshots/releases). `🆕 v8.5.0`
 
-Features that only work on some platforms are labeled like `💻 Android only`. Features that work everywhere except iOS or macOS have no label, so they are listed here instead.
+Features that only work on some platforms are labeled like `💻 Android only`. Features that work everywhere except iOS or macOS have no label, so they are listed [below](#ios-differences) instead.
+
+#### Which file {#apple-files}
+
+| File | Pick it if |
+| --- | --- |
+| `Namida-ios-<version>.ipa` | iPhone or iPad with iOS 15+. It's unsigned, so it's installed by sideloading. |
+| `Namida-macos-universal-<version>.dmg` | Any Mac (Apple Silicon and Intel). |
+| `Namida-macos-arm64-<version>.dmg` | Apple Silicon Macs only, smaller than universal. |
+| `Namida-macos-x86_64-<version>.dmg` | Intel Macs only, smaller than universal. |
+
+Each macOS file also comes as a `.zip` with the same app inside.
+
+#### Installing {#apple-install}
+
+On iOS, sideload the ipa with SideStore, AltStore or Sideloadly. In SideStore or AltStore, add this source to get updates:
+
+```text
+https://namidaco.github.io/namida-snapshots/altstore-source.json
+```
+
+On macOS, open the dmg and drag Namida to Applications. The app isn't signed, so allow it the first time in System Settings -> Privacy & Security -> Open Anyway. If macOS says the app is damaged, run:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/Namida.app
+```
+
+Installing a newer build over the old one keeps your data, on both.
 
 #### iOS {#ios-differences}
 
@@ -162,7 +191,6 @@ Not available on iOS:
 
 - The [output device](/features/playback/#output-device) picker. Pick the output from the iOS Control Center instead.
 - [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player).
-- Sharing to Namida from other apps. Opening files with Namida still works.
 - CarPlay. It needs a permission that only Apple can grant.
 
 Works differently on iOS:
@@ -175,8 +203,9 @@ Works differently on iOS:
 
 Works differently on macOS:
 
-- Every shortcut that uses `Ctrl` on Windows and Linux uses `Cmd` instead. [`🎉 Shortcuts feature ↗`](/features/shortcuts/)
+- Every shortcut that uses `Ctrl` on Windows and Linux uses `Cmd` instead, except `Ctrl` + `Space` / `H` / `Q` / `Tab` (macOS uses those with `Cmd`). [`🎉 Shortcuts feature ↗`](/features/shortcuts/)
 - The [tray](/features/system-integration/#tray) icon is in the menu bar, and clicking it opens its menu.
+- Closing the window follows [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player) (quit / hide to the menu bar), and clicking the Dock icon brings the window back.
 
 ---
 

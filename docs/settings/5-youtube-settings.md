@@ -61,7 +61,7 @@ Show the dislike count on videos, using data from [returnyoutubedislike.com](htt
   - Off, channel name as artist, video title as title.
   - On, the video title is split into "Artist - Title" (artist falls back to the channel name), the channel becomes the album, and genre is set to "Nightcore" when the title contains it.
 - Default Download Location.
-- Download notifications `💻 Windows+Linux only`.
+- Download notifications `💻 iOS+Windows+Linux+macOS only`.
 
 Other download options live in the download sheet itself (like Split by Chapters and removing sponsor segments), while parallel downloads and threads per download are set in the Downloads page. [`🎉 Downloads feature ↗`](/features/youtube/#downloads)
 

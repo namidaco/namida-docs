@@ -39,6 +39,7 @@ Videos are indexed and playable on their own, with a dedicated videos folder vie
 ### Missing Tracks {#missing-tracks}
 
 If you moved or renamed files outside Namida, the missing tracks page helps you relink them without losing stats and listens. [`⚙️ Configure Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
+The search button there filters the list by path. `🆕 v8.5.0`
 Whole directories can be updated at once with [`⚙️ Open Update Directory Path ↗`](/settings/8-advanced-settings/#update-directory-path).
 
 ### Sorting & Grouping {#sorting}
@@ -64,7 +65,7 @@ So Namida can keep file dates:
 
 - **Tag editor**, "Keep file dates" is on by default. Turn it off and edited files get today's date. [`🎉 Keep File Dates ↗`](/features/tag-editor/#keep-file-dates)
 - **Rating, moods and tags** from the track menu always keep them.
-- **YouTube downloads**, "Set file last modified as video upload date" dates files by the video, so old videos don't flood Recently Added. [`🎉 Downloads ↗`](/features/youtube/#downloads)
+- **YouTube downloads**, "Set the file's last modified date as the video upload date" dates files by the video, so old videos don't flood Recently Added. [`🎉 Downloads ↗`](/features/youtube/#downloads)
 
 Files copied with a tool that doesn't keep dates look newly added too.
 

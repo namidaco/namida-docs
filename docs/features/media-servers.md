@@ -50,7 +50,7 @@ Keep server tracks on your device to play them offline. Open the menu of a track
 - Server tracks that aren't cached yet show a small download icon on their artwork.
 - While caching, the artwork shows a progress ring, and an icon appears in the app bar. Press it for the list of tasks (pause / resume / retry / cancel).
 - On Android, a notification shows the progress. 
-- On Windows and Linux, the notification when it's done follows [`⚙️ Download notifications ↗`](/settings/5-youtube-settings/#downloads).
+- Elsewhere, the notification when it's done follows [`⚙️ Download notifications ↗`](/settings/5-youtube-settings/#downloads).
 - Tasks without a connection wait and continue once it's back.
 
 Cached tracks play from the device, even offline. Most streamed tracks are kept too (they get cleaned up once the server cache is full), but the ones you cached yourself are never deleted automatically. [`⚙️ Configure Server Cache ↗`](/settings/8-advanced-settings/#cache-limits)

@@ -19,7 +19,7 @@ A persistent and reliable queue system, your sessions are saved for later usage.
 - Stop after any track, open a queued track's menu and choose "Stop after this track". `🆕 v7.0.0`
   - For the playing track, there's also a notification button, an artwork gesture action and `Ctrl` + `Space`. `🆕 v8.2.0`
 - Insert after latest inserted, for stacking several tracks in order.
-- Search inside the queue with the search icon at its top, tap a result to jump to it. `🆕 v8.4.0`
+- Search inside the queue with the search icon at its top (best matches first), tap a result to jump to it. `🆕 v8.4.0`
 - With the `ASK_BEFORE_REPLACING_QUEUE` [flag](/settings/6-extras-settings/#flags), playing something new asks what to do with the queue (replace / keep / add the new tracks next, after or last). The "Play (Choose)" gesture action always asks. `🆕 v8.2.0`
 - Play modes when playing from search (selected track only / search results / album / first artist / first genre).
 - Recommended & Similar Release Date, add tracks you usually listen to with the current one, or released around the same time. [`🎉 Tracks Generation ↗`](/features/playlists-history/#generation)
@@ -81,7 +81,7 @@ Track info shows the analyzed BPM and key of tracks whose tags have none. The an
 Press the audio effects icon in the player, the Sound Control tile at the top of settings, or [Sound Control](/settings/3-playback-settings/#sound-control) in playback settings.
 From top to bottom:
 
-- [Output device](#output-device), [Bit-perfect](#bit-perfect) and [USB direct access](#usb-direct) (or [Exclusive mode](#exclusive-mode) on Windows & Linux). `🆕 v7.8.0`
+- [Output device](#output-device), [Bit-perfect](#bit-perfect) and [USB direct access](#usb-direct) (or [Exclusive mode](#exclusive-mode) on desktop). `🆕 v7.8.0`
 - [Audio path](#audio-path), and what Bit-perfect and USB direct access turn off. `🆕 v7.8.0`
 - Normalize audio. [`⚙️ Configure Normalize Audio ↗`](/settings/3-playback-settings/#normalize-audio)
 - Two tabs:
@@ -106,7 +106,7 @@ A parametric equalizer with as many bands as you want, on every platform. Old se
 
 - Drag a band on the curve to tune it, or long press an empty spot to add one. A Sliders view is there too.
 - Any band type (peak / shelf / low pass / high pass / notch, etc), on both channels or just one.
-- Auto preamp and a limiter keep boosts from distorting.
+- Auto preamp and a limiter (when supported) keep boosts from distorting.
 - Built-in or your own presets, each can follow an [output device](#output-device). Long press a preset for more options (use for current device / save current bands / rename / delete).
 - Import from [AutoEq](https://autoeq.app) or Equalizer APO, or export as Equalizer APO text.
 
@@ -131,13 +131,15 @@ At the bottom of Sound Control, tap one to turn it on, drag across it to set its
 `🆕 v7.8.0`
 
 Pick where Namida plays, it's remembered for when the device reconnects.
+On desktop, a missing or busy output device pauses playback with a message (instead of skipping every track).
 
 #### Bit-perfect {#bit-perfect}
 
 The file reaches your output device exactly as it's stored, nothing changes it on the way.
 
 - **Android**: needs Android 14+ and an output that supports it (usually a USB DAC), or [USB direct access](#usb-direct) on any version.
-- **Windows & Linux**: every effect is skipped, and only Namida uses the output device while playing.
+- **Windows, Linux & macOS**: every effect is skipped, and only Namida uses the output device while playing.
+- **iOS**: every effect is skipped, and the output follows each track's sample rate (with a short gap between tracks of different rates). `🆕 v8.5.0`
 
 Anything that changes the audio (like the equalizer or speed) is turned off while Bit-perfect is on.
 
@@ -169,9 +171,9 @@ Asked for access every time? See the [FAQ](/faq/#usb-dac-permission).
 
 #### Exclusive Mode {#exclusive-mode}
 
-`🆕 v8.2.0` `💻 Windows+Linux only`
+`🆕 v8.2.0` `💻 Windows+Linux+macOS only`
 
-Namida takes the output device for itself (like [Bit-perfect](#bit-perfect) does), but keeps your effects:
+Namida takes the output device for itself while playing (like [Bit-perfect](#bit-perfect) does), but keeps your effects:
 
 - **Off**: other apps' sounds and crossfade.
 - **Still working**: the equalizer, speed, pitch, volume and the rest of the effects.
@@ -236,6 +238,7 @@ Search, shift or edit them from there, and: `🆕 v7.8.0`
 - "Prefer embedded lyrics" (global) shows when the track has embedded lyrics: Never, Synced `🆕 v8.2.0` (only when they're synced) or Always.
 - Ignore (from the ⋮ menu of fetched lyrics) hides them and stops fetching lyrics for that track. `🆕 v8.2.0`
 - Font Scale sets the lyrics size, for normal and fullscreen (and the widescreen player when opened from there `🆕 v8.4.0`).
+- When an online source fails, the search shows which one, tap it to retry. `🆕 v8.5.0`
 
 #### Translations {#lyrics-translations}
 

@@ -5,7 +5,7 @@ description: "Sync app data between your devices"
 
 # Sync
 
-Sync your Namida data between devices over the local network, no cloud involved. Works across Android, Windows and Linux.
+Sync your Namida data between devices over the local network, no cloud involved. Works across all platforms.
 
 ::: callout info
 Sync is a new feature and still evolving, both devices must run the same Namida version.
@@ -19,6 +19,8 @@ Once connected, you can send and receive data with that device, or all devices a
 Accepted devices are paired and verify each other on every connection, so another device can't pretend to be one of yours (devices accepted on older versions need accepting once again). `🆕 v8.2.0`
 
 The [settings icon](/settings/#settings-icon), the Backup & Restore settings tile and the Sync tiles show the Sync state (server running, a device connected or data being sent). The [Sync quick tile](/settings/#quick-tiles) and the [Sync tile](/settings/7-backup-restore-settings/#sync) also show a gray dot when a device that connected earlier got disconnected.
+
+After you send, receive or sync by hand, the receiving device shows what changed (like History +12, Playlists +3). `🆕 v8.5.0`
 
 ### What Gets Synced {#data}
 
@@ -62,7 +64,7 @@ Music files are not synced for now, use apps like Syncthing or LocalSend to copy
 
 ### Smart Matching {#matching}
 
-Devices don't need identical file paths. Tracks are matched by fingerprint, so stats and listens are applied to the right files even when libraries live in different folders. If something still ends up with a wrong path, it's an easy fix. [`📒 Path Problems Guide ↗`](/guides/medium/#sync-path-problems)
+Devices don't need identical file paths. Tracks are matched by fingerprint, so stats and listens are applied to the right files even when libraries live in different folders. When the tags differ, tracks with the same file name inside the same folders are matched too `🆕 v8.5.0`. If something still ends up with a wrong path, it's an easy fix. [`📒 Path Problems Guide ↗`](/guides/medium/#sync-path-problems)
 
 ### Conflict Resolution {#conflicts}
 
@@ -74,7 +76,7 @@ Set an auto sync interval and let devices sync on their own whenever they see ea
 
 ### Devices {#devices}
 
-Devices show up by the name they broadcast. To rename yours, press the edit icon beside it while the server is running, the new name is broadcast right away.
+Devices show up by the name they broadcast. To rename yours, press the edit icon beside it while the server is running, the new name is broadcast instantly.
 
 Blocking a device (instead of just rejecting it) stops it from reaching you or asking again. Blocked devices are listed in their own section, with an unblock button.
 

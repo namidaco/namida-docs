@@ -36,10 +36,11 @@ In video fullscreen, the screen stays awake while the video plays.
 
 ### Notification Buttons {#notification-buttons}
 
-`🆕 v8.2.0` `💻 Android only`
+`🆕 v8.2.0` `💻 Android+iOS+macOS only`
 
 Pick and reorder the media notification buttons (favourite / stop / shuffle / repeat / seek / chapters / sleep timer / stop after this track / add to playlist / bookmark). For add to playlist, you pick the playlist it adds to.
 On Android 11 and below, the thumbnail might move out of place with 5 buttons.
+On iOS and macOS, turn on Seek Backward and Seek Forward to show them instead of previous and next in the lock screen and Now Playing controls. `🆕 v8.5.0`
 
 ### Display Artwork on Lockscreen {#artwork-lockscreen}
 
@@ -51,7 +52,7 @@ Shows the current track's artwork on the lockscreen.
 
 Stops playback completely when you swipe the app away. Three modes (Always / If not playing / Never).
 
-On Windows & Linux this decides what closing the window does (quit the app / minimize to the tray). [`🎉 System Tray ↗`](/features/system-integration/#tray)
+On desktop this decides what closing the window does (quit the app / minimize to the tray, which is the menu bar on macOS). [`🎉 System Tray ↗`](/features/system-integration/#tray)
 
 ### On Notification Tap {#on-notification-tap}
 
@@ -127,13 +128,13 @@ The playback speed used while long pressing the next button or the video (1.5x b
 
 ### On Interruption {#on-interruption}
 
-`💻 Android only`
+`💻 Android+iOS only`
 
 Control what happens on calls and notifications (pause / duck, which lowers the volume / do nothing), and whether to resume after the interruption ends.
 
 ### On Device Connect {#on-device-connect}
 
-`💻 Android only`
+`💻 Android+iOS only`
 
 Resume playback when a wired or wireless device is connected, if playback was paused by disconnecting it.
 

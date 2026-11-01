@@ -12,7 +12,7 @@ Namida can show subtitles for anything it plays as a video (YouTube videos and l
 ### Turning Them On {#enable}
 
 Press the subtitle icon in the video controls (at the top of the player).
-The list shows every subtitle Namida found for what is playing, pick one and it starts right away. Pick "Disable" to turn them off again.
+The list shows every subtitle Namida found for what is playing, pick one and it starts instantly. Pick "Disable" to turn them off again.
 
 The icon only appears when the current video has subtitles.
 
@@ -46,12 +46,12 @@ A normal track always wins over an auto generated one in the same language.
 
 ### Styling {#styling}
 
-Styled subtitles (`.ass` and `.ssa`) keep their original look, fonts, colors and positioning, on Windows and Linux. Everywhere else they are shown as plain text under the video.
+Styled subtitles (`.ass` and `.ssa`) keep their original look, fonts, colors and positioning, everywhere except Android. On Android they are shown as plain text under the video.
 
 YouTube captions that come with colors keep them on every platform, along with bold, italic, underline and the karaoke highlight that moves along the line. `🆕 v7.4.0`
 
 ::: callout info
-Image based subtitles (the kind found in some rips) can only be drawn on Windows and Linux. They still appear in the list elsewhere, but greyed out.
+Image based subtitles (the kind found in some rips) can't be drawn on Android. They still appear in the list there, but greyed out.
 :::
 
 ---

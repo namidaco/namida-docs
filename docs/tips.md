@@ -109,6 +109,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 ### Library Pages {#library-pages}
 
 - Pull down to refresh: the tracks page refreshes the library, the playlists page refetches M3U & server playlists, and YouTube pages refresh their content.
+- Press the tab you're on again to scroll back to the top
 - In media subpages (album tracks, artist tracks, etc), long press the filter icon to quickly open a smart playlist with that media name.
 - In media pages, long press the grid icon to choose a specific count per row (higher numbers can cause performance issues).
 - In the tracks page and media subpages, long press shuffle/play for advanced options.
@@ -150,7 +151,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 - In the YouTube search tab, offline search is very useful to find videos you watched previously. You can sort results (most played / recent listen / first listen), or turn on the "Cache" chip to see only what plays offline. Import your YouTube history for better results.
 - Long press a chapter in the miniplayer to copy a link to its timestamp.
 - Take a snapshot of a channel or playlist: open the videos tab, press "load all", wait, then open the menu and add to a playlist.
-- Tap a video in a YouTube playlist to play it right away, the rest of the playlist gets added to the queue as it loads.
+- Tap a video in a YouTube playlist to play it directly, the rest of the playlist gets added to the queue as it loads.
 - Type `after:2024-01-01` or `before:2023-06` in the search text to filter by upload date, or use the filters row. [`📄 Search Filters ↗`](/pages/youtube/#search-filters)
 - In a channel page, the time range icon lists only videos uploaded after or before a date.
 - In the YouTube page, tap the selected section again (like Home or Playlists) to switch it between Namida and your account. `🆕 v8.2.0`
@@ -174,7 +175,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 
 - Tap any item in the track info dialog to copy it.
   - Press the eye icon at the top to show empty fields too, or the play icon to preview the track without touching the queue.
-- In a track or video info dialog, or at the top of an album, artist or playlist page, tap the artwork to open it in fullscreen, then long press it to save it to storage. Double tap to zoom into a spot, or use the mouse wheel on desktop. You can zoom in until single pixels show, and they stay sharp.
+- In a track or video info dialog, or at the top of an album, artist or playlist page, tap the artwork to open it in fullscreen, then long press it to save it to storage (or press share at the top `🆕 v8.5.0`). Double tap to zoom into a spot, or use the mouse wheel on desktop. You can zoom in until single pixels show, and they stay sharp.
 - Covers made from several tracks (like in a playlist page) open in a swipeable viewer when you tap one of their images, use the arrow keys on desktop. The viewer can save the whole collage too. `🆕 v8.2.0`
 - Sort by more than one property (like artist, then year, then title). Press Advanced in any sort menu to pick and reorder them.
   - Available for tracks, and now albums, artists, genres and playlists too. `🆕 v7.8.0`
@@ -208,6 +209,7 @@ Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-setting
 - Open the side menu and press the Namida logo to open the About page.
 - Do NOT press the logo in the About page!! or something very scary will happen!!!1!
 - Use the Jellyda app icon with Jellys Invasion on, then open the About page for a cool ambient experience ;)
+- Switch to the Namiween app icon and visit the About page for a little Halloween treat. `🆕 v8.5.0`
 
 ### Misc {#misc-tips}
 

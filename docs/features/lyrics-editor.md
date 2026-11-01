@@ -21,7 +21,7 @@ On a wide window, the controls sit next to the lines instead of under them. [`�
 
 ### Getting the Text In {#text}
 
-New lyrics open the Text dialog right away, type or paste the lyrics (one line per line) and press Save. Empty lines are skipped.
+New lyrics open the Text dialog directly, type or paste the lyrics (one line per line) and press Save. Empty lines are skipped.
 
 Open Text from the ⋮ menu any time to edit all lines at once. Lines you keep keep their timing, a changed line keeps the timing of the line it replaced, and new lines start without one.
 Pasting synced lyrics (LRC, or subtitles like SRT) replaces everything instead, timing included.
@@ -129,7 +129,7 @@ Discard (from the ⋮ menu) goes back to the lyrics you opened, after asking. Sa
 
 ### Saving {#saving}
 
-Press Save to save the lyrics in your [lyrics save location](/settings/6-extras-settings/#lyrics-save-location), they show in the player right away.
+Press Save to save the lyrics in your [lyrics save location](/settings/6-extras-settings/#lyrics-save-location), they show in the player.
 For local tracks, Save also offers Embed, which writes them into the track's lyrics tag.
 
 - Lines without timing are listed first, and left out of the saved lyrics.
@@ -146,7 +146,7 @@ The saved lyrics are a normal LRC file that other players can read:
 
 ### Keyboard Shortcuts {#shortcuts}
 
-`💻 Windows+Linux only`
+`💻 Windows+Linux+macOS only`
 
 | Shortcut | Action |
 | --- | --- |

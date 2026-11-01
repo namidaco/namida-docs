@@ -112,7 +112,7 @@ Examples:
 
 Good to know:
 
-- Type dates as `2024-05-20` or `2024-05-20 18:30:00`, or pick one with the calendar icon.
+- Type dates as `2024-05-20` or `2024-05-20 18:30:00`, or pick one with the calendar icon. A date without a time covers the whole day.
 - **Any Listen** matches when at least one listen matches, **All Listens** only when every listen matches.
 - Never played tracks have no listen dates, they match "is not Within Last", and "First listen Missing" finds exactly them.
 - A year tag like `1995` counts as the first day of that year, so use <u>is in Between</u> `1990-01-01` and `1999-12-31` for a decade.

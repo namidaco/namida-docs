@@ -13,6 +13,7 @@ Namida comes with a full YouTube section, powered by a custom client. Stream, wa
 - Audio Only mode, play any video as music without loading the video.
 - Data Saver, skip loading video streams to save data, see [below](#data-saver).
 - Radio, auto start a queue based on the current video, using the YouTube Mix playlist.
+- Live streams, with the quality picker and seeking back. Tap the live chip (where the duration usually is) to jump back to live. `🆕 v8.5.0`
 
 [`⚙️ Configure YouTube ↗`](/settings/5-youtube-settings/)
 
@@ -65,12 +66,12 @@ Ways to enter fullscreen:
 
 In fullscreen:
 
-- Swipe vertically on the right side for volume, and on the left side for brightness (on Android, going past 100% raises the screen brightness too)
+- Swipe vertically on the right side for volume, and on the left side for brightness (on Android and iOS, going past 100% raises the screen brightness too)
   - Going below 100% dims the video more than the lowest screen brightness, press the sun button at the top to undo it
 - The lock button blocks all gestures and controls until you unlock it
 - A chip at the bottom shows where the video is in the queue (like 3/10)
 - Enable glow for an ambient effect behind the video (might affect performance & battery)
-- On Android, entering fullscreen or pressing the rotate button follows the device sensor, so the video matches how you are actually holding the device
+- On Android and iOS, entering fullscreen or pressing the rotate button follows the device sensor, so the video matches how you are actually holding the device
 
 #### Other Fullscreens {#other-fullscreens}
 
@@ -106,7 +107,7 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Both work for single downloads and batch playlist downloads, where playlist formats number the files for you.
 - Default download folder, changeable per download.
   - Pick a subfolder right in the download sheet, next to the output type. `🆕 v8.4.0`
-- Download notifications `💻 Windows+Linux only`.
+- Download notifications `💻 iOS+Windows+Linux+macOS only`.
 - The download button in the [miniplayer](#miniplayer) shows the progress while downloading, tap it to pause or resume.
 - Downloads that fail because there is no connection resume on their own once it is back, thumbnails retry the same way. `🆕 v7.0.0`
 - Parallel downloads, up to 10 videos at a time (4 by default). Set it with the flash icon in the [`📄 Downloads page ↗`](/pages/youtube/#downloads). `🆕 v7.1.0`
@@ -115,7 +116,7 @@ Download any video or audio, with full control over the result: [`⚙️ Configu
 - Split by Chapters, save each chapter of the video as its own file, see [below](#chapters-downloads). `🆕 v7.4.0`
 - Video chapters are kept in the downloaded file. `🆕 v8.2.0`
 - Playlist downloads can be added to a library playlist, see [below](#playlist-downloads). `🆕 v7.4.0`
-- Set file last modified as video upload date, files get the video's date instead of the download time. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
+- Set the file's last modified date as the video upload date, files get the video's date instead of the download time. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
 
 The extra file options (Split by Chapters / Remove Sponsor Segments / Keep cached versions, etc) are in the Edit Tags sheet, press the pencil icon beside the video title in the download sheet.
 For playlists, press the gear button in the playlist download page.
@@ -133,6 +134,7 @@ In a playlist download page, the header counts the videos already in the chosen 
 With the [cache](#caching):
 
 - Videos you already streamed in the same quality are copied from the cache instead of being downloaded again.
+  - This works while you're offline too. `🆕 v8.5.0`
 - "Keep cached versions" also keeps a copy of the download in the cache.
 - A video that became private or deleted can still be downloaded from its cached copy, and its info is saved as a json file next to it.
 
@@ -217,7 +219,7 @@ Examples:
 
 ### Caching & Offline Playback {#caching}
 
-Streamed videos and audios are cached, so they play offline later without downloading. Cached videos start right away even when you're online.
+Streamed videos and audios are cached, so they play offline later without downloading. Cached videos start instantly even when you're online.
 A cache priority system decides what to keep when cleaning up, so your important stuff stays.
 
 - Every cached video has a priority (VIP / High / Normal / Low / Disable). Cleaning starts from the bottom, and VIP items are never deleted automatically.

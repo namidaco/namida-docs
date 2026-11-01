@@ -19,7 +19,10 @@ Android only:
 
 - `ANDROID_AUTO_AND_WEAR`, shows the queue in Android Auto and Wear OS, on by default.
 - `NOW_PLAYING_BROADCAST`, sends the current track to Tasker and other automation apps. [`🎉 Broadcasts ↗`](/features/automation/#broadcasts)
-- `STATUS_BAR_LYRICS`, the current lyrics line in the status bar of supported systems (ColorOS & HyperLyric, SuperLyric, Flyme & Lyricon). [`🎉 Status Bar Lyrics ↗`](/features/system-integration/#status-bar-lyrics)
+
+Android, iOS and macOS:
+
+- `STATUS_BAR_LYRICS`, the current lyrics line in the status bar of supported systems (ColorOS & HyperLyric, SuperLyric, Flyme & Lyricon), or in the iOS Live Activity and the macOS menu bar `🆕 v8.5.0`. [`🎉 Status Bar Lyrics ↗`](/features/system-integration/#status-bar-lyrics)
 
 All platforms:
 
@@ -34,7 +37,7 @@ Quick navigation between library tabs. The tabs stay in the drawer either way.
 
 `💻 Android only`
 
-Keep the video playing in a small floating window when leaving the app.
+Choose what keeps showing in a small floating window when you leave the app while playing (video / lyrics / artwork). The first one available is shown, in that order. `🆕 v8.5.0`
 
 ### Floating Action Button {#fab}
 
@@ -57,6 +60,7 @@ YouTube sections (home / music `🆕 v8.4.0` / notifications / channels / playli
 
 Which fields search looks into (title / artist / album / filename / comment, even lyrics, etc).
 The same list opens from the filter icon in the search page, where you can also save presets for the search page only. `🆕 v8.4.0` [`📄 Search Page ↗`](/pages/library/#search)
+Listens Count Boost at the bottom makes your most played tracks score higher in search (0x turns it off). `🆕 v8.5.0`
 
 ### Ignore Common Prefixes While Sorting {#ignore-prefixes}
 
@@ -97,7 +101,7 @@ Lyrics that contain any Japanese kana are read as Japanese, otherwise Chinese ch
 How lyrics are found: Namida looks for synced lyrics first, checking saved lyrics (the cache, files next to the track and your [lyrics folders](#lyrics-folders)), then the embedded lyrics tag, then plain `.txt` lyrics, then online databases, ending with a web search for plain lyrics.
 The lyrics source above limits this to only the local steps or only the internet steps.
 
-Files next to the track can be `.lrc`, `.ttml`, `.txt` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename.
+Files next to the track can be `.lrc`, `.wlrc`, `.ttml`, `.txt` or subtitle files (`.srt`, `.vtt`, `.sbv`, `.ssa`, `.ass`), as long as they share the track's filename.
 Online databases are LRCLIB and KuGou. When both find lyrics, the one closest to the track duration is used, and the lyrics menu shows where each one came from.
 
 ::: callout tip
@@ -132,7 +136,7 @@ Where album and artist images come from, with separate lists for albums and arti
 
 ### Immersive Mode {#immersive-mode}
 
-`💻 Android only`
+`💻 Android+iOS only`
 
 Hide status & navigation bars while the miniplayer is expanded.
 
@@ -150,7 +154,7 @@ Links and text you copy can show up right in the searchbar.
 
 ### Vibration Type {#vibration}
 
-`💻 Android only`
+`💻 Android+iOS only`
 
 Vibration or haptic feedback for some actions, or none.
 
@@ -171,14 +175,14 @@ Visual:
 - `JELLYS_INVASION` & `JELLYS_COLOR_PALETTE`, lets jellyfishes drift around the app, with a matching color palette. Tap the jellyfish button in the theme settings to toggle them, long press it for both options.
 - `GRADIENT_TILES_AND_CARDS`, gradient backgrounds for tiles and cards.
 - `BACKGROUND_IMAGES`, custom images for the [wallpaper](/features/effects/#wallpaper) and [player background](/features/effects/#player-background). `🆕 v7.8.0`
-- `FLOATING_ARTWORK_EFFECT (💻 Android only)` & `TILTING_CARDS_EFFECT (💻 Windows+Linux only)`, extra visual effects.
+- `FLOATING_ARTWORK_EFFECT (💻 Android+iOS only)` & `TILTING_CARDS_EFFECT (💻 Windows+Linux+macOS only)`, extra visual effects.
 - `SUBPAGE_HEADER_STYLE` & `ARTWORK_COLLAGE_STYLE`, the header style of album, artist, genre and playlist pages (set per page type), and the look of covers made from several tracks. `🆕 v8.2.0`
 - `LYRICS_ANIMATIONS`, choose the lyrics effects for the simple line, normal and expanded views, with presets from off to full. `🆕 v8.2.0`
-- `MEDIA_WAVE_HAPTIC (💻 Android only)`, haptics that follow the audio.
+- `MEDIA_WAVE_HAPTIC (💻 Android+iOS only)`, haptics that follow the audio.
 
 Scrolling:
 
-- `SMOOTH_SCROLLING (💻 Windows+Linux only)`, `ENHANCED_DRAG_TO_SCROLL` & `TAP_TO_SCROLL`, scrolling behavior tweaks.
+- `SMOOTH_SCROLLING (💻 Windows+Linux+macOS only)`, `ENHANCED_DRAG_TO_SCROLL` & `TAP_TO_SCROLL`, scrolling behavior tweaks.
 - `SCROLLBAR_THUMB_LABEL`, shows where you are while dragging the scrollbar (like the letter, year or date, depending on the sort). `🆕 v7.8.0`
 - `EASY_SCROLLBAR_GRAB`, drag the scrollbar instantly (without the short hold), and from a wider area. `🆕 v8.4.0`
 

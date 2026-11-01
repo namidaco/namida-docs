@@ -5,9 +5,9 @@ description: "Keyboard shortcuts on desktop"
 
 # Shortcuts
 
-`💻 Windows+Linux only`
+`💻 Windows+Linux+macOS only`
 
-Control Namida from the keyboard on desktop.
+Control Namida from the keyboard on desktop. On macOS, use `Cmd` instead of `Ctrl`, see [macOS differences](/installation/#macos-differences).
 
 ### Playback {#playback}
 

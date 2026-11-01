@@ -57,7 +57,8 @@ Namida YouTube playlists can be tagged, pinned and filtered too. `🆕 v7.8.0` [
 Your subscribed channels, they can be organized into groups. Each channel page shows its videos and info.
 Long press a Subscribe button (on a channel page, a channel card or under a video) to manage its groups (search / create / rename / remove) or favourite the channel. Pick a group from the filter button at the top to see only its channels and videos. `🆕 v8.4.0`
 Press the time range icon in a channel page to list only videos uploaded after or before a date. `🆕 v7.0.0`
-Tap the channel picture or banner to view it fullscreen, with a save button. `🆕 v8.2.0`
+The sort button in a channel page can also sort by your Namida history (Most Played / Recent Listens / First listen) or randomly, and a YouTube playlist page can sort by channel too. `🆕 v8.5.0`
+Tap the channel picture or banner to view it fullscreen, with a save button `🆕 v8.2.0` and a share button `🆕 v8.5.0`.
 
 ### History {#history}
 

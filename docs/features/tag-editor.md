@@ -34,6 +34,8 @@ Select multiple tracks and edit them at once (unchanged fields remain untouched)
 
 Moods, tags and rating can also be set for many tracks without opening the tag editor, press the "Set Rating" icon at the end of the Edit Tags row in the tracks menu.
 
+Ratings are written to the tag other players read for that file type, keeping the scale the file already uses. Ratings set by other players are read too, as long as Namida has none of its own. `🆕 v8.5.0`
+
 ### Suggestions {#suggestions}
 
 `🆕 v7.0.0`

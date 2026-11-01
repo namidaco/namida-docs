@@ -46,7 +46,7 @@ Joining is always free, and hosting on your own device or your own server needs 
 ### Joining {#join}
 
 Paste an invite link or type the code, with the password if the room has one.
-On Android, opening an invite link opens the app and joins the room right away.
+On Android, opening an invite link opens the app and joins the room directly.
 
 ::: callout info
 A code alone only works for rooms on the Namida server. Rooms on your local network or on a custom server need the invite link (since it carries the address), unless a local room is public and shows in the list.
@@ -54,7 +54,7 @@ A code alone only works for rooms on the Namida server. Rooms on your local netw
 
 - **Public rooms** are listed at the bottom, tap one to join. You can hide all rooms from a host you are not interested in.
   - Public rooms on your network show first, with a wifi icon. `🆕 v8.4.0`
-- **Rejoin** lists the rooms you were in lately. Rejoining gets your seat back, without the password or approval.
+- **Rejoin** lists the rooms you were in lately. Rejoining gets your seat back, without the password or approval (unless the host turned on approval, locked the room or changed the password while you were away).
 - **Your name** is how others see you in the room. It is the same name your device uses in [`🎉 Sync ↗`](/features/sync/#devices), changing one changes the other.
 
 ### Roles {#roles}
@@ -68,7 +68,7 @@ Only the host changes the room options, accepts join requests, makes admins and 
 The host picks what guests are allowed to do (control playback / add to queue / edit queue / chat). Each one is a separate switch, by default guests can add to the queue and chat. Guests can always remove or move the tracks they added themselves.
 
 Leaving as the host gives two choices (leave / close the party for everyone).
-If the host leaves or loses connection, everyone sees that the host is offline, and after a minute an admin (or the member who has been there the longest) becomes the host and the party continues.
+If the host leaves, an admin (or the member who has been there the longest) becomes the host immediately and the party continues. If the host loses connection, everyone sees that the host is offline, and the same happens after a minute.
 A party hosted on your own device closes once you leave.
 
 ### Managing the Room {#host}
@@ -78,7 +78,7 @@ The host has a Host settings card in the Party tab:
 - Guest permissions
 - Require approval to join, requests show up in a Join requests card with accept and reject
 - Public room & Share what's playing
-- Lock party, no one new can join (members who drop can still come back)
+- Lock party, no one new can join (members who were in the room when it got locked can still come back)
 - Set or remove the password
 - Banned members, with an unban button
 
@@ -103,6 +103,7 @@ Your player follows the room while you are in it:
 
 - Without playback control, pausing only pauses your device, the party keeps playing. Press play to catch up.
 - Repeat follows the room, see [above](#queue), and speed and per track sound settings are ignored.
+- Crossfade follows the host's setting, so everyone moves to the next track together.
 - Notification, lockscreen and headset buttons follow your permissions too.
 
 Once you leave, your own queue comes back where you left it, paused. The party queue never replaces your saved queues. [`📄 Queues Page ↗`](/pages/library/#queues)

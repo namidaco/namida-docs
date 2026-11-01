@@ -8,6 +8,8 @@ description: "The main library pages"
 The main tabs of your library. You choose which ones are enabled and their order in [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs).
 
 Albums, artists, genres, languages, moods, tags and playlists (YouTube ones too) can be sorted by Last Played, the last time you played from each one. `🆕 v8.2.0`
+Press the count chip at the top left of a tab (like "120 Artists") to switch what the tab shows (like Album Artists / Composers / Discover / etc). `🆕 v8.5.0`
+Press the sort button to change the sort, or the arrow beside it to reverse the order. `🆕 v8.5.0`
 
 ### Home {#home}
 
@@ -22,7 +24,7 @@ The mixes (empty ones move to the end):
 - **Supremacy**, the playing track and the tracks you usually listen to with it.
 - **Top Recents**, your most played tracks of the last few days.
 - **Underrated**, tracks you played only a few times and haven't heard in a while.
-- **Lost Partners**, tracks you used to play a lot but haven't heard in a long time.
+- **Lost Partners**, tracks you used to play a lot but haven't heard in a long time (judged by how often you usually play each one).
 - **Discover**, tracks you never played or rarely play.
 - **Favourites** and **Random Picks**, random samples of your favourites and your library.
 
@@ -32,7 +34,7 @@ All your tracks, sortable by almost any property. Recently added tracks get thei
 
 Sorts you use often can be saved as named presets in the sort menu. `🆕 v8.2.0`
 
-With [Include Videos](/settings/2-indexer-settings/#include-videos) on, the tab can also show audio only or videos only (as "Tracks: Audio" and "Tracks: Videos"). They share one tab slot, and a switcher next to the tracks count moves between them. `🆕 v7.4.0` [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
+With [Include Videos](/settings/2-indexer-settings/#include-videos) on, the tab can also show audio only or videos only (as "Tracks: Audio" and "Tracks: Videos"). They share one tab slot, press the tracks count chip to move between them. `🆕 v7.4.0` [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
 
 ### Albums {#albums}
 
@@ -41,7 +43,7 @@ What counts as one album is controlled by [`⚙️ Configure Album Identifiers �
 
 An album shows the year of its oldest track.
 
-Tap the albums count at the top left to show or hide singles, EPs and albums. The release type tag decides which is which (without it, one track albums count as singles). `🆕 v8.2.0`
+Tap the albums count chip at the top left to show or hide singles, EPs and albums. The release type tag decides which is which (without it, one track albums count as singles). `🆕 v8.2.0`
 
 ### Artists {#artists}
 
@@ -55,7 +57,7 @@ EPs get their own row beside albums and singles, long press a row icon to sort t
 
 `🆕 v7.0.0`
 
-Your artists laid out as a constellation, each one connected to related artists through shared albums, features on the same track and shared genres. Open it from the Artists page.
+Your artists laid out as a constellation, each one connected to related artists through shared albums, features on the same track and shared genres. Open it from the artists count chip at the top left of the Artists page.
 Press an artist to open it, or shuffle for a fresh set.
 
 ### Artists Map {#artists-map}
@@ -94,11 +96,13 @@ Playlists can have a description (press edit in the playlist dialog). Sorting a 
 Browse your library exactly like your file manager, with separate views for music and videos. Supports folders hierarchy, `cover.jpg` style folder images, and `.info.txt` for displaying small info. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
 
 - The header shows the folder name with its `.info.txt` text, and the path above it. Tap it to go up one folder.
-- The music and videos views ("Folders: Tracks" and "Folders: Videos") share one tab slot with the normal Folders view, use the switcher in the header to move between them. `🆕 v7.4.0`
+- The music and videos views ("Folders: Tracks" and "Folders: Videos") share one tab slot with the normal Folders view, press the folders count chip in the header to move between them. `🆕 v7.4.0`
 - Set a specific folder as default, Namida will open it on app launch.
 - Edits to a `.info.txt` file show up after refreshing the library. [`⚙️ Refresh Library ↗`](/settings/2-indexer-settings/#refresh-reindex)
-- In the tracks sort menu, disable "Enable folders hierarchy" to show all folders in a single list instead of a tree view.
-- The icon beside it toggles "Skip folders with a single subfolder" (on by default). `🆕 v8.2.0`
+- The search button filters the folders and the tracks of the current folder. `🆕 v8.5.0`
+- The hierarchy icon beside the folder name has these options:
+  - Disable "Enable Folders Hierarchy" to show all folders in a single list instead of a tree view.
+  - "Skip folders with a single subfolder" (on by default). `🆕 v8.2.0`
 
 ### Queues {#queues}
 
@@ -149,8 +153,10 @@ Results are ranked by a match score:
 - Exact matches score the highest, then close matches. For fields with multiple values (like artists or genres), matching any single value counts.
 - The more of your typed words a track matches, the higher it ranks. Small typos are forgiven in the title, artist, album and filename.
 - Title counts the most, then artist and album, then filename. Other fields like genre, comment or lyrics are only checked when these don't match.
-- Tracks you listen to more get a small boost.
+- Tracks you listen to more get a boost, set how much with Listens Count Boost in the filter icon. `🆕 v8.5.0` [`⚙️ Configure Listens Count Boost ↗`](/settings/6-extras-settings/#filter-tracks-by)
 - Results that score far below the best match are hidden behind a Show more button. `🆕 v8.2.0`
+  - Albums, artists and the other rows show their best matches first, the card at the end of a row shows the rest. Rows with only weak matches fold into a small title row, tap it to open. `🆕 v8.5.0`
+- When you search an artist, their albums rank as high as albums titled with what you searched. `🆕 v8.5.0`
 
 This ranking is the "Auto" sort in the search sort menu, pick any other sort to order the results by it instead.
 Filtering the albums, artists, genres or playlists pages uses the same ranking `🆕 v8.2.0`, and so does searching inside an album, artist, playlist or any other media page.

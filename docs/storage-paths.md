@@ -17,6 +17,8 @@ Settings, playlists, history, queues, extracted artworks, lyrics, subtitles, log
 | Windows | `C:\Users\USERNAME\.namida` |
 | Windows (portable) | `<namida folder>\files` |
 | Linux | `~/.namida` |
+| macOS | `~/.namida` |
+| iOS | Inside the app, not shown in the Files app |
 
 Notable subfolders: `Playlists`, `History`, `Queues`, `Artworks`, `Lyrics`, `Subtitles`, `Youtube`, `Servers Cache`, `Recently Deleted`, `Logs`, `Wallpapers`.
 
@@ -34,10 +36,14 @@ The user facing folder, everything Namida writes out for you to keep or move aro
 | Windows | `C:\Namida` |
 | Windows (portable) | `<namida folder>\Namida` |
 | Linux | `~/Namida` |
+| macOS | `~/Namida` |
+| iOS | Files app -> On My iPhone -> Namida -> `Namida` |
 
 Subfolders: `Backups`, `Compressed`, `M3U Playlists`, `Artworks`, `Downloads`, and on Android `Logs` for the logs zip made by [Report an issue](/pages/other/#about).
 
 On Windows and Linux this sits on the first drive Namida detects, usually the one above.
+
+On Android, files Namida saves there (and edited tracks) show up instantly in other apps and file pickers. `🆕 v8.5.0`
 
 `Backups` and `Downloads` are just defaults, both can be pointed anywhere you want. [`⚙️ Default Backup Location ↗`](/settings/7-backup-restore-settings/#backup-location) [`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)
 
@@ -51,6 +57,8 @@ Throwaway data like waveforms. Safe to delete, it gets rebuilt.
 | Windows | `C:\Users\USERNAME\AppData\Local\com.msob7y\namida` |
 | Windows (portable) | `<namida folder>\cache` |
 | Linux | `~/.cache/com.msob7y.namida` |
+| macOS | `~/Library/Caches/com.msob7y.namida` |
+| iOS | Inside the app |
 
 ---
 

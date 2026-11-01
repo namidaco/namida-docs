@@ -41,6 +41,7 @@ The two are separate, a playlist made in Namida doesn't show in your account and
 
 1. Make sure both devices run the same Namida version and are on the same network. Guest networks and some routers keep devices apart, and a VPN can get in the way too.
 2. Device not found? Connect by IP instead (using the address shown under Server on the other device). [`🎉 Connect by IP ↗`](/features/sync/#connect-by-ip)
+   - On iOS and macOS, allow Namida in Privacy & Security -> Local Network (turn it off and on again if it's already allowed). `🆕 v8.5.0`
 3. Found, but connecting fails or times out? A firewall on the server device is blocking Namida, allow it:
    - Windows: set your network to Private, then allow Namida in Windows Security -> Firewall & network protection -> Allow an app through firewall.
    - Linux with ufw: `sudo ufw allow 62310/tcp`
@@ -98,7 +99,7 @@ Not per track. [Prefer embedded lyrics](/settings/6-extras-settings/#lyrics) is 
 
 ### Can I use a custom app icon? {#custom-app-icon}
 
-You can pick from the icons that ship with Namida, but a fully custom one is not possible (Android only allows icons that are already built into the app).
+You can pick from the icons that ship with Namida, but a fully custom one is not possible (the system only allows icons that are already built into the app).
 See [App Icon](/settings/4-customization-settings/#app-icon), where you can also submit an icon, or use a launcher that supports icon packs.
 
 ### Why does an album show up more than once? {#duplicated-albums}
@@ -133,7 +134,7 @@ Yes, turn on Discord Rich Presence in Extras settings. `🆕 v8.4.0` [`🎉 Disc
 Discord only shows images from an online link, it can't take an image from your device.
 
 - Local tracks show the Namida icon, since their artwork only exists on your device.
-- YouTube videos show their thumbnail on desktop only. There the Discord app turns the link into an image, while on Android Namida talks to Discord directly, where that needs your Discord login token (what unofficial apps use, and it has a risk getting your account banned).
+- YouTube videos show their thumbnail on desktop only. There the Discord app turns the link into an image, while on Android and iOS Namida talks to Discord directly, where that needs your Discord login token (what unofficial apps use, and it has a risk getting your account banned).
 
 Apps that show local artwork either search the track on online services (sending its title, artist and album) or pass the image through their own server. Namida does neither, your library stays on your device.
 On desktop, [Music Presence](https://github.com/ungive/discord-music-presence) works with Namida and shows local artwork (through its own server). [`🎉 Discord Rich Presence ↗`](/features/system-integration/#discord)

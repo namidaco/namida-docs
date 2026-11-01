@@ -70,13 +70,13 @@ Opens the widget settings screen, where you set the look, layout, controls and t
 
 ### App Icon {#app-icon}
 
-`💻 Android only`
+`💻 Android+iOS+Windows only`
 
 Choose a different icon for the app.
 New icons can be submitted on [our Discord](https://discord.com/channels/1156253663803740271/1423484977693327430/1423671224520671362).
 
 ::: callout info
-Fully custom icons are not possible (Android only allows icons that are already built into the app). Use a launcher that supports icon packs, or patch the app.
+Fully custom icons are not possible (the system only allows icons that are already built into the app). Use a launcher that supports icon packs, or patch the app.
 :::
 
 ### Track Actions {#track-actions}

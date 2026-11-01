@@ -11,6 +11,45 @@ What each version added or changed, linked to where these docs explain it. Newes
 **Looking for every change?** This page only follows the docs. The full changelog of each version (fixes and improvements included) is on GitHub. [`📜 Stable Releases ↗`](https://github.com/namidaco/namida/releases) [`🧪 Beta Releases ↗`](https://github.com/namidaco/namida-snapshots/releases)
 :::
 
+## 🏷️ v8.5.0 {#v8-5-0}
+
+<!-- generated -->
+`🆕 3 new sections` `🔄 30 updated sections`
+
+**🎉 Features**
+
+- [Library & Indexing](/features/library-indexing/): 🔄 [Missing Tracks](/features/library-indexing/#missing-tracks)
+- [Playback](/features/playback/): 🔄 [Bit-perfect](/features/playback/#bit-perfect), [Lyrics Picker](/features/playback/#lyrics-picker)
+- [Tag Editor](/features/tag-editor/): 🔄 [Multiple Tracks Editing](/features/tag-editor/#multiple)
+- [YouTube](/features/youtube/): 🔄 [Streaming](/features/youtube/#streaming), [Downloaded Videos](/features/youtube/#downloaded-videos)
+- [Sync](/features/sync/): 🔄 [How It Works](/features/sync/#how), [Smart Matching](/features/sync/#matching)
+- [Home Screen Widget](/features/home-widget/): 🆕 [iOS](/features/home-widget/#ios)
+- [System Integration](/features/system-integration/): 🆕 [Control Center Button](/features/system-integration/#control-center) · 🔄 [Open With & Share](/features/system-integration/#open-with), [Media Controls](/features/system-integration/#media-controls), [Status Bar Lyrics](/features/system-integration/#status-bar-lyrics), [Home Screen Widget](/features/system-integration/#home-widget), [Picture-in-Picture](/features/system-integration/#pip)
+
+**📄 Pages**
+
+- [Library](/pages/library/): 🔄 [Folders](/pages/library/#folders), [Search](/pages/library/#search)
+- [YouTube Pages](/pages/youtube/): 🔄 [Channels](/pages/youtube/#channels)
+
+**⚙️ Settings**
+
+- [Settings](/settings/): 🔄 [Settings Icon](/settings/#settings-icon)
+- [Theme](/settings/1-theme-settings/): 🔄 [Default Color](/settings/1-theme-settings/#default-color)
+- [Playback](/settings/3-playback-settings/): 🔄 [Notification Buttons](/settings/3-playback-settings/#notification-buttons)
+- [Extras](/settings/6-extras-settings/): 🔄 [Integrations](/settings/6-extras-settings/#integrations), [Enable Picture-in-Picture](/settings/6-extras-settings/#pip), [Filter Tracks in Search Lists By](/settings/6-extras-settings/#filter-tracks-by), [Lyrics](/settings/6-extras-settings/#lyrics)
+
+**📌 More**
+
+- [Installation](/installation/): 🔄 [iOS & macOS](/installation/#ios-macos)
+- [Tips & Tricks](/tips/): 🔄 [Library Pages](/tips/#library-pages), [Info & Sorting](/tips/#info-sorting), [About Page](/tips/#about-tips)
+- [FAQ](/faq/): 🔄 [Sync devices can't find or connect](/faq/#sync-troubleshooting)
+- [Membership](/membership/): 🔄 [Getting One](/membership/#get)
+- [Permissions](/permissions/): 🆕 [iOS & macOS](/permissions/#ios-macos)
+- [Storage Paths](/storage-paths/): 🔄 [Namida Folder](/storage-paths/#namida-folder)
+<!-- /generated -->
+
+---
+
 ## 🏷️ v8.4.0 {#v8-4-0}
 
 <!-- generated -->

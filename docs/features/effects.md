@@ -19,7 +19,7 @@ Effects and visualizers might affect performance on low end devices. [Performanc
 ### Background & Overlay Effects {#background-overlay}
 
 - **Background effect**, drawn behind the pages, softly.
-- **Overlay effect**, drawn on top of the whole app (the player included). It doesn't block any touches.
+- **Overlay effect**, drawn on top of the whole app (the player included, but not a fullscreen video). It doesn't block any touches.
 
 Both pick from the same list:
 

@@ -46,7 +46,7 @@ Other folders go to [Namida Folder](/storage-paths/#namida-folder)`/Compressed` 
 Maximum size for server, image, audio and video caches. Oldest and least important items get cleaned first.
 Each limit is set from the wheel on its [Clear](#clear-caches) tile. `🆕 v8.2.0`
 
-| Cache | Android | Windows & Linux |
+| Cache | Android & iOS | Windows, Linux & macOS |
 | --- | --- | --- |
 | Server `🆕 v7.4.0` | 4 GB | 12 GB |
 | Image | 256 MB | 2 GB |
@@ -66,7 +66,7 @@ Clear server, image, audio or video cache. Each tile shows the current size, and
 | --- | --- |
 | Server `🆕 v7.4.0` | The tracks you cached yourself (not selected by default), the other streamed files, and unfinished downloads. |
 | Image | Each image folder: track artworks, video thumbnails, artist and album images, YouTube thumbnails and channel images. |
-| Audio | Everything, or press Choose to pick single items, which can be sorted by size / oldest watch / total listens. |
+| Audio | Everything, or press Choose to pick single items, which can be sorted (auto / size / oldest watch / total listens). Auto lists what's safest to delete first (based on priority, recent listens and size), and VIP items are always last. |
 | Video | Same as audio. |
 
 When choosing audio or video items, you can also select everything of a priority at once `🆕 v7.4.0`, unfinished downloads, or files already in your local library.

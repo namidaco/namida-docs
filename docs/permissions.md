@@ -36,6 +36,14 @@ The permissions Namida uses and why. Nothing is used for tracking, there are no 
 - `WRITE_SETTINGS`: to set audio as ringtone, etc.
 - USB device access: only with [USB direct access](/features/playback/#usb-direct), to use your USB DAC. Asked again after unplugging? See [why](/faq/#usb-dac-permission). `🆕 v7.8.0`
 
+### iOS & macOS {#ios-macos}
+
+`🆕 v8.5.0`
+
+- Notifications: asked the first time Namida needs to show one.
+- Local Network: to find and sync with your other devices, and to join listening parties on your network.
+- Photo Library, add only (iOS): to save images and videos you share to your photos.
+
 ::: callout info
 On Windows & Linux, none of these apply, the app works like any normal desktop app.
 :::

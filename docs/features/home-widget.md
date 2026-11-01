@@ -5,9 +5,9 @@ description: "A player widget on your home screen"
 
 # Home Screen Widget
 
-`💻 Android only`
+`💻 Android+iOS only`
 
-A resizable player widget for your home screen, with its own settings screen.
+A resizable player widget for your home screen, with its own settings screen. iOS has a simpler one, see [iOS](#ios).
 
 ### Adding It {#adding}
 
@@ -48,6 +48,13 @@ Set what tapping the widget does, and what tapping the artwork does (Open app / 
 ::: callout info
 Press Reset at the bottom to go back to the default look.
 :::
+
+### iOS {#ios}
+
+`🆕 v8.5.0` `💻 iOS 17+ only`
+
+A Now Playing widget in small and medium sizes, with the title, previous / play-pause / next, and in medium the artwork and a favourite button. There is nothing to configure.
+The buttons work without opening Namida while it runs, and a press while it's closed opens it first.
 
 ---
 
