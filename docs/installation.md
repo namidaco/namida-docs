@@ -162,10 +162,10 @@ Features that only work on some platforms are labeled like `💻 Android only`. 
 
 | File | Pick it if |
 | --- | --- |
-| `Namida-ios-<version>.ipa` | iPhone or iPad with iOS 15+. It's unsigned, so it's installed by sideloading. |
-| `Namida-macos-universal-<version>.dmg` | Any Mac (Apple Silicon and Intel). |
-| `Namida-macos-arm64-<version>.dmg` | Apple Silicon Macs only, smaller than universal. |
-| `Namida-macos-x86_64-<version>.dmg` | Intel Macs only, smaller than universal. |
+| `Namida-v<version>-ios.ipa` | iPhone or iPad with iOS 15+. It's unsigned, so it's installed by sideloading. |
+| `Namida-v<version>-macos-universal.dmg` | Any Mac (Apple Silicon and Intel). |
+| `Namida-v<version>-macos-arm64.dmg` | Apple Silicon Macs only, smaller than universal. |
+| `Namida-v<version>-macos-x86_64.dmg` | Intel Macs only, smaller than universal. |
 
 Each macOS file also comes as a `.zip` with the same app inside.
 
