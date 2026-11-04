@@ -14,10 +14,10 @@
           "title": "Mixes", "level": "medium", "href": "/pages/library/#home", "text": "Mixes from how you listen, from old favorites to tracks you never played, and lots in between.",
           "tiles": [
             { "shot": "home_mix_dialog", "title": "Recommended", "text": "What you're into lately, and what you played around this time last year." },
-            { "shot": "home_mix_supremacy", "pendingShot": true, "href": "/pages/library/#home", "title": "Supremacy", "text": "The playing track, and the tracks you usually play with it." },
-            { "shot": "home_mix_underrated", "pendingShot": true, "href": "/pages/library/#home", "title": "Underrated", "text": "Tracks you played only a few times and haven't heard in a while." },
-            { "shot": "home_mix_lost_partners", "pendingShot": true, "href": "/pages/library/#home", "title": "Lost Partners", "text": "Tracks you used to play a lot but haven't heard in a long time." },
-            { "shot": "home_mix_discover", "pendingShot": true, "href": "/pages/library/#home", "title": "Discover", "text": "Tracks you never played, or barely played." }
+            { "shot": "home_mix_supremacy", "href": "/pages/library/#home", "title": "Supremacy", "text": "The playing track, and the tracks you usually play with it." },
+            { "shot": "home_mix_underrated", "href": "/pages/library/#home", "title": "Underrated", "text": "Tracks you played only a few times and haven't heard in a while." },
+            { "shot": "home_mix_lost_partners", "href": "/pages/library/#home", "title": "Lost Partners", "text": "Tracks you used to play a lot but haven't heard in a long time." },
+            { "shot": "home_mix_discover", "href": "/pages/library/#home", "title": "Discover", "text": "Tracks you never played, or barely played." }
           ]
         },
         {
@@ -101,8 +101,8 @@
         {
           "shot": "player_queue", "title": "Queue", "text": "All your queues saved, pick up any of them where you left off.",
           "branch": [
-            { "shot": "track_menu_play_after", "pendingShot": true, "href": "/features/playback/#queue", "title": "Play After", "text": "Queue tracks up in the order you pick them." },
-            { "shot": "track_swipe", "pendingShot": true, "href": "/settings/4-customization-settings/#track-tile", "title": "Swipe Actions", "text": "Quick actions with a swipe, and you pick which ones." },
+            { "shot": "track_menu_play_after", "href": "/features/playback/#queue", "title": "Play After", "text": "Queue tracks up in the order you pick them." },
+            { "shot": "track_swipe", "href": "/settings/4-customization-settings/#track-tile", "title": "Swipe Actions", "text": "Quick actions with a swipe, and you pick which ones." },
             { "shot": "player_queue_shuffle_menu", "href": "/features/playback/#queue", "title": "Shuffle Modes", "text": "Shuffle and get the original order back, or shuffle just once." },
             { "shot": "player_queue_configure", "title": "Queue Options", "text": "Decide what happens when the queue ends." }
           ]
@@ -110,10 +110,10 @@
         {
           "shot": "player_lyrics", "title": "Lyrics", "text": "Lyrics that light up line by line or word by word.",
           "branch": [
-            { "shot": "player_lyrics_break", "pendingShot": true, "level": "simple", "href": "/features/playback/#lyrics", "title": "Instrumental Breaks", "text": "Lyrics step aside during instrumental breaks, so the artwork or video shows." },
+            { "shot": "player_lyrics_break", "level": "simple", "href": "/features/playback/#lyrics", "title": "Instrumental Breaks", "text": "Lyrics step aside during instrumental breaks, so the artwork or video shows." },
             { "shot": "lyrics_fullscreen", "title": "Fullscreen Lyrics", "text": "Sing along with lyrics on the whole screen." },
             { "shot": "lyrics_picker", "title": "Lyrics Picker", "text": "Pick the right lyrics and fix their timing." },
-            { "shot": "lyrics_romanization", "pendingShot": true, "href": "/features/playback/#lyrics", "title": "Romanization", "text": "Sing along in languages you can't read." },
+            { "shot": "lyrics_romanization", "href": "/features/playback/#lyrics", "title": "Romanization", "text": "Sing along in languages you can't read." },
             { "shot": "settings_extras_lyrics_effects", "href": "/features/playback/#lyrics", "title": "Lyrics Effects", "text": "Lyrics animations as calm or lively as you like." }
           ]
         },
@@ -130,10 +130,10 @@
           "shot": "settings_playback_crossfade", "level": "medium", "href": "/features/playback/#effects", "title": "Smooth Playback", "text": "Crossfade, gapless playback and soft fades on play and pause.",
           "pins": {
             "android": [
-              { "x": 0.87, "y": 0.088, "title": "Skip Silence", "text": "Skip the silent parts anywhere in a track.", "href": "/settings/3-playback-settings/#skip-silence" },
-              { "x": 0.87, "y": 0.143, "title": "Gapless Playback", "text": "No delay between tracks, the next one loads early.", "href": "/settings/3-playback-settings/#gapless-playback" },
-              { "x": 0.87, "y": 0.197, "title": "Crossfade", "text": "Blend in where the track really fades out, smart styles even match the beats.", "href": "/features/playback/#beat-matching" },
-              { "x": 0.87, "y": 0.252, "title": "Play & Pause Fade", "text": "The sound fades in and out when you play or pause.", "href": "/settings/3-playback-settings/#fade-play-pause" }
+              { "x": 0.87, "y": 0.133, "title": "Skip Silence", "text": "Skip the silent parts anywhere in a track.", "href": "/settings/3-playback-settings/#skip-silence" },
+              { "x": 0.87, "y": 0.188, "title": "Gapless Playback", "text": "No delay between tracks, the next one loads early.", "href": "/settings/3-playback-settings/#gapless-playback" },
+              { "x": 0.87, "y": 0.243, "title": "Crossfade", "text": "Blend in where the track really fades out, smart styles even match the beats.", "href": "/features/playback/#beat-matching" },
+              { "x": 0.87, "y": 0.297, "title": "Play & Pause Fade", "text": "The sound fades in and out when you play or pause.", "href": "/settings/3-playback-settings/#fade-play-pause" }
             ],
             "windows": [
               { "x": 0.879, "y": 0.172, "title": "Gapless Playback", "text": "No delay between tracks, the next one loads early.", "href": "/settings/3-playback-settings/#gapless-playback" },
@@ -148,17 +148,17 @@
             { "shot": "visualizer_bars", "title": "Visualizers", "text": "Bars, waves and other styles that move with the music." },
             { "shot": "visualizer_particles", "title": "Particles", "text": "Particles bursting out with the beat." },
             { "shot": "visualizer_beat_rings", "title": "Beat Rings", "text": "Rings grow out of the artwork on each beat." },
-            { "shot": "visualizer_mirrored_bars", "pendingShot": true, "level": "advanced", "href": "/features/effects/#visualizers", "title": "Mirrored Bars", "text": "Bars mirrored around the waveform seekbar." },
-            { "shot": "visualizer_outline", "pendingShot": true, "level": "advanced", "href": "/features/effects/#visualizers", "title": "Outline", "text": "Bars running along the artwork's edges." },
+            { "shot": "visualizer_mirrored_bars", "level": "advanced", "href": "/features/effects/#visualizers", "title": "Mirrored Bars", "text": "Bars mirrored around the waveform seekbar." },
+            { "shot": "visualizer_outline", "level": "advanced", "href": "/features/effects/#visualizers", "title": "Outline", "text": "Bars running along the artwork's edges." },
             { "shot": "readme_player_dark", "href": "/settings/4-customization-settings/#miniplayer-customization", "title": "Animated Artwork", "text": "The artwork pulses with the music." },
-            { "shot": "miniplayer_party_mode", "pendingShot": true, "href": "/settings/4-customization-settings/#miniplayer-customization", "title": "Party Mode", "text": "A soft glow around the edges, in the artwork's colors." }
+            { "shot": "miniplayer_party_mode", "href": "/settings/4-customization-settings/#miniplayer-customization", "title": "Party Mode", "text": "A soft glow around the edges, in the artwork's colors." }
           ]
         },
         {
           "shot": "player", "level": "medium", "href": "/features/playback/#video", "title": "Music Videos", "text": "Namida finds the video of a track (on your device or on YouTube) and plays it with the music.",
           "branch": [
             { "shot": "settings_playback_video_source", "title": "Video Source", "text": "Pick local videos or YouTube, or let Namida try local ones first." },
-            { "shot": "player_loop_animation", "pendingShot": true, "href": "/guides/namider/#loop-animation", "title": "Loop Animations", "text": "Turn a short clip into an animated artwork." }
+            { "shot": "player_loop_animation", "href": "/guides/namider/#loop-animation", "title": "Loop Animations", "text": "Turn a short clip into an animated artwork." }
           ]
         }
       ]
@@ -191,13 +191,13 @@
           },
           "branch": [
             { "shot": "video_fullscreen", "href": "/features/youtube/#fullscreen", "title": "Fullscreen", "text": "Swipe for brightness and volume, lock the controls, or add a soft glow." },
-            { "shot": "yt_player_dimmed", "pendingShot": true, "href": "/features/youtube/#miniplayer", "title": "Auto Dim", "text": "The player dims itself after a few idle seconds." }
+            { "shot": "yt_player_dimmed", "href": "/features/youtube/#miniplayer", "title": "Auto Dim", "text": "The player dims itself after a few idle seconds." }
           ]
         },
         {
           "shot": "yt_download_sheet", "title": "Downloads", "text": "Download anything, properly tagged.",
           "branch": [
-            { "shot": "yt_download_tags", "pendingShot": true, "href": "/features/youtube/#filename-formats", "title": "Tags & Filenames", "text": "Tags filled from the video title, and filenames built your way." },
+            { "shot": "yt_download_tags", "href": "/features/youtube/#filename-formats", "title": "Tags & Filenames", "text": "Tags filled from the video title, and filenames built your way." },
             { "shot": "yt_parallel_downloads", "title": "Parallel Downloads", "text": "Many downloads at once, and each one goes faster." },
             { "shot": "yt_playlist_download_configure", "title": "Playlist Downloads", "text": "Download a whole playlist at once, tagged and numbered." }
           ]
@@ -210,7 +210,7 @@
           ]
         },
         { "shot": "yt_playlists", "level": "medium", "title": "YouTube Playlists", "text": "Your YouTube playlists, safe from videos randomly going missing." },
-        { "shot": "yt_search_offline", "pendingShot": true, "level": "medium", "href": "/pages/youtube/#search", "title": "YouTube Search", "text": "Search everything you watched, even offline." }
+        { "shot": "yt_search_offline", "level": "medium", "href": "/pages/youtube/#search", "title": "YouTube Search", "text": "Search everything you watched, even offline." }
       ]
     },
     {
@@ -281,7 +281,7 @@
         {
           "title": "Around YouTube", "level": "medium", "text": "Small things that make YouTube nicer to use.",
           "tiles": [
-            { "shot": "yt_cache_priority", "pendingShot": true, "href": "/features/youtube/#caching", "title": "Cache Priority", "text": "Keep the videos you care about, even after they're gone from YouTube." },
+            { "shot": "yt_cache_priority", "href": "/features/youtube/#caching", "title": "Cache Priority", "text": "Keep the videos you care about, even after they're gone from YouTube." },
             { "shot": "yt_channel_groups", "title": "Channel Groups", "text": "Sort your channels into groups, then see only one group's videos." },
             { "shot": "yt_stats", "title": "YouTube Stats", "text": "Charts of what you watch, like the ones for your music." },
             { "shot": "yt_add_to_playlist", "title": "Add to Playlist", "text": "Save videos to Namida playlists, or to your account." },
@@ -295,18 +295,18 @@
             { "shot": "effect_rain", "title": "Rain", "text": "Soft falling streaks behind the pages." },
             { "shot": "effect_aurora", "title": "Aurora", "text": "Aurora curtains colored by the current artwork." },
             { "shot": "effect_overlay_fireflies", "title": "Fireflies", "text": "Flickering glows over the whole app." },
-            { "shot": "effect_fireworks", "pendingShot": true, "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Fireworks", "text": "Fireworks bursting on the beat." },
-            { "shot": "effect_deep_ocean", "pendingShot": true, "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Deep Ocean", "text": "Glowing plankton, fish and jellyfish drifting by." },
-            { "shot": "effect_starfield", "pendingShot": true, "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Starfield", "text": "Stars, sparkles and shooting stars." },
-            { "shot": "effect_galaxy", "pendingShot": true, "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Galaxy", "text": "A galaxy slowly spinning behind the app." }
+            { "shot": "effect_fireworks", "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Fireworks", "text": "Fireworks bursting on the beat." },
+            { "shot": "effect_deep_ocean", "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Deep Ocean", "text": "Glowing plankton, fish and jellyfish drifting by." },
+            { "shot": "effect_starfield", "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Starfield", "text": "Stars, sparkles and shooting stars." },
+            { "shot": "effect_galaxy", "level": "advanced", "href": "/features/effects/#background-overlay", "title": "Galaxy", "text": "A galaxy slowly spinning behind the app." }
           ]
         },
         {
           "title": "Look & Feel", "level": "advanced", "href": "/settings/4-customization-settings/", "text": "Make the app look and feel the way you want.",
           "tiles": [
             { "shot": "settings_advanced_performance", "title": "Performance Mode", "text": "One switch between the best looks and the smoothest app." },
-            { "shot": "settings_app_icon", "pendingShot": true, "href": "/settings/4-customization-settings/#app-icon", "title": "App Icons", "text": "Pick the app icon you like." },
-            { "shot": "jellys_invasion", "pendingShot": true, "href": "/settings/6-extras-settings/#flags", "title": "Jellyfish", "text": "Let a few jellyfish drift around the app." }
+            { "shot": "settings_app_icon", "href": "/settings/4-customization-settings/#app-icon", "title": "App Icons", "text": "Pick the app icon you like." },
+            { "shot": "jellys_invasion", "href": "/settings/6-extras-settings/#flags", "title": "Jellyfish", "text": "Let a few jellyfish drift around the app." }
           ]
         }
       ]
