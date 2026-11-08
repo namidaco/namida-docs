@@ -99,7 +99,7 @@ Saves one artwork per album instead of one per track (which uses less storage).
 ### Unique Artwork Hash {#unique-artwork-hash}
 
 Identifies artworks by the track's full path instead of just the filename. Enable this if different tracks show the same wrong artwork.
-It's on by default for new installs, and can't be on together with [Group Artworks by Album](#group-artworks-by-album).
+It can't be on together with [Group Artworks by Album](#group-artworks-by-album).
 
 ### List of Folders {#folders-to-scan}
 
