@@ -21,6 +21,8 @@ We are not responsible for downloads from other sources.
 
 Namida needs Android 8.0 or newer (Android 7 can stay on v8.4.0).
 
+[`GitHub`](https://github.com/namidaco/namida/releases/latest) [`Obtainium`](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/namidaco/namida/) [`GitHub Beta`](https://github.com/namidaco/namida-snapshots/releases/latest) [`Obtainium Beta`](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/namidaco/namida-snapshots/)
+
 #### Which file {#android-files}
 
 Every release has an APK per architecture, beta adds a clone variant on top.
@@ -58,6 +60,8 @@ Namida is not on Google Play and will not be, see [Not Planned](/not-planned/#go
 
 ## Windows {#windows}
 
+[`GitHub`](https://github.com/namidaco/namida/releases/latest) [`winget`](https://github.com/microsoft/winget-pkgs/tree/master/manifests/n/namidaco/Namida) [`GitHub Beta`](https://github.com/namidaco/namida-snapshots/releases/latest)
+
 #### Which file {#windows-files}
 
 | File | Pick it if |
@@ -78,6 +82,8 @@ winget install namidaco.Namida
 ## Linux {#linux}
 
 Linux builds are beta only for now, a stable one is coming.
+
+[`GitHub Beta`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AUR Beta`](https://aur.archlinux.org/packages/namida-bin)
 
 #### Dependencies {#linux-dependencies}
 
@@ -155,6 +161,8 @@ Nix (Home Manager) is available at [namida-nix](https://codeberg.org/iWisp360/na
 ## iOS & macOS {#ios-macos}
 
 iOS and macOS are new and only have beta builds for now, in the [beta releases](https://github.com/namidaco/namida-snapshots/releases). `🆕 v8.5.0`
+
+[`GitHub Beta`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AltStore Beta`](https://namidaco.github.io/namida-snapshots/altstore-source.json)
 
 Features that only work on some platforms are labeled like `💻 Android only`. Features that work everywhere except iOS or macOS have no label, so they are listed [below](#ios-differences) instead.
 

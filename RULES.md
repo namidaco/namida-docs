@@ -74,7 +74,7 @@ Content...
 
 ## Chips & Links
 
-Three kinds of inline code chips are used:
+Four kinds of inline code chips are used:
 
 - **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `availability:` (`NamidaFeaturesAvailablity`) of the setting's entry in `lib/ui/widgets/settings/`. A feature missing only on iOS or macOS gets no chip, list it in the iOS & macOS section of `docs/installation.md` instead.
   - Platforms are written exactly as Android, iOS, Windows, Linux and macOS, joined with `+`. A version can follow a name (`Android 12+`, `Android <= 12`).
@@ -82,6 +82,7 @@ Three kinds of inline code chips are used:
   - A flag gets its own chip right after its name: `` `MEDIA_WAVE_HAPTIC` `💻 Android+iOS only` ``.
 - **Upgrade label**: a line that needs a newer system version starts with `` `⬆️ iOS 16.2+` `` (one platform and its version) instead of saying "On iOS 16.2+" in the sentence. It covers its whole line, so in lists move that part to a sub-bullet. A version mentioned in passing (like a limitation on older versions) stays plain text.
 - **Related link chip**: sections link their related setting/feature/page/guide with a clickable chip placed at the END of the line or the end of the section, never right under the header: ``[`⚙️ Configure Downloads ↗`](/settings/5-youtube-settings/#downloads)``. More than one chip is fine when applicable. An end of line chip is only for a reference that directly relates to that line (a feature, then the setting for it). A link to something the line isn't about gets its own line saying what it's for: ``See [`📄 Screens Map ↗`](/screens/) for all screens and where they open from.`` Keep a "Related Settings" list at the bottom of feature pages too.
+- **Brand link chip**: a link chip named after a store renders as a "get it on" badge like the namida README (``[`AUR`](https://aur.archlinux.org/packages/namida-bin)``, a ` Beta` suffix adds its beta pill), one named after a social app as a card with the text after `: ` as its subtitle (``[`Telegram: Chat group`](https://t.me/+FmdfsgKoGmM1ZGFk)``). The known names are `BRAND_BY_NAME` in `plugins/chips`, a new one also needs its icon and color in that plugin's `client.css`.
 
 Link icons, always include the type in the name:
 
@@ -118,10 +119,11 @@ Types used: `info`, `tip`, `warning`.
 - `docs/settings/`: one file per in-app settings section, numbered by the in-app order (1-theme ... 8-advanced). Every setting gets its own H3 with a one to three line explanation. Order inside the file follows the in-app order.
 - `docs/features/`: one file per feature, sections describe what the user can do. Feature pages showcase, so a list of items is a few grouped bullets with the last one ending in `etc`. Explaining each item belongs in `docs/pages/` or `docs/settings/` (the home mixes are explained in `docs/pages/library.md`).
 - `docs/pages/`: a tour of in-app pages, grouped (library / youtube / other), small description per page plus chips.
-- `docs/guides/`: step by step guides, grouped by level (beginner / medium / namider).
+- `docs/guides/`: step by step guides, grouped by level (beginner / medium / namider). Their `collapsible: guides` frontmatter shows every H3 section as a collapsible card, like the FAQ.
 - `docs/tips.md`: not so obvious features, grouped by topic.
 - `docs/permissions.md`: the permissions the app uses and why.
-- `docs/faq.md`: one H3 per question. Its `faq: true` frontmatter shows every H3 section as a collapsible card (`plugins/faq`).
+- `docs/faq.md`: one H3 per question. Its `collapsible: questions` frontmatter shows every H3 section as a collapsible card (`plugins/faq`), the value names the count in the bar above them.
+- `cards: true` in a page's frontmatter shows every H3 section as a plain card (`plugins/faq`), used on the home page.
 - `docs/not-planned.md`: features that will not be added and why. The FAQ keeps short answers and links here.
 - `docs/whats-new.md`: generated from the `🆕` markers by `npm run whats-new` (also runs on `npm run build`). Never edit inside its `<!-- generated -->` blocks, a short note written under a version heading is kept.
 - `docs/graph.md`: the interactive docs graph, built by `plugins/docs-graph` from the links, section ids and `🆕` markers of every page. Add `graph: false` to a page's frontmatter to leave it out of the graph and of Page Connections.

@@ -1,6 +1,8 @@
 ---
 title: "Medium Guides"
 description: "Linking videos, syncing and smart playlists"
+collapsible: guides
+toc: false
 ---
 
 # Medium Guides

@@ -41,7 +41,12 @@
   margin-top: 10px;
 }
 
-.faq-item {
+.summer-content > .section-card {
+  margin: 16px 0;
+}
+
+.faq-item,
+.section-card {
   --faq-accent: color-mix(in srgb, var(--summer-accent) 65%, var(--summer-fg-muted));
   border: 1px solid var(--summer-border);
   border-radius: var(--summer-radius-lg);
@@ -68,6 +73,10 @@
   border-radius: inherit;
 }
 
+.section-card__heading {
+  padding: 14px 16px;
+}
+
 .faq-item__question::-webkit-details-marker {
   display: none;
 }
@@ -77,7 +86,8 @@
   outline-offset: 2px;
 }
 
-.summer-content .faq-item__question h3 {
+.summer-content .faq-item__question h3,
+.summer-content .section-card__heading h3 {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -90,7 +100,8 @@
 }
 
 /* -- after the question, instead of hanging left outside the card */
-.summer-content .faq-item__question .heading-anchor {
+.summer-content .faq-item__question .heading-anchor,
+.summer-content .section-card__heading .heading-anchor {
   position: static;
   order: 1;
   flex-shrink: 0;
@@ -147,27 +158,40 @@
   overflow: hidden;
 }
 
-.faq-item__body {
+.faq-item__body,
+.section-card__body {
   margin: 0 16px;
   padding: 12px 0 14px;
   border-top: 1px dashed var(--summer-border);
 }
 
-.faq-item__body > :first-child {
+.faq-item__body > :first-child,
+.section-card__body > :first-child {
   margin-top: 0;
 }
 
-.faq-item__body > :last-child {
+.faq-item__body > :last-child,
+.section-card__body > :last-child {
   margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
-  .faq-item__question {
+  .faq-item__question,
+  .section-card__heading {
     padding: 12px 14px;
   }
 
   .faq-item__body {
     margin: 0 14px;
+  }
+
+  .section-card__heading {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .section-card__body {
+    margin: 0 10px;
   }
 }
 

@@ -1,6 +1,8 @@
 ---
 title: "Beginner Guides"
 description: "Quick fixes and everyday tasks"
+collapsible: guides
+toc: false
 ---
 
 # Beginner Guides

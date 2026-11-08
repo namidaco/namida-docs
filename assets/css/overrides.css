@@ -74,3 +74,61 @@
   font-size: 0.8rem;
   color: var(--summer-fg-muted);
 }
+
+/* The grid gap already spaces the cards. */
+.summer-content .grids>.docmd-container.card {
+  position: relative;
+  margin: 0;
+}
+
+/* Whole card opens its title link. */
+.grids .docmd-container.card .card-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes grid-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+}
+
+.summer-content .grids>.docmd-container.card {
+  animation: grid-card-in 1600ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1), border-color 900ms ease, box-shadow 900ms ease;
+}
+
+.summer-content .grids>.docmd-container.card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--summer-accent) 20%, var(--summer-border));
+  box-shadow: var(--summer-shadow-sm);
+}
+
+.summer-content .grids>.docmd-container.card:nth-child(2) {
+  animation-delay: 50ms;
+}
+
+.summer-content .grids>.docmd-container.card:nth-child(3) {
+  animation-delay: 100ms;
+}
+
+.summer-content .grids>.docmd-container.card:nth-child(4) {
+  animation-delay: 150ms;
+}
+
+.summer-content .grids>.docmd-container.card:nth-child(5) {
+  animation-delay: 200ms;
+}
+
+.summer-content .grids>.docmd-container.card:nth-child(6) {
+  animation-delay: 250ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .summer-content .grids>.docmd-container.card {
+    animation: none;
+    transition: none;
+  }
+}

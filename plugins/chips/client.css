@@ -175,10 +175,215 @@
   font-weight: 500;
 }
 
+/* -- brand colors from the namida README cards, softened like gen_readme_cards.py does */
+.brand--github {
+  --brand: #454a50;
+  --brand-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
+}
+
+.brand--obtainium {
+  --brand: #7956b4;
+  --brand-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='70.28 98 58 58'%3E%3Cpath d='m 109.8808,153.22596 c -0.73146,-0.38777 -5.00657,-2.75679 -25.032416,-13.87149 -5.57273,-3.09297 -10.93823,-6.06723 -11.92332,-6.60948 -2.23728,-1.23152 -2.58105,-1.53456 -2.58105,-2.27528 0,-0.3879 0.89293,-2.87231 2.98561,-8.30689 1.64209,-4.2644 3.09426,-8.0014 3.22705,-8.30444 0.3024,-0.69008 0.78972,-1.27621 1.26573,-1.52236 0.44558,-0.23042 11.58052,-4.29685 12.14814,-4.43644 0.61355,-0.1509 1.1428,0.13977 1.45487,0.79901 0.14976,0.31638 0.77213,1.94934 1.38303,3.6288 0.6109,1.67945 1.52036,4.16275 2.02104,5.51844 1.14709,3.10604 1.18992,3.54589 0.3912,4.01771 -0.2117,0.12505 -1.58874,0.66539 -3.06009,1.20075 -1.47136,0.53536 -2.87533,1.08982 -3.11993,1.23213 -0.56422,0.32826 -0.64913,0.83523 -0.20815,1.24273 0.17523,0.16193 3.00434,1.77571 6.28691,3.58618 9.174936,5.06035 8.665596,4.83136 9.277626,4.17097 0.29987,-0.32356 5.78141,-14.266 6.09596,-15.50521 0.1344,-0.5295 0.11969,-0.60308 -0.16695,-0.83519 -0.39165,-0.31714 -0.335,-0.33071 -3.93797,0.9431 -3.56937,1.26192 -3.90926,1.28864 -4.38744,0.34488 -0.25108,-0.49556 -4.095796,-11.05481 -4.334456,-11.90432 -0.15438,-0.5495 0.0344,-1.0717 0.49701,-1.37482 0.19228,-0.12598 2.990116,-1.19935 6.217406,-2.38526 4.78924,-1.75986 6.0081,-2.15842 6.63117,-2.16837 0.8037,-0.0128 0.90917,0.0424 15.64514,8.19599 1.02104,0.56495 1.56579,1.15961 1.56579,1.70925 0,0.21814 -3.6538,9.91011 -8.11957,21.53771 -6.2982,16.39877 -8.19916,21.21114 -8.4744,21.45338 -0.46789,0.41179 -0.8512,0.39392 -1.74794,-0.0815 z'/%3E%3C/svg%3E");
+}
+
+.brand--winget {
+  --brand: #2074b4;
+  --brand-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z'/%3E%3Cpath d='M12 22V12'/%3E%3Cpolyline points='3.29 7 12 12 20.71 7'/%3E%3Cpath d='m7.5 4.27 9 5.15'/%3E%3C/svg%3E");
+}
+
+.brand--aur {
+  --brand: #338ab5;
+  --brand-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.39.605C10.376 3.092 9.764 4.72 8.635 7.132c.693.734 1.543 1.589 2.923 2.554-1.484-.61-2.496-1.224-3.252-1.86C6.86 10.842 4.596 15.138 0 23.395c3.612-2.085 6.412-3.37 9.021-3.862a6.61 6.61 0 01-.171-1.547l.003-.115c.058-2.315 1.261-4.095 2.687-3.973 1.426.12 2.534 2.096 2.478 4.409a6.52 6.52 0 01-.146 1.243c2.58.505 5.352 1.787 8.914 3.844-.702-1.293-1.33-2.459-1.929-3.57-.943-.73-1.926-1.682-3.933-2.713 1.38.359 2.367.772 3.137 1.234-6.09-11.334-6.582-12.84-8.67-17.74zM22.898 21.36v-.623h-.234v-.084h.562v.084h-.234v.623h.331v-.707h.142l.167.5.034.107a2.26 2.26 0 01.038-.114l.17-.493H24v.707h-.091v-.593l-.206.593h-.084l-.205-.602v.602h-.091'/%3E%3C/svg%3E");
+}
+
+.brand--altstore {
+  --brand: #29928b;
+  --brand-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='14' height='20' x='5' y='2' rx='2' ry='2'/%3E%3Cpath d='M12 18h.01'/%3E%3C/svg%3E");
+}
+
+.brand--telegram {
+  --brand: #439bc8;
+  --brand-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z'/%3E%3C/svg%3E");
+}
+
+.brand--discord {
+  --brand: #6f78db;
+  --brand-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z'/%3E%3C/svg%3E");
+}
+
+.brand-tile {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--brand-tile-size);
+  height: var(--brand-tile-size);
+  border-radius: var(--brand-tile-radius);
+  background: var(--brand);
+}
+
+.brand-tile__icon {
+  width: 60%;
+  height: 60%;
+  background: #fff;
+  -webkit-mask: var(--brand-icon) center / contain no-repeat;
+  mask: var(--brand-icon) center / contain no-repeat;
+}
+
+.summer-content .store-badge {
+  --brand-tile-size: 30px;
+  --brand-tile-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 16px 5px 5px;
+  border: 1.5px solid color-mix(in srgb, var(--brand) 45%, #000);
+  margin: 3px 6px 3px 0;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--brand) 14%, #000);
+  line-height: 1.15;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: border-color var(--summer-fast) var(--summer-ease);
+}
+
+.summer-content .store-badge:hover {
+  border-color: var(--brand);
+}
+
+.store-badge__text,
+.brand-card__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-badge__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #d4d4d4;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* -- room for the longest name and the beta pill, so badges line up */
+.store-badge__name {
+  min-width: 5.6em;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.store-badge__beta {
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: #f5a623;
+  color: #1c1a18;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.summer-content td > .store-badge {
+  display: flex;
+  width: fit-content;
+  margin: 0;
+}
+
+.summer-content td > .store-badge + .store-badge {
+  margin-top: 6px;
+}
+
+/* -- 3 columns of badges don't fit a phone, the platform goes on its own row above its badges */
+@media (max-width: 560px) {
+  .summer-content table:has(.store-badge) :is(thead, tbody) {
+    display: block;
+  }
+
+  .summer-content table:has(.store-badge) tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .summer-content table:has(.store-badge) :is(th, td) {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .summer-content table:has(.store-badge) th:first-child {
+    display: none;
+  }
+
+  .summer-content table:has(.store-badge) .store-badge {
+    --brand-tile-size: 26px;
+    gap: 8px;
+    padding-right: 12px;
+  }
+
+  .summer-content table:has(.store-badge) .store-badge__name {
+    font-size: 0.95rem;
+  }
+
+  .summer-content table:has(.store-badge) td:first-child {
+    grid-column: 1 / -1;
+    padding-bottom: 0;
+    border-bottom: none;
+    font-weight: 600;
+  }
+}
+
+.summer-content .brand-card {
+  --brand-tile-size: 32px;
+  --brand-tile-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 8px 4px 0;
+  padding: 6px 14px 6px 6px;
+  border: 1.5px solid color-mix(in srgb, var(--brand) 35%, var(--summer-bg));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--brand) 6%, var(--summer-bg));
+  line-height: 1.25;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: border-color var(--summer-fast) var(--summer-ease);
+}
+
+.summer-content .brand-card:hover {
+  border-color: var(--brand);
+}
+
+.brand-card__title {
+  color: var(--summer-fg);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.brand-card__subtitle {
+  color: var(--summer-fg-muted);
+  font-size: 0.8rem;
+}
+
+.brand-card__arrow {
+  width: 17px;
+  height: 17px;
+  margin-left: 14px;
+  background: var(--summer-fg-muted);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6'/%3E%3Cpath d='m21 3-9 9'/%3E%3Cpath d='M15 3h6v6'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6'/%3E%3Cpath d='m21 3-9 9'/%3E%3Cpath d='M15 3h6v6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .platforms,
   .platforms::after,
-  .summer-content .version-tag {
+  .summer-content .version-tag,
+  .summer-content .store-badge,
+  .summer-content .brand-card {
     transition: none;
   }
 }

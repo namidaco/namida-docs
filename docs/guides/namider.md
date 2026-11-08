@@ -1,6 +1,8 @@
 ---
 title: "Namider Guides"
 description: "For those who go all the way"
+collapsible: guides
+toc: false
 ---
 
 # Namider Guides

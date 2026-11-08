@@ -1,28 +1,45 @@
 ---
 title: "Welcome"
 description: "Namida documentation"
+cards: true
 ---
 
 # Welcome
 
 Namida is a beautiful and feature-rich music & video player with YouTube support, built in Flutter. Available on Android, Windows and Linux, with iOS and macOS in beta.
 
-New here? Take the [Tour](/tour/) for a quick look, follow the [Quickstart](#quickstart) below, or check [Features](/features/) to see what Namida can do.
-Looking for a specific option? Everything is explained in [Settings](/settings/).
-Stuck on something? Check the [FAQ](/faq/).
-Just updated? See [What's New](/whats-new/).
+::: grids
+::: card "[Tour](/tour/)" icon:route
+A quick look at Namida
+::: /card
+::: card "[What's New](/whats-new/)" icon:megaphone
+Changes of each version
+::: /card
+::: card "[Installation](/installation/)" icon:download
+Get Namida on every platform
+::: /card
+::: card "[FAQ](/faq/)" icon:message-circle-question-mark
+Common questions
+::: /card
+::: card "[Features](/features/)" icon:sparkles
+What Namida can do
+::: /card
+::: card "[Settings](/settings/)" icon:settings
+Every option explained
+::: /card
+::: /grids
 
 ::: callout tip
 Search these docs with Ctrl/⌘ + K, or ask the AI assistant using the button below.
-They are inside Namida too (even offline), look for the guide icon at the top of a page. `🆕 v8.2.0`
+These docs are inside Namida too (even offline), use the guide icon at the top of a page to open them. `🆕 v8.2.0`
 :::
 
 ### Quickstart {#quickstart}
 
 1. Install Namida. [`📒 Installation Guide ↗`](/installation/)
-2. On first launch, add the folders holding your music, Namida only scans the folders you choose. Moving from another device? Restore a backup or sync from it right there instead of starting fresh. [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
+2. On first launch, add the folders holding your music, Namida only scans the folders you choose. If you are moving from another device, restore a backup or sync from it on that screen. [`📒 Sync Guide ↗`](/guides/medium/#sync-devices)
 3. Press the arrow to finish, Namida scans the folders and builds your library. Pull down on the Tracks page to refresh whenever you add new music. [`⚙️ Configure Indexer ↗`](/settings/2-indexer-settings/)
-4. Tap a track to play it. The miniplayer appears at the bottom, swipe up to expand it, and long press any track for options. [`🎉 Playback feature ↗`](/features/playback/)
+4. Tap a track to play it. Swipe up on the miniplayer at the bottom to expand it, and long press any track for options. [`🎉 Playback feature ↗`](/features/playback/)
 5. For YouTube, open the YouTube tab, or use the Search to find videos. Sign in to get your playlists, subscriptions and more. [`🎉 YouTube feature ↗`](/features/youtube/)
 
 Then browse [Features](/features/) to see everything else, and [Tips & Tricks](/tips/) for what is not obvious.
@@ -59,21 +76,24 @@ Music is a powerful tool that can hijack your brain and take control, and a huma
 
 ### Get Namida {#get-namida}
 
-- [Stable releases](https://github.com/namidaco/namida/releases)
-- [Beta releases](https://github.com/namidaco/namida-snapshots/releases)
+| Platform | Stable | Beta |
+| --- | --- | --- |
+| [Android](/installation/#android) | [`GitHub`](https://github.com/namidaco/namida/releases/latest) [`Obtainium`](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/namidaco/namida/) | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) [`Obtainium`](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/namidaco/namida-snapshots/) |
+| [Windows](/installation/#windows) | [`GitHub`](https://github.com/namidaco/namida/releases/latest) [`winget`](https://github.com/microsoft/winget-pkgs/tree/master/manifests/n/namidaco/Namida) | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) |
+| [Linux](/installation/#linux) | Soon | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AUR`](https://aur.archlinux.org/packages/namida-bin) |
+| [macOS](/installation/#ios-macos) | Soon | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) |
+| [iOS](/installation/#ios-macos) | Soon | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AltStore`](https://namidaco.github.io/namida-snapshots/altstore-source.json) |
 
 Not sure which file to download? See [`📒 Installation Guide ↗`](/installation/) for every platform.
-
-### Community {#community}
-
-- [Telegram (Updates)](https://t.me/namida_official)
-- [Telegram (Chat)](https://t.me/+FmdfsgKoGmM1ZGFk)
-- [Discord](https://discord.gg/WeY7DTVChT)
 
 ::: callout warning
 Namida is only available through [namida.app](https://namida.app), GitHub & Telegram.
 We are not responsible for downloads from other sources.
 :::
+
+### Community {#community}
+
+[`Telegram: Updates channel`](https://t.me/namida_official) [`Telegram: Chat group`](https://t.me/+FmdfsgKoGmM1ZGFk) [`Discord: Community server`](https://discord.gg/WeY7DTVChT)
 
 ### AI Usage {#ai-usage}
 

@@ -1,7 +1,7 @@
 ---
 title: "FAQ"
 description: "Frequently Asked Questions"
-faq: true
+collapsible: questions
 toc: false
 ---
 

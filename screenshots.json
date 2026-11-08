@@ -229,7 +229,7 @@
       "link-yt-video": ["yt_link"],
       "play-specific-quickly": ["advanced_play"],
       "sync-devices": ["sync_manager"],
-      "update-directory-path": ["settings_advanced_update_path"]
+      "missing-paths": ["missing_tracks", "settings_advanced_update_path"]
     },
     "/tips/": {
       "selection": ["selection", "selection_expanded"],

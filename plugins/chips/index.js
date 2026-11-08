@@ -4,13 +4,15 @@
 //   limits next to their icon (`💻 iOS 17+ only`) and the wording on hover.
 // - upgrade (`⬆️ iOS 16.2+`): marks a line that needs a newer system version.
 // - version (`🆕 v8.5.0`): a `NEW` tag for the last releases and `SINCE` for older ones, linking to What's New.
+// - brand link (``[`AUR`](url)``, ``[`Telegram: Chat group`](url)``): a "get it on" store badge or a social card, like the
+//   namida README. the text after `: ` is the card's subtitle, a ` Beta` suffix adds the README's beta pill to a badge.
 import { outputPathToPathname } from '@docmd/api';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const plugin = {
   name: 'chips',
-  version: '1.2.0',
+  version: '1.3.0',
   capabilities: ['build', 'post-build', 'assets'],
 };
 
@@ -48,12 +50,25 @@ const CHIP_KINDS = [
   { start: '<code>⬆', regex: /<code>⬆️? ([^<]+?)<\/code>/g, replace: replaceUpgradeChip },
   { start: '<code>🆕 v', regex: /<code>🆕 (v\d+\.\d+\.\d+)<\/code>/g, replace: replaceVersionChip },
 ];
+const BRAND_LINK = /<a href="([^"]+)"><code>([^<:]+?)(?:: ([^<]+))?<\/code><\/a>/g;
+const BRAND_LINK_START = '"><code>';
+const BETA_SUFFIX = ' Beta';
+const BRAND_BY_NAME = new Map([
+  ['GitHub', { id: 'github', isStore: true }],
+  ['Obtainium', { id: 'obtainium', isStore: true }],
+  ['winget', { id: 'winget', isStore: true }],
+  ['AUR', { id: 'aur', isStore: true }],
+  ['AltStore', { id: 'altstore', isStore: true }],
+  ['Telegram', { id: 'telegram', isStore: false }],
+  ['Discord', { id: 'discord', isStore: false }],
+]);
 
 const problems = [];
 let newVersions = new Set();
 let stripsCount = 0;
 let upgradesCount = 0;
 let versionsCount = 0;
+let brandLinksCount = 0;
 
 // -- incremental dev rebuilds only pass the changed pages, the last full set stays in use
 export function onBeforeBuild({ pages, options }) {
@@ -74,17 +89,21 @@ export function onBeforeRender(pageContext) {
     pageUrl ??= outputPathToPathname(pageContext.outputPath);
     html = html.replace(kind.regex, (chip, spec) => kind.replace(chip, spec, pageUrl));
   }
+  if (html.includes(BRAND_LINK_START)) html = html.replace(BRAND_LINK, replaceBrandLink);
   pageContext.html = html;
 }
 
 export function onPostBuild({ log }) {
   for (const problem of problems) log(problem, 'WARN');
   const newVersionsText = [...newVersions].join(' & ');
-  log(`chips: ${stripsCount} strips, ${upgradesCount} upgrades, ${versionsCount} versions (${newVersionsText} new), ${problems.length} problems`);
+  log(
+    `chips: ${stripsCount} strips, ${upgradesCount} upgrades, ${versionsCount} versions (${newVersionsText} new), ${brandLinksCount} brand links, ${problems.length} problems`,
+  );
   problems.length = 0;
   stripsCount = 0;
   upgradesCount = 0;
   versionsCount = 0;
+  brandLinksCount = 0;
 }
 
 export function getAssets() {
@@ -114,6 +133,16 @@ function replaceUpgradeChip(chip, spec, pageUrl) {
 function replaceVersionChip(chip, version) {
   versionsCount++;
   return renderVersionTag(version);
+}
+
+function replaceBrandLink(link, url, label, subtitle) {
+  const isBeta = label.endsWith(BETA_SUFFIX);
+  const name = isBeta ? label.slice(0, -BETA_SUFFIX.length) : label;
+  const brand = BRAND_BY_NAME.get(name);
+  if (brand === undefined || (isBeta && !brand.isStore)) return link;
+  brandLinksCount++;
+  if (brand.isStore) return renderStoreBadge(brand, name, isBeta, url);
+  return renderBrandCard(brand, name, subtitle, url);
 }
 
 function parseVersionById(spec) {
@@ -180,6 +209,22 @@ function renderVersionTag(version) {
   const label = isNew ? 'NEW' : 'SINCE';
   const modifier = isNew ? '' : ' version-tag--old';
   return `<a class="version-tag${modifier}" href="${WHATS_NEW_URL}#${anchor}"><span class="version-tag__label">${label}</span><span class="version-tag__version">${version}</span></a>`;
+}
+
+function renderStoreBadge(brand, name, isBeta, url) {
+  const betaHtml = isBeta ? '<span class="store-badge__beta">Beta</span>' : '';
+  const text = `<span class="store-badge__caption">Get it on${betaHtml}</span><span class="store-badge__name">${name}</span>`;
+  return `<a class="store-badge brand--${brand.id}" href="${url}">${renderBrandTile()}<span class="store-badge__text">${text}</span></a>`;
+}
+
+function renderBrandCard(brand, name, subtitle, url) {
+  const subtitleHtml = subtitle === undefined ? '' : `<span class="brand-card__subtitle">${subtitle}</span>`;
+  const text = `<span class="brand-card__title">${name}</span>${subtitleHtml}`;
+  return `<a class="brand-card brand--${brand.id}" href="${url}">${renderBrandTile()}<span class="brand-card__text">${text}</span><span class="brand-card__arrow"></span></a>`;
+}
+
+function renderBrandTile() {
+  return '<span class="brand-tile"><span class="brand-tile__icon"></span></span>';
 }
 
 function describe(versionById) {

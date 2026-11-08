@@ -14,7 +14,7 @@
     "build": "docmd build",
     "whats-new": "node scripts/whats-new.js",
     "preview": "npx serve site",
-    "update-docmd": "node -e \"require('fs').rmSync('package-lock.json',{force:true})\" && npm cache clean --force && npm install"
+    "update-docmd": "node -e \"const fs=require('fs');fs.rmSync('package-lock.json',{force:true});fs.rmSync('node_modules/@docmd',{recursive:true,force:true})\" && npm cache clean --force && npm install"
   },
   "dependencies": {
     "@docmd/api": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-api.tgz",
@@ -29,9 +29,11 @@
     "@docmd/plugin-git": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-git.tgz",
     "@docmd/plugin-installer": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-installer.tgz",
     "@docmd/plugin-llms": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-llms.tgz",
+    "@docmd/plugin-math": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-math.tgz",
     "@docmd/plugin-mermaid": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-mermaid.tgz",
     "@docmd/plugin-okf": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-okf.tgz",
     "@docmd/plugin-openapi": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-openapi.tgz",
+    "@docmd/plugin-playground": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-playground.tgz",
     "@docmd/plugin-search": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-search.tgz",
     "@docmd/plugin-seo": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-seo.tgz",
     "@docmd/plugin-sitemap": "https://github.com/MSOB7YY/docmd/releases/download/tars/docmd-plugin-sitemap.tgz",
