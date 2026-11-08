@@ -99,22 +99,20 @@ For M3U files:
 
 More info: [`🎉 Playlists feature ↗`](/features/playlists-history/#playlists)
 
-### Path problems after syncing {#sync-path-problems}
+### Tracks show as missing {#missing-paths}
 
-Synced to another device and tracks or playlists point to the wrong paths?
+Moved, renamed or synced your files, and some tracks now point to old paths?
 
 1. Open Missing Tracks. [`⚙️ Open Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
-2. Press select all, then Update. Everything should be fixed.
+2. Each missing track shows the file suggested for it (moved or renamed files are matched, even paths from another device). Press the button beside a track to choose another match or pick a file from storage.
+3. Tap the tracks to update (or press select all), then press Update. Stats, listens and playlists move to the new paths.
 
-For playlists, you can also make them follow your music files instead. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-playlists)
+A whole folder moved (`/storage/music` to `/storage/audio/music`)? Open Update Directory Path and enter the old folder and the new one. Selecting many tracks from that folder also shows it in the Advanced section of the track menu. [`⚙️ Open Update Directory Path ↗`](/settings/8-advanced-settings/#update-directory-path)
 
-### Update directory path {#update-directory-path}
+For one track, open its menu and press Update (matching files are suggested first).
 
-Moved your music from `/storage/music` to `/storage/audio/music`?
-
-1. Open Update Directory Path in Advanced settings. [`⚙️ Open Update Directory Path ↗`](/settings/8-advanced-settings/#update-directory-path)
-2. Enter the old directory and the new one.
-3. All track paths update, keeping stats and listens.
+Deleted the files? See [`📒 Recover Deleted Files Guide ↗`](/guides/namider/#recover-deleted)
+For playlists synced between devices, you can make them follow your music files instead. [`📒 Syncing Playlists Guide ↗`](/guides/medium/#sync-playlists)
 
 ### Smart playlist examples {#smart-playlist-examples}
 

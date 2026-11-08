@@ -64,7 +64,7 @@ Music files are not synced for now, use apps like Syncthing or LocalSend to copy
 
 ### Smart Matching {#matching}
 
-Devices don't need identical file paths. Tracks are matched by fingerprint, so stats and listens are applied to the right files even when libraries live in different folders. When the tags differ, tracks with the same file name inside the same folders are matched too `🆕 v8.5.0`. If something still ends up with a wrong path, it's an easy fix. [`📒 Path Problems Guide ↗`](/guides/medium/#sync-path-problems)
+Devices don't need identical file paths. Tracks are matched by fingerprint, so stats and listens are applied to the right files even when libraries live in different folders. When the tags differ, tracks with the same file name inside the same folders are matched too `🆕 v8.5.0`. If something still ends up with a wrong path, it's an easy fix. [`📒 Missing Tracks Guide ↗`](/guides/medium/#missing-paths)
 
 ### Conflict Resolution {#conflicts}
 

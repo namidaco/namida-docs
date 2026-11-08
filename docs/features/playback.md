@@ -126,6 +126,8 @@ At the bottom of Sound Control, tap one to turn it on, drag across it to set its
 - **Space**: reverb, echo, chorus & 8D audio.
 - **Instrumental**, lowers the vocals.
 
+The bass enhancer lifts the bass and adds harmonics so small speakers sound deeper. For a stronger bass boost, add a Low shelf band in the [equalizer](#equalizer).
+
 ### Output Device {#output-device}
 
 `🆕 v7.8.0`

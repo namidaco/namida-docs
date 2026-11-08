@@ -20,7 +20,7 @@ Remove all listens that came from a specific source (like an import) from your h
 
 ### Update Directory Path {#update-directory-path}
 
-Moved your music to a new folder? This updates all track paths from the old directory to the new one, keeping stats and listens. [`📒 Update Directory Path Guide ↗`](/guides/medium/#update-directory-path)
+Moved your music to a new folder? This updates all track paths from the old directory to the new one, keeping stats and listens. [`📒 Missing Tracks Guide ↗`](/guides/medium/#missing-paths)
 
 ### Fix yt-dlp Big Thumbnail Size {#fix-ytdlp-thumbnail}
 
