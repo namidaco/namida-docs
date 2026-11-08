@@ -14,15 +14,15 @@ What each version added or changed, linked to where these docs explain it. Newes
 ## 🏷️ v8.6.0 {#v8-6-0}
 
 <!-- generated -->
-`🆕 4 new sections` `🔄 33 updated sections`
+`🆕 2 new sections` `🔄 36 updated sections`
 
 **🎉 Features**
 
 - [Library & Indexing](/features/library-indexing/): 🔄 [Filtering](/features/library-indexing/#filtering), [Missing Tracks](/features/library-indexing/#missing-tracks)
 - [Playback](/features/playback/): 🆕 [Lines Without a Time](/features/playback/#lyrics-untimed-lines) · 🔄 [Sound Control](/features/playback/#sound-control), [Lyrics](/features/playback/#lyrics), [Bookmarks](/features/playback/#bookmarks)
 - [Playlists & History](/features/playlists-history/): 🔄 [History Import](/features/playlists-history/#import)
-- [Smart Playlists](/features/smart-playlists/): 🆕 [Compare by](/features/smart-playlists/#compare-by), [Now](/features/smart-playlists/#now-values) · 🔄 [Date Rules](/features/smart-playlists/#date-rules), [Limit](/features/smart-playlists/#limit), [Medium](/features/smart-playlists/#examples-medium), [Complex](/features/smart-playlists/#examples-complex)
-- [Tag Editor](/features/tag-editor/): 🆕 [Artwork](/features/tag-editor/#artwork)
+- [Smart Playlists](/features/smart-playlists/): 🆕 [Now](/features/smart-playlists/#now-values) · 🔄 [Date Rules](/features/smart-playlists/#date-rules), [Compare by](/features/smart-playlists/#compare-by), [Limit](/features/smart-playlists/#limit), [Medium](/features/smart-playlists/#examples-medium), [Complex](/features/smart-playlists/#examples-complex)
+- [Tag Editor](/features/tag-editor/): 🔄 [Artwork](/features/tag-editor/#artwork)
 - [Lyrics Editor](/features/lyrics-editor/): 🔄 [Getting the Text In](/features/lyrics-editor/#text), [Syncing Lines](/features/lyrics-editor/#sync-lines), [Tools](/features/lyrics-editor/#tools), [Saving](/features/lyrics-editor/#saving)
 - [Sync](/features/sync/): 🔄 [Smart Matching](/features/sync/#matching), [Diagnostics](/features/sync/#diagnostics)
 - [System Integration](/features/system-integration/): 🔄 [Status Bar Lyrics](/features/system-integration/#status-bar-lyrics)
@@ -41,7 +41,7 @@ What each version added or changed, linked to where these docs explain it. Newes
 **📌 More**
 
 - [Tips & Tricks](/tips/): 🔄 [Search](/tips/#search), [Player](/tips/#player), [Advanced Dialog](/tips/#advanced-dialog), [Library Pages](/tips/#library-pages)
-- [FAQ](/faq/): 🔄 [YouTube is slow or broken](/faq/#youtube-broken), [Sync devices can't find or connect](/faq/#sync-troubleshooting)
+- [FAQ](/faq/): 🔄 [YouTube is slow or broken](/faq/#youtube-broken), [Sync devices can't find or connect](/faq/#sync-troubleshooting), [Is there A-B repeat?](/faq/#ab-repeat)
 <!-- /generated -->
 
 ---

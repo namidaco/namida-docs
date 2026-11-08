@@ -19,6 +19,13 @@ A separate version without these could be made, but that is extra maintenance we
 
 Get Namida from GitHub instead, or use Obtainium to keep it updated. [`📒 Installation Guide ↗`](/installation/#android)
 
+### F-Droid and other stores {#app-stores}
+
+- F-Droid and IzzyOnDroid only accept apps with a free license (OSI/FSF), all code public and no proprietary parts. Namida uses its own license and some of its packages are private.
+- Accrescent allows the all files access permission only for file managers, same as [Google Play](#google-play).
+
+Get Namida from GitHub instead, or use Obtainium to keep it updated. [`📒 Installation Guide ↗`](/installation/#android)
+
 ### Spotify {#spotify}
 
 Not planned. Importing your Spotify history and favourites (liked songs) is supported, but that's all.

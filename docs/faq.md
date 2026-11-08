@@ -162,10 +162,10 @@ Play Protect scans apps installed from outside Google Play and sometimes blocks 
 
 See [`📒 Installation Guide ↗`](/installation/#android) for which file to download.
 
-### Is Namida available on Google Play? {#google-play}
+### Is Namida available on Google Play or F-Droid? {#google-play}
 
 No, and not planned.
-See [Not Planned](/not-planned/#google-play) for the reasoning, and [`📒 Installation Guide ↗`](/installation/#android) for where to get it.
+See Not Planned for the reasoning on [Google Play](/not-planned/#google-play) and [other stores](/not-planned/#app-stores), and [`📒 Installation Guide ↗`](/installation/#android) for where to get it.
 
 ### Is Spotify supported? {#spotify}
 
