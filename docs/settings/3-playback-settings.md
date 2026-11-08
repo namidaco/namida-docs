@@ -51,6 +51,7 @@ Shows the current track's artwork on the lockscreen.
 ### Kill Player After Dismissing App {#kill-player}
 
 Stops playback completely when you swipe the app away. Three modes (Always / If not playing / Never).
+On Android, Namida closes fully when this applies (a running sync server or downloads stop too).
 
 On desktop this decides what closing the window does (quit the app / minimize to the tray, which is the menu bar on macOS). [`🎉 System Tray ↗`](/features/system-integration/#tray)
 

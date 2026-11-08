@@ -10,6 +10,7 @@ A smart playlist is a set of rules instead of a list of tracks, so it updates it
 Create one from the add button in the playlists page, or from the smart playlists page. [`📄 Smart Playlists Page ↗`](/pages/library/#smart-playlists)
 
 Pin one from its menu to show it in the Pinned section of the Home page. `🆕 v8.6.0`
+Press Export in its menu to save its current tracks as a normal or M3U playlist (Convert to Normal Playlist / Convert to M3U Playlist). Exporting again updates that playlist.
 
 Tracks are found only when you open the playlist, and can't be added manually. [`📄 Why aren't smart playlists treated as normal playlists? ↗`](/faq/#smart-playlists)
 
@@ -80,7 +81,7 @@ Good to know:
 
 #### Listens Between Dates {#listens-between-dates}
 
-Adding "Total Listens (Between Dates)" also adds a "Between Dates" rule to its group, only the listens inside those dates are counted.
+Adding "Total Listens (Between Dates)" also adds a "Between Dates" rule to its group, only the listens inside those dates are counted. The Between Dates rule has [Compare by](#compare-by) and [Now](#now-values) too, like for counting only the listens at night.
 
 Example, tracks you played at least 10 times last summer:
 
@@ -114,12 +115,29 @@ Examples:
 
 Good to know:
 
-- Type dates as `2024-05-20` or `2024-05-20 18:30:00`, or pick one with the calendar icon. A date without a time covers the whole day.
+- Type dates as `2024-05-20`, or a year or month alone (`2024`, `2024-05`) `🆕 v8.6.0`, or pick one with the calendar icon. Each value covers its whole day, month or year. With [Clock](#compare-by) on, add a time like `2024-05-20 18:30`.
 - **Any Listen** matches when at least one listen matches, **All Listens** only when every listen matches.
 - Never played tracks have no listen dates, they match "is not Within Last", and "First listen Missing" finds exactly them.
-- A year tag like `1995` counts as the first day of that year, so use <u>is in Between</u> `1990-01-01` and `1999-12-31` for a decade.
+- A year tag like `1995` covers the whole year, so use <u>is in Between</u> `1990` and `1999` for a decade.
 - Date Added and Date Modified come from the file dates, see [`🎉 File Dates ↗`](/features/library-indexing/#file-dates).
-- **Clock Only** compares the time of day only (`HH:mm:ss`), ignoring the date. Ranges can cross midnight, so Any Listen <u>is in Between</u> `22:00:00` and `04:00:00` finds tracks you played at night.
+
+#### Compare by {#compare-by}
+
+`🆕 v8.6.0`
+
+"Compare by" picks which parts of the dates are compared (Year / Month / Day / Weekday / Clock, in any mix), the full date by default. It replaces Clock Only, and shows for every filter except is Within Last, is not Within Last, Exists and Missing.
+
+- Month <u>is Same</u> `12` matches every December, and Weekday <u>is Same</u> Friday every Friday.
+- Without the year, ranges can wrap around. Clock <u>is in Between</u> `22:00` and `04:00` covers the night, and Month <u>is in Between</u> `12` and `1` covers December and January.
+- Mixed parts are compared together, so Weekday + Clock <u>is in Between</u> Friday `18:00` and Friday `23:59` means Friday evenings.
+- Year tags with only a year are skipped when comparing the month, day or weekday.
+
+#### Now {#now-values}
+
+`🆕 v8.6.0`
+
+Turn on "Now" beside a value to count it from the time the playlist opens, like Now − 1 Days. Now covers the whole unit (Now − 1 Days is all of yesterday, and Now − 1 Years all of last year), while is Within Last counts back from this exact moment.
+With other parts in Compare by, Now gives the current ones. Weekday <u>is Same</u> Now means today's weekday, and Clock <u>is in Between</u> Now − 1 Hours and Now + 1 Hours means around this hour on any day.
 
 ### Condition Rules {#condition-rules}
 
@@ -139,7 +157,7 @@ Keep only part of the matching tracks (like 25 tracks, 1 hour or 4 GB), selected
 
 Select by Random (Daily) for a new pick every day.
 
-To keep the tracks of only a few albums, artists, genres or folders (like 1 genre), set "Maximum". The first ones met in the selected order are picked, so Random (Daily) gives a new genre every day. Untagged tracks are left out. `🆕 v8.6.0`
+To keep the tracks of only a few albums, artists, genres, folders, etc (like 1 genre), set "Maximum". The first ones met in the selected order are picked, so Random (Daily) gives a new genre every day. Untagged tracks are left out. `🆕 v8.6.0`
 
 ### Sorting {#sorting}
 
@@ -185,9 +203,12 @@ A few rules, All/Any, a limit or a sort.
 - **Fresh obsessions**: First listen <u>is Within Last</u> `2 Months`, Listens per Month <u>is Greater Than</u> `10`.
 - **Timeless**: First listen <u>is not Within Last</u> `2 Years`, Last Listen <u>is Within Last</u> `7 Days`. Old tracks still in rotation.
 - **One and done**: Total Listens <u>is Same</u> `1`, First listen <u>is not Within Last</u> `3 Months`. Played once, never again.
-- **Late night tracks**: Any Listen <u>is in Between</u> `22:00:00` and `04:00:00` with Clock Only.
-- **Night owl only**: All Listens <u>is in Between</u> `22:00:00` and `04:00:00` with Clock Only. Tracks you only ever played at night.
-- **Morning tracks**: Any Listen <u>is in Between</u> `06:00:00` and `10:00:00` with Clock Only.
+- **Late night tracks**: Any Listen <u>is in Between</u> `22:00` and `04:00`, compared by Clock.
+- **Night owl only**: All Listens <u>is in Between</u> `22:00` and `04:00`, compared by Clock. Tracks you only ever played at night.
+- **Morning tracks**: Any Listen <u>is in Between</u> `06:00` and `10:00`, compared by Clock.
+- **Weekend tracks**: Any Listen <u>is in Between</u> Saturday and Sunday, compared by Weekday. `🆕 v8.6.0`
+- **This hour, any day**: Any Listen <u>is in Between</u> Now − 1 Hours and Now + 1 Hours, compared by Clock. Tracks you usually play around this time. `🆕 v8.6.0`
+- **Played yesterday**: Any Listen <u>is Same</u> Now − 1 Days. `🆕 v8.6.0`
 - **Daily hour**: Rating <u>is Greater Than + is Same</u> `70`, Limit `60 Minutes` selected by Random (Daily). A new hour of your best tracks every day.
 - **Short and fast**: Duration <u>is Smaller Than</u> `180`, BPM <u>is Greater Than</u> `140`.
 - **Played this week**: Total Listens (Between Dates) <u>is Greater Than</u> `0` with Between Dates <u>is Within Last</u> `7 Days`, sorted by Recent Listens.

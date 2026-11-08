@@ -35,8 +35,8 @@
     }
   },
   "versions": {
-    "current": "v8.5.0",
-    "all": [{ "id": "v8.5.0", "dir": "docs", "label": "v8.5.0" }]
+    "current": "v8.6.0",
+    "all": [{ "id": "v8.6.0", "dir": "docs", "label": "v8.6.0" }]
   },
   "theme": {
     "name": "summer",

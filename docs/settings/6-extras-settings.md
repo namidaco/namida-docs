@@ -38,6 +38,7 @@ Quick navigation between library tabs. The tabs stay in the drawer either way.
 `💻 Android only`
 
 Choose what keeps showing in a small floating window when you leave the app while playing (video / lyrics / artwork). The first one available is shown, in that order. `🆕 v8.5.0`
+Lyrics show only while lyrics are on in the player.
 
 ### Floating Action Button {#fab}
 
@@ -65,6 +66,7 @@ Listens Count Boost at the bottom makes your most played tracks score higher in 
 ### Ignore Common Prefixes While Sorting {#ignore-prefixes}
 
 Ignores prefixes like "The" and "A" while sorting.
+Pick the fields it applies to, and tap a prefix to remove it or + to add one. The Symbols toggle ignores leading quotes, brackets, punctuation and emoji too. `🆕 v8.6.0`
 
 ### Enable Search Cleanup {#search-cleanup}
 
@@ -182,9 +184,10 @@ Visual:
 
 Scrolling:
 
-- `SMOOTH_SCROLLING` `💻 Windows+Linux+macOS only`, `ENHANCED_DRAG_TO_SCROLL` & `TAP_TO_SCROLL`, scrolling behavior tweaks.
+- `SMOOTH_SCROLLING` `💻 Windows+Linux+macOS only`, smoother scrolling.
 - `SCROLLBAR_THUMB_LABEL`, shows where you are while dragging the scrollbar (like the letter, year or date, depending on the sort). `🆕 v7.8.0`
-- `EASY_SCROLLBAR_GRAB`, drag the scrollbar instantly (without the short hold), and from a wider area. `🆕 v8.4.0`
+- `SCROLLBAR_BEHAVIOUR`, what the scroll track does (thumb only / drag anywhere / jump to touch). Jump to touch works with taps and drags. `🆕 v8.6.0`
+  - The "instant thumb grab" switch in its menu drags the scrollbar instantly (without the short hold), and from a wider area. `🆕 v8.4.0`
 
 Desktop:
 

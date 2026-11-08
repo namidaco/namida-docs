@@ -31,6 +31,7 @@ You control all the separators and their blacklisted words. Featured artists in 
 ### Filtering {#filtering}
 
 Prevent duplicated tracks, set minimum file size & duration, blacklist extensions and respect `.nomedia`. [`⚙️ Configure Indexer ↗`](/settings/2-indexer-settings/)
+The Indexer card counts the duplicated, `.nomedia` and filtered files. Tap a count to see them, play or delete them, or pick which duplicate copy is kept. `🆕 v8.6.0`
 
 ### Videos {#videos}
 
@@ -39,6 +40,7 @@ Videos are indexed and playable on their own, with a dedicated videos folder vie
 ### Missing Tracks {#missing-tracks}
 
 If you moved or renamed files outside Namida, the missing tracks page helps you relink them without losing stats and listens. [`⚙️ Configure Missing Tracks ↗`](/settings/2-indexer-settings/#missing-tracks)
+Each missing track gets a suggested file (moved, renamed, another extension, small typos and plurals), and the button beside it picks another suggestion or a file. The track menu's Update uses the same suggestions. `🔄 v8.6.0` [`📒 Missing Tracks Guide ↗`](/guides/medium/#missing-paths)
 The search button there filters the list by path. `🆕 v8.5.0`
 Whole directories can be updated at once with [`⚙️ Open Update Directory Path ↗`](/settings/8-advanced-settings/#update-directory-path).
 

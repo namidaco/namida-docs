@@ -23,6 +23,7 @@ Control Namida from the keyboard on desktop. On macOS, use `Cmd` instead of `Ctr
 | `Ctrl` + `Shift` + `S` | Shuffle, following the shuffle button mode `🆕 v8.4.0` |
 
 Seeking jumps by your [Seek Duration](/settings/3-playback-settings/#seek-duration).
+Volume changes the current item's own volume when it has one in [Sound Control](/features/playback/#sound-control), otherwise the global one.
 Shuffle follows the mode of the shuffle button (toggle / Shuffle Next / Shuffle All). [`🎉 Queue System ↗`](/features/playback/#queue)
 
 ### Zoom {#zoom}

@@ -23,7 +23,7 @@ Two different tracks share the same filename, so they share the same artwork.
 
 ### Some tracks in an album are missing artwork {#album-artworks}
 
-1. Enable [`⚙️ Configure Group Artworks by Album ↗`](/settings/2-indexer-settings/#group-artworks-by-album), the whole album shares one artwork.
+1. Enable [`⚙️ Configure Group Artworks by Album ↗`](/settings/2-indexer-settings/#group-artworks-by-album), the whole album shares one artwork (turn off Unique Artwork Hash first).
 
 No artwork in the files at all? Put a `cover.jpg` (or `folder.jpg`) in the album folder, tracks without embedded artwork use it.
 

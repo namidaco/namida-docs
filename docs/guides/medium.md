@@ -40,7 +40,7 @@ video alAn WaLkER - faDed (480p).mp4
 ```
 
 ::: callout info
-Matching ignores casing, symbols and whitespace, and extra words around the name are fine.
+Matching ignores casing and symbols, and extra words around the name are fine.
 :::
 
 ### Use one local video for a whole album {#album-local-video}

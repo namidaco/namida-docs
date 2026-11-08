@@ -62,10 +62,12 @@ The refresh icon `🆕 v8.2.0` beside the switch re-scans local videos.
 ### Respect .nomedia {#respect-nomedia}
 
 Skips folders that contain a `.nomedia` file.
+"Tracks Excluded by .nomedia" at the top of the Indexer card lists the skipped files, grouped by folder. `🆕 v8.6.0`
 
 ### Minimum File Size & Track Duration {#minimum-size-duration}
 
 Files smaller or shorter than these values will be skipped, useful for filtering out voice notes and notification sounds.
+"Tracks Filtered by size and duration" at the top of the Indexer card lists the skipped files (play / delete). `🆕 v8.6.0`
 
 ### Extension (Blacklist) {#extensions-blacklist}
 
@@ -73,7 +75,8 @@ File extensions that will not be indexed.
 
 ### Prevent Duplicated Tracks {#prevent-duplicated-tracks}
 
-Tracks with the same filename show only once, even if they are in different folders.
+Copies of the same track show only once, even if they are in different folders. They are matched by title, artist and duration `🆕 v8.6.0` (versions with different MusicBrainz ids stay apart), and the best quality copy is kept.
+"Duplicated Tracks" at the top of the Indexer card lists each kept track with its copies. Tap a copy to play it, or open its menu to set it as default (history, playlists and stats move to it) or delete it. `🆕 v8.6.0`
 
 ### Use Media Store {#use-media-store}
 
@@ -96,6 +99,7 @@ Saves one artwork per album instead of one per track (which uses less storage).
 ### Unique Artwork Hash {#unique-artwork-hash}
 
 Identifies artworks by the track's full path instead of just the filename. Enable this if different tracks show the same wrong artwork.
+It's on by default for new installs, and can't be on together with [Group Artworks by Album](#group-artworks-by-album).
 
 ### List of Folders {#folders-to-scan}
 

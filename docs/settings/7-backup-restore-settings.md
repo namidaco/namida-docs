@@ -38,9 +38,10 @@ Pick a source, then choose what to import from its export (history / favourites 
 
 - YouTube, a takeout export (zip files or the extracted folder), for watch history, favourites (liked videos) and playlists. Watches get matched with your library or YouTube videos and merged into history.
   - Subscriptions too, they become your subscribed channels in Namida (include them when exporting the takeout). `🆕 v8.4.0`
-- LastFm, a csv export of your scrobbles.
+- Last.fm, a csv export of your scrobbles.
 - Spotify, a data export (zip or json files), for your extended streaming history and favourites (liked songs).
 - ListenBrainz, a data export (zip or json files), for your listens and favourites (loved tracks).
+- Apple Music, a data export from privacy.apple.com (zip files or the extracted folder), for your play activity and favourites. It sits under More, with ListenBrainz. `🆕 v8.6.0`
 
 ::: callout info
 Each import shows a short guide for getting the export file.

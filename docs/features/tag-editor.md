@@ -36,6 +36,17 @@ Moods, tags and rating can also be set for many tracks without opening the tag e
 
 Ratings are written to the tag other players read for that file type, keeping the scale the file already uses. Ratings set by other players are read too, as long as Namida has none of its own. `🆕 v8.5.0`
 
+### Artwork {#artwork}
+
+`🆕 v8.6.0`
+
+Press the pencil on the artwork (or Edit Artwork when editing many tracks) to open the artwork options (Pick from storage / Paste / Search: Google / Folder / YouTube / Crop / Remove). Changes apply when you save.
+
+- Folder uses the cover image in the track's folder.
+- YouTube uses the thumbnail of the linked video (a square cover for music uploads).
+- Search: Google opens an image search for the album cover in the browser.
+- Crop cuts a part of the image, square by default.
+
 ### Suggestions {#suggestions}
 
 `🆕 v7.0.0`

@@ -11,6 +11,41 @@ What each version added or changed, linked to where these docs explain it. Newes
 **Looking for every change?** This page only follows the docs. The full changelog of each version (fixes and improvements included) is on GitHub. [`📜 Stable Releases ↗`](https://github.com/namidaco/namida/releases) [`🧪 Beta Releases ↗`](https://github.com/namidaco/namida-snapshots/releases)
 :::
 
+## 🏷️ v8.6.0 {#v8-6-0}
+
+<!-- generated -->
+`🆕 4 new sections` `🔄 33 updated sections`
+
+**🎉 Features**
+
+- [Library & Indexing](/features/library-indexing/): 🔄 [Filtering](/features/library-indexing/#filtering), [Missing Tracks](/features/library-indexing/#missing-tracks)
+- [Playback](/features/playback/): 🆕 [Lines Without a Time](/features/playback/#lyrics-untimed-lines) · 🔄 [Sound Control](/features/playback/#sound-control), [Lyrics](/features/playback/#lyrics), [Bookmarks](/features/playback/#bookmarks)
+- [Playlists & History](/features/playlists-history/): 🔄 [History Import](/features/playlists-history/#import)
+- [Smart Playlists](/features/smart-playlists/): 🆕 [Compare by](/features/smart-playlists/#compare-by), [Now](/features/smart-playlists/#now-values) · 🔄 [Date Rules](/features/smart-playlists/#date-rules), [Limit](/features/smart-playlists/#limit), [Medium](/features/smart-playlists/#examples-medium), [Complex](/features/smart-playlists/#examples-complex)
+- [Tag Editor](/features/tag-editor/): 🆕 [Artwork](/features/tag-editor/#artwork)
+- [Lyrics Editor](/features/lyrics-editor/): 🔄 [Getting the Text In](/features/lyrics-editor/#text), [Syncing Lines](/features/lyrics-editor/#sync-lines), [Tools](/features/lyrics-editor/#tools), [Saving](/features/lyrics-editor/#saving)
+- [Sync](/features/sync/): 🔄 [Smart Matching](/features/sync/#matching), [Diagnostics](/features/sync/#diagnostics)
+- [System Integration](/features/system-integration/): 🔄 [Status Bar Lyrics](/features/system-integration/#status-bar-lyrics)
+
+**📄 Pages**
+
+- [YouTube Pages](/pages/youtube/): 🔄 [Home](/pages/youtube/#home), [Music](/pages/youtube/#music)
+
+**⚙️ Settings**
+
+- [Indexer](/settings/2-indexer-settings/): 🔄 [Respect .nomedia](/settings/2-indexer-settings/#respect-nomedia), [Minimum File Size & Track Duration](/settings/2-indexer-settings/#minimum-size-duration), [Prevent Duplicated Tracks](/settings/2-indexer-settings/#prevent-duplicated-tracks)
+- [Extras](/settings/6-extras-settings/): 🔄 [Ignore Common Prefixes While Sorting](/settings/6-extras-settings/#ignore-prefixes), [Flags](/settings/6-extras-settings/#flags)
+- [Backup & Restore](/settings/7-backup-restore-settings/): 🔄 [Import data](/settings/7-backup-restore-settings/#import-data)
+- [Advanced](/settings/8-advanced-settings/): 🔄 [Fix yt-dlp Big Thumbnail Size](/settings/8-advanced-settings/#fix-ytdlp-thumbnail), [Flags](/settings/8-advanced-settings/#flags)
+
+**📌 More**
+
+- [Tips & Tricks](/tips/): 🔄 [Search](/tips/#search), [Player](/tips/#player), [Advanced Dialog](/tips/#advanced-dialog), [Library Pages](/tips/#library-pages)
+- [FAQ](/faq/): 🔄 [YouTube is slow or broken](/faq/#youtube-broken), [Sync devices can't find or connect](/faq/#sync-troubleshooting)
+<!-- /generated -->
+
+---
+
 ## 🏷️ v8.5.0 {#v8-5-0}
 
 <!-- generated -->

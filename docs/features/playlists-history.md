@@ -109,9 +109,9 @@ The Home page has ready made mixes from your history too. [`📄 Home Mixes ↗`
 
 ### History Import {#import}
 
-Import your listening history from YouTube, LastFm, Spotify and ListenBrainz exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-data)
+Import your listening history from YouTube, Last.fm, Spotify, ListenBrainz and Apple Music `🆕 v8.6.0` exports, everything gets merged into your Namida history. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-data)
 
-The same exports can bring your liked tracks (YouTube, Spotify and ListenBrainz) as favourites, and YouTube playlists, pick what to import before starting. `🆕 v8.2.0`
+The same exports can bring your liked tracks (YouTube, Spotify, ListenBrainz and Apple Music) as favourites, and YouTube playlists, pick what to import before starting. `🆕 v8.2.0`
 
 Your history is backed up before importing (unless you turn it off), and the progress dialog shows each step on its own. `🆕 v7.4.0`
 

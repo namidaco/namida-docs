@@ -50,6 +50,8 @@ Press the repeat button in the player to pick one:
 - **Repeat All Queue**, the queue loops.
 - **Repeat All Queue (Shuffle)**, the queue is reshuffled every time it ends.
 
+To loop only part of a track (A-B repeat), mark two [bookmarks](#bookmarks) as Start and Stop.
+
 In a [listening party](/features/party/#queue), the room has its own repeat mode that everyone follows.
 
 ### Audio Effects {#effects}
@@ -87,7 +89,7 @@ From top to bottom:
 - Two tabs:
   - **Global**, applies to everything you play.
   - **Item**, applies to the current track or video only, anything you don't change there follows Global (a small icon shows when it has its own settings). Press reset to fall back to global, or turn on "Force use Global Config" to ignore per item settings.
-  - Press the save icon on a tab to save its settings as a preset, tap a preset to apply it to the open tab, or long press it for more options (save over / rename / delete). `🆕 v8.2.0`
+  - Press the save icon on a tab to save its settings as a preset, tap a preset to apply it to the open tab, or long press it for more options (save over / rename / delete). `🆕 v8.2.0` The Default chip restores original values (Global means app default, Item means back to following global). `🆕 v8.6.0`
 - **Mono audio**, both sides play the same sound. `🆕 v7.8.0`
 - [Sound effects](#sound-effects). `🆕 v8.2.0`
 
@@ -226,6 +228,7 @@ Synced lyrics in Japanese, Chinese, Korean, Greek, Cyrillic and a few more scrip
 The simple lyrics line under the artwork shows translations and romanizations too, and word synced lyrics light up word by word there (like in the lyrics view). `🆕 v7.5.0` [`⚙️ Configure Simple Lyrics Line ↗`](/settings/6-extras-settings/#lyrics)
 
 Choose where lyrics are saved (the cache, the track folder or your own lyrics folders), and delete them along with the track. `🆕 v7.5.0` [`⚙️ Configure Lyrics Save Location ↗`](/settings/6-extras-settings/#lyrics-save-location)
+Lyrics files move along when you move or rename a track from the [Advanced dialog](/tips/#advanced-dialog). `🆕 v8.6.0`
 
 The `LYRICS_ANIMATIONS` [flag](/settings/6-extras-settings/#flags) turns each lyrics animation on or off, separately for the simple line, normal and expanded views, or all at once with a preset. `🆕 v8.2.0`
 
@@ -264,7 +267,7 @@ Lines with word by word timing only support the same time way.
 
 `🆕 v8.6.0`
 
-Synced lyrics can have lines without a time, like a section header or an empty line between verses. They show dimmed between the synced lines, and tapping one jumps to the line under it.
+Synced lyrics can have lines without a time, like a section header or an empty line between verses. Headers show dimmed between the synced lines, and tapping one jumps to the line under it. Empty lines show as a small gap.
 
 ```text
 [Chorus]
@@ -299,7 +302,7 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 - Swipe left or right on a track or video to execute an action (play next / open info / go to album / edit tags, etc). [`⚙️ Configure Swipe Actions ↗`](/settings/4-customization-settings/#track-tile)
 - Tap or long press the thumbnail of a track or video to execute an action too, off by default. `🆕 v7.5.0` [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#track-tile)
 - Tap the current position to seek backwards and the total duration to seek forwards, by your [Seek Duration](/settings/3-playback-settings/#seek-duration). Holding either one keeps seeking.
-- Long press the previous button to jump to the start of the track, long press the next button to speed up playback while holding it.
+- Long press the previous button to jump to the start of the track (or its [start bookmark](#bookmarks)), long press the next button to speed up playback while holding it.
 - While seeking with the seekbar, swipe upwards to cancel the seek.
 - Seeking very close to the starting edge snaps to the very start (a glow at the start of the seekbar shows when you're close).
 - Swipe the lyrics left or right in fullscreen or in the widescreen player to skip tracks. `🆕 v8.2.0`
@@ -313,7 +316,7 @@ Videos can show subtitles, coming from a file next to the video, from inside the
 
 Long press any track for queue control (Play Next / Play Last / Play After latest inserted / repeat for N times / stop after this track / add more from the same album, artist or folder). For add more, long press its + to pick the sorting, filters and how many. See [`📄 Tips & Tricks ↗`](/tips/#track-menu) for the full list.
 
-The menu also has an Advanced section for the heavier stuff (copying and moving files / setting a track as a ringtone / replacing listens, etc). [`📄 Advanced Dialog Tips ↗`](/tips/#advanced-dialog)
+The menu also has an Advanced section for the heavier stuff (copying, moving and renaming files / setting a track as a ringtone / replacing listens, etc). [`📄 Advanced Dialog Tips ↗`](/tips/#advanced-dialog)
 
 ### Sleep Timer {#sleep-timer}
 
@@ -334,7 +337,8 @@ Mark spots in a track or video to come back to them.
 
 - Long press the seekbar to add one, or use the notification button, an artwork gesture action or `Ctrl` + `B`.
 - They show as ticks on the seekbar, tap near one to jump there. Long press a tick to see all of them.
-- Track info and the track menu list them too, with rename and remove.
+- Track info and the track menu list them too, with rename and remove. Tap one to play from there, a bookmark of another track plays that track next.
+- In the bookmarks list, mark a bookmark as Start or Stop. The track then starts or ends there, and with [Repeat Current Track](#repeat-modes) it loops between them (A-B repeat). `🆕 v8.6.0`
 
 ### Chapters {#chapters}
 

@@ -25,6 +25,7 @@ Moved your music to a new folder? This updates all track paths from the old dire
 ### Fix yt-dlp Big Thumbnail Size {#fix-ytdlp-thumbnail}
 
 Files downloaded by yt-dlp can have a huge embedded thumbnail (usually a re-encoded webp). This re-embeds the best available thumbnail without converting it, so files get smaller (around 1MB to 128KB per image) and artworks load faster. The audio is untouched.
+Music uploads get a square cover instead (thumbnails with side bars are cropped). `🆕 v8.6.0`
 
 ::: callout warning
 The files in the selected folder are replaced.
@@ -81,6 +82,7 @@ Clearing the image cache leaves your library without images. Only use it to rebu
 
 Hidden options. Press the flag icon at the top of the Advanced settings card to open them:
 
+- `PROXY_URL`, a custom HTTP proxy (like `http://user:pass@127.0.0.1:8080`). Left empty, Namida uses the system proxy, or the `http_proxy` / `https_proxy` environment variables (the only way on Linux). YouTube, lyrics, artworks and downloads go through it, but the local network (sync, parties, home servers) never does. `🆕 v8.6.0`
 - `ANALYZE_RHYTHM`, analyzes the whole library ahead of time for the [crossfade styles](/features/playback/#beat-matching): where each track fades out (Smart), plus tempo, key and beats (Beat matching). The tag button writes the analyzed BPM to files that have none.
 - `DETECT_FAKE_LOSSLESS_FILES`, scans your lossless files for ones made from a lossy source, upsampled or bit-padded. The results can be saved as a playlist.
 

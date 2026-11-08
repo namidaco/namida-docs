@@ -28,9 +28,9 @@ Navigating:
 Your YouTube feed, with notifications and subscriptions when [signed in](/settings/5-youtube-settings/#accounts).
 Your account's home feed needs a membership. [`📄 Membership ↗`](/membership/#benefits)
 The Namida home is built from your Namida history instead, with the same [mixes](/pages/library/#home) as the library Home.
+On the account home, open a video's menu and press "More" for YouTube's own options (not interested / don't recommend channel). The item leaves the feed, and Undo brings it back. `🆕 v8.6.0`
 
 In notifications, you can play all unread videos at once, and comment notifications open the comment with its replies.
-If new notifications don't show up, switch the extractor from the button at the top.
 Open a notification's menu and press "More" for more options (hide it / turn off notifications from that channel, which needs a membership). `🆕 v7.4.0`
 
 ### Music {#music}
@@ -41,6 +41,7 @@ YouTube Music, right inside the YouTube tab, no account needed.
 
 - The home has mood chips (like Relax or Workout) to filter it, and buttons (Explore / Charts / Moods / New releases). Charts can be picked by country.
 - Tap a song to play it, the rest of its row becomes the queue. Long press anything for its menu.
+  - On the home, the menu's "More" has YouTube's own options too (not interested / don't recommend artist), when signed in. `🆕 v8.6.0`
 - Album pages show the album with its tracks, tap the artist name to open the artist.
 - Artist pages have Play and Shuffle for the artist's songs, a Channel button for the YouTube channel, and the artist's sections.
 

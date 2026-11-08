@@ -18,6 +18,7 @@ Not so obvious features you might have missed.
 
 - Swipe up on the search button to open the keyboard, swipe down to close it.
 - Pasting a YouTube link or a playlist link in the searchbar automatically opens it.
+- Leaving search collapses the searchbar and keeps the query. Reopening it selects the query, so typing replaces it. `🆕 v8.6.0`
 - When playing from search, you can choose the [Play Mode](/pages/library/#search) (selected track only / search results / album / first artist / first genre).
 - Links and texts you copy can appear right in the searchbar, enable [Clipboard Monitoring](/settings/6-extras-settings/#clipboard-monitoring).
 - Settings has its own search, press the Search button in settings.
@@ -29,7 +30,7 @@ Not so obvious features you might have missed.
 
 - Tap the current position to seek backwards, tap the total duration to seek forwards (by the [Seek Duration](/settings/3-playback-settings/#seek-duration)).
   - Hold them to keep seeking (rewind/fastforward).
-- Long press the previous button to jump to the very start of the track, and long press the next button to speed up playback while you hold it. [`⚙️ Configure Long Press Speed ↗`](/settings/3-playback-settings/#long-press-speed)
+- Long press the previous button to jump to the very start of the track (or its [start bookmark](/features/playback/#bookmarks)), and long press the next button to speed up playback while you hold it. [`⚙️ Configure Long Press Speed ↗`](/settings/3-playback-settings/#long-press-speed)
 - While seeking, swipe upwards to cancel. Seeking near the starting edge snaps to the very start.
 - Swipe the miniplayer left or right to change tracks.
   - Works on the fullscreen lyrics and the widescreen player lyrics too. `🆕 v8.2.0`
@@ -86,8 +87,9 @@ Long press a track (or tap its menu) for more than you might expect:
 
 The track menu has an Advanced section:
 
-- Copy or move the files to another folder.
-- Clear specific things for that track (artwork / thumbnail / plain or synced lyrics / video cache / audio cache / server cache).
+- Copy or move the files to another folder, or rename a file `🆕 v8.6.0`.
+  - Moving or renaming takes the track's lyrics and subtitle files along. `🆕 v8.6.0`
+- Clear specific things for that track (artwork / thumbnail / plain or synced lyrics / subtitles / waveform / video cache / audio cache / server cache).
 - Delete the files from storage, deleted paths are saved to a file in the app data folder just in case.
 - Share the files.
 - See which sources the listens came from, useful after importing a history.
@@ -103,7 +105,7 @@ Long press a video (or tap its menu) for:
 
 - Info, Add to Playlist, Download, Copy and Go to Channel. The share icon beside Copy shares the link.
 - Play Next, Play After and Play Last, like in the [track menu](#track-menu). For the playing video and the ones in the queue, Stop after this video shows instead of Play.
-- Cache to keep it for offline playback, and Clear to remove its cached video or audio. The chip beside Clear sets its [cache priority](/features/youtube/#caching).
+- Cache to keep it for offline playback, and Clear to pick what to remove from its cache (video / audio / thumbnails / lyrics / subtitles, etc). The chip beside Clear sets its [cache priority](/features/youtube/#caching).
 - In the player, the menu also has Favourites, Repeat for N times and the video's bookmarks.
 
 For many videos (a selection or a playlist's menu): Play All (also in reverse order), Shuffle, Share, Cache (pick which videos on the cache page) and Priority for all of them at once.
@@ -114,7 +116,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 - Press the tab you're on again to scroll back to the top
 - In media subpages (album tracks, artist tracks, etc), long press the filter icon to quickly open a smart playlist with that media name.
 - In media pages, long press the grid icon to choose a specific count per row (higher numbers can cause performance issues).
-- In the tracks page and media subpages, long press shuffle/play for advanced options.
+- In the tracks page, media subpages and the floating button `🆕 v8.6.0`, long press shuffle/play for advanced options.
   - Play can sort the tracks, and skip the ones below a minimum (like a rating of 75% for your top rated only). `🆕 v7.8.0`
   - Shuffle can pick a number of tracks (with a minimum too) and exclude your most recent listens. `🆕 v7.8.0`
 - In an album, artist, playlist or folder dialog, the options button beside Play All or Shuffle opens the same options. `🆕 v7.8.0`
@@ -196,7 +198,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
 ### Scrolling {#scrolling}
 
 The scrollbar needs a short hold before it starts dragging. This is intentional, most apps have a big instantly draggable scrollbar (which usually causes many accidental scrolls). Namida keeps the minimal design with the low cortisol behaviour instead.
-Prefer the instant drag? Turn on `EASY_SCROLLBAR_GRAB` in the [Extras Flags](/settings/6-extras-settings/#flags). `🆕 v8.4.0`
+Prefer the instant drag? Turn on "instant thumb grab" in `SCROLLBAR_BEHAVIOUR`, in the [Extras Flags](/settings/6-extras-settings/#flags). `🆕 v8.4.0`
 
 Turn on `SCROLLBAR_THUMB_LABEL` in the [Extras Flags](/settings/6-extras-settings/#flags) to see the letter or date you're at while dragging. `🆕 v7.8.0`
 

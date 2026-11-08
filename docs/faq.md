@@ -23,7 +23,7 @@ YouTube updates can break clients from time to time, fixes are available in beta
 1. Try the latest [beta release](https://github.com/namidaco/namida-snapshots/releases).
 2. Sign in to your account, it can improve download speed and fix some playback issues. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
 3. Disable any VPN, custom DNS or proxy.
-4. If YouTube is restricted in your area, try a different VPN instead.
+4. If YouTube is restricted in your area, try a different VPN instead, or set a proxy with the `PROXY_URL` [flag](/settings/8-advanced-settings/#flags) `🆕 v8.6.0`.
 5. Still doesn't play? Send the logs (they show which JS player failed) with "Report an issue". [`📄 About Page ↗`](/pages/other/#about)
 6. Then open the YouTube flags, press `RESET_YOUTUBE_SESSION`, and make sure `INNERTUBE_CLIENT` is set to Default. [`⚙️ Configure YouTube Flags ↗`](/settings/5-youtube-settings/#flags)
 
@@ -43,7 +43,7 @@ The two are separate, a playlist made in Namida doesn't show in your account and
 2. Device not found? Connect by IP instead (using the address shown under Server on the other device). [`🎉 Connect by IP ↗`](/features/sync/#connect-by-ip)
    - On iOS and macOS, allow Namida in Privacy & Security -> Local Network (turn it off and on again if it's already allowed). `🆕 v8.5.0`
 3. Found, but connecting fails or times out? A firewall on the server device is blocking Namida, allow it:
-   - Windows: set your network to Private, then allow Namida in Windows Security -> Firewall & network protection -> Allow an app through firewall.
+   - Windows: press "Allow through firewall" on the Sync page (shown under the server when the firewall blocks it) `🆕 v8.6.0`. Or set your network to Private, then allow Namida in Windows Security -> Firewall & network protection -> Allow an app through firewall.
    - Linux with ufw: `sudo ufw allow 62310/tcp`
    - Linux with firewalld: `sudo firewall-cmd --permanent --add-port=62310/tcp && sudo firewall-cmd --reload`
    - If the device isn't found either, allow `5353/udp` the same way.
@@ -148,6 +148,10 @@ For a system wide equalizer that also works for other apps, use [Equalizer314](h
 
 Android forgets the access once the DAC is unplugged, unless Namida is set as the DAC's default app in that dialog.
 Android only offers "always" for DACs without a microphone (since Namida doesn't ask for microphone access). Nothing is wrong with your DAC. [`🎉 USB Direct Access ↗`](/features/playback/#usb-direct)
+
+### Is there A-B repeat? {#ab-repeat}
+
+Yes, with bookmarks. Add a bookmark at each point, long press a tick on the seekbar to open the list, then mark the first as Start and the second as Stop. Set the repeat mode to [Repeat Current Track](/features/playback/#repeat-modes) to keep looping between them. `🆕 v8.6.0` [`🎉 Bookmarks ↗`](/features/playback/#bookmarks)
 
 ### Can't install the APK, Google blocks it {#play-protect}
 
