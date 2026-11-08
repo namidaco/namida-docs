@@ -5,6 +5,7 @@
 // - upgrade (`⬆️ iOS 16.2+`): marks a line that needs a newer system version.
 // - version (`🆕 v8.5.0`): a `NEW` tag for the last releases and `SINCE` for older ones, linking to What's New.
 // - update (`🔄 v8.6.0`): an `UPDATED` tag, muted for older releases, linking to What's New.
+//   a topbar button (client.js) hides both kinds, a line holding only tags gets `version-tag-line` so it hides too.
 // - brand link (``[`AUR`](url)``, ``[`Telegram: Chat group`](url)``): a "get it on" store badge or a social card, like the
 //   namida README. the text after `: ` is the card's subtitle, a ` Beta` suffix adds the README's beta pill to a badge.
 import { outputPathToPathname } from '@docmd/api';
@@ -52,6 +53,8 @@ const CHIP_KINDS = [
   { start: '<code>🆕 v', regex: /<code>🆕 (v\d+\.\d+\.\d+)<\/code>/g, replace: replaceVersionChip },
   { start: '<code>🔄 v', regex: /<code>🔄 (v\d+\.\d+\.\d+)<\/code>/g, replace: replaceUpdateChip },
 ];
+const VERSION_TAG_LINE = /<p>((?:<a class="version-tag[^>]*>(?:<span [^>]*>[^<]*<\/span>)+<\/a>\s*)+)<\/p>/g;
+const VERSION_TAG_LINE_START = '<p><a class="version-tag';
 const BRAND_LINK = /<a href="([^"]+)"><code>([^<:]+?)(?:: ([^<]+))?<\/code><\/a>/g;
 const BRAND_LINK_START = '"><code>';
 const BETA_SUFFIX = ' Beta';
@@ -92,6 +95,7 @@ export function onBeforeRender(pageContext) {
     pageUrl ??= outputPathToPathname(pageContext.outputPath);
     html = html.replace(kind.regex, (chip, spec) => kind.replace(chip, spec, pageUrl));
   }
+  if (html.includes(VERSION_TAG_LINE_START)) html = html.replace(VERSION_TAG_LINE, '<p class="version-tag-line">$1</p>');
   if (html.includes(BRAND_LINK_START)) html = html.replace(BRAND_LINK, replaceBrandLink);
   pageContext.html = html;
 }
@@ -111,7 +115,10 @@ export function onPostBuild({ log }) {
 }
 
 export function getAssets() {
-  return [{ src: path.join(PLUGIN_DIR, 'client.css'), dest: 'assets/css/chips.css', type: 'css', location: 'head' }];
+  return [
+    { src: path.join(PLUGIN_DIR, 'client.js'), dest: 'assets/js/chips.js', type: 'js', location: 'head' },
+    { src: path.join(PLUGIN_DIR, 'client.css'), dest: 'assets/css/chips.css', type: 'css', location: 'head' },
+  ];
 }
 
 function replaceStripChip(chip, spec, pageUrl) {

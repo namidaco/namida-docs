@@ -180,6 +180,19 @@
   font-weight: 500;
 }
 
+.version-tags-hidden .summer-content .version-tag,
+.version-tags-hidden .version-tag-line {
+  display: none;
+}
+
+.version-tags-toggle__slash {
+  display: none;
+}
+
+.version-tags-hidden .version-tags-toggle__slash {
+  display: inline;
+}
+
 /* -- brand colors from the namida README cards, softened like gen_readme_cards.py does */
 .brand--github {
   --brand: #454a50;
