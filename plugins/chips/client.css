@@ -150,6 +150,11 @@
   --version-tag-border: var(--summer-border-strong);
 }
 
+.summer-content .version-tag--updated {
+  --version-tag-accent: color-mix(in srgb, var(--summer-sky) 75%, var(--summer-fg-muted));
+  --version-tag-border: color-mix(in srgb, var(--summer-sky) 35%, var(--summer-border));
+}
+
 .summer-content .version-tag:hover,
 .summer-content .version-tag:focus-visible {
   --version-tag-border: color-mix(in srgb, var(--summer-accent) 60%, var(--summer-border));

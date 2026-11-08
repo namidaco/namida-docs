@@ -10,7 +10,7 @@ import { renderLocalGraph } from './local-graph.js';
 
 export const plugin = {
   name: 'docs-graph',
-  version: '1.0.0',
+  version: '1.1.0',
   capabilities: ['build', 'post-build', 'assets'],
 };
 

@@ -18,7 +18,7 @@ Not so obvious features you might have missed.
 
 - Swipe up on the search button to open the keyboard, swipe down to close it.
 - Pasting a YouTube link or a playlist link in the searchbar automatically opens it.
-- Leaving search collapses the searchbar and keeps the query. Reopening it selects the query, so typing replaces it. `🆕 v8.6.0`
+- Leaving search collapses the searchbar and keeps the query. Reopening it selects the query, so typing replaces it. `🔄 v8.6.0`
 - When playing from search, you can choose the [Play Mode](/pages/library/#search) (selected track only / search results / album / first artist / first genre).
 - Links and texts you copy can appear right in the searchbar, enable [Clipboard Monitoring](/settings/6-extras-settings/#clipboard-monitoring).
 - Settings has its own search, press the Search button in settings.

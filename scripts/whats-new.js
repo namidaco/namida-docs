@@ -8,7 +8,8 @@ const root = fileURLToPath(rootUrl);
 const docsDir = join(root, 'docs');
 const outPath = join(docsDir, 'whats-new.md');
 
-const markerRegex = /`🆕 (v\d+\.\d+\.\d+)`/g;
+const markerRegex = /`(🆕|🔄) (v\d+\.\d+\.\d+)`/g;
+const updateMarkerEmoji = '🔄';
 const headingRegex = /^(#{1,6})\s+(.+?)\s*$/;
 const headingIdRegex = /\s*\{#([\w-]+)\}/;
 const chipsOnlyRegex = /^(`[^`]+`\s*)+$/;
@@ -81,8 +82,10 @@ function collectMarkers(file) {
 
     const trimmedLine = line.trim();
     const isChipsOnly = !isHeading && chipsOnlyRegex.test(trimmedLine);
-    const isNew = isHeading || (isChipsOnly && hasOnlyChipsSinceHeading);
-    for (const [, version] of line.matchAll(markerRegex)) {
+    const isNewByPlace = isHeading || (isChipsOnly && hasOnlyChipsSinceHeading);
+    for (const [, emoji, version] of line.matchAll(markerRegex)) {
+      const isUpdate = emoji === updateMarkerEmoji;
+      const isNew = isNewByPlace && !isUpdate;
       addMarker(page, headingStack, version, isNew);
     }
     if (!isHeading && trimmedLine !== '' && !isChipsOnly) hasOnlyChipsSinceHeading = false;

@@ -75,7 +75,7 @@ File extensions that will not be indexed.
 
 ### Prevent Duplicated Tracks {#prevent-duplicated-tracks}
 
-Copies of the same track show only once, even if they are in different folders. They are matched by title, artist and duration `🆕 v8.6.0` (versions with different MusicBrainz ids stay apart), and the best quality copy is kept.
+Copies of the same track show only once, even if they are in different folders. They are matched by title, artist and duration `🔄 v8.6.0` (versions with different MusicBrainz ids stay apart), and the best quality copy is kept.
 "Duplicated Tracks" at the top of the Indexer card lists each kept track with its copies. Tap a copy to play it, or open its menu to set it as default (history, playlists and stats move to it) or delete it. `🆕 v8.6.0`
 
 ### Use Media Store {#use-media-store}

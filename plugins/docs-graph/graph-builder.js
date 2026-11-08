@@ -11,7 +11,8 @@ export class GraphBuilder {
   static #TITLE_HEADING = /^#\s+(.+?)\s*$/;
   static #SECTION_HEADING = /^#{2,6}\s+(.+?)\s*\{#([\w-]+)\}\s*$/;
   static #INTERNAL_LINK = /\]\(([/#][^)\s]*)\)/g;
-  static #VERSION_MARKER = /`🆕 (v\d+\.\d+\.\d+)`/g;
+  static #VERSION_MARKER = /`(🆕|🔄) (v\d+\.\d+\.\d+)`/g;
+  static #UPDATE_MARKER_EMOJI = '🔄';
   static #NON_PAGE_FILE = /\.(?!md$|html$)\w+$/;
   static #PAGE_FILE_EXTENSION = /\.(md|html)$/;
   static #INDEX_SUFFIX = /\/index$/;
@@ -71,8 +72,9 @@ export class GraphBuilder {
       for (const match of line.matchAll(GraphBuilder.#INTERNAL_LINK)) {
         this.#rawLinks.push({ source: sourceIndex, pageUrl, href: match[1], file, line: i + 1 });
       }
-      for (const match of line.matchAll(GraphBuilder.#VERSION_MARKER)) {
-        this.#addVersion(sourceIndex, match[1]);
+      for (const [, emoji, version] of line.matchAll(GraphBuilder.#VERSION_MARKER)) {
+        const isUpdate = emoji === GraphBuilder.#UPDATE_MARKER_EMOJI;
+        this.#addVersion(sourceIndex, version, isUpdate);
       }
     }
   }
@@ -187,10 +189,10 @@ export class GraphBuilder {
     return index;
   }
 
-  #addVersion(nodeIndex, version) {
+  #addVersion(nodeIndex, version, isUpdate) {
     const node = this.#nodes[nodeIndex];
-    node.versions ??= [];
-    if (!node.versions.includes(version)) node.versions.push(version);
+    const versions = isUpdate ? (node.updatedVersions ??= []) : (node.addedVersions ??= []);
+    if (!versions.includes(version)) versions.push(version);
   }
 
   #pageIndexOf(nodeIndex) {
@@ -201,7 +203,8 @@ export class GraphBuilder {
   #collectVersions() {
     const names = new Set();
     for (const node of this.#nodes) {
-      if (node.versions !== undefined) node.versions.forEach((version) => names.add(version));
+      if (node.addedVersions !== undefined) node.addedVersions.forEach((version) => names.add(version));
+      if (node.updatedVersions !== undefined) node.updatedVersions.forEach((version) => names.add(version));
     }
     const sortedNames = [...names].sort(GraphBuilder.#compareVersions);
     return sortedNames.map((name) => {

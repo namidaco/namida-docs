@@ -38,7 +38,7 @@ Ratings are written to the tag other players read for that file type, keeping th
 
 ### Artwork {#artwork}
 
-`🆕 v8.6.0`
+`🔄 v8.6.0`
 
 Press the pencil on the artwork (or Edit Artwork when editing many tracks) to open the artwork options (Pick from storage / Paste / Search: Google / Folder / YouTube / Crop / Remove). Changes apply when you save.
 

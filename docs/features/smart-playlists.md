@@ -123,7 +123,7 @@ Good to know:
 
 #### Compare by {#compare-by}
 
-`🆕 v8.6.0`
+`🔄 v8.6.0`
 
 "Compare by" picks which parts of the dates are compared (Year / Month / Day / Weekday / Clock, in any mix), the full date by default. It replaces Clock Only, and shows for every filter except is Within Last, is not Within Last, Exists and Missing.
 

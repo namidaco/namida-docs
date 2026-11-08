@@ -130,6 +130,7 @@
       node.order = index;
       node.searchText = version.name;
       node.addedSections = [];
+      node.updatedSections = [];
       return node;
     });
     var versionNodeByName = new Map();
@@ -159,18 +160,30 @@
     nodes.forEach(function (node, index) {
       if (node.page) sectionLinks.push({ source: node.page, target: node, kind: 'contains' });
 
-      var versionNames = json.nodes[index].versions;
-      if (versionNames === undefined) return;
+      var raw = json.nodes[index];
       var page = node.page || node;
-      versionNames.forEach(function (name) {
-        var versionNode = versionNodeByName.get(name);
-        versionNode.addedSections.push(node);
-        var pairKey = page.id * versionNodes.length + versionNode.order;
-        if (versionPairs.has(pairKey)) return;
-        versionPairs.add(pairKey);
-        versionLinks.push({ source: page, target: versionNode, kind: 'version' });
-      });
+      if (raw.addedVersions !== undefined) {
+        raw.addedVersions.forEach(function (name) {
+          var versionNode = versionNodeByName.get(name);
+          versionNode.addedSections.push(node);
+          linkVersion(page, versionNode);
+        });
+      }
+      if (raw.updatedVersions !== undefined) {
+        raw.updatedVersions.forEach(function (name) {
+          var versionNode = versionNodeByName.get(name);
+          versionNode.updatedSections.push(node);
+          linkVersion(page, versionNode);
+        });
+      }
     });
+
+    function linkVersion(page, versionNode) {
+      var pairKey = page.id * versionNodes.length + versionNode.order;
+      if (versionPairs.has(pairKey)) return;
+      versionPairs.add(pairKey);
+      versionLinks.push({ source: page, target: versionNode, kind: 'version' });
+    }
 
     var pageNodes = nodes.filter(function (node) {
       return node.isPage;
@@ -207,6 +220,7 @@
       searchText: '',
       radius: 0,
       addedSections: null,
+      updatedSections: null,
     };
   }
 
@@ -810,13 +824,22 @@
       var incoming = view.incoming.get(node).filter(isVisible);
       var sections = view.children.get(node).filter(isVisible);
       var versions = view.versions.get(node).sort(compareOrder);
+      var addedInVersions = versions.filter(function (version) {
+        return hasPagePart(version.addedSections, node);
+      });
+      var updatedInVersions = versions.filter(function (version) {
+        return hasPagePart(version.updatedSections, node);
+      });
       appendList(children, 'Links to', sortNodes(outgoing));
       appendList(children, 'Linked from', sortNodes(incoming));
       appendList(children, 'Sections', sections);
-      appendList(children, 'New in', versions);
+      appendList(children, 'New in', addedInVersions);
+      appendList(children, 'Updated in', updatedInVersions);
       if (node.isVersion) {
         var addedSections = node.addedSections.filter(isVisible);
+        var updatedSections = node.updatedSections.filter(isVisible);
         appendList(children, 'New sections', sortNodes(addedSections));
+        appendList(children, 'Updated sections', sortNodes(updatedSections));
       }
       panel.replaceChildren.apply(panel, children);
     }
@@ -884,6 +907,13 @@
 
   function compareOrder(a, b) {
     return a.order - b.order;
+  }
+
+  function hasPagePart(nodes, page) {
+    return nodes.some(function (node) {
+      var nodePage = node.page || node;
+      return nodePage === page;
+    });
   }
 
   function sortNodes(nodes) {

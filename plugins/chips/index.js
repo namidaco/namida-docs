@@ -4,6 +4,7 @@
 //   limits next to their icon (`💻 iOS 17+ only`) and the wording on hover.
 // - upgrade (`⬆️ iOS 16.2+`): marks a line that needs a newer system version.
 // - version (`🆕 v8.5.0`): a `NEW` tag for the last releases and `SINCE` for older ones, linking to What's New.
+// - update (`🔄 v8.6.0`): an `UPDATED` tag, muted for older releases, linking to What's New.
 // - brand link (``[`AUR`](url)``, ``[`Telegram: Chat group`](url)``): a "get it on" store badge or a social card, like the
 //   namida README. the text after `: ` is the card's subtitle, a ` Beta` suffix adds the README's beta pill to a badge.
 import { outputPathToPathname } from '@docmd/api';
@@ -12,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 
 export const plugin = {
   name: 'chips',
-  version: '1.3.0',
+  version: '1.4.0',
   capabilities: ['build', 'post-build', 'assets'],
 };
 
@@ -23,7 +24,7 @@ const ENTRY = /^(\S+)(?:\s+(.+))?$/;
 // -- markdown escapes `<=`
 const AT_MOST = /^&lt;=\s*/;
 const AT_MOST_SIGN = '≤';
-const VERSION_MARKER = /`🆕 (v\d+\.\d+\.\d+)`/g;
+const VERSION_MARKER = /`(?:🆕|🔄) (v\d+\.\d+\.\d+)`/g;
 const NEW_RELEASES_COUNT = 2;
 const WHATS_NEW_URL = '/whats-new/';
 const GROUPS = [
@@ -49,6 +50,7 @@ const CHIP_KINDS = [
   { start: '<code>💻 ', regex: /<code>💻 ([^<]+?) only<\/code>/g, replace: replaceStripChip },
   { start: '<code>⬆', regex: /<code>⬆️? ([^<]+?)<\/code>/g, replace: replaceUpgradeChip },
   { start: '<code>🆕 v', regex: /<code>🆕 (v\d+\.\d+\.\d+)<\/code>/g, replace: replaceVersionChip },
+  { start: '<code>🔄 v', regex: /<code>🔄 (v\d+\.\d+\.\d+)<\/code>/g, replace: replaceUpdateChip },
 ];
 const BRAND_LINK = /<a href="([^"]+)"><code>([^<:]+?)(?:: ([^<]+))?<\/code><\/a>/g;
 const BRAND_LINK_START = '"><code>';
@@ -68,6 +70,7 @@ let newVersions = new Set();
 let stripsCount = 0;
 let upgradesCount = 0;
 let versionsCount = 0;
+let updatesCount = 0;
 let brandLinksCount = 0;
 
 // -- incremental dev rebuilds only pass the changed pages, the last full set stays in use
@@ -97,12 +100,13 @@ export function onPostBuild({ log }) {
   for (const problem of problems) log(problem, 'WARN');
   const newVersionsText = [...newVersions].join(' & ');
   log(
-    `chips: ${stripsCount} strips, ${upgradesCount} upgrades, ${versionsCount} versions (${newVersionsText} new), ${brandLinksCount} brand links, ${problems.length} problems`,
+    `chips: ${stripsCount} strips, ${upgradesCount} upgrades, ${versionsCount} versions (${newVersionsText} new), ${updatesCount} updates, ${brandLinksCount} brand links, ${problems.length} problems`,
   );
   problems.length = 0;
   stripsCount = 0;
   upgradesCount = 0;
   versionsCount = 0;
+  updatesCount = 0;
   brandLinksCount = 0;
 }
 
@@ -132,7 +136,17 @@ function replaceUpgradeChip(chip, spec, pageUrl) {
 
 function replaceVersionChip(chip, version) {
   versionsCount++;
-  return renderVersionTag(version);
+  const isNew = newVersions.has(version);
+  const label = isNew ? 'NEW' : 'SINCE';
+  const modifier = isNew ? '' : ' version-tag--old';
+  return renderVersionTag(version, label, modifier);
+}
+
+function replaceUpdateChip(chip, version) {
+  updatesCount++;
+  const isRecent = newVersions.has(version);
+  const modifier = isRecent ? ' version-tag--updated' : ' version-tag--old';
+  return renderVersionTag(version, 'UPDATED', modifier);
 }
 
 function replaceBrandLink(link, url, label, subtitle) {
@@ -203,11 +217,8 @@ function renderIcon(platform, version) {
   return `<span class="platforms__icon platforms__icon--${platform.id} platforms__icon--on"></span>${versionHtml}`;
 }
 
-function renderVersionTag(version) {
-  const isNew = newVersions.has(version);
+function renderVersionTag(version, label, modifier) {
   const anchor = version.replaceAll('.', '-');
-  const label = isNew ? 'NEW' : 'SINCE';
-  const modifier = isNew ? '' : ' version-tag--old';
   return `<a class="version-tag${modifier}" href="${WHATS_NEW_URL}#${anchor}"><span class="version-tag__label">${label}</span><span class="version-tag__version">${version}</span></a>`;
 }
 

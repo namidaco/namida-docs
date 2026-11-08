@@ -25,7 +25,7 @@ Moved your music to a new folder? This updates all track paths from the old dire
 ### Fix yt-dlp Big Thumbnail Size {#fix-ytdlp-thumbnail}
 
 Files downloaded by yt-dlp can have a huge embedded thumbnail (usually a re-encoded webp). This re-embeds the best available thumbnail without converting it, so files get smaller (around 1MB to 128KB per image) and artworks load faster. The audio is untouched.
-Music uploads get a square cover instead (thumbnails with side bars are cropped). `🆕 v8.6.0`
+Music uploads get a square cover instead (thumbnails with side bars are cropped). `🔄 v8.6.0`
 
 ::: callout warning
 The files in the selected folder are replaced.
