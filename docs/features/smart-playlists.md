@@ -9,6 +9,8 @@ A smart playlist is a set of rules instead of a list of tracks, so it updates it
 
 Create one from the add button in the playlists page, or from the smart playlists page. [`📄 Smart Playlists Page ↗`](/pages/library/#smart-playlists)
 
+Pin one from its menu to show it in the Pinned section of the Home page. `🆕 v8.6.0`
+
 Tracks are found only when you open the playlist, and can't be added manually. [`📄 Why aren't smart playlists treated as normal playlists? ↗`](/faq/#smart-playlists)
 
 ### How Rules Combine {#combining}
@@ -137,6 +139,8 @@ Keep only part of the matching tracks (like 25 tracks, 1 hour or 4 GB), selected
 
 Select by Random (Daily) for a new pick every day.
 
+To keep the tracks of only a few albums, artists, genres or folders (like 1 genre), set "Maximum". The first ones met in the selected order are picked, so Random (Daily) gives a new genre every day. Untagged tracks are left out. `🆕 v8.6.0`
+
 ### Sorting {#sorting}
 
 The sort button at the top orders the tracks (after the limit picked them). Several sorters work too (like artist, then year, then title). `🆕 v7.5.0`
@@ -203,6 +207,8 @@ Several groups, Per and field references.
   - Group 2 (All): Title <u>does not Contain</u> `live`, Album <u>does not Contain (Regex)</u> `live|concert`.
 - **Last summer on repeat, 2 hours**: Total Listens (Between Dates) <u>is Greater Than + is Same</u> `10` with Between Dates <u>is in Between</u> `2026-06-01` and `2026-08-31`, Limit `2 Hours` selected by Most Played, sorted by Random.
 - **Rediscover a year**: First listen <u>is in Between</u> `2022-01-01` and `2022-12-31`, Last Listen <u>is not Within Last</u> `1 Years`, Favourite <u>is False</u>, Rating <u>is Greater Than + is Same</u> `60`.
+- **Forgotten genre of the day**: Total Listens per Genre (Sum) <u>is Greater Than</u> `100`, Total Listens (Between Dates) per Genre (Sum) <u>is Same</u> `0` with Between Dates <u>is Within Last</u> `3 Months`, Limit `100 Tracks` with Maximum `1 Genre`, selected by Random (Daily). One genre you used to play a lot, a different one every day. `🆕 v8.6.0`
+- **Underground genre of the day**: Total Listens per Genre (Sum) <u>is Greater Than</u> `200`, Total Listens per Artist (Sum) <u>is Smaller Than</u> `20`, Limit `100 Tracks` with Maximum `1 Genre`, selected by Random (Daily). Less played artists from a genre you play a lot. `🆕 v8.6.0`
 
 ---
 

@@ -39,7 +39,7 @@ Namida shows standard media controls wherever the system offers them:
 - Headset and Bluetooth buttons.
 - Android Auto and Wear OS, where Namida shows up as a media app with the current queue to play from (repeat and shuffle included). The queue can be turned off with the `ANDROID_AUTO_AND_WEAR` [flag](/settings/6-extras-settings/#integrations). `🆕 v8.2.0`
 - Windows media keys and the media flyout (with a timeline you can seek on).
-- Linux desktop media widgets and shell extensions, through MPRIS.
+- Linux desktop media widgets and shell extensions, through MPRIS (with the file location, so widgets can find lyrics files next to the track).
 - The iOS lock screen and Control Center, and the macOS Now Playing widget and media keys. `🆕 v8.5.0`
 
 Other apps can read and control the same session too. [`🎉 Automation & Other Apps ↗`](/features/automation/)
@@ -60,11 +60,12 @@ Add "Namida play/pause" to Control Center to play and pause without opening anyt
 
 ### Status Bar Lyrics {#status-bar-lyrics}
 
-`🆕 v8.2.0` `💻 Android+iOS+macOS only`
+`🆕 v8.2.0` `💻 Android+iOS+macOS+Linux only`
 
 Shows the current lyrics line in the status bar, on systems and modules that support it (ColorOS, HyperLyric, SuperLyric, Flyme and Lyricon).
 `⬆️ iOS 16.2+` A Live Activity shows the title, artist and current line on the lock screen and the Dynamic Island. `🆕 v8.5.0`
 On macOS, the line shows next to the menu bar icon. `🆕 v8.5.0`
+On Linux, the whole lyrics go through MPRIS, for shell widgets that show lyrics from the player (like Noctalia, waylrc and Desktop Lyric). `🆕 v8.6.0`
 Pick the ones you use from `STATUS_BAR_LYRICS`, in the flags of the Integrations card in Extras settings. [`⚙️ Configure Integrations ↗`](/settings/6-extras-settings/#integrations)
 
 ### Discord Rich Presence {#discord}

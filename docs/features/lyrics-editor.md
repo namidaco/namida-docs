@@ -21,7 +21,7 @@ On a wide window, the controls sit next to the lines instead of under them. [`�
 
 ### Getting the Text In {#text}
 
-New lyrics open the Text dialog directly, type or paste the lyrics (one line per line) and press Save. Empty lines are skipped.
+New lyrics open the Text dialog directly, type or paste the lyrics (one line per line) and press Save. Empty lines between verses are kept `🆕 v8.6.0`.
 
 Open Text from the ⋮ menu any time to edit all lines at once. Lines you keep keep their timing, a changed line keeps the timing of the line it replaced, and new lines start without one.
 Pasting synced lyrics (LRC, or subtitles like SRT) replaces everything instead, timing included.
@@ -33,8 +33,10 @@ Pasting synced lyrics (LRC, or subtitles like SRT) replaces everything instead, 
 3. Keep going until the end, then press Save.
 
 Tapping a line also jumps to its start.
+Tap a line number to play that line without selecting it. `🆕 v8.6.0`
 The line being played is highlighted, and the list follows it (after you scroll it yourself, it waits a few seconds before following again).
 Instrumental breaks are empty lines (shown as ♪). Sync them where the singing stops, so the lyrics hide during the break. To add one, long press a line and press Add.
+Section headers (like `[Chorus]`) and empty lines between verses (shown as a short line) stay without a time. Sync skips them, and setting a time on one makes it a normal line. `🆕 v8.6.0`
 
 ::: callout tip
 While paused, Sync uses the exact position. Seek to the right spot with the timeline or the -2s / +2s buttons, then press Sync.
@@ -112,6 +114,7 @@ From the ⋮ menu:
 - Stretch Lyrics Duration, fits lyrics made for another version. Enter how much faster this version is, like `1.25` for a nightcore version or `0.8` for a slowed one.
 - Clear, removes all timings to start syncing again.
 - Latency, see [below](#latency).
+- Font Scale, the text size of the lines list (tap the percent to reset). `🆕 v8.6.0`
 - Shortcuts, desktop only, see [below](#shortcuts).
 - Discard, shown when there is a draft, see [Drafts](#drafts).
 
@@ -141,6 +144,7 @@ The saved lyrics are a normal LRC file that other players can read:
 
 - Lines in time order, with word timing in the enhanced format (`<00:12.30>word`).
 - Singers as `v1:` / `v2:`, background vocals as `[bg:...]`, and translations as a second line with the same time.
+- Section headers and empty lines between verses where they were. `🆕 v8.6.0`
 - A `[length:]` tag with the track duration, so [Stretch lyrics duration](/settings/6-extras-settings/#lyrics) can adapt them to other versions of the track.
 - Tags of the lyrics you opened (artist, title and so on) are kept. An `[offset:]` tag is applied to the times instead of being saved.
 

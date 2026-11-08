@@ -20,9 +20,9 @@ Android only:
 - `ANDROID_AUTO_AND_WEAR`, shows the queue in Android Auto and Wear OS, on by default.
 - `NOW_PLAYING_BROADCAST`, sends the current track to Tasker and other automation apps. [`🎉 Broadcasts ↗`](/features/automation/#broadcasts)
 
-Android, iOS and macOS:
+Android, iOS, macOS and Linux:
 
-- `STATUS_BAR_LYRICS`, the current lyrics line in the status bar of supported systems (ColorOS & HyperLyric, SuperLyric, Flyme & Lyricon), or in the iOS Live Activity and the macOS menu bar `🆕 v8.5.0`. [`🎉 Status Bar Lyrics ↗`](/features/system-integration/#status-bar-lyrics)
+- `STATUS_BAR_LYRICS`, the current lyrics line in the status bar of supported systems (ColorOS & HyperLyric, SuperLyric, Flyme & Lyricon), or in the iOS Live Activity, the macOS menu bar and Linux shell widgets (through MPRIS) `🆕 v8.5.0`. [`🎉 Status Bar Lyrics ↗`](/features/system-integration/#status-bar-lyrics)
 
 All platforms:
 

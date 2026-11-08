@@ -51,7 +51,9 @@ Not so obvious features you might have missed.
 - Audio configs (speed, pitch, effects) can be set per item, open the Sound Control page with the audio effects icon in the player.
 - In the equalizer's Sliders view, letting go of a band close to 0 snaps it to exactly 0.
 - Long press an empty spot in the equalizer curve to add a band right there. [`🎉 Equalizer ↗`](/features/playback/#equalizer)
-- Playing the current track from another list rebuilds the queue silently without interrupting playback.
+- Playing the current track from another list rebuilds the queue without interrupting playback.
+  - A snackbar shows the new queue, press Undo to bring back the old one. `🆕 v8.6.0`
+- Tapping the playing track again in the same list toggles play/pause.
 - Open any track's dialog and press play to quickly start a new queue with only that track.
 - Enter fullscreen easily: [`🎉 Video Fullscreen ↗`](/features/youtube/#fullscreen)
   - Double tap the video in the local player.

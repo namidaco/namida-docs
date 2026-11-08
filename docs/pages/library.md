@@ -14,7 +14,7 @@ Press the sort button to change the sort, or the arrow beside it to reverse the 
 ### Home {#home}
 
 Your personalized start page: mixes generated from your history, recent listens, top recents, recently added, top recent albums & artists, and Lost Memories (tracks you listened to around this time years ago). Sections can be toggled and reordered.
-Pinned playlists get a section of their own too. `🆕 v8.2.0`
+Pinned playlists and smart playlists get a section of their own too. `🆕 v8.2.0`
 
 Top Recents and Lost Memories have chips to pick how many days back or which year they show.
 
@@ -22,6 +22,7 @@ The mixes (empty ones move to the end):
 
 - **Recommended**, what you're into lately, and what you played around this time last year.
 - **Supremacy**, the playing track and the tracks you usually listen to with it.
+- **Now Ago**, tracks you usually play at this hour of the day.
 - **Top Recents**, your most played tracks of the last few days.
 - **Underrated**, tracks you played only a few times and haven't heard in a while.
 - **Lost Partners**, tracks you used to play a lot but haven't heard in a long time (judged by how often you usually play each one).

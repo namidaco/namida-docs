@@ -13,8 +13,12 @@ The everyday side of this is in [`🎉 System Integration ↗`](/features/system
 - Start playback with anything Namida accepts through "Open with" or share (files, folders, playlists, YouTube links, text with links and party invites). [`🎉 Open With & Share ↗`](/features/system-integration/#open-with)
 - Control playback through the media session (play / pause / stop / next / previous / seek, plus repeat and shuffle where the app offers them). [`🎉 Media Controls ↗`](/features/system-integration/#media-controls)
 - Read the current track (title, artist, album, duration and position) with media or notification access. Tasker, scrobblers (Pano Scrobbler, Last.fm apps, etc) and watch companions all use this.
-- Read the ids from the file tags (MusicBrainz, ISRC, AcoustID, etc) in the media session, under keys like `org.musicbrainz.MUSICBRAINZ_TRACKID`, so scrobblers can match the exact recording (although none read them yet). `💻 Android only` `🆕 v8.2.0`
+- Read the ids from the file tags (MusicBrainz, ISRC, AcoustID, etc) in the media session, under keys like `org.musicbrainz.MUSICBRAINZ_TRACKID`, so scrobblers can match the exact recording (Pano Scrobbler uses them for ListenBrainz). `💻 Android only` `🆕 v8.2.0`
 - Get every track change, play and pause with the full track info (file path, queue position, MusicBrainz ids), through broadcasts or a webhook. `🆕 v8.2.0` [See below](#broadcasts)
+
+::: callout tip
+The ids might need a [re-index](/settings/2-indexer-settings/#refresh-reindex) if you were on an older version.
+:::
 
 ### Broadcasts & Webhook {#broadcasts}
 
@@ -39,7 +43,7 @@ Broadcasts and the webhook send the same fields:
   - Broadcasts: extras with the same names.
 - `event`: `trackChanged` / `play` / `pause`
 - `path` is the file path, YouTube videos have `videoId` instead.
-- Tag ids (like `MUSICBRAINZ_TRACKID`) are only there when the file has them.
+- Tag ids (like `MUSICBRAINZ_TRACKID`) are only there when the file has them. Artist ids with several values are joined with `; `.
 
 ```json
 {

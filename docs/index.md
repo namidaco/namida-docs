@@ -34,10 +34,11 @@ Then browse [Features](/features/) to see everything else, and [Tips & Tricks](/
 - Streamed content is cached and playable offline, nothing is fetched twice for no reason.
 - The cache priority system protects what matters when cleaning up, and VIP items are never auto deleted. Private and deleted YouTube videos become VIP automatically.
 - Sync between devices only adds, it never wipes the other device's data.
-- Listens can't be deleted, only replaced, your history stays truthful.
+- Listens are never removed automatically. You can replace them, or remove them one by one (or a whole imported source at once), so your history stays truthful.
 - Every queue is saved automatically and stays forever, the only way to remove one is to delete it yourself. [`📄 Queues Page ↗`](/pages/library/#queues)
 - The Refresh on Startup scan skips deletions, files that are no longer reachable don't get removed from your library suddenly. [`⚙️ Configure Refresh on Startup ↗`](/settings/2-indexer-settings/#refresh-on-startup)
-- Destructive actions like deleting files sit behind the advanced dialog, and deleted paths are saved to a file in the app data folder.
+- Destructive actions like deleting files sit behind the advanced dialog and ask to confirm first. Deleted paths are saved to a file in the app data folder.
+- Actions like unfavouriting / unliking / disliking ask to confirm first too, since adding an item back loses its original place in the list.
 
 **The original experience is cherished.** Content is presented the way it was made:
 

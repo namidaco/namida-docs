@@ -252,10 +252,29 @@ Synced lyrics can show a translation under each line, written in any of these wa
 ```
 
 - Same time on the next line, this is how the [lyrics editor](/features/lyrics-editor/#saving) saves them.
+- Same time in a separate block after all the original lines.
 - `|` with the translation right after it, `loud|Chaque` works but `loud | Chaque` stays one line.
 - 2 or more spaces.
 
 Lines with word by word timing only support the same time way.
+
+#### Lines Without a Time {#lyrics-untimed-lines}
+
+`🆕 v8.6.0`
+
+Synced lyrics can have lines without a time, like a section header or an empty line between verses. They show dimmed between the synced lines, and tapping one jumps to the line under it.
+
+```text
+[Chorus]
+[00:12.16]Can we put it out?
+[00:14.50]Every word's too loud
+
+[Verse 2]
+[00:20.10]We gotta slow down
+```
+
+When the translation is a separate block, only the headers and empty lines of the original block show.
+TTML lyrics show an empty line between verses.
 
 ### Widescreen Player {#widescreen-player}
 
@@ -319,12 +338,16 @@ Mark spots in a track or video to come back to them.
 
 `🆕 v8.2.0`
 
-Local tracks and videos with embedded chapters show them (existing files need a re-index).
+Local tracks and videos with embedded chapters show them.
 
 - Gaps on the seekbar mark them, tap near one to jump there.
 - The current chapter shows beside the audio/video info in the player, tap it for the full list. Track info and the track menu list them too.
 - Skip between them with the notification buttons, `Shift` + `←` / `→`, or the next/previous buttons with [Next/Previous jump between chapters](/settings/3-playback-settings/#skip-buttons-chapters).
 - YouTube downloads keep their chapters.
+
+::: callout tip
+Chapters might need a [re-index](/settings/2-indexer-settings/#refresh-reindex) if you were on an older version.
+:::
 
 ---
 

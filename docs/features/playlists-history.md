@@ -21,7 +21,7 @@ Normal playlists with custom order and the ability to set custom artworks. Also:
 - Custom order for playlist tracks, press the lock icon at the top to enable reordering or removing. If a playlist has active sorters, disable them first to reorder manually.
 - Playlists can be searched, and can have moods (which the queue uses when adding tracks by mood). Search matches [tags](#playlist-tags) too.
 - Pin a playlist from its menu to keep it at the top. `🆕 v7.8.0`
-- Pinned playlists can show on the Home page too, enable Pinned Playlists from its configure button. `🆕 v8.2.0`
+- Pinned playlists and smart playlists can show on the Home page too, newest pin first. Enable Pinned from its configure button. When more than one type is pinned, chips filter the section (All / Playlists / Smart Playlists, etc). `🆕 v8.2.0`
 - Select many playlists with the checklist icon at the top, to act on them at once (tag / pin / play / merge / export / delete). `🆕 v7.8.0`
 - M3U playlists keep their comment, moods, tags and sorting. `🆕 v7.8.0`
   - The name, description, moods and tags are also read from and written to the M3U file (`#PLAYLIST`, `#DESCRIPTION`, `#TAGS` for moods and `#CATEGORY` for tags), so other apps can use them. Edits made in Namida and in other apps are both kept. `🆕 v8.4.0`
