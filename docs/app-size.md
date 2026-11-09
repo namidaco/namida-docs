@@ -13,17 +13,17 @@ The sizes come from the `arm64-v8a` APK of v8.5.0 beta, which is 55.5 MB.
 | Part | Size | What it's for |
 | --- | ---: | --- |
 | FFmpeg | 13.2 MB | Merges YouTube video and audio, removes sponsor segments, splits chapters, converts files, makes video thumbnails and compresses images. It also reads the tags that TagLib can't, and decodes audio for the [waveform seekbar](/features/playback/#waveform), tempo and key detection and the lossless check. |
-| Namida's code | 12.3 MB | Every feature and screen of Namida and the libraries it uses (like the YouTube client, SFTP and SMB), with its 30 languages. |
-| Flutter engine | 5.2 MB | Draws the whole interface. |
-| Images | 4.4 MB | The 17 [app icon](/settings/4-customization-settings/#app-icon) styles (the launcher icons and their previews in the app), the jellyfish mascot art (1.6 MB) and other images. |
-| Android code | 4.1 MB | The Android player (about a quarter of it), notifications, the [home screen widget](/features/home-widget/) and the in-app web view. |
-| JavaScript engine | 3.9 MB | Runs YouTube's player code, which YouTube playback and downloads need. |
-| Playback decoders | 3.4 MB | Play the formats that Android can't play on its own (like APE, WavPack, WMA, ALAC, AC3, DTS and WMV), and AV1 videos on devices without AV1 support. |
-| Network client | 2.9 MB | Faster network requests for artworks, lyrics, YouTube and downloads. |
-| Android resources | 1.7 MB | Layouts and texts of the Android parts. |
+| Namida's code | 12.3 MB | Every feature and screen of Namida, with its 30 languages. This includes the libraries it's built with (YouTube, media servers, network shares, sync, backups, etc). |
+| Flutter engine | 5.2 MB | Runs Namida's code and draws the whole interface. |
+| Images | 4.4 MB | The ~17 [app icon](/settings/4-customization-settings/#app-icon) styles (the launcher icons and their previews in the app), the jellyfish mascot art (1.6 MB) and other images. |
+| Android code | 4.1 MB | Code written for Android itself (outside Flutter): the player (1.3 MB), the base Android libraries that most apps include (0.9 MB), the [home screen widget](/features/home-widget/) (0.6 MB), the old tag reader (0.35 MB), and Flutter's Android part, notifications, the in-app web view and small helpers. |
+| JavaScript engine | 3.9 MB | YouTube video links don't work until YouTube's own player code decodes them. This engine runs that code, so Namida can play and download YouTube videos. |
+| Playback decoders | 3.4 MB | Play the formats that Android can't play natively (like APE, WavPack, WMA, ALAC, AC3, DTS and WMV), and AV1 videos on devices without AV1 support. |
+| Network client | 2.9 MB | Faster network requests for artworks, lyrics, YouTube data and downloads. |
+| Android resources | 1.7 MB | Texts, styles and layouts of the Android parts, most of them from Android libraries. Their texts come in over 80 languages, and the home screen widget library alone has over 760 layouts. |
 | Database | 1.0 MB | SQLite, which holds the library, the stats and the caches. |
-| Tag reader | 0.7 MB | TagLib, reads and writes tags while indexing and in the [tag editor](/features/tag-editor/). |
-| Other | 2.7 MB | Fonts, small helpers (drag and drop, Japanese romanization, USB DAC output and sound effects), licenses and packaging. |
+| Tag reader | 0.7 MB | TagLib, which reads and writes tags while indexing and in the [tag editor](/features/tag-editor/). |
+| Other | 2.7 MB | Fonts, licenses and small helpers (drag and drop, pasting images in the tag editor, Japanese romanization, [USB DAC output](/features/playback/#usb-direct) and [sound effects](/features/playback/#sound-effects)). The rest is code that the other parts share and the APK's own files. |
 
 ### Why Not Smaller {#why-not-smaller}
 
@@ -45,7 +45,7 @@ Storing the code uncompressed would make both the download and the installed app
 The other builds have the same parts, with a few differences:
 
 - **Windows**: the installer is about 55 MB and the installed app takes about 190 MB. Of that, FFmpeg takes 50 MB, the mpv player (which plays audio and video on desktop) 28 MB and the video renderer 18 MB.
-- **iOS**: the IPA is 72 MB. The 17 app icon styles take 24 MB of it, because iOS stores every icon size of every style. Namida's code takes 18 MB and FFmpeg 8 MB.
+- **iOS**: the IPA is 72 MB. The ~17 app icon styles take 24 MB of it, because iOS stores every icon size of every style. Namida's code takes 18 MB and FFmpeg 8 MB.
 - **macOS**: the `universal` zip is 99 MB. It runs on both Intel and Apple Silicon Macs, so it has every piece of code twice. The `arm64` zip (Apple Silicon) is about 51 MB and the `x86_64` zip (Intel) is about 54 MB.
 
 Linux builds aren't listed, their size depends a lot on the format (some use the system's libraries and others bundle everything), but they generally follow the same rules above.
