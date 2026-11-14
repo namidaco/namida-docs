@@ -60,6 +60,16 @@ Namida keeps its own history and stats locally, and you can import your LastFm h
 Albums stored as one big file with a `.cue` sheet show as a single track. In Namida, each track is its own file, and most features are built around that (tag editing, lyrics files, deleting, sharing, waveform). A track that is only a part of a bigger file would only work halfway in most of them.
 Splitting the album once doesn't lose any quality, and gives proper tracks that work everywhere. [`📒 Split a CUE album ↗`](/guides/medium/#split-cue)
 
+### Delete Missing Tracks {#delete-missing-tracks}
+
+Removing missing tracks from history, playlists and queues all at once goes against [preservation](/#philosophy), the main principle of Namida:
+
+- Listens show what you played at that time, even after the file is gone.
+- A playlist can keep a record of tracks, whether their files exist or not.
+- A missing track isn't always deleted (moved, renamed, SD card removed, etc). Updating its path keeps its stats and listens. [`📒 Missing Tracks Guide ↗`](/guides/medium/#missing-paths)
+
+Playing a missing track opens a dialog to update its path, and skips to the next track after a few seconds. To clean one up, remove it from the playlists and queues you find it in, and its listens from history one by one.
+
 ### Marquee Effect {#marquee}
 
 Scrolling text is distracting and doesn't look so good. Long texts get faded out instead.

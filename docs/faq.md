@@ -175,6 +175,10 @@ No, and not planned. Importing your Spotify history and favourites (liked songs)
 
 No, and not planned. Split the album into separate tracks once, it doesn't lose any quality. See [Not Planned](/not-planned/#cue-sheets) for the reasoning. [`📒 Split a CUE album ↗`](/guides/medium/#split-cue)
 
+### Can I remove missing tracks from history and playlists? {#delete-missing-tracks}
+
+No, and not planned. Playing a missing track skips to the next one after a few seconds, and if the files were only moved or renamed, update their paths instead. See [Not Planned](/not-planned/#delete-missing-tracks) for the reasoning. [`📒 Missing Tracks Guide ↗`](/guides/medium/#missing-paths)
+
 ### Some FLAC files go silent at some point {#flac-silent}
 
 The file has a damaged spot, usually from a bad download or rip.
