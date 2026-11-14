@@ -32,7 +32,7 @@ Not planned. Importing your Spotify history and favourites (liked songs) is supp
 
 Spotify is notorious for blocking unofficial clients. Even if Namida added support, a DMCA takedown would end it quickly. We are barely keeping YouTube support alive as is.
 
-As an alternative, convert your Spotify playlists to YouTube Music, then sign in inside Namida to access them.
+As an alternative, convert your Spotify playlists to YouTube Music, then sign in inside Namida to access them. [`📒 Import Guide ↗`](/guides/beginner/#import-data)
 
 Alternatives: [spotiflac](https://github.com/spotbye/SpotiFLAC) or [other tools like it](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/audio/#wiki_.25B7_audio_ripping_tools)
 

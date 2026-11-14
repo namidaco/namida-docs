@@ -171,6 +171,10 @@ See Not Planned for the reasoning on [Google Play](/not-planned/#google-play) an
 
 No, and not planned. Importing your Spotify history and favourites (liked songs) is supported, but that's all. See [Not Planned](/not-planned/#spotify) for the reasoning and alternatives.
 
+### Can I import my Spotify or Apple Music playlists? {#spotify-playlists}
+
+Not directly, their data exports bring only your history and favourites. Move your playlists to YouTube Music instead, then sign in inside Namida to play them. [`📒 Import Guide ↗`](/guides/beginner/#import-data)
+
 ### Are CUE sheets supported? {#cue-sheets}
 
 No, and not planned. Split the album into separate tracks once, it doesn't lose any quality. See [Not Planned](/not-planned/#cue-sheets) for the reasoning. [`📒 Split a CUE album ↗`](/guides/medium/#split-cue)

@@ -57,6 +57,23 @@ Added lyrics but the old ones keep showing? A cached copy is winning, see [`📄
 
 For word by word sync, duets, translations and more, see [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/).
 
+### Import your history, favourites and playlists from other apps {#import-data}
+
+Bring your listens, favourites and playlists from YouTube, Last.fm, Spotify, ListenBrainz or Apple Music.
+
+1. Open Settings -> Backup & Restore -> Import data, and pick the source. [`⚙️ Configure Imports ↗`](/settings/7-backup-restore-settings/#import-data)
+2. Follow its guide to get your data export, then download it.
+3. Choose the export files, then press Import all. Listens and favourites get matched to the tracks in your library.
+
+Playlists come only from a YouTube takeout. For Spotify, Apple Music or other services, move them to YouTube Music instead:
+
+1. Transfer your playlists to YouTube Music with a transfer tool ([TuneMyMusic](https://www.tunemymusic.com), [Soundiiz](https://soundiiz.com), etc).
+2. Sign in to the same account in Namida. [`⚙️ Configure Accounts ↗`](/settings/5-youtube-settings/#accounts)
+3. Open Playlists in the YouTube tab, your account playlists show there. [`📄 YouTube Playlists Page ↗`](/pages/youtube/#playlists)
+4. (Optional) Open a playlist's menu and press "Import playlist" to keep a copy in Namida, which works without signing in. [`🎉 YouTube Playlists feature ↗`](/features/youtube/#playlists)
+
+These playlists play from YouTube, they don't get matched to your library files.
+
 ---
 
 <sub>Author: @MSOB7YY<br>Writer: @claude</sub>

@@ -34,7 +34,7 @@ Sync app data between your devices over the local network, see the [Sync feature
 
 ### Import data {#import-data}
 
-Pick a source, then choose what to import from its export (history / favourites / playlists) `🆕 v8.2.0`
+Pick a source, then choose what to import from its export (history / favourites / playlists) `🆕 v8.2.0` [`📒 Import Guide ↗`](/guides/beginner/#import-data)
 
 - YouTube, a takeout export (zip files or the extracted folder), for watch history, favourites (liked videos) and playlists. Watches get matched with your library or YouTube videos and merged into history.
   - Subscriptions too, they become your subscribed channels in Namida (include them when exporting the takeout). `🆕 v8.4.0`
