@@ -1,11 +1,13 @@
 // by claude
 // Section line: a tree line in the left gutter of each docs page, a trunk with a tick into every section heading
-// and a nested line with ticks for its subsections. Redrawn only when the page content changes size or a new page mounts.
+// and a nested line with ticks for its subsections. A `---` ends the section above it, and the headings after it get their own
+// section level. Redrawn only when the page content changes size or a new page mounts.
 (function () {
   'use strict';
 
   var ARTICLE_SELECTOR = '.summer-content';
   var HEADING_SELECTOR = ':scope > h2, :scope > h3, :scope > h4';
+  var OUTLINE_SELECTOR = HEADING_SELECTOR + ', :scope > hr';
   var TITLE_SELECTOR = ':scope > h1';
   var END_SELECTOR = ':scope > hr:has(+ .docs-graph-local)';
   var SVG_SELECTOR = ':scope > .section-line';
@@ -48,26 +50,39 @@
     return ' M' + forkStartX + ' ' + sectionY + TURN_DOWN + ' V' + lineEndY;
   }
 
-  // -- reads layout only, draw() writes the svg after it so a redraw costs no extra layout
-  function buildPath(article, headings) {
+  function getSectionTagName(nodes, start) {
     var minLevel = 6;
-    for (var l = 0; l < headings.length; l++) {
-      var tagName = headings[l].tagName;
+    for (var i = start; i < nodes.length; i++) {
+      var tagName = nodes[i].tagName;
+      if (tagName === 'HR') break;
       var level = Number(tagName.charAt(1));
       if (level < minLevel) minLevel = level;
     }
-    var sectionTagName = 'H' + minLevel;
+    return 'H' + minLevel;
+  }
 
+  // -- reads layout only, draw() writes the svg after it so a redraw costs no extra layout
+  function buildPath(article, nodes) {
     var title = article.querySelector(TITLE_SELECTOR);
     var startY = title === null ? 0 : title.offsetTop;
     var endY = getEndY(article);
     var outer = 'M' + TRUNK_X + ' ' + startY + ' V' + endY;
     var inner = '';
+    var sectionTagName = getSectionTagName(nodes, 0);
     var sectionY = startY;
     var lastSubsectionY = null;
 
-    for (var i = 0; i < headings.length; i++) {
-      var heading = headings[i];
+    for (var i = 0; i < nodes.length; i++) {
+      var node = nodes[i];
+      if (node.tagName === 'HR') {
+        if (lastSubsectionY !== null) inner += getSubTrunkPath(sectionY, lastSubsectionY);
+        lastSubsectionY = null;
+        sectionY = node.offsetTop;
+        sectionTagName = getSectionTagName(nodes, i + 1);
+        continue;
+      }
+
+      var heading = node;
       var halfLineHeight = getHalfLineHeight(heading);
       var headingY = heading.offsetTop + halfLineHeight;
       var isSection = heading.tagName === sectionTagName;
@@ -103,16 +118,15 @@
 
   function draw() {
     var article = observedArticle;
-    var headings = article.querySelectorAll(HEADING_SELECTOR);
     var svg = article.querySelector(SVG_SELECTOR);
-    if (headings.length === 0) {
+    if (article.querySelector(HEADING_SELECTOR) === null) {
       article.classList.remove(ACTIVE_CLASS);
       if (svg !== null) svg.remove();
       return;
     }
 
     article.classList.add(ACTIVE_CLASS);
-    var line = buildPath(article, headings);
+    var line = buildPath(article, article.querySelectorAll(OUTLINE_SELECTOR));
     if (svg === null) {
       svg = createSvg();
       article.prepend(svg);

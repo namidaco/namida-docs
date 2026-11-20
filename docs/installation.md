@@ -5,7 +5,10 @@ description: "How to install Namida on Android, Windows, Linux, iOS and macOS"
 
 # Installation
 
-Namida runs on Android, Windows and Linux. iOS and macOS are in beta, see [iOS & macOS](#ios-macos) for what they don't have yet.
+**Namida runs on Android, Windows and Linux.**
+iOS and macOS are in beta, see [iOS](#ios-differences) and [macOS](#macos-differences) for what they don't have yet.
+
+Features that only work on some platforms are labeled like `💻 Android only`. Features that work everywhere except iOS or macOS have no label, so they are listed in those two sections instead.
 
 There are two channels:
 
@@ -164,42 +167,61 @@ flatpak uninstall --user com.msob7y.namida
 
 Nix (Home Manager) is available at [namida-nix](https://codeberg.org/iWisp360/namida-nix).
 
-## iOS & macOS {#ios-macos}
+## macOS {#macos}
 
-iOS and macOS are new and only have beta builds for now, in the [beta releases](https://github.com/namidaco/namida-snapshots/releases). `🆕 v8.5.0`
+macOS is new and only has beta builds for now, in the [beta releases](https://github.com/namidaco/namida-snapshots/releases). `🆕 v8.5.0`
 
-[`GitHub Beta`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AltStore Beta`](https://namidaco.github.io/namida-snapshots/altstore-source.json)
+[`GitHub Beta`](https://github.com/namidaco/namida-snapshots/releases/latest)
 
-Features that only work on some platforms are labeled like `💻 Android only`. Features that work everywhere except iOS or macOS have no label, so they are listed [below](#ios-differences) instead.
-
-#### Which file {#apple-files}
+#### Which file {#macos-files}
 
 | File | Pick it if |
 | --- | --- |
-| `Namida-v<version>-ios.ipa` | iPhone or iPad with iOS 15+. It's unsigned, so it's installed by sideloading. |
 | `Namida-v<version>-macos-universal.dmg` | Any Mac (Apple Silicon and Intel). |
 | `Namida-v<version>-macos-arm64.dmg` | Apple Silicon Macs only, smaller than universal. |
 | `Namida-v<version>-macos-x86_64.dmg` | Intel Macs only, smaller than universal. |
 
-Each macOS file also comes as a `.zip` with the same app inside.
+Each file also comes as a `.zip` with the same app inside.
 
-#### Installing {#apple-install}
+#### Installing {#macos-install}
 
-On iOS, sideload the ipa with SideStore, AltStore or Sideloadly. In SideStore or AltStore, add this source to get updates:
-
-```text
-https://namidaco.github.io/namida-snapshots/altstore-source.json
-```
-
-On macOS, open the dmg and drag Namida to Applications. The app isn't signed, so allow it the first time in System Settings -> Privacy & Security -> Open Anyway. If macOS says the app is damaged, run:
+Open the dmg and drag Namida to Applications. The app isn't signed, so allow it the first time in System Settings -> Privacy & Security -> Open Anyway. If macOS says the app is damaged, run:
 
 ```bash
 xattr -dr com.apple.quarantine /Applications/Namida.app
 ```
 
-Installing a newer build over the old one keeps your data, on both.
+Installing a newer build over the old one keeps your data.
 
-#### iOS {#ios-differences}
+#### Differences {#macos-differences}
+
+Works differently on macOS:
+
+- Every shortcut that uses `Ctrl` on Windows and Linux uses `Cmd` instead, except `Ctrl` + `Space` / `H` / `Q` / `Tab` (macOS uses those with `Cmd`). [`🎉 Shortcuts feature ↗`](/features/shortcuts/)
+- The [tray](/features/system-integration/#tray) icon is in the menu bar, and clicking it opens its menu.
+- Closing the window follows [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player) (quit / hide to the menu bar), and clicking the Dock icon brings the window back.
+
+## iOS {#ios}
+
+iOS is new and only has beta builds for now, in the [beta releases](https://github.com/namidaco/namida-snapshots/releases). `🆕 v8.5.0`
+
+Namida needs iOS 15 or newer (iPhone or iPad). The `Namida-v<version>-ios.ipa` file is unsigned, so it's installed by sideloading.
+
+[`GitHub Beta`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AltStore Beta`](https://namidaco.github.io/namida-snapshots/altstore-source.json)
+
+#### Installing {#ios-install}
+
+Add this source in SideStore, AltStore or Feather to install Namida and get updates:
+
+```text
+https://namidaco.github.io/namida-snapshots/altstore-source.json
+```
+
+Sideloadly (on a computer) and [TrollStore](https://github.com/opa334/TrollStore) (only for [some old iOS versions](https://ios.cfw.guide/installing-trollstore)) can also install the downloaded ipa, but they don't read sources, so install each new ipa the same way to update. TrollStore installs the ipa permanently, so it doesn't need a refresh like the other apps.
+
+Installing a newer build over the old one keeps your data.
+
+#### Differences {#ios-differences}
 
 Not available on iOS:
 
@@ -214,14 +236,6 @@ Works differently on iOS:
   - `⬆️ iOS 26+` They continue until they finish, and iOS shows their progress.
 - Music in Namida's folder in the Files app (under On My iPhone) is scanned by default. Other folders are added through the system folder picker. [`⚙️ Configure Add Folder ↗`](/settings/2-indexer-settings/#add-folder)
 
-#### macOS {#macos-differences}
-
-Works differently on macOS:
-
-- Every shortcut that uses `Ctrl` on Windows and Linux uses `Cmd` instead, except `Ctrl` + `Space` / `H` / `Q` / `Tab` (macOS uses those with `Cmd`). [`🎉 Shortcuts feature ↗`](/features/shortcuts/)
-- The [tray](/features/system-integration/#tray) icon is in the menu bar, and clicking it opens its menu.
-- Closing the window follows [Kill Player After Dismissing App](/settings/3-playback-settings/#kill-player) (quit / hide to the menu bar), and clicking the Dock icon brings the window back.
-
 ---
 
 ### Companion Apps {#companion-apps}
@@ -232,7 +246,7 @@ Community built tools around Namida:
 - [Namida Charts](https://github.com/DiWu17/namida_history_app), yearly, monthly & more listening stats with charts, based on Namida history, by [@DiWu17](https://github.com/DiWu17).
 - [Namida Wrapped](https://namida-wrapped.vercel.app), a local web ui for generating wrapped style stats, by [@bebrriko](https://github.com/bebrriko).
 
-Namida also has its own built in sync, see [`🎉 Sync feature ↗`](/features/sync/).
+Namida now has all of these built in (sync, stats charts and a yearly wrap up), see [`🎉 Sync feature ↗`](/features/sync/) [`📄 Stats Page ↗`](/pages/other/#stats) [`📄 Your Year Page ↗`](/pages/other/#your-year)
 
 ---
 

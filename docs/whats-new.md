@@ -94,7 +94,7 @@ What each version added or changed, linked to where these docs explain it. Newes
 ## 🏷️ v8.5.0 {#v8-5-0}
 
 <!-- generated -->
-`🆕 3 new sections` `🔄 28 updated sections`
+`🆕 3 new sections` `🔄 29 updated sections`
 
 **🎉 Features**
 
@@ -120,7 +120,7 @@ What each version added or changed, linked to where these docs explain it. Newes
 
 **📌 More**
 
-- [Installation](/installation/): 🔄 [iOS & macOS](/installation/#ios-macos)
+- [Installation](/installation/): 🔄 [macOS](/installation/#macos), [iOS](/installation/#ios)
 - [Tips & Tricks](/tips/): 🔄 [Info & Sorting](/tips/#info-sorting), [About Page](/tips/#about-tips)
 - [FAQ](/faq/): 🔄 [Sync devices can't find or connect](/faq/#sync-troubleshooting)
 - [Membership](/membership/): 🔄 [Getting One](/membership/#get)

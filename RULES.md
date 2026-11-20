@@ -76,7 +76,7 @@ Content...
 
 Four kinds of inline code chips are used:
 
-- **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `availability:` (`NamidaFeaturesAvailablity`) of the setting's entry in `lib/ui/widgets/settings/`. A feature missing only on iOS or macOS gets no chip, list it in the iOS & macOS section of `docs/installation.md` instead.
+- **Availability label**: platform restricted settings get a plain chip on its own line right under the header, like `` `💻 Android only` ``, `` `💻 Android 12+ only` ``, `` `💻 Windows+Linux only` ``. Source of truth: the `availability:` (`NamidaFeaturesAvailablity`) of the setting's entry in `lib/ui/widgets/settings/`. A feature missing only on iOS or macOS gets no chip, list it in the iOS or macOS differences of `docs/installation.md` instead.
   - Platforms are written exactly as Android, iOS, Windows, Linux and macOS, joined with `+`. A version can follow a name (`Android 12+`, `Android <= 12`).
   - The build (`plugins/chips`) turns the chip into a strip of platform icons, and its `chips:` log line must say `0 problems`.
   - A flag gets its own chip right after its name: `` `MEDIA_WAVE_HAPTIC` `💻 Android+iOS only` ``.
