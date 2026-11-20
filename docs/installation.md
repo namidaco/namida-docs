@@ -81,9 +81,9 @@ winget install namidaco.Namida
 
 ## Linux {#linux}
 
-Linux builds are beta only for now, a stable one is coming.
+The tarball, deb and rpm need glibc 2.39 or newer (Ubuntu 24.04, Debian 13, Fedora 40 or newer). Older distros can use the AppImage or the flatpak.
 
-[`GitHub Beta`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AUR Beta`](https://aur.archlinux.org/packages/namida-bin)
+[`GitHub`](https://github.com/namidaco/namida/releases/latest) [`AUR`](https://aur.archlinux.org/packages/namida-bin) [`GitHub Beta`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AUR Beta`](https://aur.archlinux.org/packages/namida-beta-bin)
 
 #### Dependencies {#linux-dependencies}
 
@@ -111,9 +111,9 @@ Older betas had separate `_login` builds bundling wpewebkit. They are gone, ever
 
 | File | Pick it if |
 | --- | --- |
-| `namida-vX.X.X-beta.linux.tar.gz` | Any distro. This is what the quick install script below uses, or extract and run it yourself. |
-| `namida-vX.X.X-beta.linux.deb` | Debian, Ubuntu, Mint and friends. |
-| `namida-vX.X.X-beta.linux.rpm` | Fedora, RHEL and friends. |
+| `namida-vX.X.X.linux.tar.gz` | Any distro. This is what the quick install script below uses, or extract and run it yourself. |
+| `namida-vX.X.X.linux.deb` | Debian, Ubuntu, Mint and friends. |
+| `namida-vX.X.X.linux.rpm` | Fedora, RHEL and friends. |
 | `Namida-x86_64-<version>.AppImage` | A single portable file, no installation. Everything is bundled so it runs on any distro, and it can update itself. |
 | `Namida-x86_64-<version>.flatpak` | You already use flatpak. Ships its own mpv. |
 
@@ -122,7 +122,8 @@ Older betas had separate `_login` builds bundling wpewebkit. They are gone, ever
 Quick install, downloads the latest tarball and installs it to `/opt/namida`:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/namidaco/namida/main/scripts/install_linux_tar.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/namidaco/namida/main/scripts/install_linux_tar.sh | sudo bash               # stable
+curl -fsSL https://raw.githubusercontent.com/namidaco/namida/main/scripts/install_linux_tar.sh | sudo bash -s -- --beta  # beta
 ```
 
 Through a package manager:
@@ -130,9 +131,14 @@ Through a package manager:
 ```bash
 yay -Sy namida-bin             # AUR (Arch Linux)
 paru -Sy namida-bin            # AUR (Arch Linux)
+yay -Sy namida-beta-bin        # AUR beta (Arch Linux)
 sudo apt install ./namida.deb  # Debian/Ubuntu, download the .deb first
 sudo dnf install ./namida.rpm  # Fedora/RHEL, download the .rpm first
 ```
+
+::: callout info
+`namida-bin` used to get the betas, it now follows stable releases. To keep getting betas, install `namida-beta-bin` (it replaces `namida-bin`).
+:::
 
 AppImage, make it executable then run it:
 
