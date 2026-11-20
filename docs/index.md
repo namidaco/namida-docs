@@ -80,7 +80,7 @@ Music is a powerful tool that can hijack your brain and take control, and a huma
 | --- | --- | --- |
 | [Android](/installation/#android) | [`GitHub`](https://github.com/namidaco/namida/releases/latest) [`Obtainium`](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/namidaco/namida/) | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) [`Obtainium`](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/namidaco/namida-snapshots/) |
 | [Windows](/installation/#windows) | [`GitHub`](https://github.com/namidaco/namida/releases/latest) [`winget`](https://github.com/microsoft/winget-pkgs/tree/master/manifests/n/namidaco/Namida) | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) |
-| [Linux](/installation/#linux) | Soon | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AUR`](https://aur.archlinux.org/packages/namida-bin) |
+| [Linux](/installation/#linux) | [`GitHub`](https://github.com/namidaco/namida/releases/latest) [`AUR`](https://aur.archlinux.org/packages/namida-bin) | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AUR`](https://aur.archlinux.org/packages/namida-beta-bin) |
 | [macOS](/installation/#ios-macos) | Soon | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) |
 | [iOS](/installation/#ios-macos) | Soon | [`GitHub`](https://github.com/namidaco/namida-snapshots/releases/latest) [`AltStore`](https://namidaco.github.io/namida-snapshots/altstore-source.json) |
 

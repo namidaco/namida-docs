@@ -1,9 +1,9 @@
 {
   "name": "namida-docs",
-  "version": "8.6.0",
+  "version": "8.6.7",
   "namida": {
-    "version": "8.6.0",
-    "commit": "6c1295d0e12248eced24c4d984f12eddf10d2c4f",
+    "version": "8.6.7",
+    "commit": "40f93ab05d1b90da4f67d435bd022a80bda4b4a2",
     "screenshotsCommit": "latest"
   },
   "private": true,

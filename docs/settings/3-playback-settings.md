@@ -119,6 +119,12 @@ Start playing directly when skipping to the next or previous track.
 
 Pressing next on the last item jumps to the first one, and vice versa.
 
+### Skip Explicit Tracks {#skip-explicit}
+
+`🆕 v8.6.5`
+
+Explicit tracks are skipped when their turn comes, with a message counting how many were skipped. A track is explicit when its tag says so (set it in the [tag editor](/features/tag-editor/#single)), Subsonic servers can report it too.
+
 ### On Volume 0 {#on-volume-zero}
 
 Choose what happens when volume reaches zero (pause playback / do nothing), with an option to resume if it was paused for less than a set number of minutes.

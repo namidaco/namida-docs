@@ -36,6 +36,7 @@ The Indexer card counts the duplicated, `.nomedia` and filtered files. Tap a cou
 ### Videos {#videos}
 
 Videos are indexed and playable on their own, with a dedicated videos folder view. [`⚙️ Configure Include Videos ↗`](/settings/2-indexer-settings/#include-videos)
+A video named like an audio file in the same folder (like `Song (Official Video).mp4` next to `Song.mp3`) plays as that track's video instead of showing as a separate track. `🆕 v8.6.5` [`🎉 Video Integration ↗`](/features/playback/#video)
 
 ### Missing Tracks {#missing-tracks}
 
@@ -66,7 +67,8 @@ Date Added and Date Modified come from the file itself. They decide the date sor
 So Namida can keep file dates:
 
 - **Tag editor**, "Keep file dates" is on by default. Turn it off and edited files get today's date. [`🎉 Keep File Dates ↗`](/features/tag-editor/#keep-file-dates)
-- **Rating, moods and tags** from the track menu always keep them.
+- **Rating, moods and tags** from the track menu also follow "Keep file dates".
+- **Analyzed BPM** written into files follows it too.
 - **YouTube downloads**, "Set the file's last modified date as the video upload date" dates files by the video, so old videos don't flood Recently Added. [`🎉 Downloads ↗`](/features/youtube/#downloads)
 
 Files copied with a tool that doesn't keep dates look newly added too.

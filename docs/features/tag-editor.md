@@ -15,6 +15,8 @@ Fields the file holds as separate values (like several artists) show joined with
 
 Add BPM and Key fields from the pencil icon (Tag Fields). BPM has ×2 and ÷2 buttons, and the magic pen button fills both by analyzing the track. `🆕 v8.4.0`
 
+Add the Explicit field from Tag Fields too, then pick Explicit or Clean from the menu on its right. Explicit tracks show a small badge in track lists, and can be skipped in playback. `🆕 v8.6.5` [`⚙️ Configure Skip Explicit Tracks ↗`](/settings/3-playback-settings/#skip-explicit)
+
 ### Multiple Tracks Editing {#multiple}
 
 Select multiple tracks and edit them at once (unchanged fields remain untouched). Useful for fixing a whole album or artist.
@@ -27,7 +29,7 @@ Select multiple tracks and edit them at once (unchanged fields remain untouched)
 - Each field has a menu on its right (Undo / Clear / Find & replace / existing values with their track counts). Tap a value to set it for all tracks.
   - Fill empty only, writes the new value only to tracks where that field is empty. `🆕 v8.4.0`
 - Find & replace uses the same text filters as [smart playlists](/features/smart-playlists/#text-rules) (contains / starts with / regex, etc), with a Match case switch and a live preview of what changes.
-- Some fields that are empty in all tracks (like Lyricist or Record Label) are grouped under "More".
+- Some fields that are empty in all tracks (like Lyricist or Record Label) are grouped under "More", unless they're picked in [Tag Fields](#single) (pencil icon).
 - Editing from an album gives an "Auto track numbers" switch, it numbers tracks by their current order, per disc.
 - Moods, tags and rating are edited at the bottom. Values that only some tracks have show how many tracks have them, tap one for more options (add to all tracks / remove / keep as is).
 - Before saving, a summary lists every change and how many tracks it affects.
@@ -41,11 +43,14 @@ Ratings are written to the tag other players read for that file type, keeping th
 `🔄 v8.6.0`
 
 Press the pencil on the artwork (or Edit Artwork when editing many tracks) to open the artwork options (Pick from storage / Paste / Search: Google / Folder / YouTube / Crop / Remove). Changes apply when you save.
+The Edit Artwork action of artwork gestures opens the tag editor with these options already shown.
 
 - Folder uses the cover image in the track's folder.
 - YouTube uses the thumbnail of the linked video (a square cover for music uploads).
-- Search: Google opens an image search for the album cover in the browser.
+- Search: Google opens an image search for the album cover in the browser, using the artist, album and title currently typed in the fields.
 - Crop cuts a part of the image, square by default.
+
+Playlist, album and artist artworks use the same options and save instantly (albums and artists also get Last.fm images). `🔄 v8.6.5`
 
 ### Suggestions {#suggestions}
 
@@ -55,10 +60,13 @@ Fields like album, artist, album artist, composer, genre, style, moods and tags 
 The same suggestions show up while building [`🎉 Smart Playlists ↗`](/features/smart-playlists/) rules.
 
 Language suggests every language, the ones written in the script of the lyrics or title first. `🆕 v8.2.0`
+Release Type also suggests the standard types (album / single / EP / broadcast / other).
 
 ### Keep File Dates {#keep-file-dates}
 
-Saving tags normally changes a file's date to today. "Keep file dates" (on by default) keeps the original date instead, so edited tracks don't jump to the top of Recently Added or move in date sorts. Toggle it with the icon at the top right of the tag editor. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
+Saving tags normally changes a file's date to today. "Keep file dates" (on by default) keeps the original date instead, so edited tracks don't jump to the top of Recently Added or move in date sorts. Toggle it with the icon at the top right of the tag editor. It also applies to rating, moods and tags from the track menu and to the analyzed BPM. [`🎉 File Dates ↗`](/features/library-indexing/#file-dates)
+
+Turn "Keep file dates" off when the same files are synced to other devices (Syncthing, etc) or used by other players, since they often notice an edit only when the file date changes.
 
 ### Auto Extract from Filename {#auto-extract}
 

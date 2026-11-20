@@ -14,6 +14,7 @@ The everyday side of this is in [`🎉 System Integration ↗`](/features/system
 - Control playback through the media session (play / pause / stop / next / previous / seek, plus repeat and shuffle where the app offers them). [`🎉 Media Controls ↗`](/features/system-integration/#media-controls)
 - Read the current track (title, artist, album, duration and position) with media or notification access. Tasker, scrobblers (Pano Scrobbler, Last.fm apps, etc) and watch companions all use this.
 - Read the ids from the file tags (MusicBrainz, ISRC, AcoustID, etc) in the media session, under keys like `org.musicbrainz.MUSICBRAINZ_TRACKID`, so scrobblers can match the exact recording (Pano Scrobbler uses them for ListenBrainz). `💻 Android only` `🆕 v8.2.0`
+- Favourite or unfavourite the current track through the media session rating, which also shows whether it's a favourite. Pano Scrobbler's heart button uses this when its "favorite it on the media player" option is on, so one tap loves the track on Last.fm / ListenBrainz and in Namida. `💻 Android only` `🆕 v8.6.5`
 - Get every track change, play and pause with the full track info (file path, queue position, MusicBrainz ids), through broadcasts or a webhook. `🆕 v8.2.0` [See below](#broadcasts)
 
 ::: callout tip
@@ -27,7 +28,7 @@ The ids might need a [re-index](/settings/2-indexer-settings/#refresh-reindex) i
 Turn them on from the flag icon of the Integrations card in Extras settings:
 
 - `NOW_PLAYING_BROADCAST`, an Android broadcast on every track change, play and pause, for Tasker and other automation apps. `💻 Android only`
-- `WEBHOOK`, posts the same events as JSON to a url, you pick which events (track changed / play / pause).
+- `WEBHOOK`, posts the same events as JSON to a url, you pick which events (track changed / play / pause / favourite).
 
 Each event has the full track info, including the file path (or video id for YouTube) and ids from the file tags (MusicBrainz, ISRC, AcoustID, etc), see the [event format](#event-format).
 Broadcast actions are in the [cheat sheet](#cheat-sheet). [`⚙️ Configure Integrations ↗`](/settings/6-extras-settings/#integrations)
@@ -41,7 +42,8 @@ Broadcasts and the webhook send the same fields:
 - Sent as:
   - Webhook: JSON, like the example below.
   - Broadcasts: extras with the same names.
-- `event`: `trackChanged` / `play` / `pause`
+- `event`: `trackChanged` / `play` / `pause` / `favouriteChanged` `🆕 v8.6.5`
+- `favourite` is true when the track is in favourites (liked for YouTube videos when the like button replaces favourites). `🆕 v8.6.5`
 - `path` is the file path, YouTube videos have `videoId` instead.
 - Tag ids (like `MUSICBRAINZ_TRACKID`) are only there when the file has them. Artist ids with several values are joined with `; `.
 
@@ -55,6 +57,7 @@ Broadcasts and the webhook send the same fields:
   "album": "Album",
   "genre": "Pop",
   "durationMS": 215000,
+  "favourite": false,
   "path": "/storage/emulated/0/Music/song.flac",
   "queueIndex": 4,
   "queueLength": 20,
@@ -103,7 +106,7 @@ Reading the current track works through the same apps' media session or notifica
 
 | Action | Sent on |
 | --- | --- |
-| `com.msob7y.namida.metachanged` | Track changed |
+| `com.msob7y.namida.metachanged` | Track changed and favourite changed |
 | `com.msob7y.namida.playstatechanged` | Play and pause |
 
 In Tasker, use the "Intent Received" event with one of these actions, the extras arrive as variables (`%title`, `%artist`, `%path`, etc). All fields are in the [event format](#event-format).

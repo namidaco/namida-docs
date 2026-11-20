@@ -14,9 +14,9 @@ A persistent and reliable queue system, your sessions are saved for later usage.
 - Repeat modes, including repeat for N times and a shuffle flavor, see [below](#repeat-modes).
 - Shuffle is a toggle, separate from the repeat mode. `🆕 v7.1.0`
   - Turning it on shuffles the queue with the playing track first, turning it off restores the original order. Playback is never interrupted.
-  - While on, new queues start shuffled, with the track you pressed first.
+  - While on, new queues start shuffled, with the track you pressed first. A queue that starts over after its last track gets reshuffled too.
   - It persists between sessions and is the same toggle everywhere: queue, home screen widget and media controls.
-- Stop after any track, open a queued track's menu and choose "Stop after this track". `🆕 v7.0.0`
+- Stop after any track, open a queued track's menu and choose "Stop after this track" (choose it again to cancel). `🆕 v7.0.0`
   - For the playing track, there's also a notification button, an artwork gesture action and `Ctrl` + `Space`. `🆕 v8.2.0`
 - Insert after latest inserted, for stacking several tracks in order.
 - Search inside the queue with the search icon at its top (best matches first), tap a result to jump to it. `🆕 v8.4.0`
@@ -142,6 +142,7 @@ On desktop, a missing or busy output device pauses playback with a message (inst
 The file reaches your output device exactly as it's stored, nothing changes it on the way.
 
 - **Android**: needs Android 14+ and an output that supports it (usually a USB DAC), or [USB direct access](#usb-direct) on any version.
+  - A USB DAC without bit-perfect support plays each track at its own sample rate instead. This isn't bit-perfect, so Namida's effects keep working and Android's volume and effects still apply. `🆕 v8.6.7`
 - **Windows, Linux & macOS**: every effect is skipped, and only Namida uses the output device while playing.
 - **iOS**: every effect is skipped, and the output follows each track's sample rate (with a short gap between tracks of different rates). `🆕 v8.5.0`
 
@@ -223,7 +224,7 @@ Long press the lyrics to enter fullscreen.
 On long instrumental breaks, the lyrics fade out to show the artwork or video in full, then fade back in as the next line starts (touch them to bring them back sooner). Short breaks show three dots that fill up until the next line.
 Duets show each singer on their own side, and lines sung at the same time stay lit together. [`🎉 Lyrics Editor ↗`](/features/lyrics-editor/#edit-line)
 
-Synced lyrics in Japanese, Chinese, Korean, Greek, Cyrillic and a few more scripts can show a romanized line under each line. `🆕 v7.4.0` [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
+Synced and plain lyrics in Japanese, Chinese, Korean, Greek, Cyrillic and a few more scripts can show a romanized line under each line. `🆕 v7.4.0` `🔄 v8.6.7` [`⚙️ Configure Romanization ↗`](/settings/6-extras-settings/#romanization)
 
 The simple lyrics line under the artwork shows translations and romanizations too, and word synced lyrics light up word by word there (like in the lyrics view). `🆕 v7.5.0` [`⚙️ Configure Simple Lyrics Line ↗`](/settings/6-extras-settings/#lyrics)
 

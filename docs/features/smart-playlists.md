@@ -141,7 +141,7 @@ With other parts in Compare by, Now gives the current ones. Weekday <u>is Same</
 
 ### Condition Rules {#condition-rules}
 
-**Sources:** Lossless, Favourite and Single.
+**Sources:** Lossless, Favourite, Single and Explicit `🆕 v8.6.5`.
 
 **Filters:** is True, is False and is Unknown.
 

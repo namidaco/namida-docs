@@ -17,6 +17,9 @@ The permissions Namida uses and why. Nothing is used for tracking, there are no 
 - `READ_MEDIA_IMAGES` (Android 13+): list image files from indexer folders only, for fallback covers like `cover.jpg`.
 - `VIBRATE`: vibrate/haptic feedback for some actions, can be turned off in [`⚙️ Configure Vibration ↗`](/settings/6-extras-settings/#vibration).
 - `QUERY_ALL_PACKAGES`: to allow opening custom equalizer apps.
+- `MODIFY_AUDIO_SETTINGS`: allows [Bit-perfect](/features/playback/#bit-perfect) to set the format Android plays to your USB DAC (Android 14+).
+- `ACCESS_NETWORK_STATE`: to know when you're offline, and whether you're on Wi-Fi or mobile data (for the YouTube data saver).
+- `RECEIVE_BOOT_COMPLETED`: used by WorkManager (in the home widget library) to continue pending background work after a reboot.
 
 ### Requested When Needed {#requested}
 

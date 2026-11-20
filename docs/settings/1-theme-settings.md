@@ -21,9 +21,9 @@ Might affect performance on low end devices. You can turn it off and set a [Defa
 
 ### Pick Colors from Device Wallpaper {#wallpaper-colors}
 
-`💻 Android 12+ only`
+`💻 Android 12++Windows+Linux+macOS only`
 
-Pick colors from your device wallpaper instead of the artwork. Requires [Auto Coloring](#auto-coloring) to be on.
+Pick colors from your device wallpaper (or the system accent color on desktop) instead of the artwork. Requires [Auto Coloring](#auto-coloring) to be on.
 
 ### Force Miniplayer to Follow Track Colors {#force-miniplayer-colors}
 

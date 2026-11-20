@@ -130,7 +130,7 @@ For many videos (a selection or a playlist's menu): Play All (also in reverse or
   - Long pressing the YouTube tab jumps to one of its sections. `🆕 v8.2.0`
 - In the playlists page grouped by tags, long press a tag header to select all its playlists. `🆕 v8.2.0`
 - In a playlist's menu, long press Convert to M3U to pick where the file is saved (default folder / folder holding its tracks / any folder). `🆕 v8.4.0`
-- In an artist page, long press the icon of the albums, EPs or singles row to sort them. `🆕 v8.2.0`
+- In an artist page, long press the icon of the albums or singles & EPs row to sort them. `🆕 v8.2.0`
 - Press the map icon in an artist page to see where that artist sits among the rest of your library. [`📄 Artists Map ↗`](/pages/library/#artists-map)
 - Tapping or long pressing a track's thumbnail can run an action of your choice, like play next or open its info. [`⚙️ Configure Artwork Gestures ↗`](/settings/4-customization-settings/#track-tile)
 

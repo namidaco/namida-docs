@@ -11,6 +11,51 @@ What each version added or changed, linked to where these docs explain it. Newes
 **Looking for every change?** This page only follows the docs. The full changelog of each version (fixes and improvements included) is on GitHub. [`📜 Stable Releases ↗`](https://github.com/namidaco/namida/releases) [`🧪 Beta Releases ↗`](https://github.com/namidaco/namida-snapshots/releases)
 :::
 
+## 🏷️ v8.6.7 {#v8-6-7}
+
+<!-- generated -->
+`🔄 5 updated sections`
+
+**🎉 Features**
+
+- [Playback](/features/playback/): 🔄 [Bit-perfect](/features/playback/#bit-perfect), [Lyrics](/features/playback/#lyrics)
+- [Sync](/features/sync/): 🔄 [What Gets Synced](/features/sync/#data)
+
+**📄 Pages**
+
+- [Library](/pages/library/): 🔄 [Tracks](/pages/library/#tracks)
+
+**⚙️ Settings**
+
+- [Extras](/settings/6-extras-settings/): 🔄 [Romanization](/settings/6-extras-settings/#romanization)
+<!-- /generated -->
+
+---
+
+## 🏷️ v8.6.5 {#v8-6-5}
+
+<!-- generated -->
+`🆕 1 new section` `🔄 9 updated sections`
+
+**🎉 Features**
+
+- [Library & Indexing](/features/library-indexing/): 🔄 [Videos](/features/library-indexing/#videos)
+- [Smart Playlists](/features/smart-playlists/): 🔄 [Condition Rules](/features/smart-playlists/#condition-rules)
+- [Tag Editor](/features/tag-editor/): 🔄 [Single Track Editing](/features/tag-editor/#single), [Artwork](/features/tag-editor/#artwork)
+- [Media Servers](/features/media-servers/): 🔄 [How It Works](/features/media-servers/#how)
+- [Automation & Other Apps](/features/automation/): 🔄 [What Other Apps Can Do](/features/automation/#what-apps-can-do), [Event Format](/features/automation/#event-format)
+
+**📄 Pages**
+
+- [Library](/pages/library/): 🔄 [Albums](/pages/library/#albums), [Search](/pages/library/#search)
+
+**⚙️ Settings**
+
+- [Playback](/settings/3-playback-settings/): 🆕 [Skip Explicit Tracks](/settings/3-playback-settings/#skip-explicit)
+<!-- /generated -->
+
+---
+
 ## 🏷️ v8.6.0 {#v8-6-0}
 
 <!-- generated -->

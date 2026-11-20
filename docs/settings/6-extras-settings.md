@@ -26,7 +26,7 @@ Android, iOS, macOS and Linux:
 
 All platforms:
 
-- `WEBHOOK`, posts playback events (track changed / play / pause) to a URL of your choice. [`🎉 Webhook ↗`](/features/automation/#broadcasts)
+- `WEBHOOK`, posts playback events (track changed / play / pause / favourite) to a URL of your choice. [`🎉 Webhook ↗`](/features/automation/#broadcasts)
 - `SERVER_PLAYBACK_REPORTS`, tells Subsonic and Jellyfin servers what you play, on by default. [`🎉 Playback Reports ↗`](/features/media-servers/#playback-reports)
 
 ### Enable Bottom Navigation Bar {#bottom-nav-bar}
@@ -42,7 +42,7 @@ Lyrics show only while lyrics are on in the player.
 
 ### Floating Action Button {#fab}
 
-Choose what the floating button does (like search / play / shuffle), or hide it.
+Choose what the floating button does (search / play / shuffle / play next / play last), or hide it. It uses the tracks of the current page, filter included. Long press a play mode for [advanced options](/tips/#library-pages).
 
 ### Default Library Tab {#default-library-tab}
 
@@ -78,7 +78,7 @@ Ignores symbols and spaces while searching, so matches are easier to find.
 
 Read non latin text in latin letters. Press it to open the options:
 
-- **Romanization: Lyrics**, adds the romanized text under each synced lyrics line. Plain lyrics are not romanized, and lines that already have their own romanized line are skipped.
+- **Romanization: Lyrics**, adds the romanized text under each lyrics line, synced or plain `🔄 v8.6.7`. Lines that already have their own romanized line are skipped.
   - Romanization written inside the line itself counts too (like `かたくさいかいを (kataku saikai o)`), and when most lines have their own, nothing is added. `🆕 v8.4.0`
 - **Romanization: Sort by**, text sorts use the romanized text (so a Japanese title like `さくら` sorts under S). [`🎉 Sorting ↗`](/features/library-indexing/#sorting)
 - Language toggles, turn romanization off for the languages you can already read. `🆕 v8.4.0`
@@ -186,7 +186,7 @@ Scrolling:
 
 - `SMOOTH_SCROLLING` `💻 Windows+Linux+macOS only`, smoother scrolling.
 - `SCROLLBAR_THUMB_LABEL`, shows where you are while dragging the scrollbar (like the letter, year or date, depending on the sort). `🆕 v7.8.0`
-- `SCROLLBAR_BEHAVIOUR`, what the scroll track does (thumb only / drag anywhere / jump to touch). Jump to touch works with taps and drags. `🔄 v8.6.0`
+- `SCROLLBAR_BEHAVIOUR`, what the scroll track does (thumb only / drag anywhere / jump to touch / instant jump). Jump to touch works with taps and drags. Instant jump skips the short hold, so drags that start on the track jump instead of scrolling the list. `🔄 v8.6.0`
   - The "instant thumb grab" switch in its menu drags the scrollbar instantly (without the short hold), and from a wider area. `🆕 v8.4.0`
 
 Desktop:

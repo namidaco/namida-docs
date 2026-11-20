@@ -112,6 +112,11 @@ To fix it, either:
 - Select all the album's tracks and set the same Album Artist in the tag editor. [`🎉 Multiple Tracks Editing ↗`](/features/tag-editor/#multiple)
 - Or remove Album Artist from the Album Identifiers and re-index when asked, so albums group by name only (but different albums with the same name get merged). [`⚙️ Album Identifiers ↗`](/settings/2-indexer-settings/#album-identifiers)
 
+### Tag edits don't show in other players or synced devices {#tag-edits-not-showing}
+
+Turn off "Keep file dates" from the tag editor -> date icon at the top right, then edit those tracks again.
+"Keep file dates" (on by default) keeps a file's original date after editing its tags, but syncing apps (Syncthing, etc) and many players notice an edit only when the file date changes. [`🎉 Keep File Dates ↗`](/features/tag-editor/#keep-file-dates)
+
 ### Why aren't smart playlists treated as normal playlists? {#smart-playlists}
 
 They are a different thing. A smart playlist is only a set of rules, and its tracks are found only when you open it.

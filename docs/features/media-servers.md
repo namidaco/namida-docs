@@ -19,7 +19,9 @@ Multi library support, your library can mix local files with content from your s
 ### How It Works {#how}
 
 A server is added as a library folder in the indexer. Enter the server address and credentials, pick a library or share (if the server supports it), and Namida indexes it like any other folder. Tracks appear next to your local ones in every tab. [`⚙️ Configure Folders ↗`](/settings/2-indexer-settings/#folders-to-scan)
-Storage Access Framework folders are picked from the system file picker instead.
+Storage Access Framework folders are picked from the system file picker instead. Folders without a file path (like USB drives) become one too when added.
+
+Server videos are indexed only with [Include Videos](/settings/2-indexer-settings/#include-videos) on, and a video named like a track in the same server folder plays as its video. `🆕 v8.6.5` [`🎉 Videos ↗`](/features/library-indexing/#videos)
 
 For Subsonic servers, tracks without their own artwork fall back to the album artwork.
 

@@ -24,16 +24,16 @@ The mixes (empty ones move to the end):
 - **Supremacy**, the playing track and the tracks you usually listen to with it.
 - **Now Ago**, tracks you usually play at this hour of the day.
 - **Top Recents**, your most played tracks of the last few days.
-- **Underrated**, tracks you played only a few times and haven't heard in a while.
+- **Underrated**, tracks you played only a few times and haven't heard in a while (or barely played ones if they're favourites or rated high).
 - **Lost Partners**, tracks you used to play a lot but haven't heard in a long time (judged by how often you usually play each one).
-- **Discover**, tracks you never played or rarely play.
+- **Discover**, tracks you never or barely played (except favourites and highly rated ones)
 - **Favourites** and **Random Picks**, random samples of your favourites and your library.
 
 ### Tracks {#tracks}
 
 All your tracks, sortable by almost any property. Recently added tracks get their own subpage. Pull down to refresh the library. [`⚙️ Configure Indexer ↗`](/settings/2-indexer-settings/)
 
-Sorts you use often can be saved as named presets in the sort menu. `🆕 v8.2.0`
+Sorts you use often can be saved as named presets in the sort menu `🆕 v8.2.0`. Long press the sort button to switch presets, or copy one saved on another page. Playlists and smart playlists can use these presets too. `🆕 v8.6.7`
 
 With [Include Videos](/settings/2-indexer-settings/#include-videos) on, the tab can also show audio only or videos only (as "Tracks: Audio" and "Tracks: Videos"). They share one tab slot, press the tracks count chip to move between them. `🆕 v7.4.0` [`⚙️ Configure Library Tabs ↗`](/settings/6-extras-settings/#library-tabs)
 
@@ -46,13 +46,15 @@ An album shows the year of its oldest track.
 
 Tap the albums count chip at the top left to show or hide singles, EPs and albums. The release type tag decides which is which (without it, one track albums count as singles). `🆕 v8.2.0`
 
+Long press the play button of an album card to change what it does (play / shuffle / play next / play last). `🆕 v8.6.5`
+
 ### Artists {#artists}
 
 Browse by Artists, Album Artists or Composers, press the type at the top left to switch.
 Multiple artists and composers in one tag get split by separators, and featured artists from titles can get their own entry. [`⚙️ Configure Separators ↗`](/settings/2-indexer-settings/#separators)
 
 An artist page shows the years range of the artist's tracks, and a map icon that opens the [Artists Map](#artists-map) centered on that artist. `🆕 v7.4.0`
-EPs get their own row beside albums and singles, long press a row icon to sort them. `🆕 v8.2.0`
+Singles & EPs get their own row beside albums, long press a row icon to sort them. `🆕 v8.2.0`
 
 ### Discover {#discover}
 
@@ -154,6 +156,7 @@ Results are ranked by a match score:
 - Exact matches score the highest, then close matches. For fields with multiple values (like artists or genres), matching any single value counts.
 - The more of your typed words a track matches, the higher it ranks. Small typos are forgiven in the title, artist, album and filename.
 - Title counts the most, then artist and album, then filename. Other fields like genre, comment or lyrics are only checked when these don't match.
+- Sort tags count too when the field itself doesn't match, so a romanized name in the artist sort tag finds that artist. `🆕 v8.6.5`
 - Tracks you listen to more get a boost, set how much with Listens Count Boost in the filter icon. `🆕 v8.5.0` [`⚙️ Configure Listens Count Boost ↗`](/settings/6-extras-settings/#filter-tracks-by)
 - Results that score far below the best match are hidden behind a Show more button. `🆕 v8.2.0`
   - Albums, artists and the other rows show their best matches first, the card at the end of a row shows the rest. Rows with only weak matches fold into a small title row, tap it to open. `🆕 v8.5.0`
