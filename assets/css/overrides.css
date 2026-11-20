@@ -132,3 +132,42 @@
     transition: none;
   }
 }
+
+/* Section line (assets/js/section-line.js), the left side twin of the TOC track. */
+.summer-content.has-section-line {
+  position: relative;
+}
+
+.section-line {
+  position: absolute;
+  top: 0;
+  overflow: visible;
+  pointer-events: none;
+  mask-image: linear-gradient(#000 calc(100% - 64px), transparent);
+}
+
+.section-line path {
+  fill: none;
+  stroke: var(--summer-border-strong);
+  stroke-linecap: round;
+}
+
+.section-line__outer {
+  stroke-width: 1.5;
+}
+
+.section-line__inner {
+  stroke-width: 1;
+}
+
+/* The 20px gutter below 900px has no room for the line. */
+@media (max-width: 900px), print {
+  .section-line {
+    display: none;
+  }
+}
+
+/* Hover link icon sits on the line. */
+.summer-content > :is(h1, h2, h3, h4, h5, h6) .heading-anchor {
+  background: radial-gradient(circle closest-side, var(--summer-bg) 100%, transparent);
+}
