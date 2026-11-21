@@ -158,12 +158,17 @@ Android only offers "always" for DACs without a microphone (since Namida doesn't
 
 Yes, with bookmarks. Add a bookmark at each point, long press a tick on the seekbar to open the list, then mark the first as Start and the second as Stop. Set the repeat mode to [Repeat Current Track](/features/playback/#repeat-modes) to keep looping between them. `🆕 v8.6.0` [`🎉 Bookmarks ↗`](/features/playback/#bookmarks)
 
-### Can't install the APK, Google blocks it {#play-protect}
+### Can't install the APK {#cant-install-apk}
 
-Play Protect scans apps installed from outside Google Play and sometimes blocks them (the dialog says the app was blocked or wasn't scanned).
+Android and phone makers block many apps from outside the stores, so this isn't specific to Namida. Check these in order:
 
-- Tap "More details" then "Install anyway" in the dialog.
-- If it keeps blocking, open Play Store -> profile icon -> Play Protect -> settings icon, and turn off "Scan apps with Play Protect", then install and turn it back on.
+- **Unverified developer warning:** open Settings -> System -> Developer options -> Apps from unverified developers, then turn on "Allow apps from unverified developers". Android makes you wait 24 hours once. Pick "Allow indefinitely" at the end, otherwise updates will fail later.
+- **Play Protect** (the dialog says the app was blocked or wasn't scanned): tap "More details" then "Install anyway". If it keeps blocking, open Play Store -> profile icon -> Play Protect -> settings icon, and turn off "Scan apps with Play Protect", then install and turn it back on.
+- **Samsung:** turn off Settings -> Security and privacy -> Auto Blocker.
+- **Install is not allowed:** allow "Install unknown apps" for the app opening the APK (browser or file manager).
+- **"App not installed":** free some storage, download the APK again (**with another browser**), and make sure it isn't older than your installed version.
+- **Namida installed from another source:** back up, uninstall it, then install again (different signatures can't update each other).
+- **Last try:** the `armeabi-v7a` APK (doesn't work on phones that only run 64 bit apps).
 
 See [`📒 Installation Guide ↗`](/installation/#android) for which file to download.
 

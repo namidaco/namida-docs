@@ -49,7 +49,7 @@ See [App Size](/app-size/) for a breakdown of what the APK contains.
 2. Open the file, Android asks to allow installing from unknown sources the first time.
 3. That's it. Permissions are requested later while you use the app, and only when needed, see [Permissions](/permissions/).
 
-If Google blocks the install, see [Can't install the APK](/faq/#play-protect).
+If the install fails, see [Can't install the APK](/faq/#cant-install-apk).
 
 #### Updating {#android-updates}
 
